@@ -10,3 +10,12 @@
 - Author rejected the novel form and asked for nonfiction with bolder concepts.
 - Six more searches: silicon sampling, IEA energy, model welfare, digital afterlife law, AI nonfiction comps, AI scientists.
 - Rewrote 00-brief, 01-market-map, 02-story-engine (now the argument engine) and ASSUMPTIONS; updated state. Length contract changed to narrative nonfiction, 85,000–100,000 words.
+
+## 2026-10-20: Author approval
+- Author: "I think just going with the new stuff is still more than enough for a book, go for it, write the book."
+- Decisions: keep only the concepts rated new or partly new (evaluations/novelty-check.md). New frame: *When Everything Goes Right*. Mode: autonomous (screens are written here instead of stopping). Length contract: 70,000 floor, ~80,000 planned, 100,000 ceiling (narrative nonfiction).
+
+## Book Genesis · Phase 1 + 2 (autonomous)
+Done: 02-story-engine (v3), 03-characters (recurring 2036 figures), 04-theme, 05-voice, 06-emotional-curve, 07-outline (19 files, ~79k words), 08-opening-strategy, 09-continuity-ledger.
+Assumed: rhythm anchors from recall (unverified); recurring figures adapted for nonfiction.
+Next: drafting. The prologue was written by the orchestrator as the voice anchor (2,603 words). Chapters 1–17 and the epilogue go to parallel writer subagents with per-chapter research and evidence files.

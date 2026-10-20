@@ -1,23 +1,23 @@
 schema_version: 6
 
 project:
-  id: "the-great-inversion"
-  title: "The Great Inversion"
+  id: "when-everything-goes-right"
+  title: "When Everything Goes Right"
   idea: "The Future of Humanity together with AI, ~10 years from now (2036): what AI changed and how people live; innovative, argued concepts that give AI researchers new ideas; form chosen by Claude; quite long."
   language: "en"
   genre: "ideas nonfiction (Sachbuch)"
   audience: "adult idea-fiction readers; people in tech, AI research and policy"
   positioning: "nonfiction"
   series: false
-  target_range_words: "85000-100000"
-  target_floor_words: 85000
+  target_range_words: "70000-100000"
+  target_floor_words: 70000
   target_ceiling_words: 100000
   quality_target: 8.5
 
 collaboration:
-  mode: "check-in"
-  waiting_for_author: true
-  pending_checkpoint: "Phase 0: Intake — approve revised nonfiction title, thesis and outline"
+  mode: "autonomous"
+  waiting_for_author: false
+  pending_checkpoint: ""
 
 independence:
   level: "Isolated subagents"
@@ -28,24 +28,24 @@ independence:
   notes: "Claude Code documents subagent isolation; no second model family installed."
 
 pipeline:
-  current_phase: "Phase 0: Intake"
-  current_gate: "intake"
-  status: "awaiting_author"
+  current_phase: "Phase 3: Drafting"
+  current_gate: "drafting"
+  status: "running"
   panel_passes: 0
   rubric_passes: 0
 
 manuscript:
-  chapter_count_planned: 20
-  average_words_per_chapter_planned: 4750
-  completed_chapters: []
-  word_count_actual: 0
+  chapter_count_planned: 19
+  average_words_per_chapter_planned: 4200
+  completed_chapters: [0]
+  word_count_actual: 2603
   length_gate: "pending"
-  status: "not_started"
+  status: "drafting"
 
 gates:
-  intake: "awaiting_author"
-  foundation: "pending"
-  architecture: "pending"
+  intake: "passed (author approved: new concepts only, go to the end)"
+  foundation: "passed"
+  architecture: "passed"
   drafting: "pending"
   adversarial_audit: "pending"
   revision_loop: "pending"
@@ -55,6 +55,7 @@ gates:
 decisions:
   - "Form v1: braided novel (rejected by author 2026-10-20)"
   - "Form v2: nonfiction, 'The Great Inversion', 18 inversions + prologue + epilogue (author asked for nonfiction and bolder concepts)"
+  - "Form v3 (2026-10-20): author: 'just going with the new stuff... go for it, write the book'. Book keeps only concepts the novelty check rated new or partly new with a new mechanism. Frame: 'When Everything Goes Right' — the risks of AI success and the institutions to invent. Mode set to autonomous."
 open_questions:
   - "Book language: English assumed; German possible."
   - "Market gate unverified; comps from recall."
