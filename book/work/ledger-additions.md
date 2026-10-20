@@ -92,3 +92,11 @@
 ## Chapter 14
 - Autumn 2036: Elbaue runs Bruno from 1 July; Lotte's appeal declined in October after 31 days. Deed: "for the education of my grandchildren". Florian, Klaus's nephew: in March 2019 Klaus wrote to him (then 19) that money should go to engineering and music is for evenings. "Her grandmother's ear" is dated January 2033. Music school: young-talent class, two lessons a week, Leipzig conservatory teacher, €96 a month; teacher's note "She listens before she plays." Hanne pays herself and is short for the November boiler service.
 - RAP for Minds: sunset 21 years after the last beneficiary alive at signing; discretion full for years 0–5, limited for 5–10, explicit only after 10; evidence over 10 years old is advisory; drift trigger at 20%; review at a dead's share of 5% of household financial assets. Liability ratchet.
+
+## Chapter 13
+- Tuesday 5 August 2036, 02:13:07 IST: the agent market in Idukki cardamom forwards falls 41% and recovers in 0.4 s; ~212,000 trades among ~9,000 agents. Morrow runs Ravi's savings: low point −₹38,400, net −₹1,150. "Household (settles 18:00)" tier = "slow money". Landlady Mrs. Saroja Iyengar (81), red register; rent ₹46,000 due on the 5th; Ravi has rented there 4 years. Family in Thrissur; his mother's cousin grows cardamom in Kumily.
+- W = 24 h (rent, wages, bills) and 7 days (collateral, pensions); pass-through target <1% for shocks under 1 h; two quarters above → W +50%.
+- The ending turn mentions Klaus's trust agent trading cardamom (unnamed).
+
+## Epilogue
+- Written by the orchestrator. Ends on the binder: "Olha outra vez. Look again."

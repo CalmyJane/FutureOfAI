@@ -26,3 +26,9 @@ Readers: 4/4 turn the page; all four stopped at the roadmap paragraph (fixed); t
 Independence: B.
 Next: chapters 7–12 in progress, then 13–18.
 - Ch11: the first draft was abandoned after a writer's safety filter fired on biology content; the chapter was re-scoped to materials and energy only (no biology). The partial draft was deleted, not committed.
+
+## Book Genesis · Phase 3: Drafting complete
+Done: 19 files in manuscript/chapters/ (prologue, 17 chapters, epilogue), 82,811 words including Notes. Length gate: PASS (floor 70,000).
+Process: chapters 1–17 drafted by parallel writer subagents, each with its own research and evidence file (work/evidence-chapter-NN.md). The orchestrator wrote the prologue and epilogue, reconciled continuity between chapters (ch. 1/4 binder, ch. 8/9 regulation, ch. 10 wording) and fixed the blackout timing hinge.
+Deviation: the fifth-chapter panel reads and continuity checks ran together at the end (chapters were drafted in parallel), folded into the Phase 4 audit.
+Next: Phase 4, adversarial audit.
