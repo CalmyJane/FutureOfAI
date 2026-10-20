@@ -1,23 +1,23 @@
 schema_version: 6
 
 project:
-  id: "everyone-agreed"
-  title: "Everyone Agreed"
+  id: "the-great-inversion"
+  title: "The Great Inversion"
   idea: "The Future of Humanity together with AI, ~10 years from now (2036): what AI changed and how people live; innovative, argued concepts that give AI researchers new ideas; form chosen by Claude; quite long."
   language: "en"
-  genre: "near-future literary science fiction / idea fiction"
+  genre: "ideas nonfiction (Sachbuch)"
   audience: "adult idea-fiction readers; people in tech, AI research and policy"
-  positioning: "full-length braided novel with in-world documents"
+  positioning: "nonfiction"
   series: false
-  target_range_words: "90000-110000"
-  target_floor_words: 90000
-  target_ceiling_words: 110000
+  target_range_words: "85000-100000"
+  target_floor_words: 85000
+  target_ceiling_words: 100000
   quality_target: 8.5
 
 collaboration:
   mode: "check-in"
   waiting_for_author: true
-  pending_checkpoint: "Phase 0: Intake — approve title, form and rough outline"
+  pending_checkpoint: "Phase 0: Intake — approve revised nonfiction title, thesis and outline"
 
 independence:
   level: "Isolated subagents"
@@ -35,8 +35,8 @@ pipeline:
   rubric_passes: 0
 
 manuscript:
-  chapter_count_planned: 32
-  average_words_per_chapter_planned: 3100
+  chapter_count_planned: 20
+  average_words_per_chapter_planned: 4750
   completed_chapters: []
   word_count_actual: 0
   length_gate: "pending"
@@ -53,7 +53,8 @@ gates:
   editorial_package: "pending"
 
 decisions:
-  - "Form: braided novel with in-world documents (Claude's choice, per author's request)"
+  - "Form v1: braided novel (rejected by author 2026-10-20)"
+  - "Form v2: nonfiction, 'The Great Inversion', 18 inversions + prologue + epilogue (author asked for nonfiction and bolder concepts)"
 open_questions:
   - "Book language: English assumed; German possible."
   - "Market gate unverified; comps from recall."

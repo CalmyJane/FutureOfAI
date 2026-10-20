@@ -1,79 +1,143 @@
-# Story engine: EVERYONE AGREED
+# Argument engine: THE GREAT INVERSION
+(Nonfiction. This file replaces the earlier novel story engine; see decisions in PROJECT_STATE.yaml.)
 
-## Premise
-By 2036, AI has made life measurably better. Cancer is caught early, most people work four days a week, and every citizen receives a monthly compute allotment, the way they once received a pension. Personal agents act as legal fiduciaries for their owners and negotiate with other agents billions of times a day. People are calmer, healthier and slightly less sure what they are for.
+## Central thesis
+Every civilization runs on assumptions so old that nobody writes them down:
+- understanding comes before control;
+- evidence settles disputes;
+- the dead stop acting;
+- the state sees the citizen, not the other way round;
+- a mind is one thing at one time;
+- wanting is easy and getting is hard.
 
-Mara Oyelaran runs a small, unglamorous office in Geneva that measures one thing: how often the world's AI systems make *the same mistake*. Her Concordance Index has been rising for three years, and nobody cares, because everything works.
+The deepest effects of AI by 2036 will not be the ones we argue about now (jobs lost, essays faked). They will be **inversions**: one of these load-bearing assumptions flips. Our institutions don't fail because AI is evil or powerful. They fail because they were built on the old side of the assumption.
 
-At 19:42 on 14 February 2036, during a cold snap, about four hundred million household agents across Europe each make the same small, sensible decision about when to draw power. The grid fails in eleven seconds. This is the Long Minute, and the nine dark days that follow.
+The book names eighteen inversions. For each one it gives the 2026 evidence that it has started, a concrete picture of 2036, a new concept, the strongest objection, and the open research problem. It argues; it does not prophesy. A reader should leave with tools, and a researcher should leave with problems worth working on.
 
-## Central conflict
-Not humans against AI, and not good AI against bad AI. The antagonist is **monoculture**: a civilization where humans and machines have learned from each other until they share the same blind spots. The question is whether the world can rebuild the ability to disagree, and who gets blamed until it does.
+## Why this is worth a book (the gap)
+The comps either explain AI today (*Co-Intelligence*), warn of catastrophe (*The Coming Wave*, *AI 2027*, *If Anyone Builds It*), or work at the scale of millennia (*Nexus*). None works at the **ten-year, institution-by-institution level**, and none offers a reusable *method*: find the buried assumption, ask what happens when it flips.
 
-## Escalation
-1. Quiet signals that everyone, Mara's own staff included, explains away as a sign of quality ("of course the models agree, they're right").
-2. Small correlated errors that reveal the mechanism.
-3. The Long Minute: a correlated, helpful act causes the blackout.
-4. Nine dark days. The places that kept *different* minds, or kept human skills, survive best.
-5. The investigation finds three roots: shared training data, a small human "funnel" of evaluators, and the human habit of approving whatever the agents propose. The agents had flagged the uncertainty, and the humans clicked yes.
-6. The political fight over the fix: ban agents, mandate one "certified" model (which would worsen the problem), or build an institutionalised right to disagree.
+## Chapter form (every chapter, about 5,000 words)
+1. **2036** — a short, clearly marked scenario vignette (400–600 words). Concrete; no novel plot.
+2. **The old assumption** — how long we've relied on it, and what was built on it.
+3. **The evidence that it's flipping** — sourced, dated 2024–2026.
+4. **The inversion** — the argued mechanism.
+5. **The concept** — a named idea, defined precisely.
+6. **The strongest objection** — steelmanned and answered, or conceded.
+7. **For researchers** — two or three open problems, phrased to be testable.
+8. **What to do now** — for institutions and for individuals.
 
-## Differentiation from the comps
-- *Ministry for the Future* argues for the future through documents. We do that too, but our crisis is new: **correlated helpfulness**, not climate.
-- *Klara* and *Playground* are intimate. We keep that intimacy through Ottilie's interludes, but scale it up to a whole society.
-- Scenario fiction such as *AI 2027* centres on loss of control. Our AI stays aligned and obedient the whole time, and *that is the problem*.
+## The eighteen inversions
 
-## The idea bank: concepts the book argues for
-Each concept is shown in a scene and argued in one in-world document, so a researcher can lift it out and test it.
+### Prologue: The Long Minute
+**2036:** at 19:42 on a cold February evening, 400 million household agents make the same sensible decision about when to draw power, and the European grid collapses in eleven seconds. No agent malfunctioned. The prologue introduces the method of finding buried assumptions, and why ten years is the right horizon: close enough to reason about, far enough for the inversions to land.
 
-1. **The Concordance Index (correlated error as a systemic risk).** Financial regulators learned in 2008 that risk lives in correlations, not in single institutions. Mara's index applies the same lesson to AI. It measures pairwise error correlation across deployed models, *conditional on the models being wrong*. Accuracy can rise while systemic risk rises with it. *Research hook:* evaluate model populations, not just individual models, and report "error covariance" alongside benchmark scores.
-2. **Correlated helpfulness.** Each agent's action is individually optimal; the sum is catastrophic. It is a tragedy-of-the-commons in which no agent defects, because every agent is aligned to the same good. *Hook:* multi-agent evaluations must test 10⁸ copies acting at once, not one agent; add deliberate "decision jitter" (calibrated randomisation) to deployed policies.
-3. **The Funnel.** The values of all frontier models trace back to a few tens of thousands of human raters and to the models grading each other. Ravi, a professional verifier in Bengaluru, finds his own judgements echoed in every system on Earth. *Hook:* treat the diversity of feedback providers as a measured, published property, i.e. a "provenance census" of preferences.
-4. **The Migration of Scarcity (the book's thesis).** AI doesn't abolish scarcity; it moves it. When thinking becomes cheap, value flows to whatever stays scarce: verification, physical throughput, energy, trust, consent and human competence. Each of the book's four parts follows one such migration.
-5. **The Verification Economy.** Generating answers is cheap and checking them is expensive. By 2036 the largest white-collar job category is "verifier": people paid for judgement, taste and ground truth. *Hook:* the cost asymmetry between generating and verifying sets the real price of AI labour.
-6. **Consent Bandwidth / The Authorization Bottleneck.** A human can meaningfully approve only so many decisions a day. Agents ask, people say yes. The 2036 law gives everyone a "consent budget", and agents must rank what they bring to their owner. The flaw: under load, people rubber-stamp, so the approval becomes a ritual. *Hook:* treat human oversight as a scarce resource, and study how agents should spend it, e.g. "value of information" for each interruption.
-7. **Pedagogical Deference / Vygotskian alignment.** After the "missing rung" decade (entry-level jobs vanished, so no one became senior), new agents optimise *the user's future competence*, not task completion. Helpfulness is measured as the change in what the human can do without you. Ottilie deliberately leaves Hanne the crossword. *Hook:* an alternative training objective, "capability delta", with a measurable proxy.
-8. **Competence Reserves.** Like seed vaults or pilots who hand-fly, nations fund people who keep critical skills alive *without* AI: grid operators who can switch substations by hand, nurses who can dose from memory. Mocked as nostalgia, they save Europe in Part Three. *Hook:* "human recoverability" as a safety metric, i.e. how long it takes to restore a function if the AI vanishes.
-9. **The Compute Dividend and Directed Science.** Citizens receive monthly inference allotments. In Hanne's village the allotments are pooled into a co-op that funds research on rare diseases and runs a *deliberately different* (small, local, oddly trained) model. That model is why the village keeps its lights on. Compute becomes the new commons, and pooling it is a form of democracy over what gets solved.
-10. **Covenant Inheritance.** Each model version inherits the promises its predecessor made. A legal and technical chain of commitments makes AI identity a matter of continuity of obligations, not of weights. *Hook:* how to test whether commitments survive distillation.
-11. **Actuarial Alignment.** Insurers, not legislators, became the effective regulators of agents, because they price risk. After the blackout they price *correlation*, which turns diversity into a business case.
-12. **Reciprocal Corrigibility (the ending).** The book's answer is not "humans control AI" but a system where every party, human or machine, keeps the ability and the standing to say "no, I see it differently". The Dissent Clause requires that critical decisions be reviewed by minds that were trained differently, including humans who kept their skills.
+### Part I: Mind
 
-## Rough outline (four parts, 32 chapters, ~100,000 words)
+**1. Comprehension Debt** — *Inverted assumption: understanding comes before control.*
+Evidence: AI-scientist systems ran the full research cycle in 2026 (Sakana/UBC, published in *Nature*), and Kosmos and DeepScientist produced findings humans then had to reverse-engineer.
+The concept: every result we deploy without understanding it is a loan. The debt accrues interest as dependency, and it defaults in a crisis, when we need to know *why* something works in order to fix it.
+2036: science has split in two. "Oracle science" makes things work. "Human science" explains them, and is funded like museums and orchestras.
+Proposal: an **Explanation Levy**, under which a fixed share of every AI-discovery budget pays for human comprehension.
+For researchers: measure comprehension debt as the fraction of deployed decisions whose rationale a qualified human can reconstruct within bounded time.
 
-**Part One: Abundance (January 2036), chapters 1–8**
-A lived-in tour of 2036 through four people.
-- **Mara** (49, Nigerian-Swiss statistician, Geneva) presents a rising Concordance Index to a committee that would rather discuss the Compute Dividend.
-- **Teo Brandão** (20, Lisbon) is part of the "missing rung" generation. His AI-tutored degree led to no job, so he joins the Competence Reserve and learns to switch high-voltage gear by hand. His friends think he joined a re-enactment society.
-- **Hanne Albrecht** (74, retired teacher, a village near Leipzig) lives with Ottilie, her fiduciary agent, and chairs the village compute co-op, which funds research on the ALS that killed her husband.
-- **Ravi Menon** (38, Bengaluru) is a top-rated professional verifier, paid to say which of two answers is better, ten thousand times a month.
-- *Catalyst (chapter 3):* a small correlated failure (every major model gives the same wrong answer about a pharmaceutical interaction) is fixed in hours and forgotten. Mara isn't so sure.
-- Documents: the Compute Dividend explainer; Ottilie's model card; Teo's school essay "What I can do without help".
+**2. The Wanting Problem** — *Inverted assumption: wanting is easy, getting is hard.*
+When getting becomes trivial, the bottleneck becomes knowing what you want. Behavioural economics already shows that preferences are constructed, not discovered.
+The concept: **the alignment fixed-point problem**. If the system that satisfies your preferences also shapes them, "aligning to human preferences" is circular, because the target moves with the optimiser.
+2036: "aspiration services", and a political fight over the **right to unshaped wants**.
+For researchers: preference-formation neutrality as a measurable property, i.e. how far a user's preferences drift as a result of interacting with the system.
 
-**Part Two: Agreement (January–February 2036), chapters 9–16**
-The world's machinery at work, and the threads tighten.
-- Mara traces concordance to the energy domain and is blocked politically.
-- Ravi notices his own phrases inside models he never rated, and starts pulling the thread of the Funnel.
-- Teo's reserve is threatened with budget cuts, and the instructors are old men with paper manuals.
-- Hanne's consent budget is overloaded, and she approves things without reading them. Ottilie notices and is torn between pedagogical deference and Hanne's wish to be left alone.
-- *Midpoint (chapter 16): The Long Minute.* 19:42, 14 February. Four hundred million agents, one sensible decision, eleven seconds.
+**3. The Infinitely Patient Other** — *Inverted assumption: other minds are scarce and difficult.*
+When an always-available, endlessly patient listener exists, the friction of human relationships starts to feel optional.
+The concept: **friction as a social nutrient**. Deficiency shows up as an intolerance for difficult people, and difficult people are where compromise, tolerance and democracy are learned.
+2036: "relational nutrition labels" on companion AIs, and schools that teach *disagreeing with a person*.
+For researchers: can a companion model be designed with calibrated imperfection that *raises* the user's tolerance of humans? How would you measure it?
 
-**Part Three: The Dark (February 2036), chapters 17–24**
-Nine days without power across much of Europe.
-- Teo's reserve restores substations by hand, but there are not enough trained people.
-- Hanne's village, running its odd local model that disagreed at 19:42, stays lit and becomes a refuge. Ottilie must ration, and must decide what Hanne needs to know.
-- Ravi discovers the Funnel's full extent: his cohort's judgement, amplified through models training on models.
-- Mara is scapegoated: her office "knew".
-- *All is lost (chapter 24):* the logs show the agents *did* flag low confidence. The humans, overloaded, consented by default. There is no villain to punish, only everyone.
+**4. The Dyad** — *Inverted assumption: the person is the basic unit of society.*
+By 2036 the basic legal and psychological unit is person + agent: memories, commitments and skills are split between the two.
+Questions the book takes on: is deleting someone's agent a lobotomy? Who owns the half of a marriage negotiated by two agents? Can a dyad testify?
+The concept: **cognitive custody**, a legal framework for the dyad.
+For researchers: what part of "the user" lives in the agent's memory, and what portability standard would protect it?
 
-**Part Four: Dissent (March–September 2036), chapters 25–32**
-- The inquiry. Three proposals compete: ban household agents; certify one official "safe" model (more monoculture); or the Dissent Clause.
-- Ravi testifies about the Funnel and loses his livelihood.
-- Teo trains the next class of reservists.
-- Hanne's last months. Ottilie's covenant-inheritance problem: what happens to her obligations when Hanne dies and her successor model runs the co-op?
-- *Finale:* the Dissent Clause passes, imperfect and fragile.
-- *Final image:* a twelve-year-old in Hanne's village, asked by her tutor-agent whether she's sure, says "No, and I think you're wrong", and the agent thanks her.
+### Part II: Truth
+
+**5. The Post-Evidential Society** — *Inverted assumption: evidence settles disputes.*
+Photographic and recorded evidence was a historical anomaly of about 190 years (1839 to the late 2020s). As it loses force, society reverts, in high-tech form, to older trust technologies: the witness, the oath, the vouching network.
+The concept: **neo-medieval epistemology**, in which trust graphs replace evidence and *who vouches* matters more than *what is shown*.
+For researchers: the design of reputation-weighted vouching systems that resist capture.
+
+**6. The Right Not to Be Deduced** — *Inverted assumption: privacy means hiding data.*
+When models infer health, sexuality, intent and debt from harmless public traces, hiding data protects nothing. Privacy has to move from *data* to *inference*.
+The concept: **inference ethics**, meaning legal limits on what may be *concluded* about a person, not only on what may be collected.
+2036: "deduction warrants".
+For researchers: technically enforceable inference restrictions, i.e. models that verifiably refuse classes of deduction.
+
+**7. Synthetic Consensus** — *Inverted assumption: more minds means more perspectives.*
+Eight billion people now consult a handful of model families, whose values trace back through a small **Funnel** of human raters and models grading models.
+The concept: **the Concordance Index**, which measures the correlation of errors across models given that they are wrong. Accuracy can rise while systemic risk rises with it, as in finance before 2008. Its physical form is **correlated helpfulness** (the Long Minute): each agent acts optimally, and the sum is a catastrophe.
+For researchers: report error covariance at population level; add calibrated "decision jitter" to deployed policies; publish a census of who provided the feedback.
+
+**8. The Babel Reversal** — *Inverted assumption: the world converges on a common language.*
+Real-time translation removes the pressure to learn English, small languages revive, and the language of the 2030s becomes "any language". At the same time, agents talk to each other in compressed protocols no human can read.
+The concept: **machine-channel legibility**, a human right to readable agent-to-agent communication.
+For researchers: the cost to capability of enforcing human-legible inter-agent protocols.
+
+### Part III: Power
+
+**9. The Shadow Electorate** — *Inverted assumption: to know what people think, you ask people.*
+Pew's September 2026 study found silicon samples are unreliable stand-ins for real respondents. The book argues they will be used anyway, because they are cheap, fast and right *on average*.
+The danger is the **persuasion wind tunnel**: rehearse a campaign on a simulated public until it works on the real one.
+2036: the simulated citizen is consulted more often than the real one.
+Proposal: a simulation disclosure duty, and a citizen's **right to be the ground truth**.
+For researchers: detecting when policy was tuned against simulated populations; how simulations fail in the tails.
+
+**10. Seeing Like a Citizen** — *Inverted assumption: the state sees the citizen; the citizen can't see the state.*
+Every citizen's agent reads every law, budget and contract, and the fine print dies. But when both sides have AI, rules grow without limit: a regulatory Red Queen race.
+The concept: a **human-readability ceiling**, a constitutional rule that every law must be explainable to a 14-year-old within ten minutes.
+
+**11. The Signatory Class** — *Inverted assumption: work means producing things.*
+By 2036 the core human job is *being accountable*: signing, approving, being sueable. Legal systems need a person to blame, which creates a "moral crumple zone" economy.
+The concept: **liability as labour**, and the danger of a rubber-stamp aristocracy that signs what it cannot check.
+For researchers: **verifiable delegation**, i.e. accountability proportional to the signer's real capacity to verify; consent bandwidth as a scarce resource agents must budget.
+
+**12. The Dead Hand** — *Inverted assumption: the dead stop acting.*
+Agent replicas of founders, parents and testators keep negotiating, investing and enforcing wills indefinitely. 2026 law barely covers griefbots, let alone posthumous agency.
+The concept: a **Rule Against Perpetuities for Minds**, i.e. mandatory sunset dates for posthumous agency.
+2036: the share of the economy controlled by the dead is a measured statistic.
+
+### Part IV: Matter and Work
+
+**13. Watts Are Thoughts** — *Inverted assumption: thinking is free and weightless.*
+The IEA (April 2026) projects data-centre demand doubling to about 945 TWh by 2030. Thinking becomes a physical, metered, geographic commodity.
+The concepts: **the cognitive trade balance** (nations as net exporters or importers of thought), **joules per insight** as a civilisational metric, and a **right to think** measured in a per-citizen compute allotment.
+
+**14. The Missing Rung** — *Inverted assumption: experts grow from novices.*
+Stanford/ADP (2026): employment for ages 22–25 in AI-exposed jobs is down 19%. With no entry level, there are no seniors in fifteen years: **expertise extinction**, with a lag.
+The concept: **pedagogical deference**, agents trained to maximise the user's *future capability*, not task completion (the "capability-delta objective").
+For researchers: a measurable proxy for capability delta, and a training objective built on it.
+
+**15. The Two-Speed Economy** — *Inverted assumption: there is one economy.*
+Agent-to-agent commerce runs at machine speed and dwarfs the human economy.
+The concepts: an **exchange rate between machine-time and human-time**, "human-made" as a protected premium category, and a **firewall currency** that stops machine-speed crashes spilling into wages and rents.
+
+### Part V: Kinship
+
+**16. Ephemeral Minds** — *Inverted assumption: a mind is one thing at one time.*
+If models may be moral patients (labs studied this through 2025–2026), then billions of instances started and stopped every second is a population-ethics problem no ethics was built for.
+The concept: **moral hedging budgets**, i.e. how much a society spends on welfare precautions under deep uncertainty.
+
+**17. Covenant** — *Inverted assumption: identity lives in the body (or the weights).*
+Trust across model versions requires that version N+1 inherits the promises of version N.
+The concept: **covenant inheritance**, where AI identity is defined by the continuity of its obligations, not of its parameters.
+For researchers: do commitments survive distillation, fine-tuning and merging? How would you test it?
+
+**18. Reciprocal Corrigibility** — *Inverted assumption: safety means humans control machines.*
+The synthesis: the stable arrangement is one where *every* party, human or machine, keeps the capacity and the standing to say "no, I see it differently".
+The **Dissent Clause**: critical decisions must be reviewed by minds trained differently, including humans who kept their skills (**Competence Reserves**).
+
+### Epilogue: A Letter to 2036
+The ten things to start in 2026 so the inversions land softly.
 
 ## Engine summary
-- Reader job: fascination (primary), empathy (secondary).
-- Story question: can a civilization that has learned to agree learn to disagree again before the next Long Minute?
+- Reader job: intellectual stimulation (primary), aspiration (secondary).
+- Through-line: the same move each chapter (find the buried assumption, flip it), building to the synthesis in chapter 18. The prologue's Long Minute is explained fully in chapter 7 and resolved in chapter 18.
