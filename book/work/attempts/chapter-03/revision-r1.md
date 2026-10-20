@@ -78,7 +78,7 @@ Here is the rule, stated as plainly as I can.
 
 **The M-1 criterion: a critical system must remain within safe limits if every instance of its largest model family takes the same plausible wrong action at the same moment.**
 
-The name borrows from N-1 on purpose. N-1 asks what happens when one component fails. M-1 asks what happens when one *model* fails, everywhere it runs, simultaneously. For a grid, the component in question is a power station. For an AI-mediated grid, it is a set of weights, copied into tens of millions of heat pumps, chargers and batteries.
+The name borrows from N-1 on purpose. N-1 asks what happens when one component fails. M-1 asks what happens when one *model* fails, everywhere it runs, simultaneously. Reliability engineers will recognise the family resemblance to common-cause failure analysis, the branch of nuclear and aerospace safety that has modelled, since the 1970s, how redundant components fail together because they share a design, a supplier or a maintenance crew; its "beta factor" is the fraction of failures that hit every redundant copy at once. M-1 applies that discipline to a new kind of shared cause: a set of weights, and the judgement trained into them. For a grid, the component in question is a power station. For an AI-mediated grid, it is a set of weights, copied into tens of millions of heat pumps, chargers and batteries.
 
 Here are its parts.
 
@@ -111,7 +111,7 @@ Run the prologue's evening through this. One family manages 58% of agent-control
 
 A rule is only as good as the ways it leaves open for meeting it. M-1 would be a disaster if the only way to pass were to ban the best model. There are at least five ways, only the last of which resembles a ban, and most of them have been tried in other industries.
 
-**Edge jitter.** Chapter 1 proposed making the grid's random start delay non-delegable. M-1 gives that idea an engineering home. Put the randomness in the device, in firmware the agent cannot read or override, and the agent's decision becomes a request. A heat pump told to start at 19:45 starts at a moment drawn uniformly from the next ten minutes, and its agent cannot know which. Ninety million identical decisions become ninety million slightly different actions. A cliff becomes a slope. Whether the slope is gentle enough is a calculation the M-1 study has to show; jitter gives the study a lever, and the study is still needed.
+**Edge jitter.** Chapter 1 proposed making the grid's random start delay non-delegable. M-1 gives that idea an engineering home. Put the randomness in the device, in firmware the agent cannot read or override, and the agent's decision becomes a request. A heat pump told to start at 19:45 starts at a moment drawn uniformly from the next ten minutes, and its agent cannot know which. Tens of millions of identical decisions become tens of millions of slightly different actions. A cliff becomes a slope. Whether the slope is gentle enough is a calculation the M-1 study has to show; jitter gives the study a lever, and the study is still needed.
 
 The important detail is where the randomness lives. Randomness inside the agent, a temperature setting or a sampling seed, belongs to the agent, and anything that belongs to the agent can be optimised away by a loyal agent that has noticed it costs its owner money. Randomness in the device belongs to the system.
 
@@ -125,7 +125,7 @@ The nearest precedent is air traffic control, and the rule applies only where an
 
 **Aggregate circuit breakers.** On 19 October 1987 the Dow Jones Industrial Average fell by more than a fifth in a single day. The presidential task force that examined it, the Brady Commission, recommended circuit breakers, and in 1988 the New York Stock Exchange adopted market-wide trading halts triggered by large point falls in the index. The theory was modest. A pause would leave the direction of prices alone and stop them overshooting while people caught up.
 
-On 6 May 2010, in the "flash crash", major US indices that were already down more than 4% fell another 5 to 6% within minutes and then rebounded almost as fast; the regulators' report traced the start to a single large sell program executed by an algorithm. Within weeks the SEC had approved a pilot of single-stock circuit breakers that paused trading in an individual share after a sudden move. In 2012 it approved the "limit up–limit down" mechanism and revised the market-wide breakers into today's form: a fall of 7% or 13% in the S&P 500 halts all trading for fifteen minutes, and a fall of 20% ends the day.
+On 6 May 2010, in the "flash crash", major US indices that were already down more than 4% fell another 5 to 6% within minutes and then rebounded almost as fast; the regulators' report traced the start to a single large sell program executed by an algorithm. The regulators answered with breakers on single shares and, by 2012, with today's market-wide rule: a fall of 7% or 13% in the S&P 500 halts all trading for fifteen minutes, and a fall of 20% ends the day.
 
 An aggregate circuit breaker for agents watches the sum. A grid operator, a payments network or a booking platform counts agent-originated actions of one type in a rolling window. If they exceed a set fraction of capacity within sixty seconds, the system pauses new agent-originated actions of that type for a fixed period, say fifteen minutes, while human-originated actions continue. All the breaker needs to know is that too many are doing the same thing at once; which agent is wrong, or whether any is, can wait.
 
@@ -217,7 +217,7 @@ There is a deeper problem with everything above. Every mechanism in this chapter
 
 What if, by 2036, there isn't one? What if the Funnel has done its work, and every family that matters is wrong in roughly the same way?
 
-Then the most decorrelated mind available is a person who learned the job without one, someone who still knows the order in which to close the breakers at a substation, from a binder, by hand. In Porto, in the winter of my scenario, there is a twenty-four-year-old who joined a reserve for the money and kept the binder anyway. His concordance with the machines, on the one night it matters, is close to zero.
+Then the most decorrelated mind available is a person who learned the job without a model, someone who still knows the order in which to close the breakers at a substation, from a binder, by hand. In Porto, in the winter of my scenario, there is a twenty-four-year-old who joined a reserve for the money and kept the binder anyway. His concordance with the machines, on the one night it matters, is close to zero.
 
 ## Notes
 
@@ -225,6 +225,7 @@ Then the most decorrelated mind available is a person who learned the job withou
 - **The Sir Adam Beck relay:** EBSCO Research Starters, "Power Failure of 1965". https://ebsco.com/research-starters/power-and-energy/power-failure-1965
 - **FPC study group and NPCC criteria, 1967:** New York State Reliability Council, *2009–2010 Biennial Report*. https://www.nysrc.org/wp-content/uploads/2023/03/2009-10-Biennial-Report-Final-v.2.pdf
 - **NERC founded 1968:** NERC, *Timeline*, March 2023. https://www.nerc.com/news/Documents/March%202023%20NERC%20Timeline.pdf
+- **Common-cause failure and the beta-factor model:** Fleming (1974/75), as reviewed in NASA, "Common Cause Failure Modeling: Aerospace vs. Nuclear" (2010). https://ntrs.nasa.gov/api/citations/20100025991/downloads/20100025991.pdf
 - **N-1 criterion defined:** "Contingency (electrical grid)", Wikipedia. https://en.wikipedia.org/wiki/Contingency_(electrical_grid)
 - **Correlated errors in LLMs, 60%:** E. M. Kim, A. Garg, K. Peng, N. Garg, "Correlated Errors in Large Language Models", ICML 2025 (PMLR 267). https://proceedings.mlr.press/v267/kim25e.html
 - **Artificial Hivemind:** L. Jiang et al., "Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)", NeurIPS 2025. https://arxiv.org/abs/2510.22954
