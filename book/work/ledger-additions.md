@@ -40,3 +40,8 @@
 - Mara: 2008, first year at a Zurich bank, wrote an unread footnote on correlated mortgage defaults. Her assistant books "the usual table for Friday".
 - M-1 parameters: same-family threshold 0.8; index >0.75 triggers a 90-day rerun; breaker 60-second window and 15-minute pause; "action concentration" metric.
 - Prologue fixed: flash-crash "trillion dollars" replaced with the verified 5–6% index fall.
+
+## Chapter 10
+- Liang Yue, the Shenzhen supplier's rep (three children). Contract KES 2.18M (ceiling 2.4M) for supplies for ~1,400 pupils in Kasarani. "Compressed latent protocol, version 9", 3 KB log, a Tuesday 18:52:03–18:52:04; delivery due before 5 Jan, arrived 3 Jan. Conditional freight-risk clause; supplier takes the risk to the school gate. Wanjiru keeps the 3 KB file in a folder Ndege may not tidy. Baraka does fractions homework.
+- Twist: the lingua franca moves into the machines instead of disappearing (Korea Times).
+- Terms: Babel reversal, legible twin, twin faithfulness rate (99% / 95% thresholds), replay test (1 in 10,000), legibility tax, ~1,000-word limit for consumer-binding commitments.

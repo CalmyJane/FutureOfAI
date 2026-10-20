@@ -25,3 +25,4 @@ Done: evaluations/panel-chapter-01.md. Prologue revised (r1); chapter 1 hinge fi
 Readers: 4/4 turn the page; all four stopped at the roadmap paragraph (fixed); the hostile reader's mechanism doubt fixed.
 Independence: B.
 Next: chapters 7–12 in progress, then 13–18.
+- Ch11: the first draft was abandoned after a writer's safety filter fired on biology content; the chapter was re-scoped to materials and energy only (no biology). The partial draft was deleted, not committed.

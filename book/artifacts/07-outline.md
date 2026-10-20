@@ -182,7 +182,7 @@ The danger: a state flooded by agent-generated requests and objections, which dr
 
 ## Chapter 11 · The Explanation Levy (4,300) · pressure: wonder → worry
 **Concept:** comprehension debt (credit Zittrain's "intellectual debt", 2019, and Messeri & Crockett, 2024). The invention is the **Explanation Levy**: a fixed share of every AI-discovery budget funds human comprehension (explanation bounties, "understanding audits", a profession of explainers). Precedent: the Human Genome Project's ELSI programme (3%, then 5% of budget; verify). Also define a **comprehension debt ratio** for a field.
-**Vignette:** 2036, a Copenhagen pharmacologist. An AI-designed antibiotic works superbly; resistance appears in Manila, and nobody knows its mechanism well enough to adapt it.
+**Vignette (REVISED: no biology):** 2036, Dr. Mikkel Holm, a materials scientist at a Copenhagen battery lab. A solid electrolyte designed by an AI materials model powers most of the Nordic grid-storage parks built since 2032. It works superbly, until a run of -30 °C nights in northern Finland makes some cells lose capacity fast. Nobody understands why the material worked well enough to know what the cold changed, or how to adapt it. The design model has since been retired.
 **Evidence:**
 - The "AI Scientist" in *Nature* (March 2026).
 - Kosmos (79.4% accuracy, preprint).

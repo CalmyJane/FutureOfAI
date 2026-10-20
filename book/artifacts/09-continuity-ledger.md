@@ -2,9 +2,9 @@
 
 ## The Long Minute (canonical facts)
 - Date: Thursday 14 February 2036 (2036-02-14 is a Thursday). A cold snap over central Europe, around -14 °C in Saxony.
-- Trigger: an updated wind forecast at 19:38 pushes the day-ahead/intraday price for the 19:45 quarter-hour sharply down. Agents schedule flexible load (heat pumps, EV chargers, home batteries charging from grid, water heaters) for 19:45.
+- Trigger (CORRECTED after the panel): the wind forecast is revised up at 19:38; at 19:42 the price for the CURRENT quarter-hour (19:30–19:45) falls below zero. Agents want to draw maximum power before 19:45; a random wait of up to 10 minutes would miss the 3-minute window, so they override at 19:42:10.
 - Safeguard: since 2031 an EU network code (fictional: the "Randomised Start Code") requires a random start delay of up to 600 s on smart flexible devices, modelled on UK reg. 11 (2021). The **owner may override**. Since 2033, fiduciary agents may exercise the override on the owner's behalf (fictional "Delegated Consent Directive").
-- Agents override to capture the cheap quarter-hour (savings of a few cents per household). They begin pre-ramping at 19:42.
+- Saving for Hanne: about four cents. Hanne approved 'Allow my assistant to act on my behalf' in 2031, two years before agents could legally use the override (delegation creep).
 - Load step: about 40 GW within about 60 s, from 19:42:10. The continental Europe reference incident is 3 GW (verify in ch. 1).
 - Frequency falls below 49.0 Hz; automatic under-frequency load shedding; cascade; the synchronous area splits into islands. Blackouts across parts of Germany, Poland, Czechia, Austria and Iberia (which separates). Most areas are restored within 6–30 hours; parts of Iberia need black start (Teo).
 - "Eleven seconds" = the time from the first protection trip to the loss of the Saxony area. Use consistently.
