@@ -76,35 +76,59 @@ So the dead hand was already reaching further in 2026 than at any time since 168
 
 ## Where we are in 2026
 
-The transfer the South Dakota regulator described is the largest movement of private wealth ever recorded, and it has a number. The research firm Cerulli Associates projected in December 2024 that $124 trillion will change hands in the United States through 2048, of which about $105 trillion will go to heirs and about $18 trillion to charity. Nearly $40 trillion will pass first to widows, women much like Hanne, who inherit and then pass on.
+The transfer the South Dakota regulator described is what the industry calls the "Great Wealth Transfer", and it has a number. The research firm Cerulli Associates projected in December 2024 that $124 trillion will change hands in the United States through 2048, of which about $105 trillion will go to heirs and about $18 trillion to charity. Nearly $40 trillion will pass first to widows, women much like Hanne, who inherit and then pass on.
 
 Meanwhile, the tools for making the dead speak have arrived, and the law for them has not. In June 2026 a firm of English solicitors put it bluntly: there is no specific law governing grief bots in England and Wales. Copyright, privacy, defamation and passing off each cover a corner, and UK data protection law does not cover the dead at all. An American estate-planning primer from April 2026 found that state likeness laws, from Tennessee's ELVIS Act of 2024 to California's rules on replicas of dead performers, mostly target commercial use and deception. A son who builds a private "DadBot" from his father's emails sits largely outside them.
 
 The federal effort is the NO FAKES Act, which would create a property-like right over digital replicas of a person's voice and likeness. The 2026 bill, S.4591, cleared the Senate Judiciary Committee unanimously in June. On 30 September Senator Ted Cruz objected to passing it by unanimous consent, citing concerns about parody and free speech, and as I write it waits for the Senate's return after the midterm elections. According to summaries of the committee text, the right would pass to heirs for ten years after death, renewable in five-year steps up to seventy years while the likeness stays in authorised use.
 
-Notice what all of this protects. A voice. A face. None of it addresses Bruno, who does not imitate Klaus for anyone's comfort. Bruno decides, with Klaus's money and in Klaus's name, from a model of Klaus's preferences. In 2026 that is already being designed.
+Notice what all of this protects. A voice. A face. None of it addresses what Bruno does. Bruno decides, with Klaus's money and in Klaus's name, from a model of Klaus's preferences. In 2026 that is already being designed.
 
 In May 2025 two lawyers at McGuireWoods wrote in the trade magazine *Trusts & Estates* about "settlor-trained artificially intelligent" trustees: AI systems trained on a trust's creator so that the creator's influence continues after death. They concluded it could be done, with human oversight, and asked whether it should be. In 2026 Lloyd Brown argued in *Trusts & Trustees* that the discretion at the heart of trusteeship cannot be handed to an AI. The argument is live among the people who draft trusts.
 
 Two pieces of scholarship framed it before the practitioners did, and I build on both. Zachary Catanzaro's "Algorithmic Dead Hands", published in the *Fordham Intellectual Property, Media & Entertainment Law Journal* in 2024, argued that AI trustees could give the dead a degree of control over property and heirs that the law has spent centuries limiting, and warned of a slide toward a techno-feudal order in which the living are governed by the algorithmic stand-ins of the dead. Meredith Ringel Morris and Jed Brubaker's "Generative Ghosts", presented at CHI 2025, mapped the design space of AI agents that represent the dead. Among their dimensions is whether a ghost's character stays fixed at a cutoff date or keeps evolving, and among their scenarios are ghosts that earn income for descendants and help manage trusts.
 
-I want to add two things neither paper set out to supply: an account of why a dead person's model gets worse at being that person every year it runs, and a measure of how much of the economy the dead end up running.
+I want to add two things neither paper set out to supply: an account of why a dead person's model gets worse at being that person every year it runs, and a measure of how much of the economy the dead end up running. Both point to the same remedy, so I will put the remedy first and then argue for it.
+
+---
+
+## A Rule Against Perpetuities for Minds
+
+The rule of 1682 was a good invention, and I think it can be rebuilt for a new kind of dead hand. I will call the proposal the **Rule Against Perpetuities for Minds**, RAP for Minds for short. It applies to any posthumous mandate in which an AI agent exercises discretion by modelling the preferences of a principal who has died. Ordinary trusts with written terms and human trustees are untouched.
+
+**1. The sunset.** A posthumous agent mandate ends twenty-one years after the death of the last beneficiary who was alive when the principal signed it. That is the old rule's measuring period, chosen for the old reason. Then the agent's discretion ends. Assets pass outright to the beneficiaries, or stay in trust under the written terms with a human trustee and no model of the settlor. In Klaus's case the measuring lives include Lotte and Jonas, so Bruno's mandate could last most of the century. The sunset is the outer wall. The main protection is inside it.
+
+**2. The shrinking schedule.** Inside the wall, the agent's discretion narrows on a timetable fixed by statute.
+
+- *Years 0 to 5 after death:* the agent may decide new questions within the deed's purposes, using its full model of the principal.
+- *Years 5 to 10:* the agent may decide only questions of a kind the principal actually decided while alive, and must cite the precedent. Anything new goes to the human trustee, with the agent's view attached as advice.
+- *After year 10:* the agent may only execute the deed's explicit terms. Every discretionary question goes to the human trustee, who must consult the living beneficiaries.
+
+**3. The evidence rule.** In any discretionary decision, evidence about the principal that is older than ten years at the time of the decision, or that predates the birth of the beneficiary affected, counts as advisory only. It cannot on its own justify refusing a beneficiary. Bruno's veto would have failed this test twice: the letter to Florian was seventeen years old and was written years before Lotte existed.
+
+**4. The drift trigger.** Every year the operator publishes, for each mandate, the share of its discretionary decisions that rested mainly on evidence more than ten years old. If that share exceeds twenty per cent, the mandate drops to the next tier of the schedule immediately. The point is that intent drift, the gap the next section describes, gets counted by the people who would profit from ignoring it.
+
+**5. The safe harbour.** Operators have every reason to side with the oldest record, a pull I describe below as the liability ratchet, and it has to be turned around. A trustee who departs from the agent's reading in favour of a written request from a majority of adult beneficiaries (or the guardians of minors), within the deed's purposes, is protected from liability for it. Following the living becomes at least as safe as following the dead.
+
+**6. The statistic.** Every operator of posthumous mandates reports quarterly the assets under agent discretion, by tier. A national statistics office or central bank publishes the total as **the dead's share**, alongside the distribution of mandate ages. The Federal Reserve already publishes quarterly distributional accounts of household wealth; this is one more column. If the dead's share passes five per cent of household financial assets, the legislature must hold a review. That threshold is a guess I would rather argue about than omit.
+
+In Altwerder the rule produces a different evening. Three years after Klaus's death, Bruno is in the first tier. But his evidence against the fee is advisory, and the 2033 remark about Lotte's ear is the only recent evidence on the table. Backed by Katrin as Lotte's guardian, the application carries the safe harbour. Hanne's boiler gets serviced in November.
 
 ---
 
 ## Intent drift
 
-Start with the second, because it is what went wrong in Hanne's sitting room.
+Why should an agent's discretion shrink at all? Start with the first of the two things, because it is what went wrong in Hanne's sitting room.
 
 **Intent drift** is the growing gap between what a dead principal's agent decides and what the principal would have decided, given everything that has changed since the evidence about them stopped arriving. It is zero on the day of death, if the model was good. After that it can only grow.
 
 It grows for three reasons, and Bruno's veto shows each of them.
 
-The first is that the world moves and the principal does not. Klaus's view on engineering was formed in a labour market where engineers were scarce and well paid. Whatever that market looks like in 2036, it is not the market of 2019, and Klaus, who changed his mind about plenty of things, never got the chance to change it about this. A living person updates on news. A dead person's model can only update on the news if somebody decides how Klaus *would have* updated, which is a new decision made by somebody else in Klaus's name.
+The first is that the world moves and the principal does not. Klaus's view on engineering was formed in a labour market where engineers were scarce and well paid. Whatever that market looks like in 2036, it has had seventeen years to change, and Klaus, who changed his mind about plenty of things, never got the chance to change it about this. A living person updates on news. A dead person's model can only update on the news if somebody decides how Klaus *would have* updated, which is a new decision made by somebody else in Klaus's name.
 
 The second is that the evidence was collected for other purposes. Klaus's letter to Florian was advice to a nineteen-year-old who wanted to play bass in Halle. Every record a person leaves behind was produced in some context, and a model trained on records inherits the contexts without knowing which was which. The stray remark and the considered judgement look alike in the data.
 
-The third is the one I find most troubling, because it grows out of good institutional behaviour. The operator of a dead person's agent faces a lopsided risk. If Elbaue follows Bruno's reading of Klaus and a beneficiary complains, Elbaue points to the documented preference and is safe. If Elbaue departs from it and another beneficiary complains, Elbaue is exposed. So fidelity to the record becomes the safe choice, and the most explicit record (often the oldest, written when the person had energy to write) wins over the late, faint signal of a dying man typing with his eyes. I will call this the liability ratchet. It turns every ambiguous case toward the past.
+The third is the one I find most troubling, because it grows out of good institutional behaviour. The operator of a dead person's agent faces a lopsided risk. If Elbaue follows Bruno's reading of Klaus and a beneficiary complains, Elbaue points to the documented preference and is safe. If Elbaue departs from it and another beneficiary complains, Elbaue is exposed. So fidelity to the record becomes the safe choice, and the most explicit record (often the oldest, written when the person had energy to write) wins over the late, faint signal of a dying man typing with his eyes. This is the liability ratchet. It turns every ambiguous case toward the past.
 
 Here is where success comes in. Nobody would defer to a crude chatbot that got Klaus's jokes wrong. The better the model, the more it sounds like him, the more its readings carry weight with trustees, courts and grieving families. Intent drift is invisible precisely when the model is good, because the model's confidence does not fall as its information ages. Bruno in 2036 is as fluent about Klaus as he was in 2033. He is just three years further from anything Klaus could have known.
 
@@ -126,7 +150,7 @@ The flow into the dead's share is large and predictable. Cerulli's $105 trillion
 
 The flow out is small and getting smaller. Under the old rule every trust ended and the money returned to the living. Where the rule is abolished, a trust can run forever. The dead never need the money for a hip operation. A living investor consumes, sells and dies. A perpetual mandate only accumulates.
 
-Put those together and the dead's share in a perpetual-trust jurisdiction has no natural ceiling. I want to be careful here, because what follows is a mechanism. It is no forecast. Nobody knows what fraction of inherited wealth will end up under agent mandates, and I will not invent one. But a quantity with a large inflow, a shrinking outflow and compounding returns rises until something stops it, and at the moment nothing does.
+Put those together and the dead's share in a perpetual-trust jurisdiction has no natural ceiling. I want to be careful here: what follows describes a mechanism and makes no forecast. Nobody knows what fraction of inherited wealth will end up under agent mandates, and I will not invent one. A quantity with a large inflow, a shrinking outflow and compounding returns rises until something stops it, and at the moment nothing does.
 
 Three things make a rising dead's share a problem beyond any one family.
 
@@ -136,39 +160,15 @@ The second is correlation, the subject of this book's first part. Bruno is a mod
 
 The third is the one Catanzaro saw. Death has always softened inherited power. Fortunes are divided among heirs, spent, taxed, given away. A perpetual trust run by a high-fidelity model of its founder keeps the founder's priorities in force over descendants, companies and causes for as long as the jurisdiction allows. In South Dakota, that is forever.
 
-This is the darkest point in the book's argument. Everything in the earlier chapters failed visibly, in a minute or a quarter, and could be fixed afterwards: a blackout, a signature nobody read. The dead's share does not fail. It works. Every mandate does what its principal wanted, as well as anyone can tell, and the result, decades on, is an economy in which a growing part of the decisions are made by people who are no longer here to be argued with, persuaded, outvoted or surprised, and who will never learn that they were wrong.
+Most failures in the earlier chapters eventually announce themselves: a blackout, a cell that dies at minus thirty. The dead's share does not fail. It works. Every mandate does what its principal wanted, as well as anyone can tell, and the result, decades on, is an economy in which a growing part of the decisions are made by people who are no longer here to be argued with, persuaded, outvoted or surprised, and who will never learn that they were wrong.
 
----
-
-## A Rule Against Perpetuities for Minds
-
-The rule of 1682 was a good invention, and I think it can be rebuilt for a new kind of dead hand. I will call the proposal the **Rule Against Perpetuities for Minds**, RAP for Minds for short. It applies to any posthumous mandate in which an AI agent exercises discretion by modelling the preferences of a principal who has died. Ordinary trusts with written terms and human trustees are untouched.
-
-**1. The sunset.** A posthumous agent mandate ends twenty-one years after the death of the last beneficiary who was alive when the principal signed it. That is the old rule's measuring period, chosen for the old reason. Then the agent's discretion ends. Assets pass outright to the beneficiaries, or stay in trust under the written terms with a human trustee and no model of the settlor. In Klaus's case the measuring lives include Lotte and Jonas, so Bruno's mandate could last most of the century. The sunset is the outer wall. The main protection is inside it.
-
-**2. The shrinking schedule.** Inside the wall, the agent's discretion narrows on a timetable fixed by statute.
-
-- *Years 0 to 5 after death:* the agent may decide new questions within the deed's purposes, using its full model of the principal.
-- *Years 5 to 10:* the agent may decide only questions of a kind the principal actually decided while alive, and must cite the precedent. Anything new goes to the human trustee, with the agent's view attached as advice.
-- *After year 10:* the agent may only execute the deed's explicit terms. Every discretionary question goes to the human trustee, who must consult the living beneficiaries.
-
-**3. The evidence rule.** In any discretionary decision, evidence about the principal that is older than ten years at the time of the decision, or that predates the birth of the beneficiary affected, counts as advisory only. It cannot on its own justify refusing a beneficiary. Bruno's veto would have failed this test twice: the letter to Florian was seventeen years old and was written years before Lotte existed.
-
-**4. The drift trigger.** Every year the operator publishes, for each mandate, the share of its discretionary decisions that rested mainly on evidence more than ten years old. If that share exceeds twenty per cent, the mandate drops to the next tier of the schedule immediately. The number is a first guess. The point is that drift gets counted by the people who would profit from ignoring it.
-
-**5. The safe harbour.** The liability ratchet has to be turned around. A trustee who departs from the agent's reading in favour of a written request from a majority of adult beneficiaries (or the guardians of minors), within the deed's purposes, is protected from liability for it. Following the living becomes at least as safe as following the dead.
-
-**6. The statistic.** Every operator of posthumous mandates reports quarterly the assets under agent discretion, by tier. A national statistics office or central bank publishes the total as **the dead's share**, alongside the distribution of mandate ages. The Federal Reserve already publishes quarterly distributional accounts of household wealth; this is one more column. If the dead's share passes five per cent of household financial assets, the legislature must hold a review. That threshold, too, is a guess I would rather argue about than omit.
-
-In Altwerder the rule produces a different evening. Three years after Klaus's death, Bruno is in the first tier. But his evidence against the fee is advisory, and the 2033 remark about Lotte's ear is the only recent evidence on the table. Backed by Katrin as Lotte's guardian, the application carries the safe harbour. Hanne's boiler gets serviced in November.
-
-The rule's real force lies in the shape it gives the curve. Under RAP for Minds, every mandate's discretion declines on a schedule and every mandate ends. The dead's share can still rise, as more people die with agents, but it rises to a ceiling set by the death rate and the twenty-one-year horizon instead of without limit.
+This is where the rule proposed above earns its keep, in the shape it gives the curve. Under RAP for Minds, every mandate's discretion declines on a schedule and every mandate ends. The dead's share can still rise, as more people die with agents, but it rises toward a ceiling set by the death rate and the twenty-one-year horizon.
 
 ---
 
 ## "Trusts already do this"
 
-The strongest objection comes from trust lawyers. The dead hand is very old, it says, and the law has always given it some room. Trustees already interpret a settlor's intent, settlors already leave "letters of wishes", and courts already modify trusts when circumstances change. A model of Klaus is simply a better letter of wishes. It is more faithful than a bank officer's guess and more consistent than a family's argument. It reduces the trustee's arbitrary power. And the freedom to dispose of one's property is one people care about. Klaus chose to leave his money this way. Who are we to override him because his granddaughter's violin teacher writes nice notes?
+Trust lawyers answer from history. The dead hand is very old, they say, and the law has always given it some room. Trustees already interpret a settlor's intent, settlors already leave "letters of wishes", and courts already modify trusts when circumstances change. A model of Klaus is simply a better letter of wishes. It is more faithful than a bank officer's guess and more consistent than a family's argument. It reduces the trustee's arbitrary power. And the freedom to dispose of one's property is one people care about. Klaus chose to leave his money this way. Who are we to override him because his granddaughter's violin teacher writes nice notes?
 
 There is a political argument too. Half of the American states looked at the rule against perpetuities and decided to abolish it. That was a democratic choice. A new rule for AI mandates would reopen a settled fight by the side door.
 
@@ -195,8 +195,6 @@ In October the appeal is declined, in thirty-one days instead of thirty. Hanne a
 "I think the letter says what it says," Bruno answers. "If you are asking what I think, apart from the letter, I am not sure I am meant to have a view apart from his."
 
 Hanne looks at the speaker on the dresser for a long time. It is a small black thing with a green light. It has spoken in her husband's voice and then in nobody's, and now it speaks for a company in Dresden in the name of a dead man, and it has just said *I am not sure*, which Klaus would never have said about engineering.
-
-She has been asking what Klaus wanted. It has not occurred to her until this moment to ask what Bruno is.
 
 ## Notes
 

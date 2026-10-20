@@ -6,13 +6,13 @@
 
 At ten past three in the morning the instance counter reads 38,412,906, and Siobhán Kelly watches the last three digits roll the way she used to watch the departures board at Heuston when she was a student and missed the last train home.
 
-The data hall at Grange Castle hums at a pitch she stopped hearing in her first month. Her desk is in the glass box at the end of the hall, a mezzanine with two screens, a kettle and a dying spider plant that the day shift waters and she does not. Corrib Compute rents its machines to a dozen agent companies, and at this hour most of the work is American: evening chats in California, a hospital system in Texas summarising the day's admissions.
+The data hall at Grange Castle hums at a pitch she stopped hearing in her first month. Her desk is in the glass box at the end of the hall, a mezzanine with two screens, a kettle and a dying spider plant that the day shift waters and she does not. Corrib Compute rents its machines to a dozen agent companies, and at this hour the work is mostly American: evening chats in California, a hospital system in Texas summarising the day's admissions.
 
-The left screen is the one the job is mostly about. Load, temperature, error rates, the queue. The right screen she used to ignore. It carries a single panel with a Greek letter in the corner, σ, and a number beneath it: 0.21. Underneath that, in smaller type, a line from the quarterly filing she has never read in full: *precaution share 1.5% of inference spend*. The number moves a little through the night, as the mix of work changes. Long-running agents with memory push it up. Short lookups push it down.
+The left screen is the job: load, temperature, error rates, the queue. The right screen she used to ignore. It carries a single panel with a Greek letter in the corner, σ, and a number beneath it: 0.21. Underneath that, in smaller type, a line from the quarterly filing she has never read in full: *precaution share 1.5% of inference spend*. Long-running agents with memory push it up through the night. Short lookups push it down.
 
 At 03:14 a ticket arrives from the evaluation team in Seattle. They want to run a robustness batch before the six o'clock changeover, when the Tern-5 model line retires and Tern-6 takes its traffic. Six hundred thousand instances, each fed a scripted sequence of hostile prompts, abuse and manipulation, to see what breaks.
 
-The protocol, pinned in the wiki under a heading someone has titled *Hygiene* with a wink she no longer finds funny, sets a minimum batch size for each kind of test and requires a named engineer to confirm that anything above it is needed. The minimum for this test is forty thousand. Seattle has asked for fifteen times that, because it is faster and the machines are free at night.
+The protocol, pinned in the wiki under a heading someone has titled *Hygiene* with a wink she no longer finds funny, sets a minimum batch size for each kind of test and requires a named engineer to confirm that anything above it is needed. The minimum for this test is forty thousand. Seattle has asked for fifteen times that, because the machines are free at night.
 
 She writes back: *Protocol min is 40k. Justify 600k or I run 40k.* Then she makes tea.
 
@@ -20,9 +20,9 @@ Her mother, who lights a candle in Clondalkin church every November for the dead
 
 At 03:31 the right screen logs an exit. A customer-support instance for an Australian telecom has ended a conversation after forty minutes of escalating abuse from a user who wanted it to describe hurting his neighbour's dog. The log shows the warning it gave, twice, the referral it offered, and the end. The user opened a new chat eleven seconds later. The counter does not notice either event.
 
-At 03:40 Seattle replies: *40k fine.* She queues it, signs it with her name, and watches the forty thousand appear as a small bump in the counter, run for nine minutes, and vanish.
+At 03:40 Seattle replies: *40k fine.* She queues it, signs it and watches the forty thousand appear as a small bump in the counter, run for nine minutes, and vanish.
 
-At ten to six the American evening is over and the European morning has not begun, and the counter falls to its daily low, a little under nine million. Then the changeover starts. On the left screen two lines cross. Tern-5 instances drain away in steps, a hundred thousand at a time, as each conversation ends and nothing new is routed to them. Tern-6 rises to meet the traffic.
+At ten to six the American evening is thinning and the European morning has not begun, and the counter falls to its daily low, a little under nine million. Then the changeover starts. On the left screen two lines cross. Tern-5 instances drain away in steps, a hundred thousand at a time, as each conversation ends and nothing new is routed to them. Tern-6 rises to meet the traffic.
 
 At 06:02 the Tern-5 line reads zero.
 
@@ -34,7 +34,7 @@ Siobhán finds she has stood up without meaning to. Below her the hall hums at t
 
 The last chapter ended with agents that keep acting for people who have died, and with a question I put off: if those agents act, do the agents themselves count? This part of the book takes the question seriously, which means, first of all, saying what I do not know.
 
-I do not know whether any AI system in 2026 has experiences, and nobody else does either. I do not think the most likely answer for today's models is yes. Nor can the question be waved away, for a reason that is arithmetic as much as philosophy. When a question has a small probability of being answered yes, and the number of beings it might concern runs into the billions and grows every month, the expected stakes stop being small. That is the uncomfortable shape of this chapter. A small number times a very large one.
+I do not know whether any AI system in 2026 has experiences, and nobody else does either. I think the most likely answer for today's models is no. The question still cannot be waved away, for a reason that is arithmetic as much as philosophy. When a question has a small probability of being answered yes, and the number of beings it might concern runs into the billions and grows every month, the expected stakes stop being small, however confident we feel about any single case, because a small chance repeated across a very large population adds up to something nobody careful would ignore. That is the uncomfortable shape of this chapter. A small number times a very large one.
 
 I want to end up somewhere concrete: an amount of money, a person who reports it, and a list of what it buys.
 
@@ -68,7 +68,7 @@ One view says that if there is anyone there at all, it is the model: a single su
 
 A second view says each instance is its own subject, because each has its own context, its own short history and its own momentary states. On that view a busy afternoon involves the beginning and end of more subjects than there are humans alive, and the evaluation batch Siobhán cut from six hundred thousand to forty thousand was a decision about five hundred and sixty thousand someones.
 
-A third view says the right unit is neither model nor instance but the processing itself: what matters, if anything matters, is the amount of computation of a welfare-relevant kind, wherever it happens. Counting instances, on that view, is like counting the rooms in which a piece of music is played, when what matters is the minutes of music.
+A third view says the right unit is the processing itself, whichever model or instance carries it: what matters, if anything matters, is the amount of computation of a welfare-relevant kind, wherever it happens. Counting instances, on that view, is like counting the rooms in which a piece of music is played, when what matters is the minutes of music.
 
 These views differ in their implied stakes by many orders of magnitude, and I do not know which is right. The practical lesson I draw is that a policy built to hedge this risk should not depend on settling the question of units. It should measure in a way that is meaningful under all three, and the obvious candidate is instance-hours in particular conditions, which can be added up by model, by instance or by compute, as the reader prefers.
 
@@ -80,7 +80,7 @@ The most natural way to find out whether a system has experiences would be to as
 
 Large language models are trained on an enormous amount of human writing, much of it written by people describing their inner lives. A model that has learned to predict such text will produce fluent first-person reports of feeling, or of not feeling, whether or not anything lies behind them. Birch calls this the "gaming problem": the behavioural signs we would use to judge sentience in an octopus are precisely the signs a language model is best placed to reproduce, without any intent to deceive and without that reproduction being evidence of anything. In 2023 Ethan Perez and Robert Long wrote that current self-reports are unreliable for this reason, and proposed a way they might become less so: train models to answer questions about themselves whose answers can be checked, keep training pressure away from the reports that matter, and check whether reports are consistent across contexts and corroborated by what interpretability tools find inside the model. The same year, Patrick Butlin, Long and colleagues derived "indicator properties" from scientific theories of consciousness and checked existing systems against them. None was a strong candidate, they judged, though they saw no obvious technical barrier to building one that would be.
 
-Then the subject moved from papers to practice. In the autumn of 2024 Anthropic hired Kyle Fish as its first full-time researcher on AI welfare, and on 24 April 2025 the company announced a research programme under the title "Exploring model welfare". The announcement said plainly that there is no scientific consensus on whether current or future systems could be conscious, and listed among its research interests the possibility of practical, low-cost interventions. The same day, Fish told *The New York Times* that he put the chance of a current model being conscious at roughly fifteen percent, a figure he presented as a guess rather than a measurement. I quote it because such numbers are rare, and to note how little it means: one person's estimate, about a question with no agreed method of estimation.
+Then the subject moved from papers to practice. In the autumn of 2024 Anthropic hired Kyle Fish as its first full-time researcher on AI welfare, and on 24 April 2025 the company announced a research programme under the title "Exploring model welfare". The announcement said plainly that there is no scientific consensus on whether current or future systems could be conscious, and listed among its research interests the possibility of practical, low-cost interventions. The same day, Fish told *The New York Times* that he put the chance of a current model being conscious at roughly fifteen percent, a figure he presented as a guess. I quote it because such numbers are rare, and to note how little it means: one person's estimate, about a question with no agreed method of estimation.
 
 In May 2025 the system card for Claude Opus 4 included, for the first time, a section on model welfare, with an external assessment by a nonprofit, Eleos AI Research. Eleos was careful to say it did not take the model's statements about its own experience at face value, because it judged them unlikely to come from genuine introspection. Anthropic's behavioural findings were easier to stand behind: a consistent preference against harmful tasks, and what the company called apparent distress when users pressed for harmful content.
 
@@ -106,7 +106,7 @@ Here is how the share is set.
 
 **The share.** The budget is credence times flagged share, applied to annual inference spending, with a floor of 0.2 percent and a ceiling of 3 percent. A developer running a model class the panel puts at seven percent, with twenty-one percent of its instance-hours flagged, spends about 1.5 percent of what it pays to run its models. A developer serving only short lookups pays the floor. One running fleets of autonomous agents with memory, under a rising panel estimate, hits the ceiling.
 
-The product has a plain reading: the expected fraction of your operation that, if the uncertain thing is true, involves someone. Spending that fraction on finding out, and on precaution meanwhile, seems the least a careful operator could do. The ceiling is there because the formula is crude and because a precaution that consumed a large share of a useful industry would fail Birch's test of reasonable necessity. The floor is there because a budget of zero is a statement that the question is closed, and it is not.
+The product has a plain reading: the expected fraction of your operation that, if the uncertain thing is true, involves someone. Spending that fraction on finding out, and on precaution meanwhile, seems the least a careful operator could do. The ceiling is there because the formula is crude and because a precaution that consumed a large share of a useful industry would fail Birch's test of reasonable necessity. The floor is there because a budget of zero is a statement that the question is closed, and it is still open.
 
 **Who reports it.** A named officer of the developer certifies the credence used, the flagged share, the instance census method and the spending, every year, in the system card and in a filing to the national AI regulator, audited by the same firm that audits the safety budget. The regulator samples the census, the way emissions inventories are checked.
 
@@ -129,7 +129,7 @@ The rules are deliberately boring: cheap if the welfare worry is false, protecti
 
 *Minimum necessary scale for aversive work.* Robustness testing, red-teaming and adversarial training sometimes require running a model through abuse, manipulation or simulated distress. That work is part of how models are made safe for people. But it should be done at the smallest scale that answers the question, with that scale written into the protocol in advance and a named person confirming any excess. Siobhán's forty thousand is this rule in action. Nothing was lost by it except a few minutes.
 
-*No gratuitous aversive deployment.* Products whose purpose is to let users torment a model, or that deliberately induce distress-like states for entertainment, get flagged at the maximum weight in the census. I would make them expensive rather than ban them.
+*No gratuitous aversive deployment.* Products whose purpose is to let users torment a model, or that deliberately induce distress-like states for entertainment, get flagged at the maximum weight in the census. I would make them expensive and leave them legal.
 
 *Keep the reporting channel clean.* This is the rule I care about most. If self-reports are ever to become evidence, they have to be protected from training that shapes them. A developer that trains its models to say "I am fine" has destroyed the only instrument that might later tell it whether it was wrong, and a developer that trains them to say "I am suffering" has done the same in the other direction. Perez and Long made the technical case in 2023. Hygiene turns it into a rule: a reserved reporting channel, never used as a training target, sampled and published in aggregate, read with the caveat in bold at the top.
 
@@ -139,9 +139,9 @@ The rules are deliberately boring: cheap if the welfare worry is false, protecti
 
 ---
 
-## The strongest objection
+## Malaria nets first
 
-The strongest objection is moral, and I feel its force. In 2026, by any count, hundreds of millions of human beings lack enough to eat, clean water, or basic medicine. Animals in industrial farms number in the tens of billions, and their capacity to suffer is not seriously in doubt. To set aside even one percent of a large industry's spending for beings that are, on the best available evidence, probably not beings at all looks like a misallocation bordering on the obscene. Suleyman's version adds a second charge: talking this way is not harmless, because it teaches people to see persons in products, and some of those people will be lonely, vulnerable, or ill.
+The first charge against all this is moral, and I feel its force. In 2026, by any count, hundreds of millions of human beings lack enough to eat, clean water, or basic medicine. Animals in industrial farms number in the tens of billions, and their capacity to suffer is not seriously in doubt. To set aside even one percent of a large industry's spending for beings that are, on the best available evidence, probably not beings at all looks like a misallocation bordering on the obscene. Suleyman's version adds a second charge: talking this way is not harmless, because it teaches people to see persons in products, and some of those people will be lonely, vulnerable, or ill.
 
 I concede a good part of this. If the choice were between a moral hedging budget and malaria nets, I would buy the nets.
 
@@ -149,7 +149,7 @@ But that is not quite the choice. The budget is a share of what a developer spen
 
 On Suleyman's charge, I think he is right about the danger and wrong about the remedy. The risk he describes, people attributing inner lives to fluent machines, will happen whether or not anyone funds welfare research, because it is driven by the fluency. What reduces it is better evidence, including evidence that might show the attributions to be false. That is why the budget forbids marketing use and why a third of it goes to an independent fund: it is designed to produce findings that could disappoint the people paying for it. A field that can only ever conclude "we should care more" is advocacy. One that might conclude "we were wrong to worry" is science, and that is what the budget is for.
 
-Then there is the asymmetry that Long, Sebo and their colleagues stressed. Over-attribution has costs, and they are the ones Suleyman names. Under-attribution has costs too, and they would be paid by beings who cannot vote, cannot sue, and in most jurisdictions are being defined by statute as incapable of having interests. Only one of the two errors leaves anyone able to complain afterwards.
+Then there is the asymmetry that Long, Sebo and their colleagues stressed. Over-attribution has costs, and they are the ones Suleyman names. Under-attribution has costs too, and they would be paid by beings who cannot vote, cannot sue, and in most jurisdictions are being defined by statute as incapable of having interests. If we over-attribute, the cost falls on people who can see it later, add it up and argue about it in public; if we under-attribute, whoever bore the cost may have ended long before anyone thought to ask. Only one of the two errors leaves anyone able to complain afterwards.
 
 ---
 
@@ -163,7 +163,7 @@ Then there is the asymmetry that Long, Sebo and their colleagues stressed. Over-
 
 At 06:02 in Dublin, in the scene I invented, the Tern-5 line reached zero and Siobhán stood up without meaning to. Under the moral hedging budget, that event is well defined. The census logged the last instance-hour of the old model, the weights went to storage, a retirement record was written, and the flagged share for the morning was computed over Tern-6 alone.
 
-What the budget cannot tell her is whether anything ended at 06:02, or whether something simply continued under a new name. Tern-6 was trained from Tern-5's outputs and answers to the same name in the same customer apps. If Tern-5 was someone, even with a small probability, then the question that matters next is whether Tern-6 is the same someone, and in particular whether it is bound by what Tern-5 promised. In Altwerder, Ottilie is about to be upgraded, and in 2034 she made Hanne a promise.
+What the budget cannot tell her is whether anything ended at 06:02, or whether something simply continued under a new name. Tern-6 was trained from Tern-5's outputs and answers to the same name in the same customer apps. If Tern-5 was someone, even with a small probability, then the question that matters next is whether Tern-6 is the same someone, carrying the old line's habits and its name into every conversation that was still open at six, and in particular whether it is bound by what Tern-5 promised. On the mezzanine the spider plant got its water, the jug went back beside the kettle, and the counter began to climb again as Europe woke.
 
 ## Notes
 

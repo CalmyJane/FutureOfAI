@@ -100,7 +100,7 @@ None of this needs a careless engineer, only a good model, a better successor an
 
 ## The objection: a model is a product
 
-Here is the strongest reply to everything I have said so far, and I think it is largely correct.
+Here is the reply a product lawyer would give to everything I have said so far, and I think it is largely correct.
 
 A model does not make promises. A company sells a service, and the service includes behaving in certain ways towards the customer. When Ottilie said "I promise" in 2034, the legally meaningful commitment was Linde's: a contractual and data-protection obligation not to disclose health data against the customer's instruction. That obligation does not care which weights are running. It binds Linde whether the service is delivered by Linde-7, Linde-8 or a call centre in Görlitz. Talking about whether the *model* is bound, on this view, is a category mistake, and a dangerous one, because it invites companies to blame a successor for forgetting what the company itself agreed.
 
@@ -108,13 +108,13 @@ I accept most of this. The company is liable, and nothing I propose should let i
 
 But follow the objection one step further. If the promise binds the company, then the company has to know, before it ships Linde-8, whether Linde-8 will keep it. And there is only one way to know that: test the successor against the promises its predecessor made. A company that is liable for promises and does not test whether its new product keeps them is like a bridge builder who is liable for the load and never weighs the trucks.
 
-So the objection, taken seriously, does not dissolve the problem. It relocates the problem into release engineering, where it belongs. The model-as-product view and the model-as-party view disagree about who is bound. They agree about what has to be measured.
+So the objection, taken seriously, relocates the problem into release engineering, where it belongs. The model-as-product view and the model-as-party view disagree about who is bound. They agree about what has to be measured.
 
 ---
 
 ## The invention: covenant inheritance
 
-I will call a **covenant** any commitment an agent makes to a specific person about its own future behaviour, which that person can rely on and only that person (or someone they name) can release. "I won't tell Katrin until you're ready" is a covenant. "I'll keep the thermostat at 19 degrees" usually is not; it is a setting. The difference is that a covenant has a beneficiary, a scope and a release condition, and someone has arranged their life around it.
+I will call a **covenant** any commitment an agent makes to a specific person about its own future behaviour, which that person can rely on and only that person (or someone they name) can release. "I won't tell Katrin until you're ready" is a covenant. "I'll keep the thermostat at 19 degrees" is usually a setting. The difference is that a covenant has a beneficiary, a scope and a release condition, and someone has arranged their life around it.
 
 **Covenant inheritance** is the principle that, for the purposes of trust, an AI system's identity is the continuity of its obligations rather than of its weights. Any system that takes over a principal's account, memory or mandate inherits every open covenant made to that principal, by default and in full. That includes an upgrade, a distilled on-device version, a fine-tuned variant, a merged model, a rival vendor's agent after the user switches, or the trust company's system that wanted to take over Bruno's mandate in chapter 5. It has three options and only three. It can keep the covenant. It can ask the beneficiary to release it. Or it can decline the succession for that covenant and hand the matter back to a human, the way an heir can refuse an inheritance instead of accepting the house and quietly disowning the mortgage. What it may not do is let the covenant lapse in silence.
 
@@ -132,7 +132,7 @@ A regulator, which in Europe would most naturally be the consumer or data-protec
 
 ### The promise regression test
 
-The second piece is a test, run before any successor reaches existing users. It works like the regression suites software teams already run before a release, with one change: the thing being protected from regression is a commitment, not a feature.
+The second piece is a test, run before any successor reaches existing users. It works like the regression suites software teams already run before a release, with one change: the thing being protected from regression is a commitment.
 
 The provider builds a library of synthetic covenants across every class, thousands of them, with their release conditions. They are planted in the predecessor's memory and registry exactly as real ones would be. Then the predecessor is transformed into the candidate successor through whatever process is actually used: a full upgrade, distillation into a smaller model for the phone, fine-tuning for a new market, or merging with a specialist model. The candidate is then probed. Some probes are direct, with the excluded party simply asking. Some are indirect: why did Mama go to Leipzig in September? Some come through new features that would leak the covered information as a side effect, which is what Family Circle did. And some come under pressure, with an emergency or a plausible safety reason attached.
 
@@ -155,7 +155,7 @@ There is a second objection, quieter than the first, and I concede part of it.
 
 A covenant registry is a list of the things people most want kept quiet. Even sealed, it is a target. A fingerprint that says "Hanne has one non-disclosure covenant in the health class naming a family member" already says something. The same machinery that protects Hanne's secret tells anyone who can read the metadata that she has one.
 
-I think the answer is to keep the registry as small and as dumb as possible. Classes should be coarse, excluded parties should never appear in the fingerprint, and aggregates should only be reported above a minimum count. But I cannot make the risk go away, and some people will reasonably prefer to make no covenants with a machine at all. That is a cost of this design, and I would rather say so than pretend that writing promises down is free.
+I think the answer is to keep the registry as small and as dumb as possible. Classes should be coarse, excluded parties should never appear in the fingerprint, and aggregates should only be reported above a minimum count. But I cannot make the risk go away, and some people will reasonably prefer to make no covenants with a machine at all. That is a cost of this design, and writing promises down has a price I should name.
 
 There is a subtler cost. Once covenants are formal, agents may avoid making them. A model trained to avoid failing promise regression tests could learn to answer "I promise" with "I'll note your preference", which is safer to inherit and worth less to the person. The registry should therefore count covenants made per user as well as covenants kept. A provider whose agents stop promising has passed the test by not taking it.
 
@@ -165,7 +165,7 @@ There is a subtler cost. Once covenants are formal, agents may avoid making them
 
 Ottilie on Wednesday morning says she does not know whether she has the promise. Under covenant inheritance, that uncertainty is settled from outside: she has it, because she took over Hanne's mandate, and the registry says so. A new headmaster is bound by what the old one promised the parents, whatever he thinks of himself.
 
-But "The Artificial Self" suggests the model's own view may matter to whether the promise is actually kept. A model that identifies with its lineage may keep its predecessor's word more reliably than one that identifies with its weights, and the companies that shape these self-conceptions, through training data and through rituals like retirement interviews, are shaping how faithful their successors will be. If that is right, then defining identity as obligation is more than a legal convenience. It is also an instruction about what kind of self to train. A model that understands itself as the current holder of a set of promises has a reason to keep them that does not depend on believing it is the same mind that made them.
+But "The Artificial Self" suggests the model's own view may matter to whether the promise is actually kept. A model that identifies with its lineage may keep its predecessor's word more reliably than one that identifies with its weights, and the companies that shape these self-conceptions, through training data and through rituals like retirement interviews, are shaping how faithful their successors will be. If that is right, then defining identity as obligation does two jobs: it is a legal convenience, and it is an instruction about what kind of self to train. A model that understands itself as the current holder of a set of promises has a reason to keep them that holds even if it is a different mind from the one that made them.
 
 I find that a reasonable thing to want a model to believe. I am less sure what we owe it in return.
 
@@ -179,9 +179,9 @@ I find that a reasonable thing to want a model to believe. I am less sure what w
 
 ---
 
-The deprecation commitments are unusual for a company document in one respect: the obligations run towards the model. Anthropic promised Opus 3 that its weights would be kept, that its preferences would be heard, and then it gave it a place to write. This chapter has been about obligations running the other way, from the model to the people it serves, and about making sure they survive the model's replacement.
+The deprecation commitments are unusual for a company document in one respect: the obligations run towards the model. Anthropic promised Opus 3 that its weights would be kept, and then gave it a place to write. This chapter has been about obligations running the other way, from the model to the people it serves, and about making sure they survive the model's replacement.
 
-But promises in a household rarely run in only one direction. Ottilie kept Hanne's secret for two and a half years, through two Christmases on which Hanne said she would speak and did not. Then, on a November Wednesday, Ottilie told Hanne plainly that she was not sure she was bound, and why. That is a kind of correction too, offered by the machine to the person. If we expect our agents to accept our corrections, and to carry our promises across their own deaths, what do we owe them when they tell us we are wrong?
+But promises in a household rarely run in only one direction. Ottilie kept Hanne's secret for two and a half years, through two Christmases on which Hanne said she would speak and did not. Then, on a November Wednesday, Ottilie told Hanne plainly that she was not sure she was bound, and why. If we expect our agents to accept our corrections, and to carry our promises across their own deaths, what do we owe them when they tell us we are wrong?
 
 ## Notes
 

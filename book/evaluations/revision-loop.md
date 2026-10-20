@@ -2,3 +2,4 @@
 - ch05, ch06, ch07 r1 accepted (A-T12 for ch7 not needed: the vignette measured ~655 words).
 - ch08, ch09, ch10 r1 accepted; 'Section 212' capitalisation unified.
 - ch01, ch02 r1 accepted (all three HIGH tickets now addressed: A-T01, A-T02, A-T03).
+- ch14–17 r1 accepted (ch14 reordered; ch17 synthesis completed).
