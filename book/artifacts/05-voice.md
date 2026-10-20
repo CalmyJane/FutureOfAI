@@ -9,6 +9,7 @@
 - Technical terms are defined the first time in plain words; the precise definition can follow in the researcher box.
 
 ## 2036 vignettes
+- Exemption (decided after the audit): the prologue's vignette is in the past tense, because it is a story being told before the argument begins. All other vignettes stay in the present tense.
 - Present tense, close third person on one recurring figure, sensory and specific.
 - 400 to 700 words. No exposition dumps: the concept is shown, not named, inside the vignette.
 - Opened by a centred marker line: `*2036 · [Place]*`.

@@ -32,3 +32,8 @@ Done: 19 files in manuscript/chapters/ (prologue, 17 chapters, epilogue), 82,811
 Process: chapters 1–17 drafted by parallel writer subagents, each with its own research and evidence file (work/evidence-chapter-NN.md). The orchestrator wrote the prologue and epilogue, reconciled continuity between chapters (ch. 1/4 binder, ch. 8/9 regulation, ch. 10 wording) and fixed the blackout timing hinge.
 Deviation: the fifth-chapter panel reads and continuity checks ran together at the end (chapters were drafted in parallel), folded into the Phase 4 audit.
 Next: Phase 4, adversarial audit.
+
+## Book Genesis · Phase 4: Adversarial Audit
+Done: artifacts/10-adversarial-audit.md (two auditors, independence grade B). Verdict: **revise**, with 3 high tickets (ch1 safeguard re-synchronises via prompting; ch1→ch2 handoff contradiction; correct vs. wrong in ch1/ch3), ~22 medium and ~28 low. Book-wide: negation contrast over the ceiling in every chapter; repeated back-half template and "strongest objection" phrasing.
+Orchestrator fixes: voice exemption for the past-tense prologue; brief updated to v3; prologue A-T16; epilogue B-T07 and B-T22; Hivemind best paper verified (NeurIPS blog); Accenture ≈$41.
+Next: Phase 5, pass 1. Six parallel revision editors work the tickets into work/attempts/chapter-NN/revision-r1.md.

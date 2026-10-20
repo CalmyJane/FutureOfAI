@@ -28,8 +28,8 @@ independence:
   notes: "Claude Code documents subagent isolation; no second model family installed."
 
 pipeline:
-  current_phase: "Phase 4: Adversarial Audit"
-  current_gate: "adversarial_audit"
+  current_phase: "Phase 5: Revision Loop"
+  current_gate: "revision_loop"
   status: "running"
   panel_passes: 0
   rubric_passes: 0
@@ -47,7 +47,7 @@ gates:
   foundation: "passed"
   architecture: "passed"
   drafting: "passed"
-  adversarial_audit: "pending"
+  adversarial_audit: "revise"
   revision_loop: "pending"
   final_score: "pending"
   editorial_package: "pending"
