@@ -1,0 +1,1 @@
+- ch03, ch04 r1 accepted (all tickets done; one negation contrast each).
