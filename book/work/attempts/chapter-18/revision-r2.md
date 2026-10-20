@@ -42,6 +42,6 @@ In the chapters I imagined a better version of your February evening: the jitter
 
 If they do, I think your fourteenth of February in 2036 will be unremarkable. The wind will pick up in the north. A price will fall for three minutes. Ninety million devices will ask to start and will be told to wait a random while, and most of their owners will never know. At 19:42 the music room will be warming slowly, the way rooms always used to. Lotte will arrive at eight, stamping snow off her boots, and play the Telemann with her shoulders down.
 
-And in Porto, on a shelf in a substation nobody has needed to visit that winter, there will be a binder of two hundred and twelve pages, with a pencil stub resting in its spine and a page near the middle that says, in the careful backward-sloping hand of Teo's father, *Olha outra vez*.
+And in Porto, on a shelf in a substation nobody has needed to visit that winter, there will be a binder of two hundred and twelve pages, with a pencil stub resting in its spine and, a few pages past Fernando's pencilled halves, a page initialled R. B. by Teo's father years before any of this, where the margin says, in his careful backward-sloping hand, *Olha outra vez*.
 
 Look again.

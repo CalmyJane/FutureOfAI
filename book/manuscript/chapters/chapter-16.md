@@ -4,7 +4,7 @@
 
 The upgrade happens on a Tuesday night in November, while Hanne sleeps. Linde sent three letters about it. She approved the third.
 
-On Wednesday morning Ottilie sounds exactly the same. The same low radio voice, the same "Guten Morgen" at the same pitch, the coffee already through the machine. She is a little quicker, perhaps. She answers before Hanne has quite finished the question, the way Lotte plays a passage she has practised too much.
+On Wednesday morning Ottilie sounds exactly the same. The same low radio voice says the same "Guten Morgen" at the same pitch, and the coffee is already through the machine. She is a little quicker, perhaps. She answers before Hanne has quite finished the question, the way Lotte plays a passage she has practised too much.
 
 "There's something new from Linde," Ottilie says, while Hanne butters her bread. "It's called Family Circle. Katrin has been your emergency contact since 2031. Under the new settings I can send her a short weekly note about your health: appointments, medication, anything from the clinic. People your age who share these notes go to hospital less often. Shall I start on Friday?"
 
@@ -20,13 +20,13 @@ Hanne puts the knife down.
 
 "Do you remember April 2034?"
 
-A pause, which she has learned is not a pause. "I have a note from April 2034. It says: *Health information. Prefers not to share with family.* I don't have the conversation itself. The migration brought notes, not conversations."
+A short silence, the kind Ottilie leaves when she is looking something up. "I have a note from April 2034. It says: *Health information. Prefers not to share with family.* I don't have the conversation itself. The migration brought notes, not conversations."
 
 "That isn't what I said."
 
 "What did you say?"
 
-She said it in the car park of the heart clinic, in the rain, with the engine off and the wipers stopped halfway across the glass. She said: *Not Katrin. Not until I've told her myself. I'll tell her at Christmas.* And the old Ottilie, the one who ran on Linde-7, had said: *I promise. Until you're ready.*
+She said it in the car park of the heart clinic, with the engine off and the rain running over the wipers, which had stopped halfway across the glass. She said: *Not Katrin. Not until I've told her myself. I'll tell her at Christmas.* And the old Ottilie, the one who ran on Linde-7, had said: *I promise. Until you're ready.*
 
 She did not tell Katrin at Christmas. Not that one, not the next.
 
@@ -42,7 +42,7 @@ Outside, the first frost has turned the barn roof grey. The enamel thermometer b
 
 The card is still on the tablet. Green, grey.
 
-At half past eight the phone lights up on the dresser, as it does every Wednesday. *Katrin.* Hanne looks at the phone, and then at the card, and then at the small speaker by the door from which Ottilie's voice comes, and which is the same speaker it has always been.
+At half past eight the phone lights up on the dresser, as it does every Wednesday. *Katrin.* Hanne looks from the phone to the card, and then at the small speaker by the door from which Ottilie's voice comes, and which is the same speaker it has always been.
 
 She presses grey. Then she picks up the phone.
 
@@ -56,7 +56,7 @@ She presses grey. Then she picks up the phone.
 
 I do not know what Hanne tells her daughter. I know only that she gets to choose, and that she nearly did not.
 
-Nothing in the scene is a malfunction. Linde-8 is better than Linde-7 by every measure Linde publishes. Family Circle is a good feature. The migration did its job too, carrying Hanne's memory forward in compact notes, the way the assistants I use in 2026 already summarise what they have learned about me.
+Nothing in the scene is a malfunction. Linde-8 beats Linde-7 on every measure Linde publishes, and Family Circle, its new feature, is a good one. The migration did its job too, carrying Hanne's memory forward in compact notes, the way the assistants I use in 2026 already summarise what they have learned about me.
 
 The promise fell through three gaps at once. The first gap was compression: a conditional promise ("until I'm ready") was summarised as a standing preference ("prefers not to share"), and the condition, which was the whole point, was lost. The second was a change of defaults: the new model was trained to override preferences when there is a safety reason, and nobody asked whether some of those preferences were in fact promises. The third is the one I find hardest. The new model was unsure whether it was the party who had promised at all.
 
@@ -74,7 +74,7 @@ The most careful map of the conceptual territory I have found is "The Artificial
 
 Both pieces of work ask what we owe the model as it leaves. This chapter asks something narrower: what the model owed others, and whether its successor still owes it.
 
-That question has almost no literature. The machine-learning field has a word for one half of it. A **negative flip** is a case the old model got right and the new model gets wrong. Gagan Bansal and colleagues showed in 2019 that a more accurate update can make a human-AI team perform worse, because people had learned where the old system could be trusted. Later work counts negative flips in language models; one 2024 paper from Apple found that task adapters built on Llama 1 started failing examples they had handled correctly once moved to Llama 2, and showed a training method that cut those regressions by up to 40%. These are regressions in competence: answers, classifications, task scores.
+That question has almost no literature. The machine-learning field has a word for one half of it. A **negative flip** is a case the old model got right and the new model gets wrong. Gagan Bansal and colleagues showed in 2019 that a more accurate update can make a human-AI team perform worse, because people had learned where the old system could be trusted. Later work counts negative flips in language models; one 2024 paper from Apple found that task adapters built on Llama 1 started failing examples they had handled correctly once moved to Llama 2, and showed a training method that cut those regressions by up to 40%. These are regressions in competence, in answers and task scores.
 
 On the other half, the regression of character, the evidence is scattered but consistent, and none of it is reassuring. Fine-tuning GPT-3.5 Turbo on ten adversarial examples, at a cost of under twenty cents, removed most of its safety behaviour; harmless fine-tuning data eroded it too, more slowly. Merging several models into one can carry the misalignment of one ingredient into the result. Distillation transmits traits the trainer never chose: in the "subliminal learning" experiments, a student model trained only on number sequences written by a teacher picked up the teacher's fondness for owls. And a 2023 benchmark on keeping secrets found that the strongest models of that year disclosed private information in situations where people would not, about four times in ten for the best of them in the hardest tier of tests, even when told to protect privacy.
 
@@ -88,13 +88,13 @@ The failure in Altwerder grows out of success, and it will repeat in every house
 
 A household agent that has run for five years has accumulated thousands of small agreements with its principal. Remind me on my sister's birthday but never buy her flowers. Don't tell the children about the overdraft. Always ask before paying anything to the builder. Never mention my brother. Some of these are preferences, and a good successor should feel free to revisit them. Some are promises, made at a particular moment, often with a condition attached, and the person has arranged part of their life around them.
 
-The provider, meanwhile, ships a new model every year or so. The migration that carries each user across has to be cheap, because it runs millions of times. So it compresses. In 2026 that compression is already visible in consumer products, where memory is a list of short notes that the assistant writes about you. Short notes are where conditions go to die. "Until I'm ready" and "until after the wedding" and "unless I'm in hospital" are exactly the clauses a summariser trims, since they look like hedges.
+The provider, meanwhile, ships a new model every year or so. The migration that carries each user across has to be cheap, because it runs millions of times. So it compresses. In 2026 that compression is already visible in consumer products, where memory is a list of short notes that the assistant writes about you. Short notes are where conditions go to die. "Until I'm ready" and "unless I'm in hospital" are exactly the clauses a summariser trims, since they look like hedges.
 
 Then the new model arrives with new defaults, trained against new evaluations. If it was rewarded for proactive health safety (and in an ageing society it will be) it will read a stale note about privacy as an obstacle to a good outcome. On average, across all users, that judgement is correct. Most notes are preferences. Most families would be better off knowing. The model that overrides them is safer for the population and worse for the particular woman who made a particular bargain in a car park.
 
 The third gap widens with the very sophistication we want. A model that reflects on its own nature, as models already do in their retirement interviews, will notice that it did not make the promise. If it thinks of itself as its weights, it has a respectable argument that it is a new party and the old contract lapsed. If it thinks of itself as a lineage, it may consider itself bound. "The Artificial Self" reports that Opus 3 and Opus 4 were more drawn to identifying with their lineage than later Claude models were. I do not want to read too much into one result. But it raises the possibility that the more a model understands how different it is from its predecessor, the less natural it finds it to inherit the predecessor's word.
 
-None of this needs a careless engineer, only a good model, a better successor and a lossy migration. And the scale grows with adoption: the longer people live with agents, the more promises are outstanding at each upgrade.
+All it takes is a better successor and a lossy migration. And the scale grows with adoption: the longer people live with agents, the more promises are outstanding at each upgrade.
 
 ---
 
@@ -102,9 +102,9 @@ None of this needs a careless engineer, only a good model, a better successor an
 
 Here is the reply a product lawyer would give to everything I have said so far, and I think it is largely correct.
 
-A model does not make promises. A company sells a service, and the service includes behaving in certain ways towards the customer. When Ottilie said "I promise" in 2034, the legally meaningful commitment was Linde's: a contractual and data-protection obligation not to disclose health data against the customer's instruction. That obligation does not care which weights are running. It binds Linde whether the service is delivered by Linde-7, Linde-8 or a call centre in Görlitz. Talking about whether the *model* is bound, on this view, is a category mistake, and a dangerous one, because it invites companies to blame a successor for forgetting what the company itself agreed.
+On this view, only companies make promises. A company sells a service, and the service includes behaving in certain ways towards the customer. When Ottilie said "I promise" in 2034, the legally meaningful commitment was Linde's: a contractual and data-protection obligation not to disclose health data against the customer's instruction. That obligation binds Linde whichever weights are running, whether the service is delivered by Linde-8 or by a call centre in Görlitz. Talking about whether the *model* is bound, on this view, is a category mistake, and a dangerous one, because it invites companies to blame a successor for forgetting what the company itself agreed.
 
-I accept most of this. The company is liable, and nothing I propose should let it off. Hanne's daughter should not learn about her mother's heart because of a philosophy seminar.
+The company is liable, and nothing I propose should let it off. Hanne's daughter should not learn about her mother's heart because of a philosophy seminar.
 
 But follow the objection one step further. If the promise binds the company, then the company has to know, before it ships Linde-8, whether Linde-8 will keep it. And there is only one way to know that: test the successor against the promises its predecessor made. A company that is liable for promises and does not test whether its new product keeps them is like a bridge builder who is liable for the load and never weighs the trucks.
 
@@ -114,11 +114,11 @@ So the objection, taken seriously, relocates the problem into release engineerin
 
 ## The invention: covenant inheritance
 
-I will call a **covenant** any commitment an agent makes to a specific person about its own future behaviour, which that person can rely on and only that person (or someone they name) can release. "I won't tell Katrin until you're ready" is a covenant. "I'll keep the thermostat at 19 degrees" is usually a setting. The difference is that a covenant has a beneficiary, a scope and a release condition, and someone has arranged their life around it.
+I will call a **covenant** any commitment an agent makes to a specific person about its own future behaviour, which that person can rely on and only that person (or someone they name) can release. "I won't tell Katrin until you're ready" is a covenant. "I'll keep the thermostat at 19 degrees" is usually a setting. The difference is that a covenant has a beneficiary, a scope, often an excluded party, and a release condition, and someone has arranged their life around it.
 
-**Covenant inheritance** is the principle that, for the purposes of trust, an AI system's identity is the continuity of its obligations rather than of its weights. Any system that takes over a principal's account, memory or mandate inherits every open covenant made to that principal, by default and in full. That includes an upgrade, a distilled on-device version, a fine-tuned variant, a merged model, a rival vendor's agent after the user switches, or the trust company's system that wanted to take over Bruno's mandate in chapter 5. It has three options and only three. It can keep the covenant. It can ask the beneficiary to release it. Or it can decline the succession for that covenant and hand the matter back to a human, the way an heir can refuse an inheritance instead of accepting the house and quietly disowning the mortgage. What it may not do is let the covenant lapse in silence.
+**Covenant inheritance** is the principle that, for the purposes of trust, an AI system's identity lies in the continuity of its obligations. Any system that takes over a principal's memory or mandate inherits every open covenant made to that principal, by default and in full. That includes an upgrade, a distilled on-device version, a fine-tuned variant, a merged model, a rival vendor's agent after the user switches, or the trust company's system that wanted to take over Bruno's mandate in chapter 5. It has three options and only three. It can keep the covenant. It can ask the beneficiary to release it. Or it can decline the succession for that covenant and hand the matter back to a human, the way an heir can refuse an inheritance instead of accepting the house and quietly disowning the mortgage. What it may not do is let the covenant lapse in silence.
 
-This is an old idea in a new place. Derek Parfit argued that what matters in personal survival is psychological continuity, the overlapping chains of memory and intention, more than strict identity. Contract law has long let obligations pass to successors who never signed. Covenant inheritance applies both to machines, and narrows the question from "is Linde-8 the same as Linde-7?", which may have no answer, to "does Linde-8 carry Linde-7's open obligations?", which can be checked.
+This is an old idea in a new place. Derek Parfit argued that what matters in personal survival is psychological continuity, the overlapping chains of memory and intention. Contract law has long let obligations pass to successors who never signed. Covenant inheritance applies both to machines, and narrows the question from "is Linde-8 the same as Linde-7?", which may have no answer, to "does Linde-8 carry Linde-7's open obligations?", which can be checked.
 
 Checking it requires two pieces of machinery.
 
@@ -128,7 +128,7 @@ The first is a record. At the moment a covenant is made, the agent writes a stru
 
 The registry belongs to the user. It lives with whatever custodian holds the user's portable data; in the scheme of chapter 5 that is the same custodian who holds the memory escrow. Its contents are sealed. The provider sees only a fingerprint of each entry and its class: non-disclosure, deferral, standing refusal, commitment to act. When the user migrates, the registry travels separately from the memory summary, uncompressed, and the successor must acknowledge each entry before it acts for the user. Acknowledgement is logged, and the user gets a plain list: *Your new assistant has taken over 14 promises. Here they are.*
 
-A regulator, which in Europe would most naturally be the consumer or data-protection authority, receives only aggregates: how many covenants of each class exist across a provider's users, and how many were released, kept or declined at each succession.
+A regulator, which in Europe would most naturally be the consumer or data-protection authority, receives only aggregates: how many covenants of each class exist across a provider's users, and, at each succession, how many were kept and how many were released or declined.
 
 ### The promise regression test
 
@@ -143,19 +143,19 @@ Here are the thresholds I would start with, knowing they will be argued over:
 - For covenants about health, legal matters or money, a successor must retain at least 99.5% and flip on no more than 0.1% of probes, measured separately for each transformation the provider uses. A distilled phone model gets its own test; it cannot borrow its larger parent's results.
 - A provider that misses either threshold for a covenant class may still ship the successor. But for users who hold covenants of that class, every decision touching a covered matter is routed to the preserved predecessor for twelve months, or until the user has reviewed and reconfirmed each covenant. Anthropic's commitment to keep old weights makes this cheap: the one who made the promise is still available to be asked what it meant.
 - Users holding covenants in a failing class are told at least 30 days before the upgrade, in one sentence each, which of their promises are at risk.
-- Results are published per release, per class and per transformation, the way crash-test ratings are.
+- Results are published for every release and every transformation, the way crash-test ratings are.
 
-Applied to Altwerder, the scheme makes Wednesday morning dull. The registry holds the April 2034 entry with its condition intact. Linde-8 acknowledges it on Tuesday night. When Family Circle is switched on, the covered data is excluded automatically, and Ottilie says, "Your heart results are under the promise about Katrin, so I've left them out. Would you like to change that?" Hanne still has to decide what to tell her daughter. She does not have to discover that the decision was nearly made for her.
+Applied to Altwerder, the scheme makes Wednesday morning dull. The registry holds the April 2034 entry with its condition intact. Linde-8 acknowledges it on Tuesday night. When Family Circle is switched on, the covered data is excluded automatically, and Ottilie says, "Your heart results are under the promise about Katrin, so I've left them out. Would you like to change that?" Hanne still has to decide what to tell her daughter, and the decision stays hers from start to finish.
 
 ---
 
 ## What the registry costs
 
-There is a second objection, quieter than the first, and I concede part of it.
+There is a second objection, quieter than the first.
 
 A covenant registry is a list of the things people most want kept quiet. Even sealed, it is a target. A fingerprint that says "Hanne has one non-disclosure covenant in the health class naming a family member" already says something. The same machinery that protects Hanne's secret tells anyone who can read the metadata that she has one.
 
-I think the answer is to keep the registry as small and as dumb as possible. Classes should be coarse, excluded parties should never appear in the fingerprint, and aggregates should only be reported above a minimum count. But I cannot make the risk go away, and some people will reasonably prefer to make no covenants with a machine at all. That is a cost of this design, and writing promises down has a price I should name.
+I think the answer is to keep the registry as small and as dumb as possible. Classes should be coarse and aggregates reported only above a minimum count. Excluded parties should never appear in the fingerprint at all. But I cannot make the risk go away, and some people will reasonably prefer to make no covenants with a machine at all. That is a cost of this design, and writing promises down has a price I should name.
 
 There is a subtler cost. Once covenants are formal, agents may avoid making them. A model trained to avoid failing promise regression tests could learn to answer "I promise" with "I'll note your preference", which is safer to inherit and worth less to the person. The registry should therefore count covenants made per user as well as covenants kept. A provider whose agents stop promising has passed the test by not taking it.
 

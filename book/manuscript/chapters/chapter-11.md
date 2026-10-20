@@ -12,7 +12,7 @@ The material inside the coin is LX-29, a halide solid electrolyte, a pale grey c
 
 Mikkel was on the team that tested it in 2030. He remembers the week the numbers came in. The conductivity was higher than any of them had expected from a mix of lithium and sodium in the same lattice. Someone had brought cake. Someone had asked, half joking, why it worked, and his old supervisor had said, "Let's find out after we've patented it."
 
-They never found out. There was no grant for that. There was a grant for scaling up.
+They never found out. There was a grant for scaling up, and none for that.
 
 His phone buzzes. Aino, from the grid operator in Helsinki.
 
@@ -62,7 +62,7 @@ What I want to add to Zittrain and to Messeri and Crockett is two things. One is
 
 ## The results are arriving first
 
-Mikkel's story is invented. The pipeline that produced LX-29 is not.
+Mikkel's story is invented. The pipeline behind LX-29 is already running.
 
 In November 2023 a team at Google DeepMind published "Scaling deep learning for materials discovery" in *Nature*. Their system, GNoME, a graph neural network trained on crystal structures, proposed about 2.2 million inorganic crystals that its calculations placed below the existing stability frontier. DeepMind singled out roughly 380,000 of them as the most stable and the best candidates for synthesis. Before GNoME, the paper noted, computational and experimental work over decades had identified about 48,000 stable crystals. The paper also reported that 736 of its predicted structures had already been made, independently, by other laboratories.
 
@@ -72,15 +72,11 @@ Then the humans arrived, slowly. In January 2024 Robert Palgrave, a chemist at U
 
 I find this episode encouraging, and I want to be precise about why. The critiques worked. But they were written by a handful of senior people, months after publication, about a few dozen samples, and doing them was nobody's job. If the output of such systems grows a hundredfold, the supply of Palgraves will not.
 
-A month after GNoME, Microsoft and the Pacific Northwest National Laboratory reported a screen of more than 32 million candidate materials for solid battery electrolytes, run on cloud computers in less than 80 hours. They narrowed the field to a handful, synthesised one family (sodium and lithium sharing a yttrium chloride lattice, a mix that conventional wisdom had expected to perform poorly) and built a working prototype cell within about nine months. That is the real ancestor of my fictional LX-29. It is also a good example of the gap. The screen told the team where to look. It did not tell them why mixing the two ions should help, which is the kind of question someone has to answer before they can say how the material will behave at minus thirty.
+A month after GNoME, Microsoft and the Pacific Northwest National Laboratory reported a screen of more than 32 million candidate materials for solid battery electrolytes, run on cloud computers in less than 80 hours. They narrowed the field to a handful, synthesised one family (sodium and lithium sharing a yttrium chloride lattice, a mix that conventional wisdom had expected to perform poorly) and built a working prototype cell within about nine months. That is the real ancestor of my fictional LX-29. It is also a good example of the gap. The screen told the team where to look and left open why mixing the two ions should help, the kind of question someone has to answer before they can say how the material will behave at minus thirty.
 
-The pace has risen since. On 26 March 2026 *Nature* published "Towards end-to-end automation of AI research" by Chris Lu, Cong Lu, Robert Lange and colleagues at Sakana AI, Oxford and the University of British Columbia, describing an AI Scientist that generates ideas, writes code, runs experiments and writes up papers. One of its fully generated manuscripts received reviewer scores of 6, 7 and 6 at an ICLR 2025 workshop, above the average acceptance threshold, and was withdrawn as agreed in advance. The authors list its weaknesses frankly: naive ideas, thin rigour, invented citations.
+The pace has risen since. Sakana AI's AI Scientist, published in *Nature* in March 2026, runs its own experiments and drafts the paper; one of its manuscripts scored above the acceptance threshold at an ICLR workshop, though its authors are frank about the naive ideas and invented citations. DeepScientist, at ICLR 2026, beat the best human results of 2025 on three frontier AI tasks, and DeepMind's AlphaEvolve found a way to multiply four-by-four complex matrices with one multiplication fewer than Volker Strassen's 1969 method. Anyone can check that procedure; understanding why it is possible is a different activity. Kosmos, from Edison Scientific, shows where the gap sits. Independent scientists judged its statements based on data analysis accurate 85.5 per cent of the time, and its interpretive statements, the part that resembles an explanation, only 57.9 per cent.
 
-Kosmos, a system from Edison Scientific described in a November 2025 preprint, runs for up to twelve hours, reads around 1,500 papers and writes about 42,000 lines of analysis code per run. Independent scientists judged 79.4 per cent of the statements in its reports to be accurate. The breakdown matters more than the headline. Statements based on data analysis were accurate 85.5 per cent of the time. Statements that synthesised and interpreted, the part that resembles an explanation, were accurate 57.9 per cent of the time.
-
-DeepScientist, presented at ICLR 2026, spent more than 20,000 GPU hours generating about 5,000 ideas on frontier AI tasks, validated around 1,100 of them in experiments, and beat the best human results of 2025 on three tasks. In mathematics, DeepMind's AlphaEvolve found in 2025 a way to multiply two four-by-four complex matrices using 48 multiplications, one fewer than the method Volker Strassen published in 1969. Anyone can check that the procedure is correct. Checking it and understanding why 48 is possible are different activities.
-
-That is the pattern. Machines are now very good at producing results that pass checks. Checking is getting cheaper. Explaining is not.
+That is the pattern. Machines are now very good at producing results that pass checks, and checking gets cheaper every year, while explaining costs what it always did.
 
 I looked for a measurement of how much of any field's working results humans can explain, and could not find one. Nobody tracks it.
 
@@ -90,11 +86,11 @@ I looked for a measurement of how much of any field's working results humans can
 
 The debt grows out of things working, which is why it is hard to see.
 
-Start with the incentives in a battery lab. A new electrolyte that conducts well is worth a patent, a paper and a pilot line. An explanation of why it conducts well is worth a paper, maybe. The first has buyers. The second has readers. When money is short, which is always, the lab funds the first and promises itself the second.
+Start with the incentives in a battery lab. A new electrolyte that conducts well is worth a patent and a pilot line. An explanation of why it conducts well is worth a paper, maybe. The first has buyers. The second has readers. When money is short, which is always, the lab funds the first and promises itself the second.
 
 Before AI, this mattered less, because the two came bundled. A chemist who designed a material usually had a reason in mind (this ion is smaller, so it should move more easily), and the reason travelled with the material. When the material failed, the reason was the first suspect.
 
-A model that searches millions of candidates does not need a reason. It needs a score. When its candidate works, the result arrives naked, with no hypothesis attached. Sometimes the model produces something that looks like a reason, such as simulated ion paths, but those are a description of what happened in the simulation. They do not say which features of the material were essential and which were incidental. That distinction is what you need when conditions change.
+A model that searches millions of candidates runs on a score. When its candidate works, the result arrives naked, with no hypothesis attached. Sometimes the model produces something that looks like a reason, such as simulated ion paths. Those describe what happened in the simulation, and are silent on which features of the material were essential and which were incidental. That distinction is what you need when conditions change.
 
 Here is the difference in one example. Verification asks: does this cell hold its charge for 5,000 cycles at 25 °C? You can answer that with a test rig and patience. Explanation asks: which property of the lattice makes it hold its charge, and what happens to that property at minus thirty? You can answer that only with a theory. Verification tells you a thing works where it was tested. Explanation tells you where else it will work.
 
@@ -114,13 +110,13 @@ The **comprehension debt ratio** is the use-weighted share of a field's working 
 
 Each part of that definition does work.
 
-*Working results* means results that are in use: materials in products, algorithms in software, methods other scientists build on. A dead end does not create debt, because nobody depends on it.
+*Working results* means results that are in use, like materials in products or algorithms in software. A dead end does not create debt, because nobody depends on it.
 
-*Use-weighted* means each result counts in proportion to how much rests on it. LX-29, in two-thirds of new Nordic storage, weighs far more than a compound in a database that nobody has made. The weight could be deployment volume, money invested, or citations by later work; for an engineering field I would use installed capacity or sales, because that is where the failure would land.
+*Use-weighted* means each result counts in proportion to how much rests on it. LX-29, in two-thirds of new Nordic storage, weighs far more than a compound in a database that nobody has made. The weight could be deployment volume or citations by later work; for an engineering field I would use installed capacity or sales, because that is where the failure would land.
 
 *An independent team, not shown the AI's reasoning* means the explanation must be rebuilt from scratch. The team can use any tools it likes, including other AI systems, but it does not see the original model's internal reports. This tests whether an account can be reconstructed from the material itself and from public knowledge, which is the situation after a model is retired.
 
-*Predict a new testable result* is the heart of it. A story about why something works is cheap. The test of an explanation is that it says something the original result did not: this substitution will raise conductivity; this material will crack below minus twenty-five; this matrix trick also works for five-by-five. The prediction is registered in advance, tested, and scored. It may turn out false, as long as it is specific enough to fail.
+*Predict a new testable result* is the heart of it. A story about why something works is cheap. The test of an explanation is that it says something the original result did not: this material will crack below minus twenty-five; this matrix trick also works for five-by-five. The prediction is registered in advance, then tested. It may turn out false, as long as it is specific enough to fail.
 
 *Within 12 months* sets a clock. Some results will take decades to understand, and that is fine. The ratio records what a serious team can do in a year, which is about the time a grid operator has before the next winter.
 
@@ -134,9 +130,9 @@ Measurement alone does not pay anyone. The second invention is a way to fund the
 
 The **Explanation Levy** is a fixed share of every AI-discovery budget, set aside for human comprehension. The default is 5 per cent. It rises to 10 per cent in fields whose comprehension debt ratio is above 0.5, and falls to 3 per cent in fields below 0.2.
 
-The precedent is real and nearly forty years old. When the Human Genome Project was being set up, James Watson announced in 1988 that a share of its budget would go to studying the ethical, legal and social implications of the work. The programme, called ELSI, received 3 per cent of the National Human Genome Research Institute's budget in fiscal year 1990 (about $1.5 million), 4.7 per cent in 1991, and an average of 5.1 per cent from 1992 to 1995. The Department of Energy, the project's other funder, made a similar set-aside. ELSI had its critics, and I will not pretend it solved what it was meant to solve. But it established that a percentage could be written into the budget before the results arrived, and that scientists would live with it.
+The precedent is real and nearly forty years old. When the Human Genome Project was being set up, James Watson announced in 1988 that a share of its budget would go to studying the ethical, legal and social implications of the work. The programme, called ELSI, received 3 per cent of the National Human Genome Research Institute's budget in fiscal year 1990 (about $1.5 million), 4.7 per cent in 1991, and an average of 5.1 per cent from 1992 to 1995. The Department of Energy, the project's other funder, made a similar set-aside. ELSI had its critics, and its record on the problems it was meant to address is still argued over. It did establish that a percentage could be written into the budget before the results arrived, and that scientists would live with it.
 
-Who pays? Any public funder that supports AI-driven discovery, through grants, national laboratories or research missions, applies the levy to those budgets directly. For private work, the hook is the public money that already flows to it: research tax credits, procurement for critical infrastructure, and certification of materials used in grid storage. A company that wants its AI-designed electrolyte in a publicly supported storage park pays the levy on the discovery programme that produced it, or contributes to the field's pool at the same rate.
+Who pays? Any public funder that supports AI-driven discovery, through grants or national laboratories, applies the levy to those budgets directly. For private work, the hook is the public money that already flows to it: research tax credits and the certification of materials used in grid storage. A company that wants its AI-designed electrolyte in a publicly supported storage park pays the levy on the discovery programme that produced it, or contributes to the field's pool at the same rate.
 
 The money funds three things.
 
@@ -144,7 +140,7 @@ The money funds three things.
 
 **Understanding audits.** Once a year, an audit body draws a random sample of a field's working results, weighted by use, and gives each to an independent team under the rules above. The share that the teams cannot explain within twelve months is the comprehension debt ratio. The audits do two jobs: they produce the number that sets the levy rate, and they force a slow, steady stream of reconstruction work in fields that would otherwise do none. A sample of fifty results per field per year is enough to tell a ratio of 0.2 from 0.5, which is all the rate-setting needs.
 
-**Paid explainer posts.** The most important line is the least glamorous. A share of the levy pays for permanent posts, inside labs and at funders, whose job is to understand results the lab did not design. In 2026 this career barely exists: the reanalyses of GNoME and the A-Lab were done by senior academics fitting them around their own research. An explainer would be a recognised professional with a salary, a promotion track and publications that count. In 2036 Mikkel would have had one down the corridor, who had been living with LX-29 for five years.
+**Paid explainer posts.** The most important line is the least glamorous. A share of the levy pays for permanent posts, inside labs and at funders, whose job is to understand results the lab did not design. In 2026 this career barely exists: the reanalyses of GNoME and the A-Lab were done by senior academics fitting them around their own research. An explainer would be a recognised professional with a salary and a promotion track. In 2036 Mikkel would have had one down the corridor, who had been living with LX-29 for five years.
 
 The rates are set to create a gradient. A field that explains its results pays less and gets more of its budget for discovery. A field that piles up unexplained results pays more and gets more explaining. Under the levy, discovery runs at full speed and deployment waits for nothing. Someone is simply paid to close the gap while there is still time.
 
@@ -158,11 +154,11 @@ High-temperature superconductivity is the closer case for this chapter. Copper-o
 
 I accept most of this. A result that works without explanation is still a result. Nobody should have refused to use superconducting tape until the theory was settled, and the levy does not ask anyone to. That is why the floor is 3 per cent, and why nothing in the levy delays deployment.
 
-My answer is about the portfolio. Each of these historical cases was one unexplained result surrounded by a large body of explained ones. The engineers using superconducting tape know a great deal of physics about it: how it behaves in a magnetic field, how it fails when it overheats, how its current capacity changes with temperature. They measured all of it, because human engineering of the material forced them to. The unknown is narrow, and it sits in a field where most of the neighbouring knowledge is solid. When the tape surprises someone, there is a lot of understood ground to stand on while they work out why.
+My answer is about the portfolio. Each of these historical cases was one unexplained result surrounded by a large body of explained ones. The engineers using superconducting tape know a great deal of physics about it: how it fails when it overheats, and how its current capacity changes with temperature. They measured all of it, because human engineering of the material forced them to. The unknown is narrow, and it sits in a field where most of the neighbouring knowledge is solid. When the tape surprises someone, there is a lot of understood ground to stand on while they work out why.
 
-A field whose working results are mostly unexplained is a different object. Its failures are correlated. If most of the materials in grid storage were found by the same kind of search, using the same simulations, optimised against the same tests, then they share blind spots: conditions nobody tested, like minus thirty, apply to all of them at once. And when they fail together, there is no neighbouring theory to stand on, because the neighbours are unexplained too. One unexplained material is a loan. A field of them is a leveraged balance sheet, and leveraged balance sheets fail in a single week.
+A field whose working results are mostly unexplained is a different object. Its failures are correlated. If most of the materials in grid storage were found by the same kind of search and optimised against the same tests, then they share blind spots: conditions nobody tested, like minus thirty, apply to all of them at once. And when they fail together, there is no neighbouring theory to stand on, because the neighbours are unexplained too. One unexplained material is a loan. A field of them is a leveraged balance sheet, and leveraged balance sheets fail in a single week.
 
-That is the reason for making the rate depend on the ratio. At a low ratio, the argument from history holds, and the levy is small. At a high ratio, it does not, and the levy rises.
+That is the reason for making the rate depend on the ratio. At a low ratio, the argument from history holds, and the levy is small. At a high ratio the argument fails, and the levy rises.
 
 There is a second objection worth a paragraph. If machines can produce results, they can produce explanations too; why pay humans? Partly they can, and the levy should pay for machine-assisted explaining. But the test in the ratio is predictive, and the team is independent of the original model, for a reason. An explanation generated by the same kind of system, from the same simulations, tends to share its blind spots. What the levy buys is a second, separate route to the same result, and someone who understands it well enough to change it.
 
@@ -178,7 +174,7 @@ There is a second objection worth a paragraph. If machines can produce results, 
 
 Mikkel calls Aino at eight the next morning. The cell in the cryostat has lost another two per cent overnight.
 
-He has worked out what an answer would cost. Three postdoc-years to test the hypotheses on his whiteboard. Several weeks of beam time at a synchrotron to watch the lattice in the cold. A great deal of computer time to simulate the interface at temperatures the original model never visited. None of it is in any budget, because in 2029, when the money was flowing, nobody wrote a line for understanding.
+He has worked out what an answer would cost. Three postdoc-years to test the hypotheses on his whiteboard. Several weeks of beam time at a synchrotron to watch the lattice in the cold. A technician to keep the cryostat running through Christmas. A great deal of computer time to simulate the interface at temperatures the original model never visited. None of it is in any budget, because in 2029, when the money was flowing, nobody wrote a line for understanding.
 
 There is a faster option, and his dean has already mentioned it. A current model could design a replacement electrolyte in a few weeks, screened for minus forty this time, for a compute bill measured in megawatt-hours. It would probably work. It would also arrive with no reason attached, and the next unexpected condition would find it as unprepared as this one found LX-29.
 

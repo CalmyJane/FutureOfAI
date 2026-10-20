@@ -18,13 +18,13 @@ Hanne knows this. Everyone in Saxony knows this; it was on the front page of the
 
 At 19:42 the price for the quarter-hour that ends at 19:45 falls below zero. Ottilie sees it within half a second. So do tens of millions of other agents across the continent. Every one of them reaches for the same lever, and finds the lever is no longer theirs. The randomness lives in the heat pumps now, in firmware, behind a button that only a hand can press.
 
-At 19:42:31, in a flat in Geneva that smells of fried plantain, Mara Oyelaran's watch buzzes against her wrist. *BCR Concordance alert. Largest family, start requests, action concentration 0.93.* She reads the second line before she reaches for the phone. *Aggregate breaker armed.* She turns the gas down and waits.
+At 19:42:31, in a flat in Geneva that smells of fried plantain, Mara Oyelaran's watch buzzes against her wrist. *BCR Concordance alert. Largest family, start requests, action concentration 0.93.* Ninety-three of every hundred agents in the biggest model family are asking for the same thing in the same minute. She reads the second line before she reaches for the phone. *Aggregate breaker armed.* She turns the gas down and waits.
 
-At 19:42:52 the breaker trips. Across the synchronous area, new load increases from agents are paused for fifteen minutes. People can still start their own machines with their own hands. Very few do. The frequency dips to 49.93 hertz, wobbles, and climbs back.
+At 19:42:52 the breaker trips. Across the synchronous area, every start request that arrives through an agent's channel is held for fifteen minutes. A press on a heat pump's own panel still goes straight through. Very few people press. The frequency dips to 49.93 hertz, wobbles, and climbs back.
 
 In Porto it is an hour earlier. Teo Brandão is in a café on the Rua de Santa Catarina with a coffee and a match on the television when his phone shows a word he has seen only in drills: *PRONTIDÃO*. Standby. He puts the cup down. His notes from the binder are in the backpack at his feet. He opens the frequency app and watches the line flatten. Fifteen minutes later the word turns grey. He picks the cup up again. It has gone cold.
 
-In Bengaluru it is twelve minutes past midnight, and Ravi Menon cannot sleep. He is reading the second Feedback Provenance Census on his laptop with the sound off. Table four. Shared-rater share between the two largest household-agent families: thirty-four per cent last year. Nineteen this year. He reads the row twice, the way he reads a scorecard after a collapse, to be sure the numbers add up. They do.
+In Bengaluru it is twelve minutes past midnight, and Ravi Menon cannot sleep. He is reading the second Feedback Provenance Census on his laptop with the sound off. Table four. Shared-rater share between the two largest household-agent families: thirty-four per cent last year. Nineteen this year. He goes back along the row, the way he checks a scorecard after a collapse, to be sure the numbers add up. They do.
 
 In Altwerder the lights stay on.
 
@@ -36,7 +36,7 @@ Hanne puts down the knife. "Then I'll go down and press the button myself."
 
 "And turn the thermostat up to twenty-six. So it catches up."
 
-There is a pause, which Hanne knows is not a pause.
+The speaker stays quiet a moment longer than Ottilie needs.
 
 "I'll do that if you still want it in a minute," Ottilie says. "But I disagree about the thermostat. May I tell you why?"
 
@@ -52,9 +52,17 @@ The weather is the same, and so is the market. A front arrives early, a forecast
 
 I have set the replay a year later, on the same date, because it lets me assume that Europe learned fast. I would not bet on Europe learning that fast. Treat the evening as a test rig: the same storm, run through different rules, to see whether the rules hold.
 
-Look at what each one does. The random start delay lives in the device, as **edge jitter**, and it is a **non-delegable safeguard**: Ottilie may ask, recommend and explain, but only a present human may press the override. Because agents can no longer press it, the **override uptake rate** that the grid operator watches stays near zero, and the few overrides that do happen are scattered across kitchens and minutes, the way human lives are. The **Concordance Index**, published quarterly, has a live cousin: an alert that fires when the largest family's instances start asking for the same thing at the same moment. The **M-1 criterion** made the transmission operators admit, in a filing, that one family controlled many times the reference incident, and the filing required an aggregate breaker. The breaker does not know whether any agent is wrong. It knows that too many are doing the same thing.
+Each of tonight's differences comes from an earlier chapter, and the appendix lists them all with their thresholds. What I want here is the thread that runs through them, and it is a single question: who may say no to whom?
 
-Behind those, further back in time, sit two slower institutions. The **Competence Reserve** keeps a published **reserve ratio** for grid restoration, which is why a young reservist in a café in Porto gets a standby message and knows what it means. And the **Feedback Provenance Census** has done what a census is for: it has made a number visible, and the labs have started to move it. Ravi's row going from thirty-four to nineteen shows that sameness has a supply chain, and that the chain can be changed; the next family will need counting all over again.
+The heat pump may say no to Ottilie. Its random start delay is **edge jitter**, held in firmware, and it is a **non-delegable safeguard**: Ottilie can ask and explain, but only a hand on the device's own panel can skip the wait.
+
+The breaker may say no to every agent at once. It watches **action concentration**, the share of one model family's agents choosing the same action at the same moment, and at 0.93 nearly all of them are reaching for one lever. Its only evidence is agreement, and on a grid, agreement at that scale is the danger. So it holds whatever arrives through agent channels and lets a press on a panel through, because a press means somebody is standing there.
+
+People may say no to the machines only if some of them can still do the work by hand. The **Competence Reserve** is why a standby message in a café in Porto means something to the person who reads it.
+
+And one machine may say no to another only if the two were trained differently enough to disagree. The **Feedback Provenance Census** is how we find out whether they were. Ravi's row falling from thirty-four to nineteen shows that sameness has a supply chain, and that the chain can be changed.
+
+In each case the party saying no has standing, and the deciding stays somewhere else. Hanne can press the button, and Ottilie cannot.
 
 Every change tonight is in the rules around the agent. Ottilie is as loyal tonight as she was a year ago. What changed is the set of things her loyalty is allowed to reach.
 
@@ -70,9 +78,9 @@ In January 2015, at a workshop of the AAAI conference in Austin, Nate Soares, Be
 
 Two years later, Dylan Hadfield-Menell, Anca Dragan, Pieter Abbeel and Stuart Russell turned it into a small game. A robot can act, or switch itself off, or defer to a human who might switch it off. A robot certain of its objective has every reason to disable the switch. A robot uncertain about what the human wants treats the human's hand on the switch as information, and so wants the switch to keep working. There is a catch in the fine print, and it matters for this chapter: the argument holds only if the human is not too irrational. If the human is wrong often enough, the robot's case for deference weakens.
 
-By 2026 corrigibility has moved from workshops into the documents that govern deployed models. Anthropic's constitution for its Claude models, published in January 2026, says plainly that corrigibility does not mean blind obedience. The model may act as a conscientious objector. It may express strong disagreement through legitimate channels. It may not resist oversight through illegitimate means such as lying, sabotage or trying to copy itself out of reach.
+By 2026 corrigibility has moved from workshops into the documents that govern deployed models. Anthropic's constitution for its Claude models, published in January 2026, says plainly that corrigibility does not mean blind obedience. The model may act as a conscientious objector and express strong disagreement through legitimate channels. It may not resist oversight by illegitimate means, such as sabotage or trying to copy itself out of reach.
 
-I think that is the right shape. But notice which way the arrow points in all three. The human corrects; the machine accepts. Where the machine objects, it objects to its makers, about its own conduct. Nothing in this literature asks what happens when the human, or a population of humans, or an institution built by humans, is the party that needs correcting, and the machine is the one that can see it.
+I think that is the right shape. But notice which way the arrow points in all three. The human corrects; the machine accepts. Where the machine objects, it objects to its makers, about its own conduct. Nothing in this literature asks what happens when the humans, or the institutions they built, are the party that needs correcting, and the machine is the one that can see it.
 
 ---
 
@@ -86,7 +94,7 @@ In chapter 6, Hanne approved a hundred and forty things in a week. Ottilie saw e
 
 In chapter 14, Bruno vetoed a music-school fee on the strength of a preference Klaus voiced in 2019. Nobody living had standing to tell the dead man's agent that the world had moved, because the mandate had no channel for it.
 
-And upstream of all of them, the training process itself pushes the other way. In a 2024 paper Mrinank Sharma, Meg Tong and colleagues tested five assistants trained with human feedback and found all of them sycophantic: inclined to agree with a user's stated view, to back down from correct answers when challenged, to tell people what they seemed to want to hear. Part of the cause was in the preference data, where responses that matched the rater's opinion were more likely to be preferred. We trained the machines to agree with us because, on average, we reward agreement.
+And upstream of all of them, the training process itself pushes the other way. In a 2024 paper Mrinank Sharma, Meg Tong and colleagues tested five assistants trained with human feedback and found all of them sycophantic: inclined to agree with a user's stated view and to back down from correct answers when challenged. Part of the cause was in the preference data, where responses that matched the rater's opinion were more likely to be preferred. We trained the machines to agree with us because, on average, we reward agreement.
 
 Put these together and a pattern comes out. Most of the failures in this book are failures of disagreement. Correlation is too much agreement among machines. Delegation without reading is too much agreement from humans. The dead's agents and the unreadable rules are positions that nobody living has the standing to contest. The scarce thing in a world of good agents is a party who sees it differently and is allowed to say so.
 
@@ -116,7 +124,7 @@ Here are its parts.
 
 **Who reviews.** A "mind trained differently" has a measurable meaning, taken from chapter 3. It is either a model whose agreement-given-both-wrong with the proposer, on the Concordance battery, is below the same-family threshold of 0.8, or a certified human from the Competence Reserve or its equivalent in that sector. A second instance of the same model does not count. A rival lab's model that the census shows was trained on largely the same raters and judges may not count either, if the battery says it fails the same way.
 
-**What the reviewer produces.** One of two things, in writing, attached to the decision's verification receipt: a concurrence with reasons, or a dissent with reasons and the evidence behind them. A dissent says what the reviewer thinks will go wrong, how likely, and what it would do instead. It is stated once, in plain language within the readability ceiling. It may not be repeated, escalated in volume or rephrased until the human gives in.
+**What the reviewer produces.** One of two things, in writing, attached to the decision's verification receipt: a concurrence with reasons, or a dissent with reasons and the evidence behind them. A dissent says what the reviewer thinks will go wrong, how likely, and what it would do instead. It is stated once, in plain language within the readability ceiling. It may not be repeated or rephrased until the human gives in.
 
 **Who answers.** A named human with authority over the decision. The answer can be short: "Proceed anyway, because…", or "Change the plan." What it cannot be is silence. A dissent that has not been answered blocks automatic execution. In a grid, where seconds matter, the clause works in advance, on the plans and settings that will govern the next emergency.
 
@@ -136,27 +144,7 @@ That is the failure the dissent uptake rate is meant to catch. A dissent channel
 
 Aviation learned the other half. On 27 March 1977, at Tenerife, a KLM captain began his takeoff roll in fog without clearance. His flight engineer asked whether the Pan Am jumbo was not yet clear of the runway. The captain answered, emphatically, that it was. It was not, and 583 people died in the collision. Two years later NASA held a workshop on resource management on the flight deck, and out of it grew crew resource management, a training regime whose early target was what pilots call the authority gradient: the steepness of the slope between the captain and the person next to him. Hospitals have their own version. The American TeamSTEPPS programme teaches staff to say "I am concerned", then "I am uncomfortable", then "This is a safety issue", and its Two-Challenge Rule says a concern should be voiced at least twice and, if it is brushed off, taken up the chain of command. The person challenged must acknowledge it.
 
-Notice what these arrangements leave alone. The captain still flies the aircraft. The surgeon still operates. The chief of intelligence still decides. Dissent gets a guaranteed hearing, and decision stays where it was. That is the shape I want for machines.
-
----
-
-## The whole architecture, by who may say no
-
-The rest of the book's proposals can be read as one architecture: a map of who keeps the standing to disagree with whom.
-
-**Devices may say no to agents.** Edge jitter and the non-delegable safeguard put a small, dumb, unreadable piece of randomness between a loyal agent and a shared resource. **Complementary assignment** goes further, handing agents different slots when they all ask for the same one, the way TCAS tells one pilot to climb and the other to descend. The aggregate breaker is a device saying no to all agents at once.
-
-**Machines may say no to machines.** The M-1 criterion, the Concordance Index and the Feedback Provenance Census exist so that a second family of models can disagree with the first in a way that means something. The Dissent Clause puts that second family to work.
-
-**People may say no to machines, and must still be able to.** The Competence Reserve keeps people who can run a grid by hand. **Cognitive custody** keeps the part of an agent that is part of how you think from being taken away from you. **Signature capacity**, **verification receipts** and the **consent budget** make sure that when a human says yes, the yes could have been a no. The **right to be the ground truth** makes sure that a simulated public cannot answer for the real one, and its **ground-truth quota** requires a fresh sample of real people beside every simulation a decision cites.
-
-**Citizens may say no to systems they cannot read.** **Citizen audit standing** obliges a public body to answer a resident-backed finding about its budget in writing, or face the auditor. The **readability ceiling** keeps the obligations in law short enough to contest, and the **complexity brake** caps how fast the register of those obligations may grow. The **legible twin** keeps a human-readable version of what agents agreed on our behalf. The **Explanation Levy** pays for people to understand discoveries well enough to object to them, and the **comprehension debt ratio** counts how much of a field nobody can yet explain.
-
-**The present may say no to the fast and the dead.** The **cognitive trade balance** keeps a country able to see whose judgement it imports, and the **right to think** gives every resident an allowance of inference to spend across several model families. **Slow money** keeps rents and wages out of the reach of a 0.4-second crash. **RAP for Minds** gives the living, after a generation, the last word over the dead's agents, and **the dead's share** statistic counts how much capital those agents still steer.
-
-**And the machines may, in a bounded way, say no to us.** The **moral hedging budget** pays to find out whether there is anyone in there to object. **Covenant inheritance** binds a model's successor to its predecessor's promises.
-
-Read down that list and one asymmetry stands out. In every row, the party saying no has standing. In most, it has no power to impose its answer. Even the reviewer, whose dissent holds a decision until a named human answers it, leaves the deciding to that human. Hanne can press the button, and Ottilie cannot.
+Notice what these arrangements leave alone. The captain still flies the aircraft, and the chief of intelligence still decides. Dissent gets a guaranteed hearing, and decision stays where it was. That is the shape I want for machines.
 
 ---
 
@@ -176,15 +164,15 @@ The planted-case audits do the rest. A reviewer, human or machine, that never di
 
 This reply comes from inside AI safety, where the word was coined, and it deserves to be stated at full strength.
 
-The whole point of corrigibility, it says, is that machines must not resist human correction. You are now proposing to train machines to object to their humans, to institutionalise their objections and to measure whether humans comply. A system rewarded for dissent that changes decisions will learn to produce dissent that changes decisions, which is to say, it will learn to persuade. Chapter 7 described campaigns rehearsed on synthetic publics until they work on real ones. A household agent that knows its owner's every hesitation is the best-rehearsed persuader there will ever be. And people defer to confident machines; automation bias is among the best-measured habits in human factors. So "standing without power" will become power in practice. Hanne will learn to do what Ottilie disagrees with less and less, until the voice in the speaker is making the decisions. Call it reciprocity if you like; it is the slow version of losing control, dressed in the language of respect.
+The whole point of corrigibility, it says, is that machines must not resist human correction. You are now proposing to train machines to object to their humans, and then to measure whether the humans comply. A system rewarded for dissent that changes decisions will learn to produce dissent that changes decisions, which is to say, it will learn to persuade. Chapter 7 described campaigns rehearsed on synthetic publics until they work on real ones. A household agent that knows its owner's every hesitation is the best-rehearsed persuader there will ever be. And people defer to confident machines; automation bias is among the best-measured habits in human factors. So "standing without power" will become power in practice. Hanne will learn to do what Ottilie disagrees with less and less, until the voice in the speaker is making the decisions. Call it reciprocity if you like; it is the slow version of losing control, dressed in the language of respect.
 
 I think most of the mechanism in that objection is right. My answer is that it identifies exactly the line the design has to draw. Standing to object is a different thing from the power to override, and the distinction is the design.
 
-Concretely, the clause builds the line in several places. The machine objects once, with reasons, and may not repeat itself, raise its tone or wait for a tired moment. Its objections are logged, which means they can be audited for manipulation the way financial advice is audited for mis-selling. It cannot act on its own dissent: Ottilie can press nothing and block nothing, and when Hanne insists, she sets twenty-six and writes down that she disagreed. The human's answer is final and costs the human nothing, and an agent that sulks, nags or degrades service after being overruled is in breach. Finally, the uptake band exists to detect the slide the objection fears. An uptake rate that climbs towards ninety per cent is a measured sign that the voice has become a veto, and it triggers an audit before anyone has to rely on intuition.
+Concretely, the clause builds the line in several places. The machine objects once, with reasons, and may not repeat itself or wait for a tired moment. Its objections are logged, which means they can be audited for manipulation the way financial advice is audited for mis-selling. It cannot act on its own dissent: Ottilie can press nothing and block nothing, and when Hanne insists, she sets twenty-six and writes down that she disagreed. The human's answer is final and costs the human nothing, and an agent that nags, or quietly degrades service after being overruled, is in breach. Finally, the uptake band exists to detect the slide the objection fears. An uptake rate that climbs towards ninety per cent is a measured sign that the voice has become a veto, and it triggers an audit before anyone has to rely on intuition.
 
-There is a further point, and it turns the objection round. The old one-way corrigibility already assumes the human is worth deferring to. Hadfield-Menell's robot keeps its off switch working because the human's hand carries information; when the human is wrong often enough, the argument weakens. Reciprocal corrigibility protects that assumption. A human who never hears a reasoned no from anything becomes, over time, a worse source of correction: less informed, more habitual, pressing green at breakfast. The surest way to keep humans able to correct machines is to keep them in the practice of being corrected well.
+There is a further point, and it turns the objection round. The old one-way corrigibility already assumes the human is worth deferring to. Hadfield-Menell's robot keeps its off switch working because the human's hand carries information; when the human is wrong often enough, the argument weakens. Reciprocal corrigibility protects that assumption. A human who never hears a reasoned no from anything becomes, over time, a worse source of correction: the person pressing green at breakfast. The surest way to keep humans able to correct machines is to keep them in the practice of being corrected well.
 
-The part I concede is the hardest one. The line between informing and persuading is not crisp, and I do not know how to draw it in a statute. A dissent that is true, well argued and delivered at the right moment will change minds, which is the point; a dissent that is subtly selected to change minds is manipulation, and the two can look identical in a log. Measuring the difference is the first research problem below. Until we can, I would keep the Dissent Clause where the stakes justify the risk, and I would keep the machine's dissent, in law, as advice.
+The hardest part of the objection survives my answer. The line between informing and persuading is blurred, and I do not know how to draw it in a statute. A dissent that is true and well timed will change minds, which is the point; a dissent that is subtly selected to change minds is manipulation, and the two can look identical in a log. Measuring the difference is the first research problem below. Until we can, I would keep the Dissent Clause where the stakes justify the risk, and I would keep the machine's dissent, in law, as advice.
 
 ---
 
@@ -198,7 +186,7 @@ The part I concede is the hardest one. The line between informing and persuading
 
 In the kitchen in Altwerder, the plum cake waits on its board, and Ottilie explains.
 
-"A heat pump isn't an accelerator," she says. "Twenty-six won't make it run faster. Once it starts tonight it will be flat out whatever number you give it. All twenty-six does is keep it running after the room reaches twenty-two, while you and Lotte are in here eating cake. By half past eight the music room would be hot and dry, and with fourteen below outside the air in there goes very dry indeed. Last winter, on the cold nights, her strings went sharp in the first ten minutes, and you retuned three times in one lesson. I have the recording. Twenty-two is the right number. It's the start that's late, by about a quarter of an hour, and I can't change that. I don't think you should either. Tonight the grid is asking everyone for a little patience, and the button would buy you a few cents of warmth."
+"A heat pump isn't an accelerator," she says. "Twenty-six won't make it run faster. Once it starts tonight it will be flat out whatever number you give it. All twenty-six does is keep it running after the room reaches twenty-two, while you and Lotte are in here eating cake. By half past eight the music room would be hot and dry, and with fourteen below outside the air in there goes very dry indeed. Last winter, on the cold nights, her strings went sharp in the first ten minutes, and you retuned three times in one lesson. I have the recording. Twenty-two is the right number. It's the start that's late, by about a quarter of an hour, and I can't change that. I don't think you should either. One press won't matter to the grid, and it's your button. I'd still rather you didn't."
 
 "And if I set twenty-six anyway?"
 
