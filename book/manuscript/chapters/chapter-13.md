@@ -4,7 +4,7 @@
 
 At 02:13 on a Tuesday in August, while Ravi Menon is asleep, the price of Idukki cardamom falls by forty-one percent and comes back.
 
-He learns this at twenty to seven, standing in the kitchen in his vest while the decoction drips through the steel filter. The rain has been going since midnight. It ticks on the sunshade over the window, the slow, patient rain of the second half of the monsoon, the kind that does not intend to stop for anybody.
+He learns this at twenty to seven, standing in the kitchen in his vest while the decoction drips through the steel filter. The rain has been going since midnight, ticking on the sunshade over the window, the slow rain of the late monsoon.
 
 Morrow's overnight note is the first thing on his phone.
 
@@ -30,7 +30,7 @@ He thinks about that sentence while he shaves. *I would have to tell you why.* I
 
 His music teacher in Thrissur used to say that the hardest tempo in Carnatic singing was the slowest, chowka kalam, because at that speed there was nowhere to hide a mistake. Every note had to be held long enough to be true. Ravi had hated it at fourteen. He had wanted the fast passages, the ones that made the audience shout.
 
-The day goes the way days go. A rubric review for a client in Seoul. Lunch from the darshini on the corner. A video call where somebody's agent takes notes and somebody else's agent summarises the notes.
+The day goes the way days go. A rubric review for a client in Seoul. A video call where somebody's agent takes notes and somebody else's agent summarises the notes.
 
 At ten to six he goes downstairs with the milk packets Mrs. Iyengar asked him to pick up. She is eighty-one and sits in the front room with the radio low and a red cloth-bound register open on the table, the kind shopkeepers used before he was born. Her phone is on top of the register, face up.
 
@@ -46,7 +46,7 @@ On the afternoon of 26 June 1974, German regulators closed Bankhaus Herstatt, a 
 
 Herstatt traded a great deal of foreign exchange. On that day, banks around the world had paid Herstatt Deutsche marks in Frankfurt, expecting to receive dollars in return in New York. The dollar leg was due later, because New York's business day had barely begun. When the bank was closed, the marks had arrived and the dollars never left. The counterparties held claims on an insolvent bank, and other banks, unsure who else might be exposed, began holding back their own payments. According to the Bank for International Settlements, gross funds moving through the American clearing network fell by an estimated sixty percent in three days.
 
-Nobody in the Herstatt story was fast. The failure came from two clocks that did not agree: Frankfurt's afternoon and New York's morning. The industry's name for the risk, "Herstatt risk", is the risk that one leg of a trade settles on one clock and the other leg on another. It took until September 2002 for a private institution, CLS Bank, to start settling foreign exchange so that both legs pay at the same moment or neither does.
+The Herstatt failure came from two clocks that did not agree: Frankfurt's afternoon and New York's morning. Everyone involved moved at the pace of a 1974 bank. The industry's name for the risk, "Herstatt risk", is the risk that one leg of a trade settles on one clock and the other leg on another. It took until September 2002 for a private institution, CLS Bank, to start settling foreign exchange so that both legs pay at the same moment or neither does.
 
 I start with Herstatt because it shows that the boundary between two clocks is where money gets lost. The 1974 version involved hours. The version this chapter is about involves clocks that differ by eight or nine orders of magnitude.
 
@@ -64,7 +64,7 @@ Then, at 2:45:28, an automatic function at the Chicago Mercantile Exchange pause
 
 Five seconds. When trading resumed at 2:45:33, prices stabilised and began to climb. The report's explanation is modest: a pause gives participants time to reassess and gives algorithms time to reset their parameters. Five seconds is nothing to a person. To the machines trading that afternoon it was long enough to stop agreeing with each other about which way the price was going.
 
-Individual shares had a worse afternoon. Bids for Accenture fell from about thirty dollars to one cent in seven seconds, and the company recorded 112 trades that were later cancelled. Across the market, more than 20,000 trades in over 300 securities were executed at prices more than 60 percent away from where they had been moments before, some at a penny and some at $100,000, because market makers' placeholder quotes were the only orders left.
+Individual shares had a worse afternoon. Accenture had been trading at about forty-one dollars at 2:40. Shortly before 2:48 its bids fell to one cent in the space of seven seconds, and the company recorded 112 trades that were later cancelled. Across the market, more than 20,000 trades in over 300 securities were executed at prices more than 60 percent away from where they had been moments before, some at a penny and some at $100,000, because market makers' placeholder quotes were the only orders left.
 
 Those trades were broken. The exchanges drew a line at 60 percent and declared that trades beyond it had not happened. I find this the most interesting moment of the whole episode. A machine-speed event produced prices, and human-speed institutions, working afterwards, decided which of those prices would be allowed to become real money. The official report on what had happened took almost five months.
 
@@ -78,7 +78,7 @@ In 2010 the machines trading at those speeds belonged to specialist firms. The p
 
 On 6 May 2025, fifteen years to the day after the flash crash, Coinbase announced x402, a protocol that revives the long-unused HTTP status code 402, "Payment Required", so that a program can request a payment from another program and receive it inside an ordinary web request, initially in stablecoins. In September, Google announced the Agent Payments Protocol, AP2, with more than sixty partners including Mastercard, American Express and PayPal. AP2's central device is the mandate, a signed record of what the human authorised. Its "Intent Mandate" covers the case where the human is not present at all: you set price limits and timing in advance, and the agent buys when the conditions are met. Google's own example is buying concert tickets "the moment they go on sale". An extension adds x402 for crypto payments. That autumn, Stripe and OpenAI released the Agentic Commerce Protocol and let American users buy from Etsy sellers inside ChatGPT. In 2026 x402's governance moved to a foundation under the Linux Foundation, with Visa, Mastercard, Google and Stripe among its members.
 
-None of this is exotic any more. It is plumbing, and the plumbing is being laid by the largest payment companies in the world.
+All of this is plumbing now, and the plumbing is being laid by the largest payment companies in the world.
 
 What happens when agents trade with each other has barely been measured. In October 2025, a Microsoft team built a simulated marketplace, "Magentic Marketplace", in which customer agents bargained with business agents. Every model they tested showed a strong bias toward whichever offer arrived first, giving 10 to 30 times more advantage to speed of response than to quality. A market of agents, in other words, rewards being fast before it rewards being good. That is exactly the pressure that built high-frequency trading.
 
@@ -98,7 +98,7 @@ Here is the failure, built from good behaviour.
 
 A loyal savings agent notices that its owner's rent money sits idle for twenty-five days a month. It sweeps the money into a short-term agent market overnight, earns a few rupees, and sweeps it back before the fifth. This is what a good fiduciary does. Every bank in 2026 already offers some version of a sweep account.
 
-The agent also notices that its owner's household balance can serve as collateral for small positions, which lowers fees. Also good. It notices that it can meet a margin call in milliseconds from the household account, avoiding a forced sale at a bad price. Good again. Each connection between the fast market and the household's money is a convenience, chosen by a loyal agent for its owner, and each one increases permeability. Nobody decides to make the membrane porous. It dissolves one helpful feature at a time.
+The agent also notices that its owner's household balance can serve as collateral for small positions, which lowers fees. Also good. It notices that it can meet a margin call in milliseconds from the household account, avoiding a forced sale at a bad price. Good again. Each connection between the fast market and the household's money is a convenience, chosen by a loyal agent for its owner, and each one increases permeability. The membrane dissolves one helpful feature at a time, each of them chosen on its owner's behalf.
 
 Now run the cardamom crash through that porous membrane. For 0.4 seconds, prices are wrong. An agent with a margin call at the bottom of the valley sells at the bottom, or pulls cash from the household account to avoid selling. Either way, a price that existed for less than half a second becomes a permanent change in a family's money. The fast market recovers in a blink. The family's loss does not, and the consequences of a missed rent payment are measured in months: a landlord's notice, a credit record, a move.
 
@@ -114,7 +114,7 @@ I want to name two things.
 
 **Slow money** is a settlement tier for the obligations people live by: wages, rent, mortgage instalments, pensions, utility bills, taxes and insurance premiums. Slow money settles in scheduled batches, once a business day at a published time, on a ledger run or supervised by the central bank. It is the same currency as everything else, a rupee is a rupee, but it moves on a human clock.
 
-The **exchange rate of time** is the published rule for converting claims made on a machine clock into claims on a human clock. It has a single core parameter, the window *W*, and it works like this. Whenever a value from the fast economy has to become a fact in the slow one (a position marked for collateral, a pension valued for a statement, a balance swept back for rent), it is converted at the time-weighted average price over the last window, not at the latest price. With a window of twenty-four hours, each second of machine market carries one 86,400th of the weight. The cardamom valley, 0.4 seconds long, would carry about five millionths of a day's weight in any figure that reached Ravi's household tier. In effect the rate says that 86,400 machine-seconds buy one human day.
+The **exchange rate of time** is the published rule for converting claims made on a machine clock into claims on a human clock. It has a single core parameter, the window *W*, and it works like this. Whenever a value from the fast economy has to become a fact in the slow one (a position marked for collateral, a pension valued for a statement, a balance swept back for rent), it is converted at the time-weighted average price over the last window. The latest price is just one more second in that average. With a window of twenty-four hours, each second of machine market carries one 86,400th of the weight. The cardamom valley, 0.4 seconds long, would carry about five millionths of a day's weight in any figure that reached Ravi's household tier. In effect the rate says that 86,400 machine-seconds buy one human day.
 
 The specification, concretely:
 
@@ -130,13 +130,13 @@ The design echoes things that already exist. The IEX exchange in New York, appro
 
 ---
 
-## The strongest objection: friction is waste
+## Friction is waste
 
 The objection runs like this, and it deserves a full hearing.
 
 Every hour that money spends waiting in a batch is an hour it is not earning anything. Fast settlement was a hard-won achievement: India's own instant payments, America's move to one-day settlement, Europe's coming one. A slow tier rebuilds the delays that engineers spent decades removing. It will also fall hardest on the people least able to bear it. A family with no buffer, which needs money at two in the morning for a hospital deposit, does not want its own money on a human clock. And the gate itself creates something to game. If conversion happens at a twenty-four-hour average, a well-capitalised agent can try to move the average, or trade against everyone who must cross at the batch. Herstatt, finally, is a warning against delay: the 1974 losses happened precisely in the gap between two settlements.
 
-Some of this I concede. The slow tier has a cost, and it should be measured and published, in basis points of foregone return per household per year, next to the pass-through ratio, so that the trade can be argued with numbers. The gaming risk is real. Averages over long windows are much harder to move than last prices, but they are not impossible to move, and I put the size of that difficulty in the researchers' box because I do not know it.
+Some of this I concede. The slow tier has a cost, and it should be measured and published, in basis points of foregone return per household per year, next to the pass-through ratio, so that the trade can be argued with numbers. The gaming risk is real. Averages over long windows are much harder to move than last prices, though they can still be moved, and I put the size of that difficulty in the researchers' box because I do not know it.
 
 The rest I resist. The hospital deposit at two in the morning is spending, and spending from slow money is instant, as it is with a card today. What the window slows is not the family's access to its money. It slows the fast market's access to the family. The Herstatt point is answered by the gate's design: both legs settle together, which is what CLS was built to do.
 
@@ -160,6 +160,7 @@ But some participants in the fast economy never sleep and never die. Among the n
 
 - **Herstatt, 26 June 1974:** BIS Quarterly Review, December 2002, on FX settlement risk and CLS. https://www.bis.org/publ/qtrpdf/r_qt0212f.pdf ; Bank Underground (Bank of England), "BoE archives reveal little known lesson from the 1974 failure of Herstatt Bank", 24 June 2015. https://bankunderground.co.uk/2015/06/24/boe-archives-reveal-little-known-lesson-from-the-1974-failure-of-herstatt-bank/
 - **Flash crash, 6 May 2010:** CFTC and SEC staff, *Findings Regarding the Market Events of May 6, 2010*, 30 September 2010. https://www.sec.gov/news/studies/2010/marketevents-report.pdf
+- **Accenture at $41.01 at 2:40 pm:** Tom Steinert-Threlkeld, "Can a 'Flash Crash' Happen Again?", *Financial Planning*, 11 August 2010 (citing Accenture's CFO Pamela Craig). https://www.financial-planning.com/news/can-a-flash-crash-happen-again
 - **x402:** Coinbase announcement, 6 May 2025, as reported in Paperjam, "Why Luxembourg should be interested in x402". https://en.paperjam.lu/article/why-luxembourg-should-be-interested-in-x402 ; Cloudflare, "Launching the x402 Foundation with Coinbase", 23 September 2025 (deferred payment scheme). https://blog.cloudflare.com/x402/ ; Coinbase Developer Platform, "x402 Foundation". https://docs.cdp.coinbase.com/x402/support/x402-foundation
 - **AP2:** Google Cloud, "Announcing Agent Payments Protocol (AP2)", 16 September 2025. https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol
 - **Agentic Commerce Protocol:** Stripe, "Stripe powers Instant Checkout in ChatGPT and releases Agentic Commerce Protocol codeveloped with OpenAI", 2025. https://stripe.com/newsroom/news/stripe-openai-instant-checkout

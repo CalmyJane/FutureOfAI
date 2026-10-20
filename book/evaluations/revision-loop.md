@@ -3,3 +3,4 @@
 - ch08, ch09, ch10 r1 accepted; 'Section 212' capitalisation unified.
 - ch01, ch02 r1 accepted (all three HIGH tickets now addressed: A-T01, A-T02, A-T03).
 - ch14–17 r1 accepted (ch14 reordered; ch17 synthesis completed).
+- ch11–13 r1 accepted. Revision pass 1 complete for all tickets.

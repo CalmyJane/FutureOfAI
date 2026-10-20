@@ -56,7 +56,7 @@ In March 2024 Lisa Messeri, an anthropologist at Yale, and Molly Crockett, a cog
 
 A third phrase is now in circulation. Software engineers have started to talk about **comprehension debt**: in Addy Osmani's March 2026 formulation, the growing gap between how much code exists in a system and how much of it any human genuinely understands. Osmani does not claim the term; he presents it as one already in use, alongside "cognitive debt". I am going to borrow it, with credit, and stretch it from codebases to whole fields of science.
 
-What I want to add to Zittrain and to Messeri and Crockett is two things. One is a number, so that the debt can be measured rather than worried about. The other is an institution that pays it down at a steady rate, before the bill arrives all at once, as it does for Mikkel on a January night.
+What I want to add to Zittrain and to Messeri and Crockett is two things. One is a number, so that the debt can be measured. The other is an institution that pays it down at a steady rate, before the bill arrives all at once, as it does for Mikkel on a January night.
 
 ---
 
@@ -120,7 +120,7 @@ Each part of that definition does work.
 
 *An independent team, not shown the AI's reasoning* means the explanation must be rebuilt from scratch. The team can use any tools it likes, including other AI systems, but it does not see the original model's internal reports. This tests whether an account can be reconstructed from the material itself and from public knowledge, which is the situation after a model is retired.
 
-*Predict a new testable result* is the heart of it. A story about why something works is cheap. The test of an explanation is that it says something the original result did not: this substitution will raise conductivity; this material will crack below minus twenty-five; this matrix trick also works for five-by-five. The prediction is registered in advance, tested, and scored. It need not be confirmed, but it must be specific enough to fail.
+*Predict a new testable result* is the heart of it. A story about why something works is cheap. The test of an explanation is that it says something the original result did not: this substitution will raise conductivity; this material will crack below minus twenty-five; this matrix trick also works for five-by-five. The prediction is registered in advance, tested, and scored. It may turn out false, as long as it is specific enough to fail.
 
 *Within 12 months* sets a clock. Some results will take decades to understand, and that is fine. The ratio records what a serious team can do in a year, which is about the time a grid operator has before the next winter.
 
@@ -130,7 +130,7 @@ The ratio runs from 0 to 1. A field with a ratio of 0.1 can explain almost every
 
 ## The Levy
 
-Measurement alone does not pay anyone. The second invention is a way to fund the explaining at a steady rate, so that understanding keeps pace with discovery instead of arriving after a failure.
+Measurement alone does not pay anyone. The second invention is a way to fund the explaining at a steady rate, so that understanding keeps pace with discovery, before a failure forces the question.
 
 The **Explanation Levy** is a fixed share of every AI-discovery budget, set aside for human comprehension. The default is 5 per cent. It rises to 10 per cent in fields whose comprehension debt ratio is above 0.5, and falls to 3 per cent in fields below 0.2.
 
@@ -146,13 +146,13 @@ The money funds three things.
 
 **Paid explainer posts.** The most important line is the least glamorous. A share of the levy pays for permanent posts, inside labs and at funders, whose job is to understand results the lab did not design. In 2026 this career barely exists: the reanalyses of GNoME and the A-Lab were done by senior academics fitting them around their own research. An explainer would be a recognised professional with a salary, a promotion track and publications that count. In 2036 Mikkel would have had one down the corridor, who had been living with LX-29 for five years.
 
-The rates are set to create a gradient. A field that explains its results pays less and gets more of its budget for discovery. A field that piles up unexplained results pays more and gets more explaining. The levy never stops discovery, and it never makes deployment wait for understanding. It makes sure someone is paid to close the gap while there is still time.
+The rates are set to create a gradient. A field that explains its results pays less and gets more of its budget for discovery. A field that piles up unexplained results pays more and gets more explaining. Under the levy, discovery runs at full speed and deployment waits for nothing. Someone is simply paid to close the gap while there is still time.
 
 ---
 
 ## The objection from history
 
-The strongest objection is hidden in Zittrain's own example: people used something well for decades before anyone could explain it, and nothing terrible followed. In physics the objection is even stronger.
+Zittrain's own example holds the case against the levy: people used something well for decades before anyone could explain it, and nothing terrible followed. In physics the objection is even stronger.
 
 High-temperature superconductivity is the closer case for this chapter. Copper-oxide superconductors were discovered in 1986. Forty years later, after thousands of experiments, physicists still argue about the mechanism; a 2026 review describes three competing schools. Yet tape made from these materials carried the current in the 20-tesla magnet that MIT and Commonwealth Fusion Systems tested in September 2021, and it is being built into fusion devices and power cables today. The steam engine ran for a century before thermodynamics explained it. Engineering has always worked ahead of understanding. Why tax the new version of an old and mostly successful habit?
 
@@ -181,8 +181,6 @@ Mikkel calls Aino at eight the next morning. The cell in the cryostat has lost a
 He has worked out what an answer would cost. Three postdoc-years to test the hypotheses on his whiteboard. Several weeks of beam time at a synchrotron to watch the lattice in the cold. A great deal of computer time to simulate the interface at temperatures the original model never visited. None of it is in any budget, because in 2029, when the money was flowing, nobody wrote a line for understanding.
 
 There is a faster option, and his dean has already mentioned it. A current model could design a replacement electrolyte in a few weeks, screened for minus forty this time, for a compute bill measured in megawatt-hours. It would probably work. It would also arrive with no reason attached, and the next unexpected condition would find it as unprepared as this one found LX-29.
-
-Explanation takes years of human attention. Discovery now takes electricity. In 2036 both have a price, and the second one is falling fast. The next part of this book is about what happens when thinking itself, human and machine, becomes something nations buy, sell and run short of.
 
 ## Notes
 

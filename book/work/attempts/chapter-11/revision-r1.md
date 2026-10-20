@@ -130,7 +130,7 @@ The ratio runs from 0 to 1. A field with a ratio of 0.1 can explain almost every
 
 ## The Levy
 
-Measurement alone does not pay anyone. The second invention is a way to fund the explaining at a steady rate, so that understanding keeps pace with discovery instead of arriving after a failure.
+Measurement alone does not pay anyone. The second invention is a way to fund the explaining at a steady rate, so that understanding keeps pace with discovery, before a failure forces the question.
 
 The **Explanation Levy** is a fixed share of every AI-discovery budget, set aside for human comprehension. The default is 5 per cent. It rises to 10 per cent in fields whose comprehension debt ratio is above 0.5, and falls to 3 per cent in fields below 0.2.
 

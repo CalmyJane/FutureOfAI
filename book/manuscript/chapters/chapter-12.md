@@ -8,7 +8,7 @@ The steam comes up out of the ground at a little over two hundred degrees, and b
 
 Mwangi Kamau starts the night shift at ten. He is thirty-six, the younger brother, the one who was supposed to become an electrician in Nakuru and instead became something there was no word for when he left school. Kilele Compute calls it a thermal-and-rack technician. His mother calls it "the computer farm". His sister calls it "your kettle", because of the plumes.
 
-The hall is long and loud and smells faintly of sulphur where the cooling loop runs close to the wellheads. Outside, beyond the fence and the silver pipes that cross the valley on their stilts, a family of warthogs is working through the grass by the access road. Giraffes come at dawn, sometimes. The tourists who drive through Hell's Gate on the way to the gorge photograph the giraffes in front of the pipes and post the pictures with captions about the future.
+The hall is long and loud and smells faintly of sulphur where the cooling loop runs close to the wellheads. Outside, beyond the fence and the silver pipes that cross the valley on their stilts, giraffes come at dawn, sometimes. The tourists who drive through Hell's Gate photograph them in front of the pipes and post the pictures with captions about the future.
 
 On the wall screen, the hall's load is broken down by contract. Most of it is labelled EU-WEST. Mwangi knows roughly what that means, because the dashboards are generous about everything except content: an insurer in Hamburg running claims, a Dutch tax-preparation service in its busy month, a French hospital group triaging discharge letters overnight. The work arrives through the cable at Mombasa, runs here on Kenyan steam, and leaves the same way. Kenya is paid by the megawatt-hour and by the rack. The newspapers call it the thought trade, and the Treasury likes the numbers.
 
@@ -18,11 +18,11 @@ At 23:40 his phone buzzes. Wanjiru.
 
 "Cancel it."
 
-"And replace it with what? Her whole class is on it. The school recommends it. Ndege says the Kenyan ones are cheaper and worse at fractions." A pause. "Ndege is very polite about it. I am not polite about it."
+"And replace it with what? Her whole class is on it. The school recommends it. Ndege says the Kenyan ones are cheaper and worse at algebra." A pause. "Ndege is very polite about it. I am not polite about it."
 
 He laughs, and tells her he'll look at something.
 
-What he looks at is his own screen. He scrolls down past EU-WEST to the smaller contracts, the ones that don't pay as well, and finds it near the bottom: LEERWIJS BV, AMSTERDAM, REGION EAF, 1.2 MW. The tutoring service that his niece uses on a cracked tablet in Kasarani has rented a slice of Hall C. The thinking that explains fractions to Njeri is done here, two hundred metres from where he is standing, on steam from under the Rift Valley.
+What he looks at is his own screen. He scrolls down past EU-WEST to the smaller contracts, the ones that don't pay as well, and finds it near the bottom: LEERWIJS BV, AMSTERDAM, REGION EAF, 1.2 MW. The tutoring service that his niece uses on a cracked tablet in Kasarani has rented a slice of Hall C. The thinking that explains algebra to Njeri is done here, forty metres from where he is standing, on steam from under the Rift Valley.
 
 It is billed in Amsterdam. Its lessons were written and tuned there, its sense of what a good explanation sounds like was set there, and its price is set there too, in euros, by people who have never had to hear Wanjiru say *nineteen* in that tone of voice.
 
@@ -38,9 +38,19 @@ Outside, the first giraffe is standing in the steam.
 
 ---
 
-## Where we are in 2026
+## Flowers for aircraft
 
 Every chapter so far has been about thought as an activity: who does it, who signs for it, who can read it. This part of the book is about thought as a quantity. It can be measured in watts, priced in currencies and shipped across borders, and once it can be shipped, it can be traded at a deficit.
+
+An economist would object to that last word before I had shown a single number, so the objection comes first.
+
+Compute is a traded service like any other. Kenya imports aircraft and exports flowers, and both countries are richer for it. The theory of comparative advantage says a country should make what it makes relatively cheaply, and Kenya makes steam. Any rule that steers Kenyan children towards a domestic model is a tariff with better manners. It would hand them a worse tutor so that their government feels more sovereign. And the problem may solve itself: in a Stanford study I come back to below, the share of queries that the local models of each year, running on ordinary hardware, could handle as well as a frontier model rose from about 23 per cent in 2023 to about 71 per cent in 2025. If thinking moves onto the phone in Njeri's hand, there is no border for it to cross.
+
+Much of this is right, and I concede it. A deficit in thinking can be as harmless as a trade deficit in medicines. Most countries will run one in most categories, and should. What the objection takes for granted is that a tutor's answer crosses a border the way a box of roses does. That depends on what actually crosses, and finding out takes evidence.
+
+---
+
+## Where we are in 2026
 
 Start with the watts. In April 2026 the International Energy Agency published an update to its analysis of energy and AI. Data centres worldwide used about 485 terawatt-hours of electricity in 2025, up 17 per cent on the year before, and the subset built around AI accelerators grew by about half. The agency's central projection roughly doubles total consumption to about 950 terawatt-hours by 2030, around 3 per cent of all the electricity the world uses. That is close to the path the IEA set out a year earlier, which tells you the forecast survived a year of contact with reality.
 
@@ -66,7 +76,7 @@ I find this persuasive, and it changes the shape of the problem. In the 2036 of 
 
 The other recent piece of evidence comes from the opposite direction. In July 2026 the German Council on Foreign Relations (DGAP) published a policy brief by Valentin Weber and Michael Laha on China's trade in compute. Using customs data on the hardware of computation, chiefly chips, they found that China's compute exports rose by 43.5 per cent between 2021 and 2025, to about €206.5 billion, while its compute trade deficit shrank. With Germany, China ran a compute surplus of about €350 million in 2025. Their worry is that Europe is being marginalised in a market it assumed it would shape.
 
-Notice what the DGAP figures count. They count the means of thinking: chips that leave Shenzhen in a crate. They do not count the thinking itself, the questions answered and decisions drafted once those chips are switched on. As far as I can tell, nobody counts that. International trade in services is recorded under a UN classification in which computing sits inside one broad heading for telecommunications, computer and information services. An hour of Kenyan steam spent drafting a Hamburg insurer's claim decisions and an hour spent hosting a website land, at best, on the same line. I could not find a single national statistic, anywhere, that measures how much inference a country computes for others, or how much of its own citizens' advice, tutoring and paperwork is computed abroad.
+Notice what the DGAP figures count: the means of thinking, chips that leave Shenzhen in a crate. The thinking itself, the questions answered and decisions drafted once those chips are switched on, falls outside them. As far as I can tell, nobody counts that. International trade in services is recorded under a UN classification in which computing sits inside one broad heading for telecommunications, computer and information services. An hour of Kenyan steam spent drafting a Hamburg insurer's claim decisions and an hour spent hosting a website land, at best, on the same line. I could not find a single national statistic, anywhere, that measures how much inference a country computes for others, or how much of its own citizens' advice, tutoring and paperwork is computed abroad.
 
 ---
 
@@ -74,7 +84,7 @@ Notice what the DGAP figures count. They count the means of thinking: chips that
 
 Here is the mechanism, and it needs nothing to go wrong.
 
-Inference gets cheap. The IEA notes that the energy used per AI task has fallen by at least an order of magnitude a year recently. Because it is cheap and good, it moves into the parts of life where judgement used to be local and slow: the tutor, the clinic's triage nurse, the clerk who checks a land title, the officer who drafts a county budget. Each of these moves is an improvement. Njeri's tutor is patient at eleven at night, and her teacher is not.
+Inference gets cheap. The IEA's April 2026 report notes that the energy used per AI task has fallen by at least an order of magnitude a year in recent years. Because it is cheap and good, it moves into the parts of life where judgement used to be local and slow: the tutor, the clinic's triage nurse, the clerk who checks a land title, the officer who drafts a county budget. Each of these moves is an improvement. Njeri's tutor is patient at eleven at night, and her teacher is not.
 
 But each move also changes where the judgement comes from. The electricity can be Kenyan. The racks can sit in the Rift Valley. The weights, the training data, the fine-tuning, the policy that decides what a good explanation of a constitution sounds like, and the price, are set somewhere else. A country can be a net exporter of joules and a net importer of judgement at the same time. In my vignette, Kenya is both, and on most days the second number is the larger one in shillings.
 
@@ -102,7 +112,7 @@ From those reports a statistics office can publish what no country publishes tod
 
 The accounts need a unit, and tokens are a poor one. A token of a model musing to itself and a token of a correct diagnosis count the same.
 
-The best starting point I know is a 2025 Stanford study, led by Jon Saad-Falcon and Avanika Narayan with colleagues including Christopher Ré and John Hennessy, called *Intelligence per Watt*. It defines a metric, task accuracy per unit of power, and applies it to more than twenty small models on eight kinds of chip over a million real queries. The headline findings are striking: local models could answer about 89 per cent of single-turn chat and reasoning queries correctly, and intelligence per watt improved by about 5.3 times between 2023 and 2025. The authors are clear that this covers single questions, not long agentic tasks.
+The best starting point I know is a 2025 Stanford study, led by Jon Saad-Falcon and Avanika Narayan with colleagues including Christopher Ré and John Hennessy, called *Intelligence per Watt*. It defines a metric, task accuracy per unit of power, and applies it to more than twenty small models on eight kinds of chip over a million real queries. The headline findings are striking. Judging each local answer against a frontier model's, the study found that local models could handle about 89 per cent of single-turn chat and reasoning queries. And intelligence per watt, the accuracy delivered for each watt the hardware draws, improved by about 5.3 times between 2023 and 2025. The authors are clear that this covers single questions; long agentic tasks are outside its scope.
 
 I want to take their idea one step outward. **Joules per insight** is the energy needed to produce one verified useful outcome from a fixed basket of tasks: a correct explanation of a fraction to a child, graded by a teacher; a correctly triaged discharge letter; a land-title query answered and checked. The basket works like the shopping basket behind a consumer price index. It is chosen by the statistics office, revised every few years, and published. Each category in the accounts is then reported both in energy and in insights, so a country can see whether it is exporting cheap joules and importing expensive insights, and at what ratio.
 
@@ -114,9 +124,9 @@ The third part is the one I expect to be argued with most.
 
 In April 2025 Montana's governor signed the Right to Compute Act, sponsored by state senator Daniel Zolnikov. It recognises a right to own and use computational resources and says that any government restriction must be demonstrably necessary and narrowly tailored to a compelling interest. It is a negative liberty: it stops the state from taking compute away. It gives Njeri nothing.
 
-A year earlier, on a podcast in May 2024, Sam Altman wondered aloud whether the future might look less like a universal basic income and more like "universal basic compute": everyone would own a slice of a future model's capacity, to use, resell or give away. That is a positive provision, and I think the instinct is right. As stated, though, it is a share in one company's model, which would make a citizen's thinking allowance a claim on a single foreign supplier. For Kenya, that is the thought deficit with a ribbon on it.
+A year earlier, on a podcast in May 2024, Sam Altman wondered aloud whether "universal basic compute" might one day take the place of a universal basic income: everyone would own a slice of a future model's capacity, to use, resell or give away. That is a positive provision, and I think the instinct is right. As stated, though, it is a share in one company's model, which would make a citizen's thinking allowance a claim on a single foreign supplier. For Kenya, that is the thought deficit with a ribbon on it.
 
-So here is the version I would propose. Every resident has a **right to think**: a monthly allowance of inference, measured in joules per insight against the national basket, enough for a defined standard of use. For a school-age child I would set the floor at what it takes to run two hours a day of tutoring-grade inference, say three hundred exchanges. A rough sense of scale: the IEA's own illustration uses a generous 1 watt-hour per query, so three hundred a day comes to about nine kilowatt-hours a month, the same as leaving a 12-watt lamp on around the clock. Reasoning-heavy tutoring could cost many times more per query, which is one reason the allowance is set in insights rather than in kilowatt-hours.
+So here is the version I would propose. Every resident has a **right to think**: a monthly allowance of inference, measured in insights from the national basket, enough for a defined standard of use. For a school-age child I would set the floor at what it takes to run two hours a day of tutoring-grade inference, say three hundred exchanges. A rough sense of scale: the IEA's own illustration uses a generous 1 watt-hour per query, so three hundred a day comes to about nine kilowatt-hours a month, the same as leaving a 12-watt lamp on around the clock. Reasoning-heavy tutoring could cost many times more per query, which is one reason the allowance is set in insights.
 
 The allowance carries two conditions. The citizen spends it on any certified provider, and the menu must include at least three model families governed in different jurisdictions, at least one of them domestic or open-weight. And the allowance is funded, in an exporting country, by a royalty on exported inference. In my Kenya, that would be a levy of a few per cent on every megawatt-hour Hall C sells to EU-WEST, paid into a fund that buys Njeri her thinking from whichever supplier she and her school choose.
 
@@ -124,17 +134,13 @@ The allowance carries two conditions. The citizen spends it on any certified pro
 
 The three parts meet in one rule. When the accounts show that more than half of the decision-bearing inference in a sovereign category (education, health, justice and public administration) is governed by a single foreign jurisdiction, or more than 70 per cent by any single model family, the government must publish a diversification plan within a year and report on it to parliament annually. At 80 per cent, public procurement in that category must favour other suppliers until the share falls below the threshold.
 
-The numbers are a first guess, and they are meant to be argued with. They are also meant to be crossed by most countries, at least in the beginning. A trigger that never fires measures nothing.
+The numbers are a first guess. They are meant to be crossed by most countries, at least in the beginning. A trigger that never fires measures nothing.
 
 ---
 
-## The strongest objection
+## What crosses the border
 
-Here is the objection at full strength.
-
-Compute is a traded service like any other. Kenya imports aircraft and exports flowers, and both countries are richer for it. The theory of comparative advantage says a country should make what it makes relatively cheaply, and Kenya makes steam. Requiring a domestic model in the menu is a tariff with better manners. It would hand Kenyan children a worse tutor so that their government feels more sovereign. And the problem may solve itself: the Stanford study shows local models on ordinary hardware covering a rising share of queries, from about 23 per cent in 2023 to about 71 per cent in 2025. If thinking moves onto the phone in Njeri's hand, there is no border for it to cross.
-
-Much of this is right, and I concede it. A thought deficit is not in itself a harm, any more than a trade deficit in medicines is. Most countries will run one in most categories, and should. The right to think deliberately lets citizens spend the allowance abroad. The trigger requires a plan and a procurement tilt. It does not require a Kenyan model to win.
+Go back to the flowers and the aircraft. The proposals above are built to live with the concession I made at the start. The right to think deliberately lets citizens spend the allowance abroad. The trigger requires a plan and a procurement tilt, and the suppliers who win can still be foreign.
 
 On local inference, though, the objection misses where the deficit lives. A model running on Njeri's tablet still carries weights trained and tuned elsewhere. Moving the computation onto the device removes the latency and the energy bill from the trade balance. It leaves the judgement exactly where it was. If anything, it makes the deficit harder to see, because the thinking now happens offline, in Kasarani, and no cable records it crossing anything.
 
@@ -152,11 +158,11 @@ And here is the part of the answer I would defend hardest. Ordinary services tra
 
 Back in Hall C, Mwangi's debug overlay is still open. A hundred and forty milliseconds: that is how long it took a question about Kenyan county budgets to travel to Amsterdam and back so that it could be answered forty metres from where it was asked.
 
-To Njeri, waiting for an explanation of fractions, a hundred and forty milliseconds is nothing. She will never notice it. To an agent trading claims capacity in Frankfurt that night, it is long enough to be outbid several times over. Thought crosses borders at the speed of light, and once it does, the speed itself becomes a currency. Some participants in the 2036 economy live at Njeri's speed and some live at the agent's. The next chapter asks what the exchange rate between them should be.
+To Njeri, waiting for help with algebra, a hundred and forty milliseconds is nothing. She will never notice it. To an agent trading claims capacity in Frankfurt that night, it is long enough to be outbid several times over.
 
 ## Notes
 
-- **IEA 2026 figures (485 TWh, 17%, about 950 TWh, regional tables):** International Energy Agency, *Key Questions on Energy and AI*, World Energy Outlook Special Report, April 2026, Executive Summary and Annex A (Tables A.2 and A.4). https://www.iea.org/reports/key-questions-on-energy-and-ai
+- **IEA 2026 figures (485 TWh, 17%, about 950 TWh, regional tables; energy per AI task "dropping by at least an order of magnitude annually in recent years"):** International Energy Agency, *Key Questions on Energy and AI*, World Energy Outlook Special Report, April 2026, Executive Summary and Annex A (Tables A.2 and A.4). https://www.iea.org/reports/key-questions-on-energy-and-ai
 - **IEA 2025 baseline:** International Energy Agency, *Energy and AI*, April 2025. https://www.iea.org/reports/energy-and-ai
 - **Microsoft–G42 Kenya announcement:** DatacenterDynamics, "Microsoft and G42 to build geothermal-powered data center in Kenya", May 2024. https://www.datacenterdynamics.com/en/news/microsoft-and-g42-to-build-geothermal-powered-data-center-in-kenya
 - **The stall and Ruto's remark:** Brian Kimani, "Kenya's $1B Microsoft data centre project in limbo over power concerns", Citizen Digital, 23 May 2026. https://citizen.digital/article/kenyas-1b-microsoft-data-centre-project-in-limbo-over-power-concerns-n383281 ; DatacenterDynamics, "Microsoft and G42 data center in Kenya stalled due to lack of power capacity", 2026. https://www.datacenterdynamics.com/en/news/microsoft-and-g42-data-center-in-kenya-stalled-due-to-lack-of-power-capacity/
