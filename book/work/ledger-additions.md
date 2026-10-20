@@ -52,3 +52,9 @@
 - Njeri (13) is in Grade 8.
 - Élodie Marchetti, Council of the EU lawyer-linguist for 19 years; a 2035 directive with an 11-page text and a ~640,000-word annex.
 - Ceiling: 30-citizen lottery panel (half aged 14–15), 10-minute explanation, 5 scenario questions, pass at ≥80% getting 4/5. Complexity brake: net obligation growth ≤2% per term; emergency obligations expire after 2 years.
+
+## Chapter 12
+- Mwangi Kamau, 36, Wanjiru's younger brother; thermal-and-rack technician at the fictional Kilele Compute, Hall C, Olkaria (Hell's Gate). Hall C ~38 MW, mostly "EU-WEST". The press calls it "the thought trade".
+- Leerwijs BV (Amsterdam) tutoring app: €19/month, rents 1.2 MW in Hall C. 140 ms round trip.
+- IEA: 485 TWh (2025) → "about 950 TWh" (2030) per the April 2026 text. NOTE: the prologue does not cite this; other chapters should use "about 950".
+- Right to think: monthly inference allowance, ≥3 model families from different countries, funded by an export royalty. Triggers: >50% governed by one foreign country or >70% from one model family → diversification plan; 80% → procurement preference.

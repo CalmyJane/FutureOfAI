@@ -18,7 +18,7 @@ At 23:40 his phone buzzes. Wanjiru.
 
 "Cancel it."
 
-"And replace it with what? Her whole class is on it. The school recommends it. Ndege says the Kenyan ones are worse at explaining fractions and better at explaining tithes." A pause. "That was a joke. Ndege doesn't make jokes. I make jokes."
+"And replace it with what? Her whole class is on it. The school recommends it. Ndege says the Kenyan ones are cheaper and worse at fractions." A pause. "Ndege is very polite about it. I am not polite about it."
 
 He laughs, and tells her he'll look at something.
 
@@ -44,7 +44,7 @@ Every chapter so far has been about thought as an activity: who does it, who sig
 
 Start with the watts. In April 2026 the International Energy Agency published an update to its analysis of energy and AI. Data centres worldwide used about 485 terawatt-hours of electricity in 2025, up 17 per cent on the year before, and the subset built around AI accelerators grew by about half. The agency's central projection roughly doubles total consumption to about 950 terawatt-hours by 2030, around 3 per cent of all the electricity the world uses. That is close to the path the IEA set out a year earlier, which tells you the forecast survived a year of contact with reality.
 
-The geography matters more for this chapter than the total. The IEA's annex table gives Europe about 72 terawatt-hours of data-centre consumption in 2025. It gives the whole of Africa 1.6. Of roughly 114 gigawatts of data-centre capacity in the world, Africa had about 0.4. A single large campus in Virginia or Ireland can draw more than that by itself.
+The geography matters more for this chapter than the total. The IEA's annex table gives Europe about 72 terawatt-hours of data-centre consumption in 2025. It gives the whole of Africa 1.6. Of roughly 114 gigawatts of data-centre capacity in the world, Africa had about 0.4. Several single AI campuses now being built in the United States are planned to draw more than that on their own.
 
 Kenya is the obvious place to ask whether this could change. The country has about 940 megawatts of installed geothermal capacity, most of it in the Olkaria field near Lake Naivasha, and geothermal supplied about 40 per cent of the country's generation in the second half of 2025. Geothermal is steady in a way wind and sun are not: it runs at night, which is when European batch work is cheapest to send abroad.
 
@@ -116,7 +116,7 @@ In April 2025 Montana's governor signed the Right to Compute Act, sponsored by s
 
 A year earlier, on a podcast in May 2024, Sam Altman wondered aloud whether the future might look less like a universal basic income and more like "universal basic compute": everyone would own a slice of a future model's capacity, to use, resell or give away. That is a positive provision, and I think the instinct is right. As stated, though, it is a share in one company's model, which would make a citizen's thinking allowance a claim on a single foreign supplier. For Kenya, that is the thought deficit with a ribbon on it.
 
-So here is the version I would propose. Every resident has a **right to think**: a monthly allowance of inference, measured in joules per insight against the national basket, enough for a defined standard of use. For a school-age child I would set the floor at what it takes to run two hours a day of tutoring-grade inference. A rough sense of scale: the IEA's own illustration uses a generous 1 watt-hour per query, so three hundred queries a day comes to about nine kilowatt-hours a month. That is less electricity than a household fridge uses in a fortnight, although reasoning-heavy tutoring could cost many times more per query.
+So here is the version I would propose. Every resident has a **right to think**: a monthly allowance of inference, measured in joules per insight against the national basket, enough for a defined standard of use. For a school-age child I would set the floor at what it takes to run two hours a day of tutoring-grade inference, say three hundred exchanges. A rough sense of scale: the IEA's own illustration uses a generous 1 watt-hour per query, so three hundred a day comes to about nine kilowatt-hours a month, the same as leaving a 12-watt lamp on around the clock. Reasoning-heavy tutoring could cost many times more per query, which is one reason the allowance is set in insights rather than in kilowatt-hours.
 
 The allowance carries two conditions. The citizen spends it on any certified provider, and the menu must include at least three model families governed in different jurisdictions, at least one of them domestic or open-weight. And the allowance is funded, in an exporting country, by a royalty on exported inference. In my Kenya, that would be a levy of a few per cent on every megawatt-hour Hall C sells to EU-WEST, paid into a fund that buys Njeri her thinking from whichever supplier she and her school choose.
 
