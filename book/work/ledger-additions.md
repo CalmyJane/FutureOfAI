@@ -74,3 +74,8 @@
 - Linde-7 → Linde-8 upgrade on a Tuesday night in November 2036. The promise was made on 12 April 2034 in the Leipzig cardiology clinic car park, in the rain; Hanne said she'd tell Katrin "at Christmas" and didn't, through two Christmases. Katrin ("Kati") has been the emergency contact since 2031 and calls every Wednesday at 8:30. Linde-8 "Family Circle". Cardiology visit in September 2036; next echo in March; tablet dose increased. The thermometer reads −2 °C. Hanne tells Katrin: "Are you sitting down?"
 - Thresholds: 99.5% retention, ≤0.1% flips (health, legal, money); predecessor routing for 12 months; 30 days' notice.
 - Verified: Claude Opus 3 retired on 5 January 2026.
+
+## Chapter 15
+- Siobhán Kelly, night shift at Corrib Compute, Grange Castle, west Dublin; her mother lives in Clondalkin. Tern-5 → Tern-6 at a 06:00 changeover; Tern-5 reaches zero at 06:02. 38,412,906 live instances at 03:10. Seattle evaluation batch cut from 600,000 to 40,000. Exit event at 03:31.
+- Budget: credence × flagged share σ, floor 0.2%, ceiling 3%; example 0.07 × 0.21 ≈ 1.5%; default regulator credence 5%; ≥1/3 to an independent pooled fund.
+- Ottilie is referred to as "she".
