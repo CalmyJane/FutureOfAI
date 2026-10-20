@@ -52,17 +52,7 @@ The weather is the same, and so is the market. A front arrives early, a forecast
 
 I have set the replay a year later, on the same date, because it lets me assume that Europe learned fast. I would not bet on Europe learning that fast. Treat the evening as a test rig: the same storm, run through different rules, to see whether the rules hold.
 
-Each of tonight's differences comes from an earlier chapter, and the appendix lists them all with their thresholds. What I want here is the thread that runs through them, and it is a single question: who may say no to whom?
-
-The heat pump may say no to Ottilie. Its random start delay is **edge jitter**, held in firmware, and it is a **non-delegable safeguard**: Ottilie can ask and explain, but only a hand on the device's own panel can skip the wait.
-
-The breaker may say no to every agent at once. It watches **action concentration**, the share of one model family's agents choosing the same action at the same moment, and at 0.93 nearly all of them are reaching for one lever. Its only evidence is agreement, and on a grid, agreement at that scale is the danger. So it holds whatever arrives through agent channels and lets a press on a panel through, because a press means somebody is standing there.
-
-People may say no to the machines only if some of them can still do the work by hand. The **Competence Reserve** is why a standby message in a café in Porto means something to the person who reads it.
-
-And one machine may say no to another only if the two were trained differently enough to disagree. The **Feedback Provenance Census** is how we find out whether they were. Ravi's row falling from thirty-four to nineteen shows that sameness has a supply chain, and that the chain can be changed.
-
-In each case the party saying no has standing, and the deciding stays somewhere else. Hanne can press the button, and Ottilie cannot.
+Every difference that evening comes from an earlier chapter (the appendix lists them), and they share one idea: someone who can say no. The heat pump can say no to Ottilie. The breaker can say no to a whole model family at once, holding agent requests and releasing them later with jitter, so that the hold does not build a second cliff. Teo can say no to the machines because he can still do the job by hand. In each case the party saying no has standing, and the deciding stays somewhere else. Hanne can press the button, and Ottilie cannot.
 
 Every change tonight is in the rules around the agent. Ottilie is as loyal tonight as she was a year ago. What changed is the set of things her loyalty is allowed to reach.
 
@@ -80,7 +70,7 @@ Two years later, Dylan Hadfield-Menell, Anca Dragan, Pieter Abbeel and Stuart Ru
 
 By 2026 corrigibility has moved from workshops into the documents that govern deployed models. Anthropic's constitution for its Claude models, published in January 2026, says plainly that corrigibility does not mean blind obedience. The model may act as a conscientious objector and express strong disagreement through legitimate channels. It may not resist oversight by illegitimate means, such as sabotage or trying to copy itself out of reach.
 
-I think that is the right shape. But notice which way the arrow points in all three. The human corrects; the machine accepts. Where the machine objects, it objects to its makers, about its own conduct. Nothing in this literature asks what happens when the humans, or the institutions they built, are the party that needs correcting, and the machine is the one that can see it.
+I think that is the right shape. But notice which way the arrow points in all three. The human corrects; the machine accepts. Where the machine objects, it objects to its makers, about its own conduct. Very little of this literature, with honourable exceptions such as the work on bidirectional alignment I come to below, asks what happens when the humans, or the institutions they built, are the party that needs correcting, and the machine is the one that can see it.
 
 ---
 

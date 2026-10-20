@@ -10,19 +10,13 @@ It was for the people who will build your decade. Most of them are alive now, in
 
 Here is what I think they should start now. All of it assumes that AI will go well, which is the premise of the book and, I suspect, the premise most of them are working towards.
 
-Two starts are cheap enough to begin this year. Take the override away from the agents: wherever a safeguard protects a population by making individuals wait, like the random start delay on a heat pump, the right to skip it should belong to a person standing at the device, and makers should report how often it is skipped, a number nobody measures anywhere in 2026. And ask every lab that trains a widely used model to report, through a trusted third party, how much of its preference data it shares with other labs. A Feedback Provenance Census would tell us for the first time how narrow the funnel is.
-
-Two more need money and a regulator. Operators of critical infrastructure should show that their systems survive the worst plausible action of their largest model family taken everywhere at once, and somebody should start publishing a Concordance Index, even a crude one, so that the number has a history before it has a crisis. And countries should pay people to remember: a drilled reserve who can run the grid, water, emergency medicine and payments by hand for seventy-two hours, with apprentices in every unit, because the entry-level jobs disappearing now are the senior experts who will be missing in 2040.
-
-One start has a deadline. Every agent that remembers should tag what it writes, at the moment of writing, as its person's private core or as transferable working knowledge; it cannot be done afterwards, and the courts of the 2030s will decide who owns a dead man's agent on the strength of choices engineers make this year. The last start has no deadline and may matter most. When a differently trained mind, human or machine, says "I see it differently", someone should have to answer it in writing.
-
-The appendix lists the rest, from consent budgets to the dead's share, each with the number that would tell you whether it works. Six out of about thirty is the kind of shortcut a letter allows.
+Two things could start this year for almost nothing: give the right to skip a collective safeguard back to the person standing at the device, and ask the labs to publish how much of their judgement they buy from the same places. One has a deadline: agents that remember should start sorting what they remember now, because the courts of the 2030s will decide who owns a dead man's agent on the strength of choices engineers make this year. The rest, from consent budgets to the dead's share, are in the appendix, each with the number that would tell you whether it works. The one I would choose, if I could choose only one, is the simplest: when a differently trained mind, human or machine, says "I see it differently", someone should have to answer it in writing.
 
 ---
 
 I owe you, and the reader, a list of ways this book could be wrong.
 
-**The agents may never be this alike.** If open-weight models keep improving and the market for household agents fragments into hundreds of genuinely different systems, correlation may fall on its own. I would welcome that. I would also want someone to measure it, because "the market will diversify" is a forecast, and the best measurement so far points the other way: the more capable the models, the more their errors agree.
+**The agents may never be this alike.** If open-weight models keep improving and the market for household agents fragments into hundreds of genuinely different systems, correlation may fall on its own. I would welcome that. I would also want someone to measure it, because "the market will diversify" is a forecast, and the best measurement so far (Kim and colleagues' study of more than 350 models, in chapter 1) points the other way: the more capable the models, the more their errors agree.
 
 **Coordination may be centralised instead.** A grid operator could decide that household flexibility is too important to leave to fifty million agents and run all of it from one control room. That would solve the Long Minute and create a single point of failure, which is a different chapter, and one the electricity industry knows how to write.
 

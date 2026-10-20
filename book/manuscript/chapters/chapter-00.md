@@ -56,7 +56,7 @@ That is a design failure, and I do not want to pretend otherwise. But it lives i
 
 The scene above is invented. I built it to be plausible, and throughout the book I will mark what is invention and what is measured. But every mechanism in it exists in 2026, the year I am writing this. Germany spent years and up to 170 million euros retrofitting more than 315,000 solar installations because they had all been programmed to switch off at the same frequency, 50.2 hertz, and could in the worst case have dropped some fourteen gigawatts at once. The British random-delay rule is real: regulation 11 of the Electric Vehicles (Smart Charge Points) Regulations 2021. So is its owner override. The three-gigawatt reference incident is written into European grid law. On 28 April 2025 the Iberian peninsula went dark in a cascade that took about ninety seconds; nobody's agent caused it, but it showed how fast a modern grid can fall. Prices really do fall below zero when the wind blows harder than forecast; it happens in Europe many times a year. And building agents that spend and negotiate on our behalf is the central project of the AI industry in 2026. The companies say so in their launch announcements, and the investors in their pitch decks.
 
-This book is about what happens when they are.
+This book is about what happens when they are loyal.
 
 ---
 
@@ -66,7 +66,7 @@ I want to ask the opposite question. Suppose it goes right. Suppose that by 2036
 
 What breaks then?
 
-My answer is that success produces its own class of failure, and that this class is almost invisible to the way we evaluate AI today. Our safety tests examine one model at a time, or one agent in one task. The failures I am interested in exist only at the level of the population. They come from **correlation**, when millions of good agents make the same move at the same moment. They come from **delegation**, when people sign and consent to more than any person could check. They come from **legibility**, when machines read and write the world faster than humans can follow, and from **continuity**, when minds are copied, upgraded, retired and inherited, and keep acting after the people they served are gone. None of these needs a villain. All of them grow with adoption, which is to say, with success.
+My answer is that success produces its own class of failure, and that this class is almost invisible to the way we evaluate AI today. Most of our safety tests still examine one model at a time, or one agent in one task; a young literature on multi-agent risk and algorithmic monoculture, which I lean on throughout and credit as I go, has only begun to change that. The failures I am interested in exist only at the level of the population. They come from **correlation**, when millions of good agents make the same move at the same moment. They come from **delegation**, when people sign and consent to more than any person could check. They come from **legibility**, when machines read and write the world faster than humans can follow, and from **continuity**, when minds are copied, upgraded, retired and inherited, and keep acting after the people they served are gone. None of these needs a villain. All of them grow with adoption, which is to say, with success.
 
 Here is the argument of this book in two sentences. **Our safety tests ask whether one AI system is good. The failures of the next decade will come from millions of good systems acting, signing, reading and remembering for us at the same time.**
 
@@ -84,7 +84,7 @@ Where someone has had part of an idea before me, I say so; a surprising amount o
 
 ---
 
-The book moves in five steps: from agents that agree with each other, to agents that sign for us, to machines that read everything, to the price of thinking, and finally to the possibility that the machines themselves are someone. Nearly every chapter opens in 2036, then comes back to 2026: to the evidence, the mechanism, a proposal and the best objection I can find to it. Each ends with a short list of open problems. If you are a researcher, those lists are the part of the book I most hope you will steal.
+Nearly every chapter opens in 2036 and then comes back to 2026, to the evidence and a proposal, and each ends with a short list of open problems. If you are a researcher, those lists are the part of the book I most hope you will steal.
 
 The people in the 2036 openings are invented, and you will meet them one at a time. Hanne and Teo you know already.
 
