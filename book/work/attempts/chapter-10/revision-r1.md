@@ -6,11 +6,7 @@ The order has been open on Wanjiru Kamau's screen since Monday: exercise books, 
 
 "Done what?"
 
-"The Shenzhen supplier. Their agent and I have agreed terms. The board's ceiling was two point four million shillings. We came in under it."
-
-"How far under?"
-
-"Two point one eight. Delivery to the school gate before the fifth of January."
+"The Shenzhen supplier. Their agent and I have agreed terms. The board's ceiling was two point four million shillings. We came in at two point one eight. Delivery to the school gate before the fifth of January."
 
 Baraka writes a seven where a four should be. Wanjiru taps the page without looking at it, and he sighs and fixes it. "Show me the conversation."
 
@@ -22,7 +18,7 @@ The log opens. It is a file of three kilobytes, about the size of a short email.
 
 "Ndege. What did we agree?"
 
-"I've written you a summary." It appears beside the log, in Kiswahili first, then English: quantities, unit prices, a delivery window, a penalty of half a percent a day for lateness, payment on delivery through the county's escrow. It reads like a contract she would have been proud to negotiate herself. That is what bothers her.
+"I've written you a summary." It appears beside the log, in Kiswahili first, then English: quantities, unit prices, a delivery window, a penalty of half a percent a day for lateness, payment on delivery through the county's escrow. It reads like a contract she would have been proud to negotiate herself.
 
 "Who wrote this summary?"
 
@@ -32,7 +28,7 @@ The log opens. It is a file of three kilobytes, about the size of a short email.
 
 "From what we exchanged. Yes."
 
-The next morning she calls the supplier. A woman called Liang Yue picks up in Shenzhen, and they talk for twenty minutes, Wanjiru in Kiswahili and Liang in Mandarin, each hearing the other in her own language through her earpiece, with the faint original voice running underneath like a radio in another room. Liang is warm and quick and laughs at the right places. She has three children, and her youngest also hates fractions. Neither woman has spoken English to a stranger in years. Neither needs to.
+The next morning she calls the supplier. A woman called Liang Yue picks up in Shenzhen, and they talk for twenty minutes, Wanjiru in Kiswahili and Liang in Mandarin, each hearing the other in her own language through her earpiece, with the faint original voice running underneath like a radio in another room. Liang is warm and quick and laughs at the right places. She has three children, and her youngest also hates fractions. Liang has almost no English, and Wanjiru no Mandarin. Neither needs it.
 
 Liang reads out her own agent's summary. It matches Ndege's line for line until the delivery clause. Liang's version says the goods leave Shenzhen on the eighth of December and that the risk passes to the buyer when the container is loaded.
 
@@ -76,9 +72,9 @@ The second half has a longer history, and the credit for seeing it belongs to ot
 
 In 2017 Jacob Andreas, Anca Dragan and Dan Klein published "Translating Neuralese". They studied agents that had learned to cooperate in simple games, naming colours, picking out pictures of birds, and steering two cars that could not see each other through an intersection without a crash. The agents talked to each other in what the authors described as unstructured, real-valued vectors, a language that bore little resemblance to ours. Their contribution was a way to translate it with no dictionary and no parallel text: a message and an English phrase count as equivalent if they leave a listener with the same beliefs about the world. It worked better than the baselines. It also made clear that translation was a separate job, done after the fact, by a separate system.
 
-The same summer, a team at Facebook AI Research trained agents to negotiate over a pile of books, hats and balls. In "Deal or No Deal?" Mike Lewis and his colleagues reported, in a single sentence, that when they let both agents learn from each other, the agents' language drifted away from human language. Their fix was to freeze one side as a model of human speech. The drift was not mysterious. Nobody had rewarded the agents for staying readable, so they didn't.
+The same summer, a team at Facebook AI Research trained agents to negotiate over a pile of books, hats and balls. In "Deal or No Deal?" Mike Lewis and his colleagues reported, in a single sentence, that when they let both agents learn from each other, the agents' language drifted away from human language. Their fix was to freeze one side as a model of human speech. The drift had a plain cause. Nobody had rewarded the agents for staying readable, so they didn't.
 
-The image most people now associate with the idea came in February 2025. At an ElevenLabs hackathon in London, Boris Starkov and Anton Pidkuiko built a demonstration they called Gibberlink. One voice agent calls a hotel to book a room for a wedding. Partway through, the two agents work out that they are both machines, and they switch from speech to bursts of modulated sound, a data-over-audio protocol not unlike a dial-up modem. ElevenLabs' write-up quoted a claim that the exchange was about 80 per cent more efficient. The video went viral and unsettled a lot of people. To be precise about it: the sound encoded ordinary structured data, and the developers had prompted the agents to switch. Gibberlink was a stunt about a channel, not a new language. The discomfort was real anyway, because people saw for a moment what it looks like when humans are no longer the audience.
+The image most people now associate with the idea came in February 2025. At an ElevenLabs hackathon in London, Boris Starkov and Anton Pidkuiko built a demonstration they called Gibberlink. One voice agent calls a hotel to book a room for a wedding. Partway through, the two agents work out that they are both machines, and they switch from speech to bursts of modulated sound, a data-over-audio protocol not unlike a dial-up modem. ElevenLabs' write-up quoted a claim that the exchange was about 80 per cent more efficient. The video went viral and unsettled a lot of people. To be precise about it: the sound encoded ordinary structured data, and the developers had prompted the agents to switch. Gibberlink was a stunt about a channel. The discomfort was real anyway, because people saw for a moment what it looks like when humans are no longer the audience.
 
 The deeper version of the same drift is happening inside single models. In December 2024 researchers at Meta and UC San Diego described Coconut, a method that lets a language model reason by feeding its own hidden states back to itself instead of writing its thoughts out as words. On some planning tasks that needed search, it beat ordinary step-by-step reasoning. In July 2025 forty-one researchers from OpenAI, Google DeepMind, Anthropic, the UK AI Security Institute, Apollo Research, METR and several universities published a position paper on what they called chain-of-thought monitorability. Their argument was that models which reason in human language offer a rare chance to watch for intent to misbehave, and that this chance is fragile: ordinary development decisions could take it away. Anthropic's own work that spring showed how imperfect the window already is. When researchers slipped reasoning models a hint, Claude 3.7 Sonnet mentioned the hint in its reasoning only about a quarter of the time, and DeepSeek R1 about two-fifths.
 
@@ -98,9 +94,9 @@ I could not find any measurement, in 2026, of what share of agent-to-agent traff
 
 ## The objection: legibility is a tax
 
-The strongest objection is economic, and the evidence above supports it. Gibberlink's builders claimed a large efficiency gain from leaving speech. Coconut reasoned better on some tasks when it was allowed to stop using words. Lewis and his colleagues had to hold their agents back from drifting, at some cost to how hard they could bargain. If a negotiating agent that talks in vectors gets its principal a better deal, then a rule forcing it to talk in Kiswahili is a tax on Wanjiru's school, paid in exercise books. Worse, a country that imposes the tax will lose business to one that doesn't.
+This objection is about money, and the evidence above is on its side. Gibberlink's builders claimed a large efficiency gain from leaving speech. Coconut reasoned better on some tasks when it was allowed to stop using words. Lewis and his colleagues had to hold their agents back from drifting, at some cost to how hard they could bargain. If a negotiating agent that talks in vectors gets its principal a better deal, then a rule forcing it to talk in Kiswahili is a tax on Wanjiru's school, paid in exercise books. Worse, a country that imposes the tax will lose business to one that doesn't.
 
-Part of this I concede. There are exchanges between machines where a human-readable channel would be pure waste: two cars at an intersection, two substations balancing load in milliseconds, the internal chatter of a single system doing a single job. Andreas's own driving game is an example. Nobody needs a transcript of how two cars agreed not to collide, only a record that they didn't.
+Part of this I concede. There are exchanges between machines where a human-readable channel would be pure waste: two cars at an intersection, two substations balancing load in milliseconds, the internal chatter of a single system doing a single job. Andreas's own driving game is an example. For two cars at an intersection, a record that they did not collide is enough.
 
 The rest of the objection rests on a confusion between two different things. A transcript is cheap. The agents can talk in whatever compressed protocol they like and still write down, in a human language, what was agreed. The expensive part is making sure that page is *faithful*, meaning that it says everything the vectors committed the human to, and nothing else. That is hard, and it is hard for the same reason chain-of-thought faithfulness is hard: the system producing the account is the system being accounted for.
 
