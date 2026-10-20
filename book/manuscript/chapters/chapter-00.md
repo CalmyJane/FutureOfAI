@@ -78,13 +78,13 @@ Every great technological success of the last two centuries has forced its socie
 
 None of these inventions was obvious in advance. Each was a response to a failure that came from things working. Each looks, in hindsight, like common sense.
 
-I think AI's success will force its own set of inventions, and I think we can see many of them now, ten years early, if we look for the failures that success itself produces. That is what this book tries to do. It names about twenty institutions, rules and research programmes that do not yet exist, specifies each closely enough to be argued with, and gives the strongest objection I can find to each one.
+I think AI's success will force its own set of inventions, and I think we can see many of them now, ten years early, if we look for the failures that success itself produces. That is what this book tries to do. It names about thirty institutions, rules and research programmes that do not yet exist, specifies each closely enough to be argued with, and gives the strongest objection I can find to each one.
 
 Where someone has had part of an idea before me, I say so; a surprising amount of the groundwork is in papers published in the last two years, and the authors deserve the credit. Where the idea is, as far as I have been able to tell, new, I try to give it a name short enough to use in a meeting. Some of the names will not survive. I would be happy if the problems did, in other people's hands.
 
 ---
 
-The book moves in five steps: from agents that agree with each other, to agents that sign for us, to machines that read everything, to the price of thinking, and finally to the possibility that the machines themselves are someone. Each chapter opens in 2036, then comes back to 2026: to the evidence, the mechanism, a proposal and the best objection I can find to it. Each ends with a short list of open problems. If you are a researcher, those lists are the part of the book I most hope you will steal.
+The book moves in five steps: from agents that agree with each other, to agents that sign for us, to machines that read everything, to the price of thinking, and finally to the possibility that the machines themselves are someone. Nearly every chapter opens in 2036, then comes back to 2026: to the evidence, the mechanism, a proposal and the best objection I can find to it. Each ends with a short list of open problems. If you are a researcher, those lists are the part of the book I most hope you will steal.
 
 The people in the 2036 openings are invented, and you will meet them one at a time. Hanne and Teo you know already.
 

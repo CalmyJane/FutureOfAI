@@ -37,3 +37,10 @@ Next: Phase 4, adversarial audit.
 Done: artifacts/10-adversarial-audit.md (two auditors, independence grade B). Verdict: **revise**, with 3 high tickets (ch1 safeguard re-synchronises via prompting; ch1→ch2 handoff contradiction; correct vs. wrong in ch1/ch3), ~22 medium and ~28 low. Book-wide: negation contrast over the ceiling in every chapter; repeated back-half template and "strongest objection" phrasing.
 Orchestrator fixes: voice exemption for the past-tense prologue; brief updated to v3; prologue A-T16; epilogue B-T07 and B-T22; Hivemind best paper verified (NeurIPS blog); Accenture ≈$41.
 Next: Phase 5, pass 1. Six parallel revision editors work the tickets into work/attempts/chapter-NN/revision-r1.md.
+
+## Book Genesis · Phase 5, pass 1
+Revision r1 across chapters 1–17 (all audit tickets). ch3 compare: 2/2 prefer the revision.
+Readers: 4/4 turn the page on ch1, ch8, ch17 and ch18; high stop points at ch17's catalogue (4/4), ch18's recap (4/4), ch8's statutes (3/4) and ch1's reserves exposition (2/4).
+Rubric (2 evaluators, grade B): raw medians 7.35–8.95; calibrated floor 6.55 (Market); prose capped at 7.5 for triads and negation.
+Added: Appendix "The Inventions at a Glance" (chapter-19). Market map updated to v3.
+Next: pass 2 (5 parallel editors).

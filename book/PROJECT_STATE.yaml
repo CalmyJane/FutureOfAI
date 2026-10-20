@@ -31,8 +31,8 @@ pipeline:
   current_phase: "Phase 5: Revision Loop"
   current_gate: "revision_loop"
   status: "running"
-  panel_passes: 0
-  rubric_passes: 0
+  panel_passes: 1
+  rubric_passes: 1
 
 manuscript:
   chapter_count_planned: 19

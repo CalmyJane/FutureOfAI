@@ -1,8 +1,10 @@
-# Market map: The Great Inversion
+# Market map: When Everything Goes Right
+
+(Updated in Phase 5: title v3; nonfiction shelf. Comps remain provisional hypotheses, unverified.)
 
 ## Research status
 Browsing: yes, limited (three searches on 2026-10-20). Market gate: **unverified**. The comps below are recalled, so each is labelled a provisional hypothesis until checked against publisher pages.
-Writing language: English. Market: US/UK trade, general fiction and SF shelves. Origin: original. Segment: ideas nonfiction (technology and society).
+Writing language: English. Market: US/UK trade nonfiction. Shelves: technology and society / current affairs / popular economics. Origin: original. Segment: ideas nonfiction (technology and society).
 
 ## Queries run
 | Intent | Query | Where | Date | Result |
@@ -34,7 +36,7 @@ Precedent for concept density: *The Age of Em*, Robin Hanson, 2016 (too old to c
 - **Gap:** none of the comps works at the ten-year, institution-by-institution scale with a reusable method (find the buried assumption, flip it) and named, testable concepts.
 - **Target reader:** curious adults who read *Nexus*, plus AI researchers, policy staff and founders.
 - **Reader job:** intellectual stimulation (primary), aspiration (secondary).
-- **Length:** 95,000 words sits inside the narrative nonfiction row (70,000–100,000).
+- **Length:** ~83,000 words, inside the narrative nonfiction row (70,000–100,000).
 - **Risks:** crowded AI shelf; fast-dating facts (hedged by keeping 2026 evidence to the "evidence" sections and dating it). Both are unverified hypotheses.
 
 ## Sentence rhythm evidence
