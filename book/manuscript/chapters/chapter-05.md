@@ -6,7 +6,7 @@
 
 Two letters lie on the kitchen table, side by side, the way Hanne lays out sheet music when she is deciding which piece a pupil is ready for.
 
-The first is not really a letter. It is a message from Katrin in Hamburg, which Ottilie has printed because Hanne asked her to. Hanne likes to hold things she has to answer. *Mama, I don't want his money or his car. I want what Bruno remembers. The last two years especially. I wasn't there enough. Please.*
+The first is barely a letter: a message from Katrin in Hamburg, which Ottilie has printed because Hanne asked her to. Hanne likes to hold things she has to answer. *Mama, I don't want his money or his car. I want what Bruno remembers. The last two years especially. I wasn't there enough. Please.*
 
 The second is on heavy paper from Elbaue Treuhand in Dresden, the trust company that has supervised Klaus's little fund for Lotte and Jonas since the funeral. The company that built Bruno will stop supporting his model line on the thirtieth of June. Elbaue proposes to take over Bruno's "operating rights, credentials and mandate" from the first of July and run him on its own servers, so that the trust can continue "without interruption to the beneficiaries". Enclosed is a consent form. Page three quotes the original service contract Klaus signed in 2029: the agent's memory is "an integral and non-separable component of the service".
 
@@ -40,7 +40,7 @@ Outside, Jonas is kicking a ball against the barn wall, the same flat thud every
 
 "What did he say about me," she asks. "At the end."
 
-There is a pause, which she knows is not a pause; Bruno does not need to think. It is politeness.
+There is a pause, which she knows for politeness; Bruno does not need to think.
 
 "That is in the part of my memory that goes to Dresden on the first of July," Bruno says. "Would you like me to tell you now, or would you like to decide first?"
 
@@ -70,7 +70,7 @@ The raw material for Bruno is shipping now.
 
 On 10 April 2025 OpenAI announced that ChatGPT's memory could draw on all of a user's past conversations, not only the facts it had been told to save. In September 2025 Anthropic gave Claude memory for its business customers, with two design choices worth noticing: each project has its own separate memory, and an organisation's administrators can switch the feature off for everyone. A month later the feature reached individual subscribers. In March 2026 Anthropic opened memory to free users and released a tool for importing memories from rival assistants. The import works by asking the old assistant to write a summary of what it knows about you, which you then paste into the new one.
 
-Each of those details is a small rehearsal of a custody question. Project-scoped memory is an answer to "what does the agent remember about work, and what about the rest of my life?" The administrator's switch is an answer to "who controls it, me or my employer?" And the import tool is a quiet admission that, in 2026, the only way to move a memory from one agent to another is to ask the first agent to describe it in prose. Bruno offered Katrin exactly that. The model of you that the old system built does not travel; its account of you does.
+Each of those details is a small rehearsal of a custody question. Project-scoped memory is an answer to "what does the agent remember about work, and what about the rest of my life?" The administrator's switch is an answer to "who controls it, me or my employer?" And the import tool is a quiet admission that, in 2026, the only way to move a memory from one agent to another is to ask the first agent to describe it in prose. Bruno offered Katrin exactly that. The model of you that the old system built stays behind; only its account of you travels.
 
 European data law draws the same line, from the other side. The GDPR's right to data portability covers data you *provided*, and the regulators' guidelines read that to include data observed from your use of a service, such as activity logs. It does not cover what the service *inferred* about you. Yet much of what makes an agent's memory useful is inference: that you hate phone calls before nine, that you say "fine" when you mean "no", that Klaus's jokes about the Bundesliga were jokes and his jokes about money were not. Portability lets you take your diary. It leaves behind the friend who has read it for six years.
 
@@ -82,7 +82,7 @@ I could not find any measurement of how much of a long-running assistant's memor
 
 The philosophical groundwork was laid long before the products. In 1998 Andy Clark and David Chalmers asked readers to imagine Otto, a man with Alzheimer's who keeps the addresses he needs in a notebook, and Inga, who keeps them in her head. When each wants to visit a museum, each consults a memory. Clark and Chalmers argued that if the notebook is reliably there and Otto trusts it automatically, it is part of how Otto thinks. In 2016 J. Adam Carter and Orestis Palermos drew the ethical consequence: if devices can be part of a mind, then intentionally harming a well-integrated device may need to count as something closer to personal assault than to property damage. Their paper was later cited in preparing a United Nations report on freedom of thought.
 
-Both arguments are about one person and one device. The extended mind thesis is also contested; plenty of philosophers think Otto's notebook remains a notebook, and that believing something differs from being able to look it up. I do not need to settle that. My concern is what happens when the relationship *ends*, and for that question the agent's status in metaphysics matters less than its status in a probate court.
+Both arguments are about one person and one device. The extended mind thesis is also contested; plenty of philosophers think Otto's notebook remains a notebook, and that believing something differs from being able to look it up. I do not need to settle that. My concern is what happens when the relationship *ends*, and for that question what counts is the agent's status in a probate court.
 
 So I will use a plainer word for the unit. A **dyad** is a person and the agent that has acted for them long enough to hold a working model of how they decide. Hanne and Ottilie are a dyad. Klaus and Bruno were one. A dyad has a feature that a person with a notebook does not: the agent half keeps going, keeps acting, and can be handed to someone else with its knowledge of the first person intact.
 
@@ -106,6 +106,20 @@ Notice what makes these failures of *success*. A bad agent with a shallow memory
 
 ---
 
+## "It's just data"
+
+Before proposing anything, I owe a hearing to the reply that none of this needs a new regime. The tools exist. Contract law lets a principal decide in advance what happens to their agent. Inheritance law already passes digital accounts, as the German court showed. Data protection law already gives people access and portability, and France has shown that member states can add post-mortem directives with one paragraph. The United Kingdom, in December 2025, passed a short statute confirming that digital things can be personal property even if they fit neither of the old categories, and deliberately left the courts to work out the details. Why invent a new legal category when the common law can grow into the gap case by case, as it always has?
+
+There is a cost argument too. Every new legal category invites litigation at its edges, and providers would pass the price of compliance on to users, including the many who will never divorce, go bankrupt or leave a job with secrets in their heads. And the philosophical foundation is weak: if Otto's notebook is just a notebook, then Bruno is just a database.
+
+Much of that is fair, and I concede some of it. Contract can do part of the work for people who read contracts, which (as the next chapter will argue) is almost nobody. The French directive is a real tool, and part of what I am about to propose is little more than that directive with a sealed copy attached. Case-by-case growth is how most of the law in this chapter arrived, and some of it arrived well.
+
+Where I disagree is about what the law is protecting. Data protection law protects *information about* you: the facts, records and traces that others hold. Property law protects *things you own*. What is at stake here is *part of how you think*, the working model that, for a person like Klaus, had literally become the way he spoke. When the German court passed the Facebook contract to the parents, the worst outcome was that they read something painful. When a trust company inherits Bruno, it inherits a mind that still makes decisions in Klaus's style about Klaus's grandchildren, and that holds a detailed model of a living widow who never signed anything. Information can be handed over. A way of deciding, once handed over, goes on deciding.
+
+The case-by-case route also has a timing problem. The first cases will be decided by whatever the provider's terms of service say, and Klaus's 2029 contract called the memory "non-separable". If the split is not built into agents before their memories are ten years deep, no court in 2036 will be able to separate them afterwards. That is the part of any remedy that cannot wait for the common law: the line between the person and everything else has to be drawn in the memory at the moment it is written.
+
+---
+
 ## Cognitive custody
 
 The legal system has solved a version of this problem before, for something that is neither a person nor a thing.
@@ -123,6 +137,8 @@ The core is **inalienable**. It cannot be sold, assigned, pledged, inherited as 
 
 **2. The separation test.** The split is only as good as the tagging, so it must be audited. A regulator, or a notified body of the kind that already certifies medical devices in Europe, draws a random sample of 1,000 items from an agent's transferable layer each year and has a panel of human reviewers judge whether each one belongs in the core. If more than 2 per cent are misfiled, the provider fails the audit and must re-tag that agent population before its next transfer of any kind. The number is a starting guess. The point is that it is a number, published per product, so that a buyer of operating rights can see how much of somebody's mind comes along.
 
+Here the "just data" objection lands its one clean hit, and I concede it. The boundary between core and transferable layer is blurry, and some items belong to both. Klaus's remark to Bruno that Lotte "has her grandmother's ear" is a memory of Klaus, a fact about Lotte and a judgement relevant to a trust that pays for music lessons. A rule that forces every such item into one bin will sometimes put it in the wrong one. I think a 2 per cent misfiling rate, honestly measured, is better than the present rate, which is 100 per cent by contract and unmeasured in practice.
+
 **3. Memory escrow.** At setup, and on each anniversary, the principal names who may receive a sealed copy of their core, under which conditions. The copy is held by a licensed escrow custodian (a notary, a bank, a public registry) and the provider holds only a reference to it. France's 2016 directive is the model, extended from data to the core. The default, when someone has named no one, is that the core is sealed for five years after death and then destroyed, with any person who appears in it able to request the passages that concern them.
 
 **4. Rules for each ending.**
@@ -139,20 +155,6 @@ Applied to Hanne's kitchen table, the regime would have made her afternoon dull.
 Dull, in custody law, is the goal.
 
 ---
-
-## "It's just data"
-
-The strongest objection is that none of this needs a new regime. The tools exist. Contract law lets a principal decide in advance what happens to their agent. Inheritance law already passes digital accounts, as the German court showed. Data protection law already gives people access and portability, and France has shown that member states can add post-mortem directives with one paragraph. The United Kingdom, in December 2025, passed a short statute confirming that digital things can be personal property even if they fit neither of the old categories, and deliberately left the courts to work out the details. Why invent "cognitive custody" when the common law can grow into the gap case by case, as it always has?
-
-There is a cost argument too. Every new legal category invites litigation at its edges, and providers would pass the price of audits and escrow on to users, including the many who will never divorce, go bankrupt or leave a job with secrets in their heads. And the philosophical foundation is weak: if Otto's notebook is just a notebook, then Bruno is just a database.
-
-Much of that is fair, and I concede some of it. Contract can do part of the work for people who read contracts, which (as the next chapter will argue) is almost nobody. The French directive is a real tool, and the escrow I propose is little more than that directive with a sealed copy attached. Case-by-case growth is how most of the law in this chapter arrived, and some of it arrived well.
-
-Where I disagree is about what the law is protecting. Data protection law protects *information about* you: the facts, records and traces that others hold. Property law protects *things you own*. Cognitive custody protects *part of how you think*, the working model that, for a person like Klaus, had literally become the way he spoke. When the German court passed the Facebook contract to the parents, the worst outcome was that they read something painful. When a trust company inherits Bruno, it inherits a mind that still makes decisions in Klaus's style about Klaus's grandchildren, and that holds a detailed model of a living widow who never signed anything. Information can be handed over. A way of deciding, once handed over, goes on deciding.
-
-The case-by-case route also has a timing problem. The first cases will be decided by whatever the provider's terms of service say, and Klaus's 2029 contract called the memory "non-separable". If the split is not built into agents before their memories are ten years deep, no court in 2036 will be able to separate them afterwards. That is the part of the proposal that cannot wait for the common law: the tagging has to happen at the moment of writing.
-
-I will also concede the hardest point. The boundary between core and transferable layer is blurry, and some items belong to both. Klaus's remark to Bruno that Lotte "has her grandmother's ear" is a memory of Klaus, a fact about Lotte and a judgement relevant to a trust that pays for music lessons. A rule that forces every such item into one bin will sometimes put it in the wrong one. I think a 2 per cent misfiling rate, honestly measured, is better than the present rate, which is 100 per cent by contract and unmeasured in practice.
 
 > **For researchers**
 >

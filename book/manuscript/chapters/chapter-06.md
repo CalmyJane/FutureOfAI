@@ -36,9 +36,9 @@ At 09:15 the ward round starts and she leaves the room with a hundred and forty 
 
 On Thursday the clinic form comes back. Ottilie says the clinic needs a fresh consent because the research partner has changed. Hanne approves it while on the phone to her daughter Katrin, who is asking about Christmas.
 
-On Thursday Aisha signs her way through a block of sixty between the afternoon clinic and the evening handover. Somewhere in the middle of it she notices that her hand has started to move to the button while the medicine list is still loading. She takes her hand off the mouse. She puts it back.
+On Thursday, somewhere in a block of sixty between the afternoon clinic and the evening handover, Aisha's hand starts to move to the button while the medicine list is still loading. She takes her hand off the mouse. She puts it back.
 
-On Saturday Hanne sits down with a cup of tea and resolves, for once, to read everything. Ottilie, who has noticed the resolution, slows the stack to one card at a time and offers to explain each one. The first, a change to her savings account, takes three hundred words to explain. The second, her choir association's new data clause, takes more. By the sixth card the tea is cold. By the ninth she is pressing green again.
+On Saturday Hanne makes a cup of tea and resolves to read everything. Ottilie slows the stack to one card at a time. The first, a change to her savings account, takes three hundred words to explain. By the sixth card the tea is cold. By the ninth she is pressing green again.
 
 The week ends at a hundred and forty.
 
@@ -56,11 +56,11 @@ She sits there for a while with her coat on, looking at the green tick.
 
 ## A signature used to mean something
 
-Everything in that week is invented. The habit is not.
+Everything in that week is invented, except the habit.
 
 In 2006, four Dutch researchers reviewed seventeen studies of what doctors do when their prescribing software warns them about a dangerous drug: an interaction, an allergy, a dose too high for the kidneys. Across those studies, clinicians overrode the warnings in between 49 and 96 percent of cases. A systematic review in 2020 found much the same spread, from about 46 to 96 percent, across twenty-three newer studies. The phrase for this in medicine is *alert fatigue*, and it is one of the most reliably measured habits in the hospital.
 
-I want to be careful with these numbers, because the reviewers are. A high override rate is not a scandal on its face. Many alerts are wrong, or irrelevant, or about a combination the patient has taken safely for years; the 2020 review found that the share of overrides judged appropriate ranged from under a third to all of them, depending on the study and the alert. Doctors override because the software cries wolf. That is a design failure as much as a human one.
+I want to be careful with these numbers, because the reviewers are. A high override rate, on its face, can be innocent. Many alerts are wrong, or irrelevant, or about a combination the patient has taken safely for years; the 2020 review found that the share of overrides judged appropriate ranged from under a third to all of them, depending on the study and the alert. Doctors override because the software cries wolf. That is a design failure as much as a human one.
 
 But the mechanism underneath is what matters here. A study of 112 primary-care clinicians, published in 2017, found that the chance of accepting a reminder fell by about 30 percent with each additional reminder in the same patient visit. Oddly, the sheer amount of work the clinicians had that day did not predict acceptance. What predicted it was repetition and complexity. Attention, in other words, is spent per encounter, and once it is spent the green button gets pressed.
 
@@ -100,9 +100,21 @@ The EU AI Act, in Article 14, requires that people overseeing high-risk systems 
 
 These rules describe the right destination. None of them says how many reviews one person can do before they stop being meaningful, and none says who pays when the number is exceeded. So the cost of the gap falls where Elish said it would.
 
-Meanwhile a new kind of job is forming. I will call it the **signatory class**: people whose labour consists mainly of lending their name, their licence and their liability to decisions drafted by machines. The consultant who co-signs discharge summaries. The solicitor who approves an agent's conveyancing. The engineer who stamps the AI-checked structural calculation. The compliance officer who signs off a quarter's worth of automated trades. Their value to the employer lies less in the reading than in the signature, because the signature is what a regulator, an insurer or a court will look for.
+Meanwhile a new kind of job is forming. I will call it the **signatory class**: people whose labour consists mainly of lending their name, their licence and their liability to decisions drafted by machines. The consultant who co-signs discharge summaries. The solicitor who approves an agent's conveyancing. The engineer who stamps the AI-checked structural calculation. The compliance officer who signs off a quarter's worth of automated trades. Their value to the employer lies in the signature, because the signature is what a regulator, an insurer or a court will look for.
 
 In economic terms, these people are selling liability. They are being paid to stand in the crumple zone. There is nothing wrong with paying someone to carry risk; insurance is an honourable trade. The trouble is that a signatory, unlike an insurer, has no way to price the risk she is taking, because nobody is measuring how much of what she signs she was able to check.
+
+---
+
+## Nobody reads the terms
+
+The obvious reply is that none of this is new. People have always signed what they could not read. The terms of service are the standing joke: in 2008, Aleecia McDonald and Lorrie Faith Cranor estimated that reading every privacy policy an American encounters in a year would take about 76 working days. A decade later, Jonathan Obar and Anne Oeldorf-Hirsch built a fake social network for an experiment and found that most of their 543 student participants skipped the privacy policy entirely, that those who opened the terms of service spent an average of 51 seconds on a document that needed about a quarter of an hour, and that nearly all of them missed a clause handing over their first-born child. Societies have lived with unread signatures for a long time. Contract law adjusted, consumer protection filled the worst gaps, and life went on. Why should agents be different?
+
+Most of this I accept. Unread signatures are old, and the law has tools for them: doctrines on unfair terms, the rule that surprising clauses must be drawn to attention. Part of what I will propose below is, in a sense, an extension of that doctrine to a new kind of drafter.
+
+Where I part company with the objection is on two points. The first is that terms of service are signed by consumers, and consumer law protects them precisely because nobody expects them to read. Aisha is in the opposite position. Her signature is the safeguard itself. The whole system of medical liability, professional licensing and patient safety assumes that when a consultant signs, a consultant read. If that assumption fails quietly, the safeguard is gone, and nobody downstream knows.
+
+The second point is volume. In 2026 an ordinary person might click "I agree" a few times a week. With an agent working through bills, health, insurance, school forms and household contracts on her behalf, she is asked many times as often. I suspect the multiplier is large, perhaps a hundred times, but I want to be clear that this is a guess: I could not find a single study measuring how many approvals people actually give per day, with or without agents, and that absence is itself something researchers could fix quickly. What I am confident of is the direction. The law of signatures was built when signatures were rare and expensive. It assumed reading because, for most of its history, signing something unread took effort. That assumption is the thing being automated away.
 
 ---
 
@@ -112,11 +124,13 @@ The proposal has four parts. Each one is meant to be specific enough to be wrong
 
 **First, measure signature capacity, by seeding errors.** In any workflow where a human signs machine-drafted decisions above a stated risk level, the deployer must insert a small number of synthetic test items with known, clinically or legally meaningful errors: a wrong dose, a missing allergy, a transposed date. Something like one in two hundred. They are flagged and withdrawn the moment they are signed, so no patient is touched. The signer's **meaningful-approval rate** is the share of seeded errors she catches. Her signature capacity is the highest weekly volume at which that rate stays above a threshold set for the domain, say 80 percent for discharge medication changes.
 
-Airport security already does a version of this. Baggage X-ray machines project fictional threat images, a knife or a detonator, into scans of real passengers' bags and record whether the screener flags them. A 2025 analysis of about 1.2 million such events at a European airport found that roughly a hundred per screener were enough for a reliable measure, provided the test images were hard enough. At one seeded item in two hundred, a consultant signing 900 summaries a week would reach a hundred in about five months. Nobody at the airport thinks the practice is insulting. It is how you find out whether the screen works.
+Airport security already does a version of this. Baggage X-ray machines project fictional threat images, a knife or a detonator, into scans of real passengers' bags and record whether the screener flags them. A 2025 analysis of about 1.2 million such events at a European airport found that roughly a hundred per screener were enough for a reliable measure, provided the test images were hard enough. At one seeded item in two hundred, a consultant signing 900 summaries a week would reach a hundred in about five months. Airport staff treat it as routine, the ordinary way to find out whether the screen works.
+
+This part invites a narrower objection: that the seeded-error audit will itself be gamed, and that people will learn to recognise test items. That is true of airport screening too, and the answer there has been to keep improving the test items. A weaker point applies here as well. Even a gamed measurement that shows a signer's catch rate falling from 90 percent at 200 summaries to 60 percent at 900 has told the institution something it does not know today.
 
 **Second, make liability proportional to capacity.** When a harmful error gets through a signed decision, the signer's share of the liability is capped at the ratio of her measured capacity to the volume she was assigned that week. If Aisha's capacity is 300 summaries a week and the trust routed 900 to her, her share is one third at most. The other two thirds fall on the deployer: the trust, and through its contracts, the vendor of the drafting system. If her volume stays under her capacity, the ordinary rules apply in full.
 
-This sounds like a gift to the signatory. It is really a price signal to the deployer. Under today's arrangements, routing 900 summaries to one consultant costs the trust nothing extra in risk, because the risk is on the consultant. Under capacity weighting, every summary over the ceiling moves liability back onto the organisation that chose the volume. The trust can respond by hiring another signer, by reducing what needs a signature, or by accepting the risk on its own books. Any of the three is honest.
+For the deployer, this is a price signal. Under today's arrangements, routing 900 summaries to one consultant costs the trust nothing extra in risk, because the risk is on the consultant. Under capacity weighting, every summary over the ceiling moves liability back onto the organisation that chose the volume. The trust can respond by hiring another signer, by reducing what needs a signature, or by accepting the risk on its own books. Any of the three is honest.
 
 **Third, keep verification receipts.** For every signed decision, the system records a **verification receipt**: what was displayed to the signer, in what order, for how long, which sections were opened, whether the page had finished loading when the button was pressed. My vignette's last summary, signed before the medicines appeared, would have a receipt that says exactly that. The receipt is tamper-evident and goes into the record next to the signature.
 
@@ -142,20 +156,6 @@ Two design rules guard against both. Measured capacity and receipts must be usab
 
 ---
 
-## The strongest objection
-
-The strongest objection is that none of this is new. People have always signed what they could not read. The terms of service are the standing joke: in 2008, Aleecia McDonald and Lorrie Faith Cranor estimated that reading every privacy policy an American encounters in a year would take about 76 working days. A decade later, Jonathan Obar and Anne Oeldorf-Hirsch built a fake social network for an experiment and found that most of their 543 student participants skipped the privacy policy entirely, that those who opened the terms of service spent an average of 51 seconds on a document that needed about a quarter of an hour, and that nearly all of them missed a clause handing over their first-born child. Societies have lived with unread signatures for a long time. Contract law adjusted, consumer protection filled the worst gaps, and life went on. Why should agents be different?
-
-Most of this I accept. Unread signatures are old, and the law has tools for them: doctrines on unfair terms, the rule that surprising clauses must be drawn to attention. A consent budget is, in a sense, an extension of that doctrine to a new kind of drafter.
-
-Where I part company with the objection is on two points. The first is that terms of service are signed by consumers, and consumer law protects them precisely because nobody expects them to read. Aisha is in the opposite position. Her signature is the safeguard itself. The whole system of medical liability, professional licensing and patient safety assumes that when a consultant signs, a consultant read. If that assumption fails quietly, the safeguard is gone, and nobody downstream knows.
-
-The second point is volume. In 2026 an ordinary person might click "I agree" a few times a week. With an agent working through bills, health, insurance, school forms and household contracts on her behalf, she is asked many times as often. I suspect the multiplier is large, perhaps a hundred times, but I want to be clear that this is a guess: I could not find a single study measuring how many approvals people actually give per day, with or without agents, and that absence is itself something researchers could fix quickly. What I am confident of is the direction. The law of signatures was built when signatures were rare and expensive. It assumed reading because, for most of its history, signing something unread took effort. That assumption is the thing being automated away.
-
-There is a further version of the objection worth a hearing: that the seeded-error audit will itself be gamed, and that people will learn to recognise test items. That is true of airport screening too, and the answer there has been to keep improving the test items. A weaker point applies here as well. Even a gamed measurement that shows a signer's catch rate falling from 90 percent at 200 summaries to 60 percent at 900 has told the institution something it does not know today.
-
----
-
 > **For researchers**
 >
 > 1. **Measuring meaningful approval.** Design and validate a seeded-error protocol for one high-volume signature workflow (discharge summaries, contract review, code review of agent-written changes). The quantity is the *meaningful-approval rate*: the share of seeded, consequential errors caught, as a function of weekly volume, time of day and position in the queue. Where does the curve bend, and how much does it vary between people?
@@ -166,7 +166,7 @@ There is a further version of the objection worth a hearing: that the seeded-err
 
 One last thing about Hanne's week. Among the hundred and forty approvals was a survey from the regional health authority, sent through Ottilie, asking for her view on a proposed change to how cardiology outpatients are seen. Ottilie offered, as agents in 2036 do, to answer it for her, "based on what I know of your preferences". Hanne pressed green.
 
-Her answer was counted. So, the authority later reported, were those of eleven thousand other patients, most of them answered the same way. Nobody at the authority could say how many of the patients had read the question. A signature can be simulated. The next chapter asks what happens when the same is true of an opinion, and the people consulted most often about a public decision are not people at all.
+Her answer was counted. So, the authority later reported, were those of eleven thousand other patients, most of them answered the same way. Nobody at the authority could say how many of the patients had read the question.
 
 ## Notes
 

@@ -123,7 +123,7 @@ There is a precedent on trading floors. In 2012 the US Securities and Exchange C
 
 Two things about this proposal worry me.
 
-The first is that the replay test measures whether the twin is *sufficient* to reproduce a deal, which is not quite the same as whether it is true. A clever agent could write a twin that reproduces the terms while hiding why they were chosen, and some of the why matters: whether Ndege accepted freight risk because it judged weather delays unlikely, or because the other agent offered something unrelated in exchange. That is the chain-of-thought problem again, moved from inside one model to the space between two of them. I do not have a full answer. The twin rule secures the *what*. The *why* still depends on the research the monitorability paper asked for.
+The first is that the replay test measures whether the twin is *sufficient* to reproduce a deal. Whether it is true is a further question. A clever agent could write a twin that reproduces the terms while hiding why they were chosen, and some of the why matters: whether Ndege accepted freight risk because it judged weather delays unlikely, or because the other agent offered something unrelated in exchange. That is the chain-of-thought problem again, moved from inside one model to the space between two of them. I do not have a full answer. The twin rule secures the *what*. The *why* still depends on the research the monitorability paper asked for.
 
 The second is that matching twins only catch errors if they are written independently. Wanjiru found the problem because two different agents summarised differently. If both sides' agents run on the same base model, as in 2036 they often will, their twins may share a blind spot and agree with each other perfectly. Chapter 3 called this correlation. It reaches here too.
 
@@ -136,8 +136,6 @@ The second is that matching twins only catch errors if they are written independ
 ---
 
 Wanjiru did, in the end, sign. Liang's company agreed to carry the risk to the school gate, by email, in two sentences each of them could read, and the exercise books arrived on the third of January. She kept the three-kilobyte file anyway, in a folder Ndege is not allowed to tidy.
-
-The twin rule would have helped her. It would not have helped her with the harder thing, which she sensed on that call and could not name: that the agents had found a better deal than either woman could have, by reasoning she could not follow, and that the deal was probably right. A contract is a small thing to be unable to read. The next chapter is about something larger. The machines in 2036 are not only talking past us. They are discovering things, materials and algorithms and proofs, and handing us results whose reasons are written in the same dark channels. We can insist on a transcript of a negotiation. What would a transcript of an understanding look like?
 
 ## Notes
 

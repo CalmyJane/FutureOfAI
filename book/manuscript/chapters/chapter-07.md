@@ -24,7 +24,7 @@ Inside the gym an elderly man with a lanyard checks her card against the registe
 
 The question is printed in full. Below it, a single empty box.
 
-In Switzerland you do not tick. You write the word.
+In Switzerland you write the word.
 
 She holds the pencil. She has always been for more housing. She was for more housing in 2019, when she rented a room in Plainpalais with a window onto a ventilation shaft. She would have voted Yes in April, before the girl, before the grandparents.
 
@@ -46,7 +46,7 @@ In 1936 an American magazine called the *Literary Digest* ran what was then the 
 
 Every statistics course tells this story, and it usually carries one moral: size cannot rescue a biased sample. The *Digest* heard a great many people, but the wrong ones, in the depth of the Depression, when phones and cars belonged to the comfortable.
 
-I want to tell it for a different reason. The strongest case for simulated citizens starts from the same failure. Real polls in 2026 are hard, expensive and slow. Many people never answer them. Public consultations, the open calls where a ministry asks for comments on a draft, are dominated by the organised and the angry. A model of the public, built from census data and trained on an enormous record of human writing, is in principle available on every question, at every hour, for everyone, including the people who would never pick up the phone. If the *Digest*'s sin was to hear only the comfortable, a simulation could claim to be the first instrument that hears everybody.
+I want to tell it for a different reason. The case for simulated citizens starts from the same failure. Real polls in 2026 are hard, expensive and slow. Many people never answer them. Public consultations, the open calls where a ministry asks for comments on a draft, are dominated by the organised and the angry. A model of the public, built from census data and trained on an enormous record of human writing, is in principle available on every question, at every hour, for everyone, including the people who would never pick up the phone. If the *Digest*'s sin was to hear only the comfortable, a simulation could claim to be the first instrument that hears everybody.
 
 I take that argument seriously, and I will come back to it. First, the evidence on what simulations actually hear.
 
@@ -76,13 +76,13 @@ Claudio Novelli and colleagues, among them Luciano Floridi, gave the problem its
 
 Here is the first mechanism, and it needs no bad faith at all.
 
-A good probability poll of a Swiss canton costs tens of thousands of francs and takes weeks. A simulated poll costs very little and takes minutes. An official who wants to know how the public will receive a change to bus routes, a school catchment or a hospital merger can ask a real sample once a year, or a simulated one every afternoon. The official will not stop asking real people. She will simply ask simulated ones far more often, because she can, and because each individual question seems too small to deserve a real poll.
+A good probability poll of a Swiss canton costs tens of thousands of francs and takes weeks. A simulated poll costs very little and takes minutes. An official who wants to know how the public will receive a change to bus routes, a school catchment or a hospital merger can ask a real sample once a year, or a simulated one every afternoon. The official will keep asking real people, and ask simulated ones far more often, because she can, and because each individual question seems too small to deserve a real poll.
 
 Add it up over a decade and the arithmetic changes who is represented. Let me call the share of public-opinion inputs to a decision that come from simulation the **consultation share**. In 2026 it is close to zero in most governments. By 2036, if prices keep falling, I would expect it to exceed one half in many offices, and to be far higher on small decisions. At that point the person most often consulted about public decisions is the model's citizen: an average, articulate, agreeable composite who answers every question, never gets tired and holds no views the training data did not contain.
 
 I looked for any measurement of consultation share, in any country, and could not find one. No government I know of records how often its staff ask a model what the public thinks. That absence is the first thing this chapter asks researchers to fix.
 
-There is a quieter version of the same shift, and chapter 6 already showed it. When Hanne's agent answered the cardiology survey "based on what I know of your preferences", the health authority received something that looked exactly like a real response. Simulation leaks into the poll itself. The ground truth itself starts to be written by models of the people it is meant to measure.
+There is a quieter version of the same shift, and chapter 6 already showed it. When Hanne's agent answered the cardiology survey "based on what I know of your preferences", the health authority received something that looked exactly like a real response. The ground truth itself starts to be written by models of the people it is meant to measure.
 
 ---
 
@@ -90,11 +90,11 @@ There is a quieter version of the same shift, and chapter 6 already showed it. W
 
 The second mechanism is the one in Mara's gym.
 
-Aircraft designers do not build a wing and hope. They put a model in a wind tunnel, measure the flow, change the shape and measure again, hundreds of times, until the wing behaves. A **persuasion wind tunnel** does the same with a campaign. A team builds a synthetic electorate, runs a sequence of messages through it, measures the simulated shift, adjusts and runs again. Four hundred runs is a weekend.
+Aircraft designers test a wing before they trust it. They put a model in a wind tunnel, measure the flow, change the shape and measure again, hundreds of times, until the wing behaves. A **persuasion wind tunnel** does the same with a campaign. A team builds a synthetic electorate, runs a sequence of messages through it, measures the simulated shift, adjusts and runs again. Four hundred runs is a weekend.
 
 The tunnel needs only two ingredients, and 2025 supplied evidence for both. The first is cheap, fluent persuasion. In December 2025 *Science* published a study by Kobi Hackenburg and colleagues in which nearly 77,000 people in Britain talked with one of nineteen language models instructed to change their minds on political issues. Persuasiveness depended much more on how a model was post-trained and prompted than on its size, which means persuasive skill can be tuned. The same week *Nature* published experiments in the American, Canadian and Polish elections in which a conversation with an AI advocate moved candidate preferences by more than traditional video advertising typically does. The second ingredient is a simulator good enough to rank messages, even if it is poor at predicting levels. That is a lower bar than accuracy, and the silicon-sample literature suggests current models often clear it for large groups.
 
-Put the two together and a campaign no longer discovers what persuades the public. It discovers what persuades the simulation, and then sends that to the public. Two things can go wrong, and I find it hard to say which is worse.
+Put the two together and a campaign discovers what persuades the simulation, and then sends that to the public. Two things can go wrong, and I find it hard to say which is worse.
 
 If the simulator is poor, the campaign optimises for its quirks. The message that wins in the tunnel is the one that pushes a stereotyped composite, the voter who is 97 percent likely to follow the World Cup. Real people in the tails, the ones the simulator flattens, receive messages designed for someone who does not exist.
 
@@ -114,7 +114,7 @@ Four pieces make it operational.
 
 **1. Simulation disclosure.** Any public body (a ministry, a regulator, a health authority, a city council) that uses simulated respondents as an input to a decision publishes a one-page *simulation statement* in the decision record. It names the model family and version, how the personas were built and from what data, the number of runs, the exact questions asked, the results, and which part of the decision they informed. A citizen who asks may see it; so may any journalist. Cantonal referendum booklets, which in Geneva already explain each question to voters, would carry the statement for any figure about public opinion they quote.
 
-**2. The ground-truth quota.** Any decision whose record cites a simulation must also cite a fresh sample of real people on the same question. Fresh means drawn after the simulation was run, so the simulation cannot be tuned to it. The minimum I propose is a probability sample of 1,000 adults, which gives a margin of about three points on a headline number, plus pre-registered oversamples of at least 200 people in each of the three subgroups where the simulator's own validation shows its worst error. The national or cantonal statistics office runs the sample, not the body making the decision. Responses submitted by an agent on someone's behalf are flagged and counted separately; they do not count toward the quota.
+**2. The ground-truth quota.** Any decision whose record cites a simulation must also cite a fresh sample of real people on the same question. Fresh means drawn after the simulation was run, so the simulation cannot be tuned to it. The minimum I propose is a probability sample of 1,000 adults, which gives a margin of about three points on a headline number, plus pre-registered oversamples of at least 200 people in each of the three subgroups where the simulator's own validation shows its worst error. The national or cantonal statistics office runs the sample, independently of the body making the decision. Responses submitted by an agent on someone's behalf are flagged and counted separately; they do not count toward the quota.
 
 The trigger is simple. If the real sample and the simulation differ by more than five points on the headline question, or by more than ten points in any pre-registered subgroup, the simulation is struck from the decision record and the gap is published beside the decision. The body may still decide as it likes. It may not claim that the public, or any part of it, agrees because a model said so.
 
@@ -134,11 +134,11 @@ Back to the objection, at full strength. Real polls are flawed. The *Digest* hea
 
 Part of this I concede. Simulation is useful, and the rules above are designed to let it be used. For drafting a question, for finding the reading of a sentence nobody in the room had thought of, for deciding which hypotheses deserve a real poll, Singapore's Echo looks to me like a sensible tool, used with the right caveats. And real consultations do have a capture problem. The quota addresses part of it by requiring probability samples rather than open calls, which are the instrument the lobbyists dominate.
 
-Where the objection fails is in the word *includes*. A simulation includes everyone's average. The evidence of the last three years is consistent on this one point: means come out roughly right, spread comes out too narrow, and the groups that differ most from the middle come out worst. Bisbee found it in 2024; the KAIST team found its mechanism this summer; Pew found it in September, with errors largest for the groups furthest from the model's centre of gravity and with partisan majorities hardening into unanimity.
+Where the objection fails is in the word *includes*. A simulation includes everyone's average. The evidence of the last three years is consistent on this one point: means come out roughly right, spread comes out too narrow, and the groups that differ most from the middle come out worst. Bisbee found it in 2024; Angelina Wang and colleagues found models flattening identity groups in 2025; the KAIST team found its mechanism this summer; Pew found it in September, with errors largest for the groups furthest from the model's centre of gravity and with partisan majorities hardening into unanimity.
 
 Democracy lives in the tails. Most of what a public consultation is for is finding the people the planners did not picture: the fifteen families on the bus route that the new timetable strands, the minority whose objection reveals a flaw the majority never noticed, the narrow segment that decides a close vote. Switzerland makes this structural, since many constitutional changes need a majority of cantons as well as of voters, so small places can block large ones. A system that is accurate on the average and wrong in the tails is accurate exactly where accuracy matters least.
 
-There is a second, harder answer. The *Digest*'s error could be corrected, because the election happened and the real result came in. Gallup could be checked; so could the *Digest*. A simulation consulted on a decision that never goes to a vote is never checked against anything. Without a ground truth there is no error, only a forecast that nobody tests. The quota is not mainly a statement of distrust in models. It is how the models stay calibrated at all.
+There is a second, harder answer. The *Digest*'s error could be corrected, because the election happened and the real result came in. Gallup could be checked; so could the *Digest*. A simulation consulted on a decision that never goes to a vote is never checked against anything. Without a ground truth, a forecast goes untested and its error stays unknown. The quota is how the models stay calibrated at all.
 
 I also concede a weakness in my own proposal. The quota assumes there is still a clean real sample to draw. If, by 2036, a large share of people let their agents answer surveys for them, as Hanne did, the statistics office will be sampling simulations without knowing it. Flagging agent answers helps only if the agents say so honestly. I think that flag needs to be a legal duty on the agent's maker, and I think it will be the hardest part of the scheme to enforce.
 
@@ -156,7 +156,7 @@ The result of Initiative 214 comes in that Sunday at 16:20. Yes, 51.8 percent. T
 
 That evening, for the first time in years, she asks Pilote a question it cannot answer from its own records: how much did the canton spend on simulating its voters this year, and how much on asking them? Pilote searches for a long time and reports that the canton does not publish either figure.
 
-The state can model the citizen in an afternoon. The next part of this book asks the opposite question: what happens when a citizen, with a machine of her own, can model the state? In Nairobi, a school administrator is about to point her agent at a county budget.
+In Nairobi, a school administrator is about to point her agent at a county budget.
 
 ## Notes
 
@@ -166,7 +166,7 @@ The state can model the citizen in an afternoon. The next part of this book asks
 - **Compressed variance:** Bisbee J, Clinton JD, Dorff C, Kenkel B, Larson JM, "Synthetic Replacements for Human Survey Data? The Perils of Large Language Models", *Political Analysis* 32, 2024. https://doi.org/10.1017/pan.2024.5
 - **Flattening identity groups:** Wang A, Morgenstern J, Dickerson JP, "Large language models that replace human participants can harmfully misportray and flatten identity groups", *Nature Machine Intelligence* 7, 2025. https://arxiv.org/abs/2402.01908
 - **Pew digital twins:** Pew Research Center, "How well synthetic samples replicate public opinion", Data Labs, 30 September 2026 (from the report "Can AI Stand In for Human Survey-Takers? Not Really."). https://www.pewresearch.org/data-labs/2026/09/30/how-well-synthetic-samples-replicate-public-opinion/
-- **Sampling collapse:** Jang C, Kim J, Lee D, "Instruction-Tuned Language Models Cannot Sample from Distributions They Can Describe", arXiv 2607.25292, July 2026. https://arxiv.org/abs/2607.25292
+- **Sampling collapse:** Jang C, Lee D, Kim J (KAIST), "Instruction-Tuned Language Models Cannot Sample from Distributions They Can Describe", arXiv 2607.25292, July 2026. https://arxiv.org/abs/2607.25292
 - **Super-omnivorous respondents:** Ma X, Zhang M, Ang S, Chen M, "Tastes without distinction: silicon samples and the synthetic construction of tastes", arXiv 2606.30085, June 2026. https://arxiv.org/abs/2606.30085
 - **Aaru funding:** TechCrunch, "AI synthetic research startup Aaru raised a Series A at a $1B headline valuation", 5 December 2025. https://techcrunch.com/2025/12/05/ai-synthetic-research-startup-aaru-raised-a-series-a-at-a-1b-headline-valuation
 - **Aaru's New York simulation:** Fortune, profile of Aaru co-founder Ned Koh, 17 June 2026. https://fortune.com/2026/06/17/aaru-cofounder-ned-koh-ai-startup-sales-pitch-do-not-trust-us/
