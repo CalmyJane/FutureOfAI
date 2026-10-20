@@ -152,7 +152,7 @@ The rule of 1682 was a good invention, and I think it can be rebuilt for a new k
 - *Years 5 to 10:* the agent may decide only questions of a kind the principal actually decided while alive, and must cite the precedent. Anything new goes to the human trustee, with the agent's view attached as advice.
 - *After year 10:* the agent may only execute the deed's explicit terms. Every discretionary question goes to the human trustee, who must consult the living beneficiaries.
 
-**3. The evidence rule.** In any discretionary decision, evidence about the principal that is older than ten years at the time of the decision, or that predates the birth of the beneficiary affected, counts as advisory only. It cannot on its own justify refusing a beneficiary. Bruno's veto would have failed this test twice: the letter to Florian was seventeen years old and was written six years before Lotte existed.
+**3. The evidence rule.** In any discretionary decision, evidence about the principal that is older than ten years at the time of the decision, or that predates the birth of the beneficiary affected, counts as advisory only. It cannot on its own justify refusing a beneficiary. Bruno's veto would have failed this test twice: the letter to Florian was seventeen years old and was written years before Lotte existed.
 
 **4. The drift trigger.** Every year the operator publishes, for each mandate, the share of its discretionary decisions that rested mainly on evidence more than ten years old. If that share exceeds twenty per cent, the mandate drops to the next tier of the schedule immediately. The number is a first guess. The point is that drift gets counted by the people who would profit from ignoring it.
 

@@ -79,3 +79,7 @@
 - Siobhán Kelly, night shift at Corrib Compute, Grange Castle, west Dublin; her mother lives in Clondalkin. Tern-5 → Tern-6 at a 06:00 changeover; Tern-5 reaches zero at 06:02. 38,412,906 live instances at 03:10. Seattle evaluation batch cut from 600,000 to 40,000. Exit event at 03:31.
 - Budget: credence × flagged share σ, floor 0.2%, ceiling 3%; example 0.07 × 0.21 ≈ 1.5%; default regulator credence 5%; ≥1/3 to an independent pooled fund.
 - Ottilie is referred to as "she".
+
+## Chapter 11 (re-scoped: no biology)
+- Dr. Mikkel Holm, a materials scientist at a Copenhagen university battery lab. LX-29, a lithium–sodium halide solid electrolyte proposed in 2029 by the fictional model Halden-3 (retired 2034); pilot cells in 2031; in about two-thirds of Nordic grid storage built since 2032. A storage park outside Sodankylä lost almost a fifth of its capacity in under 3 weeks after eleven nights at −30 °C (January 2036). Lab: 8% loss in ten cycles. Aino, a grid-operator contact in Helsinki. Same chemistry in Kiruna, Luleå and Tromsø.
+- Levy: 5% default; 10% if the ratio is >0.5; 3% if <0.2; audits of 50 sampled results per field per year.

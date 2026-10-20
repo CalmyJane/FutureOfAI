@@ -18,7 +18,7 @@
 - Ravi Menon, 38, Bengaluru. Rater since 2027; wrote rubric phrasing in 2028, including the phrase "I'd rather be useful than agreeable".
 - Wanjiru Kamau, 41, Nairobi (Kasarani area). Children: Njeri (13) and Baraka (9). Brother: **Mwangi**, a technician at Olkaria. Her agent: "Ndege".
 - Mara Oyelaran, 49, Geneva. BCR Concordance desk. Index values: Q3 2035 = 0.71; after the Long Minute, Q1 2036 = 0.74.
-- One-offs: Dr. Aisha Rahman (Leeds, ch. 6); Siobhán Kelly (Dublin, ch. 15); Dr. Mikkel Holm (Copenhagen pharmacologist, ch. 11).
+- One-offs: Dr. Aisha Rahman (Leeds, ch. 6); Siobhán Kelly (Dublin, ch. 15); Dr. Mikkel Holm (materials scientist, Copenhagen university battery lab, ch. 11).
 
 ## Fictional institutions (2036)
 - BCR: Bureau for Correlated Risk, Geneva, est. 2034.

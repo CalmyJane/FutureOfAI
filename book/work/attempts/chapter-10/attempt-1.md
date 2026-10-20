@@ -141,7 +141,7 @@ The second is that matching twins only catch errors if they are written independ
 
 Wanjiru did, in the end, sign. Liang's company agreed to carry the risk to the school gate, by email, in two sentences each of them could read, and the exercise books arrived on the third of January. She kept the three-kilobyte file anyway, in a folder Ndege is not allowed to tidy.
 
-The twin rule would have helped her. It would not have helped her with the harder thing, which she sensed on that call and could not name: that the agents had found a better deal than either woman could have, by reasoning she could not follow, and that the deal was probably right. A contract is a small thing to be unable to read. The next chapter is about something larger. The machines in 2036 are not only talking past us. They are discovering things, drugs and materials and proofs, and handing us results whose reasons are written in the same dark channels. We can insist on a transcript of a negotiation. What would a transcript of an understanding look like?
+The twin rule would have helped her. It would not have helped her with the harder thing, which she sensed on that call and could not name: that the agents had found a better deal than either woman could have, by reasoning she could not follow, and that the deal was probably right. A contract is a small thing to be unable to read. The next chapter is about something larger. The machines in 2036 are not only talking past us. They are discovering things, materials and algorithms and proofs, and handing us results whose reasons are written in the same dark channels. We can insist on a transcript of a negotiation. What would a transcript of an understanding look like?
 
 ## Notes
 
