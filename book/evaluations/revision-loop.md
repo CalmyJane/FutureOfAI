@@ -1,2 +1,3 @@
 - ch03, ch04 r1 accepted (all tickets done; one negation contrast each).
 - ch05, ch06, ch07 r1 accepted (A-T12 for ch7 not needed: the vignette measured ~655 words).
+- ch08, ch09, ch10 r1 accepted; 'Section 212' capitalisation unified.

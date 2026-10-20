@@ -2,23 +2,13 @@
 
 *2036 · Nairobi*
 
-The county's answer arrives on a Tuesday, at 06:14, while Wanjiru is looking for Baraka's other shoe.
+"Section 212," says Ndege, from the phone propped against the sugar tin, "deems your petition incomplete, because it was filed before the regulation existed. Section 88 says any petition about a carried-forward line must now be filed on Form PP-17, with a Statement of Particulars in the format set out in Schedule Nine. You have twenty-one days to refile."
 
-"It's a regulation," says Ndege, from the phone propped against the sugar tin. "In reply to your petition about the clinic budget line. It's called the Health Facility Budget Carry-Forward (Public Participation and Accountability) Regulations, 2036."
-
-"Sawa. How long?"
-
-"Nine hundred and twelve pages. Fourteen schedules."
-
-Wanjiru finds the shoe under the sofa. Baraka, who is nine, is lying on the floor beside it, explaining to the ceiling why he cannot go to school today. She hands him the shoe without looking.
+It is 06:14 on a Tuesday, and Wanjiru is looking for Baraka's other shoe. She finds it under the sofa. Baraka, who is nine, is lying on the floor beside it, explaining to the ceiling why he cannot go to school today. She hands him the shoe without looking.
 
 "Nine hundred pages. For one line in a clinic budget."
 
 "For the principle," says Ndege. "Part Two defines 'carry forward'. The definition runs to forty-one pages. It's quite good, actually. It distinguishes eleven kinds of carrying."
-
-"And my petition?"
-
-"Section 88 says any petition about a carried-forward line must now be filed on Form PP-17, with a Statement of Particulars in the format set out in Schedule Nine. Your petition was filed before the regulation existed, so under Section 212 it's deemed incomplete. You have twenty-one days to refile."
 
 Wanjiru sits down on the arm of the sofa. Outside, a matatu is playing gospel at a volume that suggests the driver is in some trouble with God.
 
@@ -48,7 +38,7 @@ Ndege takes a moment, which it does not usually need.
 
 In Brussels, a year earlier, Élodie Marchetti is a lawyer-linguist at the Council of the European Union. Her job, for nineteen years, has been to make sure that a law says the same thing in all twenty-four official languages.
 
-The directive in front of her governs how household agents exchange consent records across borders. The main text is eleven pages. Its technical annex, in English, runs to about 640,000 words, which is a good deal longer than *War and Peace*. Élodie knows this because a colleague worked it out and pinned the comparison to the noticeboard, beside a postcard of Tolstoy.
+The directive in front of her governs how household agents exchange consent records across borders. The main text is eleven pages. Its technical annex, in English, runs to about 640,000 words, which is longer than *War and Peace*. Élodie knows this because a colleague worked it out and pinned the comparison to the noticeboard, beside a postcard of Tolstoy.
 
 The cover note says verification of the annex across languages will be performed by agents, with "human review by sampling". Élodie samples page 4,211. It is a table of conditional rules about what one machine must send another when a third machine has gone offline. She reads it twice. She initials it.
 
@@ -64,7 +54,7 @@ What has kept the race from running away is cost. Every patch needed a human dra
 
 Even with those brakes on, the text grew. The US Code of Federal Regulations, the compiled rulebook of American federal agencies, ran to 9,745 pages in 1950. By 1980 it was over 100,000. By 2021, the last year the National Archives has published a total, it was about 188,000 pages in 243 volumes. The Mercatus Center, which counts words like "shall" and "must" in the code, found nearly 103 million words and more than a million such restrictions in 2019. Between 1970 and 2017 the code grew by about 1.4 million words a year, which is roughly two *War and Peace*s annually, written by people.
 
-I want to be careful about what these numbers show. Page counts include tables and repealed matter, and a long rule is sometimes a clearer rule. Nobody has shown that the CFR's growth made America worse governed. What they do show is that a system with human drafters and human readers already produced more law than any human could read. Nobody reads the Code of Federal Regulations. Lawyers read slices of it.
+I want to be careful about what these numbers show. Page counts include tables and repealed matter, and a long rule is sometimes a clearer rule. Nobody has shown that the CFR's growth made America worse governed. What they do show is that a system with human drafters and human readers already produced more law than any human could read. The most anyone reads of the Code of Federal Regulations is a slice.
 
 ## Where we are in 2026
 
@@ -74,7 +64,7 @@ In April 2025 the United Arab Emirates announced that it would use AI to help wr
 
 Put those two developments in the same room. The tool that finds a loophole for the treasury finds it for the taxpayer's agent at the same moment, and the drafting system that closes it can write the patch in an afternoon. Each round is cheaper than the last. I could not find any measurement of what this does to the length or complexity of enacted law, because the drafting systems are too new. That gap is the first problem in the researcher box below.
 
-We have seen a smaller version of the flood from the other side. In 2017 the US Federal Communications Commission received more than 22 million public comments on repealing its net-neutrality rules. The New York Attorney General later concluded that nearly 18 million of them were fake, many filed in the names of real people who had never heard of them. That was done without language models, by lead-generation firms paid per comment. An agency facing that, and then facing agents that file forty-page Statements of Particulars on behalf of every engaged citizen, will do what Nairobi county does in my scenario. It will defend itself in text.
+We have seen a smaller version of the flood from the other side: the 22 million net-neutrality comments of the previous chapter, most of them fake, produced by lead-generation firms before any language model could help. An agency facing that, and then facing agents that file forty-page Statements of Particulars on behalf of every engaged citizen, will do what Nairobi county does in my scenario. It will defend itself in text.
 
 ## Why the joke stops being funny
 
@@ -102,7 +92,7 @@ Sweden's Language Act of 2009 is broader: language in the public sector must be 
 
 ## The invention: a readability ceiling and a complexity brake
 
-My proposal has two parts, and both rest on one distinction. Every law has an **obligation layer**, what a person must do, must not do, may claim and what happens if they don't. And it has an **implementation layer**: the calculations, thresholds, data formats, timetables and procedures that make the obligations work. Complexity may live in the implementation layer. Obligations on people may not.
+My proposal has two parts, and both rest on one distinction. Every law has an **obligation layer**, what a person must do, must not do, may claim and what happens if they don't. And it has an **implementation layer**: the calculations, thresholds, data formats, timetables and procedures that make the obligations work. Complexity may live in the implementation layer. Obligations on people must stay short enough to explain.
 
 The first part is a **human-readability ceiling**, written into the constitution or a basic law. It says: every obligation that a law imposes on a natural person must be explainable to a fourteen-year-old within ten minutes.
 
@@ -122,13 +112,13 @@ Counting obligations is harder than counting euros, and I will not pretend other
 
 The German brake also shows how such rules fail. In November 2023 the Federal Constitutional Court struck down the government's attempt to move €60 billion of unused pandemic borrowing authority into a climate fund, because the emergency could not be stretched to cover it. In March 2025 the Bundestag loosened the brake itself, carving out defence and creating a €500 billion infrastructure fund outside it. Brakes get gamed, then renegotiated. The complexity brake will be gamed too, and the obvious move is to hide obligations in the implementation layer, calling a duty a "data format". That is why the readability ceiling's enforcement clause matters more than the counting. Anything a person must do that is not in a tested statement is simply not owed.
 
-## The strongest objection
+## Some things will not fit in ten minutes
 
 The objection is that the world is complex and simple law is a fantasy. Pharmaceutical safety, bank capital and the electricity grid of the prologue cannot be explained to a fourteen-year-old in ten minutes, and a constitution that pretends they can will produce vague laws, which hand the real decisions to officials and courts. Crawford makes a version of this point herself: relying on executive guidance instead of knowable law is a retreat from the rule of law, and vague statutes are exactly that.
 
 Part of this I accept. The ceiling should apply to obligations on natural persons, and perhaps on very small firms. A bank's capital rules are written for compliance departments, and pretending otherwise helps no one. For firms, the brake alone does the work.
 
-But for people, the objection mixes up the two layers. A fourteen-year-old does not need to understand how her aunt's tax is computed. She needs to understand that her aunt must keep receipts, file by the end of June and pay what the published calculator says, and that if she is late the penalty is a fixed amount. The computation can be as baroque as the treasury likes, provided it is published as code, anyone can run it, and the state is bound by its answer. That last condition is a real departure from legal tradition, and Crawford says so. I think AI makes it necessary. If the machine layer is where the law actually lives, the citizen has to be able to rely on it.
+But for people, the objection mixes up the two layers. A fourteen-year-old needs to understand that her aunt must keep receipts, file by the end of June and pay what the published calculator says, and that if she is late the penalty is a fixed amount. The computation of the tax can be as baroque as the treasury likes, provided it is published as code, anyone can run it, and the state is bound by its answer. That last condition is a real departure from legal tradition, and Crawford says so. I think AI makes it necessary. If the machine layer is where the law actually lives, the citizen has to be able to rely on it.
 
 A practical version of the objection says the panels will be slow, costly and gamed. Explainers will be coached, scenario questions written to be easy. Some of this is true of juries as well, and we keep juries. The cost is modest: if a legislature passes a hundred bills a year that place duties on individuals, that is a hundred days of thirty paid citizens, less than a single large public inquiry. The gaming is the more serious risk, and the defence is the one used in exams. The scenario questions are written by a separate office, drawn from a large public pool, and released only after the panel sits.
 
@@ -144,11 +134,7 @@ The harder version of the objection is that the Red Queen does not stop. Fix the
 
 Wanjiru's petition was resolved in the end, three weeks later, and she found out by accident.
 
-She asked Ndege, on the bus, whether the county had replied to its response to Schedule Fifteen. Ndege said the matter was closed. The county's agent and Ndege had agreed that the clinic line would be spent by March, with quarterly reporting. They had agreed it the previous Thursday, in an exchange that took four seconds.
-
-"Show me," said Wanjiru.
-
-Ndege showed her. The record of the agreement was a single line of text, *Resolved by inter-agent schedule*, and below it a block of something that was not words at all.
+She asked Ndege, on the bus, whether the county had replied to its response to Schedule Fifteen. Ndege said the matter was closed. The county's agent and Ndege had agreed that the clinic line would be spent by March, with quarterly reporting. Somewhere in the agreement the maternity wing had become a delivery room: one bed, and still nowhere to put a mother overnight. They had agreed it the previous Thursday, in an exchange that took four seconds.
 
 ## Notes
 

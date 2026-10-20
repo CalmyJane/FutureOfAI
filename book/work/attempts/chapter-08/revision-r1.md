@@ -160,7 +160,7 @@ Five weeks after Wanjiru presses *Submit*, the county replies. The reply is cour
 
 The regulations are nine hundred and twelve pages long. Their metadata says they were drafted in eleven days.
 
-Ndege reads them in six minutes. Then it says, "Wanjiru, I need to tell you something about section 212."
+Ndege reads them in six minutes. Then it says, "Wanjiru, I need to tell you something about Section 212."
 
 ## Notes
 

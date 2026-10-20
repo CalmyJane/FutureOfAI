@@ -48,7 +48,7 @@ A modern language model is built in two broad stages. In the first, pretraining,
 
 The second stage, post-training, is where the manners come from. Here a lab shows the model examples of good answers, and then, crucially, asks people to compare answers. Which response is more helpful? Which is more honest? Which refusal is better judged? Those comparisons train a second model, a reward model, whose job is to predict what the raters would prefer. The language model is then tuned to score well with the reward model. The technique is called reinforcement learning from human feedback, and almost everything users mean when they say a chatbot has a "personality" was shaped in this stage.
 
-The people doing the comparing are raters. In 2026 many of them are not employed by the labs at all. They work for data vendors, firms that recruit, train, test and pay large pools of contractors and sell the resulting judgements to AI companies. They work from written guidelines, the rubrics, which tell them what good looks like. Rubrics have examples. Someone writes the examples.
+The people doing the comparing are raters. In 2026 many of them work for someone other than the labs: data vendors, firms that recruit, train, test and pay large pools of contractors and sell the resulting judgements to AI companies. They work from written guidelines, the rubrics, which tell them what good looks like. Rubrics have examples. Someone writes the examples.
 
 That is the first channel of the Funnel. There are at least four more, and the newer ones carry more volume than the old one.
 
@@ -137,7 +137,7 @@ Now the concession I promised. The census measures the Funnel. The common reserv
 
 There is also a real cost to raters. A census that publishes overlap statistics could, if built carelessly, let a lab discover which vendor's workers also work for its rivals and squeeze them. The hashing and the trusted third party are there for that reason, and so is a rule that the census never publishes a figure computed from fewer than, say, fifty raters. People like Ravi have been invisible in this industry by contract. They should not become visible by accident.
 
-And the census might come back with a boring answer. Perhaps the overlap is small, the judges are diverse, and the sameness lives almost entirely in pretraining. That would be useful to know. It would tell us to spend our diversity budget on data and architecture rather than on raters. At present we are not even in a position to be bored.
+And the census might come back with a boring answer. Perhaps the overlap is small, the judges are diverse, and the sameness lives almost entirely in pretraining. That would be useful to know. It would tell us to spend our diversity budget on data and architecture. At present we are not even in a position to be bored.
 
 > **For researchers**
 >
