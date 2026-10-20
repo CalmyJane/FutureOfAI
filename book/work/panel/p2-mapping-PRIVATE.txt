@@ -1,0 +1,1 @@
+mapping (orchestrator only): ch01 A=r2 B=r1; ch08 A=r1 B=r2; ch17 A=r2 B=r1; ch18 A=r1 B=r2
