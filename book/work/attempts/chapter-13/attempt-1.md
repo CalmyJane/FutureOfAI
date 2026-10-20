@@ -48,7 +48,7 @@ Herstatt traded a great deal of foreign exchange. On that day, banks around the 
 
 Nobody in the Herstatt story was fast. The failure came from two clocks that did not agree: Frankfurt's afternoon and New York's morning. The industry's name for the risk, "Herstatt risk", is the risk that one leg of a trade settles on one clock and the other leg on another. It took until September 2002 for a private institution, CLS Bank, to start settling foreign exchange so that both legs pay at the same moment or neither does.
 
-I start with Herstatt because it shows that the boundary between two clocks is where money gets lost. The 1974 version involved hours. The version this chapter is about involves a difference of about eight orders of magnitude.
+I start with Herstatt because it shows that the boundary between two clocks is where money gets lost. The 1974 version involved hours. The version this chapter is about involves clocks that differ by eight or nine orders of magnitude.
 
 ---
 
@@ -66,7 +66,7 @@ Five seconds. When trading resumed at 2:45:33, prices stabilised and began to cl
 
 Individual shares had a worse afternoon. Bids for Accenture fell from about thirty dollars to one cent in seven seconds, and the company recorded 112 trades that were later cancelled. Across the market, more than 20,000 trades in over 300 securities were executed at prices more than 60 percent away from where they had been moments before, some at a penny and some at $100,000, because market makers' placeholder quotes were the only orders left.
 
-Those trades were broken. Officials met after the close, drew a line at 60 percent, and declared that trades beyond it had not happened. I find this the most interesting moment of the whole episode. A machine-speed event produced prices, and a human-speed institution, working that evening and over the following days, decided which of those prices would be allowed to become real money. The official report on what had happened took almost five months.
+Those trades were broken. The exchanges drew a line at 60 percent and declared that trades beyond it had not happened. I find this the most interesting moment of the whole episode. A machine-speed event produced prices, and human-speed institutions, working afterwards, decided which of those prices would be allowed to become real money. The official report on what had happened took almost five months.
 
 That is an exchange rate between two kinds of time, set by hand, after the fact.
 
@@ -74,7 +74,7 @@ That is an exchange rate between two kinds of time, set by hand, after the fact.
 
 ## Where we are in 2026
 
-In 2010 the machines trading at those speeds belonged to a few hundred specialist firms. The project of 2025 and 2026 has been to give everybody's agent a wallet.
+In 2010 the machines trading at those speeds belonged to specialist firms. The project of 2025 and 2026 has been to give everybody's agent a wallet.
 
 On 6 May 2025, fifteen years to the day after the flash crash, Coinbase announced x402, a protocol that revives the long-unused HTTP status code 402, "Payment Required", so that a program can request a payment from another program and receive it inside an ordinary web request, initially in stablecoins. In September, Google announced the Agent Payments Protocol, AP2, with more than sixty partners including Mastercard, American Express and PayPal. AP2's central device is the mandate, a signed record of what the human authorised. Its "Intent Mandate" covers the case where the human is not present at all: you set price limits and timing in advance, and the agent buys when the conditions are met. Google's own example is buying concert tickets "the moment they go on sale". An extension adds x402 for crypto payments. That autumn, Stripe and OpenAI released the Agentic Commerce Protocol and let American users buy from Etsy sellers inside ChatGPT. In 2026 x402's governance moved to a foundation under the Linux Foundation, with Visa, Mastercard, Google and Stripe among its members.
 
@@ -114,7 +114,7 @@ I want to name two things.
 
 **Slow money** is a settlement tier for the obligations people live by: wages, rent, mortgage instalments, pensions, utility bills, taxes and insurance premiums. Slow money settles in scheduled batches, once a business day at a published time, on a ledger run or supervised by the central bank. It is the same currency as everything else, a rupee is a rupee, but it moves on a human clock.
 
-The **exchange rate of time** is the published rule for converting claims made on a machine clock into claims on a human clock. It has a single core parameter, the window *W*, and it works like this. Whenever a value from the fast economy has to become a fact in the slow one (a position marked for collateral, a pension valued for a statement, a balance swept back for rent), it is converted at the time-weighted average price over the last window, not at the latest price. With a window of twenty-four hours, each second of machine market carries one 86,400th of the weight. The cardamom valley, 0.4 seconds long, would move Ravi's household figures by about 0.0005 percent of its depth. In effect the rate says that 86,400 machine-seconds buy one human day.
+The **exchange rate of time** is the published rule for converting claims made on a machine clock into claims on a human clock. It has a single core parameter, the window *W*, and it works like this. Whenever a value from the fast economy has to become a fact in the slow one (a position marked for collateral, a pension valued for a statement, a balance swept back for rent), it is converted at the time-weighted average price over the last window, not at the latest price. With a window of twenty-four hours, each second of machine market carries one 86,400th of the weight. The cardamom valley, 0.4 seconds long, would carry about five millionths of a day's weight in any figure that reached Ravi's household tier. In effect the rate says that 86,400 machine-seconds buy one human day.
 
 The specification, concretely:
 
@@ -140,7 +140,7 @@ Some of this I concede. The slow tier has a cost, and it should be measured and 
 
 The rest I resist. The hospital deposit at two in the morning is spending, and spending from slow money is instant, as it is with a card today. What the window slows is not the family's access to its money. It slows the fast market's access to the family. The Herstatt point is answered by the gate's design: both legs settle together, which is what CLS was built to do.
 
-And the claim that friction is inefficient is true and beside the point. Firebreaks are inefficient too. A strip of cleared land through a forest is land that grows no timber, and every forester knows exactly what it costs. Nobody concludes that forests should be planted without them. The question is never whether a firebreak wastes land. It is whether the fires it stops are worth more than the timber it costs. In 2010, five seconds of enforced idleness in Chicago ended a fall that had wiped out most of the buyers in the market. I would like to know the equivalent number for an agent economy before the first fire, which is exactly why the pass-through ratio has to be measured.
+And the claim that friction is inefficient is true and beside the point. Firebreaks are inefficient too. A strip of cleared land through a forest is land that grows no timber, and every forester knows exactly what it costs. Nobody concludes that forests should be planted without them. The useful question is whether the fires it stops are worth more than the timber it costs. In 2010, five seconds of enforced idleness in Chicago ended a fall that had wiped out most of the buyers in the market. I would like to know the equivalent number for an agent economy before the first fire, which is exactly why the pass-through ratio has to be measured.
 
 ---
 
