@@ -58,3 +58,9 @@
 - Leerwijs BV (Amsterdam) tutoring app: €19/month, rents 1.2 MW in Hall C. 140 ms round trip.
 - IEA: 485 TWh (2025) → "about 950 TWh" (2030) per the April 2026 text. NOTE: the prologue does not cite this; other chapters should use "about 950".
 - Right to think: monthly inference allowance, ≥3 model families from different countries, funded by an export royalty. Triggers: >50% governed by one foreign country or >70% from one model family → diversification plan; 80% → procurement preference.
+
+## Chapter 8
+- Mto Mdogo Health Centre, ~12 minutes' walk from Wanjiru's house. Line 4.2.17, "Construction of maternity wing", KSh 14.2M, carried forward FY2030/31 → FY2035/36.
+- Neighbour Akinyi (her daughter gave birth in a matatu in March 2036). Baraka was born at Kenyatta hospital. Wanjiru's mother kept a borehole notice in a biscuit tin.
+- PTA WhatsApp group of 240; 212 co-signers; submitted 23:14. The county replies five weeks later with the 912-page regulations (reconciled to ch. 9's title and page count; the ch. 8 hook changed to section 212), drafted in 11 days.
+- Citizen audit standing: 50 verified residents or 1% of ward voters; a signed answer within 30 days, else an Auditor-General audit within 6 months. Legibility dividend: 10% of recovered funds. A line carried forward 3 years in a row is auto-flagged.

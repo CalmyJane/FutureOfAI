@@ -154,11 +154,11 @@ There is also a version of the objection that runs the other way, and I find it 
 
 ---
 
-Five weeks after Wanjiru presses *Submit*, the county replies. The reply is courteous and on time. It thanks the two hundred and twelve petitioners for their engagement, notes that the matters they raise are addressed in the county's new Health Infrastructure (Project Continuity and Rollover Management) Regulations, and attaches them.
+Five weeks after Wanjiru presses *Submit*, the county replies. The reply is courteous and on time. It thanks the two hundred and twelve petitioners for their engagement, notes that the matters they raise are addressed in the county's new Health Facility Budget Carry-Forward (Public Participation and Accountability) Regulations, 2036, and attaches them.
 
-The regulations are nine hundred and four pages long. Their metadata says they were drafted in eleven days.
+The regulations are nine hundred and twelve pages long. Their metadata says they were drafted in eleven days.
 
-Ndege reads them in six minutes. Then it says, "Wanjiru, I need to tell you something about section 311."
+Ndege reads them in six minutes. Then it says, "Wanjiru, I need to tell you something about section 212."
 
 ## Notes
 

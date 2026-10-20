@@ -30,11 +30,11 @@ Nonfiction adaptation: the book has no plot characters. Five recurring people ca
 
 ## Wanjiru Kamau (41), Nairobi
 - A school administrator and mother of two. A ward-level citizen auditor via her agent, which reads the county budget line by line (chapter 8).
-- Kenya in 2036 runs geothermal-powered inference parks at Olkaria and is a net exporter of "thought" (chapter 11).
+- Kenya in 2036 runs geothermal-powered inference parks at Olkaria and is a net exporter of "thought" (chapter 12).
 - Wound: she grew up watching budgets disappear.
 - Contradiction: she uses her agent to expose the county, and resents the county using its agents to model her.
 - Voice card: brisk, funny, Sheng words in dialogue, impatient with jargon.
-- Appears in: chapters 8, 9, 11 and the epilogue.
+- Appears in: chapters 8, 9, 10, 12 and the epilogue.
 
 ## Mara Oyelaran (49), Geneva
 - A Nigerian-Swiss statistician, formerly a bank risk modeller (she started in 2008). In 2036 she heads the Concordance desk at a fictional international body, the **Bureau for Correlated Risk (BCR)**, set up in 2034.
