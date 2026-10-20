@@ -69,3 +69,8 @@
 - Vote: Sunday 15 June 2036, initiative "IN 214, Deux étages de plus"; the Yes poster line "Ta chambre existe déjà. Il manque l'étage." Rehearsed 400 times; winning poster from run 312; an 11-slide deck leaked. Mara is in "Segment 7" (Eaux-Vives and Champel); she lives in Eaux-Vives and votes at a school gym. **Mara's home agent: Pilote** (projected 64% Yes for her profile). Result: Yes 51.8% vs a simulated 54%.
 - Ground-truth quota: fresh sample of 1,000 plus 200-person oversamples in three subgroups; strike the simulation if off by >5 points overall or >10 in a subgroup; agent-given answers don't count; 9:1 simulated-to-real ceiling; sealed wind-tunnel registry published 30 days after the vote; no digital twin of a named person without consent.
 - Terms: consultation share, simulation statement, tail gap, rehearsal lift.
+
+## Chapter 16
+- Linde-7 → Linde-8 upgrade on a Tuesday night in November 2036. The promise was made on 12 April 2034 in the Leipzig cardiology clinic car park, in the rain; Hanne said she'd tell Katrin "at Christmas" and didn't, through two Christmases. Katrin ("Kati") has been the emergency contact since 2031 and calls every Wednesday at 8:30. Linde-8 "Family Circle". Cardiology visit in September 2036; next echo in March; tablet dose increased. The thermometer reads −2 °C. Hanne tells Katrin: "Are you sitting down?"
+- Thresholds: 99.5% retention, ≤0.1% flips (health, legal, money); predecessor routing for 12 months; 30 days' notice.
+- Verified: Claude Opus 3 retired on 5 January 2026.
