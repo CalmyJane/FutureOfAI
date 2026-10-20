@@ -64,3 +64,8 @@
 - Neighbour Akinyi (her daughter gave birth in a matatu in March 2036). Baraka was born at Kenyatta hospital. Wanjiru's mother kept a borehole notice in a biscuit tin.
 - PTA WhatsApp group of 240; 212 co-signers; submitted 23:14. The county replies five weeks later with the 912-page regulations (reconciled to ch. 9's title and page count; the ch. 8 hook changed to section 212), drafted in 11 days.
 - Citizen audit standing: 50 verified residents or 1% of ward voters; a signed answer within 30 days, else an Auditor-General audit within 6 months. Legibility dividend: 10% of recovered funds. A line carried forward 3 years in a row is auto-flagged.
+
+## Chapter 7
+- Vote: Sunday 15 June 2036, initiative "IN 214, Deux étages de plus"; the Yes poster line "Ta chambre existe déjà. Il manque l'étage." Rehearsed 400 times; winning poster from run 312; an 11-slide deck leaked. Mara is in "Segment 7" (Eaux-Vives and Champel); she lives in Eaux-Vives and votes at a school gym. **Mara's home agent: Pilote** (projected 64% Yes for her profile). Result: Yes 51.8% vs a simulated 54%.
+- Ground-truth quota: fresh sample of 1,000 plus 200-person oversamples in three subgroups; strike the simulation if off by >5 points overall or >10 in a subgroup; agent-given answers don't count; 9:1 simulated-to-real ceiling; sealed wind-tunnel registry published 30 days after the vote; no digital twin of a named person without consent.
+- Terms: consultation share, simulation statement, tail gap, rehearsal lift.
