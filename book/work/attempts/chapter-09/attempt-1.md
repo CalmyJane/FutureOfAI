@@ -32,7 +32,7 @@ Wanjiru sits down on the arm of the sofa. Outside, a matatu is playing gospel at
 
 She files it from the bus. By the time she reaches school, the county's own agent has acknowledged receipt, thanked her for her civic engagement, and issued an amending notice that inserts a new Schedule Fifteen, governing the format of annexes to a Statement of Particulars. Ndege has drafted a response. The response is longer than the notice.
 
-That evening, Njeri, who is thirteen and in Form One, picks up the printout Wanjiru made of the regulation's first page at the school copier, out of a kind of morbid respect. Njeri reads it twice, frowning, while Baraka eats her chapati.
+That evening, Njeri, who is thirteen and in Grade 8, picks up the printout Wanjiru made of the regulation's first page at the school copier, out of a kind of morbid respect. Njeri reads it twice, frowning, while Baraka eats her chapati.
 
 "Mum. So can they spend the clinic money or not?"
 
@@ -129,6 +129,8 @@ The objection is that the world is complex and simple law is a fantasy. Pharmace
 Part of this I accept. The ceiling should apply to obligations on natural persons, and perhaps on very small firms. A bank's capital rules are written for compliance departments, and pretending otherwise helps no one. For firms, the brake alone does the work.
 
 But for people, the objection mixes up the two layers. A fourteen-year-old does not need to understand how her aunt's tax is computed. She needs to understand that her aunt must keep receipts, file by the end of June and pay what the published calculator says, and that if she is late the penalty is a fixed amount. The computation can be as baroque as the treasury likes, provided it is published as code, anyone can run it, and the state is bound by its answer. That last condition is a real departure from legal tradition, and Crawford says so. I think AI makes it necessary. If the machine layer is where the law actually lives, the citizen has to be able to rely on it.
+
+A practical version of the objection says the panels will be slow, costly and gamed. Explainers will be coached, scenario questions written to be easy. Some of this is true of juries as well, and we keep juries. The cost is modest: if a legislature passes a hundred bills a year that place duties on individuals, that is a hundred days of thirty paid citizens, less than a single large public inquiry. The gaming is the more serious risk, and the defence is the one used in exams. The scenario questions are written by a separate office, drawn from a large public pool, and released only after the panel sits.
 
 The harder version of the objection is that the Red Queen does not stop. Fix the obligation layer, and the race moves into the implementation layer, where agents for the treasury and agents for the taxpayer will run at full speed against each other. I concede this. The ceiling does not end the race. It moves the race to a place where only machines are running, and keeps a human-sized door between that place and the person who has to obey.
 

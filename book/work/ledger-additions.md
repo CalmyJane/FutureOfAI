@@ -45,3 +45,10 @@
 - Liang Yue, the Shenzhen supplier's rep (three children). Contract KES 2.18M (ceiling 2.4M) for supplies for ~1,400 pupils in Kasarani. "Compressed latent protocol, version 9", 3 KB log, a Tuesday 18:52:03–18:52:04; delivery due before 5 Jan, arrived 3 Jan. Conditional freight-risk clause; supplier takes the risk to the school gate. Wanjiru keeps the 3 KB file in a folder Ndege may not tidy. Baraka does fractions homework.
 - Twist: the lingua franca moves into the machines instead of disappearing (Korea Times).
 - Terms: Babel reversal, legible twin, twin faithfulness rate (99% / 95% thresholds), replay test (1 in 10,000), legibility tax, ~1,000-word limit for consumer-binding commitments.
+
+## Chapter 9
+- "Health Facility Budget Carry-Forward (Public Participation and Accountability) Regulations, 2036": **912 pages**, 14 schedules, a 41-page definition of "carry forward" (eleven kinds), Form PP-17, Sections 88 and 212 (21 days to refile), Schedules Nine and Fifteen. CHECK AGAINST CH. 8.
+- Ndege's 40-page Statement of Particulars; resolved three weeks later: clinic money to be spent by March, with quarterly reporting.
+- Njeri (13) is in Grade 8.
+- Élodie Marchetti, Council of the EU lawyer-linguist for 19 years; a 2035 directive with an 11-page text and a ~640,000-word annex.
+- Ceiling: 30-citizen lottery panel (half aged 14–15), 10-minute explanation, 5 scenario questions, pass at ≥80% getting 4/5. Complexity brake: net obligation growth ≤2% per term; emergency obligations expire after 2 years.
