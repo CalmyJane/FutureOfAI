@@ -28,34 +28,37 @@ independence:
   notes: "Claude Code documents subagent isolation; no second model family installed."
 
 pipeline:
-  current_phase: "Phase 5: Revision Loop"
-  current_gate: "revision_loop"
-  status: "running"
+  current_phase: "Phase 7: Editorial Package (done)"
+  current_gate: "complete"
+  status: "complete_gates_not_met"
   panel_passes: 3
   rubric_passes: 3
 
 manuscript:
   chapter_count_planned: 19
   average_words_per_chapter_planned: 4200
-  completed_chapters: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-  word_count_actual: 82811
+  completed_chapters: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+  word_count_actual: 82068
   length_gate: "PASS"
-  status: "drafted"
+  status: "complete"
 
 gates:
   intake: "passed (author approved: new concepts only, go to the end)"
   foundation: "passed"
   architecture: "passed"
   drafting: "passed"
-  adversarial_audit: "revise"
-  revision_loop: "pending"
-  final_score: "pending"
-  editorial_package: "pending"
+  adversarial_audit: "revise -> all high tickets closed"
+  revision_loop: "stopped after 3 passes (gates not met)"
+  final_score: "done: gates not met (panel stop points; rubric floor 6.3 calibrated)"
+  editorial_package: "done (export pending author name)"
 
 decisions:
   - "Form v1: braided novel (rejected by author 2026-10-20)"
   - "Form v2: nonfiction, 'The Great Inversion', 18 inversions + prologue + epilogue (author asked for nonfiction and bolder concepts)"
   - "Form v3 (2026-10-20): author: 'just going with the new stuff... go for it, write the book'. Book keeps only concepts the novelty check rated new or partly new with a new mechanism. Frame: 'When Everything Goes Right' — the risks of AI success and the institutions to invent. Mode set to autonomous."
 open_questions:
+  - "Author name for print/export (required)."
+  - "Title: adopt hook-test winner 'Two Hundred Million Acts of Loyalty'?"
+  - "Book language: English; German edition wanted?"
   - "Book language: English assumed; German possible."
   - "Market gate unverified; comps from recall."

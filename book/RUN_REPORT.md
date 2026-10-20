@@ -44,3 +44,18 @@ Readers: 4/4 turn the page on ch1, ch8, ch17 and ch18; high stop points at ch17'
 Rubric (2 evaluators, grade B): raw medians 7.35–8.95; calibrated floor 6.55 (Market); prose capped at 7.5 for triads and negation.
 Added: Appendix "The Inventions at a Glance" (chapter-19). Market map updated to v3.
 Next: pass 2 (5 parallel editors).
+
+## Book Genesis · Phase 5 passes 2–3, Phase 6, Phase 7
+- Pass 2: structural fixes to ch1, 8, 17 and 18 (blind A/B: 4/4 prefer the revision on each); book-wide prose pass (triads, negation, tics) on every chapter; Appendix "The Inventions at a Glance" added.
+- Pass 3: orchestrator line edits (ch1 primer, ch17 spec). Final gate read: majority to turn the page on ch0, ch9, ch17 and ch18 (ch9 3/4); four shared stop points remained, then compressed in a post-gate polish (not re-measured).
+- Final rubric (2 evaluators): raw medians 7.1–8.8, weighted ≈8.1; calibrated ≈7.3; floor 6.3 (Market). Prose cap lifted (8.05).
+- **Gates not met** (panel stop points at measurement; rubric floor below the 8.5 target). Stopped per the three-pass rule.
+- Phase 6: artifacts/11-genesis-score.md.
+- Phase 7: artifacts/12-editorial-package.md, artifacts/13-positioning.md, evaluations/panel-hook-test.md (winner: "Two Hundred Million Acts of Loyalty", 12/12). delivery/when-everything-goes-right.md (proofread manuscript) and delivery/EXPORT.md. EPUB, DOCX and PDF were not created: the author name is missing, and there is no PDF engine (pandoc 3.1.3 present; the EPUB dry run succeeded).
+
+## Inventory (end of session)
+- manuscript/chapters: 20 files, 82068 words (length gate PASS).
+- Evaluations: opening panel; pass-1 gate and rubric; pass-2 compare; final gate; final rubric; hook test; adversarial audit (2 auditors).
+- Independence: grade B (one model family, isolated contexts).
+- Open: author name; title decision; verify comps and secondary-sourced Notes; human editorial read.
+- States: manuscript drafted ✔; editorial review complete ✔ (gates not met); publication approval by a human ✘.

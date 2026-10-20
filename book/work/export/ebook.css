@@ -1,0 +1,11 @@
+p { margin: 0; text-indent: 1.25em; widows: 2; orphans: 2; }
+h1 { margin: 3em 0 2em 0; text-indent: 0; page-break-before: always; }
+h1 + p, hr + p { text-indent: 0; }
+hr { width: 30%; margin: 1.5em auto; border: 0; border-top: 1px solid; }
+blockquote { margin: 1.5em 1em; padding: 0.5em 1em; border-left: 3px solid #888; }
+blockquote p { text-indent: 0; }
+table { border-collapse: collapse; font-size: 0.85em; }
+td, th { border: 1px solid #999; padding: 0.3em; vertical-align: top; }
+.titlepage { text-align: center; margin-top: 30%; }
+.titlepage p { text-indent: 0; margin-top: 1em; }
+nav#toc ol { list-style-type: none; padding: 0; margin-left: 1em; }

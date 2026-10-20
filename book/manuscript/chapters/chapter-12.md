@@ -34,7 +34,7 @@ The answer is patient and correct, and it compares the counties to Dutch provinc
 
 The question has left the hall, crossed to Mombasa, run under the sea, reached Amsterdam to be checked against a policy written there, and come back, so that it can be computed on a rack he can see from the bench where he is sitting. He counts the latency on the little debug overlay he has never turned off. A hundred and forty milliseconds, there and back, to think forty metres away.
 
-Outside, the first giraffe is standing in the steam.
+Outside it is still dark. In two hours the first giraffe will be standing in the steam.
 
 ---
 

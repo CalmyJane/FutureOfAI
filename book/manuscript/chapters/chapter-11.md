@@ -174,7 +174,7 @@ There is a second objection worth a paragraph. If machines can produce results, 
 
 Mikkel calls Aino at eight the next morning. The cell in the cryostat has lost another two per cent overnight.
 
-He has worked out what an answer would cost. Three postdoc-years to test the hypotheses on his whiteboard. Several weeks of beam time at a synchrotron to watch the lattice in the cold. A technician to keep the cryostat running through Christmas. A great deal of computer time to simulate the interface at temperatures the original model never visited. None of it is in any budget, because in 2029, when the money was flowing, nobody wrote a line for understanding.
+He has worked out what an answer would cost. Three postdoc-years to test the hypotheses on his whiteboard. Several weeks of beam time at a synchrotron to watch the lattice in the cold. A technician to keep the cryostat running through next winter. A great deal of computer time to simulate the interface at temperatures the original model never visited. None of it is in any budget, because in 2029, when the money was flowing, nobody wrote a line for understanding.
 
 There is a faster option, and his dean has already mentioned it. A current model could design a replacement electrolyte in a few weeks, screened for minus forty this time, for a compute bill measured in megawatt-hours. It would probably work. It would also arrive with no reason attached, and the next unexpected condition would find it as unprepared as this one found LX-29.
 
