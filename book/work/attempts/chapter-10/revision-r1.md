@@ -117,7 +117,7 @@ For every binding exchange, the rule requires a **legible twin**.
 
 The last rule answers Ndege's "four hundred words, and I am not certain it is complete". Under this regime, an agent that is not certain its twin is complete has not finished negotiating.
 
-There is a precedent on trading floors. In 2012 the US Securities and Exchange Commission adopted Rule 613, which requires a consolidated audit trail: every order in American equities is reported, step by step, from receipt to execution or cancellation, so that regulators can reconstruct what happened however fast it happened. Nobody reads every record. The point is that the records exist, match each other, and can be read when it matters. The legible twin extends that habit from trading desks to every kitchen table where an agent has signed something.
+There is a precedent on trading floors. In 2012 the US Securities and Exchange Commission adopted Rule 613, which requires a consolidated audit trail: every order in American equities is reported, step by step, from receipt to execution or cancellation, so that regulators can reconstruct what happened however fast it happened. Regulators open the records they need, when it matters; the rest simply exist and match each other. The legible twin extends that habit from trading desks to every kitchen table where an agent has signed something.
 
 ## What remains hard
 

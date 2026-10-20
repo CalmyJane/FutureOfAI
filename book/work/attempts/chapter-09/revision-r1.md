@@ -92,7 +92,7 @@ Sweden's Language Act of 2009 is broader: language in the public sector must be 
 
 ## The invention: a readability ceiling and a complexity brake
 
-My proposal has two parts, and both rest on one distinction. Every law has an **obligation layer**, what a person must do, must not do, may claim and what happens if they don't. And it has an **implementation layer**: the calculations, thresholds, data formats, timetables and procedures that make the obligations work. Complexity may live in the implementation layer. Obligations on people may not.
+My proposal has two parts, and both rest on one distinction. Every law has an **obligation layer**, what a person must do, must not do, may claim and what happens if they don't. And it has an **implementation layer**: the calculations, thresholds, data formats, timetables and procedures that make the obligations work. Complexity may live in the implementation layer. Obligations on people must stay short enough to explain.
 
 The first part is a **human-readability ceiling**, written into the constitution or a basic law. It says: every obligation that a law imposes on a natural person must be explainable to a fourteen-year-old within ten minutes.
 
