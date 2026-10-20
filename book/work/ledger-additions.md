@@ -83,3 +83,8 @@
 ## Chapter 11 (re-scoped: no biology)
 - Dr. Mikkel Holm, a materials scientist at a Copenhagen university battery lab. LX-29, a lithium–sodium halide solid electrolyte proposed in 2029 by the fictional model Halden-3 (retired 2034); pilot cells in 2031; in about two-thirds of Nordic grid storage built since 2032. A storage park outside Sodankylä lost almost a fifth of its capacity in under 3 weeks after eleven nights at −30 °C (January 2036). Lab: 8% loss in ten cycles. Aino, a grid-operator contact in Helsinki. Same chemistry in Kiruna, Luleå and Tromsø.
 - Levy: 5% default; 10% if the ratio is >0.5; 3% if <0.2; audits of 50 sampled results per field per year.
+
+## Chapter 17
+- Replay: Saturday 14 Feb 2037. BCR live alert at 19:42:31 ("action concentration 0.93"); Mara at home cooking plantain. Breaker trips at 19:42:52, 15-minute pause on agent-originated load increases; frequency dips to 49.93 Hz. Teo in a café on Rua de Santa Catarina at 18:43 Porto time ("PRONTIDÃO"). Ravi at 00:12 IST; second Census table four: shared-rater share 34% → 19%. The music room reaches 20 °C at eight and 22 °C by ~20:20. "The bow does not move faster because you squeeze it harder." The jitter rule was on the front page of the Leipziger Volkszeitung.
+- Dissent Clause: reviewer <0.8 same-family concordance or a reserve human; dissent once in writing, attached to the verification receipt; an unanswered dissent blocks auto-execution; dissent rate <1% for a quarter → planted-case audit; uptake 0% for a year or >90% → audit of the humans.
+- "The Oracle's Fingerprint" (2026) could not be found; do not cite it.
