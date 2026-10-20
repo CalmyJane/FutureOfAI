@@ -8,9 +8,9 @@ The steam comes up out of the ground at a little over two hundred degrees, and b
 
 Mwangi Kamau starts the night shift at ten. He is thirty-six, the younger brother, the one who was supposed to become an electrician in Nakuru and instead became something there was no word for when he left school. Kilele Compute calls it a thermal-and-rack technician. His mother calls it "the computer farm". His sister calls it "your kettle", because of the plumes.
 
-The hall is long and loud and smells faintly of sulphur where the cooling loop runs close to the wellheads. Outside, beyond the fence and the silver pipes that cross the valley on their stilts, giraffes come at dawn, sometimes. The tourists who drive through Hell's Gate photograph them in front of the pipes and post the pictures with captions about the future.
+The hall is loud and smells faintly of sulphur where the cooling loop runs close to the wellheads. Outside, beyond the fence and the silver pipes that cross the valley on their stilts, giraffes come at dawn, sometimes. The tourists who drive through Hell's Gate photograph them in front of the pipes and post the pictures with captions about the future.
 
-On the wall screen, the hall's load is broken down by contract. Most of it is labelled EU-WEST. Mwangi knows roughly what that means, because the dashboards are generous about everything except content: an insurer in Hamburg running claims, a Dutch tax-preparation service in its busy month, a French hospital group triaging discharge letters overnight. The work arrives through the cable at Mombasa, runs here on Kenyan steam, and leaves the same way. Kenya is paid by the megawatt-hour and by the rack. The newspapers call it the thought trade, and the Treasury likes the numbers.
+On the wall screen, the hall's load is broken down by contract. Most of it is labelled EU-WEST. Mwangi knows roughly what that means, because the dashboards are generous about everything except content: an insurer in Hamburg running claims, a French hospital group triaging discharge letters overnight. The work arrives through the cable at Mombasa, runs here on Kenyan steam, and leaves the same way. Kenya is paid by the megawatt-hour and by the rack. The newspapers call it the thought trade, and the Treasury likes the numbers.
 
 At 23:40 his phone buzzes. Wanjiru.
 
@@ -24,13 +24,13 @@ He laughs, and tells her he'll look at something.
 
 What he looks at is his own screen. He scrolls down past EU-WEST to the smaller contracts, the ones that don't pay as well, and finds it near the bottom: LEERWIJS BV, AMSTERDAM, REGION EAF, 1.2 MW. The tutoring service that his niece uses on a cracked tablet in Kasarani has rented a slice of Hall C. The thinking that explains algebra to Njeri is done here, forty metres from where he is standing, on steam from under the Rift Valley.
 
-It is billed in Amsterdam. Its lessons were written and tuned there, its sense of what a good explanation sounds like was set there, and its price is set there too, in euros, by people who have never had to hear Wanjiru say *nineteen* in that tone of voice.
+It is billed in Amsterdam. Its lessons and its sense of what a good explanation sounds like were tuned there, and its price is set there too, in euros, by people who have never had to hear Wanjiru say *nineteen* in that tone of voice.
 
 He thinks about what he is paid per megawatt-hour, and what Leerwijs charges per child, and does not get very far with the arithmetic before the cooling alarm on row 14 goes off and he has to go and be useful.
 
 At four in the morning, on his break, he opens the tutoring app on his own phone. Njeri lent him the login once, to show him something. He types a question into it, half as a test: *Explain the 2010 Constitution's rules on county budgets, for a thirteen-year-old.*
 
-The answer is fluent and patient and correct, and it compares the counties to Dutch provinces.
+The answer is patient and correct, and it compares the counties to Dutch provinces.
 
 The question has left the hall, crossed to Mombasa, run under the sea, reached Amsterdam to be checked against a policy written there, and come back, so that it can be computed on a rack he can see from the bench where he is sitting. He counts the latency on the little debug overlay he has never turned off. A hundred and forty milliseconds, there and back, to think forty metres away.
 
@@ -40,13 +40,13 @@ Outside, the first giraffe is standing in the steam.
 
 ## Flowers for aircraft
 
-Every chapter so far has been about thought as an activity: who does it, who signs for it, who can read it. This part of the book is about thought as a quantity. It can be measured in watts, priced in currencies and shipped across borders, and once it can be shipped, it can be traded at a deficit.
+Every chapter so far has been about thought as an activity: who does it, and who answers for it. This part of the book is about thought as a quantity. It can be measured in watts and priced in currencies, and once it can be shipped across borders, it can be traded at a deficit.
 
 An economist would object to that last word before I had shown a single number, so the objection comes first.
 
 Compute is a traded service like any other. Kenya imports aircraft and exports flowers, and both countries are richer for it. The theory of comparative advantage says a country should make what it makes relatively cheaply, and Kenya makes steam. Any rule that steers Kenyan children towards a domestic model is a tariff with better manners. It would hand them a worse tutor so that their government feels more sovereign. And the problem may solve itself: in a Stanford study I come back to below, the share of queries that the local models of each year, running on ordinary hardware, could handle as well as a frontier model rose from about 23 per cent in 2023 to about 71 per cent in 2025. If thinking moves onto the phone in Njeri's hand, there is no border for it to cross.
 
-Much of this is right, and I concede it. A deficit in thinking can be as harmless as a trade deficit in medicines. Most countries will run one in most categories, and should. What the objection takes for granted is that a tutor's answer crosses a border the way a box of roses does. That depends on what actually crosses, and finding out takes evidence.
+Much of this is right. A deficit in thinking can be as harmless as a trade deficit in medicines. Most countries will run one in most categories, and should. What the objection takes for granted is that a tutor's answer crosses a border the way a box of roses does. That depends on what actually crosses, and finding out takes evidence.
 
 ---
 
@@ -68,7 +68,7 @@ So in 2026 the Olkaria inference park is a plan with a stalled first phase. My v
 
 ## Cheap power is the easy part
 
-The most careful attempt I have found to model whether a country like Kenya can sell thinking abroad is a World Bank working paper published in June 2026 by the economist Michael Lokshin, under the title *Cheap Energy Might Not Be Enough*. It treats AI compute as a traded service. Training, which is insensitive to delay, can be done anywhere. Inference, the day-to-day running of a model to answer questions, carries a cost for distance because users notice latency. And any cross-border sale carries what the paper calls a sovereignty premium, the discount a buyer demands for having its data processed in someone else's jurisdiction.
+The most careful attempt I have found to model whether a country like Kenya can sell thinking abroad is a World Bank working paper published in June 2026 by the economist Michael Lokshin, under the title *Cheap Energy Might Not Be Enough*. It treats AI compute as a traded service. Training, which is insensitive to delay, can be done anywhere, while inference, the day-to-day running of a model to answer questions, carries a cost for distance because users notice latency. Any cross-border sale also carries what the paper calls a sovereignty premium, the discount a buyer demands for having its data processed in someone else's jurisdiction.
 
 Calibrated across 85 countries, the model finds several developing economies among the cheapest producers of compute before any subsidy. It also finds that the trust gap between those producers and buyers in rich countries wipes out nearly all of their exports. Because the chips are bought at the same world price everywhere, cheap electricity narrows total costs by only 12 to 20 per cent, which is easily erased by a little distrust. The paper's conclusion is that the binding constraint is institutional credibility. The price of power comes second.
 
@@ -76,7 +76,7 @@ I find this persuasive, and it changes the shape of the problem. In the 2036 of 
 
 The other recent piece of evidence comes from the opposite direction. In July 2026 the German Council on Foreign Relations (DGAP) published a policy brief by Valentin Weber and Michael Laha on China's trade in compute. Using customs data on the hardware of computation, chiefly chips, they found that China's compute exports rose by 43.5 per cent between 2021 and 2025, to about €206.5 billion, while its compute trade deficit shrank. With Germany, China ran a compute surplus of about €350 million in 2025. Their worry is that Europe is being marginalised in a market it assumed it would shape.
 
-Notice what the DGAP figures count: the means of thinking, chips that leave Shenzhen in a crate. The thinking itself, the questions answered and decisions drafted once those chips are switched on, falls outside them. As far as I can tell, nobody counts that. International trade in services is recorded under a UN classification in which computing sits inside one broad heading for telecommunications, computer and information services. An hour of Kenyan steam spent drafting a Hamburg insurer's claim decisions and an hour spent hosting a website land, at best, on the same line. I could not find a single national statistic, anywhere, that measures how much inference a country computes for others, or how much of its own citizens' advice, tutoring and paperwork is computed abroad.
+Notice what the DGAP figures count: the means of thinking, chips that leave Shenzhen in a crate. The thinking itself, the questions answered and decisions drafted once those chips are switched on, falls outside them. Nobody, so far, counts that. International trade in services is recorded under a UN classification in which computing sits inside one broad heading for telecommunications, computer and information services. An hour of Kenyan steam spent drafting a Hamburg insurer's claim decisions and an hour spent hosting a website land, at best, on the same line. I could not find a single national statistic, anywhere, that measures how much inference a country computes for others, or how much of its own citizens' advice, tutoring and paperwork is computed abroad.
 
 ---
 
@@ -84,15 +84,15 @@ Notice what the DGAP figures count: the means of thinking, chips that leave Shen
 
 Here is the mechanism, and it needs nothing to go wrong.
 
-Inference gets cheap. The IEA's April 2026 report notes that the energy used per AI task has fallen by at least an order of magnitude a year in recent years. Because it is cheap and good, it moves into the parts of life where judgement used to be local and slow: the tutor, the clinic's triage nurse, the clerk who checks a land title, the officer who drafts a county budget. Each of these moves is an improvement. Njeri's tutor is patient at eleven at night, and her teacher is not.
+Inference gets cheap. The IEA's April 2026 report notes that the energy used per AI task has fallen by at least an order of magnitude a year in recent years. Because it is cheap and good, it moves into the parts of life where judgement used to be local and slow: the tutor, the clinic's triage nurse, the clerk who checks a land title, the officer who drafts a county budget. Each of these moves is an improvement. Njeri's tutor is still patient at eleven at night, when her teacher is asleep.
 
 But each move also changes where the judgement comes from. The electricity can be Kenyan. The racks can sit in the Rift Valley. The weights, the training data, the fine-tuning, the policy that decides what a good explanation of a constitution sounds like, and the price, are set somewhere else. A country can be a net exporter of joules and a net importer of judgement at the same time. In my vignette, Kenya is both, and on most days the second number is the larger one in shillings.
 
-The pattern is old. Countries that export raw materials and import finished goods have argued for a century about whether that position is a stage of development or a trap. What is new is the commodity. A finished good from abroad does what it does; a fridge does not have views. Imported judgement arrives with its examples, its defaults and its sense of what counts as the right answer. When a tutoring model compares Kenyan counties to Dutch provinces, nothing has gone wrong. It has drawn on what it knows best.
+The pattern is old. Countries that export raw materials and import finished goods have argued for a century about whether that position is a stage of development or a trap. What is new is the commodity. A finished good from abroad does what it does, and a fridge keeps food cold in any country. Imported judgement arrives with its own examples and its own idea of the right answer. When a tutoring model compares Kenyan counties to Dutch provinces, it is working as designed, drawing on what it knows best.
 
-I want to be careful here. Kenya already imports textbooks, medicines and software, and nobody thinks the country has lost its sovereignty to a pharmacy. The difference is a matter of degree that becomes a matter of kind as the share rises. When most of a country's children are tutored, most of its patients triaged and most of its public documents drafted by models governed elsewhere, the government that is supposed to answer for those things has, in practice, contracted them out without ever signing a contract. And correlation, the theme of Part One, applies across borders too: if a whole country's tutoring runs on one foreign model family, it inherits that family's blind spots all at once.
+I want to be careful here. Kenya already imports medicines and software, and nobody thinks the country has lost its sovereignty to a pharmacy. The difference is a matter of degree that becomes a matter of kind as the share rises. When most of a country's children are tutored and most of its public documents drafted by models governed elsewhere, the government that is supposed to answer for those things has, in practice, contracted them out without ever signing a contract. And correlation, the theme of Part One, applies across borders too: if a whole country's tutoring runs on one foreign model family, it inherits that family's blind spots all at once.
 
-I will call this the **thought deficit**: the share of a country's decision-bearing inference that is consumed at home but governed abroad, net of what it governs for others. The phrase is mine. The thing it describes is, as far as I can tell, unmeasured everywhere.
+I will call this the **thought deficit**: the share of a country's decision-bearing inference that is consumed at home but governed abroad, net of what it governs for others. The phrase is mine. The thing it describes appears in no country's statistics.
 
 ---
 
@@ -114,7 +114,7 @@ The accounts need a unit, and tokens are a poor one. A token of a model musing t
 
 The best starting point I know is a 2025 Stanford study, led by Jon Saad-Falcon and Avanika Narayan with colleagues including Christopher Ré and John Hennessy, called *Intelligence per Watt*. It defines a metric, task accuracy per unit of power, and applies it to more than twenty small models on eight kinds of chip over a million real queries. The headline findings are striking. Judging each local answer against a frontier model's, the study found that local models could handle about 89 per cent of single-turn chat and reasoning queries. And intelligence per watt, the accuracy delivered for each watt the hardware draws, improved by about 5.3 times between 2023 and 2025. The authors are clear that this covers single questions; long agentic tasks are outside its scope.
 
-I want to take their idea one step outward. **Joules per insight** is the energy needed to produce one verified useful outcome from a fixed basket of tasks: a correct explanation of a fraction to a child, graded by a teacher; a correctly triaged discharge letter; a land-title query answered and checked. The basket works like the shopping basket behind a consumer price index. It is chosen by the statistics office, revised every few years, and published. Each category in the accounts is then reported both in energy and in insights, so a country can see whether it is exporting cheap joules and importing expensive insights, and at what ratio.
+I want to take their idea one step outward. **Joules per insight** is the energy needed to produce one verified useful outcome from a fixed basket of tasks: a correct explanation of a fraction to a child, graded by a teacher, or a land-title query answered and checked. The basket works like the shopping basket behind a consumer price index. The statistics office chooses and publishes it, and revises it every few years. Each category in the accounts is then reported both in energy and in insights, so a country can see whether it is exporting cheap joules and importing expensive insights, and at what ratio.
 
 Defining an insight is hard, and I return to it in the box for researchers. But inflation statisticians have argued for decades about how to price a laptop that gets better every year, and they still publish a number every month.
 
@@ -124,7 +124,7 @@ The third part is the one I expect to be argued with most.
 
 In April 2025 Montana's governor signed the Right to Compute Act, sponsored by state senator Daniel Zolnikov. It recognises a right to own and use computational resources and says that any government restriction must be demonstrably necessary and narrowly tailored to a compelling interest. It is a negative liberty: it stops the state from taking compute away. It gives Njeri nothing.
 
-A year earlier, on a podcast in May 2024, Sam Altman wondered aloud whether "universal basic compute" might one day take the place of a universal basic income: everyone would own a slice of a future model's capacity, to use, resell or give away. That is a positive provision, and I think the instinct is right. As stated, though, it is a share in one company's model, which would make a citizen's thinking allowance a claim on a single foreign supplier. For Kenya, that is the thought deficit with a ribbon on it.
+A year earlier, on a podcast in May 2024, Sam Altman wondered aloud whether "universal basic compute" might one day take the place of a universal basic income: everyone would own a slice of a future model's capacity, to use or resell. That is a positive provision, and I think the instinct is right. As stated, though, it is a share in one company's model, which would make a citizen's thinking allowance a claim on a single foreign supplier. For Kenya, that is the thought deficit with a ribbon on it.
 
 So here is the version I would propose. Every resident has a **right to think**: a monthly allowance of inference, measured in insights from the national basket, enough for a defined standard of use. For a school-age child I would set the floor at what it takes to run two hours a day of tutoring-grade inference, say three hundred exchanges. A rough sense of scale: the IEA's own illustration uses a generous 1 watt-hour per query, so three hundred a day comes to about nine kilowatt-hours a month, the same as leaving a 12-watt lamp on around the clock. Reasoning-heavy tutoring could cost many times more per query, which is one reason the allowance is set in insights.
 
@@ -144,7 +144,7 @@ Go back to the flowers and the aircraft. The proposals above are built to live w
 
 On local inference, though, the objection misses where the deficit lives. A model running on Njeri's tablet still carries weights trained and tuned elsewhere. Moving the computation onto the device removes the latency and the energy bill from the trade balance. It leaves the judgement exactly where it was. If anything, it makes the deficit harder to see, because the thinking now happens offline, in Kasarani, and no cable records it crossing anything.
 
-And here is the part of the answer I would defend hardest. Ordinary services trade labour: a Kenyan call centre answering a British customer's question sells hours of skilled work, under rules the customer's company sets. Inference trades judgement in the other direction. When Kenya imports tutoring, it imports the decisions about what to teach, how to explain it, what to leave out and when to say *that's correct*. Those decisions were once made by Kenyan teachers under a Kenyan curriculum, answerable to a Kenyan ministry. A country that buys most of its judgement from one place depends on that place in a way that a country buying its aircraft does not. Dependency in judgement is a question of sovereignty, and sovereignty is what national accounts were invented to protect.
+And here is the part of the answer I would defend hardest. Ordinary services trade labour: a Kenyan call centre answering a British customer's question sells hours of skilled work, under rules the customer's company sets. Inference trades judgement in the other direction. When Kenya imports tutoring, it imports the decisions about what to teach, how to explain it, what to leave out and when to say *that's correct*. Those decisions were once made by Kenyan teachers, under a curriculum answerable to the ministry in Nairobi. A country that buys most of its judgement from one place depends on that place in a way that a country buying its aircraft does not. Dependency in judgement is a question of sovereignty, and sovereignty is what national accounts were invented to protect.
 
 ---
 
@@ -158,7 +158,7 @@ And here is the part of the answer I would defend hardest. Ordinary services tra
 
 Back in Hall C, Mwangi's debug overlay is still open. A hundred and forty milliseconds: that is how long it took a question about Kenyan county budgets to travel to Amsterdam and back so that it could be answered forty metres from where it was asked.
 
-To Njeri, waiting for help with algebra, a hundred and forty milliseconds is nothing. She will never notice it. To an agent trading claims capacity in Frankfurt that night, it is long enough to be outbid several times over.
+To Njeri, waiting for help with algebra, a hundred and forty milliseconds is too short to see. To an agent trading claims capacity in Frankfurt that night, it is long enough to be outbid several times over.
 
 ## Notes
 
