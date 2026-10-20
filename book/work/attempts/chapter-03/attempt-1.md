@@ -82,7 +82,7 @@ Here is the rule, stated as plainly as I can.
 
 **The M-1 criterion: a critical system must remain within safe limits if every instance of its largest model family takes the same plausible wrong action at the same moment.**
 
-The name borrows from N-1 on purpose. N-1 asks what happens when one component fails. M-1 asks what happens when one *model* fails, everywhere it runs, simultaneously. For a grid, the component in question is a power station. For an AI-mediated grid, it is a set of weights, copied into ninety million heat pumps.
+The name borrows from N-1 on purpose. N-1 asks what happens when one component fails. M-1 asks what happens when one *model* fails, everywhere it runs, simultaneously. For a grid, the component in question is a power station. For an AI-mediated grid, it is a set of weights, copied into ninety million heat pumps, chargers and batteries.
 
 Here are its parts.
 
@@ -96,7 +96,7 @@ Here are its parts.
 
 **What "within safe limits" means.** Whatever it already means in that sector. For the continental European grid, that is the existing reference incident, the sudden loss or gain of three gigawatts that every reserve is sized for. The M-1 study has to show that the family's coordinated wrong action stays inside that envelope, or that some other mechanism keeps it inside.
 
-**Who does what.** The operator runs the study and files it, annually and whenever its largest family's share crosses a threshold. The sector regulator checks it, as it checks N-1 studies now. An independent body, Mara's Bureau in my scenario, publishes the Concordance Index, which lets everyone see how quickly the families are merging.
+**Who does what.** The operator runs the study and files it, annually and whenever its largest family's share crosses a threshold. The sector regulator checks it, as it checks N-1 studies now. An independent body, the Bureau for Correlated Risk in my scenario, publishes the Concordance Index, which lets everyone see how quickly the families are merging.
 
 **What triggers what.** I will propose numbers, because numbers are what a committee can disagree with. Treat them as starting points for the argument.
 
@@ -105,13 +105,13 @@ Here are its parts.
 - If the published Concordance Index rises above 0.75, every critical sector reruns its M-1 study within ninety days, because the families are probably larger than the last study assumed.
 - If an operator cannot satisfy M-1, new deployments of the largest family in that system stop until it can. Existing deployments keep running.
 
-Run the prologue's evening through this. One family manages 58% of agent-controlled flexible load across the continent, which in my scenario is tens of gigawatts. That is ten times the reference incident. M-1 fails. Under the rule, someone would have had to write that down in an engineering report two years before the Long Minute, and someone else would have had to sign that they had read it.
+Run the prologue's evening through this. One family manages 58% of agent-controlled flexible load across the continent, which in my scenario is more than twenty gigawatts. That is several times the reference incident. M-1 fails. Under the rule, someone would have had to write that down in an engineering report two years before the Long Minute, and someone else would have had to sign that they had read it.
 
 ---
 
 ## Five ways to pass
 
-A rule is only as good as the ways it leaves open for meeting it. M-1 would be a disaster if the only way to pass were to ban the best model. There are at least five other ways, and most of them have been tried in other industries.
+A rule is only as good as the ways it leaves open for meeting it. M-1 would be a disaster if the only way to pass were to ban the best model. There are at least five ways, only the last of which resembles a ban, and most of them have been tried in other industries.
 
 **Edge jitter.** Chapter 1 proposed making the grid's random start delay non-delegable. M-1 gives that idea an engineering home. Put the randomness in the device, in firmware the agent cannot read or override, and the agent's decision becomes a request. A heat pump told to start at 19:45 starts at a moment drawn uniformly from the next ten minutes, and its agent cannot know which. Ninety million identical decisions become ninety million slightly different actions. A cliff becomes a slope. Whether the slope is gentle enough is a calculation the M-1 study has to show; jitter does not remove the need for the study, it gives the study a lever.
 
@@ -147,7 +147,7 @@ Today's evaluations put one copy of a model through thousands of tasks. Swarm te
 
 Each part of that definition does work. "Given that both are wrong" separates correlation from competence: two excellent models will agree on most questions because most questions have one right answer, and that agreement is harmless. The index looks only at the cases where they fail. "Deployment-weighted" means a model used by a billion people counts for more than a research model used by nobody, so the index tracks the world as it is actually wired. "The same wrong answer" requires a test battery where wrong answers can differ, which means multiple-choice and short-answer questions with several plausible distractors, refreshed each quarter so that nobody can train against it.
 
-The minister's question, whether 0.71 is good, has a partial answer the index can give on its own. If systems failed independently, and every question on the battery had several wrong options equally attractive to a confused model, the index would sit at a chance level that depends only on the battery: about 0.33 for four-option questions, lower with more options. Mara's slide shows 0.24 because her imagined battery has more distractors. The distance between the index and the chance level is the part that comes from shared training and shared taste. Kim and his co-authors' 60% on one 2025 leaderboard is already far above chance. My 2035 figure of 0.71 is invented, but it extrapolates their finding that more capable models are more alike when they fail.
+The minister's question, whether 0.71 is good, has a partial answer the index can give on its own. If systems failed independently, and every question on the battery had several wrong options equally attractive to a confused model, the index would sit at a chance level that depends only on the battery: about 0.33 for four-option questions, lower with more options. Mara's slide shows 0.24 because her imagined battery has more distractors. The distance between the index and the chance level is the part that comes from shared training and shared taste. Kim and his co-authors' 60% on one 2025 leaderboard is already well above any plausible chance level for such tests. My 2035 figure of 0.71 is invented, but it extrapolates their finding that more capable models are more alike when they fail.
 
 The rest of the answer is the one Mara gave. The index alone tells you how alike the minds are. M-1 tells you what is standing on that likeness.
 
@@ -224,6 +224,7 @@ Then the most decorrelated mind available is a person: someone who learned the j
 ## Notes
 
 - **1965 blackout, 30 million people, 20,000 MW:** NERC, *Final Report on the August 14, 2003 Blackout in the United States and Canada*, ch. 7, 2004. https://www.nerc.com/pa/rrm/ea/2003%20Blackout%20Final%20Report/ch7-10.pdf
+- **The Sir Adam Beck relay:** EBSCO Research Starters, "Power Failure of 1965". https://ebsco.com/research-starters/power-and-energy/power-failure-1965
 - **FPC study group and NPCC criteria, 1967:** New York State Reliability Council, *2009–2010 Biennial Report*. https://www.nysrc.org/wp-content/uploads/2023/03/2009-10-Biennial-Report-Final-v.2.pdf
 - **NERC founded 1968:** NERC, *Timeline*, March 2023. https://www.nerc.com/news/Documents/March%202023%20NERC%20Timeline.pdf
 - **N-1 criterion defined:** "Contingency (electrical grid)", Wikipedia. https://en.wikipedia.org/wiki/Contingency_(electrical_grid)
@@ -232,6 +233,7 @@ Then the most decorrelated mind available is a person: someone who learned the j
 - **Algorithmic monoculture:** J. Kleinberg, M. Raghavan, "Algorithmic Monoculture and Social Welfare", *PNAS* 118(22), 2021. https://arxiv.org/abs/2101.05853
 - **Cerritos and TCAS II mandate:** J. Kuchar, A. Drumm, "The Traffic Alert and Collision Avoidance System", *MIT Lincoln Laboratory Journal* 16(2), 2007. https://archive.ll.mit.edu/publications/journal/pdf/vol16_no2/16_2_04Kuchar.pdf ; "Aeroméxico Flight 498", Wikipedia. https://en.wikipedia.org/wiki/Aerom%C3%A9xico_Flight_498
 - **Coordinated, complementary resolution advisories:** ICAO ACAS terminology (ANAC glossary). https://www2.anac.gov.br/anacpedia/ing-por/tr7426.htm
+- **Black Monday, 1987, and the Brady Commission:** "Black Monday (1987)", Wikipedia. https://en.wikipedia.org/wiki/Black_Monday_(1987)
 - **1987 crash and 1988 circuit breakers:** Chicago Fed Letter, July 1998. https://www.chicagofed.org/-/media/publications/chicago-fed-letter/1998/cfljul98-pdf.pdf ; MIT Golub Center, "Are circuit breakers doing their job?" https://mitsloan.mit.edu/centers-initiatives/mit-gcfp/are-circuit-breakers-doing-their-job
 - **Flash crash:** CFTC and SEC staff, *Findings Regarding the Market Events of May 6, 2010*, 2010. https://www.banking.senate.gov/download/joint-staff-report-from-sec-and-cftc-regarding-market-events-of-may-6-2010&download=1
 - **Single-stock breakers, LULD and 7/13/20% breakers:** Harvard Law School Forum on Corporate Governance, "Limit Up-Limit Down Plan and Circuit Breakers Approved", 2012. https://corpgov.law.harvard.edu/2012/06/13/limit-up-limit-down-plan-and-circuit-breakers-approved/ ; SEC press release 2011-84. https://www.sec.gov/news/press/2011/2011-84.htm

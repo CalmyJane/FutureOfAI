@@ -8,11 +8,11 @@ The tablets go into a grey metal box by the gate, and Fernando Lopes locks it wi
 
 "So are you, if you touch anything before I tell you."
 
-It is the second Saturday of November, cold and bright, and the training substation sits on a shelf of hillside above the motorway: two transformers, a row of breakers, a forest of insulators ticking in the sun. Nine reservists stand in orange jackets. Six of them are over sixty. Zé Carlos, who ran switching crews in Braga for thirty years, has brought a thermos and a folding stool, and is already sitting on it. Teo is the youngest by a decade and a half.
+It is the second Saturday of November, cold and bright, and the training substation sits on a shelf of hillside above the motorway: two transformers, a row of breakers, a forest of insulators ticking in the sun. Nine reservists stand in orange jackets. Six of them are over sixty. Zé Carlos, who ran switching crews in Braga for thirty years, has brought a folding stool and is already sitting on it. Teo is the youngest by a decade and a half.
 
-He is here, if he is honest, for the money. Four hundred and ten euros a month, plus drill pay, for one weekend a month and two weeks every summer. In 2033 he graduated in data journalism and sent out sixty-one applications. The newsrooms that answered said they had stopped hiring juniors; the agents did the first drafts now. The Reserva de Competências paid on the first of the month and asked no questions about his degree. He does not tell his friends what the weekends are for. He tells them it's a kind of militia, which makes them laugh.
+He is here, if he is honest, for the money. Four hundred and ten euros a month, plus drill pay, for one weekend a month and two weeks every summer. In 2033 he graduated in data journalism and sent out sixty-one applications. The newsrooms that answered said they had stopped hiring juniors; the agents did the first drafts now. The Reserva de Competências paid on the first of the month and asked no questions about his degree.
 
-Fernando hands out the paper. A switching schedule, nine steps, typed, with a box beside each step for initials and a time. The scenario is printed at the top: control-room systems unavailable, feeder 4 faulted, isolate it and restore supply to the village on the alternate path. A retired dispatcher named Armindo sits in the site office with a radio, playing the control room. He is seventy-one. His voice on the radio is exactly the voice of a man who has done this four thousand times.
+Fernando hands out the paper. A switching schedule, nine steps, typed, with a box beside each step for initials and a time. The scenario is printed at the top: control-room systems unavailable, feeder 4 faulted, isolate it and restore supply to the village on the alternate path. Armindo, a retired dispatcher of seventy-one, sits in the site office with a radio, playing the control room.
 
 "Step one," Teo reads into the handset. "Open breaker four-zero-two."
 
@@ -42,13 +42,11 @@ Teo says nothing for a moment. His father has not talked about the work since 20
 
 "He did the look-at-it-twice thing," Fernando goes on. "The young ones laughed at him. Then in 'ninety-eight, at Ermesinde, a kid opened the wrong one. Rui was standing next to him. That was the end of the laughing."
 
-Zé Carlos, from his stool, says something about Rui Brandão and a goat that Teo decides not to ask about.
-
-The rest of the drill takes two hours and ten minutes. On a normal day the control room's agents would do it in four seconds, and they would do it right. Teo knows this. Everyone in the yard knows this. That is why there are nine of them and not ninety.
+The rest of the drill takes two hours and ten minutes. On a normal day the control room's agents would do it in four seconds, and they would do it right. Everyone in the yard knows this. That is why there are nine of them and not ninety.
 
 At the end Fernando collects the schedules, initials them, and writes something in the margin of Teo's that Teo cannot read upside down. Then he unlocks the grey box and hands back the tablets one by one, like a teacher returning phones after an exam.
 
-Teo's lights up at once. Three messages, a reminder, a suggested route home. He puts it in his pocket without reading any of them and walks back to the disconnector, alone, and looks at its label.
+Teo's lights up at once. He puts it in his pocket without reading any of them and walks back to the disconnector, alone, and looks at its label.
 
 ---
 
@@ -183,9 +181,9 @@ What I cannot answer fully is whether the people will come. A stipend of a few h
 
 ## Teo's binder
 
-Three months after the drill in Valongo, on the night of the Long Minute, Teo will drive to a substation in the dark with a binder on the passenger seat. Chapter 1 told that story from the outside. The detail I left out is this.
+Three months after the drill in Valongo, on the night of the Long Minute, Teo will drive to a substation in the dark with a binder on the passenger seat. Chapter 1 showed Fernando's pencil in the margins of page ninety-one. The detail I left out is a few pages further on.
 
-The binder holds the paper switching procedures for every substation in his sector, two hundred and twelve pages in plastic sleeves. At 02:10, by torchlight, he will turn to the page he needs and find that it was last revised in 2019. The revision box is initialled in blue ballpoint, in a careful, slightly backward-sloping hand that he will recognise before he reads it.
+The binder holds the paper switching procedures for every substation in his sector, two hundred and twelve pages in plastic sleeves. A little after half past two, with feeder four holding, he will turn to page ninety-four and find that it was last revised in 2019. The revision box is initialled in blue ballpoint, in a careful, slightly backward-sloping hand that he will recognise before he reads it.
 
 R. B.
 

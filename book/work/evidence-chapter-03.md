@@ -8,6 +8,7 @@ Compiled 2026-10-20. Strength: **A** = primary source or official document read;
 |---|---|---|
 | 9 Nov 1965 Northeast blackout: loss of over 20,000 MW of load, about 30 million people affected (US northeast and Ontario). | NERC, *Final Report on the August 14, 2003 Blackout*, ch. 7 (historical context), https://www.nerc.com/pa/rrm/ea/2003%20Blackout%20Final%20Report/ch7-10.pdf | A |
 | Started when a protective relay tripped a transmission line; showed interconnection can spread failure. | NPCC "About" page, https://npcc.org/about ; NERC history materials | B |
+| The relay was at the Sir Adam Beck No. 2 station (Queenston, Ontario) and was set well below the line's capacity; it tripped late afternoon (about 17:16). | EBSCO Research Starters, "Power Failure of 1965", https://ebsco.com/research-starters/power-and-energy/power-failure-1965 ; RCI, 9 Nov 2016, https://www.rcinet.ca/en/2016/11/09/history-nov-9-1965-the-great-northeast-b | B |
 | The Federal Power Commission recommended a coordinating council; a 1967 Electric Power Reliability Act was proposed but not enacted; the industry formed NERC itself in June 1968. | NERC timeline (March 2023), https://www.nerc.com/news/Documents/March%202023%20NERC%20Timeline.pdf ; NERC History Book, https://nercstg.nerc.com/AboutNERC/Resource%20Documents/NERCHistoryBook.pdf | B |
 | Post-blackout FPC study group (industry, government, academia) produced the model document for NPCC's planning and operating criteria, approved September 1967. | New York State Reliability Council, 2009–10 Biennial Report, https://www.nysrc.org/wp-content/uploads/2023/03/2009-10-Biennial-Report-Final-v.2.pdf | B |
 | N-1 definition: system must keep supplying load after the loss of any single major component. | Wikipedia, "Contingency (electrical grid)", https://en.wikipedia.org/wiki/Contingency_(electrical_grid) | B |
@@ -26,6 +27,7 @@ Compiled 2026-10-20. Strength: **A** = primary source or official document read;
 
 | Claim | Source | Strength |
 |---|---|---|
+| Black Monday, 19 Oct 1987: Dow fell about 22.6% in one day; examined by the Presidential Task Force on Market Mechanisms (Brady Commission), report January 1988. | Wikipedia, "Black Monday (1987)", https://en.wikipedia.org/wiki/Black_Monday_(1987) ; Boston Globe obituary of R. Glauber, 6 Mar 2021 | B |
 | Brady Commission (1988) recommended circuit breakers after the October 1987 crash; NYSE adopted point-based market-wide halts in 1988. | Chicago Fed Letter, July 1998, https://www.chicagofed.org/-/media/publications/chicago-fed-letter/1998/cfljul98-pdf.pdf ; Wikipedia "Trading curb" | B |
 | Rationale: a time-out was not expected to change price direction, only to prevent overshooting. | MIT Golub Center, "Are circuit breakers doing their job?", https://mitsloan.mit.edu/centers-initiatives/mit-gcfp/are-circuit-breakers-doing-their-job | B |
 | Flash crash 6 May 2010: indices already down >4% fell another 5–6% in minutes and rebounded almost as fast; a single $4.1bn sell program was a trigger. | CFTC–SEC staff report, *Findings Regarding the Market Events of May 6, 2010* (30 Sept 2010), https://www.banking.senate.gov/download/joint-staff-report-from-sec-and-cftc-regarding-market-events-of-may-6-2010&download=1 ; CS Monitor, 1 Oct 2010 | A/B |
@@ -65,4 +67,8 @@ Compiled 2026-10-20. Strength: **A** = primary source or official document read;
 ## Fictional (2036) numbers used in the vignette
 - Q3 2035 Concordance Index = 0.71 (ledger). Q1 2034 first index = 0.63 (new, invented); Q2 2035 = 0.69 (new, invented).
 - Largest family share in the vignette: about 58% of agent-managed flexible load in the continental synchronous area (invented).
-- Presentation date: Tuesday 21 January 2036, three weeks before the Long Minute (invented).
+- Presentation date: Monday 21 January 2036, about three weeks before the Long Minute (invented).
+- 740 deployed systems in the Q3 2035 battery; chance level 0.24 (invented).
+- Unnamed one-offs: the Danish minister (former paediatrician); the French committee chair; a Portuguese state secretary (2034).
+- Mara's backstory detail: in 2008, her first year at a Zurich bank, she modelled mortgage default correlation and wrote an ignored footnote (consistent with ledger: started 2008, 'said nothing loudly enough').
+- Mara's own assistant books 'the usual table for Friday' (her contradiction).
