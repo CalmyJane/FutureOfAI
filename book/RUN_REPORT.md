@@ -19,3 +19,9 @@
 Done: 02-story-engine (v3), 03-characters (recurring 2036 figures), 04-theme, 05-voice, 06-emotional-curve, 07-outline (19 files, ~79k words), 08-opening-strategy, 09-continuity-ledger.
 Assumed: rhythm anchors from recall (unverified); recurring figures adapted for nonfiction.
 Next: drafting. The prologue was written by the orchestrator as the voice anchor (2,603 words). Chapters 1–17 and the epilogue go to parallel writer subagents with per-chapter research and evidence files.
+
+## Book Genesis · Chapter 1 checkpoint (opening panel)
+Done: evaluations/panel-chapter-01.md. Prologue revised (r1); chapter 1 hinge fixed.
+Readers: 4/4 turn the page; all four stopped at the roadmap paragraph (fixed); the hostile reader's mechanism doubt fixed.
+Independence: B.
+Next: chapters 7–12 in progress, then 13–18.
