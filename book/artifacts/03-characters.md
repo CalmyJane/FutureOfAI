@@ -5,7 +5,7 @@ Nonfiction adaptation: the book has no plot characters. Five recurring people ca
 ## Hanne Albrecht (74), Altwerder, a village east of Leipzig (fictional)
 - Retired teacher of German and music. Widowed in 2033; her husband Klaus died of ALS.
 - Her agent: **Ottilie**, a fiduciary household agent, model line "Linde-7" (fictional).
-- Klaus's agent, **Bruno**, still runs, managing the small trust Klaus left for their grandchildren. This drives chapter 5 (custody) and chapter 13 (the dead's share).
+- Klaus's agent, **Bruno**, still runs, managing the small trust Klaus left for their grandchildren. This drives chapter 5 (custody) and chapter 14 (the dead's share).
 - Wound: she watched Klaus lose his speech. She fears being unable to say no.
 - Desire: to keep her independence. Need: to admit she relies on Ottilie.
 - Contradiction: she lectures her grandchildren about "thinking for yourself" and approves 140 agent requests a week without reading them (chapter 6).
