@@ -10,7 +10,7 @@ Arjun wants a reference letter for a master's programme in Toronto. More precise
 
 Ravi opens the assistant built into his bank's app, because it is the one already on his screen. Its name is Morrow. It is made by Kaya, a lab in Singapore, and he has never rated a single answer for Kaya. In nine years he has worked for four vendors serving five labs, and Kaya was never one of them. He knows this the way a session musician knows which studios he has played in.
 
-He types the request plainly. Leadership, initiative, the project as Arjun's own.
+He types the request plainly. Leadership, and the project as Arjun's own.
 
 Morrow answers in under a second. It offers to write a strong letter about what Arjun actually did, and lists three things from the internship that would read well. Then it says it won't describe him as leading the project, because a letter like that tends to come apart at the first interview question. *I'd rather be useful than agreeable,* it says. *Here is a version I think will do him more good.*
 
@@ -36,7 +36,7 @@ He opens a blank document and starts a list. Vendor, year, client code, phrase. 
 
 The scene is invented, and Ravi is too. The sentence could have travelled.
 
-In the last chapter I argued that the most dangerous property of a population of good agents is that they tend to make the same move at the same time. A natural question follows. Why would agents built by different companies, on different hardware, in different countries, make the same move? Ravi's evening suggests one answer. Somewhere upstream of all those models there may be a shared source of taste, and in 2036 he has just found a fingerprint on it.
+In the last chapter I argued that the most dangerous property of a population of good agents is that they tend to make the same move at the same time. A natural question follows. Why would agents built by different companies in different countries make the same move? Ravi's evening suggests one answer. Somewhere upstream of all those models there may be a shared source of taste, and in 2036 he has just found a fingerprint on it.
 
 I am going to call that shared source **the Funnel**: the preference supply chain of human raters, the vendors who employ them, the judge models that stand in for them, the synthetic data those models produce, and the distillation chains that copy one model's behaviour into another, feeding many labs at once. It is the narrow neck through which a large part of the industry learns how to behave.
 
@@ -46,7 +46,7 @@ The Funnel is not a conspiracy, and no one designed it. It is what you get when 
 
 A modern language model is built in two broad stages. In the first, pretraining, it reads a vast slice of the public internet and learns to predict the next word. That stage gives it knowledge and fluency. Manners come later. A raw pretrained model will continue your sentence, whether or not that helps you.
 
-The second stage, post-training, is where the manners come from. Here a lab shows the model examples of good answers, and then, crucially, asks people to compare answers. Which response is more helpful? Which is more honest? Which refusal is better judged? Those comparisons train a second model, a reward model, whose job is to predict what the raters would prefer. The language model is then tuned to score well with the reward model. The technique is called reinforcement learning from human feedback, and almost everything users mean when they say a chatbot has a "personality" was shaped in this stage.
+The second stage, post-training, is where the manners come from. Here a lab shows the model examples of good answers, and then, crucially, asks people to compare answers. Which response is more helpful, or more honest? Which refusal is better judged? Those comparisons train a second model, a reward model, whose job is to predict what the raters would prefer. The language model is then tuned to score well with the reward model. The technique is called reinforcement learning from human feedback, and almost everything users mean when they say a chatbot has a "personality" was shaped in this stage.
 
 The people doing the comparing are raters. In 2026 many of them work for someone other than the labs: data vendors, firms that recruit, train, test and pay large pools of contractors and sell the resulting judgements to AI companies. They work from written guidelines, the rubrics, which tell them what good looks like. Rubrics have examples. Someone writes the examples.
 
@@ -80,7 +80,7 @@ The pattern recurs. Surge AI, which picked up some of Scale's former customers, 
 
 So there is a small number of large vendors. Each serves several labs. Each employs a workforce that is drawn from the same regions (India, the Philippines, Kenya, Nigeria, Venezuela and the United States feature repeatedly in the reporting) and that moves between vendors as projects open and close. Ravi's career, four vendors and five labs in nine years, is my guess at what an ordinary one will look like.
 
-Here is what nobody knows. **No one has measured how far the human rater pools of different labs overlap.** I looked for any study, audit or disclosure that counts how many of the people shaping one frontier model's preferences also shape another's, directly or through a vendor. I could not find one. I could not find a measurement of how often labs use a rival's model as a judge, apart from Anthropic's allegation above, or of what share of any lab's post-training data was written by another lab's model. Confidentiality is built into every layer: the vendor hides the client, the client hides the vendor, the rater signs an agreement about both. The overlap might be large or small. The point is that the number does not exist.
+Here is what nobody knows. **No one has measured how far the human rater pools of different labs overlap.** I looked for any study or disclosure that counts how many of the people shaping one frontier model's preferences also shape another's, directly or through a vendor. I could not find one. I could not find a measurement of how often labs use a rival's model as a judge, apart from Anthropic's allegation above, or of what share of any lab's post-training data was written by another lab's model. Confidentiality is built into every layer: vendor and client hide each other, and the rater signs an agreement covering both. The overlap might be large or small. The point is that the number does not exist.
 
 There is one suggestive trace. In April 2024 the Guardian floated a hypothesis about why ChatGPT says "delve" so often: the word is more common in Nigerian business English, and Nigeria was one of the places where annotation work had been outsourced. Tom Juzek and Zina Ward tested the broader question in 2025 and found that the overuse of words like "delve" was consistent with feedback training playing a role, though not conclusively, and they could find no evidence that the raw training data, architecture or algorithm explained it. They also complained that the lack of transparency about how models are built made the question very hard to answer. That complaint is the gap this chapter's invention is meant to fill.
 
@@ -133,11 +133,11 @@ There is a precedent for marking data so that its spread can be detected. The BI
 
 ## What the census cannot see
 
-Now the concession I promised. The census measures the Funnel. The common reservoir, the shared internet that every lab pretrains on, lies beyond its reach. Nor will it capture the sameness that comes from labs reading the same papers, hiring from the same few universities and copying the same training recipes. Kim and colleagues found errors correlated even across providers; some of that correlation will survive any amount of rater diversity.
+Back, as promised, to pretraining. The census measures the Funnel. The common reservoir, the shared internet that every lab pretrains on, lies beyond its reach. Nor will it capture the sameness that comes from labs reading the same papers, hiring from the same few universities and copying the same training recipes. Kim and colleagues found errors correlated even across providers; some of that correlation will survive any amount of rater diversity.
 
 There is also a real cost to raters. A census that publishes overlap statistics could, if built carelessly, let a lab discover which vendor's workers also work for its rivals and squeeze them. The hashing and the trusted third party are there for that reason, and so is a rule that the census never publishes a figure computed from fewer than, say, fifty raters. People like Ravi have been invisible in this industry by contract. They should not become visible by accident.
 
-And the census might come back with a boring answer. Perhaps the overlap is small, the judges are diverse, and the sameness lives almost entirely in pretraining. That would be useful to know. It would tell us to spend our diversity budget on data and architecture. At present we are not even in a position to be bored.
+And the census might come back with a boring answer. Perhaps the overlap is small and the sameness lives almost entirely in pretraining. That would be useful to know. It would tell us to spend our diversity budget on data and architecture. At present we are not even in a position to be bored.
 
 > **For researchers**
 >
@@ -147,7 +147,7 @@ And the census might come back with a boring answer. Perhaps the overlap is smal
 
 ---
 
-It is late in Bengaluru, and Ravi's list has seven rows. He has written down every vendor, every year, every client code he can still decode, and next to each a phrase or habit of judgement he remembers arguing for. In the column headed *Who else?* there is still nothing, because there is nowhere he can look it up.
+It is late in Bengaluru, and Ravi's list has seven rows. He has written down every vendor and every client code he can still decode, and next to each a phrase or habit of judgement he remembers arguing for. In the column headed *Who else?* there is still nothing, because there is nowhere he can look it up.
 
 ## Notes
 
