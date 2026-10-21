@@ -156,14 +156,6 @@ Two design rules guard against both. Measured capacity and receipts must be usab
 
 ---
 
-> **For researchers**
->
-> 1. **Measuring meaningful approval.** Design and validate a seeded-error protocol for one high-volume signature workflow (discharge summaries, contract review, code review of agent-written changes). The quantity is the *meaningful-approval rate*: the share of seeded, consequential errors caught, as a function of weekly volume, time of day and position in the queue. Where does the curve bend, and how much does it vary between people?
-> 2. **Interruption policies under a consent budget.** Given an agent that must choose which k of n pending decisions to bring to its principal, compare ranking rules (by stakes, by reversibility, by estimated probability of disagreement) in field or simulated studies. The quantity is *regret per unit of human attention*: expected loss from decisions the human would have changed but never saw, divided by approvals requested.
-> 3. **Capacity-weighted liability.** Build an agent-based or game-theoretic model of a deployer, a vendor and a pool of signers under (a) current liability rules and (b) liability capped at capacity divided by assigned volume. The quantity is the *equilibrium volume per signer* and the resulting rate of harmful errors that pass. Does capacity weighting reduce harm, or merely shift its cost?
-
----
-
 One last thing about Hanne's week. Among the hundred and forty approvals was a survey from the regional health authority, sent through Ottilie, asking for her view on a proposed change to how cardiology outpatients are seen. Ottilie offered, as agents in 2036 do, to answer it for her, "based on what I know of your preferences". Hanne pressed green.
 
 Her answer was counted. So, the authority later reported, were those of eleven thousand other patients, most of them answered the same way. Nobody at the authority could say how many of the patients had read the question.

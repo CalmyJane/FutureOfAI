@@ -80,7 +80,7 @@ A good probability poll of a Swiss canton costs tens of thousands of francs and 
 
 Add it up over a decade and the arithmetic changes who is represented. Let me call the share of public-opinion inputs to a decision that come from simulation the **consultation share**. In 2026 it is close to zero in most governments. By 2036, if prices keep falling, I would expect it to exceed one half in many offices, and to be far higher on small decisions. At that point the person most often consulted about public decisions is the model's citizen: an agreeable, average composite who answers every question and holds no views the training data did not contain.
 
-I looked for any measurement of consultation share, in any country, and could not find one. No government I know of records how often its staff ask a model what the public thinks. That absence is the first thing this chapter asks researchers to fix.
+I looked for any measurement of consultation share, in any country, and could not find one. No government I know of records how often its staff ask a model what the public thinks. That absence is the first thing anyone working on this should fix.
 
 There is a quieter version of the same shift, and chapter 6 already showed it. When Hanne's agent answered the cardiology survey "based on what I know of your preferences", the health authority received something that looked exactly like a real response. The ground truth itself starts to be written by models of the people it is meant to measure.
 
@@ -141,14 +141,6 @@ Democracy lives in the tails. Most of what a public consultation is for is findi
 There is a second, harder answer. The *Digest*'s error could be corrected, because the election happened and the real result came in. Gallup could be checked; so could the *Digest*. A simulation consulted on a decision that never goes to a vote is never checked against anything. Without a ground truth, a forecast goes untested and its error stays unknown. The quota is how the models stay calibrated at all.
 
 My own proposal has a weakness too. The quota assumes there is still a clean real sample to draw. If, by 2036, a large share of people let their agents answer surveys for them, as Hanne did, the statistics office will be sampling simulations without knowing it. Flagging agent answers helps only if the agents say so honestly. I think that flag needs to be a legal duty on the agent's maker, and I think it will be the hardest part of the scheme to enforce.
-
----
-
-> **For researchers**
->
-> 1. **Measuring consultation share.** No government records how often its staff consult a simulated public. Design an audit method (from procurement records, API logs, decision documents) and apply it to one ministry or city. The quantity is the *consultation share*: simulated inputs on public opinion divided by all inputs on public opinion, by policy area and by year. How fast does it grow after a tool is introduced?
-> 2. **A tail-failure benchmark.** Build a benchmark that scores simulators on the subgroups that matter most and are worst served: groups under 5 percent of the population, and respondents more than two standard deviations from their group's mean. The quantity is the *tail gap*: the error in the smallest decile of subgroups divided by the error on the full-population mean. Does post-training raise it, as the KAIST results suggest?
-> 3. **Detecting wind-tunnel optimisation.** Can one tell, from a message and a set of candidate simulators, that it was selected by rehearsal on a particular simulator? Design a field experiment comparing messages chosen by synthetic rehearsal with messages chosen by human pre-testing. The quantity is *rehearsal lift*: the difference in real persuasive effect between the two, overall and in the tails. If it is large, the registry matters; if it is near zero, the label may be enough.
 
 ---
 

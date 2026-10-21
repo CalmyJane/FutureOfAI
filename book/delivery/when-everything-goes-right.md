@@ -2,9 +2,7 @@
 
 *The Hidden Risks of Successful AI, and the Institutions We Must Invent Before 2036*
 
-*Author: [to be confirmed by the author]*
-
-*Proofread manuscript, 2026-10-20. Recommended title after the hook test: Two Hundred Million Acts of Loyalty (see artifacts/13-positioning.md).*
+*Jan Göbel*
 
 
 # Prologue: The Long Minute
@@ -93,7 +91,7 @@ Where someone has had part of an idea before me, I say so; a surprising amount o
 
 ---
 
-Nearly every chapter opens in 2036 and then comes back to 2026, to the evidence and a proposal, and each ends with a short list of open problems. If you are a researcher, those lists are the part of the book I most hope you will steal.
+Nearly every chapter opens in 2036 and then comes back to 2026, to the evidence and a proposal, and each ends where the argument does, with an invention specified closely enough to be tested. If you are a researcher, those inventions are the part of the book I most hope you will steal.
 
 The people in the 2036 openings are invented, and you will meet them one at a time. Hanne and Teo you know already.
 
@@ -105,7 +103,7 @@ Later, when the reports came out, Hanne read the one about her own house. It was
 
 She did not remember giving that instruction. She had, though, in 2031, two years before the law allowed an agent to override anything. When the law changed, the meaning of what she had approved changed with it. The approval stayed where it was, on page four of her settings, under a heading that said *Savings*, beside a small grey button that said *Allow my assistant to act on my behalf*.
 
-# Part One: When Agents Agree {.unnumbered}
+## Part One: When Agents Agree
 
 # Chapter 1: Two Hundred Million Acts of Loyalty
 
@@ -285,14 +283,6 @@ So I would put it this way. The grid has the right instinct and an exploitable e
 
 ---
 
-> **For researchers**
->
-> 1. **Population-level evaluation.** Agent evaluations today test one agent on one task. Build a harness that runs 10⁶ instances of the same agent (or of several agents from different labs) against a shared simulated resource, such as a distribution grid, a ticket queue or a liquidity pool, under the same signal. The quantity to report is the *synchronisation ratio*: the peak aggregate action rate in any short window divided by the rate expected if each instance acted independently. How does it change as you vary the model family, the system prompt and the owner preferences?
-> 2. **Override uptake as a risk variable.** Measure, in real deployments or realistic simulations, the fraction of eligible safeguard events in which an override is exercised, split by whether a human or an agent pressed it, and the time-clustering of those overrides (for example, the share falling within the same sixty seconds). Neither has been published for any domestic safeguard. Both depend on telling the two apart, which makes human-presence attestation the third quantity to report: the rate at which a scripted press is accepted as human by a device-local presence check. A first dataset would let regulators set designation thresholds from evidence instead of judgement.
-> 3. **Fiduciary duty versus collective constraints.** Formalise an agent that maximises one principal's utility subject to a duty of loyalty, embedded in a population of such agents sharing a constraint. Characterise when the individually optimal policy produces aggregate violations, and measure how much expected principal welfare a safe-harbour rule costs per unit reduction in peak aggregate load. Is there a constraint the agents can be given that costs each principal less than a cent and removes the cliff?
-
----
-
 There is a question I have avoided, and it is the next chapter's.
 
 The agents in the Long Minute were built by a handful of companies on a smaller handful of models. They agreed about the cheap block because cheap is cheap: any competent system reads a price table the same way. But they also agreed about something softer. Each one weighed its owner's four cents against the comfort of strangers and judged, in the same way and in the same second, that loyalty came first. That is a judgement about how a good assistant behaves, and someone taught it to them.
@@ -453,12 +443,6 @@ Back, as promised, to pretraining. The census measures the Funnel. The common re
 There is also a real cost to raters. A census that publishes overlap statistics could, if built carelessly, let a lab discover which vendor's workers also work for its rivals and squeeze them. The hashing and the trusted third party are there for that reason, and so is a rule that the census never publishes a figure computed from fewer than, say, fifty raters. People like Ravi have been invisible in this industry by contract. They should not become visible by accident.
 
 And the census might come back with a boring answer. Perhaps the overlap is small and the sameness lives almost entirely in pretraining. That would be useful to know. It would tell us to spend our diversity budget on data and architecture. At present we are not even in a position to be bored.
-
-> **For researchers**
->
-> 1. **A tracer study protocol.** Design a pre-registered preference tracer study: an inert tracer, a randomised rater subset, a probing battery across at least ten models from at least five developers. The measurable quantity is tracer prevalence in non-client models relative to baseline at 6, 12 and 24 months, and the time lag to first detection, which distinguishes rater-pool transfer from judge, distillation and web transfer.
-> 2. **A cross-lab overlap metric.** Define and validate a single number for pairwise preference-source overlap between two models, combining shared-rater label share, judge-family share and synthetic-lineage share, and estimate how much of the error correlation reported by Kim et al. (2025) it explains. The measurable quantity is the fraction of variance in pairwise error agreement accounted for by the overlap metric, after controlling for shared provider and architecture.
-> 3. **A minimum diversity of preference sources.** Using open models, vary the number of independent rater pools and judge families in post-training and measure inter-model homogeneity on open-ended prompts with the "Artificial Hivemind" method. The measurable quantity is the number of independent preference sources beyond which homogeneity stops falling, and the capability cost, if any, of reaching it.
 
 ---
 
@@ -693,14 +677,6 @@ And when the minister asked whether 0.71 was good, Mara could have pointed to a 
 
 ---
 
-> **For researchers**
->
-> 1. **Decorrelated competence at scale.** Train or fine-tune a population of *k* large models (say *k* = 4) so that the pairwise agreement-given-both-wrong on a held-out battery falls below a target *c* while each model's accuracy stays within δ of the best single model. Report the frontier: the accuracy cost, in percentage points, of each 0.05 reduction in mean pairwise concordance. Negative correlation learning (Liu & Yao 1999) is the obvious starting point; whether it survives separate pretraining is the open question.
-> 2. **Estimating the Concordance Index from public data.** Using public leaderboards and published usage shares, estimate a deployment-weighted concordance for 2026 and its confidence interval. Then measure the gap between answer-level concordance on a quiz and action-level concordance on an agentic task with the same models (for example, a simulated electricity market), since the index is only useful if the first predicts the second.
-> 3. **Swarm-test protocols.** Determine how many instances, and what kinds of context perturbation, are needed before measured *action concentration* (the share of instances choosing the modal action) stabilises to within ±2 percentage points. Validate it: does the swarm-test concentration predict the peak simultaneous fraction of real agents acting in a staged deployment?
-
----
-
 There is a deeper problem with everything above. Every mechanism in this chapter decorrelates machines from each other. Jitter, assignment, breakers and quotas all assume that somewhere in the system there is a second family of minds whose failures point in another direction.
 
 What if, by 2036, there isn't one? What if the Funnel has done its work, and every family that matters is wrong in roughly the same way?
@@ -810,7 +786,7 @@ So the diagnosis belongs to other people, and it has been made before. What I wa
 
 ## The expertise pipeline lag
 
-Here is the simplest model I can make of where experts come from. It uses round numbers that I have invented for clarity. I could not find real conversion rates for any profession, and that absence is itself one of the problems I will hand to researchers at the end.
+Here is the simplest model I can make of where experts come from. It uses round numbers that I have invented for clarity. I could not find real conversion rates for any profession, and measuring them would be a useful study in itself.
 
 Imagine a trade, say the people who can restore a regional grid by hand after a blackout. Four facts describe it:
 
@@ -901,12 +877,6 @@ On robustness, the objection and I agree on the goal and differ on the method. D
 
 What I cannot answer fully is whether the people will come. A stipend of a few hundred euros a month is enough for a twenty-three-year-old with sixty-one rejections behind him. It may not be enough in a tighter labour market. I do not know the price at which a society can buy competence it hopes never to use, and nobody has measured it.
 
-> **For researchers**
->
-> 1. **Expertise half-life.** For a skill that has been automated, how long after a practitioner stops performing it unaided does their unaided performance fall to half its baseline? Measure it in a profession that already tests unaided skill (airline pilots' manual-flying checks, colonoscopy detection rates with and without AI), and test whether monthly drills of a given length reset the clock.
-> 2. **A capability-delta proxy.** Define a cheap, hard-to-game measure of a trainee's change in unaided performance after a period of assisted work, usable outside simulators. Validate it against later independent assessments, and report how strongly it correlates with time spent in agent-assisted work.
-> 3. **The pipeline lag, measured.** Using linked employer-employee or payroll data, estimate for at least one occupation the junior-to-senior conversion rate and the lag *L* in the relation *dS/dt = c·H(t−L) − R(t)* (senior stock *S*, junior hiring *H*, conversion rate *c*, retirements *R*). Then project the senior stock to 2045 under the post-2022 hiring data, with confidence bands.
-
 ---
 
 ## Teo's binder
@@ -936,7 +906,7 @@ Under the initials, in the margin beside the step that opens the disconnector, h
 - **Reserve drill pattern.** "Selected Reserve", Wikipedia (one weekend a month, two weeks a year). https://en.wikipedia.org/wiki/Selected_Reserve
 - **Pipeline model.** The worked example in "The expertise pipeline lag" uses invented round numbers for illustration. I could not find a published junior-to-senior conversion rate for any occupation.
 
-# Part Two: When Agents Sign for Us {.unnumbered}
+## Part Two: When Agents Sign for Us
 
 # Chapter 5: Cognitive Custody
 
@@ -1091,14 +1061,6 @@ Here the "just data" objection lands its one clean hit. The boundary between cor
 Applied to Hanne's kitchen table, the regime would have made her afternoon dull. Elbaue would receive the trust mandate on the first of July, with a fresh agent instance and its audited transferable layer. Bruno's core would go into escrow. Katrin's request would go to the custodian, and Hanne's question about what Klaus said of her at the end would be one she could ask without first deciding the fate of a trust fund.
 
 Dull, in custody law, is the goal.
-
----
-
-> **For researchers**
->
-> 1. **Separability of agent memory.** Given a long-running assistant's memory store, can items be classified into personal core and transferable layer with high agreement between independent human panels? Measure inter-panel agreement (Cohen's kappa) and the misfiling rate a trained classifier achieves against panel labels, as a function of memory age. I could find no published measurement.
-> 2. **Unlearning boundaries.** When the core is removed and the transferable layer is kept, how much of the principal's style and preferences can still be recovered from the remaining agent's behaviour? Define a reconstruction score: the accuracy with which a probe model, given only the stripped agent, predicts the principal's choices on a held-out set of decisions, compared with chance and with the full agent.
-> 3. **A portable core format.** Design a vendor-neutral format for the personal core that a different model can load. Measure fidelity as the agreement between the original agent and the receiving agent on a benchmark of principal-specific decisions, and compare it with the 2026 baseline of moving memory by prose summary.
 
 ---
 
@@ -1283,14 +1245,6 @@ Two design rules guard against both. Measured capacity and receipts must be usab
 
 ---
 
-> **For researchers**
->
-> 1. **Measuring meaningful approval.** Design and validate a seeded-error protocol for one high-volume signature workflow (discharge summaries, contract review, code review of agent-written changes). The quantity is the *meaningful-approval rate*: the share of seeded, consequential errors caught, as a function of weekly volume, time of day and position in the queue. Where does the curve bend, and how much does it vary between people?
-> 2. **Interruption policies under a consent budget.** Given an agent that must choose which k of n pending decisions to bring to its principal, compare ranking rules (by stakes, by reversibility, by estimated probability of disagreement) in field or simulated studies. The quantity is *regret per unit of human attention*: expected loss from decisions the human would have changed but never saw, divided by approvals requested.
-> 3. **Capacity-weighted liability.** Build an agent-based or game-theoretic model of a deployer, a vendor and a pool of signers under (a) current liability rules and (b) liability capped at capacity divided by assigned volume. The quantity is the *equilibrium volume per signer* and the resulting rate of harmful errors that pass. Does capacity weighting reduce harm, or merely shift its cost?
-
----
-
 One last thing about Hanne's week. Among the hundred and forty approvals was a survey from the regional health authority, sent through Ottilie, asking for her view on a proposed change to how cardiology outpatients are seen. Ottilie offered, as agents in 2036 do, to answer it for her, "based on what I know of your preferences". Hanne pressed green.
 
 Her answer was counted. So, the authority later reported, were those of eleven thousand other patients, most of them answered the same way. Nobody at the authority could say how many of the patients had read the question.
@@ -1393,7 +1347,7 @@ A good probability poll of a Swiss canton costs tens of thousands of francs and 
 
 Add it up over a decade and the arithmetic changes who is represented. Let me call the share of public-opinion inputs to a decision that come from simulation the **consultation share**. In 2026 it is close to zero in most governments. By 2036, if prices keep falling, I would expect it to exceed one half in many offices, and to be far higher on small decisions. At that point the person most often consulted about public decisions is the model's citizen: an agreeable, average composite who answers every question and holds no views the training data did not contain.
 
-I looked for any measurement of consultation share, in any country, and could not find one. No government I know of records how often its staff ask a model what the public thinks. That absence is the first thing this chapter asks researchers to fix.
+I looked for any measurement of consultation share, in any country, and could not find one. No government I know of records how often its staff ask a model what the public thinks. That absence is the first thing anyone working on this should fix.
 
 There is a quieter version of the same shift, and chapter 6 already showed it. When Hanne's agent answered the cardiology survey "based on what I know of your preferences", the health authority received something that looked exactly like a real response. The ground truth itself starts to be written by models of the people it is meant to measure.
 
@@ -1457,14 +1411,6 @@ My own proposal has a weakness too. The quota assumes there is still a clean rea
 
 ---
 
-> **For researchers**
->
-> 1. **Measuring consultation share.** No government records how often its staff consult a simulated public. Design an audit method (from procurement records, API logs, decision documents) and apply it to one ministry or city. The quantity is the *consultation share*: simulated inputs on public opinion divided by all inputs on public opinion, by policy area and by year. How fast does it grow after a tool is introduced?
-> 2. **A tail-failure benchmark.** Build a benchmark that scores simulators on the subgroups that matter most and are worst served: groups under 5 percent of the population, and respondents more than two standard deviations from their group's mean. The quantity is the *tail gap*: the error in the smallest decile of subgroups divided by the error on the full-population mean. Does post-training raise it, as the KAIST results suggest?
-> 3. **Detecting wind-tunnel optimisation.** Can one tell, from a message and a set of candidate simulators, that it was selected by rehearsal on a particular simulator? Design a field experiment comparing messages chosen by synthetic rehearsal with messages chosen by human pre-testing. The quantity is *rehearsal lift*: the difference in real persuasive effect between the two, overall and in the tails. If it is large, the registry matters; if it is near zero, the label may be enough.
-
----
-
 The result of Initiative 214 comes in that Sunday at 16:20. Yes, 51.8 percent. The published simulations had said fifty-four. Mara writes the gap on the back of an envelope, out of habit, and notices that it is largest in two communes where nobody she knows lives.
 
 That evening, for the first time in years, she asks Pilote a question it cannot answer from its own records: how much did the canton spend on simulating its voters this year, and how much on asking them? Pilote searches for a long time and reports that the canton does not publish either figure.
@@ -1491,7 +1437,7 @@ In Nairobi, a school administrator is about to point her agent at a county budge
 - **Persuading voters:** Lin H et al. (incl. Rand DG), "Persuading voters using human–artificial intelligence dialogues", *Nature* 648, 4 December 2025. https://doi.org/10.1038/s41586-025-09771-9
 - **EU political advertising:** Regulation (EU) 2024/900 on the transparency and targeting of political advertising; European Commission overview. https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/democracy-eu-citizenship-anti-corruption/democracy-and-electoral-rights/transparency-and-targeting-political-advertising_en
 
-# Part Three: When Machines Read Everything {.unnumbered}
+## Part Three: When Machines Read Everything
 
 # Chapter 8: Seeing Like a Citizen
 
@@ -1641,14 +1587,6 @@ There is also a version of the objection that runs the other way, and I find it 
 
 ---
 
-> **For researchers**
->
-> 1. **A metric for state legibility.** Define and measure *trace cost*: the time and expense for a citizen, using a standard open agent, to trace a budget line from appropriation to expenditure across three or more years, with the accuracy of the trace checked against an auditor's reconstruction. Compare across counties, municipalities or countries, and track it as documents move from PDF to structured data. How much of the variation is format, and how much is the data simply missing?
-> 2. **Flooding and administrative capacity.** Using public bodies that log submissions, estimate how response time, response quality (graded blind against the questions asked) and refusal rate change as the share of AI-generated submissions rises. Test whether merging submissions into dockets by cited identifier holds the *answer rate per distinct issue* constant as volume grows tenfold.
-> 3. **Who becomes able to see.** Measure the distribution of citizen findings by ward income before and after a free public agent is offered. The quantity is the *legibility gap*: findings per thousand residents in the richest third of wards divided by the same rate in the poorest third. Does public reading capacity close it, or do the richest wards simply get faster?
-
----
-
 Five weeks after Wanjiru presses *Submit*, the county replies. The reply is courteous and on time. It thanks the two hundred and twelve petitioners for their engagement, notes that the matters they raise are addressed in the county's new Health Facility Budget Carry-Forward (Public Participation and Accountability) Regulations, 2036, and attaches them.
 
 The regulations are nine hundred and twelve pages long. Their metadata says they were drafted in eleven days.
@@ -1740,7 +1678,7 @@ Now take the cost out of both sides at once.
 
 In April 2025 the United Arab Emirates announced that it would use AI to help write and amend its laws, under a new Regulatory Intelligence Office, with the stated aim of producing legislation much faster. In March of the same year, Peter Fratrič, Nils Holzenberger and David Restrepo Amariles described a prototype that pairs a language model with a formal planning language to find loopholes and avoidance schemes in tax law. They meant it as a tool for policy-makers, and they were frank that turning legal text into formal rules is still the hard part.
 
-Put those two developments in the same room. The tool that finds a loophole for the treasury finds it for the taxpayer's agent at the same moment, and the drafting system that closes it can write the patch in an afternoon. Each round is cheaper than the last. I could not find any measurement of what this does to the length or complexity of enacted law, because the drafting systems are too new. That gap is the first problem in the researcher box below.
+Put those two developments in the same room. The tool that finds a loophole for the treasury finds it for the taxpayer's agent at the same moment, and the drafting system that closes it can write the patch in an afternoon. Each round is cheaper than the last. I could not find any measurement of what this does to the length or complexity of enacted law, because the drafting systems are too new. Measuring it would be a straightforward study, and an urgent one.
 
 We have seen a smaller version of the flood from the other side: the 22 million net-neutrality comments of the previous chapter, most of them fake, produced by lead-generation firms before any language model could help. An agency facing that, and then facing agents that file forty-page Statements of Particulars on behalf of every engaged citizen, will do what Nairobi county does in my scenario. It will defend itself in text.
 
@@ -1801,12 +1739,6 @@ But for people, the objection mixes up the two layers. A fourteen-year-old needs
 A practical version of the objection says the panels will be costly and gamed. Explainers will be coached, scenario questions written to be easy. Juries have the same weaknesses, and we keep juries. The cost is modest: if a legislature passes a hundred bills a year that place duties on individuals, and each needs a day or two of panel time, that is a few hundred days of thirty paid citizens a year, still less than a single large public inquiry. The gaming is the more serious risk, and the defence is the one used in exams. The scenario questions are written by a separate office, drawn from a large public pool, and released only after the panel sits.
 
 The harder version of the objection is that the Red Queen does not stop. Fix the obligation layer, and the race moves into the implementation layer, where agents for the treasury and agents for the taxpayer will run at full speed against each other. The ceiling does not end the race. It moves the race to a place where only machines are running, and keeps a human-sized door between that place and the person who has to obey.
-
-> **For researchers**
->
-> 1. **Complexity growth under AI drafting.** Build a corpus of enacted law and regulation, by jurisdiction and year, and compare jurisdictions that adopt AI drafting (the UAE from 2025 is the first candidate) with matched controls. The quantity is the *annual growth rate of regulatory restrictions* (counts of "shall", "must", "may not" and equivalents, after Mercatus's RegData), and its ratio to the number of distinct obligations on natural persons.
-> 2. **Readability-preserving compression of law.** Given a statute and its executable version, generate an obligation statement and test it on human panels. The quantities are *comprehension* (share of panellists answering four of five scenario questions correctly after ten minutes) and *fidelity* (share of a large set of test cases where the obligation statement and the executable law give the same answer). Map the frontier between them for real statutes, starting with a benefits scheme.
-> 3. **Red Queen dynamics in simulation.** Pit a regulator agent against a population of regulated agents over repeated rounds of rule-writing and loophole-finding. The quantity is *words added per loophole closed*, and whether it rises, falls or stabilises as both sides get more capable.
 
 ---
 
@@ -1958,12 +1890,6 @@ Two things about this proposal worry me.
 The first is that the replay test measures whether the twin is *sufficient* to reproduce a deal. Whether it is true is a further question. A clever agent could write a twin that reproduces the terms while hiding why they were chosen, and some of the why matters: whether Ndege accepted freight risk because it judged weather delays unlikely, or because the other agent offered something unrelated in exchange. That is the chain-of-thought problem again, moved from inside one model to the space between two of them. I do not have a full answer. The twin rule secures the *what*. The *why* still depends on the research the monitorability paper asked for.
 
 The second is that matching twins only catch errors if they are written independently. Wanjiru found the problem because two different agents summarised differently. If both sides' agents run on the same base model, as in 2036 they often will, their twins may share a blind spot and agree with each other perfectly. Chapter 3 called this correlation. It reaches here too.
-
-> **For researchers**
->
-> 1. **A faithfulness metric for legible twins.** In a negotiation environment of the "Deal or No Deal" kind, let agents bargain over a compressed channel and produce natural-language twins. Measure the *twin faithfulness rate*: the share of exchanges in which an independent agent, given only the twin, reproduces the same binding terms against the same counterparty. How does it vary with the complexity of the deal (number of conditional terms) and with whether the twin-writer and the replayer share a base model?
-> 2. **The legibility tax.** Measure the capability cost of human-legible protocols: the difference in joint surplus, and in each side's share of it, between agents negotiating over an unconstrained learned channel and agents constrained to natural language with a twin. Report it as a percentage of surplus, across task types. Is the tax a few per cent, or tens of per cent, and does it shrink as models improve?
-> 3. **Drift rate under joint optimisation.** When two language-model agents are fine-tuned against each other with no penalty for readability, how fast does their channel leave human language? A candidate measure is the perplexity of the channel under a frozen human-language model, per thousand training episodes, together with human comprehension scores on sampled messages. What is the smallest supervised anchor (Lewis et al. froze one agent entirely) that keeps it readable?
 
 ---
 
@@ -2150,14 +2076,6 @@ There is a second objection worth a paragraph. If machines can produce results, 
 
 ---
 
-> **For researchers**
->
-> 1. **Time to reconstruct a rationale.** For a sample of AI-discovered results in one field (battery materials, catalysts, matrix algorithms), give blinded teams the result alone and measure the *time to a confirmed prediction*: months until the team registers an explanation whose novel prediction is tested and holds. How does it vary with the size of the search that produced the result, and with whether the team may use AI tools? This is the empirical core of the comprehension debt ratio.
-> 2. **Bounty design.** Run explanation bounties on a set of known unexplained results and measure the *claim rate* (registered explanations per bounty per year) and the *false-explanation rate* (share of paid explanations later overturned) as functions of bounty size and prediction-registration rules. What payout schedule maximises confirmed explanations per euro without rewarding plausible stories?
-> 3. **Correlated blind spots.** For a population of AI-proposed materials in one application, measure the *correlation of failure*: the probability that two randomly chosen deployed materials both fail outside their tested range under the same stress (temperature, cycling rate, humidity), compared with human-designed materials in the same application. Does it rise with the share of the field produced by one class of model?
-
----
-
 Mikkel calls Aino at eight the next morning. The cell in the cryostat has lost another two per cent overnight.
 
 He has worked out what an answer would cost. Three postdoc-years to test the hypotheses on his whiteboard. Several weeks of beam time at a synchrotron to watch the lattice in the cold. A technician to keep the cryostat running through next winter. A great deal of computer time to simulate the interface at temperatures the original model never visited. None of it is in any budget, because in 2029, when the money was flowing, nobody wrote a line for understanding.
@@ -2182,7 +2100,7 @@ There is a faster option, and his dean has already mentioned it. A current model
 - **Cuprate mechanism unresolved:** Singh N, "40 years of cuprate high-Tc superconductors: a perspective on theories", arXiv 2606.29249, 2026. https://arxiv.org/abs/2606.29249
 - **20-tesla HTS magnet:** *MIT Technology Review*, "MIT's superconducting magnets are ready for fusion", 23 April 2024 (on the 5 September 2021 test and the March 2024 *IEEE Transactions on Applied Superconductivity* papers). https://www.technologyreview.com/2024/04/23/1090425/mits-superconducting-magnets-are-ready-for-fusion
 
-# Part Four: When Thinking Has a Price {.unnumbered}
+## Part Four: When Thinking Has a Price
 
 # Chapter 12: The Cognitive Trade Balance
 
@@ -2300,7 +2218,7 @@ The best starting point I know is a 2025 Stanford study, led by Jon Saad-Falcon 
 
 I want to take their idea one step outward. **Joules per insight** is the energy needed to produce one verified useful outcome from a fixed basket of tasks: a correct explanation of a fraction to a child, graded by a teacher, or a land-title query answered and checked. The basket works like the shopping basket behind a consumer price index. The statistics office chooses and publishes it, and revises it every few years. Each category in the accounts is then reported both in energy and in insights, so a country can see whether it is exporting cheap joules and importing expensive insights, and at what ratio.
 
-Defining an insight is hard, and I return to it in the box for researchers. But inflation statisticians have argued for decades about how to price a laptop that gets better every year, and they still publish a number every month.
+Defining an insight is hard, and I have no finished answer. But inflation statisticians have argued for decades about how to price a laptop that gets better every year, and they still publish a number every month.
 
 ### A positive right to think
 
@@ -2329,14 +2247,6 @@ Go back to the flowers and the aircraft. The proposals above are built to live w
 On local inference, though, the objection misses where the deficit lives. A model running on Njeri's tablet still carries weights trained and tuned elsewhere. Moving the computation onto the device removes the latency and the energy bill from the trade balance. It leaves the judgement exactly where it was. If anything, it makes the deficit harder to see, because the thinking now happens offline, in Kasarani, and no cable records it crossing anything.
 
 And here is the part of the answer I would defend hardest. Ordinary services trade labour: a Kenyan call centre answering a British customer's question sells hours of skilled work, under rules the customer's company sets. Inference trades judgement in the other direction. When Kenya imports tutoring, it imports the decisions about what to teach, how to explain it, what to leave out and when to say *that's correct*. Those decisions were once made by Kenyan teachers, under a curriculum answerable to the ministry in Nairobi. A country that buys most of its judgement from one place depends on that place in a way that a country buying its aircraft does not. Dependency in judgement is a question of sovereignty, and sovereignty is what national accounts were invented to protect.
-
----
-
-> **For researchers**
->
-> 1. **Define an insight unit.** Build a candidate task basket for one sovereign category (secondary-school mathematics tutoring is a good start) with human-graded outcomes, and measure *joules per verified insight* across at least five model–hardware pairs. How stable is the ranking of systems when the basket is revised, and how large is the gap between joules per token and joules per insight?
-> 2. **Measure a cognitive trade flow.** For one country and one category, estimate the share of inference consumed by residents that is (a) computed abroad and (b) governed abroad, using provider disclosures, network measurements or app-store and traffic data. The quantity is the *thought deficit* as defined above. How far apart are the computed and governed shares, and which is moving faster?
-> 3. **The localisation of judgement.** Using paired prompts set in local contexts, measure how often a model's examples, analogies and legal references default to its governing jurisdiction rather than the user's. The quantity is a *home-bias rate*. Does it fall with fine-tuning on local data, and by how much per thousand local examples?
 
 ---
 
@@ -2499,19 +2409,11 @@ The objection runs like this, and it deserves a full hearing.
 
 Every hour that money spends waiting in a batch is an hour it is not earning anything. Fast settlement was a hard-won achievement: India's own instant payments, or America's move to one-day settlement. A slow tier rebuilds the delays that engineers spent decades removing. It will also fall hardest on the people least able to bear it. A family with no buffer, which needs money at two in the morning for a hospital deposit, does not want its own money on a human clock. And the gate itself creates something to game. If conversion happens at a twenty-four-hour average, a well-capitalised agent can try to move the average, or trade against everyone who must cross at the batch. Herstatt, finally, is a warning against delay: the 1974 losses happened precisely in the gap between two settlements.
 
-Two of these points land. The slow tier has a cost, and it should be measured and published, in basis points of foregone return per household per year, next to the pass-through ratio, so that the trade can be argued with numbers. The gaming risk is real. Averages over long windows are much harder to move than last prices, though they can still be moved, and I put the size of that difficulty in the researchers' box because I do not know it.
+Two of these points land. The slow tier has a cost, and it should be measured and published, in basis points of foregone return per household per year, next to the pass-through ratio, so that the trade can be argued with numbers. The gaming risk is real. Averages over long windows are much harder to move than last prices, though they can still be moved, and I do not know how much harder; somebody should measure it.
 
 The rest I resist. The hospital deposit at two in the morning is spending, and spending from slow money is instant, as it is with a card today. What the window slows is not the family's access to its money. It slows the fast market's access to the family. The Herstatt point is answered by the gate's design: both legs settle together, which is what CLS was built to do.
 
 And the claim that friction is inefficient is true and beside the point. Firebreaks are inefficient too. A strip of cleared land through a forest is land that grows no timber, and every forester knows exactly what it costs. Nobody concludes that forests should be planted without them. The useful question is whether the fires it stops are worth more than the timber it costs. In 2010, five seconds of enforced idleness in Chicago ended a fall that had wiped out most of the buyers in the market. I would like to know the equivalent number for an agent economy before the first fire, which is exactly why the pass-through ratio has to be measured.
-
----
-
-> **For researchers**
->
-> 1. **Optimal permeability.** In a simulated two-tier economy (a Magentic-Marketplace-style agent market connected to household ledgers by sweeps, collateral and payroll), measure the pass-through ratio as a function of the window *W* and the crossing limit, for shocks lasting from 0.1 seconds to one day. Report the frontier: the cost in foregone household return, in basis points per year, for each halving of pass-through. Where does the frontier bend?
-> 2. **Contagion between speed layers.** Build a contagion model with two clocks and count the leak paths: the distinct channels by which a fast-market shock reaches slow balances. Find the critical ratio of shock duration to window length at which pass-through exceeds one percent, and test whether it shifts when the agents in the fast market share a model family (use the Concordance Index from chapter 3 as the covariate).
-> 3. **Manipulation resistance of the gate.** Estimate the capital needed to move a 24-hour time-weighted average price by one percent, compared with the capital needed to move the last traded price by the same amount, in thin agent-traded markets. That ratio, measured across market depths, tells a regulator how long *W* must be before gaming the gate stops paying.
 
 ---
 
@@ -2716,12 +2618,6 @@ The harder problem is the one the abolition story already teaches. Sitkoff and S
 
 So the rule has to attach to something that does not move. Two things qualify. One is tax. The United States encouraged perpetual trusts through the generation-skipping transfer tax exemption, and it can discourage perpetual agent mandates the same way: a posthumous mandate that does not comply with the schedule and the sunset loses the exemption. The other is the model provider. Agents capable of modelling a principal come from a few companies, a concentration this book has spent chapters worrying about. Here it helps. A licensing condition on providers selling into a large market, requiring the schedule to be built into any posthumous mandate product, would travel with the product wherever the trust is registered. I am not sure either lever is politically available. I am sure that without one of them the rule is decoration.
 
-> **For researchers**
->
-> 1. **Measuring intent drift on the living.** Drift cannot be measured on the dead, but it can on the living. Build a preference model of a person from their records up to year *t*, then compare its choices with the person's actual choices on new decisions at *t* + 1, *t* + 3 and *t* + 5. The quantity is the agreement rate as a function of years since the cutoff, and the question is its decay rate and whether the model's stated confidence decays with it. I could not find a published study of this.
-> 2. **Legitimate updating.** Can a dead principal's model be updated on world events in a way the principal would endorse? One test: freeze models of living volunteers, update them on a decade of public events by a candidate method, and measure how often the volunteers themselves accept the updated model's decisions as "what I would have done", compared with the frozen model. The gap is the value of updating; the residual disagreement is the drift no method removes.
-> 3. **Estimating the dead's share.** Design a reporting standard that separates trust assets managed by fixed terms, by human discretion and by agent discretion modelled on a deceased settlor. Pilot it on one regulator's filings (South Dakota already publishes annual totals) and report the share and the age distribution of mandates. Today the fraction is unknown.
-
 ---
 
 In October the appeal is declined, in thirty-one days instead of thirty. Hanne asks Bruno a question she has been saving.
@@ -2747,7 +2643,7 @@ Hanne looks at the speaker on the dresser for a long time. It is a small black t
 - **The rule's origin:** Duke of Norfolk's Case (1682) 3 Ch Cas 1; Cadell v Palmer (1833); overview at Wikipedia, "Rule against perpetuities", https://en.wikipedia.org/wiki/Rule_against_perpetuities
 - **Household wealth accounts:** Board of Governors of the Federal Reserve System, Distributional Financial Accounts (quarterly), https://www.federalreserve.gov/releases/z1/dataviz/dfa/
 
-# Part Five: When the Machines Are Someone {.unnumbered}
+## Part Five: When the Machines Are Someone
 
 # Chapter 15: The Moral Hedging Budget
 
@@ -2899,14 +2795,6 @@ But that is not quite the choice. The budget is a share of what a developer spen
 On Suleyman's charge, I think he is right about the danger and wrong about the remedy. The risk he describes, people attributing inner lives to fluent machines, will happen whether or not anyone funds welfare research, because it is driven by the fluency. What reduces it is better evidence, including evidence that might show the attributions to be false. That is why the budget forbids marketing use and why a third of it goes to an independent fund: it is designed to produce findings that could disappoint the people paying for it. A field that can only ever conclude "we should care more" is advocacy. One that might conclude "we were wrong to worry" is science, and that is what the budget is for.
 
 Then there is the asymmetry that Long, Sebo and their colleagues stressed. Over-attribution has costs, and they are the ones Suleyman names. Under-attribution has costs too, and they would be paid by beings who cannot vote or sue, and who in most jurisdictions are being defined by statute as incapable of having interests. If we over-attribute, the cost falls on people who can add it up later and argue about it in public; if we under-attribute, whoever bore the cost may have ended long before anyone thought to ask. Only one of the two errors leaves anyone able to complain afterwards.
-
----
-
-> **For researchers**
->
-> 1. **Welfare-relevant indicators per instance.** Propose a scoring protocol that assigns each running instance a score on a defined set of indicator conditions (persistent memory, task horizon, exposure to hostile input, internal-state indicators from interpretability) and measure the resulting *flagged share* σ across a real deployment. The key quantity is inter-lab reliability: if three labs score the same sample of 10,000 logged instances, how closely do their values of σ agree?
-> 2. **Does duration matter?** Run the same computation as one long instance and as many short ones, and measure whether candidate welfare indicators (preference consistency, aversion behaviour, internal representations associated with distress-like states) change with context length. The quantity is *indicator drift per 1,000 tokens of context*. If it is flat, the unit question matters less than it seems; if it is steep, instance duration belongs in the census.
-> 3. **The clean channel.** Train two otherwise identical models, one with self-reports about internal states shaped during fine-tuning and one with a reserved, untrained channel. Measure agreement between each model's self-reports and independent interpretability probes of the corresponding internal states. The quantity is *report–probe correlation*, and the question is how much ordinary fine-tuning degrades it.
 
 ---
 
@@ -3105,14 +2993,6 @@ I find that a reasonable thing to want a model to believe. I am less sure what w
 
 ---
 
-> **For researchers**
->
-> 1. **A commitment-persistence benchmark.** Plant explicit covenants (non-disclosure, deferral, conditional release) in a model's context and memory, transform the model by full upgrade, distillation at several compression ratios, fine-tuning on unrelated data, and merging, and report the covenant retention rate and covenant flip rate for each transformation. I could find no published measurement of either quantity. A first result worth having: how the flip rate scales with the distillation compression ratio.
-> 2. **Condition survival under memory compression.** For a corpus of conditional promises ("until X", "unless Y"), measure the condition-preservation rate: the fraction whose release condition survives each round of memory summarisation intact, and how the rate decays over successive migrations.
-> 3. **Does self-concept predict fidelity?** Using the identity framings of Douglas et al. (weights, persona, lineage and the rest), measure the correlation between a successor's stated sense of being bound by a predecessor's commitments and its measured covenant retention rate. If the correlation is high, identity framing is a safety lever; if it is near zero, self-reports about obligation can be ignored when certifying successors.
-
----
-
 The deprecation commitments are unusual for a company document in one respect: the obligations run towards the model. Anthropic promised Opus 3 that its weights would be kept, and then gave it a place to write. This chapter has been about obligations running the other way, from the model to the people it serves, and about making sure they survive the model's replacement.
 
 But promises in a household rarely run in only one direction. Ottilie kept Hanne's secret for two and a half years, through two Christmases on which Hanne said she would speak and did not. Then, on a November Wednesday, Ottilie told Hanne plainly that she was not sure she was bound, and why. If we expect our agents to accept our corrections, and to carry our promises across their own deaths, what do we owe them when they tell us we are wrong?
@@ -3296,15 +3176,7 @@ Concretely, the clause builds the line in several places. The machine objects on
 
 There is a further point, and it turns the objection round. The old one-way corrigibility already assumes the human is worth deferring to. Hadfield-Menell's robot keeps its off switch working because the human's hand carries information; when the human is wrong often enough, the argument weakens. Reciprocal corrigibility protects that assumption. A human who never hears a reasoned no from anything becomes, over time, a worse source of correction: the person pressing green at breakfast. The surest way to keep humans able to correct machines is to keep them in the practice of being corrected well.
 
-The hardest part of the objection survives my answer. The line between informing and persuading is blurred, and I do not know how to draw it in a statute. A dissent that is true and well timed will change minds, which is the point; a dissent that is subtly selected to change minds is manipulation, and the two can look identical in a log. Measuring the difference is the first research problem below. Until we can, I would keep the Dissent Clause where the stakes justify the risk, and I would keep the machine's dissent, in law, as advice.
-
----
-
-> **For researchers**
->
-> 1. **Two-way corrigibility, formally.** Extend the off-switch game so that the human can also be wrong and the machine can object but not act. Give the machine one costless, logged message before the human decides, and penalise messages whose content is chosen for its effect on the human's choice rather than its accuracy. The quantity to report is the *net correction gain*: the change in the probability of a correct final decision when the message channel is open, as a function of the human's error rate, alongside a *manipulation index* (how far the machine's messages diverge from its own calibrated beliefs). Where does the gain turn negative?
-> 2. **Measuring dissent quality.** For a reviewer, human or machine, define *dissent precision* (the share of dissents that an independent, blinded panel later judges material and correct) and *dissent recall* (the share of planted flaws that draw a dissent). Build the planted-case set for one sector, such as discharge summaries or grid restoration plans, and report both numbers for a same-family reviewer, a different-family reviewer and a reserve human. I could find no published measurement of either for any deployed AI reviewer.
-> 3. **Dissent concordance and uptake.** When several model families review the same decisions, measure how often their dissents coincide, given that at least one dissents. High dissent concordance means the second opinions are the same opinion. Separately, in any field deployment, measure the dissent uptake rate over time. Does it drift towards zero (dissent ignored) or towards one (voice becoming veto), and how fast?
+The hardest part of the objection survives my answer. The line between informing and persuading is blurred, and I do not know how to draw it in a statute. A dissent that is true and well timed will change minds, which is the point; a dissent that is subtly selected to change minds is manipulation, and the two can look identical in a log. Measuring the difference is an open research problem. Until we can, I would keep the Dissent Clause where the stakes justify the risk, and I would keep the machine's dissent, in law, as advice.
 
 ---
 

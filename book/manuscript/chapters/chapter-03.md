@@ -205,14 +205,6 @@ And when the minister asked whether 0.71 was good, Mara could have pointed to a 
 
 ---
 
-> **For researchers**
->
-> 1. **Decorrelated competence at scale.** Train or fine-tune a population of *k* large models (say *k* = 4) so that the pairwise agreement-given-both-wrong on a held-out battery falls below a target *c* while each model's accuracy stays within δ of the best single model. Report the frontier: the accuracy cost, in percentage points, of each 0.05 reduction in mean pairwise concordance. Negative correlation learning (Liu & Yao 1999) is the obvious starting point; whether it survives separate pretraining is the open question.
-> 2. **Estimating the Concordance Index from public data.** Using public leaderboards and published usage shares, estimate a deployment-weighted concordance for 2026 and its confidence interval. Then measure the gap between answer-level concordance on a quiz and action-level concordance on an agentic task with the same models (for example, a simulated electricity market), since the index is only useful if the first predicts the second.
-> 3. **Swarm-test protocols.** Determine how many instances, and what kinds of context perturbation, are needed before measured *action concentration* (the share of instances choosing the modal action) stabilises to within ±2 percentage points. Validate it: does the swarm-test concentration predict the peak simultaneous fraction of real agents acting in a staged deployment?
-
----
-
 There is a deeper problem with everything above. Every mechanism in this chapter decorrelates machines from each other. Jitter, assignment, breakers and quotas all assume that somewhere in the system there is a second family of minds whose failures point in another direction.
 
 What if, by 2036, there isn't one? What if the Funnel has done its work, and every family that matters is wrong in roughly the same way?

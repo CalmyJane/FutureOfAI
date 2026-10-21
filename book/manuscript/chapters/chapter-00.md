@@ -84,7 +84,7 @@ Where someone has had part of an idea before me, I say so; a surprising amount o
 
 ---
 
-Nearly every chapter opens in 2036 and then comes back to 2026, to the evidence and a proposal, and each ends with a short list of open problems. If you are a researcher, those lists are the part of the book I most hope you will steal.
+Nearly every chapter opens in 2036 and then comes back to 2026, to the evidence and a proposal, and each ends where the argument does, with an invention specified closely enough to be tested. If you are a researcher, those inventions are the part of the book I most hope you will steal.
 
 The people in the 2036 openings are invented, and you will meet them one at a time. Hanne and Teo you know already.
 

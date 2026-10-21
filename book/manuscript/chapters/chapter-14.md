@@ -180,12 +180,6 @@ The harder problem is the one the abolition story already teaches. Sitkoff and S
 
 So the rule has to attach to something that does not move. Two things qualify. One is tax. The United States encouraged perpetual trusts through the generation-skipping transfer tax exemption, and it can discourage perpetual agent mandates the same way: a posthumous mandate that does not comply with the schedule and the sunset loses the exemption. The other is the model provider. Agents capable of modelling a principal come from a few companies, a concentration this book has spent chapters worrying about. Here it helps. A licensing condition on providers selling into a large market, requiring the schedule to be built into any posthumous mandate product, would travel with the product wherever the trust is registered. I am not sure either lever is politically available. I am sure that without one of them the rule is decoration.
 
-> **For researchers**
->
-> 1. **Measuring intent drift on the living.** Drift cannot be measured on the dead, but it can on the living. Build a preference model of a person from their records up to year *t*, then compare its choices with the person's actual choices on new decisions at *t* + 1, *t* + 3 and *t* + 5. The quantity is the agreement rate as a function of years since the cutoff, and the question is its decay rate and whether the model's stated confidence decays with it. I could not find a published study of this.
-> 2. **Legitimate updating.** Can a dead principal's model be updated on world events in a way the principal would endorse? One test: freeze models of living volunteers, update them on a decade of public events by a candidate method, and measure how often the volunteers themselves accept the updated model's decisions as "what I would have done", compared with the frozen model. The gap is the value of updating; the residual disagreement is the drift no method removes.
-> 3. **Estimating the dead's share.** Design a reporting standard that separates trust assets managed by fixed terms, by human discretion and by agent discretion modelled on a deceased settlor. Pilot it on one regulator's filings (South Dakota already publishes annual totals) and report the share and the age distribution of mandates. Today the fraction is unknown.
-
 ---
 
 In October the appeal is declined, in thirty-one days instead of thirty. Hanne asks Bruno a question she has been saving.

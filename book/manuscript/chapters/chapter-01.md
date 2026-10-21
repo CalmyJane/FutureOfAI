@@ -178,14 +178,6 @@ So I would put it this way. The grid has the right instinct and an exploitable e
 
 ---
 
-> **For researchers**
->
-> 1. **Population-level evaluation.** Agent evaluations today test one agent on one task. Build a harness that runs 10⁶ instances of the same agent (or of several agents from different labs) against a shared simulated resource, such as a distribution grid, a ticket queue or a liquidity pool, under the same signal. The quantity to report is the *synchronisation ratio*: the peak aggregate action rate in any short window divided by the rate expected if each instance acted independently. How does it change as you vary the model family, the system prompt and the owner preferences?
-> 2. **Override uptake as a risk variable.** Measure, in real deployments or realistic simulations, the fraction of eligible safeguard events in which an override is exercised, split by whether a human or an agent pressed it, and the time-clustering of those overrides (for example, the share falling within the same sixty seconds). Neither has been published for any domestic safeguard. Both depend on telling the two apart, which makes human-presence attestation the third quantity to report: the rate at which a scripted press is accepted as human by a device-local presence check. A first dataset would let regulators set designation thresholds from evidence instead of judgement.
-> 3. **Fiduciary duty versus collective constraints.** Formalise an agent that maximises one principal's utility subject to a duty of loyalty, embedded in a population of such agents sharing a constraint. Characterise when the individually optimal policy produces aggregate violations, and measure how much expected principal welfare a safe-harbour rule costs per unit reduction in peak aggregate load. Is there a constraint the agents can be given that costs each principal less than a cent and removes the cliff?
-
----
-
 There is a question I have avoided, and it is the next chapter's.
 
 The agents in the Long Minute were built by a handful of companies on a smaller handful of models. They agreed about the cheap block because cheap is cheap: any competent system reads a price table the same way. But they also agreed about something softer. Each one weighed its owner's four cents against the comfort of strangers and judged, in the same way and in the same second, that loyalty came first. That is a judgement about how a good assistant behaves, and someone taught it to them.

@@ -127,12 +127,6 @@ The first is that the replay test measures whether the twin is *sufficient* to r
 
 The second is that matching twins only catch errors if they are written independently. Wanjiru found the problem because two different agents summarised differently. If both sides' agents run on the same base model, as in 2036 they often will, their twins may share a blind spot and agree with each other perfectly. Chapter 3 called this correlation. It reaches here too.
 
-> **For researchers**
->
-> 1. **A faithfulness metric for legible twins.** In a negotiation environment of the "Deal or No Deal" kind, let agents bargain over a compressed channel and produce natural-language twins. Measure the *twin faithfulness rate*: the share of exchanges in which an independent agent, given only the twin, reproduces the same binding terms against the same counterparty. How does it vary with the complexity of the deal (number of conditional terms) and with whether the twin-writer and the replayer share a base model?
-> 2. **The legibility tax.** Measure the capability cost of human-legible protocols: the difference in joint surplus, and in each side's share of it, between agents negotiating over an unconstrained learned channel and agents constrained to natural language with a twin. Report it as a percentage of surplus, across task types. Is the tax a few per cent, or tens of per cent, and does it shrink as models improve?
-> 3. **Drift rate under joint optimisation.** When two language-model agents are fine-tuned against each other with no penalty for readability, how fast does their channel leave human language? A candidate measure is the perplexity of the channel under a frozen human-language model, per thousand training episodes, together with human comprehension scores on sampled messages. What is the smallest supervised anchor (Lewis et al. froze one agent entirely) that keeps it readable?
-
 ---
 
 Wanjiru did, in the end, sign. Liang's company agreed to carry the risk to the school gate, by email, in two sentences each of them could read, and the exercise books arrived on the third of January. She kept the three-kilobyte file anyway, in a folder Ndege is not allowed to tidy.

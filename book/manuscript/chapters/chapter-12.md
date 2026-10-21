@@ -116,7 +116,7 @@ The best starting point I know is a 2025 Stanford study, led by Jon Saad-Falcon 
 
 I want to take their idea one step outward. **Joules per insight** is the energy needed to produce one verified useful outcome from a fixed basket of tasks: a correct explanation of a fraction to a child, graded by a teacher, or a land-title query answered and checked. The basket works like the shopping basket behind a consumer price index. The statistics office chooses and publishes it, and revises it every few years. Each category in the accounts is then reported both in energy and in insights, so a country can see whether it is exporting cheap joules and importing expensive insights, and at what ratio.
 
-Defining an insight is hard, and I return to it in the box for researchers. But inflation statisticians have argued for decades about how to price a laptop that gets better every year, and they still publish a number every month.
+Defining an insight is hard, and I have no finished answer. But inflation statisticians have argued for decades about how to price a laptop that gets better every year, and they still publish a number every month.
 
 ### A positive right to think
 
@@ -145,14 +145,6 @@ Go back to the flowers and the aircraft. The proposals above are built to live w
 On local inference, though, the objection misses where the deficit lives. A model running on Njeri's tablet still carries weights trained and tuned elsewhere. Moving the computation onto the device removes the latency and the energy bill from the trade balance. It leaves the judgement exactly where it was. If anything, it makes the deficit harder to see, because the thinking now happens offline, in Kasarani, and no cable records it crossing anything.
 
 And here is the part of the answer I would defend hardest. Ordinary services trade labour: a Kenyan call centre answering a British customer's question sells hours of skilled work, under rules the customer's company sets. Inference trades judgement in the other direction. When Kenya imports tutoring, it imports the decisions about what to teach, how to explain it, what to leave out and when to say *that's correct*. Those decisions were once made by Kenyan teachers, under a curriculum answerable to the ministry in Nairobi. A country that buys most of its judgement from one place depends on that place in a way that a country buying its aircraft does not. Dependency in judgement is a question of sovereignty, and sovereignty is what national accounts were invented to protect.
-
----
-
-> **For researchers**
->
-> 1. **Define an insight unit.** Build a candidate task basket for one sovereign category (secondary-school mathematics tutoring is a good start) with human-graded outcomes, and measure *joules per verified insight* across at least five model–hardware pairs. How stable is the ranking of systems when the basket is revised, and how large is the gap between joules per token and joules per insight?
-> 2. **Measure a cognitive trade flow.** For one country and one category, estimate the share of inference consumed by residents that is (a) computed abroad and (b) governed abroad, using provider disclosures, network measurements or app-store and traffic data. The quantity is the *thought deficit* as defined above. How far apart are the computed and governed shares, and which is moving faster?
-> 3. **The localisation of judgement.** Using paired prompts set in local contexts, measure how often a model's examples, analogies and legal references default to its governing jurisdiction rather than the user's. The quantity is a *home-bias rate*. Does it fall with fine-tuning on local data, and by how much per thousand local examples?
 
 ---
 

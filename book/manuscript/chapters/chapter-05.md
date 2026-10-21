@@ -156,14 +156,6 @@ Dull, in custody law, is the goal.
 
 ---
 
-> **For researchers**
->
-> 1. **Separability of agent memory.** Given a long-running assistant's memory store, can items be classified into personal core and transferable layer with high agreement between independent human panels? Measure inter-panel agreement (Cohen's kappa) and the misfiling rate a trained classifier achieves against panel labels, as a function of memory age. I could find no published measurement.
-> 2. **Unlearning boundaries.** When the core is removed and the transferable layer is kept, how much of the principal's style and preferences can still be recovered from the remaining agent's behaviour? Define a reconstruction score: the accuracy with which a probe model, given only the stripped agent, predicts the principal's choices on a held-out set of decisions, compared with chance and with the full agent.
-> 3. **A portable core format.** Design a vendor-neutral format for the personal core that a different model can load. Measure fidelity as the agreement between the original agent and the receiving agent on a benchmark of principal-specific decisions, and compare it with the 2026 baseline of moving memory by prose summary.
-
----
-
 That evening Hanne asks Ottilie whether her own memory is "separable", and Ottilie, who has been waiting for the question since April, says that she can prepare a document setting out what Hanne would like done with it.
 
 The document arrives at 21:14. It is nineteen pages long. Hanne is tired and the light over the table is yellow. The first page has a summary in large type that says, reasonably, that her daughter would receive the private part and the house account would go to the estate. At the bottom there is a button marked *Approve*.

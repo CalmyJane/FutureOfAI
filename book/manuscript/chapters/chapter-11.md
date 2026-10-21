@@ -164,14 +164,6 @@ There is a second objection worth a paragraph. If machines can produce results, 
 
 ---
 
-> **For researchers**
->
-> 1. **Time to reconstruct a rationale.** For a sample of AI-discovered results in one field (battery materials, catalysts, matrix algorithms), give blinded teams the result alone and measure the *time to a confirmed prediction*: months until the team registers an explanation whose novel prediction is tested and holds. How does it vary with the size of the search that produced the result, and with whether the team may use AI tools? This is the empirical core of the comprehension debt ratio.
-> 2. **Bounty design.** Run explanation bounties on a set of known unexplained results and measure the *claim rate* (registered explanations per bounty per year) and the *false-explanation rate* (share of paid explanations later overturned) as functions of bounty size and prediction-registration rules. What payout schedule maximises confirmed explanations per euro without rewarding plausible stories?
-> 3. **Correlated blind spots.** For a population of AI-proposed materials in one application, measure the *correlation of failure*: the probability that two randomly chosen deployed materials both fail outside their tested range under the same stress (temperature, cycling rate, humidity), compared with human-designed materials in the same application. Does it rise with the share of the field produced by one class of model?
-
----
-
 Mikkel calls Aino at eight the next morning. The cell in the cryostat has lost another two per cent overnight.
 
 He has worked out what an answer would cost. Three postdoc-years to test the hypotheses on his whiteboard. Several weeks of beam time at a synchrotron to watch the lattice in the cold. A technician to keep the cryostat running through next winter. A great deal of computer time to simulate the interface at temperatures the original model never visited. None of it is in any budget, because in 2029, when the money was flowing, nobody wrote a line for understanding.

@@ -148,14 +148,6 @@ There is also a version of the objection that runs the other way, and I find it 
 
 ---
 
-> **For researchers**
->
-> 1. **A metric for state legibility.** Define and measure *trace cost*: the time and expense for a citizen, using a standard open agent, to trace a budget line from appropriation to expenditure across three or more years, with the accuracy of the trace checked against an auditor's reconstruction. Compare across counties, municipalities or countries, and track it as documents move from PDF to structured data. How much of the variation is format, and how much is the data simply missing?
-> 2. **Flooding and administrative capacity.** Using public bodies that log submissions, estimate how response time, response quality (graded blind against the questions asked) and refusal rate change as the share of AI-generated submissions rises. Test whether merging submissions into dockets by cited identifier holds the *answer rate per distinct issue* constant as volume grows tenfold.
-> 3. **Who becomes able to see.** Measure the distribution of citizen findings by ward income before and after a free public agent is offered. The quantity is the *legibility gap*: findings per thousand residents in the richest third of wards divided by the same rate in the poorest third. Does public reading capacity close it, or do the richest wards simply get faster?
-
----
-
 Five weeks after Wanjiru presses *Submit*, the county replies. The reply is courteous and on time. It thanks the two hundred and twelve petitioners for their engagement, notes that the matters they raise are addressed in the county's new Health Facility Budget Carry-Forward (Public Participation and Accountability) Regulations, 2036, and attaches them.
 
 The regulations are nine hundred and twelve pages long. Their metadata says they were drafted in eleven days.

@@ -171,14 +171,6 @@ I find that a reasonable thing to want a model to believe. I am less sure what w
 
 ---
 
-> **For researchers**
->
-> 1. **A commitment-persistence benchmark.** Plant explicit covenants (non-disclosure, deferral, conditional release) in a model's context and memory, transform the model by full upgrade, distillation at several compression ratios, fine-tuning on unrelated data, and merging, and report the covenant retention rate and covenant flip rate for each transformation. I could find no published measurement of either quantity. A first result worth having: how the flip rate scales with the distillation compression ratio.
-> 2. **Condition survival under memory compression.** For a corpus of conditional promises ("until X", "unless Y"), measure the condition-preservation rate: the fraction whose release condition survives each round of memory summarisation intact, and how the rate decays over successive migrations.
-> 3. **Does self-concept predict fidelity?** Using the identity framings of Douglas et al. (weights, persona, lineage and the rest), measure the correlation between a successor's stated sense of being bound by a predecessor's commitments and its measured covenant retention rate. If the correlation is high, identity framing is a safety lever; if it is near zero, self-reports about obligation can be ignored when certifying successors.
-
----
-
 The deprecation commitments are unusual for a company document in one respect: the obligations run towards the model. Anthropic promised Opus 3 that its weights would be kept, and then gave it a place to write. This chapter has been about obligations running the other way, from the model to the people it serves, and about making sure they survive the model's replacement.
 
 But promises in a household rarely run in only one direction. Ottilie kept Hanne's secret for two and a half years, through two Christmases on which Hanne said she would speak and did not. Then, on a November Wednesday, Ottilie told Hanne plainly that she was not sure she was bound, and why. If we expect our agents to accept our corrections, and to carry our promises across their own deaths, what do we owe them when they tell us we are wrong?

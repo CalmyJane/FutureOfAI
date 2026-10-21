@@ -136,19 +136,11 @@ The objection runs like this, and it deserves a full hearing.
 
 Every hour that money spends waiting in a batch is an hour it is not earning anything. Fast settlement was a hard-won achievement: India's own instant payments, or America's move to one-day settlement. A slow tier rebuilds the delays that engineers spent decades removing. It will also fall hardest on the people least able to bear it. A family with no buffer, which needs money at two in the morning for a hospital deposit, does not want its own money on a human clock. And the gate itself creates something to game. If conversion happens at a twenty-four-hour average, a well-capitalised agent can try to move the average, or trade against everyone who must cross at the batch. Herstatt, finally, is a warning against delay: the 1974 losses happened precisely in the gap between two settlements.
 
-Two of these points land. The slow tier has a cost, and it should be measured and published, in basis points of foregone return per household per year, next to the pass-through ratio, so that the trade can be argued with numbers. The gaming risk is real. Averages over long windows are much harder to move than last prices, though they can still be moved, and I put the size of that difficulty in the researchers' box because I do not know it.
+Two of these points land. The slow tier has a cost, and it should be measured and published, in basis points of foregone return per household per year, next to the pass-through ratio, so that the trade can be argued with numbers. The gaming risk is real. Averages over long windows are much harder to move than last prices, though they can still be moved, and I do not know how much harder; somebody should measure it.
 
 The rest I resist. The hospital deposit at two in the morning is spending, and spending from slow money is instant, as it is with a card today. What the window slows is not the family's access to its money. It slows the fast market's access to the family. The Herstatt point is answered by the gate's design: both legs settle together, which is what CLS was built to do.
 
 And the claim that friction is inefficient is true and beside the point. Firebreaks are inefficient too. A strip of cleared land through a forest is land that grows no timber, and every forester knows exactly what it costs. Nobody concludes that forests should be planted without them. The useful question is whether the fires it stops are worth more than the timber it costs. In 2010, five seconds of enforced idleness in Chicago ended a fall that had wiped out most of the buyers in the market. I would like to know the equivalent number for an agent economy before the first fire, which is exactly why the pass-through ratio has to be measured.
-
----
-
-> **For researchers**
->
-> 1. **Optimal permeability.** In a simulated two-tier economy (a Magentic-Marketplace-style agent market connected to household ledgers by sweeps, collateral and payroll), measure the pass-through ratio as a function of the window *W* and the crossing limit, for shocks lasting from 0.1 seconds to one day. Report the frontier: the cost in foregone household return, in basis points per year, for each halving of pass-through. Where does the frontier bend?
-> 2. **Contagion between speed layers.** Build a contagion model with two clocks and count the leak paths: the distinct channels by which a fast-market shock reaches slow balances. Find the critical ratio of shock duration to window length at which pass-through exceeds one percent, and test whether it shifts when the agents in the fast market share a model family (use the Concordance Index from chapter 3 as the covariate).
-> 3. **Manipulation resistance of the gate.** Estimate the capital needed to move a 24-hour time-weighted average price by one percent, compared with the capital needed to move the last traded price by the same amount, in thin agent-traded markets. That ratio, measured across market depths, tells a regulator how long *W* must be before gaming the gate stops paying.
 
 ---
 

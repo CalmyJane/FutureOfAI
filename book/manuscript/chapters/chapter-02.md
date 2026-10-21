@@ -139,12 +139,6 @@ There is also a real cost to raters. A census that publishes overlap statistics 
 
 And the census might come back with a boring answer. Perhaps the overlap is small and the sameness lives almost entirely in pretraining. That would be useful to know. It would tell us to spend our diversity budget on data and architecture. At present we are not even in a position to be bored.
 
-> **For researchers**
->
-> 1. **A tracer study protocol.** Design a pre-registered preference tracer study: an inert tracer, a randomised rater subset, a probing battery across at least ten models from at least five developers. The measurable quantity is tracer prevalence in non-client models relative to baseline at 6, 12 and 24 months, and the time lag to first detection, which distinguishes rater-pool transfer from judge, distillation and web transfer.
-> 2. **A cross-lab overlap metric.** Define and validate a single number for pairwise preference-source overlap between two models, combining shared-rater label share, judge-family share and synthetic-lineage share, and estimate how much of the error correlation reported by Kim et al. (2025) it explains. The measurable quantity is the fraction of variance in pairwise error agreement accounted for by the overlap metric, after controlling for shared provider and architecture.
-> 3. **A minimum diversity of preference sources.** Using open models, vary the number of independent rater pools and judge families in post-training and measure inter-model homogeneity on open-ended prompts with the "Artificial Hivemind" method. The measurable quantity is the number of independent preference sources beyond which homogeneity stops falling, and the capability cost, if any, of reaching it.
-
 ---
 
 It is late in Bengaluru, and Ravi's list has seven rows. He has written down every vendor and every client code he can still decode, and next to each a phrase or habit of judgement he remembers arguing for. In the column headed *Who else?* there is still nothing, because there is nowhere he can look it up.

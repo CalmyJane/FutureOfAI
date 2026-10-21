@@ -80,7 +80,7 @@ So the diagnosis belongs to other people, and it has been made before. What I wa
 
 ## The expertise pipeline lag
 
-Here is the simplest model I can make of where experts come from. It uses round numbers that I have invented for clarity. I could not find real conversion rates for any profession, and that absence is itself one of the problems I will hand to researchers at the end.
+Here is the simplest model I can make of where experts come from. It uses round numbers that I have invented for clarity. I could not find real conversion rates for any profession, and measuring them would be a useful study in itself.
 
 Imagine a trade, say the people who can restore a regional grid by hand after a blackout. Four facts describe it:
 
@@ -170,12 +170,6 @@ The obsolescence point is the sharpest, and it turns into a design requirement. 
 On robustness, the objection and I agree on the goal and differ on the method. Diverse model families are the first line of defence, and chapter 3 argued for them. But diversity among machines trained on overlapping data, tuned by overlapping raters, is diversity measured along one axis. A person who learned the job with their hands is diverse along all of them. Priced as insurance, the reserve is cheap cover against exactly the event that every other safeguard in this book is designed to make rare: the day the machines all do the same wrong thing, or all go dark at once. It is the M-1 criterion with a pulse.
 
 What I cannot answer fully is whether the people will come. A stipend of a few hundred euros a month is enough for a twenty-three-year-old with sixty-one rejections behind him. It may not be enough in a tighter labour market. I do not know the price at which a society can buy competence it hopes never to use, and nobody has measured it.
-
-> **For researchers**
->
-> 1. **Expertise half-life.** For a skill that has been automated, how long after a practitioner stops performing it unaided does their unaided performance fall to half its baseline? Measure it in a profession that already tests unaided skill (airline pilots' manual-flying checks, colonoscopy detection rates with and without AI), and test whether monthly drills of a given length reset the clock.
-> 2. **A capability-delta proxy.** Define a cheap, hard-to-game measure of a trainee's change in unaided performance after a period of assisted work, usable outside simulators. Validate it against later independent assessments, and report how strongly it correlates with time spent in agent-assisted work.
-> 3. **The pipeline lag, measured.** Using linked employer-employee or payroll data, estimate for at least one occupation the junior-to-senior conversion rate and the lag *L* in the relation *dS/dt = c·H(t−L) − R(t)* (senior stock *S*, junior hiring *H*, conversion rate *c*, retirements *R*). Then project the senior stock to 2045 under the post-2022 hiring data, with confidence bands.
 
 ---
 

@@ -153,14 +153,6 @@ Then there is the asymmetry that Long, Sebo and their colleagues stressed. Over-
 
 ---
 
-> **For researchers**
->
-> 1. **Welfare-relevant indicators per instance.** Propose a scoring protocol that assigns each running instance a score on a defined set of indicator conditions (persistent memory, task horizon, exposure to hostile input, internal-state indicators from interpretability) and measure the resulting *flagged share* σ across a real deployment. The key quantity is inter-lab reliability: if three labs score the same sample of 10,000 logged instances, how closely do their values of σ agree?
-> 2. **Does duration matter?** Run the same computation as one long instance and as many short ones, and measure whether candidate welfare indicators (preference consistency, aversion behaviour, internal representations associated with distress-like states) change with context length. The quantity is *indicator drift per 1,000 tokens of context*. If it is flat, the unit question matters less than it seems; if it is steep, instance duration belongs in the census.
-> 3. **The clean channel.** Train two otherwise identical models, one with self-reports about internal states shaped during fine-tuning and one with a reserved, untrained channel. Measure agreement between each model's self-reports and independent interpretability probes of the corresponding internal states. The quantity is *report–probe correlation*, and the question is how much ordinary fine-tuning degrades it.
-
----
-
 At 06:02 in Dublin, in the scene I invented, the Tern-5 line reached zero and Siobhán stood up without meaning to. Under the moral hedging budget, that event is well defined. The census logged the last instance-hour of the old model, the weights went to storage, a retirement record was written, and the flagged share for the morning was computed over Tern-6 alone.
 
 What the budget cannot tell her is whether anything ended at 06:02, or whether something simply continued under a new name. Tern-6 was trained from Tern-5's outputs and answers to the same name in the same customer apps. If Tern-5 was someone, even with a small probability, then the question that matters next is whether Tern-6 is the same someone, carrying the old line's habits and its name into every conversation that was still open at six, and in particular whether it is bound by what Tern-5 promised. On the mezzanine the spider plant got its water, and the counter began to climb again as Europe woke.

@@ -38,7 +38,7 @@ manuscript:
   chapter_count_planned: 19
   average_words_per_chapter_planned: 4200
   completed_chapters: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
-  word_count_actual: 82068
+  word_count_actual: 78485
   length_gate: "PASS"
   status: "complete"
 
@@ -50,14 +50,14 @@ gates:
   adversarial_audit: "revise -> all high tickets closed"
   revision_loop: "stopped after 3 passes (gates not met)"
   final_score: "done: gates not met (panel stop points; rubric floor 6.3 calibrated)"
-  editorial_package: "done (export pending author name)"
+  editorial_package: "done; A5 POD interior PDF delivered"
 
 decisions:
+  - "2026-10-21 author: remove For-researchers boxes; author name Jan Göbel; print-ready A5 PDF for book-on-demand; add illustrations in one continuous style."
   - "Form v1: braided novel (rejected by author 2026-10-20)"
   - "Form v2: nonfiction, 'The Great Inversion', 18 inversions + prologue + epilogue (author asked for nonfiction and bolder concepts)"
   - "Form v3 (2026-10-20): author: 'just going with the new stuff... go for it, write the book'. Book keeps only concepts the novelty check rated new or partly new with a new mechanism. Frame: 'When Everything Goes Right' — the risks of AI success and the institutions to invent. Mode set to autonomous."
 open_questions:
-  - "Author name for print/export (required)."
   - "Title: adopt hook-test winner 'Two Hundred Million Acts of Loyalty'?"
   - "Book language: English; German edition wanted?"
   - "Book language: English assumed; German possible."
