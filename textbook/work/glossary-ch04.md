@@ -1,6 +1,6 @@
 **scaling law**: An empirical rule describing how a model's performance changes as the compute, parameters or data used to train it grow. For language models, test loss typically falls as a power law of these resources.
 **training compute**: The total number of arithmetic operations performed to train a model, usually measured in FLOP.
-**FLOP**: Floating-point operation: a single addition or multiplication of two decimal numbers, used as the unit for counting training compute.
+**FLOP**: Floating-point operation: a single addition or multiplication of two floating-point numbers (the format computers use for values with a fractional part), used as the unit for counting training compute.
 **parameter**: An adjustable number inside a neural network whose value is set during training; large language models have billions of them.
 **compute-optimal training**: Dividing a fixed compute budget between model size and training data so as to reach the lowest possible loss; the Chinchilla study found that both should grow in equal proportion.
 **loss**: A number measuring a model's error; for language models, how poorly it predicts the next token on text it has not seen. Lower is better.
