@@ -71,9 +71,9 @@ def f0502():
         arrow(ax, xa, y, xb, y, ls="--" if ret else "-", lw=0.8)
         if t.startswith("3"):
             # the structured request: a small framed label
-            box(ax, (xa + xb) / 2 - 12.2, y + 1.4, 24.4, 3.6, "", fill="white", lw=0.5,
+            box(ax, (xa + xb) / 2 - 13.3, y + 1.4, 26.6, 3.6, "", fill="white", lw=0.5,
                 style="round,pad=0.3,rounding_size=0.6")
-            ax.text((xa + xb) / 2, y + 3.2, t, ha="center", va="center", fontsize=6.5)
+            ax.text((xa + xb) / 2, y + 3.2, t, ha="center", va="center", fontsize=6.3)
             label(ax, X["Language model"] + 1.5, y + 3.2, "structured request", fs=6, ha="left", italic=True, color=G1)
         else:
             ax.text((xa + xb) / 2, y + 1.2, t, ha="center", va="bottom", fontsize=6.6)
