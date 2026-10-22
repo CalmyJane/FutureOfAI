@@ -172,13 +172,13 @@ def f1404():
             xx = np.linspace(x0, x0 + W, 100)
             yy = yb + 2 + np.clip((xx - sig) / 30, 0, 1) * 11
             ax.plot(xx, yy, color=INK, lw=1.2)
-            label(ax, x0 + W - 0.5, yr + 2.4, "Reference incident: 3,000 MW", fs=6.4, ha="right")
+            label(ax, x0 + W - 0.5, yr + 3.6, "Reference incident: 3,000 MW\n(continental Europe)", fs=6.4, ha="right")
             label(ax, sig + 17, 22.6, "Load rises gradually", fs=6.6, italic=True, ha="left")
         else:
             xx = [x0, sig, sig + 1.2, x0 + W]
             yy = [yb + 2, yb + 2, 46, 46]
             ax.plot(xx, yy, color=INK, lw=1.2)
-            label(ax, sig + 3, yr - 2.6, "Reference incident: 3,000 MW", fs=6.4, ha="left")
+            label(ax, sig + 3, yr - 3.8, "Reference incident: 3,000 MW\n(continental Europe)", fs=6.4, ha="left")
             label(ax, sig + 3, 48.6, "Load step", fs=6.6, italic=True, ha="left")
     box(ax, 12, 7.5, 76, 5, "Random delay up to 600 s by default; owner may cancel (UK SI 2021/1467, reg. 11)",
         fill=G4, fs=6.4, style="square,pad=0.6")
