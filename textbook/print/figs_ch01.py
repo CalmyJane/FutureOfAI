@@ -104,14 +104,14 @@ RESEARCH = [
     (2017, "Transformer (2017)"),
     (2020, "GPT-3 (2020)"),
     (2021, "'Foundation model' coined (2021)"),
-    (2024, "Reasoning models, o1 (2024)"),
+    (2024 + 8.5 / 12, "Reasoning models, o1 (Sept 2024)"),
     (2025, "DeepSeek-R1 (2025)"),
 ]
 DEPLOY = [
     (1977, "First AI winter (c. 1974–80)"),
     (1979, "MYCIN evaluation (1979)"),
     (1984, "'AI winter' warning, AAAI (1984)"),
-    (1990.5, "Second AI winter (c. 1988–93)"),
+    (1990, "Second AI winter (from c. 1987; end disputed)"),
     (1997, "Deep Blue beats Kasparov (1997)"),
     (2022 + 10.5 / 12, "ChatGPT released (Nov 2022)"),
     (2023 + 10.5 / 12, "OECD definition revised (Nov 2023)"),
@@ -151,7 +151,7 @@ def _side(ax, items, sign, gap=2.8):
     ys = [_ty(y) for y, _ in items]
     ly = _spread(ys, gap, 1.6, 76)
     for (yr, txt), y, yl in zip(items, ys, ly):
-        winter = "winter (c." in txt
+        winter = "AI winter (" in txt
         x0 = AX + sign * 1.0
         x1 = AX + sign * 4.0
         x2 = AX + sign * 6.5
@@ -166,16 +166,25 @@ def _side(ax, items, sign, gap=2.8):
 def f0103():
     fig, ax = canvas(3.6, ylim=(0, 80))
     # winter bands (approximate dates)
-    for a, b in ((1974, 1980), (1988, 1993)):
-        ya, yb = _ty(a), _ty(b)
-        ax.add_patch(Rectangle((AX - 3, yb), 6, ya - yb, fc=G4, ec=G3, lw=0.4, hatch="//////", zorder=0))
+    ya, yb = _ty(1974), _ty(1980)
+    ax.add_patch(Rectangle((AX - 3, yb), 6, ya - yb, fc=G4, ec=G3, lw=0.4, hatch="//////", zorder=0))
+    # second winter: start c. 1987, end disputed -> no closing edge, band fades out
+    ya, yb = _ty(1987), _ty(1993)
+    ax.add_patch(Rectangle((AX - 3, yb), 6, ya - yb, fc=G4, ec="none", hatch="//////", zorder=0))
+    ax.patches[-1].set_edgecolor(G3)
+    ax.patches[-1].set_linewidth(0)
+    ax.plot([AX - 3, AX + 3], [ya, ya], color=G3, lw=0.4, zorder=0)
+    n = 8
+    for i in range(n):
+        y0, y1 = _ty(1993 + 4 * i / n), _ty(1993 + 4 * (i + 1) / n)
+        ax.add_patch(Rectangle((AX - 3, y1), 6, y0 - y1, fc=G4, ec="none", alpha=1 - (i + 1) / (n + 1), zorder=0))
     # axis with a break between 2005 and 2008
     ax.plot([AX, AX], [76.5, _ty(2005) - 0.6], color=INK, lw=0.9, zorder=2)
     ax.plot([AX, AX], [_ty(2008) + 0.8, 1.0], color=INK, lw=0.9, zorder=2)
     for dy in (0, 1.1):
         by = _ty(2005) - 1.4 - dy
         ax.plot([AX - 1.3, AX + 1.3], [by + 0.5, by - 0.5], color=INK, lw=0.8)
-    marks = [_ty(y) for y, t in RESEARCH + DEPLOY if "winter (c." not in t]
+    marks = [_ty(y) for y, t in RESEARCH + DEPLOY if "AI winter (" not in t]
     for yr in (1960, 1970, 1980, 1990, 2000, 2010, 2020):
         y = _ty(yr)
         if min(abs(y - m) for m in marks) < 1.3:

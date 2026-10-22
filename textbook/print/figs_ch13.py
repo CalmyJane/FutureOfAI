@@ -1,11 +1,8 @@
 """Figures for chapter 13, drawn from figures/specs/ in the house style."""
-import math
-
-import numpy as np
 from matplotlib.patches import Polygon, Wedge
 
 import figstyle as F
-from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, save
+from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, save
 
 
 @fig("fig-13-01")
@@ -155,9 +152,7 @@ def f1302():
             ax.text(tx, yc - 1.2 - lh * n, d, ha=ha, va="top", fontsize=fs, color=G1, style="italic", zorder=6)
     # legend
     lyg = 1.2
-    lx = 12
-    for kind, t in [("f", "binding law or regulation"), ("e", "executive order"), ("h", "non-binding")]:
+    for lx, kind, t in [(14, "f", "binding law or regulation"), (44, "e", "executive order"), (66, "h", "non-binding")]:
         _dot(ax, lx, lyg, kind)
         label(ax, lx + 1.8, lyg, t, fs=6.4, ha="left")
-        lx += 28
     save(fig, "fig-13-02")

@@ -41,3 +41,48 @@ Checked 2026-10-22. One line per key: claim | exact number/quote | URL checked |
 - **pib2024cabinet** | 7 Mar 2024: Cabinet approved over Rs 10,300 crore over five years for IndiaAI Mission; compute capacity "deploying over 10,000 Graphics Processing Units (GPUs)" | https://www.pib.gov.in/PressReleasePage.aspx?PRID=2012375 | official
 - **dsit2025ai** | 13 Jan 2025; Rec. 2 "Expand the capacity of the AI Research Resource (AIRR) by at least 20x by 2030"; Rec. 4 AI Growth Zones; "Sovereign AI compute will almost certainly be the smallest component of the UK's overall compute portfolio" | https://www.gov.uk/government/publications/ai-opportunities-action-plan/ai-opportunities-action-plan | official
 - **whitehouse2025winning** | July 2025; "Encourage Open-Source and Open-Weight AI"; open models "have geostrategic value"; export "full AI technology stack—hardware, models, software, applications, and standards" to allies | https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf | official
+
+## Fact-check (2026-10-22)
+
+Independent check of ~150 claims (numbers, dates, quotations, attributions), all four figure specs and all 39 bib entries. Sources re-read: IEA *Key Questions on Energy and AI* PDF (138 pp., created 16 Apr 2026; Annex A Tables A.1–A.4 read directly), AI Index 2026 PDF, Nvidia FY2026 10-K and 8-Ks (2023, 2025) on EDGAR, ASML 20-F, Federal Register API + govinfo full text (all six BIS rules), BIS press release of 13 May 2025, DeepSeek-V3 arXiv v2, R1 Nature supplementary (§2.4.4, Table 4), arXiv API (Cottier, Seger, Lermen, Sastry, Kapoor, Jouppi, gpt-oss, Li et al.), Crossref (de Vries, Li et al., Guo et al., Jouppi), PMLR, Guardian, Google 2025 Environmental Report, CSO, OSI, Llama 2 licence, Meta and Mistral blogs, NTIA, EC presscorner API, PIB, gov.uk, White House PDF, AI Act Art. 51.
+
+### Writer's flags
+1. IEA: Table A.1 (360/416/485; 2030 Headwinds 833, High Efficiency 868, Base 945, Lift-Off 1,008) and Table A.4 (US 183→426, China 102→277, Europe 68→114, World 416→945) confirmed from the PDF. The 2026 report's own prose rounds 2024 to "around 415 TWh" (sec. 1, p. 23) while its table gives 416; the chapter uses only the table value (416) and the 2030 prose/table pair (950/945) is already explained, so the text is consistent. iea.org (both reports) still returns 403; Wayback blocked. The 2026 report confirms the 2025 report's title, URL and four-case framework, but not "first global analysis" (IEA had earlier data-centre estimates), so that phrase was softened.
+2. de Vries 2023: Crossref/VU portal confirm Joule 7(10):2191–2194, published 18 Oct 2023 (online 10 Oct). Abstract not available (Crossref has none; ScienceDirect/Cell 403). Numbers confirmed only via the Cell Press release (TechXplore): "could increase by 85 to 134 TWh annually" by 2027; 29.2 TWh ≈ Ireland. De Vries is a PhD candidate (VU School of Business and Economics), not "the economist"; corrected. Wording "grow by 85–134 TWh a year" (ambiguous: reads as a growth rate) changed to "add 85 to 134 TWh a year ... by 2027".
+3. AI Index open/closed gap: ch. 2 text says 49 points (3.4%) = 49/1,454; the highlights say 3.3% = 49/1,503 (different denominator). Chapter keeps 3.4% with the ch. 2 locator; consistent.
+4. DeepSeek R1: Supplementary Table 4 confirms 101K + 5K + 41K = 147K H800 GPU-hours, $294K at $2/GPU-hour; A100s used for preparatory 30B experiments. The $294K includes SFT data creation, not only RL stages; text corrected.
+5. Diffusion rule: FR API: effective 13 Jan 2025, published 15 Jan 2025 (90 FR 4544), compliance date 15 May 2025. BIS press release 13 May 2025 announced rescission and non-enforcement, promised a formal rescission regulation and replacement. No FR rescission rule found; the July 2026 UAE rule (91 FR 43034) states that the worldwide licence requirement in §742.6(a)(6)(iii)(A) remains but is enforced only for D:1/D:4/D:5 destinations etc., "consistent with guidance issued on May 13, 2025 ... and May 31, 2026". Chapter, summary, caption and fig-07-02 spec changed from "rescinded/withdrawn" to "rescission announced / abandoned before it took full effect". Other timeline dates confirmed: 87 FR 62186 (effective 7 Oct 2022, published 13 Oct); 88 FR 73458 (announced 17 Oct, published 25 Oct, effective 17 Nov 2023); 89 FR 96790 (effective 2 Dec, published 5 Dec 2024); 91 FR 1684 (15 Jan 2026); 91 FR 43034 (effective 10 Jul, published 14 Jul 2026).
+6. Li et al.: Crossref confirms CACM 68(7):54–61, 2025, DOI 10.1145/3724499, four authors. arXiv v5 (accepted version, "Accepted by Communications of the ACM") confirms 700,000 L and 4.2–6.6 bn m³ in 2027; CACM full text itself blocked (403/503).
+7. Nvidia/ASML: all figures confirmed in filings (revenue $215,938m; data-centre end-market $193,737m vs $47,525m FY2024; 22%/14% customers; suppliers; China discouragement; 8-K A100/A800/H100/H800, "total processing performance and/or performance density"; H20 9 Apr 2025, up to ~$5.5bn; ASML EUV quote). All are attributed to the companies ("reported", "told investors", "states"). Correction: "Data Center" is an end market in the 10-K, not a reportable segment (segments are Compute & Networking and Graphics).
+
+### Changes to chapter
+- Alberta and "1.5% ... 20–30%" locators: [@iea2026key, ch. 1] → sec. 3 (they are in key question 3, pp. 33–34). Other "ch. 1" IEA locators → "sec. 1" (the report is organised by numbered key questions, not chapters). "In 2025 the government of Alberta set out to attract data centres" → year moved to the cap (AESO 2025).
+- "Data Center segment" → "sales to the data-centre market".
+- Diffusion rule: added compliance date, non-enforcement, and July 2026 enforcement status [@bis2026enhanced]; summary "was rescinded" → "was abandoned before it took full effect"; Fig. 7.2 caption "withdrawn" → "abandoned before it took full effect".
+- "published its first global analysis" → "published a dedicated special report ... with global and regional projections".
+- "20–30% of demand" → "as much as 20–30%" (source wording).
+- "the power drawn by AI servers increased elevenfold" → "the power density of AI servers increased elevenfold" (source: "power density ... increased by 11 times").
+- de Vries: "the economist" → "a PhD candidate at the Vrije Universiteit Amsterdam"; "could grow by 85 to 134 TWh a year by 2027" → "by 2027 AI could add 85 to 134 TWh a year"; added "(about 29 TWh a year)".
+- Cottier: "Hardware was the largest cost component, with energy only 2–6%" → "In their fuller breakdown of development costs, accelerator chips and staff were the largest components, with energy only 2–6%" (abstract).
+- IEA capex comparison: "roughly USD 600 billion" → "slightly less than USD 600 billion" (source wording).
+- "the much larger cost of serving a model" → "the often larger cost" (AI Index says inference can exceed training "within months"; "much larger" unsupported).
+- R1 cost: "cost of the reinforcement-learning stages as about $294,000" → "cost of turning the V3 base model into R1 (the two RL stages plus the creation of fine-tuning data) as about 147,000 H800 GPU-hours, or about $294,000".
+- Cut unsupported "open models trail the frontier by months rather than years" → "the best open models trail the best closed ones by a small margin, although the gap has widened and narrowed as new models appear".
+- Seger et al. labelled "(preprint)".
+- "many researchers argue that hardware is the most practical lever" → "some researchers argue that hardware is an especially practical lever" (Sastry et al. say "particularly effective point of intervention").
+- AI Action Plan stack list: added "applications" (source: "hardware, models, software, applications, and standards").
+- Added citations for US/China encouraging open models [@whitehouse2025winning; @iea2026key, Box 10.1].
+
+### Figure specs
+- fig-07-02: event 4 date "13–15 Jan 2025" → "13 Jan 2025 (effective; published 15 Jan 2025; compliance date 15 May 2025)"; event 6 label "Diffusion rule rescinded" → "Rescission announced", with note; caption wording as above. Needs redraw of those labels.
+- fig-07-03, fig-07-04: all values confirmed against Tables A.1 and A.4; derived Rest of world (63; 128) arithmetic correct. No data changes.
+- fig-07-01: supplier names confirmed (AI Index ch. 1; Nvidia 10-K; ASML 20-F). No change.
+
+### Bibliography
+All entries checked; metadata correct (titles, venues, volumes/pages, DOIs, FR citations, filing dates via EDGAR index). No published versions found for the arXiv preprints (Cottier, Seger, Lermen, Sastry, DeepSeek-V3, gpt-oss). No key changes.
+
+### Remaining uncertainties
+- iea2025energy: April 2025 publication date and URL taken from the 2026 report's reference list and the writer's secondary sources; iea.org not reachable.
+- de Vries numbers verified only via the publisher's press release, not the article text.
+- Li et al. figures verified on the accepted arXiv version, not the CACM print text.
+- Whether BIS formally published a rescission rule after July 2026 could not be established; the text describes the state as of the July 2026 rule.
