@@ -13,3 +13,4 @@
 **ambient scribe**: A tool that, with consent, listens to a clinical consultation and drafts a note for the clinician to review and sign.
 **AI companion**: A chatbot used, or designed to be used, for conversation, emotional support, friendship or romance rather than for practical tasks.
 **contextual integrity**: A privacy framework holding that a flow of information is appropriate only if it matches the norms of the context in which the information was originally shared.
+**special category data**: Types of personal data that EU data-protection law (GDPR Article 9) protects more strictly, including data concerning health, genetic and biometric data, and data revealing political opinions or religious beliefs; processing them is prohibited unless a listed exception, such as explicit consent, applies.

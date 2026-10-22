@@ -84,3 +84,23 @@ Independent check of all numbers, dates, quotations and bibliography. About 120 
 - Hackenburg et al. values are from the accepted manuscript; the published Science text could not be accessed (the arXiv version differs slightly, e.g. 26.5 vs 26.1; 29.7% vs 30.0%).
 - Omnibus OJ publication date (24 July 2026) taken from ch13's evidence (law-firm reports); not re-checked against EUR-Lex (blocked).
 - TAKE IT DOWN Act, Romania case (Solea), DSA article texts, Nightingale & Farid figures, SynthID "10 billion" and Argyle et al. were not re-fetched; they rest on the writer's reads of primary/full-text sources.
+
+## Revision (2026-10-22)
+
+Revision after the reader panel (no reader read ch9; global fixes from work/REVISION-GUIDE.md applied). No fact-checked number changed.
+
+### New sources
+- **housejudiciary2025foreign** | Interim staff report released by House Judiciary Committee Republicans, 25 July 2025, *The Foreign Censorship Threat: How the European Union's Digital Services Act Compels Global Censorship and Infringes on American Free Speech*; claims platforms apply one set of global terms and that Commission regulators (per subpoenaed May 2025 workshop documents) expect platforms to change worldwide terms | title; "Commission regulators expect platforms to change their worldwide terms and conditions" | https://judiciary.house.gov/media/press-releases/foreign-censorship-threat-how-european-unions-digital-services-act-compels (press release read; PDF link DSA_Report&Appendix(07.25.25).pdf downloaded, 13 MB) | official (partisan congressional staff report; labelled as such in text)
+- **kaushal2024automated** | FAccT 2024 (pp. 1121–1132, doi 10.1145/3630106.3658960, Crossref); representative sample of 131m statements of reasons submitted to the DSA Transparency Database in Nov 2023; "some transparency gains"; compliance "remains problematic, as the current database structure allows for a lot of discretion from platforms" | 131m | arXiv 2404.02894 abstract (API) + Crossref | peer-reviewed
+- **europeanparliament2022regulation** (existing key) now also cited for Art. 34(1)(b): "any actual or foreseeable negative effects for the exercise of fundamental rights", listing freedom of expression and information | https://www.eu-digital-services-act.com/Digital_Services_Act_Article_34.html (read) | primary legal text
+- **egan2026digital** (existing key) reused in §9.4 for weekly chatbot news use (10%, 2026) as an indicator of real-world exposure.
+
+### Changes
+- Global fixes: one explicit "analogy breaks down" kept (silicon-sampling box); printing analogy and courtroom analogy limits folded into prose. Removed "Two further findings stand out" and "These results need careful interpretation" signposts. "What would settle it" reworded ("What evidence would decide it"). Opening paragraph: each source cited once (FCC proposal, FCC forfeiture order, AP). Lin et al. cited once in the interpretation paragraph. One paragraph-final Chapter 13 cross-reference per section (moved to end of §9.7).
+- Labels: Goldstein et al. 2023 "a 2023 preprint"; Kapoor & Narayanan "an essay for the Knight First Amendment Institute"; Meta claim labelled at first mention; DNR chatbot shares given with years (2025, 2026).
+- Debates: deepfake box "Yes" side adds cheap-fake frequency; "Not so fast" side adds CETaS's "relatively moderate" but higher US volumes, the limited geographic coverage of monitoring studies, and Schiff et al. liar's-dividend evidence. Persuasion: new paragraph on limits (paid online participants, 9-minute conversations, decay to about a third to two-fifths after a month, only 10% weekly chatbot news use in 2026) set against Salvi et al.; Hackenburg results split over two paragraphs to reduce number density. Platform regulation: new paragraph giving the free-speech critique (House Judiciary report, labelled partisan), the DSA's own fundamental-rights duty (Art. 34(1)(b)) and independent empirical evidence (Kaushal et al. 2024).
+- Readability: long sentences split throughout (§9.2–9.7); DNR paragraph split in two.
+- Discussion questions: Q4 "about three times" → "more than three times" (2.88 vs ~10); Q5 replaced (previous one was answered in the text) with a new-case question on Content Credentials for witnesses; Q6 replaced (text already resolved the feeds "contradiction") with an evidence-evaluation question on the DSA debate.
+- Summary: persuasion and DSA bullets updated.
+- Figures: no spec changes.
+- Body word count: 5,748 → about 6,150.
