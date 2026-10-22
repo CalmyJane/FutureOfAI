@@ -116,3 +116,32 @@ Independent fact-check of ch13 against primary sources where reachable. About 15
 - GEMA v OpenAI appeal status not verified; text says first-instance and open to appeal.
 - Whether the Global Dialogue's 2025 launch and 2026 Geneva meeting took place as planned was not verified (text uses resolution's plan).
 - Kadrey and Bartz quotations, Draghi quotations, DSIT report quotation, Seoul commitments count and PLD dates rely on the writer's extraction (sources consistent where spot-checked).
+
+## Revision (2026-10-22, after reader panel; no reader read ch13, global fixes applied)
+
+### New sources (verified)
+- **garante2023intelligenza**: Garante order of 30 March 2023 (press release 31 March 2023) stopping OpenAI's processing of Italian users' data via ChatGPT; reasons: no information to users, "no legal basis underpinning the massive collection and processing of personal data" for training, inaccuracy, no age verification | https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/9870847 (read; Italian headline confirmed from page metadata) | official
+- **garante2024chatgpt**: reused from ch10 (entry copied exactly). €15m fine (Dec 2024), lack of legal basis for training among grounds; Tribunal of Rome judgment No. 4153/2026 (published 18 March 2026) "upheld the appeal". Wording matches ch10 ("upheld OpenAI's appeal") | https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10085432 (per ch10 fact-check) | official
+- **edpb2024opinion**: EDPB Opinion 28/2024, press release 18 Dec 2024: anonymity case by case, model anonymous only if "very unlikely" that individuals can be identified or data extracted through queries; legitimate interest three-step test, processing "strictly necessary"; unlawfully processed data can affect lawfulness of deployment "unless the model has been duly anonymised" | https://www.edpb.europa.eu/news/news/2024/edpb-opinion-ai-models-gdpr-principles-support-responsible-ai_en (read) | official
+- **edpb2024dutch**: Dutch SA (Autoriteit Persoonsgegevens) decision 16 May 2024, published by EDPB 3 Sept 2024: €30.5m fine on Clearview; no legal basis (Art. 6), biometric data (Art. 9), inadequate information (Arts 12, 14), service aimed at law enforcement | https://www.edpb.europa.eu/news/national-news/2024/dutch-supervisory-authority-imposes-fine-clearview-because-illegal-data_en (read; AP site unreachable) | official
+- **dpc2025statement**: Irish DPC statement 21 May 2025: Meta paused EU training June 2024 after DPC concerns; DPC sought EDPB opinion Sept 2024; Meta to start training 27 May 2025 on public content of adults, with updated notices and easier objection form | https://www.dataprotection.ie/en/news-media/latest-news/dpc-statement-meta-ai (read) | official
+- **jia2021short**: Marketing Science 40(4):661–684 (OpenAlex metadata); NBER w25248 abstract: GDPR (effective May 2018) had "negative post-GDPR effects on EU ventures, relative to their US counterparts" in total dollars raised, number of deals and amount per deal (short run) | https://www.nber.org/papers/w25248 ; doi 10.1287/mksc.2020.1271 | peer-reviewed
+
+### Changes to ch13.md
+1. Readability: average sentence length cut from about 22.6 to about 17.7 words (citation keys excluded; roughly 25 to 20 with them) by splitting long sentences throughout; Article 5 prohibitions turned into a short bulleted list. No dates, holdings, numbers or quotations changed.
+2. New data-protection coverage in §13.6 (two paragraphs, ~330 words): GDPR legal basis; Garante 2023 order and 2024 fine overturned on appeal in 2026; Clearview fine; Meta pause/resumption under DPC scrutiny; EDPB Opinion 28/2024. Section intro now flags personal data and gives a one-sentence summary of where copyright law stood. Objective 4, Summary (new bullet) and Further reading (EDPB opinion) updated.
+3. Copyright clarity (for ch11 cross-reference): Kadrey and Thomson Reuters split into separate paragraphs; "summary judgment" and "first-instance judgment" defined; transposition explained in plain words.
+4. Debate box balance: added peer-reviewed GDPR venture-investment evidence (Jia et al. 2021) on the Draghi side with its limits (short run, data-protection law); unsourced "supporters add" line hedged as an untested claim; Draghi report labelled as prepared for the European Commission; closing line rephrased (not "would help settle").
+5. Templated prose: removed "An analogy helps here"; one explicit "analogy breaks down" sentence kept (§13.1); IPCC analogy limit folded into a plain sentence. §13.7 paragraph-final Chapter 4 cross-reference folded into a sentence.
+6. Citations: removed repeated citations within paragraphs (EO 14365 ×3, AI Act ×3–4, omnibus ×3, Code of Practice ×2, METR ×2, CoE ×2, Paris statement ×2 etc.).
+7. Evidence labels: Sastry, Heim and Koessler, and Hooker labelled as preprints in running text; OECD adherents given a year.
+8. Discussion questions: Q4 now asks how far GDPR evidence transfers to the AI Act; Q6 (generic soft-law question) replaced by an evidence question on Seoul commitments vs SB 53/Code of Practice.
+
+### Bibliography
+- Added: garante2023intelligenza, garante2024chatgpt (copied from ch10.bib), edpb2024opinion, edpb2024dutch, dpc2025statement, jia2021short.
+
+### Figures
+- No figure or spec changes.
+
+### Word count
+- Body (objectives to end of §13.7): 6,159 → 6,794.

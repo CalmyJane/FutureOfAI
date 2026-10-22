@@ -13,3 +13,5 @@
 **productivity J-curve**: The pattern in which a new general-purpose technology at first lowers measured productivity growth, because complementary investments are poorly measured, and later raises it.
 **deskilling**: The loss or weakening of human skills that occurs when a task is routinely handed over to a machine or AI system.
 **ironies of automation**: Lisanne Bainbridge's 1983 observation that automation leaves people with the hardest tasks, such as monitoring and taking over in emergencies, while eroding the skills those tasks require.
+**confidence interval**: The range of values for an effect that is consistent with a study's data at a stated level of statistical confidence (usually 95%); a wide interval means the estimate is imprecise.
+**ghost work**: Mary Gray and Siddharth Suri's term for task-by-task human labour, such as labelling data or moderating content, that is organised through online platforms and sits largely hidden behind apparently automated services.
