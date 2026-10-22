@@ -101,3 +101,11 @@ Changes:
 - Debate box 1 closing line rephrased ("How the question could be decided").
 - Discussion question 3 rewritten as an application with a calculation (Llama 3 8B vs Chinchilla rule).
 - No figure-spec changes.
+
+## Consistency pass (2026-10-22, cross-chapter audit)
+- §4.1: Sutton quote removed; now a back-reference to Section 1.7 with a one-sentence summary [sutton2019bitter].
+- §4.3: Cottier et al. shortened to one sentence (2.4×/yr from 2016) with forward reference to Ch. 7; ">$1bn by 2027" projection dropped here (Ch. 7 covers it). Epoch 3.5×/yr kept (epochai2026trends).
+- §4.3: plain definition of "frontier models" at first use (most capable general-purpose models at a given time), legal definitions referred to Ch. 13.
+- §4.7: "jagged frontier" now attributed to Dell'Acqua et al. with forward reference to Ch. 8; bib entry dellacqua2026navigating copied byte-identical from bib/ch08.bib (verified in evidence-ch08: Organization Science 37(2):403–423, DOI 10.1287/orsc.2025.21838).
+- Test-time compute box: "The analogy breaks down because…" → "Unlike exam time, though, …".
+- Second debate closer "What would settle it?" → "What evidence would tell?".

@@ -108,3 +108,11 @@ Panel points (Weber) and global fixes applied:
 - Readability: long sentences split (AI100, GPAI, Deep Blue, Bick, Art. 3(1), OSWorld, clocks/IMO).
 - New sources: xie2024osworld (copied from ch05), haigh2024how, sec2024sec, broussard2018artificial, crawford2021atlas, suchman2023uncontroversial.
 - Body word count (objectives to end of §1.7): 6,259 -> 6,552. pandoc --citeproc: no warnings.
+
+## Consistency pass (2026-10-22, cross-chapter audit)
+- §1.7 end: removed the claim that Chapter 13 examines how the EU AI Act definition is applied in practice.
+- OSWorld aligned with Ch. 5: AI Index 66.3% now dated "early 2026" (dropped "within about 6 points of human performance"); added that the best single general-purpose model reached ~86% on OSWorld-Verified by Aug 2026, forward reference to Ch. 5. New bib entry osworld2026verified copied byte-identical from bib/ch05.bib (verified in evidence-ch05).
+- Debate box "Do LLMs understand language?" cut to two sentences with forward reference to Section 3.7 (survey numbers, Bender/Koller and Othello now only in Ch. 3, which gives 327 analysed of 480 respondents). Box count remains 4.
+- Glosses added: "deep convolutional neural network" (forward ref to Section 2.6); "reinforcement learning" (trial and error from a reward; forward ref to Ch. 3).
+- METR seven-month doubling: added "(later revised; see Chapter 4)".
+- Sutton bitter lesson kept here (Ch. 4 now back-references Section 1.7).

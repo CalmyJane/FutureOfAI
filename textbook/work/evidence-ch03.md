@@ -93,3 +93,11 @@ Changes (panel points):
 - Global 6: 15 sentences over ~36 words split.
 - Figure specs fig-03-02 and fig-03-03 updated (captions; mask label; brace labels) — print/figs_ch03.py needs matching label changes.
 - Body word count: 6,232 → 6,872.
+
+## Consistency pass (2026-10-22, cross-chapter audit)
+- §3.5: "Chapter 2's AlphaGo" → "AlphaGo (Section 1.5)".
+- Tables 3.3 and 3.4 given {#tbl:03-03} and {#tbl:03-04} labels.
+- §3.5: "reasoning models of 2025 and 2026" → "released since late 2024" (o1, Sept 2024).
+- "training compute" glossed at first use with forward reference to Ch. 4.
+- "map analogy … breaks down" → "map picture … misleads" (template wording varied).
+- Kept: Mata v. Avianca box, understanding debate (now the book's main treatment; Ch. 1 points here), Chen hint-faithfulness, Dallas/rhyme circuits. No new sources.

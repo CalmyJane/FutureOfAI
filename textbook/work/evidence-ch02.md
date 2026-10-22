@@ -94,3 +94,8 @@ Panel points (Mia) and global fixes applied; no new sources.
 - Cross-references: §2.6 paragraph-final references to Ch. 12 and Ch. 3 removed (one kept, to Ch. 4/7). "Its abstract notes" -> "It notes".
 - Citations: duplicate goodfellow2015explaining in the adversarial paragraph removed.
 - Body word count: 6,021 -> 6,247. pandoc --citeproc: no warnings.
+
+## Consistency pass (2026-10-22, cross-chapter audit)
+- §2.3 fog analogy: "breaks down in instructive ways" → "Real training differs from the walk in fog in three respects." (only remaining "breaks down" is discussion question 2 about the fog analogy).
+- §2.6: "one pattern stands out" signpost removed.
+- Debate closer "What would settle it" → "Evidence that could resolve it" (varied across chapters). No new sources.
