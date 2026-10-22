@@ -9,36 +9,40 @@ from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, 
 
 @fig("fig-11-01")
 def f1101():
-    fig, ax = canvas(3.3, ylim=(0, 80))
-    box(ax, 40, 72.5, 20, 5.5, "AI risks", fill=G4, fs=9, weight="bold")
+    fig, ax = canvas(3.8, ylim=(0, 92))
+    box(ax, 40, 84.5, 20, 5.5, "AI risks", fill=G4, fs=9, weight="bold")
     cols = [
         ("Malicious use", [("Fraud and\ndeepfakes", "Ch. 9, 11.4", False), ("Manipulation", "Ch. 9", False),
                            ("Cyber operations", "11.4", False), ("Bio/chem\nweapons", "11.4", False)]),
         ("Malfunctions", [("Unreliable\noutputs", "11.2", False), ("Bias*", "11.3", True),
                           ("Loss of control", "11.6", False)]),
         ("Systemic risks", [("Labour market", "Ch. 8", False), ("Monoculture,\ncorrelated errors", "11.5", False),
-                            ("Over-reliance\n(automation bias)", "11.5", False), ("Market\nconcentration", "Ch. 7", False)]),
+                            ("Over-reliance\n(automation bias)", "11.5", False), ("Market\nconcentration", "Ch. 7", False),
+                            ("Environmental\nharm*", "Ch. 7", True), ("Privacy*", "Ch. 10", True),
+                            ("Copyright*", "Ch. 13", True)]),
     ]
     w, gap = 29.5, 4
     x0 = (100 - 3 * w - 2 * gap) / 2
     for i, (cat, items) in enumerate(cols):
         x = x0 + i * (w + gap)
         cx = x + w / 2
-        arrow(ax, 50, 71.8, cx, 63.6, lw=0.8)
-        box(ax, x, 57.5, w, 5.5, cat, fill=G4, fs=8.3, weight="bold")
-        ax.plot([cx, cx], [56.8, 52.3], color=INK, lw=0.7)
-        y = 51.5
+        arrow(ax, 50, 83.8, cx, 75.6, lw=0.8)
+        box(ax, x, 69.5, w, 5.5, cat, fill=G4, fs=8.3, weight="bold")
+        ax.plot([cx, cx], [68.8, 64.8], color=INK, lw=0.7)
+        y = 64
         for name, tag, dashed in items:
-            h = 7.2
+            h = 6.6 if "\n" in name else 4.4
             p = box(ax, x, y - h, w, h, "", fill="white", lw=0.7)
             if dashed:
                 p.set_linestyle((0, (3, 2)))
             label(ax, x + 1, y - h / 2, name, fs=7, ha="left")
             label(ax, x + w - 0.6, y - h / 2, tag, fs=6.2, ha="right", color=G1, italic=True)
-            y -= h + 2.6
-    box(ax, x0, 7.5, 3 * w + 2 * gap, 3.8, "Categories interact (11.7)", fill=G4, fs=7, italic=True, lw=0.5,
+            y -= h + 2.4
+    label(ax, x0 - 0.4, 22, "* in 2025 report; outside 2026 report's scope", fs=6.3, ha="left", color=G1, italic=True)
+    label(ax, x0 - 0.4, 17, "Surveillance and policing span all three\nfamilies (11.1, 11.3)", fs=6.3, ha="left",
+          va="top", color=G1, italic=True)
+    box(ax, x0, 2.2, 3 * w + 2 * gap, 3.8, "Categories interact (11.7)", fill=G4, fs=7, italic=True, lw=0.5,
         style="round,pad=0.4,rounding_size=0.8")
-    label(ax, x0 - 0.4, 2.2, "* in 2025 report; outside 2026 report's scope", fs=6.3, ha="left", color=G1, italic=True)
     save(fig, "fig-11-01")
 
 
