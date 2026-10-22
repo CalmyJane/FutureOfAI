@@ -85,9 +85,9 @@ def f0702():
         (_yr(2022, 10, 7), "7 Oct 2022", "Advanced chip controls", "licences for advanced AI\nchips and tools to China", "t", 1, 1, "l"),
         (_yr(2023, 10, 17), "17 Oct 2023", "Thresholds revised", "adds performance density;\nA800/H800 covered", "t", -1, 1, "r"),
         (_yr(2024, 12, 2), "2 Dec 2024", "HBM and tools", "controls on high-bandwidth\nmemory, more equipment", "t", 1, 1, "r"),
-        (_yr(2025, 1, 14), "13–15 Jan 2025", "AI Diffusion Framework", "global tiered licensing; closed-\nweight model controls", "t", -1, 1, "r"),
+        (_yr(2025, 1, 13), "13 Jan 2025", "AI Diffusion Framework", "global tiered licensing; closed-\nweight model controls", "t", -1, 1, "r"),
         (_yr(2025, 4, 9), "9 Apr 2025", "H20 licence required", "Nvidia told licence\nneeded for China", "t", 1, 2, "l"),
-        (_yr(2025, 5, 13), "13 May 2025", "Diffusion rule rescinded", "not enforced;\nreplacement promised", "o", -1, 2, "r"),
+        (_yr(2025, 5, 13), "13 May 2025", "Rescission announced", "not enforced;\nreplacement promised", "o", -1, 2, "r"),
         (_yr(2026, 1, 15), "15 Jan 2026", "H200 case-by-case", "China review moved from\ndenial to case-by-case", "o", 1, 1, "l"),
         (_yr(2026, 7, 10), "10 Jul 2026", "UAE licence-free access", "partner access to advanced\ncomputing items", "d", -1, 1, "r"),
     ]
