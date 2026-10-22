@@ -55,3 +55,64 @@ Checked 2026-10-22. One line per key: claim supported | exact figure/quote | URL
 - **hooker2024limitations**: compute thresholds "shortsighted and likely to fail"; relationship "highly uncertain and rapidly changing" | https://arxiv.org/abs/2407.05694 | preprint
 - **bradford2024false**: argues "false choice between regulation and innovation"; US-EU gap due to other ecosystem features | https://scholarlycommons.law.northwestern.edu/nulr/vol119/iss2/3/ | peer-reviewed (law review)
 - **draghi2024future**: "the EU now has around 100 tech-focused laws and over 270 regulators active in digital networks"; AI Act compute-threshold requirements cited as precautionary; only larger, often non-EU firms can bear costs | Commission PDF (text extracted, Part A ch. on regulatory barriers) | institutional report
+
+## Fact-check (2026-10-22)
+
+Independent fact-check of ch13 against primary sources where reachable. About 150 claims checked (all dates, numbers, quotations and legal statuses).
+
+### Verified directly (primary source)
+- Reg. (EU) 2026/1744: full text read via EUR-Lex (r.jina.ai mirror of https://eur-lex.europa.eu/eli/reg/2026/1744/oj); Cellar notice (publications.europa.eu/resource/celex/32026R1744) gives OJ publication 2026-07-24, entry into force 2026-07-27 (publication + 3, Art. 4), signature 8 July 2026. Footnote: EP position 16 June 2026, Council decision 29 June 2026. Proposal COM(2025) 836 dated 2025-11-19 (Cellar notice for 52025PC0836). Art. 113(3)(c) as amended: Annex III high-risk 2 Dec 2027; Annex I 2 Aug 2028. Art. 113(3)(a): new Art. 5(1)(ba)/(bb) bans from 2 Dec 2026. New Art. 111(4): Art. 50(2) marking by 2 Dec 2026 for systems on the market before 2 Aug 2026. Art. 113(3)(b) (GPAI, Art. 101 fines) and Art. 111(3) not amended. Recital 40 gives reasons for delay. Art. 4 literacy now "take measures to support"; SMC definition added; Art. 75(1) AI Office exclusive competence covers same provider or same undertaking, with exceptions. Machinery Regulation 2023/1230 moved from Annex I Section A to Section B. Table 13.1 values all confirmed; no change to table data.
+- Council of Europe CETS 225: treaty office chart (via r.jina.ai), status as of 22/10/2026: 21 signatories (incl. US, UK, EU on 5 Sept 2024; Canada and Japan 11 Feb 2025; Ukraine 15 May 2025); 1 ratification (EU, 15 May 2026); entry into force requires 5 ratifications incl. 3 CoE member states; not in force.
+- EOs 14110, 14148, 14179, 14365, 14409, 14434: numbers, signing and publication dates and FR citations confirmed via Federal Register API; texts of 14365, 14409, 14434 read on govinfo.
+- FRONTIER Act = H.R. 9925, introduced 23 July 2026 (Rep. Obernolte), referred to committee; no further action (congress.gov).
+- SB 53 chaptered text (leginfo via r.jina.ai): frontier model >10^26; large developer >$500M revenue; transparency reports and incident reports apply to all frontier developers (15 days; 24 h for imminent risk); frontier AI framework and civil penalties (≤$1M per violation, AG only) apply to large developers.
+- NY RAISE Act: Ch. 699 of 2025 signed 19 Dec 2025; chapter amendment A9449 signed 27 March 2026 (Ch. 96 of 2026) changes effective date to 1 Jan 2027 (assembly.state.ny.us).
+- Colorado: SB26-189 signed 14 May 2026, Ch. 131; AG must adopt rules on post-adverse-outcome disclosures by 1 Jan 2027. Minute order of 27 Apr 2026 (ECF 24) read. DOJ complaint in intervention is ECF 12-2, filed 24 Apr 2026, equal-protection based; states SB24-205 takes effect 30 June 2026.
+- Getty v Stability [2025] EWHC 2863 (Ch): full judgment from National Archives Find Case Law; training/outputs claims abandoned (no evidence training took place in UK); secondary infringement fails; TM findings "historic and extremely limited in scope" (iStock and Getty watermarks, v1.x/v2.x). No Court of Appeal judgment found in Find Case Law as of 22 Oct 2026.
+- GEMA press release (dated 2025-11-11 in page metadata) read; wording now attributed to GEMA.
+- Third Circuit Thomson Reuters v. Ross opinion read (filed 29 Sept 2026; fn 7 DOJ statement of interest 1 Sept 2026).
+- Bloomberg Law 20 July 2026 (final approval, Martínez-Olguín, >480,000 works, ~$3,100); settlement FAQ confirms destruction of LibGen/PiLiMi copies.
+- Copyright Office Part 3 still pre-publication (copyright.gov/ai).
+- CAC 2023 measures (effective 2023-08-15) and labelling measures (effective 2025-09-01) confirmed in Chinese originals; anthropomorphic measures effective 2026-07-15 (Xinhua); Cybersecurity Law amendment by NPC Standing Committee, effective 1 Jan 2026 (China Daily).
+- UN A/RES/79/325 and 78/265 read (UN ODS PDFs).
+- Paris statement signatories counted: 63 countries + AU Commission + EU. OECD: 47 adherents; HAIP report from 20 organisations; Epoch: 33 models, 12 developers (updated 6 June 2025); India summit dates (PIB); IAPP King's Speech 13 May 2026; Bradford NULR 119(2):377–454 (journal metadata).
+- GPAI Code signatories: Commission page blocked (403; Wayback unreachable). Politico Europe 1 Aug 2025 (read) confirms Amazon, Anthropic, Google, IBM, Microsoft, OpenAI, Mistral, Aleph Alpha; xAI one of three chapters; Meta refused. xAI's chapter (safety and security) per Wikipedia citing Euractiv (not opened).
+
+### Changes made to ch13.md
+1. "products such as machinery or medical devices" → "medical devices or toys" (machinery moved to Annex I Section B by the omnibus); added regulation (recital 40) as source for reasons for delay.
+2. GPAI Code signatories: "According to the Commission's list" → "When the Commission published its list of signatories on 1 August 2025"; added @haeck2025commission.
+3. Omnibus: "proposed ... in November 2025" → "on 19 November 2025"; added Council approval 29 June 2026, signature 8 July and OJ publication 24 July 2026; AI Office competence clarified ("same provider or corporate group", "with some exceptions").
+4. FRONTIER Act: "introduced in July 2026; as of early October 2026 it had not been enacted" → "(H.R. 9925) introduced in the House on 23 July 2026; as of 22 October 2026 referred to committee, had not passed either chamber"; added @uscongress2026frontier.
+5. EO 14409: "security agencies" → "federal agencies, including the standards body NIST"; "for up to 30 days before release" → "before releasing them to other trusted partners"; "did not create any licensing" → "did not authorise any mandatory licensing".
+6. EO 14434: named; "Super Intelligence"/"SI" for "AI"; "it changed no legal obligations" → "It did not require changes to existing regulations or other previously issued documents".
+7. SB 53: corrected allocation of duties (transparency reports and incident reporting apply to all frontier developers; framework and $1M penalties to large developers; AG enforcement); added statute citation @californialegislature2025sb53.
+8. RAISE Act: added signing 19 Dec 2025 and amendment signed 27 March 2026 moving start date to 1 Jan 2027 (@nyassembly2026a9449); 72-hour reporting attributed to METR.
+9. Colorado: "In April 2026, xAI sued" → "In spring 2026" (filing date not verified); DOJ "joined" → "filed to join" on 24 April; "subject to rules from the Attorney General" → AG must adopt rules clarifying some duties by 1 Jan 2027.
+10. China: "the national legislature" → "the Standing Committee of the national legislature".
+11. India summit "first in the series held in the Global South" → attributed to the Indian government.
+12. CoE convention: replaced "could not be confirmed" with status as of 22 Oct 2026 (21 signatories, 1 ratification by EU on 15 May 2026, not in force); entry-into-force condition corrected ("five signatories", "about three months").
+13. UN Global Dialogue: "meeting first in Geneva in 2026" → launch at UNGA high-level week 2025, then Geneva 2026 and New York 2027 (per resolution).
+14. Harmonised-standards sentence now cites the regulation rather than the Council note.
+15. Bartz: removed unverifiable "first payments expected by 15 November 2026" (no longer on settlement site); replaced with claimant notices sent September 2026, payments after claims/disputes processed.
+16. Getty: "training had taken place outside the UK" → "no evidence that the training had taken place in the UK"; TM findings now "Getty and iStock watermarks in outputs of older model versions", quoted "historic and extremely limited in scope".
+17. GEMA: memorisation/reproduction now attributed to GEMA's account.
+18. Summary: Kadrey characterisation corrected ("ruled for AI developers ... in one case only because the authors had not shown market harm"); CoE treaty "not yet in force".
+19. Figure 13.2 caption (chapter and spec): "one binding treaty" → "one binding treaty, not yet in force by October 2026". No timeline data changed.
+20. Readability: split six long sentences (Draghi, Bradford, EO 14365 FCC/FTC, harmonised standards, US liability, AI Office competence).
+
+### Bibliography changes
+- europeanparliament2026regulation: title corrected to include (EU) 2023/1230; OJ date 24.7.2026 and entry into force added.
+- councilofeurope2024framework: URL changed to signatures chart; status date added.
+- highcourt2025getty: URL changed to National Archives Find Case Law (judiciary.uk link was unreachable).
+- metr2026frontier: "updated 28 July 2026".
+- bradford2024false: pages 377–454.
+- usdoj2026complaint: title gives case number and ECF 12-2.
+- New: haeck2025commission, uscongress2026frontier, californialegislature2025sb53, nyassembly2026a9449.
+- Preprints (sastry2024computing, heim2024training, hooker2024limitations): no published versions found on arXiv/Crossref; still labelled preprints.
+
+### Remaining uncertainties
+- xAI signing only the safety and security chapter: Commission list not reachable; Politico confirms "one of three chapters"; which chapter rests on Euractiv via Wikipedia.
+- Exact filing date of xAI's complaint (text now "spring 2026").
+- GEMA v OpenAI appeal status not verified; text says first-instance and open to appeal.
+- Whether the Global Dialogue's 2025 launch and 2026 Geneva meeting took place as planned was not verified (text uses resolution's plan).
+- Kadrey and Bartz quotations, Draghi quotations, DSIT report quotation, Seoul commitments count and PLD dates rely on the writer's extraction (sources consistent where spot-checked).
