@@ -1,11 +1,33 @@
 """Figures for chapter 9, drawn from figures/specs/ in the house style."""
+import functools
 import math
+import urllib.parse
 
 import numpy as np
+from matplotlib.font_manager import FontProperties
+from matplotlib.textpath import TextToPath
 
 import figstyle as F
 from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, save
-from matplotlib.font_manager import FontProperties
+
+
+def own_glyph_ids(fn):
+    """The bundled EB Garamond weights share one PostScript name, so matplotlib's SVG glyph ids for
+    bold and regular collide (bold glyphs leak into regular text). While this figure is drawn, key
+    glyph ids by font file instead. Restored afterwards, so other modules are unaffected."""
+    @functools.wraps(fn)
+    def run(*a, **k):
+        orig = TextToPath._get_glyph_repr
+
+        def rep(self, font, glyph):
+            name = F.os.path.splitext(F.os.path.basename(font.fname))[0]
+            return urllib.parse.quote(f"{name}-{glyph:x}").replace("%", "_")
+        TextToPath._get_glyph_repr = rep
+        try:
+            return fn(*a, **k)
+        finally:
+            TextToPath._get_glyph_repr = orig
+    return run
 
 
 def bold(size, italic=False):
@@ -21,6 +43,7 @@ def blabel(ax, x, y, text, fs=8, italic=False, **kw):
 
 
 @fig("fig-09-01")
+@own_glyph_ids
 def f0901():
     fig = F.figure(3.6)
     ax = fig.add_axes([0.335, 0.215, 0.645, 0.725])
@@ -71,50 +94,53 @@ def f0901():
 
 
 @fig("fig-09-02")
+@own_glyph_ids
 def f0902():
-    fig, ax = canvas(2.7, ylim=(0, 60))
-    names = [("Create", "Camera or AI tool"), ("Sign manifest", "Who, what tool, when"),
-             ("Edit", "New signed entry\nadded"), ("Publish and\ndisplay", "Platform shows\ncredentials"),
-             ("Viewer checks", "Signature valid?")]
-    w, hgt, yb = 15.6, 13, 34
-    xs = [1 + i * 19.6 for i in range(5)]
+    fig, ax = canvas(2.45, ylim=(0, 56))
+    names = [("Create", "Camera or\nAI tool"), ("Sign manifest", "Who, what tool,\nwhen"),
+             ("Edit", "New signed\nentry added"), ("Publish and\ndisplay", "Platform shows\ncredentials"),
+             ("Viewer checks", "Signature\nvalid?")]
+    w, hgt, yb = 15, 13, 27
+    xs = [1 + i * 19.75 for i in range(5)]
     for (t, s), x in zip(names, xs):
         box(ax, x, yb, w, hgt, "", fill="white")
         two = "\n" in t
-        blabel(ax, x + w / 2, yb + hgt - (3.4 if two else 2.6), t, fs=7.6)
-        label(ax, x + w / 2, yb + (3.0 if "\n" in s else 3.4) - (0.4 if two else 0), s, fs=6.2, italic=True, color=G1)
+        blabel(ax, x + w / 2, yb + hgt - (3.2 if two else 2.6), t, fs=7.4)
+        label(ax, x + w / 2, yb + (2.9 if two else 3.6), s, fs=6.2, italic=True, color=G1)
     ym = yb + hgt / 2
     for a, b in zip(xs, xs[1:]):
-        arrow(ax, a + w + 0.6, ym, b - 0.6, ym)
-    # padlock between 2 and 3, above the arrow
+        arrow(ax, a + w + 0.7, ym, b - 0.7, ym)
+    # padlock between boxes 2 and 3, above the arrow
     px = (xs[1] + w + xs[2]) / 2
-    ax.add_patch(F.FancyBboxPatch((px - 1.2, yb + hgt + 3.2), 2.4, 2.2, boxstyle="square,pad=0", fc=G2, ec=INK, lw=0.6))
-    ax.add_patch(F.matplotlib.patches.Arc((px, yb + hgt + 5.4), 1.6, 2.6, theta1=0, theta2=180, color=INK, lw=0.8))
-    label(ax, px, yb + hgt + 9.2, "Hash binds manifest to file", fs=6.4, italic=True)
-    ax.plot([px, px], [yb + hgt + 3.0, ym + 1.2], color=G2, lw=0.5)
+    ax.add_patch(F.FancyBboxPatch((px - 1.1, yb + hgt + 3.0), 2.2, 2.1, boxstyle="square,pad=0", fc=G2, ec=INK, lw=0.6))
+    ax.add_patch(F.matplotlib.patches.Arc((px, yb + hgt + 5.1), 1.5, 2.6, theta1=0, theta2=180, color=INK, lw=0.8))
+    label(ax, px, yb + hgt + 9.6, "Hash binds manifest to file", fs=6.4, italic=True)
+    ax.plot([px, px], [yb + hgt + 2.8, ym + 1.0], color=G2, lw=0.5)
     # watermark tag under box 1
-    ax.add_patch(F.FancyBboxPatch((xs[0] + 1.2, yb - 9.5), w - 2.4, 6, boxstyle="round,pad=0.3,rounding_size=1",
+    ax.add_patch(F.FancyBboxPatch((xs[0] + 1.5, yb - 10), w - 3, 6, boxstyle="round,pad=0.3,rounding_size=1",
                                   fc="white", ec=INK, lw=0.7, ls=":"))
-    label(ax, xs[0] + w / 2, yb - 6.5, "Invisible\nwatermark", fs=6.2)
-    ax.plot([xs[0] + w / 2, xs[0] + w / 2], [yb - 3.2, yb - 0.4], color=G2, lw=0.5, ls=":")
-    # recovery branch
+    label(ax, xs[0] + w / 2, yb - 7, "Invisible\nwatermark", fs=6.2)
+    ax.plot([xs[0] + w / 2, xs[0] + w / 2], [yb - 3.6, yb - 0.4], color=G2, lw=0.5, ls=":")
+    # recovery branch (dashed)
     bx = (xs[2] + w + xs[3]) / 2
-    by = 6
-    box(ax, xs[2] - 3, by, 17, 8, "Manifest\nstripped", fill=G4, fs=7, lw=0.7)
-    arrow(ax, bx, ym - 0.4, xs[2] + 13.6, by + 8.8, ls="--", lw=0.8)
+    by = 3
+    box(ax, xs[2] - 2, by, 16, 8, "Manifest\nstripped", fill=G4, fs=7, lw=0.7)
+    arrow(ax, bx, ym - 0.4, xs[2] + 11, by + 8.8, ls="--", lw=0.8)
     box(ax, xs[3] + 0.5, by, 15, 8, "Watermark\nlookup", fill=G4, fs=7, lw=0.7)
     arrow(ax, xs[2] + 14.6, by + 4, xs[3] - 0.2, by + 4, ls="--", lw=0.8)
     arrow(ax, xs[3] + 16.2, by + 4, xs[4] + w / 2, yb - 0.6, ls="--", lw=0.8, rad=0.35)
-    label(ax, xs[4] + w / 2 + 3.5, 13.6, "Recover from\ncloud", fs=6.2, italic=True, color=G1, ha="left")
+    label(ax, xs[4] + w / 2 + 2.2, 10.5, "Recover from\ncloud", fs=6.2, italic=True, color=G1, ha="left")
     # callout
-    box(ax, xs[4] - 2.5, 52.5, w + 5, 6.4, "", fill=G4, lw=0.6, style="round,pad=0.4,rounding_size=2")
-    blabel(ax, xs[4] + w / 2, 56.9, "Provenance ≠ truth", fs=7.4, italic=True)
-    label(ax, xs[4] + w / 2, 53.9, "Records origin, not accuracy", fs=5.9, italic=True, color=G1)
-    ax.plot([xs[4] + w / 2, xs[4] + w / 2], [51.6, yb + hgt + 0.5], color=G2, lw=0.5)
+    cy = 47
+    box(ax, xs[4] - 2.5, cy, w + 5, 6.2, "", fill=G4, lw=0.6, style="round,pad=0.4,rounding_size=2")
+    blabel(ax, xs[4] + w / 2, cy + 4.3, "Provenance \u2260 truth", fs=7.4, italic=True)
+    label(ax, xs[4] + w / 2, cy + 1.4, "Records origin, not accuracy", fs=5.9, italic=True, color=G1)
+    ax.plot([xs[4] + w / 2, xs[4] + w / 2], [cy - 0.6, yb + hgt + 0.5], color=G2, lw=0.5)
     save(fig, "fig-09-02")
 
 
 @fig("fig-09-03")
+@own_glyph_ids
 def f0903():
     fig = F.figure(2.9)
     ax = fig.add_axes([0.1, 0.27, 0.86, 0.6])

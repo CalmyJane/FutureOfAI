@@ -50,8 +50,8 @@ def f0401():
     ax.text(10 ** 0.0, c * 1.07, "Irreducible loss", fontsize=7.5, va="bottom", color=G1)
     ax.text(10 ** 0.2, 1.55, "Small training runs", fontsize=7.5, ha="left", va="top")
     ax.text(10 ** 2.15, 2.25, "Fitted trend", fontsize=7.5, ha="left", va="bottom", style="italic")
-    ax.text(10 ** 5.3, L(10 ** 5.3) * 1.15, "Extrapolation", fontsize=7.5, ha="left", va="bottom", style="italic")
-    ax.annotate("Planned large run\n(prediction)", xy=(xp, L(xp)), xytext=(10 ** 7.2, 0.42), fontsize=7.5,
+    ax.text(10 ** 4.9, L(10 ** 4.9) * 0.8, "Extrapolation", fontsize=7.5, ha="left", va="top", style="italic")
+    ax.annotate("Planned large run\n(prediction)", xy=(xp, L(xp)), xytext=(10 ** 9.0, 0.36), fontsize=7.5,
                 ha="center", va="bottom", arrowprops=dict(arrowstyle="-", color=G2, lw=0.6, shrinkB=4))
     ax.set_xlabel("Training compute (log scale)", labelpad=4)
     ax.set_ylabel("Test loss (log scale)", labelpad=4)
@@ -99,10 +99,10 @@ def f0402():
         "AlexNet": (-5, 0, "right"),
         "Transformer": (5, -3, "left"),
         "BERT-Large": (-5, 2, "right"),
-        "GPT-3": (5, -5, "left"),
-        "Chinchilla": (5, -6, "left"),
+        "GPT-3": (-5, 0, "right"),
+        "Chinchilla": (0, -8, "center"),
         "GPT-4": (-5, 2, "right"),
-        "Llama 3.1 405B": (3, -8, "left"),
+        "Llama 3.1 405B": (4, -8, "right"),
         "Grok 3": (-5, -1, "right"),
         "GPT-4.5": (-5, 7, "right"),
     }
@@ -152,7 +152,7 @@ def f0403():
     ax = fig.add_axes([0.13, 0.12, 0.85, 0.85])
     ax.set_yscale("log")
     ax.set_xlim(2018.7, 2026.6)
-    ax.set_ylim(0.005, 4000)
+    ax.set_ylim(0.005, 14000)
     ax.set_xticks(range(2019, 2027))
     ticks = [(1 / 60, "1 sec"), (10 / 60, "10 sec"), (1, "1 min"), (10, "10 min"), (60, "1 hour"),
              (240, "4 hours"), (960, "16 hours"), (2880, "2 days")]
@@ -166,11 +166,11 @@ def f0403():
     off = {
         "GPT-2": (5, 0, "left"),
         "GPT-4": (-5, 4, "right"),
-        "Claude 3.7 Sonnet": (-5, 3, "right"),
-        "o3": (-5, 4, "right"),
-        "GPT-5": (5, -6, "left"),
-        "Claude Opus 4.6": (-6, 4, "right"),
-        "Claude Mythos Preview (early)": (-5, 13, "right"),
+        "Claude 3.7 Sonnet": (-6, 9, "right"),
+        "o3": (5, -5, "left"),
+        "GPT-5": (-5, 8, "right"),
+        "Claude Opus 4.6": (-14, 12, "right"),
+        "Claude Mythos Preview (early)": (8, 27, "right"),
     }
     for lab, d, p, lo, hi in METR:
         x = year(d)
@@ -180,8 +180,10 @@ def f0403():
                 mfc="white" if hollow else INK, mec=INK)
         if lab in off:
             dx, dy, ha = off[lab]
+            lead = dict(arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=3)) \
+                if lab == "Claude Opus 4.6" else {}
             ax.annotate(lab, (x, p), xytext=(dx, dy), textcoords="offset points", fontsize=7,
-                        ha=ha, va="center")
+                        ha=ha, va="center", **lead)
     ax.set_xlabel("Model release date")
     ax.set_ylabel("50% time horizon (log scale)")
     F.save(fig, "fig-04-03")
