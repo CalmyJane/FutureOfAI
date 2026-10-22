@@ -1,8 +1,6 @@
 """Figures for chapter 3, drawn from figures/specs/ in the house style.
 
-Spec fig-03-01 (tokenisation) is a table-figure and became Tables 3.1 and 3.2 in ch03.md, so the
-remaining figures are renumbered: spec fig-03-02 -> fig-03-01, fig-03-03 -> fig-03-02,
-fig-03-04 -> fig-03-03.
+The tokenisation table-figure (spec tbl-03-01.md) became Tables 3.1 and 3.2 in ch03.md.
 """
 import math
 

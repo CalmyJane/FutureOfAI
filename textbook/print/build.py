@@ -85,6 +85,7 @@ def assemble():
             parts.append(f'```{{=html}}\n<section class="part"><p class="part-label">{p}</p><h1 class="part-title">{t}</h1></section>\n```')
         md = open(f, encoding="utf-8").read()
         md = re.sub(r"\]\(figures/", "](../figures/svg/", md)
+        md = re.sub(r"[ \t]*\{#tbl:[\w-]+\}[ \t]*$", "", md, flags=re.M)
         parts.append(md)
     gloss, n_terms = merge_glossary()
     parts.append(gloss)
