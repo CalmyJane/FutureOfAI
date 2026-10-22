@@ -76,3 +76,28 @@ Independent fact-check of chapter 4. About 150 numbers, dates, quotations and at
 - o1 blog post not seen first-hand (403; archives blocked). The quote is verified via a verbatim secondary quotation only.
 - AI Index 2025 "approximately 18 months" is internally inconsistent in the source; the text now avoids the figure.
 - METR CI level is not stated in the data file (caption says "bootstrapped confidence intervals", which is accurate without a level).
+
+## Revision (2026-10-22, after reader panel)
+
+New sources (all checked 22 Oct 2026):
+- olmo2025olmo | OLMo 3 Think trained with SFT, DPO and RLVR, "observing gains at each stage"; "we introduce Olmo 3.1 Think 32B to illustrate that extended OlmoRL training leads to improved performance"; base pre-training up to 5.9T tokens | arXiv 2512.13961 v2 (HTML full text; 15 Dec 2025, "Team Olmo") | https://arxiv.org/abs/2512.13961 | preprint (Ai2 technical report)
+- centerforaisafety2026benchmark | Humanity's Last Exam final set: "HLE consists of 2,500 questions across dozens of subjects"; "over a hundred subjects"; questions "cannot be quickly answered via internet retrieval"; Nature 649(8099), 1139–1146, published 28 Jan 2026; lastexam.ai: "HLE has been finalized with 2,500 questions" (3 Apr 2025) | https://www.nature.com/articles/s41586-025-09962-4 ; Crossref; https://lastexam.ai | peer-reviewed
+- scale2026humanity | Scale AI HLE leaderboard (evaluated on all public questions, o3-mini judge): top entry 54.80 ± 1.94 (listed "GPT 6 Astra"), read 22 Oct 2026; previous AI Index figure 38.3% = Gemini 3 Pro on lastexam.ai table | https://scale.com/leaderboard/humanitys_last_exam | company-run leaderboard (Scale AI co-created HLE)
+
+Re-checked existing sources:
+- grattafiori2024llama: "While our scaling laws suggest our flagship model is an approximately compute-optimal size for our training budget, we also train our smaller models for much longer than is compute-optimal. The resulting models perform better than compute-optimal models at the same inference budget"; "We pre-train Llama 3 on a corpus of about 15T multilingual tokens"; 402B/16.55T = 41.2 tokens/param; 15e12/8e9 ≈ 1,875 ("roughly 1,900"). Llama 3.1 model card lists "15T+" tokens for 8B, 70B and 405B. https://arxiv.org/html/2407.21783v3 ; https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md
+- ho2024algorithmic: published NeurIPS 2024 abstract (neurips.cc/virtual/2024/poster/96565): "halved approximately every 8 months, with a 90% confidence interval of around 2 to 22 months". arXiv 2403.05812 (only version v1, 9 Mar 2024): "95% confidence interval of around 5 to 14 months". Chapter 4 keeps the published 90% CI and notes the preprint figure. Chapter 14 (text says only "with wide uncertainty"; its evidence log cites the arXiv 95% CI 5–14) should be aligned to the published version.
+- sajadieh2026ai: OLMo highlight wording "through pruning, deduplication, and curation alone" (Ch. 1 highlights); HLE text says "2,700 highly challenging questions" (Ch. 2.4), which conflicts with the final 2,500-question set, so the chapter now takes the count from the Nature paper.
+
+Changes:
+- Key-concept box: savings-account analogy (wrong direction: compound interest gives growing absolute gains) replaced with decimal-places-of-precision comparison; explicit "analogy breaks down" sentence folded into the text (chapter now has one, in the test-time compute box).
+- FLOP: "two decimal numbers" → "two floating-point numbers", with plain definition (text and glossary).
+- §4.2: Llama 3 over-training reframed: 405B (~38 tokens/param) near Meta's own fitted optimum (~41 tokens/param, now stated in the case study); 8B on ~15T tokens (~1,900/param) is the over-training example, with Meta quote.
+- §4.4: OLMo 3.1 "curation alone" qualified: post-training (SFT, DPO, RL) also contributed; 3.1 produced by extended RL.
+- §4.5: Ho et al. CI kept (published 90% CI 2–22 months), preprint 95% CI 5–14 months noted; car-analogy limit folded into sentence.
+- §4.7: run of "The 2026 AI Index reports…" lightened (source introduced once, cited once per paragraph); HLE paragraph rewritten: 2,500 questions (Nature 2026), 38.3% (AI Index, 2025), 54.8% top score on Scale AI leaderboard as of October 2026.
+- Labels: Kaplan et al. and Cottier et al. now labelled as preprints at first mention.
+- Duplicate same-paragraph citations removed (Epoch trends, Cottier); overlong sentences split.
+- Debate box 1 closing line rephrased ("How the question could be decided").
+- Discussion question 3 rewritten as an application with a calculation (Llama 3 8B vs Chinchilla rule).
+- No figure-spec changes.

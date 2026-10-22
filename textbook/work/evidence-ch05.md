@@ -78,3 +78,23 @@ Independent check of every number, date, quotation and attribution (about 115 cl
 - NeurIPS track (main vs Datasets and Benchmarks) for AgentDojo and Cemri et al. not verified; track omitted.
 - AI Index OSWorld figure (Epoch AI data) does not state whether 66.3% is on original OSWorld or OSWorld-Verified; the text already warns that versions are not directly comparable.
 - Agentic AI Foundation / MCP usage figures and AP2/x402 partner counts remain company claims (labelled in text).
+
+## Revision (2026-10-22, after reader panel)
+
+New sources (all checked 22 Oct 2026):
+- metr2026task | Same entry as Chapter 4 (copied exactly). TH1.1 data file: Claude 3.7 Sonnet p50 60.39 min; doubling from 2023 on 128.7 days (~4 months) | https://metr.org/assets/benchmark_results_1_1.yaml | institutional report
+- osworld2026verified | OSWorld-Verified official results ("official results evaluated by our team under unified settings and environment"); best General-model entry 85.96% (307.73/358; listed "claude-fable-5", dated 1 Aug 2026); best overall 90.19% (agentic framework, 25 Jul 2026) | https://os-world.github.io/ ; https://os-world.github.io/static/data/osworld_verified_results.xlsx | official benchmark leaderboard
+- barres2025tau2 | τ²-bench (9 June 2025): adds Telecom dual-control domain where user also uses tools | https://arxiv.org/abs/2506.07982 | preprint
+- sierra2026taubench | taubench.com: Feb 2026 audit "fixed 50+ tasks across the airline and retail domains"; March 2026 banking domain with "~700 documents". Public submission files (S3 manifest): Claude Opus 4.5 (Sierra run, tau2-bench v1.0.1) pass^1 airline 84.0, retail 79.61, telecom 92.32, banking_knowledge 24.74 (four-domain mean 70.17 = AI Index "70.2%"); retail pass^4 51.75 vs 0.7961^4 = 0.40; best banking_knowledge pass^1 55.15 (Qwen 3.8 Max, submitted 4 Aug 2026). AI Index footnote 38 confirms source is taubench.com text leaderboard, i.e. the AI Index "τ-bench" range 62.9–70.2% is a four-domain τ²-bench average | https://taubench.com ; https://sierra-tau-bench-public.s3.us-west-2.amazonaws.com/submissions/manifest.json | benchmark maintainer (company) leaderboard
+
+Re-checked: debenedetti2025defeating (arXiv v2 §3.1 "Explicit non-goals": "CaMeL doesn't aim to defend against attacks that do not affect the control nor the data flow… cannot defend against text-to-text attacks", e.g. misleading summaries, prompt-injection-induced phishing; appendix on side channels). sajadieh2026ai OSWorld 66.3% from Epoch data, version not stated; "Computer science students solve about 72%".
+
+Changes:
+- §5.3 METR paragraph aligned with Chapter 4: 2025 paper (7-month doubling since 2019; Claude 3.7 Sonnet ~50 min) vs Time Horizon 1.1 (Sept 2026 data: ~60 min; ~4-month doubling since 2023); factor-of-two error bars plus wider intervals at the top.
+- §5.3 OSWorld: split into two paragraphs; OSWorld-Verified (July 2025) explained; AI Index 66.3% (early 2026) kept; latest OSWorld-Verified best single general-purpose model ~86% (Aug 2026), with caveat about the student baseline on original tasks. Summary bullet and discussion question 2 updated.
+- §5.5 τ-bench: original 2024 results kept; τ²-bench (2025) and 2026 additions named; AI Index 63–70% range identified as four-domain average; domain spread (Opus 4.5 telecom 92% vs banking ~25%); best banking ~55% (Aug 2026). "No model above 71%" dropped (leaderboard re-graded July 2026).
+- Going-deeper box: pass^k now explained as independence within a task; heterogeneity across tasks makes observed pass^k exceed (mean p)^k (Jensen), with τ²-bench retail example (0.40 predicted vs 0.52 observed).
+- §5.6 CaMeL: guarantees limited to attacks on control/data flow; text-only attacks and side channels outside scope; debate Position A qualified; reflexive "not exclusive" closer removed; "What would settle it" line rephrased.
+- §5.4 and §5.7 lightened: one citation per source per paragraph; AP2 partner count attributed to the company; long sentences split.
+- Templated prose: employee and USB-C analogy limits folded in; one explicit "analogy breaks down" kept (prompt-injection assistant); "Two features matter…" signpost removed; same-paragraph duplicate citations removed throughout (Project Vend, ReAct, Toolformer, A2A, Greshake, NCSC, AgentDojo, Cemri, Hammond, Hadfield & Koh, Tomašev, Chan, Replit).
+- No figure-spec changes.
