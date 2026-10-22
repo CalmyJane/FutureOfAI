@@ -42,3 +42,44 @@ All sources checked online on 2026-10-22. Format: key | claim supported | exact 
 - Yann LeCun's sceptical statements on extinction risk: no accessible reliable source verified in this session; sceptical view represented instead by Narayanan & Kapoor, Gebru et al., and XPT superforecasters.
 - Deloitte Australia report refund (2025): not verified; not used.
 - National Academies 2025 report on AI and biosecurity, OpenAI 2024 bio early-warning study: not verified; not used.
+
+## Fact-check (2026-10-22)
+
+Independent fact-check against primary sources (about 120 claims, numbers, quotes and attributions checked). Sources consulted: CRT decision page (decisions.civilresolutionbc.ca, item 525448), ISR 2025 PDF (arXiv 2501.17805), ISR 2026 PDF (internationalaisafetyreport.org, international-ai-safety-report-2026_1.pdf; PDF page = printed page), AI Index 2026 Chapter 3 PDF, AA-Omniscience paper (arXiv 2511.13029), Kim et al. PMLR PDF, Dratsch et al. abstract (Europe PMC), JAIR PDF of Grace et al., DAIR statement page, Anthropic espionage and ASL-3 pages, NCSC, GTIG, CAIS, Knight Institute, XPT PDF, IJF abstract (RePEc), Crossref/arXiv/Europe PMC metadata.
+
+### Writer's flags
+1. **moffatt2024moffatt**: verified from the full decision text on decisions.civilresolutionbc.ca (CanLII and Wayback blocked). Both quotes exact (para. 27). Date 14 Feb 2024, member Christopher C. Rivers; claim $880; award $812.02 ($650.88 damages). The tribunal paraphrased Air Canada's position as suggesting the chatbot was "a separate legal entity that is responsible for its own actions"; text now says so. The decision uses "they" for Mr Moffatt, so the text no longer uses "him". URL changed to the CRT decisions site.
+2. **mouton2024operational**: RAND (403), the RAND PDF and the Wayback Machine (connection refused) were all unreachable. Crossref confirms the title, RAND 2024 and DOI 10.7249/RRA2977-2, and Semantic Scholar confirms the authors (Christopher A. Mouton, Caleb Lucas, Ella Guest). The finding is still verified only through the ISR 2025 summary (sec. 2.4, p. 154, ref. 393). The text now says explicitly that this is the report's summary. DOI and full author names added.
+3. **gebru2023statement**: the DAIR page byline and metadata list three authors: Timnit Gebru, Emily M. Bender and Angelina McMillan-Major. The bib is unchanged. Margaret Mitchell is not listed on the current page (she has been reported as a co-signer elsewhere, which is unverified here). The quote is exact.
+4. **grace2025thousands**: JAIR 84, Article 9 (Oct 2025, 48 pp.), DOI 10.1613/jair.1.19087. Author list corrected to nine authors in published order (added Stein-Perlman and Salvatier; reordered; Benjamin Weinstein-Raun). Numbers verified in the published PDF: 2,778; 15% participation; median 5% (mean 9%); 38–51%; 68%.
+5. **ISR page/section numbers**: ISR 2025: p. 18 (bio, low→medium, "substantial additional resources"), p. 19 (bias, trade-offs), p. 22 (cheating), sec. 3.2 p. 177 (evidence dilemma), sec. 2.4 p. 154 (marginal risk, RAND summary, "stable tolerable risk threshold"). All correct. ISR 2026: sec. 1.2 (p. 29 hallucination), 2.1.1 (p. 46), 2.1.2 (p. 54), 2.1.3 (pp. 57–60), 2.1.4 (pp. 64–69), 2.2.2 (pp. 76–77), 2.3.2 (pp. 89–91), scope note p. 9, agents p. 12. All correct; page pins added where the text had none (p. 9, p. 12).
+6. **anthropic2025disrupting**: all details verified on the company page (13 Nov 2025; mid-Sept; "high confidence"; roughly thirty targets; "small number of cases"; 80-90%; "perhaps 4-6 critical decision points"; ten days; "occasionally hallucinated credentials"). Text now labels the 80–90% figure "according to the company" and as the company's estimate. "Clearest public account so far" was softened to "one of the most detailed public accounts". "Claude models" was changed to "Claude Code tool".
+7. **stanfordhai2026ai 22–94%**: AI Index 2026 ch. 3, p. 136 (Fig. 3.2.6): AA-Omniscience (Artificial Analysis; 6,000 questions, six domains), 26 models, 22% (Grok 4.20 Beta) to 94% (gpt-oss-20B). The definition of hallucination rate (incorrect answers ÷ all questions not answered correctly) comes from the AA-Omniscience paper. The text was rewritten to name the benchmark and define the metric; new bib entry **jackson2025aa** (arXiv preprint). Note: the AI Index highlight wrongly pairs this range with a knowledge/belief benchmark; the body text is clear that it is AA-Omniscience.
+
+### Corrections (old → new)
+- ISR 2025 "drew on 100 AI experts" → "96 AI experts" (report p. 10: "96 Artificial Intelligence (AI) experts").
+- ISR 2026 "published on 3 February 2026" → "published in February 2026" (the exact day was not verifiable; the report and website say "February 2026").
+- ISR 2026 scam sentence: "citing an alert from the US FBI among other sources" was removed. The sentence cites refs 289–290 (a Philippine deepfake-blackmail paper and a Europol/Trend Micro report), not the FBI. It was replaced by the report's own verified next sentence on documented incidents (p. 46).
+- Slattery et al.: the preprint has been published in *Patterns* 7(5):101517 (2026), DOI 10.1016/j.patter.2026.101517. Bib converted to @article with the full ten authors; the text "latest version of its preprint" → "2026 journal article". The 1,725/74 figures appear in the published abstract; 38%/42% come from arXiv v3, which states it is the published version.
+- Mata: the "super search engine" quote → "falsely assumed was like a super search engine" (opinion p. 15); page pin added.
+- Hofmann: the "reduced overt stereotypes while leaving covert ones in place" sentence was rephrased to match the abstract: overt stereotypes are more positive, and preference alignment "exacerbate[s] the discrepancy", "superficially obscuring the racism".
+- Dratsch: "82% to 45.5%" → "82.3% to 45.5%".
+- Carlsmith premise 3 paraphrase made faithful to the abstract.
+- Gebru et al. (debate box): "diverts attention and money from ... bias and labour exploitation" → "diverts attention from ... worker exploitation and the concentration of power" (the statement does not mention money or bias in that sense).
+- §11.7 "more than a factor of ten" → "about a factor of ten" (0.38% vs 3%/3.9%; the XPT says "an order of magnitude").
+- §11.7 "fixed threshold" → "stable threshold" (report wording), p. 154 pinned.
+- Bib: Moffatt URL/howpublished; Mouton DOI and full names; AI Index title/PDF note; ISR 2026 arXiv note (2602.21012); Grace authors and article number; new jackson2025aa.
+
+### Figure data changes
+- **fig-11-02**: Hugging Face chance agreement 0.12 → **0.127** (label "~12%" → "13%"). Both the PMLR and arXiv versions say "would be 0.127". The figure must be redrawn. The other values (HELM 0.60 vs 1/3; HF 0.423) are verified.
+- **fig-11-03**: all six values and SDs verified against the abstract; no change.
+- **fig-11-01**: structure verified against both reports' tables of contents; no change.
+
+### Verified without change (selection)
+NIST definition (sec. 1.1); Charlotin 2,202 cases (site, 22 Oct 2026); Mata quotes pp. 1, 33 and $5,000; Kalai quote; Gender Shades 34.7%/0.8%; Obermeyer 17.7→46.5%, "millions of patients"; NCSC three quotes; GTIG "more than 20 countries" and quote (29 Jan 2025); Souly 250 docs, 600M–13B, collaboration; ASL-3 quote (22 May 2025); Urbina; Bommasani; Kim 350+ models, hiring simulation (p = 0.25, ~20%, (0.75)^20 ≈ 0.3%); Jiang 26K queries, 70+ models, NeurIPS 2025 Best Paper; CAIS statement and signatories; Bengio et al. 2024 (25 authors, quote); Narayanan & Kapoor quotes and resilience/nonproliferation; XPT 0.38%/3%/3.9%, June–Oct 2022; IJF "four months of discussion"; Kasirzadeh; all ISR 2026 quotes listed in the log above.
+
+### Remaining uncertainties
+- The RAND study's own wording could not be read (RAND, its PDF and Wayback were blocked); the claim is stated as the ISR 2025 summary.
+- Kalai et al. and Souly et al. remain arXiv preprints as far as could be checked (no journal_ref on arXiv); both are labelled as preprints.
+- Whether Margaret Mitchell co-signed the DAIR statement: not listed on the current page; not cited.
+- Safety: §11.4 stays at policy and assessment level; no operational detail was added.
