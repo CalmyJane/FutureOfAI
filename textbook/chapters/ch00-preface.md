@@ -24,10 +24,11 @@ Every chapter follows the same pattern. It opens with learning objectives and a 
 
 Claims about AI vary enormously in how well they are supported, and this book tries to make the difference visible. Every factual claim that is not common knowledge carries a citation in APA style, and the full list of references is at the end of the book. The text also signals the kind of source in the sentence itself:
 
-- **Peer-reviewed research** and **official statistics** are cited without further comment; they are the strongest evidence available, though not infallible.
-- **Preprints**, papers posted publicly before peer review, are labelled as such. In AI, many important results first appear as preprints and some never go through formal review.
+- **Peer-reviewed research** and **official statistics** are cited without a label: an unlabelled citation means the source has passed peer review or is an official publication. This is the strongest evidence available, though not infallible.
+- **Preprints and working papers**, posted publicly before (or without) peer review, are labelled as such where they are first mentioned in a chapter. In AI and in economics, many important results first appear this way, and some never go through formal review.
 - **Reports from research institutions** (for example Epoch AI, METR, the International Energy Agency or the Stanford AI Index) are named, so that readers can judge their methods.
 - **Company claims**, such as benchmark results in a product announcement, are introduced with "according to the company". They may be accurate, but they have not been checked independently, and companies have obvious reasons to present their products favourably.
+- **Research by banks and consultancies** is labelled as such, for the same reason.
 - **Opinions and forecasts** are attributed to the person who holds them.
 
 Where a figure redraws published data, its caption names the source; where a diagram is schematic, the caption says so.
