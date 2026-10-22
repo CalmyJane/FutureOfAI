@@ -112,3 +112,7 @@ Revision after the reader panel (no panel reader covered ch6; global fixes from 
 - **Readability (global fix 6):** about 25 sentences over ~35 words split (GraphCast, NOAA, GNoME, A-Lab correction, tokamak RL definition, AlphaEvolve, Tao, AI Scientist, Kosmos, Kapoor & Narayanan, Zittrain, debate box).
 - All fact-checked numbers, quotes and corrections retained (checked by script: no number or quotation from the pre-revision text was lost).
 - No figure-spec changes. Body length 6,397 words (was 6,069).
+
+## Consistency pass (22 Oct 2026)
+- "Diffusion model" defined at first use (6.2, GenCast): learns to start from random noise and remove it step by step; different noise gives different ensemble members. Verified against arXiv:2312.15796 (HTML version, GenCast preprint of price2025probabilistic): "Diffusion models work through a process of iterative refinement"; "the process can be repeated with different noise samples, to generate an ensemble of trajectories". Added to key terms and glossary-ch06.md.
+- Flight-simulator analogy kept here (removed from ch09); its "the analogy breaks down" sentence reworded to avoid cross-chapter template wording. No new sources. Body 6,424 words.

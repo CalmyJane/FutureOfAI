@@ -104,3 +104,8 @@ Revision after the reader panel (no reader read ch9; global fixes from work/REVI
 - Summary: persuasion and DSA bullets updated.
 - Figures: no spec changes.
 - Body word count: 5,748 → about 6,150.
+
+## Consistency pass (22 Oct 2026)
+- Silicon-sampling concept box: flight-simulator analogy (duplicate of ch06) replaced with a crash-test-dummy analogy (no factual claim; limit folded in, no "analogy breaks down").
+- 9.6 cross-reference: ch13 has no news-content passage, so "Chapter 13 discusses the related legal disputes over news content" → reference to the wider training-data copyright disputes in Section 13.6.
+- Debate closer "What evidence would decide it" → "Data that could answer it". No new sources. Body 6,164 words.

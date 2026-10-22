@@ -145,3 +145,10 @@ Independent fact-check of ch13 against primary sources where reachable. About 15
 
 ### Word count
 - Body (objectives to end of §13.7): 6,159 → 6,794.
+
+## Consistency pass (22 Oct 2026)
+- §13.7 Going-deeper box: "(Chapter 2)" for the 6ND rule corrected; derivation replaced by a back-reference to Section 4.1, keeping the worked 9 × 10^24 FLOP example and the Epoch AI count (what the 10^25 threshold means).
+- §13.2: added one sentence distinguishing the AI Act's legal "systemic risk" (attached to GPAI models) from Chapter 11's broader family of systemic risks.
+- §13.7: Sastry et al. quote ("detectable, excludable, and quantifiable") removed; now a back-reference to Section 7.7 (ch07 keeps the quote); sastry2024computing still cited. News-content litigation clause kept.
+- Template phrases: horizontal/sectoral analogy limit reworded (no "the analogy breaks down").
+- No new facts or sources; no bib changes. Body word count 6,794 -> 6,768. pandoc --citeproc: no warnings.

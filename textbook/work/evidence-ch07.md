@@ -111,3 +111,7 @@ Revision after the reader panel (no panel reader covered ch7; global fixes from 
 - **Readability (global fix 6):** about 30 long sentences split (Alberta, TPU, HBM, diffusion rule, H20/H200, IEA paragraphs, de Vries, water, Cottier, capex, R1, OSI definition, Arena, Sastry, EU AI Act, sovereign strategies).
 - All fact-checked numbers and quotations retained (script check: no number or quotation lost). Section headings unchanged.
 - No figure-spec changes (no figure data or labels changed). Body length 6,702 words (was 5,914).
+
+## Consistency pass (22 Oct 2026)
+- 7.1 opening: "Chapter 2 explained … matrices" replaced by a back-reference to Section 2.6; CPU/GPU explanation shortened; kitchen analogy kept, its limit (memory bandwidth) folded into the sentence instead of "The analogy breaks down".
+- Debate closer "Evidence that could decide it" → "What would tip the balance". Sastry quote kept (ch13 to shorten). No new sources. Body 6,640 words.

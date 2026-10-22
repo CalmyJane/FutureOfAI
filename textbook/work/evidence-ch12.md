@@ -108,3 +108,11 @@ Applied work/REVISION-GUIDE.md global fixes (no reader-panel notes concern ch12 
 - **Discussion questions:** Q4 replaced (the chapter never used the microscope analogy) with an application question on an SAE-based "no deception feature" test; Q5 made evidence-based (strength of the two cited framework actions as evidence); Q6 made less generic (identify testable assumptions behind Long et al. vs Suleyman).
 - **Readability:** long sentences split throughout (ISR misalignment definition, RLHF steps, Baker, ExploitGym box, Sharma, Meinke, instrumental-goals explanation, Schoen, features/superposition, SAE box, Marks, GDM SAE result, Chen/Anthropic, Ganguli, elicitation, CAISI, Seoul commitments, METR, GovAI, OpenAI marginal-risk clause, ISR frameworks count, FLI, Soares, Schlatter, Suleyman).
 - Body word count (objectives to end of §12.7): 6,209 -> 6,351. pandoc --citeproc: no warnings.
+
+## Consistency pass (22 Oct 2026)
+- §12.3: "activation" now defined in place (a neuron's output value); no longer claims Chapter 2 used the term.
+- §12.3 Circuits: Dallas/"Texas" and rhyme-planning findings shortened to a back-reference to Section 3.7; kept the ch12-specific detail (manipulating the intermediate step changed the answer; faithful vs backwards reasoning).
+- §12.4: Chen et al. hint percentages (25%/39%) replaced by a back-reference to Section 3.7; kept the >99% exploit / <2% admission detail (anthropic2025reasoning).
+- §12.5: UK AI Security Institute renaming and "bias or freedom of speech" quote cut to a clause pointing to Section 13.4; dsit2025tackling removed from bib/ch12.bib (no longer cited).
+- Template phrases: superposition analogy limit reworded (no "the analogy breaks down"); debate closer relabelled "What would show who is right:".
+- No new facts or sources. Body word count 6,351 -> 6,283. pandoc --citeproc: no warnings.

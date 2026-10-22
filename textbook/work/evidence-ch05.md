@@ -98,3 +98,7 @@ Changes:
 - §5.4 and §5.7 lightened: one citation per source per paragraph; AP2 partner count attributed to the company; long sentences split.
 - Templated prose: employee and USB-C analogy limits folded in; one explicit "analogy breaks down" kept (prompt-injection assistant); "Two features matter…" signpost removed; same-paragraph duplicate citations removed throughout (Project Vend, ReAct, Toolformer, A2A, Greshake, NCSC, AgentDojo, Cemri, Hammond, Hadfield & Koh, Tomašev, Chan, Replit).
 - No figure-spec changes.
+
+## Consistency pass (22 Oct 2026)
+- A2A aligned with ch14: "launched in April 2025 with more than 50 technology partners according to the company" (surapaneni2025announcing, already verified above: "50+ partners"); Linux Foundation handover June 2025, 100+ supporters unchanged. Bib entry identical to ch14.bib.
+- Template phrases: "The analogy breaks down" (prompt-injection assistant) reworded ("Here the comparison fails"); debate closer "Evidence that would decide the matter" → "What could resolve the question". No new sources. Body 6,362 words.

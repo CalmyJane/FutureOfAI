@@ -149,3 +149,11 @@ All ten proposals are introduced as the author's (section 14.5 framing paragraph
 
 ### Word count
 - Body (objectives to end of §14.6): 6,044 → 6,293 (approx.; see report).
+
+## Consistency pass (22 Oct 2026)
+- §14.3: Time Horizon 1.1 long-run doubling time reworded to "a similar long-run doubling time, about six and a half months" (196 days in metr2026time), instead of "the same".
+- §14.6 Proposal 14.7: A2A aligned with ch05 — April 2025 launch with 50+ partners according to Google (surapaneni2025announcing) and June 2025 Linux Foundation handover with 100+ supporting companies (linuxfoundation2025linux, copied byte-identical from bib/ch05.bib; fact verified in ch05's evidence log).
+- brynjolfsson2026canaries: key and entry already identical to bib/ch08.bib; no change.
+- §14.5: Kim et al. reduced to one sentence with back-reference to Section 11.5. §14.6: Bainbridge and Budzyń et al. shortened to back-references to Section 8.7 (Pedersen et al. 2026 trial kept in full); Dratsch et al. shortened to a back-reference to Section 11.5.
+- Template phrases: common-cause failure analogy limit reworded (no "breaks down").
+- Body word count 6,293 -> 6,269. pandoc --citeproc: no warnings.
