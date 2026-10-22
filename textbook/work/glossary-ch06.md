@@ -2,6 +2,7 @@
 **numerical weather prediction**: Forecasting the weather by solving the physical equations of the atmosphere on a computer, starting from an estimate of its current state.
 **reanalysis**: A consistent reconstruction of past weather, made by combining historical observations with a weather model; ECMWF's ERA5 is the standard example.
 **ensemble forecast**: A set of many forecasts made from slightly different starting points or with random variation, whose spread indicates how uncertain the forecast is.
+**diffusion model**: A generative model that learns to turn random noise into a realistic sample, such as an image or a weather forecast, by removing the noise step by step; starting from different noise gives different samples.
 **autoregressive rollout**: Producing a long forecast or sequence by feeding a model's own prediction back in as the next input, one step at a time.
 **data assimilation**: The process of merging fresh observations with a model to produce the best estimate of the current state of a system, such as the atmosphere, from which a forecast starts.
 **graph neural network**: A neural network that works on data represented as nodes connected by edges, such as atoms linked by bonds in a crystal.

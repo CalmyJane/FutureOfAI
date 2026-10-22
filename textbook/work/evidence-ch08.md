@@ -101,3 +101,8 @@ Dense passages: §8.1 Eloundou and IMF/ILO paragraphs split; §8.2 Peng/Cui/METR
 Cuts to stay within limit: Goldman exposure/300 million sentence, Noy & Zhang follow-up usage sentence, PwC growth figures, Felten wage correlation, minor redundancies.
 
 **Word count**: body 6,049 → 6,897. No figure or table specs changed (Figure 8.2 and Table 8.1 data unchanged).
+
+## Consistency pass (22 Oct 2026)
+- Cross-chapter audit items for ch08 required no change: dell'Acqua "jagged frontier" definition and the Budzyń/Bainbridge deskilling material stay here (ch04 and ch14 refer back).
+- Template phrases: debate closer "What would settle it:" (also used in ch02, ch04) reworded to "Data that could answer it:". No "the analogy breaks down" sentence in this chapter.
+- No new claims or sources; bib unchanged. Body 6,898 words; 5 boxes; pandoc citeproc clean.

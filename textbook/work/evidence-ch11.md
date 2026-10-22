@@ -104,3 +104,9 @@ Applied work/REVISION-GUIDE.md and panel notes (work/panel/weber-ch00-01-08-11.m
 - **Labels/years:** XPT labelled working paper; Gender Shades 2018, Obermeyer 2019, Kim 2025, Dratsch 2023, Narayanan & Kapoor 2025 essay.
 - **Readability:** long sentences split (Air Canada, NIST definition, ISR description, hazard box, Mata, agents, Hofmann, ISR bias, NCSC, poisoning, RAND, Urbina, CAIS, Carlsmith, Narayanan, Grace).
 - Body word count (objectives to end of §11.7): 5,962 -> 6,253. pandoc --citeproc: no warnings.
+
+## Consistency pass (22 Oct 2026)
+- §11.1: added one sentence flagging that "systemic risk" has a narrower legal meaning in the EU AI Act (ch13: GPAI models presumed to pose systemic risk), distinct from the report's family of harms. House-fire analogy limit reworded (no "The analogy breaks down").
+- §11.2: Kalai et al. retelling cut to a back-reference to Section 3.6 (heading checked in ch03.md) plus a one-sentence summary; *Mata v. Avianca* case box removed and replaced by one sentence with a back-reference to Section 3.6 (facts as in ch03 box and sdny2023mata: $5,000 penalty on two lawyers and their firm; failure was lack of checking). Remaining boxes kept (4: two concept, one case, one debate); no new case added.
+- §11.3: "Chapter 13 describes how the EU AI Act restricts…" changed to "Chapter 13 lists the EU AI Act's restrictions…".
+- Kim et al. and Dratsch kept unchanged. No new claims or sources; no bib entries removed (sdny2023mata, kalai2025why still cited). Body 6,099 words; pandoc citeproc clean.

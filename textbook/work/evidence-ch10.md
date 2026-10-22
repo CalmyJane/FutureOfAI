@@ -115,3 +115,8 @@ Revision after the reader panel (no reader read ch10; global fixes applied; lect
 - Further reading: added King et al. (2025).
 - Figures: no spec changes.
 - Body word count: 5,832 → about 6,630.
+
+## Consistency pass (22 Oct 2026)
+- §10.7: EDPB Opinion 28/2024 and Garante €15m fine / Tribunal of Rome passage (told in full in ch13 §13.6) cut to one sentence with a forward reference to Section 13.6 (heading checked in ch13.md); keys edpb2024opinion and garante2024chatgpt still cited; wording "upheld the company's appeal" kept per fact-check note 5. Replika enforcement (companion-specific) kept, now introduced as "Companion apps have drawn enforcement of their own".
+- Template phrases: SD box sentence "The analogy breaks down because…" reworded ("Unlike heights, though, …"). Debate closer already distinct.
+- No new claims or sources; no bib entries removed (all still cited). Body 6,503 words; 5 boxes; pandoc citeproc clean.
