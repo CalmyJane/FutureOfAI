@@ -87,22 +87,22 @@ def _dot(ax, x, y, kind, r=0.85):
 def f1302():
     H = 3.6
     fig, ax = canvas(H, ylim=(0, 22.47 * H))
-    x0, x1 = 15.5, 98.5          # Jan 2023 .. Dec 2026 (end)
+    x0, x1 = 6.0, 98.5           # Jan 2023 .. end of Dec 2026
 
     def X(y, m):
         return x0 + ((y - 2023) * 12 + (m - 1) + 0.5) * (x1 - x0) / 48
 
-    lanes = ["EU", "United\nStates", "China", "UK", "Inter-\nnational"]
-    LH, ybase = 14.6, 8.5
+    lanes = ["EU", "United States", "China", "UK", "International"]
+    LH, ybase = 14.3, 7.5
     ly = {n: ybase + (len(lanes) - 1 - i) * LH + LH / 2 for i, n in enumerate(lanes)}
     for i, n in enumerate(lanes):
         yc = ly[n]
         if i % 2 == 0:
-            ax.add_patch(F.FancyBboxPatch((0.5, yc - LH / 2), x1 - 0.5, LH, boxstyle="square,pad=0",
+            ax.add_patch(F.FancyBboxPatch((0.3, yc - LH / 2), x1 - 0.3, LH, boxstyle="square,pad=0",
                                           fc=G4, ec="none", zorder=0))
         ax.plot([x0, x1], [yc, yc], color=G2, lw=0.5, zorder=1)
-        label(ax, 1.5, yc, n, fs=7.0, weight="bold", ha="left")
-    # time axis
+        label(ax, 2.6, yc, n, fs=6.8, weight="bold", rot=90)
+    # time axis with year boundaries
     ya = ybase
     ax.plot([x0, x1], [ya, ya], color=INK, lw=0.6)
     for k in range(9):
@@ -111,55 +111,53 @@ def f1302():
         if k % 2 == 0:
             ax.plot([xt, xt], [ya, ya + 5 * LH], color=G3, lw=0.4, ls=(0, (2, 2)), zorder=0.5)
     for k, yr in enumerate(range(2023, 2027)):
-        label(ax, x0 + (k * 12 + 6) * (x1 - x0) / 48, ya - 2.4, str(yr), fs=7.0)
+        label(ax, x0 + (k * 12 + 6) * (x1 - x0) / 48, ya - 2.3, str(yr), fs=7.0)
 
-    # (lane, year, month, text, kind, side, ha)   kind: f filled, h hollow, e half (executive order)
+    # (lane, year, month, text, kind, side, ha)   kind: f binding, h non-binding, e executive order
     ev = [
-        ("EU", 2024, 8, "AI Act\nin force", "f", "u", "center"),
-        ("EU", 2025, 2, "Prohibitions\napply", "f", "d", "right"),
-        ("EU", 2025, 7, "GPAI Code\npublished", "h", "u", "center"),
-        ("EU", 2025, 8, "GPAI duties\napply", "f", "d", "left"),
+        ("EU", 2024, 8, "AI Act in force", "f", "u", "right"),
+        ("EU", 2025, 2, "Prohibitions apply", "f", "u", "center"),
+        ("EU", 2025, 7, "GPAI Code published", "h", "d", "right"),
+        ("EU", 2025, 8, "GPAI duties apply", "f", "u", "left"),
         ("EU", 2026, 7, "Digital Omnibus\nin force", "f", "u", "center"),
-        ("United\nStates", 2023, 10, "EO 14110\nsigned", "e", "u", "center"),
-        ("United\nStates", 2025, 1, "EO 14110\nrevoked", "e", "u", "center"),
-        ("United\nStates", 2025, 9, "California\nSB 53 signed", "f", "u", "center"),
-        ("United\nStates", 2025, 12, "EO on\nstate laws", "e", "d", "center"),
-        ("United\nStates", 2026, 5, "Colorado re-\nplaces AI Act", "f", "u", "center"),
-        ("China", 2023, 8, "Generative\nAI measures", "f", "u", "center"),
-        ("China", 2025, 9, "Labelling\nrules apply", "f", "u", "center"),
-        ("China", 2026, 7, "Anthropomorphic\nAI rules", "f", "u", "center"),
-        ("UK", 2023, 3, "Pro-innovation\nwhite paper", "h", "u", "left"),
-        ("UK", 2025, 2, "AI Security\nInstitute", "h", "u", "center"),
-        ("UK", 2026, 3, "Copyright\nreport", "h", "u", "center"),
-        ("Inter-\nnational", 2023, 10, "G7 Hiroshima\nCode", "h", "u", "right"),
-        ("Inter-\nnational", 2023, 11, "Bletchley\nDeclaration", "h", "d", "left"),
-        ("Inter-\nnational", 2024, 5, "Seoul\ncommitments", "h", "u", "center"),
-        ("Inter-\nnational", 2024, 9, "CoE treaty\nopens", "f", "d", "center"),
-        ("Inter-\nnational", 2025, 2, "Paris\nstatement", "h", "u", "center"),
-        ("Inter-\nnational", 2025, 8, "UN Panel and\nDialogue", "h", "d", "center"),
-        ("Inter-\nnational", 2026, 2, "India Impact\nSummit", "h", "u", "center"),
+        ("United States", 2023, 10, "EO 14110 signed", "e", "u", "center"),
+        ("United States", 2025, 1, "EO 14110 revoked", "e", "u", "center"),
+        ("United States", 2025, 9, "California\nSB 53 signed", "f", "u", "left"),
+        ("United States", 2025, 12, "EO on state laws", "e", "d", "center"),
+        ("United States", 2026, 5, "Colorado replaces\nAI Act", "f", "u", "left"),
+        ("China", 2023, 8, "Generative AI measures", "f", "u", "center"),
+        ("China", 2025, 9, "Labelling rules apply", "f", "u", "center"),
+        ("China", 2026, 7, "Anthropomorphic AI rules", "f", "u", "center"),
+        ("UK", 2023, 3, "Pro-innovation white paper", "h", "u", "left"),
+        ("UK", 2025, 2, "AI Security Institute", "h", "u", "center"),
+        ("UK", 2026, 3, "Copyright report", "h", "u", "center"),
+        ("International", 2023, 10, "G7 Hiroshima Code", "h", "u", "right"),
+        ("International", 2023, 11, "Bletchley Declaration", "h", "d", "left"),
+        ("International", 2024, 5, "Seoul commitments", "h", "u", "center"),
+        ("International", 2024, 9, "CoE treaty opens", "f", "d", "left"),
+        ("International", 2025, 2, "Paris statement", "h", "u", "center"),
+        ("International", 2025, 8, "UN Panel and Dialogue", "h", "d", "left"),
+        ("International", 2026, 2, "India Impact Summit", "h", "u", "center"),
     ]
     MON = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
+    fs, lh = 5.9, 2.35
     for lane, yr, m, t, kind, side, ha in ev:
         x, yc = X(yr, m), ly[lane]
         _dot(ax, x, yc, kind)
-        tx = {"left": x - 1.0, "right": x + 1.0}.get(ha, x)
-        txt = f"{t}\n{MON[m - 1]} {yr}"
-        n = t.count("\n") + 1
+        tx = {"left": x - 0.9, "right": x + 0.9}.get(ha, x)
+        d = f"{MON[m - 1]} {yr}"
         if side == "u":
-            ax.text(tx, yc + 1.3, f"{MON[m - 1]} {yr}", ha=ha, va="bottom", fontsize=5.9, color=G1,
-                    style="italic", zorder=6)
-            ax.text(tx, yc + 3.6, t, ha=ha, va="bottom", fontsize=5.9, linespacing=1.0, zorder=6)
+            ax.text(tx, yc + 1.2, d, ha=ha, va="bottom", fontsize=fs, color=G1, style="italic", zorder=6)
+            ax.text(tx, yc + 1.2 + lh, t, ha=ha, va="bottom", fontsize=fs, linespacing=1.0, zorder=6)
         else:
-            ax.text(tx, yc - 1.3, t, ha=ha, va="top", fontsize=5.9, linespacing=1.0, zorder=6)
-            ax.text(tx, yc - 1.3 - 2.3 * n - 0.2, f"{MON[m - 1]} {yr}", ha=ha, va="top", fontsize=5.9,
-                    color=G1, style="italic", zorder=6)
+            n = t.count("\n") + 1
+            ax.text(tx, yc - 1.2, t, ha=ha, va="top", fontsize=fs, linespacing=1.0, zorder=6)
+            ax.text(tx, yc - 1.2 - lh * n, d, ha=ha, va="top", fontsize=fs, color=G1, style="italic", zorder=6)
     # legend
-    lyg = 1.6
-    items = [("f", "binding law or regulation"), ("e", "executive order"), ("h", "non-binding")]
-    lx = 18
-    for kind, t in items:
+    lyg = 1.2
+    lx = 12
+    for kind, t in [("f", "binding law or regulation"), ("e", "executive order"), ("h", "non-binding")]:
         _dot(ax, lx, lyg, kind)
         label(ax, lx + 1.8, lyg, t, fs=6.4, ha="left")
-        lx += 27
+        lx += 28
     save(fig, "fig-13-02")
