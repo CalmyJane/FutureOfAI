@@ -15,7 +15,7 @@ def f0501():
     sub = {"Perceive": "read current state", "Plan": "model chooses step", "Act": "call a tool", "Observe": "read tool output"}
     for k, (x, y) in pos.items():
         box(ax, x - W / 2, y - H / 2, W, H, "", fill="white")
-        label(ax, x, y + 1.3, k, fs=8.5, weight="bold")
+        label(ax, x, y + 1.3, k, fs=9)
         label(ax, x, y - 2.1, sub[k], fs=6.2, color=G1, italic=True)
     # the clockwise cycle
     e = W / 2 + 1.0
@@ -28,13 +28,13 @@ def f0501():
     arrow(ax, 15.6, 47, 32 - e, 47)
     # memory in the middle of the loop
     box(ax, 42, 31, 14, 6, "", fill=G4)
-    label(ax, 49, 35.2, "Memory", fs=7.5, weight="bold")
+    label(ax, 49, 35.2, "Memory", fs=8)
     label(ax, 49, 32.4, "notes, transcript", fs=5.9, italic=True, color=G1)
     arrow(ax, 54.5, 37.6, 58.5, 42.2, style="<|-|>", ls="--", lw=0.7, ms=6)
     arrow(ax, 43.5, 30.4, 39.5, 25.8, style="<|-|>", ls="--", lw=0.7, ms=6)
     # tools to the right of Act
     box(ax, 82, 14.5, 16, 13, "", fill=G4)
-    label(ax, 90, 24.5, "Tools", fs=8, weight="bold")
+    label(ax, 90, 24.5, "Tools", fs=8.5)
     label(ax, 90, 19.2, "web search\ncode runner\nemail · files", fs=6.2)
     arrow(ax, 66 + e, 21, 81.2, 21, style="<|-|>")
     # human check to the right of Plan

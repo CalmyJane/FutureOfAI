@@ -21,7 +21,7 @@ All sources checked on 2026-10-22. Bibliographic metadata checked against Crossr
 | belkin2019reconciling | Double-descent curve | "increasing model capacity beyond the point of interpolation results in improved performance" | DOI 10.1073/pnas.1903070116 (abstract via Semantic Scholar) | peer-reviewed |
 | srivastava2014dropout | Dropout randomly drops units during training to reduce overfitting | "The key idea is to randomly drop units (along with their connections) from the neural network during training." | https://jmlr.org/papers/v15/srivastava14a.html | peer-reviewed |
 | zeiler2014visualizing | Visualised features by layer: layer 2 corners/edge-colour conjunctions; layer 3 textures; layer 4 dog faces; layer 5 whole objects (keyboards, dogs) | "Layer 2 responds to corners and other edge/color conjunctions. Layer 3 ... similar textures (e.g. mesh patterns ...). Layer 4 ... dog faces ... Layer 5 shows entire objects ... e.g. keyboards" | https://arxiv.org/abs/1311.2901 ; DOI 10.1007/978-3-319-10590-1_53 | peer-reviewed (conference) |
-| szegedy2014intriguing | Semantic information spread across units; imperceptible perturbation causes misclassification | "it is the space, rather than the individual units, that contains the semantic information"; "imperceptible perturbation" | https://arxiv.org/abs/1312.6199 | preprint (also presented at ICLR 2014; labelled arXiv in bib) |
+| szegedy2014intriguing | Semantic information spread across units; imperceptible perturbation causes misclassification | "it is the space, rather than the individual units, that contains the semantic information"; "imperceptible perturbation" | https://arxiv.org/abs/1312.6199 | peer-reviewed (conference, ICLR 2014; bib updated at fact-check) |
 | hubel1962receptive | Simple and complex cells in cat visual cortex (inspiration for CNNs) | metadata confirmed; CNN-inspiration link stated in LeCun et al. 2015, p. 439 | DOI 10.1113/jphysiol.1962.sp006837 | peer-reviewed |
 | fukushima1980neocognitron | Neocognitron as root of ConvNets | metadata confirmed; "ConvNets have their roots in the neocognitron" (LeCun et al. 2015, p. 439) | DOI 10.1007/BF00344251 | peer-reviewed |
 | raina2009large | GPU training cut time for 4-layer, 100M-parameter model from weeks to ~a day | "from several weeks to around a single day" (abstract). NOTE: abstract speed-up factor differs between versions (55x vs 70x), so no factor is quoted | https://mlanthology.org/icml/2009/raina2009icml-large/ ; DOI 10.1145/1553374.1553486 | peer-reviewed (conference) |
@@ -46,3 +46,35 @@ All sources checked on 2026-10-22. Bibliographic metadata checked against Crossr
 ## Claims dropped
 - Raina et al. (2009) speed-up factor (70x vs 55x across abstract versions): not quoted.
 - "Far more than a child needs" (data-efficiency comparison): no source verified; cut.
+
+## Fact-check (2026-10-22)
+
+Independent check of all numbers, dates, quotations, attributions, worked arithmetic and bibliography (about 120 claims checked). Sources re-read: Penguin sample of Ananthaswamy 2024 (prologue), Cornell Chronicle 2019, Rosenblatt 1958 PDF, LeCun et al. 1998 PDF, LeCun et al. 2015 PDF, Krizhevsky et al. 2012 PDF, Szegedy et al. arXiv v4, Goodfellow et al. 2015 arXiv v3, deeplearningbook.org chapters 1, 5, 6, 7, 12, Europe PMC abstracts (Zech, Kirkpatrick, Lillicrap, Beniaguev, Yamins), Crossref metadata for every DOI, ML Anthology (Raina).
+
+### Writer's flags
+1. NYT 1958 quote: original (nytimes.com archive, Wayback) blocked (403 / connection reset). Verified against a reliable reproduction: Ananthaswamy 2024 prologue quotes the opening paragraph verbatim, with date (8 July 1958) and page (25); Cornell Chronicle confirms the headline. The original sentence's subject is "the embryo of an electronic computer", not "the machine's successors", so the sentence was rewritten to quote the original wording and the citation now reads "[@newyorktimes1958new, p. 25; as reproduced in @ananthaswamy2024why]".
+2. LeCun et al. 1998: confirmed 60,000 trainable parameters, 345,308 connections (text "more than 340,000" correct), training error 0.35% after 19 passes, test error 0.95%, MNIST 60,000 training / 10,000 test images, "several million checks per day", "millions of checks per month in several banks across the United States", AT&T Labs-Research. No change needed.
+3. Goodfellow et al. section numbers: ReLU default recommendation is in sec. 6.1 (was "ch. 6"; made precise); Minsky-Papert "backlash" is in ch. 1, sec. 1.2.1, not ch. 6 (corrected); sec. 6.1 (XOR solution), 6.4.1 (universal approximation, "We are not guaranteed"), 6.5 (backprop cost "of the same order" as forward), 6.6 (Linnainmaa 1976, Werbos 1981, rediscovery), 5.2 (generalisation vs optimisation), 5.3 (hyperparameters), 7.8 (early stopping quote), 12.1.2 (GPU implementations) all confirmed.
+4. Szegedy et al.: changed bib from @misc arXiv preprint to @inproceedings, ICLR 2014 (Banff); confirmed via Goodfellow et al. 2015 reference list ("ICLR, abs/1312.6199, 2014"). Text "a widely cited preprint" -> "a widely cited study".
+
+### Corrections (old -> new)
+- "the Cornell psychologist Frank Rosenblatt" -> "Frank Rosenblatt, a research psychologist at the Cornell Aeronautical Laboratory" (Cornell Chronicle; he joined the university faculty later).
+- NYT sentence: "expected the machine's successors to 'walk, talk, ...'" -> "had revealed 'the embryo of an electronic computer' that it expected 'will be able to walk, talk, ...'".
+- Szegedy quote "imperceptible perturbation" -> "imperceptible non-random perturbation" (exact wording, arXiv v4 p. 2; abstract says "hardly perceptible").
+- [@goodfellow2016deep, ch. 6] (ReLU) -> sec. 6.1; [@goodfellow2016deep, ch. 6] (backlash) -> sec. 1.2.1.
+- [@lecun2015deep, p. 437] (gradient definition) -> p. 436; "surprisingly quickly" pp. 436-437 -> p. 437.
+- Krizhevsky quote completed ("... bigger datasets to become available") and locator "p. 2" -> "p. 1098" (proceedings pagination, consistent with bib pages 1097-1105).
+- "The underlying mathematics, a rule from calculus called the chain rule, was developed ... from the 1960s onwards" -> chain rule is centuries old; its efficient application was developed from the 1960s (Goodfellow sec. 6.6).
+- "ImageNet competition data used to train AlexNet ... 150,000 test images" -> "dataset on which AlexNet was trained and evaluated" (test images are not training data).
+- Zech: ">99.9% accuracy identifying hospital system" restricted to NIH and Mount Sinai radiographs (99.95% / 99.98%; IU not reported).
+- Raina: "four-layer network" -> "four-layer network (a 'deep belief network')" (as in abstract).
+- Further reading: "chapters 5-8 cover everything in this chapter" -> "chapters 5-9 cover most of this chapter" (CNNs are ch. 9; GPUs ch. 12).
+- Bib: szegedy2014intriguing -> @inproceedings ICLR 2014; zeiler2014visualizing: added "Part I" and LNCS volume 8689.
+
+### Worked arithmetic re-checked (all correct)
+Neuron 0.2 / -0.3 -> 0; sigmoid(0.2) = 0.550; Figure 2.2: 12 + 8 = 20 weights + 6 biases = 26; XOR network matches Goodfellow eq. 6.4-6.6 and gives 0,1,1,0; squared errors 0.64, 0.01; cross-entropy 0.105, 2.303, 4.605; gradient example (0.36, 0.3364, slope -2.4, w 0.44, loss 0.0144; lr 0.5 -> 1.4, loss 3.24; lr 0.1 contracts error by factor 0.2 per step, so converges to 0.5 as stated); chain-rule box (h 2, y 1, L 1; gradients -2, -4, -1, -1; w2 0.9, w1 2.1, y 1.89); 2 x 3 = 6; 1,000 x 1,000 inputs x 1,000 neurons = 10^9 weights. Figure specs 2.1-2.4 consistent with text; no figure data changed.
+
+### Remaining uncertainties
+- NYT 1958 article not seen in the original; wording rests on Ananthaswamy 2024 (verbatim, with date and page) and the Cornell Chronicle headline.
+- Szegedy et al. ICLR 2014 venue confirmed via a secondary reference list (OpenReview/dblp blocked); this is the well-known venue.
+- Zeiler & Fergus layer descriptions and the Geirhos p. 665 quote rest on the writer's log (Crossref metadata confirmed; full text not re-read).

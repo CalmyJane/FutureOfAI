@@ -90,7 +90,9 @@ def f1201():
     xstop = cx(xs[1], ys) - sw / 2 - 0.2
     ax.plot([10.9, 14, xstop], [40.5, ys, ys], color=INK, lw=0.9, zorder=4)
     ax.plot([xstop, xstop], [ys - 2.2, ys + 2.2], color=INK, lw=1.5, zorder=4, solid_capstyle="butt")
-    label(ax, xstop - 0.5, ys + 4.6, "Stopped", fs=6.4, italic=True, ha="right")
+    gx = (cx(xs[0], y1) + cx(xs[1], y1)) / 2
+    label(ax, gx, y1 + 2.6, "Stopped", fs=6.4, italic=True)
+    ax.plot([gx, xstop - 0.3], [y1 + 0.9, ys + 2.6], color=G2, lw=0.5, zorder=4)
     label(ax, 50, 1.6, "No single layer is complete; layering reduces the chance that all fail together.",
           fs=6.4, italic=True)
     save(fig, "fig-12-01")

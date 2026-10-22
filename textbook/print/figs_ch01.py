@@ -23,8 +23,8 @@ def f0101():
     box(ax, 54, 18, 39, 29, fill=G4, lw=0.8, style=sq)
     label(ax, 56.5, 43.7, "Foundation models", fs=7.6, ha="left", weight="bold")
     # generative AI: dotted, overlaps the foundation-model region and extends beyond it
-    ax.add_patch(Ellipse((75, 25), 42, 24, fill=False, ec=INK, lw=0.8, ls=(0, (1, 1.6))))
-    label(ax, 75, 15.3, "Generative AI", fs=6.8, italic=True)
+    ax.add_patch(Ellipse((74, 25), 40, 24, fill=False, ec=INK, lw=0.8, ls=(0, (1, 1.6))))
+    label(ax, 74, 15.3, "Generative AI", fs=6.8, italic=True)
     box(ax, 57.5, 22.5, 15, 11, "", fill="white", lw=0.7, style="round,pad=0,rounding_size=1.5")
     label(ax, 65, 29.6, "LLMs", fs=7.5, weight="bold")
     label(ax, 65, 25.6, "GPT-3 (2020)", fs=6, italic=True, color=G1)
@@ -38,9 +38,9 @@ def f0101():
     # example inside ML but outside DL
     label(ax, 36.5, 13, "Support\nvector\nmachines", fs=6.3, italic=True, color=G1)
     # agents: a usage pattern drawn across the boundaries
-    ax.add_patch(F.FancyBboxPatch((30.5, 34.5), 41, 6.2, boxstyle="round,pad=0,rounding_size=1.2",
+    ax.add_patch(F.FancyBboxPatch((26.5, 34.5), 45, 6.2, boxstyle="round,pad=0,rounding_size=1.2",
                                   fc=G3, ec=INK, lw=0.7, ls=(0, (3, 2)), zorder=3))
-    ax.text(51, 37.6, "Agents (model + tools + loop)", fontsize=7, ha="center", va="center",
+    ax.text(49, 37.6, "Agents (model + tools + loop)", fontsize=7, ha="center", va="center",
             style="italic", zorder=4)
     label(ax, 3.5, 4.2, "Schematic, not to scale", fs=6, ha="left", italic=True, color=G1)
     save(fig, "fig-01-01")
@@ -66,10 +66,8 @@ def f0102():
                 ha="left", va="center", linespacing=1.1,
                 arrowprops=dict(arrowstyle="-", color=G1, lw=0.5, shrinkA=1, shrinkB=0))
     # annotator line label
-    ax.annotate("One annotator, 1,500 images (5.1%)", xy=(4.5, 5.1), xytext=(4.62, 13.2), fontsize=6.6,
-                ha="right", va="bottom",
-                arrowprops=dict(arrowstyle="-", color=G1, lw=0.5, shrinkA=0, shrinkB=0,
-                                connectionstyle="angle,angleA=0,angleB=90,rad=0"))
+    ax.plot([4.5, 4.5], [5.1, 15.9], color=G1, lw=0.5)
+    ax.text(5.5, 16.2, "One annotator, 1,500 images (5.1%)", fontsize=6.6, ha="right", va="bottom")
     ax.set_xticks(x)
     ax.set_xticklabels([f"{y}\n{t}" for y, t in zip(years, teams)], fontsize=7, linespacing=1.1)
     ax.tick_params(axis="x", length=0, pad=3)
@@ -149,7 +147,7 @@ def _spread(ys, gap, lo, hi):
     return out
 
 
-def _side(ax, items, sign, gap=2.6):
+def _side(ax, items, sign, gap=2.8):
     ys = [_ty(y) for y, _ in items]
     ly = _spread(ys, gap, 1.6, 76)
     for (yr, txt), y, yl in zip(items, ys, ly):
@@ -160,7 +158,7 @@ def _side(ax, items, sign, gap=2.6):
         if not winter:
             ax.plot([x0, x1, x2], [y, y, yl], color=G2, lw=0.45, zorder=1)
             ax.add_patch(F.Circle((AX, y), 0.75, fc="white", ec=INK, lw=0.7, zorder=3))
-        ax.text(x2 + sign * 0.6, yl, txt, fontsize=6.3, ha="left" if sign > 0 else "right", va="center",
+        ax.text(x2 + sign * 0.6, yl, txt, fontsize=6.8, ha="left" if sign > 0 else "right", va="center",
                 style="italic" if winter else "normal", color=INK)
 
 

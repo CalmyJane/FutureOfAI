@@ -27,7 +27,7 @@ def f0601():
     checks = ["Check\nsources", "Expert\njudgement", "Compare with\nreality", "Test on\nheld-out data",
               "Read the\ncode", "Independent\nreplication"]
     ax.add_patch(Ellipse((cx, cy), 36, 44, fc=G4, ec=G2, lw=0.6, ls="--"))
-    label(ax, cx, cy, "Scientific\ncycle", fs=8.5, weight="bold")
+    label(ax, cx, cy, "Scientific\ncycle", fs=9.5)
     CP = [(50, 61), (59.5, 52.5), (59.5, 37.5), (50, 29), (40.5, 37.5), (40.5, 52.5)]
     for i in range(6):
         x, y = P[i]
@@ -82,7 +82,7 @@ def f0602():
         yy = y0 + sgn * 7
         va = "bottom" if up else "top"
         for txt, kw, gap in ((d, dict(fontsize=6.3, color=G1), 0.6),
-                             (n, dict(fontsize=6.6, weight="bold", linespacing=1.05), 0.9),
+                             (n, dict(fontsize=7.2, linespacing=1.05), 0.9),
                              (t, dict(fontsize=5.9, linespacing=1.12), 0)):
             h = ax.text(x, yy, txt, ha="center", va=va, **kw)
             yy += sgn * (height(h) + gap)
