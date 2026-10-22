@@ -77,7 +77,7 @@ def f0302():
     # masked attention
     box(ax, 15.5, 22, 45, 12, "", fill=G4, lw=0.5, style="round,pad=0,rounding_size=1")
     label(ax, 9, 29.5, "Masked\nattention", fs=6.6)
-    label(ax, 9, 24.7, "looks only left", fs=5.9, italic=True, color=G1)
+    label(ax, 9, 23.9, "itself and\nearlier only", fs=5.9, italic=True, color=G1)
     for j in range(1, 5):
         for i in range(j):
             d = cols[j] - cols[i]
@@ -211,5 +211,6 @@ def f0303():
         ax.plot([xa, xa, xb, xb], [y + 1.2, y, y, y + 1.2], color=G1, lw=0.6)
         label(ax, (xa + xb) / 2, y - 2.6, txt, fs=6.5, italic=True, color=G1)
     brace(C[0][0], C[0][0] + C[0][1], "most compute")
-    brace(C[1][0], C[3][0] + C[3][1], "far less data")
+    brace(C[1][0], C[2][0] + C[2][1], "far less data")
+    brace(C[3][0], C[3][0] + C[3][1], "growing share\nof compute")
     save(fig, "fig-03-03")

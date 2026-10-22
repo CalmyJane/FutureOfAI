@@ -13,3 +13,9 @@
 **hallucination**: A fluent but false or unsupported statement produced by a language model, such as an invented citation; the term is a metaphor, since the model perceives nothing.
 **retrieval-augmented generation (RAG)**: A technique in which a system first searches a collection of documents and places the relevant passages in the model's context window before it answers.
 **reasoning model**: A language model trained, usually with reinforcement learning on problems with checkable answers, to produce a long chain of intermediate reasoning before giving its final answer.
+**reinforcement learning**: A way of training in which a system tries actions or answers and receives only a score (a reward) for how good the result was, rather than the correct answer, and is adjusted to make high-scoring behaviour more likely.
+**vector**: An ordered list of numbers, such as an embedding, that can be added, subtracted and compared position by position.
+**dot product**: A measure of how well two vectors match: multiply them number by number and add up the results; the total is large when both have large values in the same places.
+**logit**: The raw score, positive or negative, that a language model's final layer gives each possible next token before the scores are turned into probabilities.
+**softmax**: A function that turns a list of scores into probabilities that are all positive and add up to one, giving the highest scores a disproportionately large share.
+**rotary position embedding (RoPE)**: A way of giving a transformer word-order information by rotating the vectors compared in attention by an angle that depends on each token's position, used in Llama-style models.
