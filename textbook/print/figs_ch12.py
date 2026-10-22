@@ -96,3 +96,57 @@ def f1201():
     label(ax, 50, 1.6, "No single layer is complete; layering reduces the chance that all fail together.",
           fs=6.4, italic=True)
     save(fig, "fig-12-01")
+
+
+@fig("fig-12-02")
+@own_glyph_ids
+def f1202():
+    H, YT = 3.3, 70
+    fig, ax = canvas(H, ylim=(0, YT))
+    uy = H / YT                   # inches per y unit
+    ux = _sx()                    # inches per x unit
+
+    def dot(x, y, d_in, fill):
+        ax.add_patch(F.matplotlib.patches.Ellipse((x, y), d_in / ux, d_in / uy, fc=fill, ec=INK, lw=0.6, zorder=3))
+
+    # stage 1: input text
+    box(ax, 1.5, 35, 15.5, 11, "", fill="white", lw=0.7)
+    label(ax, 9.25, 49.5, "Input text", fs=7.2, weight="normal")
+    label(ax, 9.25, 40.5, "“Driving over\nthe Golden\nGate Bridge”", fs=6.6, italic=True)
+    # stage 2 and 4: neuron columns
+    shades = [G1, G3, G2, "white", G2, G3]
+    ncy = [52 - i * 5.6 for i in range(6)]     # 52 .. 24
+    for xc in (31, 91):
+        for y, c in zip(ncy, shades):
+            dot(xc, y, 0.17, c)
+    blabel(ax, 31, 61, "Model neurons\n(one layer)", fs=6.8)
+    blabel(ax, 91, 61, "Reconstructed\nactivations", fs=6.8)
+    label(ax, 31, 17.5, "Concepts overlap\n(superposition)", fs=6.2, italic=True, color=G1)
+    # stage 3: candidate features
+    fx, n = 55, 20
+    fy = [62 - i * 2.75 for i in range(n)]     # 62 .. 9.75
+    s_in = 0.095
+    on = {2: "Golden Gate Bridge", 7: "Driving / cars", 15: "San Francisco"}
+    for i, y in enumerate(fy):
+        ax.add_patch(F.FancyBboxPatch((fx - s_in / ux / 2, y - s_in / uy / 2), s_in / ux, s_in / uy,
+                                      boxstyle="square,pad=0", fc=INK if i in on else "white", ec=INK, lw=0.5, zorder=3))
+        if i in on:
+            label(ax, fx + 2.6, y, on[i], fs=6.2, italic=True, ha="left")
+    blabel(ax, fx, 68, "Candidate features (many more)", fs=6.8)
+    label(ax, fx - 3.2, 44, "Sparse:\nfew active", fs=6.2, italic=True, color=G1, ha="right")
+    # arrows
+    arrow(ax, 17.5, 40.5, 27.5, 40.5, lw=0.8)
+    arrow(ax, 34.5, 38, 51, 38, lw=0.8)
+    label(ax, 42.5, 35.6, "Encoder", fs=6.6, italic=True)
+    arrow(ax, 77, 38, 87.5, 38, lw=0.8)
+    label(ax, 82.2, 35.6, "Decoder", fs=6.6, italic=True)
+    # bracket under stage 3
+    bl, br, by = fx - 3.5, fx + 3.5, 7.2
+    ax.plot([bl, bl, br, br], [by + 1.2, by, by, by + 1.2], color=INK, lw=0.6)
+    ax.plot([fx, fx], [by, by - 1.0], color=INK, lw=0.6)
+    label(ax, fx, 3.2, "Labelled by inspecting top-activating examples", fs=6.2, italic=True)
+    # reconstruction error: dashed comparison between stage 2 and stage 4
+    ye = 12
+    ax.plot([31, 31, 91, 91], [20.5 - 6.2, ye, ye, 20.5], color=G1, lw=0.6, ls=(0, (3, 2)))
+    label(ax, 76, ye + 2.2, "Reconstruction error\n= unexplained part", fs=6.2, italic=True, color=G1)
+    save(fig, "fig-12-02")
