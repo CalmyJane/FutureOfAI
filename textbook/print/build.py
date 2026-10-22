@@ -40,8 +40,10 @@ def merge_bib():
             key = m.group(2)
             block = m.group(0)
             if key in entries:
-                if re.sub(r"\s+", "", entries[key]) != re.sub(r"\s+", "", block):
-                    problems.append(f"duplicate key with different content: {key} ({os.path.basename(f)})")
+                # The same source cited in several chapters: keep the most complete entry
+                # (fact-checkers added DOIs, pages and published venues chapter by chapter).
+                if len(re.sub(r"\s+", "", block)) > len(re.sub(r"\s+", "", entries[key])):
+                    entries[key] = block
                 continue
             entries[key] = block
             order.append(key)

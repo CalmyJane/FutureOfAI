@@ -53,10 +53,10 @@ def f0602():
         ("Dec 2023", "FunSearch", "Larger cap sets than\npreviously known", "p"),
         ("Jan 2024", "AlphaGeometry", "25 of 30 olympiad\ngeometry problems", "p"),
         ("Jul 2024", "AlphaProof +\nAlphaGeometry 2", "IMO 28/42 (silver level);\nup to 3 days' computing", "c"),
-        ("Jun 2025", "AlphaEvolve", "4×4 complex matrices\nwith 48 multiplications", "c"),
+        ("May 2025", "AlphaEvolve", "4×4 complex matrices\nwith 48 multiplications", "c"),
         ("Jul 2025", "Gemini Deep Think", "IMO 35/42 (gold); natural\nlanguage; certified", "c"),
-        ("Nov 2025", "AlphaEvolve with\nTao et al.", "67 problems;\nseveral improved", "c"),
-        ("Jan 2026", "GPT-5.2 Pro +\nAristotle", "Erdős problem #728\nproved in Lean", "l"),
+        ("Nov 2025", "AlphaEvolve with\nTao et al.", "67 problems; several\nimproved (PNAS 2026)", "c"),
+        ("Jan 2026", "GPT-5.2 Pro +\nAristotle", "Erdős #728 (intended\nversion) proved in Lean", "l"),
     ]
     y0 = 37
     ax.plot([2, 98], [y0, y0], color=INK, lw=0.9)
