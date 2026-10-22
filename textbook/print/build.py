@@ -124,7 +124,7 @@ def build():
     missing = sorted(k for k in cited_keys(md) if k not in keys and not k.startswith("fig:") and "." not in k)
     open(OUT_MD, "w", encoding="utf-8").write(md)
     html_body = subprocess.run(
-        ["pandoc", "-f", "markdown", "-t", "html5", "--citeproc", "--section-divs",
+        ["pandoc", "-f", "markdown-tex_math_dollars", "-t", "html5", "--citeproc", "--section-divs",
          "--bibliography", os.path.join(PRINT, "all.bib"), "--csl", os.path.join(PRINT, "apa.csl"),
          "--metadata", "link-citations=true", "--wrap=none"],
         input=md, capture_output=True, text=True,
