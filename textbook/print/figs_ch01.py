@@ -157,7 +157,7 @@ def _side(ax, items, sign, gap=2.8):
         x2 = AX + sign * 6.5
         if not winter:
             ax.plot([x0, x1, x2], [y, y, yl], color=G2, lw=0.45, zorder=1)
-            ax.add_patch(F.Circle((AX, y), 0.75, fc="white", ec=INK, lw=0.7, zorder=3))
+            ax.add_patch(F.Circle((AX, y), 0.6, fc="white" if sign < 0 else INK, ec=INK, lw=0.6, zorder=3))
         ax.text(x2 + sign * 0.6, yl, txt, fontsize=6.8, ha="left" if sign > 0 else "right", va="center",
                 style="italic" if winter else "normal", color=INK)
 
@@ -175,8 +175,11 @@ def f0103():
     for dy in (0, 1.1):
         by = _ty(2005) - 1.4 - dy
         ax.plot([AX - 1.3, AX + 1.3], [by + 0.5, by - 0.5], color=INK, lw=0.8)
+    marks = [_ty(y) for y, t in RESEARCH + DEPLOY if "winter (c." not in t]
     for yr in (1960, 1970, 1980, 1990, 2000, 2010, 2020):
         y = _ty(yr)
+        if min(abs(y - m) for m in marks) < 1.3:
+            continue
         ax.plot([AX - 0.9, AX + 0.9], [y, y], color=INK, lw=0.7, zorder=2)
     _side(ax, RESEARCH, -1)
     _side(ax, DEPLOY, +1)
