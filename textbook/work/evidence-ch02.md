@@ -78,3 +78,19 @@ Neuron 0.2 / -0.3 -> 0; sigmoid(0.2) = 0.550; Figure 2.2: 12 + 8 = 20 weights + 
 - NYT 1958 article not seen in the original; wording rests on Ananthaswamy 2024 (verbatim, with date and page) and the Cornell Chronicle headline.
 - Szegedy et al. ICLR 2014 venue confirmed via a secondary reference list (OpenReview/dblp blocked); this is the well-known venue.
 - Zeiler & Fergus layer descriptions and the Geirhos p. 665 quote rest on the writer's log (Crossref metadata confirmed; full text not re-read).
+
+## Revision (2026-10-22, after reader panel)
+
+Panel points (Mia) and global fixes applied; no new sources.
+- XOR: new Table 2.1 (inputs, target, h1 = sum, h2 = ReLU(sum - 1), output h1 - 2h2) plus a paragraph explaining linear separability: (1,0) and (0,1) both map to hidden point (1,0), the 0 cases to (0,0) and (2,1); the line h1 - 2h2 = 0.5 separates them (checked: 1 > 0.5; 0 < 0.5; 0 < 0.5). Follows Goodfellow et al. sec. 6.1. Caption carries "Calculation by the author".
+- Gradient step sign: text now says gradient descent moves opposite to the slope; step = -learning rate x slope = -0.1 x (-2.4) = +0.24 (weight 0.2 -> 0.44); lr 0.5: -0.5 x (-2.4) = +1.2 (weight -> 1.4). Arithmetic unchanged from fact-check.
+- Double descent: now explicitly about model size, not training time (Figure 2.4's x-axis); test error falls, rises to the interpolation threshold, then falls again (Belkin et al. 2019). Q5 no longer ties the Zhang puzzle to Figure 2.4 but to the classical account in Section 2.5. Figure 2.4 spec unchanged.
+- Universal approximation: "continuous function" explained in plain words (no sudden jumps); main sentence now "imitate any smooth input-output rule".
+- Cross-entropy: loss defined as -ln(probability), a unitless number like squared error; 0.9 -> ~0.1 (-ln 0.9 = 0.105), 0.1 -> ~2.3 (-ln 0.1), 0.01 -> ~4.6 (-ln 0.01); each tenfold drop adds ~2.3.
+- Name lists lightened: backprop history (Linnainmaa, Werbos sentence removed; still cites Goodfellow sec. 6.6 for multiple discovery); CNN history (Hubel and Wiesel, Fukushima names removed; citations kept).
+- Repetitions: "the standard textbook" (4x) replaced by one introduction of Goodfellow, Bengio and Courville's *Deep Learning* and later "Goodfellow and colleagues"; "LeCun, Bengio and Hinton" (5x) reduced to one full introduction ("a widely cited 2015 review") and "the 2015 review"; Further reading "The standard graduate textbook" -> "A widely used graduate textbook".
+- Analogy-limit formula: kept one explicit sentence (fog analogy, which Q2 uses); mixing desk, firm, factory and GPU limits folded into the sentences.
+- Saddle-point sentence split into four; added LeCun et al. p. 438 point that saddle points have very similar objective values, so it matters little which one training settles near (checked against the Nature PDF).
+- Cross-references: §2.6 paragraph-final references to Ch. 12 and Ch. 3 removed (one kept, to Ch. 4/7). "Its abstract notes" -> "It notes".
+- Citations: duplicate goodfellow2015explaining in the adversarial paragraph removed.
+- Body word count: 6,021 -> 6,247. pandoc --citeproc: no warnings.
