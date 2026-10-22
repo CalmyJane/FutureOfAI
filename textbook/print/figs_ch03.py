@@ -84,7 +84,7 @@ def f0302():
         for i in range(j):
             d = cols[j] - cols[i]
             a = F.FancyArrowPatch((cols[j], 24.2), (cols[i], 24.2), arrowstyle="-|>", mutation_scale=4,
-                                  lw=0.45, color=G1, connectionstyle=f"arc3,rad={-0.28 if d > 10 else -0.4}",
+                                  lw=0.45, color=G1, connectionstyle=f"arc3,rad={0.3 if d > 10 else 0.45}",
                                   shrinkA=1, shrinkB=1, zorder=3)
             ax.add_patch(a)
     for x in cols:
@@ -94,7 +94,7 @@ def f0302():
     label(ax, 9, 39.5, "Feed-\nforward", fs=6.6)
     for x in cols:
         box(ax, x - 3.4, 37.5, 6.8, 4.5, "", fill=G4, lw=0.5, style="round,pad=0,rounding_size=0.8")
-        ax.plot([x - 1.6, x + 1.6], [39.75, 39.75], color=G2, lw=0.5)
+        label(ax, x, 39.75, "FF", fs=6.2, color=G1)
     # × N bracket
     ax.plot([65, 66.2, 66.2, 65], [21, 21, 49, 49], color=INK, lw=0.6)
     ax.text(68.3, 35, "× N blocks\n(e.g. 96 in GPT-3)", fontsize=6.2, rotation=90, ha="center", va="center",
@@ -114,8 +114,8 @@ def f0302():
         ax.text(x0 - 1, y, t, ha="right", va="center", fontsize=6.1, family=MONO)
         ax.add_patch(Rectangle((x0, y - 1.0), p * sc, 2.0, fc=G1, ec="none"))
         label(ax, x0 + p * sc + 0.8, y, f"{p}%", fs=6.4, ha="left")
-    ax.plot([x0, x0], [61.8, 75.6], color=INK, lw=0.5)
-    label(ax, x0, 63.2, "… 50,000+ other tokens", fs=6.3, ha="left", italic=True, color=G1)
+    ax.plot([x0, x0], [63.9, 75.6], color=INK, lw=0.5)
+    label(ax, x0 + 0.8, 62.6, "… 50,000+ other tokens", fs=6.3, ha="left", italic=True, color=G1)
 
     # inset: attention from "its"
     box(ax, 72, 2, 27.5, 76, "", fill="white", lw=0.6, style="round,pad=0,rounding_size=1.5")
@@ -145,7 +145,7 @@ def f0303():
     rs = "round,pad=0,rounding_size=1.2"
     pill = "round,pad=0,rounding_size=2.4"
     # columns: (x0, width)
-    C = [(1, 27), (31, 20), (54, 25), (82, 17.5)]
+    C = [(1, 27), (31, 22), (56, 22), (81, 19)]
     SY, SH = 32, 11   # stage boxes
     PY, PH = 15, 6.5  # output pills
     stages = [("Pre-training", "predict next token"), ("Instruction\ntuning", "supervised fine-tuning"),
@@ -159,7 +159,7 @@ def f0303():
             )
         two = "\n" in st
         label(ax, cx, SY + SH - (3.4 if two else 2.6), st, fs=7.6, weight="bold")
-        label(ax, cx, SY + (2.0 if "\n" in sub or two else 3.0), sub, fs=6.1, italic=True, color=G1)
+        label(ax, cx, SY + (3.4 if "\n" in sub else 2.2 if two else 3.0), sub, fs=6.1, italic=True, color=G1)
         ow = min(w - 2, 17)
         box(ax, cx - ow / 2, PY, ow, PH, "", fill="white", lw=0.8, style=pill,
             )
@@ -174,7 +174,7 @@ def f0303():
         (x, w), (nx, nw) = C[k], C[k + 1]
         ox = x + w / 2 + min(w - 2, 17) / 2
         arrow(ax, ox + 0.2, PY + PH / 2, nx - 0.3, SY + 2.5, lw=0.8, ms=6, ls="--" if k == 2 else "-")
-    label(ax, 79.5, 25.2, "branch", fs=5.9, italic=True, color=G1, ha="right")
+    label(ax, 76.8, 27.5, "branch", fs=5.9, italic=True, color=G1, ha="right")
     # inputs
     IY = 52
     # web-scale text as a cylinder
@@ -197,11 +197,11 @@ def f0303():
     arrow(ax, x + w / 2, IY - 0.3, x + w / 2, SY + SH + 0.3, lw=0.8, ms=6)
     # human + AI feedback -> reward model
     x, w = C[2]
-    box(ax, x - 1.5, 62, 13, 9.5, "Human\nrankings\n(RLHF)", fill="white", fs=6.1, lw=0.6, style=rs)
-    box(ax, x + 13.5, 62, 13, 9.5, "Principles +\nAI feedback\n(RLAIF)", fill="white", fs=6.1, lw=0.6, style=rs)
-    box(ax, x + 3.5, 48.5, 18, 6.5, "Reward model", fill=G4, fs=6.6, lw=0.6, style=rs)
-    arrow(ax, x + 5, 61.8, x + 9, 55.2, lw=0.7, ms=5)
-    arrow(ax, x + 20, 61.8, x + 16, 55.2, lw=0.7, ms=5)
+    box(ax, x - 1.5, 62, 12, 9.5, "Human\nrankings\n(RLHF)", fill="white", fs=6.1, lw=0.6, style=rs)
+    box(ax, x + 11.5, 62, 12, 9.5, "Principles +\nAI feedback\n(RLAIF)", fill="white", fs=6.1, lw=0.6, style=rs)
+    box(ax, x + 2, 48.5, 18, 6.5, "Reward model", fill=G4, fs=6.6, lw=0.6, style=rs)
+    arrow(ax, x + 4.5, 61.8, x + 8, 55.2, lw=0.7, ms=5)
+    arrow(ax, x + 17.5, 61.8, x + 14, 55.2, lw=0.7, ms=5)
     arrow(ax, x + w / 2, 48.3, x + w / 2, SY + SH + 0.3, lw=0.8, ms=6)
     # checkable problems
     x, w = C[3]
