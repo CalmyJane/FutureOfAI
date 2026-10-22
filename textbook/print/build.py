@@ -147,6 +147,8 @@ def build():
     # chapter labels: "Chapter 3: Title" -> label + title
     def chap(m):
         attrs, label, title = m.group(1), m.group(2), m.group(3)
+        if label == "Preface":
+            return f'<h1{attrs}><span class="ch-title">Preface</span></h1>'
         return f'<h1{attrs}><span class="ch-label">{label}</span><span class="ch-title">{title}</span></h1>'
     body = re.sub(r"<h1([^>]*)>(Chapter \d+|Preface)\s*:?\s*(.*?)</h1>", chap, body)
 
