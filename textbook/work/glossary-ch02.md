@@ -1,0 +1,17 @@
+**activation function**: The simple rule a neuron applies to its weighted sum to produce its output, such as ReLU (keep positives, turn negatives into zero) or the sigmoid (squash into the range 0 to 1). Its non-linearity is what lets stacked layers do more than a single layer could.
+**artificial neuron**: The basic unit of a neural network: it multiplies each input by a weight, adds the results and a bias, and passes the total through an activation function to give one output number.
+**backpropagation**: The algorithm that computes, for every weight in a network, how much a small change would alter the loss, by passing error signals backwards from the output layer using the chain rule. It makes gradient descent practical for large networks.
+**bias**: A number added to a neuron's weighted sum that shifts its total up or down, setting how readily the neuron produces a non-zero output. Biases are learned along with weights.
+**convolutional neural network**: A network for grid-like data such as images that slides small shared detectors across the input and summarises nearby results (pooling), so that features are recognised wherever they appear with far fewer weights.
+**generalisation**: A trained model's ability to perform well on new data it has not seen during training, estimated using held-out validation and test sets.
+**GPU**: Graphics processing unit; a chip originally built for video games that performs very many simple calculations in parallel, which suits the repeated multiply-and-add arithmetic of neural networks.
+**gradient descent**: A method for training that repeatedly moves every weight a small step in the direction that most reduces the loss; stochastic gradient descent estimates that direction from small random batches of examples.
+**hidden layer**: A layer of neurons between the input and the output whose values are not directly given in the training data; hidden layers learn intermediate representations of the input.
+**hyperparameter**: A setting chosen by people rather than learned by the training algorithm, such as the number of layers, the learning rate or the dropout rate; usually tuned on the validation set.
+**learning rate**: The hyperparameter that sets how large a step gradient descent takes; too small makes training slow, too large makes it overshoot or diverge.
+**loss function**: A formula that turns a model's output and the correct answer into a single number measuring how wrong the output is (for example squared error or cross-entropy); training aims to make its average as small as possible.
+**multilayer perceptron**: A feed-forward neural network with one or more hidden layers in which every neuron in one layer is connected to every neuron in the next.
+**overfitting**: The situation in which a model fits its training data closely but performs worse on new data, because it has learned accidental quirks of the training examples as well as genuine patterns.
+**parameter**: A number inside a model, such as a weight or bias, that is adjusted automatically during training; model size is often stated as a parameter count.
+**representation learning**: The learning of useful features directly from data, with successive layers re-describing the input (for images, edges, then motifs, parts and objects) instead of relying on features designed by hand.
+**weight**: A number attached to a connection that says how strongly, and in which direction, one input influences a neuron; positive weights push the output up, negative weights push it down.

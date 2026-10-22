@@ -38,6 +38,10 @@ plt.rcParams.update({
     "legend.frameon": False,
     "svg.fonttype": "path",
     "lines.linewidth": 1.4,
+    "mathtext.fontset": "custom",
+    "mathtext.rm": "EB Garamond",
+    "mathtext.it": "EB Garamond:italic",
+    "mathtext.bf": "EB Garamond:bold",
 })
 
 # A5 text width is about 113 mm = 4.45 in
@@ -92,3 +96,14 @@ def save(fig, name):
     os.makedirs(OUT, exist_ok=True)
     fig.savefig(os.path.join(OUT, name + ".svg"), bbox_inches="tight", pad_inches=0.04, transparent=True)
     plt.close(fig)
+
+
+FIGS = {}
+
+
+def fig(name):
+    """Register a figure-drawing function under its figure id."""
+    def deco(fn):
+        FIGS[name] = fn
+        return fn
+    return deco

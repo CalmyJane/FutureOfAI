@@ -1,0 +1,15 @@
+**artificial intelligence**: The field of research and engineering that aims to build machines able to perform tasks that would require intelligence if done by people; the term was coined in a 1955 proposal for a 1956 workshop at Dartmouth College.
+**AI system**: In the OECD and EU AI Act definitions, a machine-based system that, for explicit or implicit objectives, infers from its input how to generate outputs such as predictions, content, recommendations or decisions that can influence physical or virtual environments.
+**symbolic AI**: An approach to AI in which knowledge is written down explicitly as symbols and rules, and the computer reasons by manipulating them; it dominated the field from the 1950s to the 1980s.
+**expert system**: A program that encodes the knowledge of human specialists in a narrow field as many if-then rules and uses them to give advice or make decisions, such as MYCIN for antibiotic selection.
+**AI winter**: A period of reduced funding, falling confidence and declining interest in AI research, usually following a period of over-optimistic predictions; the two main winters began in the 1970s and the late 1980s.
+**machine learning**: An approach to AI in which a system improves at a task by learning patterns from data or experience instead of being given explicit rules.
+**deep learning**: Machine learning with artificial neural networks that have many layers, each of which learns a more abstract representation of the data than the one before.
+**transformer**: A neural-network design, introduced in 2017, that processes sequences such as text using attention, which lets the model weigh how relevant every part of the input is to every other part; it underlies most large language models.
+**generative AI**: AI systems whose main output is new content such as text, images, audio, video or computer code.
+**foundation model**: A large model trained on broad data, usually with self-supervision at scale, that can be adapted to a wide range of downstream tasks; the term was introduced in 2021.
+**general-purpose AI model**: The EU AI Act's legal term for a model trained on large amounts of data using self-supervision at scale that displays significant generality and can competently perform a wide range of distinct tasks.
+**large language model (LLM)**: A foundation model trained mainly on text to predict the next token in a sequence, which can then be used to answer questions, write and translate.
+**reasoning model**: A language model trained, typically with reinforcement learning, to produce a long chain of intermediate steps before giving its final answer, spending more computation per question.
+**AI agent**: A system that pursues a goal over several steps by taking actions in an environment, such as using software tools, and observing the results; today usually built around a large language model.
+**AI effect**: The repeated pattern in which a technology stops being called "AI" once people become used to it, so that the boundary of what counts as AI keeps moving.
