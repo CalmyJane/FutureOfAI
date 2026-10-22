@@ -1,6 +1,5 @@
 # Glossary: Chapter 5
 
-**AI agent**: A system in which a model pursues a goal by choosing actions, carrying them out through tools, observing the results and repeating. It is usually built from a model, a set of tools, a control loop and some form of memory.
 **tool use**: The ability of a language model to request that external software (such as a search engine, calculator or code interpreter) be run and to use the result in its answer.
 **function calling**: A feature of model interfaces in which developers describe available functions and the model replies with a structured request naming a function and its arguments; the surrounding application decides whether to execute it.
 **Model Context Protocol (MCP)**: An open standard, released by Anthropic in 2024 and now governed under the Linux Foundation, that lets AI applications (clients) connect to data sources and tools (servers) through one common interface.

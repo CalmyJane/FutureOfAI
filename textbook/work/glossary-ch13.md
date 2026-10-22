@@ -4,7 +4,6 @@
 **risk-based regulation**: An approach that scales legal obligations to the harm a system could cause in a particular use, from no duties for low-risk uses to outright bans for unacceptable ones.
 **horizontal regulation**: A law that applies across the whole economy to anything meeting its definition, rather than to one sector; the EU AI Act is an example.
 **high-risk AI system**: Under the EU AI Act, an AI system used as a safety component of a regulated product or in a sensitive area such as employment, education or law enforcement, which must meet requirements on risk management, data, documentation and human oversight.
-**general-purpose AI model**: A model, such as a large language model, that can perform a wide range of tasks and be built into many different downstream systems.
 **systemic risk**: In the EU AI Act, a risk from the most capable general-purpose models that could have significant effects across society; models trained with more than 10^25 FLOP are presumed to carry it.
 **code of practice**: A set of voluntary guidelines, such as the EU's General-Purpose AI Code of Practice, that companies can follow to show how they meet legal obligations.
 **pre-emption**: The legal doctrine under which valid federal law overrides conflicting state law in the United States.
