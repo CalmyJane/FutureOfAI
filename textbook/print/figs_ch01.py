@@ -84,126 +84,115 @@ def f0102():
     F.save(fig, "fig-01-02")
 
 
-# ---- fig-01-03: timeline -------------------------------------------------
+# ---- fig-01-03: timeline (vertical, so every label fits on one line) -------
 
-def _tx(year):
-    """Piecewise-linear year -> x: compressed 1950-2005, expanded 2008-2026.5."""
+def _ty(year):
+    """Piecewise-linear year -> y (top = 1950): compressed 1950-2005, expanded 2008-2026.5."""
     if year <= 2005:
-        return 2 + (year - 1950) * (44 / 55)
-    return 52 + (year - 2008) * (46 / 18.5)
+        return 75 - (year - 1950) * (35 / 55)
+    return 36 - (year - 2008) * (33 / 18.5)
 
 
-ABOVE = [
-    (1950, "Turing's imitation game, 1950"),
-    (1956, "Dartmouth workshop, 1956"),
-    (1959, "Samuel's checkers learner, 1959"),
-    (1969, "Perceptrons critique, 1969"),
-    (1973, "Lighthill report, 1973"),
-    (1986, "Backpropagation paper, 1986"),
-    (2009, "ImageNet dataset, 2009"),
-    (2012, "AlexNet wins ImageNet, 2012"),
-    (2016, "AlphaGo beats professionals, 2016"),
-    (2017, "Transformer, 2017"),
-    (2020, "GPT-3, 2020"),
-    (2021, "'Foundation model' coined, 2021"),
-    (2024, "Reasoning models (o1), 2024"),
-    (2025, "DeepSeek-R1, 2025"),
+RESEARCH = [
+    (1950, "Turing's imitation game (1950)"),
+    (1956, "Dartmouth workshop (1956)"),
+    (1959, "Samuel's checkers learner (1959)"),
+    (1969, "Perceptrons critique (1969)"),
+    (1973, "Lighthill report (1973)"),
+    (1986, "Backpropagation paper (1986)"),
+    (2009, "ImageNet dataset (2009)"),
+    (2012, "AlexNet wins ImageNet (2012)"),
+    (2016, "AlphaGo beats professionals (2016)"),
+    (2017, "Transformer (2017)"),
+    (2020, "GPT-3 (2020)"),
+    (2021, "'Foundation model' coined (2021)"),
+    (2024, "Reasoning models, o1 (2024)"),
+    (2025, "DeepSeek-R1 (2025)"),
 ]
-BELOW = [
-    (1979, "MYCIN evaluation, 1979"),
-    (1984, "'AI winter' warning (AAAI), 1984"),
-    (1997, "Deep Blue beats Kasparov, 1997"),
-    (2022 + 10.5 / 12, "ChatGPT released, Nov 2022"),
-    (2023 + 10.5 / 12, "OECD definition revised, Nov 2023"),
-    (2024.4, "EU AI Act adopted, 2024"),
-    (2024 + 10.5 / 12, "Model Context Protocol, Nov 2024"),
-    (2025 + 6.5 / 12, "700M weekly ChatGPT users, Jul 2025"),
-    (2026 + 1.5 / 12, "900M weekly users (company), Feb 2026"),
+DEPLOY = [
+    (1977, "First AI winter (c. 1974–80)"),
+    (1979, "MYCIN evaluation (1979)"),
+    (1984, "'AI winter' warning, AAAI (1984)"),
+    (1990.5, "Second AI winter (c. 1988–93)"),
+    (1997, "Deep Blue beats Kasparov (1997)"),
+    (2022 + 10.5 / 12, "ChatGPT released (Nov 2022)"),
+    (2023 + 10.5 / 12, "OECD definition revised (Nov 2023)"),
+    (2024.4, "EU AI Act adopted (2024)"),
+    (2024 + 10.5 / 12, "Model Context Protocol (Nov 2024)"),
+    (2025 + 6.5 / 12, "700M weekly ChatGPT users (Jul 2025)"),
+    (2026 + 1.5 / 12, "900M weekly users, company (Feb 2026)"),
 ]
+AX = 50
 
 
-def _place(ax, fig, items, y0, step, sign, split, fs=6.2, xmax=99.5, xmin=0.5):
-    """Greedy stacking: each label goes on the lowest row where it neither overlaps another label
-    nor crosses a leader line, and its own leader crosses no label."""
-    r = fig._get_renderer()
-    inv = ax.transData.inverted()
-    placed = []  # (x, row, a, b)
-    right = sorted(i for i in items if _tx(i[0]) >= split)
-    left = sorted((i for i in items if _tx(i[0]) < split), reverse=True)
-    for year, text in right + left:
-        x = _tx(year)
-        t = ax.text(0, 0, text, fontsize=fs)
-        bb = t.get_window_extent(r)
-        t.remove()
-        w = inv.transform((bb.width, 0))[0] - inv.transform((0, 0))[0]
-        done = False
-        for row in range(16):
-            for ha in (("right",) if x >= split else ("left",)):
-                a, b = (x - 0.6, x - 0.6 + w) if ha == "left" else (x + 0.6 - w, x + 0.6)
-                if b > xmax or a < xmin:
-                    continue
-                ok = True
-                for (px, prow, pa, pb) in placed:
-                    if prow == row and not (b + 1.2 < pa or a > pb + 1.2):
-                        ok = False
-                    if prow > row and a - 0.8 <= px <= b + 0.8:
-                        ok = False  # an existing leader passes through this label
-                    if row > prow and pa - 0.8 <= x <= pb + 0.8:
-                        ok = False  # our leader would pass through an existing label
-                if ok:
-                    placed.append((x, row, a, b)); print(text, row, round(a,1), round(b,1))
-                    yl = y0 + sign * step * row
-                    ax.plot([x, x], [AXY + sign * 1.0, yl - sign * 0.2], color=G2, lw=0.45, zorder=1)
-                    ax.text(a, yl + sign * 0.15, text, fontsize=fs, ha="left",
-                            va="bottom" if sign > 0 else "top", color=INK)
-                    node(ax, x, AXY, r=0.75, fill="white", lw=0.7)
-                    done = True
-                    break
-            if done:
-                break
-        if not done:
-            raise RuntimeError("no room for " + text)
+def _spread(ys, gap, lo, hi):
+    """Push label positions apart (ys sorted top->bottom) to at least `gap`, within [lo, hi]."""
+    out = list(ys)
+    for _ in range(200):
+        moved = False
+        for i in range(1, len(out)):
+            d = out[i - 1] - out[i]
+            if d < gap:
+                s = (gap - d) / 2
+                out[i - 1] += s
+                out[i] -= s
+                moved = True
+        out = [min(hi, max(lo, y)) for y in out]
+        for i in range(1, len(out)):  # enforce after clamping
+            if out[i - 1] - out[i] < gap - 1e-6:
+                if out[i - 1] >= hi - 1e-6:
+                    out[i] = out[i - 1] - gap
+                elif out[i] <= lo + 1e-6:
+                    out[i - 1] = out[i] + gap
+        if not moved:
+            break
+    return out
 
 
-AXY = 36
+def _side(ax, items, sign, gap=2.6):
+    ys = [_ty(y) for y, _ in items]
+    ly = _spread(ys, gap, 1.6, 76)
+    for (yr, txt), y, yl in zip(items, ys, ly):
+        winter = "winter (c." in txt
+        x0 = AX + sign * 1.0
+        x1 = AX + sign * 4.0
+        x2 = AX + sign * 6.5
+        if not winter:
+            ax.plot([x0, x1, x2], [y, y, yl], color=G2, lw=0.45, zorder=1)
+            ax.add_patch(F.Circle((AX, y), 0.75, fc="white", ec=INK, lw=0.7, zorder=3))
+        ax.text(x2 + sign * 0.6, yl, txt, fontsize=6.3, ha="left" if sign > 0 else "right", va="center",
+                style="italic" if winter else "normal", color=INK)
 
 
 @fig("fig-01-03")
 def f0103():
     fig, ax = canvas(3.6, ylim=(0, 80))
     # winter bands (approximate dates)
-    for a, b, txt in ((1974, 1980, "First AI winter"), (1988, 1993, "Second AI winter")):
-        xa, xb = _tx(a), _tx(b)
-        ax.add_patch(Rectangle((xa, AXY - 8.5), xb - xa, 17, fc=G4, ec=G2, lw=0.4, hatch="////", zorder=0))
-        ax.patches[-1].set_edgecolor(G3)
-        ax.text((xa + xb) / 2, AXY - 8.2, txt, fontsize=5.8, rotation=90, ha="center", va="bottom",
-                style="italic", color=INK, zorder=2,
-                bbox=dict(fc=G4, ec="none", pad=0.4))
-    # axis with break
-    ax.plot([1, _tx(2005) + 0.5], [AXY, AXY], color=INK, lw=0.9, zorder=1)
-    ax.plot([_tx(2008) - 1.5, 99.5], [AXY, AXY], color=INK, lw=0.9, zorder=1)
-    for dx in (0, 1.3):
-        bx = _tx(2005) + 1.6 + dx
-        ax.plot([bx - 0.5, bx + 0.5], [AXY - 1.3, AXY + 1.3], color=INK, lw=0.8)
-    for yr in (1950, 1960, 1970, 1980, 1990, 2000, 2010, 2015, 2020, 2025):
-        x = _tx(yr)
-        ax.plot([x, x], [AXY - 0.9, AXY + 0.9], color=INK, lw=0.7, zorder=1)
-    _place(ax, fig, ABOVE, AXY + 3.0, 3.1, +1, 60)
-    _place(ax, fig, BELOW, AXY - 3.0, 3.1, -1, 60)
-    # era brackets along the top
-    def era(a, b, row, txt, open_end=False):
-        y = 74 + row * 3.6
-        xa, xb = _tx(a), _tx(b)
-        ax.plot([xa, xa, xb], [y - 1, y, y], color=INK, lw=0.6)
-        if open_end:
-            arrow(ax, xb - 2, y, xb + 0.3, y, lw=0.6, ms=5)
-        else:
-            ax.plot([xb, xb], [y, y - 1], color=INK, lw=0.6)
-        ax.text((xa + xb) / 2, y + 0.4, txt, fontsize=6.6, ha="center", va="bottom", weight="bold")
-    era(1956, 1988, 0, "Symbolic AI")
-    era(1990, 2005, 0, "Statistical ML")
-    era(2012, 2026.4, 0, "Deep learning", True)
-    era(2020, 2026.4, 1, "LLMs and agents", True)
-    label(ax, 1, 1.5, "Axis compressed before 2005. Above: research milestones; below: deployment and policy.",
-          fs=5.9, ha="left", italic=True, color=G1)
+    for a, b in ((1974, 1980), (1988, 1993)):
+        ya, yb = _ty(a), _ty(b)
+        ax.add_patch(Rectangle((AX - 3, yb), 6, ya - yb, fc=G4, ec=G3, lw=0.4, hatch="//////", zorder=0))
+    # axis with a break between 2005 and 2008
+    ax.plot([AX, AX], [76.5, _ty(2005) - 0.6], color=INK, lw=0.9, zorder=2)
+    ax.plot([AX, AX], [_ty(2008) + 0.8, 1.0], color=INK, lw=0.9, zorder=2)
+    for dy in (0, 1.1):
+        by = _ty(2005) - 1.4 - dy
+        ax.plot([AX - 1.3, AX + 1.3], [by + 0.5, by - 0.5], color=INK, lw=0.8)
+    for yr in (1960, 1970, 1980, 1990, 2000, 2010, 2020):
+        y = _ty(yr)
+        ax.plot([AX - 0.9, AX + 0.9], [y, y], color=INK, lw=0.7, zorder=2)
+    _side(ax, RESEARCH, -1)
+    _side(ax, DEPLOY, +1)
+    label(ax, AX - 3, 79, "Research milestones", fs=7, ha="right", weight="bold")
+    label(ax, AX + 3, 79, "Deployment and policy", fs=7, ha="left", weight="bold")
+
+    # era brackets along the left edge
+    def era(a, b, x, txt, ty):
+        ya, yb = _ty(a), _ty(b)
+        ax.plot([x + 1, x, x, x + 1], [ya, ya, yb, yb], color=INK, lw=0.6)
+        ax.text(x + 1.6, ty, txt, fontsize=6.4, ha="left", va="center", weight="bold", color=G1, linespacing=1.1)
+    era(1956, 1988, 0.6, "Symbolic\nAI", _ty(1979))
+    era(1990, 2005, 0.6, "Statistical\nML", _ty(1997.5))
+    era(2012, 2026.4, 0.6, "Deep\nlearning", _ty(2015.5))
+    era(2020, 2026.4, 2.2, "LLMs and\nagents", _ty(2023.2))
+    label(ax, AX + 2.2, _ty(2006.5), "axis compressed before 2005", fs=5.9, ha="left", italic=True, color=G1)
     save(fig, "fig-01-03")

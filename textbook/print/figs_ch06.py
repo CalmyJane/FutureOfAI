@@ -2,6 +2,7 @@
 import math
 
 import numpy as np
+from matplotlib.patches import Ellipse
 
 import figstyle as F
 from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, save
@@ -9,65 +10,86 @@ from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, 
 
 @fig("fig-06-01")
 def f0601():
-    fig, ax = canvas(3.6, ylim=(0, 80))
-    cx, cy, R, r = 50, 40, 30, 15
-    stages = ["Read\nliterature", "Form\nhypothesis", "Design experiment\n/ simulation", "Collect\ndata", "Analyse\ndata", "Publish\nand review"]
-    tags = ["automate: search,\nsummarise", "search: propose\ncandidates", "emulate: fast\nsurrogate", "predict: fill\ngaps", "automate: write\ncode", "automate: draft,\nreview"]
-    checks = ["check\nsources", "expert\njudgement", "compare with\nreality", "held-out\ndata", "read the\ncode", "independent\nreplication"]
-    import math
-    ax.add_patch(F.Circle((cx, cy), r, fc=G4, ec=G2, lw=0.6, ls="--"))
+    fig, ax = canvas(3.6, ylim=(0, 86))
+    cx, cy = 50, 45
+    W, H = 19, 8
+    # stage centres, clockwise from the top
+    P = [(50, 76), (76, 61), (76, 29), (50, 14), (24, 29), (24, 61)]
+    stages = ["Read\nliterature", "Form\nhypothesis", "Design experiment\n/ simulation", "Collect\ndata",
+              "Analyse\ndata", "Publish\nand review"]
+    # AI-job tags, placed outside each box: (x, y, ha)
+    tags = [("Automate: search, summarise", 50, 83, "center"),
+            ("Search: propose\ncandidates", 87.4, 61, "left"),
+            ("Emulate: fast\nsurrogate", 87.4, 29, "left"),
+            ("Predict: fill gaps", 50, 6.6, "center"),
+            ("Automate:\nwrite code", 12.6, 29, "right"),
+            ("Automate:\ndraft, review", 12.6, 61, "right")]
+    checks = ["Check\nsources", "Expert\njudgement", "Compare with\nreality", "Test on\nheld-out data",
+              "Read the\ncode", "Independent\nreplication"]
+    ax.add_patch(Ellipse((cx, cy), 36, 44, fc=G4, ec=G2, lw=0.6, ls="--"))
     label(ax, cx, cy, "Scientific\ncycle", fs=8.5, weight="bold")
+    CP = [(50, 61), (59.5, 52.5), (59.5, 37.5), (50, 29), (40.5, 37.5), (40.5, 52.5)]
     for i in range(6):
-        a = math.radians(90 - i * 60)
-        x, y = cx + R * 1.25 * math.cos(a), cy + R * math.sin(a)
-        box(ax, x - 9.5, y - 4, 19, 8, stages[i], fill="white", fs=6.8)
-        tx, ty = cx + (R * 1.25 + 21) * math.cos(a), cy + (R + 8) * math.sin(a)
-        tx = min(max(tx, 8), 92)
-        label(ax, tx, ty if i not in (0, 3) else (y + 7.5 if i == 0 else y - 7.5), tags[i], fs=5.8, italic=True, color=G1)
-        ix, iy = cx + (r - 6.5) * 1.25 * math.cos(a), cy + (r - 6) * math.sin(a)
-        label(ax, ix, iy, checks[i], fs=5.4)
-        b = math.radians(90 - (i + 1) * 60)
-        x2, y2 = cx + R * 1.25 * math.cos(b), cy + R * math.sin(b)
-        mx0, my0 = x + (x2 - x) * 0.32, y + (y2 - y) * 0.32
-        mx1, my1 = x + (x2 - x) * 0.68, y + (y2 - y) * 0.68
-        arrow(ax, mx0, my0, mx1, my1, lw=0.8, rad=-0.15)
-    label(ax, 50, 1.5, "outer labels: the AI job at each stage · inner ring: the matching check", fs=6.2, italic=True, color=G1)
+        x, y = P[i]
+        box(ax, x - W / 2, y - H / 2, W, H, stages[i], fill="white", fs=6.8)
+        t, tx, ty, ha = tags[i]
+        label(ax, tx, ty, t, fs=6, italic=True, color=G1, ha=ha)
+        label(ax, CP[i][0], CP[i][1], checks[i], fs=6)
+    # clockwise arrows between the stage boxes
+    A = [((60.4, 75), (68, 65.6), -0.25), ((76, 56.4), (76, 33.6), 0), ((68, 24.4), (60.4, 15), -0.25),
+         ((39.6, 15), (32, 24.4), -0.25), ((24, 33.6), (24, 56.4), 0), ((32, 65.6), (39.6, 75), -0.25)]
+    for (x0, y0), (x1, y1), rad in A:
+        arrow(ax, x0, y0, x1, y1, lw=0.8, rad=rad)
+    label(ax, 50, 1.4, "Outer tags = AI job; inner ring = verification", fs=6.3, italic=True, color=G1)
     save(fig, "fig-06-01")
 
 
-@fig("fig-06-03")
-def f0603():
-    fig, ax = canvas(3.0, ylim=(0, 66))
+@fig("fig-06-02")
+def f0602():
+    # timeline (spec fig-06-03; renumbered after fig-06-02 became Table 6.1)
+    fig, ax = canvas(3.2, ylim=(0, 72))
     ev = [
-        ("Jun 2023", "AlphaDev", "faster sorting routines\nadded to LLVM library", "p"),
-        ("Dec 2023", "FunSearch", "larger cap sets than\npreviously known", "p"),
+        ("Jun 2023", "AlphaDev", "Faster sorting routines\nadded to LLVM C++ library", "p"),
+        ("Dec 2023", "FunSearch", "Larger cap sets than\npreviously known", "p"),
         ("Jan 2024", "AlphaGeometry", "25 of 30 olympiad\ngeometry problems", "p"),
-        ("Jul 2024", "AlphaProof + AG2", "IMO 28/42 (silver level);\nup to 3 days' computing", "c"),
-        ("Jun 2025", "AlphaEvolve", "4×4 complex matrices with\n48 multiplications", "c"),
-        ("Jul 2025", "Gemini Deep Think", "IMO 35/42 (gold level),\nnatural language", "c"),
-        ("Nov 2025", "AlphaEvolve + Tao et al.", "67 problems;\nseveral improved", "c"),
-        ("Jan 2026", "GPT-5.2 Pro + Aristotle", "Erdős problem #728\nproved in Lean", "l"),
+        ("Jul 2024", "AlphaProof +\nAlphaGeometry 2", "IMO 28/42 (silver level);\nup to 3 days' computing", "c"),
+        ("Jun 2025", "AlphaEvolve", "4×4 complex matrices\nwith 48 multiplications", "c"),
+        ("Jul 2025", "Gemini Deep Think", "IMO 35/42 (gold); natural\nlanguage; certified", "c"),
+        ("Nov 2025", "AlphaEvolve with\nTao et al.", "67 problems;\nseveral improved", "c"),
+        ("Jan 2026", "GPT-5.2 Pro +\nAristotle", "Erdős problem #728\nproved in Lean", "l"),
     ]
-    y0 = 34
-    ax.plot([3, 97], [y0, y0], color=INK, lw=0.9)
+    y0 = 37
+    ax.plot([2, 98], [y0, y0], color=INK, lw=0.9)
+    r = fig._get_renderer()
+    inv = ax.transData.inverted()
+
+    def height(t):
+        bb = t.get_window_extent(renderer=r)
+        return inv.transform((0, bb.y1))[1] - inv.transform((0, bb.y0))[1]
+
     for i, (d, n, t, k) in enumerate(ev):
-        x = 7 + i * 12.3
+        x = 8 + i * 12
         up = i % 2 == 0
-        ax.plot([x, x], [y0, y0 + (9 if up else -9)], color=G2, lw=0.6)
+        sgn = 1 if up else -1
+        ax.plot([x, x], [y0, y0 + sgn * 6], color=G2, lw=0.6)
         if k == "p":
             ax.plot([x], [y0], "o", color=INK, ms=4.5)
         elif k == "c":
             ax.plot([x], [y0], "o", mfc="white", mec=INK, ms=4.5)
         else:
             ax.plot([x], [y0], "s", color=INK, ms=4.5)
-        yt = y0 + 10 if up else y0 - 10
+        # stack away from the axis: date, then name, then description; each block measured
+        yy = y0 + sgn * 7
         va = "bottom" if up else "top"
-        ax.text(x, yt, f"{d}\n", fontsize=6.3, ha="center", va=va, color=G1)
-        ax.text(x, yt + (2.2 if up else -2.6), n, fontsize=6.6, ha="center", va=va, weight="bold")
-        ax.text(x, yt + (6.3 if up else -6.5), t, fontsize=5.7, ha="center", va=va, linespacing=1.1)
+        for txt, kw, gap in ((d, dict(fontsize=6.3, color=G1), 0.6),
+                             (n, dict(fontsize=6.6, weight="bold", linespacing=1.05), 0.9),
+                             (t, dict(fontsize=5.9, linespacing=1.12), 0)):
+            h = ax.text(x, yy, txt, ha="center", va=va, **kw)
+            yy += sgn * (height(h) + gap)
     from matplotlib.lines import Line2D
     h = [Line2D([], [], ls="", marker="o", color=INK, ms=4, label="peer-reviewed paper"),
          Line2D([], [], ls="", marker="o", mfc="white", mec=INK, ms=4, label="company announcement / preprint"),
          Line2D([], [], ls="", marker="s", color=INK, ms=4, label="Lean-verified proof")]
-    ax.legend(handles=h, loc="lower center", ncol=3, fontsize=6.3, bbox_to_anchor=(0.5, -0.02))
-    save(fig, "fig-06-03")
+    ax.legend(handles=h, loc="lower center", ncol=3, fontsize=6.3, bbox_to_anchor=(0.5, -0.02),
+              handletextpad=0.3, columnspacing=1.2)
+    save(fig, "fig-06-02")
