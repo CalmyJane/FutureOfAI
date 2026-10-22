@@ -1,45 +1,10 @@
 """Figures for chapter 12, drawn from figures/specs/ in the house style."""
-import functools
 import math
-import urllib.parse
 
 import numpy as np
-from matplotlib.font_manager import FontProperties
-from matplotlib.textpath import TextToPath
 
 import figstyle as F
 from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, save
-
-
-def own_glyph_ids(fn):
-    """The bundled EB Garamond weights share one PostScript name, so matplotlib's SVG glyph ids for
-    bold and regular collide (bold glyphs leak into regular text). While this figure is drawn, key
-    glyph ids by font file instead. Restored afterwards, so other modules are unaffected."""
-    @functools.wraps(fn)
-    def run(*a, **k):
-        orig = TextToPath._get_glyph_repr
-
-        def rep(self, font, glyph):
-            name = F.os.path.splitext(F.os.path.basename(font.fname))[0]
-            return urllib.parse.quote(f"{name}-{glyph:x}").replace("%", "_")
-        TextToPath._get_glyph_repr = rep
-        try:
-            return fn(*a, **k)
-        finally:
-            TextToPath._get_glyph_repr = orig
-    return run
-
-
-def bold(size, italic=False):
-    """Bold face loaded from its own file, so its SVG glyph ids do not collide with the regular face."""
-    f = "EBGaramond-BoldItalic.ttf" if italic else "EBGaramond-Bold.ttf"
-    return FontProperties(fname=F.os.path.join(F.FONTS, f), size=size)
-
-
-def blabel(ax, x, y, text, fs=8, italic=False, **kw):
-    kw.setdefault("ha", "center")
-    kw.setdefault("va", "center")
-    ax.text(x, y, text, fontproperties=bold(fs, italic), color=INK, linespacing=1.15, **kw)
 
 
 # canvas scale: inches per data unit (x 0..100 over WIDTH)
@@ -48,7 +13,6 @@ def _sx():
 
 
 @fig("fig-12-01")
-@own_glyph_ids
 def f1201():
     H, YT = 2.7, 60
     fig, ax = canvas(H, ylim=(0, YT))
@@ -99,7 +63,6 @@ def f1201():
 
 
 @fig("fig-12-02")
-@own_glyph_ids
 def f1202():
     H, YT = 3.1, 66
     fig, ax = canvas(H, ylim=(0, YT))
@@ -111,7 +74,7 @@ def f1202():
 
     # stage 1: input text
     box(ax, 1.5, 32.5, 15.5, 11, "", fill="white", lw=0.7)
-    blabel(ax, 9.25, 47, "Input text", fs=6.8)
+    label(ax, 9.25, 47, "Input text", fs=6.8, weight="bold")
     label(ax, 9.25, 38, "“Driving over\nthe Golden\nGate Bridge”", fs=6.6, italic=True)
     # stage 2 and 4: neuron columns
     shades = [G1, G3, G2, "white", G2, G3]
@@ -119,8 +82,8 @@ def f1202():
     for xc in (31, 91):
         for y, c in zip(ncy, shades):
             dot(xc, y, 0.17, c)
-    blabel(ax, 31, 60, "Model neurons\n(one layer)", fs=6.8)
-    blabel(ax, 91, 60, "Reconstructed\nactivations", fs=6.8)
+    label(ax, 31, 60, "Model neurons\n(one layer)", fs=6.8, weight="bold")
+    label(ax, 91, 60, "Reconstructed\nactivations", fs=6.8, weight="bold")
     label(ax, 31, 17, "Concepts overlap\n(superposition)", fs=6.2, italic=True, color=G1)
     # stage 3: candidate features
     fx, n = 55, 20
@@ -132,7 +95,7 @@ def f1202():
                                       boxstyle="square,pad=0", fc=INK if i in on else "white", ec=INK, lw=0.5, zorder=3))
         if i in on:
             label(ax, fx + 2.6, y, on[i], fs=6.2, italic=True, ha="left")
-    blabel(ax, fx, 63, "Candidate features (many more)", fs=6.8)
+    label(ax, fx, 63, "Candidate features (many more)", fs=6.8, weight="bold")
     label(ax, fx - 3.2, 44, "Sparse:\nfew active", fs=6.2, italic=True, color=G1, ha="right")
     # arrows
     arrow(ax, 17.5, 38, 27.5, 38, lw=0.8)

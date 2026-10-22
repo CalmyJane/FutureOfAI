@@ -1,49 +1,13 @@
 """Figures for chapter 9, drawn from figures/specs/ in the house style."""
-import functools
 import math
-import urllib.parse
 
 import numpy as np
-from matplotlib.font_manager import FontProperties
-from matplotlib.textpath import TextToPath
 
 import figstyle as F
 from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, save
 
 
-def own_glyph_ids(fn):
-    """The bundled EB Garamond weights share one PostScript name, so matplotlib's SVG glyph ids for
-    bold and regular collide (bold glyphs leak into regular text). While this figure is drawn, key
-    glyph ids by font file instead. Restored afterwards, so other modules are unaffected."""
-    @functools.wraps(fn)
-    def run(*a, **k):
-        orig = TextToPath._get_glyph_repr
-
-        def rep(self, font, glyph):
-            name = F.os.path.splitext(F.os.path.basename(font.fname))[0]
-            return urllib.parse.quote(f"{name}-{glyph:x}").replace("%", "_")
-        TextToPath._get_glyph_repr = rep
-        try:
-            return fn(*a, **k)
-        finally:
-            TextToPath._get_glyph_repr = orig
-    return run
-
-
-def bold(size, italic=False):
-    """Bold face loaded from its own file, so its SVG glyph ids do not collide with the regular face."""
-    f = "EBGaramond-BoldItalic.ttf" if italic else "EBGaramond-Bold.ttf"
-    return FontProperties(fname=F.os.path.join(F.FONTS, f), size=size)
-
-
-def blabel(ax, x, y, text, fs=8, italic=False, **kw):
-    kw.setdefault("ha", "center")
-    kw.setdefault("va", "center")
-    ax.text(x, y, text, fontproperties=bold(fs, italic), color=INK, linespacing=1.15, **kw)
-
-
 @fig("fig-09-01")
-@own_glyph_ids
 def f0901():
     fig = F.figure(3.6)
     ax = fig.add_axes([0.335, 0.215, 0.645, 0.725])
@@ -82,9 +46,9 @@ def f0901():
     ax.tick_params(axis="x", labelsize=7.5)
     ax.set_xlabel("Persuasive effect (points on a 0\u2013100 scale)", fontsize=8)
     ax.text(-0.5, 12.5, "Hackenburg et al. (2025), UK, 707 policy issues: treatment minus control",
-            transform=ax.get_yaxis_transform(), fontproperties=bold(7), ha="left", va="center")
+            transform=ax.get_yaxis_transform(), fontsize=7, weight="bold", ha="left", va="center")
     ax.text(-0.5, 6.85, "Lin et al. (2025), elections: gap between opposing AI advocates",
-            transform=ax.get_yaxis_transform(), fontproperties=bold(7), ha="left", va="center")
+            transform=ax.get_yaxis_transform(), fontsize=7, weight="bold", ha="left", va="center")
     ax.text(18.6, 9.7, "Durability: 36\u201342% of the\nconversation effect remained\nafter one month (Hackenburg\net al.); slightly more than\none third after more than\na month (Lin et al., US).",
             fontsize=6.1, va="center", ha="left", linespacing=1.15,
             bbox=dict(boxstyle="round,pad=0.4,rounding_size=0.3", fc=G4, ec=G2, lw=0.5))
@@ -94,7 +58,6 @@ def f0901():
 
 
 @fig("fig-09-02")
-@own_glyph_ids
 def f0902():
     fig, ax = canvas(2.45, ylim=(0, 56))
     names = [("Create", "Camera or\nAI tool"), ("Sign manifest", "Who, what tool,\nwhen"),
@@ -105,7 +68,7 @@ def f0902():
     for (t, s), x in zip(names, xs):
         box(ax, x, yb, w, hgt, "", fill="white")
         two = "\n" in t
-        blabel(ax, x + w / 2, yb + hgt - (3.2 if two else 2.6), t, fs=7.4)
+        label(ax, x + w / 2, yb + hgt - (3.2 if two else 2.6), t, fs=7.4, weight="bold")
         label(ax, x + w / 2, yb + (2.9 if two else 3.6), s, fs=6.2, italic=True, color=G1)
     ym = yb + hgt / 2
     for a, b in zip(xs, xs[1:]):
@@ -133,14 +96,13 @@ def f0902():
     # callout
     cy = 47
     box(ax, xs[4] - 2.5, cy, w + 5, 6.2, "", fill=G4, lw=0.6, style="round,pad=0.4,rounding_size=2")
-    blabel(ax, xs[4] + w / 2, cy + 4.3, "Provenance \u2260 truth", fs=7.4, italic=True)
+    label(ax, xs[4] + w / 2, cy + 4.3, "Provenance \u2260 truth", fs=7.4, italic=True, weight="bold")
     label(ax, xs[4] + w / 2, cy + 1.4, "Records origin, not accuracy", fs=5.9, italic=True, color=G1)
     ax.plot([xs[4] + w / 2, xs[4] + w / 2], [cy - 0.6, yb + hgt + 0.5], color=G2, lw=0.5)
     save(fig, "fig-09-02")
 
 
 @fig("fig-09-03")
-@own_glyph_ids
 def f0903():
     fig = F.figure(2.9)
     ax = fig.add_axes([0.1, 0.27, 0.86, 0.6])
