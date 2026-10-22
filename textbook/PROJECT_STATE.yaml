@@ -1,0 +1,20 @@
+schema_version: 6
+project:
+  id: "understanding-ai"
+  title: "Understanding AI: Technology, Trends and the Decade Ahead"
+  author: "Jan Göbel"
+  language: "en-GB"
+  genre: "university course text (nonfiction)"
+  target_range_words: "85000-95000"
+  quality_target: 8.5
+  supersedes: "../book (v3, 'When Everything Goes Right')"
+collaboration:
+  mode: "autonomous"
+pipeline:
+  current_phase: "Phase 3: Drafting"
+  status: "running"
+manuscript:
+  chapter_count_planned: 14
+decisions:
+  - "2026-10-22 author: less like a novel; purely scientific, well researched, clean source directory; double-check everything; usable at university for AI trends; easy to read; useful illustrations; explain neural nets and LLMs; rethink the whole thing."
+  - "Rebuilt as a 14-chapter course text with APA citations (pandoc citeproc), central figures, glossary; fiction removed; old original concepts kept only as labelled proposals in ch. 14."
