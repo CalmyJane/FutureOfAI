@@ -152,3 +152,67 @@ Independent fact-check of ch13 against primary sources where reachable. About 15
 - §13.7: Sastry et al. quote ("detectable, excludable, and quantifiable") removed; now a back-reference to Section 7.7 (ch07 keeps the quote); sastry2024computing still cited. News-content litigation clause kept.
 - Template phrases: horizontal/sectoral analogy limit reworded (no "the analogy breaks down").
 - No new facts or sources; no bib changes. Body word count 6,794 -> 6,768. pandoc --citeproc: no warnings.
+
+## Deepening (2026-10-23)
+
+Chapter rewritten per DEEPEN-GUIDE: objectives, Summary, Key terms and Discussion questions removed; eight numbered sections (EU split into 13.2 architecture/prohibitions/timetable and 13.3 high-risk/GPAI/enforcement; new 13.8 liability, thresholds and the innovation debate). All earlier verified facts and fact-check corrections kept (SB 53 duty allocation, CoE status as of 22 Oct 2026, omnibus dates in Table 13.1, Getty/Kadrey wording, Garante appeal).
+
+### New claims (claim | exact figure/quote | URL | type)
+- AI Act Art. 2(1)(a),(c): providers covered "irrespective of whether those providers are established or located within the Union or in a third country"; output "is used in the Union"; exclusions Art. 2(3), 2(6) "for the sole purpose of scientific research and development", 2(10), 2(12) | https://artificialintelligenceact.eu/article/2/ | official (consolidated reproduction) [europeanparliament2024regulation]
+- Art. 5(1)(a)–(h) full list; (h) exceptions incl. offences with "a maximum period of at least four years"; Art. 5(3) prior authorisation, urgent use with request within 24 hours, deletion if refused; no adverse decision solely on output | https://artificialintelligenceact.eu/article/5/ | official
+- Art. 6(1)/(2), 6(3) derogation ("narrow procedural task" etc.), profiling always high-risk, 6(4) documentation | /article/6/ | official
+- Annex III points 1–8 with exclusions (biometric verification, fraud detection, travel documents) | /annex/3/ | official
+- Art. 10(3) data "relevant, sufficiently representative, and to the best extent possible, free of errors and complete"; Art. 14(4)(b) automation bias; 14(5) "separately verified and confirmed by at least two natural persons" | /article/10/, /article/14/ | official
+- Art. 43: Annex III points 2–8 internal control (Annex VI) "which does not provide for the involvement of a notified body"; point 1 Annex VII where standards not (fully) applied; substantial modification; pre-determined changes | /article/43/ | official
+- Art. 27 FRIA scope (public-law bodies, private entities providing public services, Annex III 5(b),(c)) and content | /article/27/ | official
+- Art. 73: 15 days; 2 days widespread infringement; 10 days death | /article/73/ | official
+- Art. 51(1)(a)(b), 51(2) >10^25 presumption, 51(3) delegated acts; Art. 52(1) "without delay and in any event within two weeks", 52(2) rebuttal, 52(5) reassessment "at the earliest six months" | /article/51/, /article/52/ | official
+- Art. 53(1)(a)–(d) quotes; 53(2) open-source exemption covers (a),(b) only; not for systemic-risk models | /article/53/ | official
+- Art. 55(1)(a)–(d) quotes | /article/55/ | official
+- Art. 99(3)–(6): €35m/7%, €15m/3%, €7.5m/1%, SMEs lower of; Art. 101: €15m/3%, intent or negligence, right to be heard | /article/99/, /article/101/ | official
+- Art. 113 as amended: Chapter XII (penalties) from 2 Aug 2025 except Art. 101; (c)(i)/(ii) 2 Dec 2027 / 2 Aug 2028 | /article/113/ | official
+- Omnibus further changes: Art. 4a special-category data for bias detection (only where synthetic/anonymised data insufficient; deletion); SMC relief and Art. 99(6a); sandbox in each member state by 2 Aug 2027; AI Office exclusive competence incl. AI systems integrated into VLOPs/VLOSEs; Art. 75c periodic penalty payments up to "5 % of the average daily income or worldwide annual turnover"; Art. 40 standards request "without undue delay" | https://artificialintelligenceact.eu/ai-act-explorer/digital-omnibus/ | official (reproduction) [europeanparliament2026regulation]
+- **fli2025overview**: Commission GPAI guidelines 18 July 2025: indicative criterion >10^23 FLOP and generating language/text-to-image/text-to-video; downstream modifier becomes provider if modification compute > one-third of original | https://artificialintelligenceact.eu/gpai-guidelines-overview/ | secondary summary of official guidelines (Commission page blocked, 403); labelled in text "according to a summary"
+- **trump2025preventing**: EO 14319 signed 23 July 2025 (90 FR 35389); "Unbiased AI Principles": truth-seeking, ideological neutrality; "shall not intentionally encode partisan or ideological judgments"; OMB guidance within 120 days permitting disclosure of system prompt, specifications, evaluations rather than weights | https://www.govinfo.gov/content/pkg/FR-2025-07-28/html/2025-14217.htm | official
+- **usdoj2026artificial**: AG memo 9 Jan 2026 establishing AI Litigation Task Force, "sole responsibility"; grounds "unconstitutionally regulate interstate commerce, are preempted by existing Federal regulations, or are otherwise unlawful" | https://www.justice.gov/ag/media/1422986/dl (PDF text extracted) | official
+- **knapp2026hidden** (reused): FRONTIER Act would pre-empt state obligations on frontier developers in catastrophic-risk transparency, third-party auditing, incident reporting; preserves generally applicable law, deployer/user regulation, child safety | theregreview.org | law-school commentary, attributed in text
+- **sajadieh2026ai** (copied from ch04/ch07): state AI-related bills enacted rose from fewer than 10 in 2020 to 150 in 2025; California 20, Texas 12, New York 10; US private AI investment $285.9bn vs UK $5.9bn (2025) | AI Index 2026 PDF, ch. 8.4 and 4.2 | institutional report
+- **californialegislature2025sb53** (reused): "catastrophic risk" = >50 deaths/serious injuries or >$1bn damage in a single incident via CBRN expert assistance, autonomous cyberattack/crime, evading control; frontier-model compute includes fine-tuning, RL | leginfo chaptered text (r.jina copy) | official
+- **nyassembly2026a9449** (reused): RAISE as amended: incident report within 72 hours; "Office" within Department of Financial Services; large frontier developer >$500m revenue; penalties up to $1m first, $3m subsequent; assessments on developers; >10^26 | assembly.state.ny.us bill text | official
+- **texaslegislature2025hb149**: signed 22 June 2025, effective 1 Jan 2026; Sec. 552.052 manipulation (self-harm, harm, crime); 552.053 social scoring by governmental entity; intent to discriminate, "disparate impact is not sufficient by itself"; AG only, 60-day cure; penalties $10,000–12,000 curable, $80,000–200,000 uncurable, $2,000–40,000/day continuing; no private right of action; sandbox up to 36 months | capitol.texas.gov history and enrolled text | official
+- **usdccolorado2026docket**: X. AI LLC v. Weiser filed 9 April 2026, D. Colo. 1:26-cv-01515, no termination date | CourtListener API | official (court record)
+- **usdoj2026complaint** (reused): SB24-205 requires developers and deployers to "use reasonable care to protect consumers from any known or reasonably foreseeable risks of algorithmic discrimination"; deployer impact assessments | DOJ complaint text | official
+- **cac2021provisions**: Algorithmic Recommendation Provisions, Order No. 9 of CAC, MIIT, MPS, SAMR; effective 1 March 2022; Art. 17 opt-out; Art. 24 filing within ten working days (name, service form, field, algorithm type, self-assessment) for services with public-opinion attributes or mobilisation capacity | https://www.cac.gov.cn/2022-01/04/c_1642894606364259.htm (Chinese original) | official
+- **cac2022provisions**: Deep Synthesis Provisions, CAC/MIIT/MPS order dated 25 Nov 2022, effective 10 Jan 2023 | https://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm | official
+- **mfa2025global**: Global AI Governance Action Plan published 26 July 2025 at WAIC; 13 points; AI "an international public good"; open-source; capacity building, Global South; Global Digital Compact | fmprc.gov.cn | official
+- **dsit2025ai** (copied from ch07): 50 recommendations, 13 Jan 2025, Matt Clifford | gov.uk | official
+- **dsit2025opportunities**: government response: 47 agree, 2 partially (recs 13, 21), rec 24 (TDM) consultation only; AI Growth Zones; compute "by at least 20x by 2030" | gov.uk | official
+- **ukparliament2025data**: DUA Act 2025 c. 18, Royal Assent 19 June 2025; s.135 economic impact assessment and s.136 report within 9 months | legislation.gov.uk | official
+- **un2026global**: Global Dialogue inaugural session Geneva 6–7 July 2026, 163 countries; Scientific Panel presented preliminary report | https://www.un.org/global-dialogue-ai-governance/en | official
+- **usdcnortherncal2025bartz** (reused): at least five million copies from LibGen, at least two million from PiLiMi, "over seven million copies"; print books stripped, scanned, discarded; "training schoolchildren to write well" | CourtListener PDF | official
+- **usdcnortherncal2025kadrey** (reused): thirteen authors; shadow libraries LibGen, Anna's Archive; no more than 50 words/tokens regurgitated under adversarial prompting; not a class action | CourtListener PDF | official
+- **thirdcircuit2026thomson** (reused): 2,243 headnotes; interlocutory appeal from Judge Bibas (sitting by designation); "minimally transformative, at best"; "the market for licensing headnotes as text to train AI is rapidly developing"; ROSS ads at prices "in line with" Westlaw | ca3 PDF | official
+- **uscadc2025thaler**: decided 18 March 2025; Copyright Act "requires all work to be authored in the first instance by a human being"; Creativity Machine listed as sole author | media.cadc.uscourts.gov PDF | official
+- **uscopyrightoffice2025copyright** (reused): Part 2 copyrightability 29 Jan 2025; Part 3 pre-publication 9 May 2025, not final | copyright.gov/ai | official
+- **highcourt2025getty** (reused): "the model weights are not themselves an infringing copy and they do not store an infringing copy"; "does not store or reproduce any Copyright Works (and has never done so)"; "article" may be intangible | Find Case Law judgment text | official
+- **lgmuenchen2025gema** (replaces gema2025landmark): LG München I, 42. Zivilkammer, Az. 42 O 14139/24, 11 Nov 2025; claims against two OpenAI companies largely upheld; lyrics of nine authors; lyrics "reproduzierbar" contained in models 4 and 4o (memorisation); reproduction in parameters; TDM (§44b UrhG) covers preparatory corpus copies but not copies in model; outputs infringing, defendants not users responsible; "Das Urteil ist nicht rechtskräftig" | https://www.justiz.bayern.de/gerichte-und-behoerden/landgericht/muenchen-1/presse/2025/11.php | official (court press release)
+- **edpb2024report**: ChatGPT taskforce established 13 April 2023; report 23/24 May 2024; "probabilistic nature of the system" ... "may also produce biased or made up outputs"; accuracy principle must be complied with; responsibility not transferable to data subjects via T&Cs | EDPB PDF | official
+- **edpb2026guidelines**: Guidelines 03/2026 on web scraping in the context of generative AI, v1.0 adopted 7 July 2026 for public consultation; precise collection criteria, filters, exclude websites "which clearly oppose the scraping" | EDPB PDF | official
+- **europeanparliament2025procedure**: AI Liability Directive 2022/0303(COD): proposal 29 Sept 2022; withdrawn by Commission 6 Oct 2025 | oeil.europarl.europa.eu | official
+- **janssen2022gdpr**: NBER WP 30028 (May 2022): GDPR induced exit of "about a third of available apps"; new entry fell by half | nber.org; Crossref 10.3386/w30028 | working paper
+- **demirer2024data**: NBER WP 32146 (2024): EU firms decreased data storage by 25% and processing by 15% vs US; "21% increase in the cost of data"; production cost "only a 0.1–0.6%" | nber.org; Crossref 10.3386/w32146 | working paper
+- **epochai2026trends** (copied from ch04): frontier training compute ~five-fold per year since 2020 | epoch.ai/trends | institutional
+
+### Cuts and changes
+- gema2025landmark removed (GEMA press release); holdings now sourced to the court's own press release; the GEMA-only quotation "OpenAI is not a privileged research organisation" dropped.
+- Kadrey: plaintiffs' expert "50 tokens in 60% of tests" detail dropped for length.
+- Product Liability Directive: no claim about presumption of defect (not verified in the Commission page used).
+- Not added (could not verify): CAC count of filed generative AI services; Commerce Department list of "onerous" state laws; FCC/FTC follow-up actions; California AB 2013 (leginfo blocked); Moffatt v Air Canada (tribunal sites blocked); Thaler certiorari outcome.
+- "first appellate ruling on AI training" (Ross) not asserted.
+- Generic claims removed: GDPR 4% comparison (no source in bib), characterisations of state bills, opinion sentences on the Art. 6(3) derogation and on intent-based rules.
+
+### Tables
+- Table 13.1 kept unchanged (omnibus dates). New: Table 13.2 (AI Act fine ceilings), Table 13.3 (frontier-model rules EU/California/New York), Table 13.4 (copyright decisions).
+
+### Word count
+- Body (first line after title to end of §13.8): 9,487 words (wc -w, incl. tables and citation keys). pandoc --citeproc: no warnings.
