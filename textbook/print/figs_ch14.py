@@ -11,8 +11,8 @@ from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, 
 @fig("fig-14-01")
 def f1401():
     # dot plot: a bar from an arbitrary start year would give bar length no meaning
-    fig = F.figure(2.1)
-    ax = fig.add_axes([0.25, 0.33, 0.72, 0.55])
+    fig = F.figure(2.3)
+    ax = fig.add_axes([0.25, 0.36, 0.72, 0.52])
     groups = ["High-level machine\nintelligence (HLMI)", "Full automation\nof labour (FAOL)"]
     v22, n22 = [2060, 2164], [461, 202]
     v23, n23 = [2047, 2116], [1714, 774]
@@ -41,8 +41,8 @@ def f1401():
          ax.plot([], [], "o", ms=5.5, mfc=INK, mec=INK, mew=0.9, ls="none")[0]]
     ax.legend(h, ["2022 survey", "2023 survey"], loc="upper center", bbox_to_anchor=(0.38, -0.36), ncol=2,
               fontsize=7.2, handletextpad=0.4, columnspacing=1.6)
-    ax.text(1.0, -0.47, "n = respondents answering the question", transform=ax.transAxes, ha="right", va="top", fontsize=6.2,
-            color=G1)
+    ax.text(0.38, -0.66, "n = number of respondents answering that question", transform=ax.transAxes, ha="center",
+            va="top", fontsize=6.2, color=G1)
     F.save(fig, "fig-14-01")
 
 
