@@ -41,7 +41,7 @@ def f1401():
          ax.plot([], [], "o", ms=5.5, mfc=INK, mec=INK, mew=0.9, ls="none")[0]]
     ax.legend(h, ["2022 survey", "2023 survey"], loc="upper center", bbox_to_anchor=(0.38, -0.36), ncol=2,
               fontsize=7.2, handletextpad=0.4, columnspacing=1.6)
-    ax.text(0.38, -0.66, "n = number of respondents answering that question", transform=ax.transAxes, ha="center",
+    ax.text(0.38, -0.58, "n = number of respondents answering that question", transform=ax.transAxes, ha="center",
             va="top", fontsize=6.2, color=G1)
     F.save(fig, "fig-14-01")
 
