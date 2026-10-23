@@ -7,6 +7,9 @@ import figstyle as F
 from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, save
 
 
+MONO = "DejaVu Sans Mono"
+
+
 @fig("fig-05-01")
 def f0501():
     fig, ax = canvas(3.0, ylim=(0, 66))
@@ -37,6 +40,9 @@ def f0501():
     label(ax, 90, 24.5, "Tools", fs=8.5)
     label(ax, 90, 19.2, "web search\ncode runner\nemail · files", fs=6.2)
     arrow(ax, 66 + e, 21, 81.2, 21, style="<|-|>")
+    # the language model that does the planning, above Plan
+    box(ax, 57, 56.5, 18, 6, "Language model", fill=G4, fs=7.5)
+    ax.plot([66, 66], [56.0, 51.4], color=INK, lw=0.6)
     # human check to the right of Plan
     box(ax, 83, 44, 14, 6, "Human check", fill="white", fs=7.2)
     arrow(ax, 83.5, 43.3, 73.5, 25.6, ls="--", lw=0.7, rad=-0.15)
@@ -51,39 +57,44 @@ def f0501():
 @fig("fig-05-02")
 def f0502():
     fig, ax = canvas(3.2, ylim=(0, 78))
-    lanes = [("User", 9), ("Application", 34), ("Language model", 64), ("Weather tool", 90)]
-    for n, x in lanes:
-        box(ax, x - 8.5, 70, 17, 6, n, fill=G4, fs=7.5)
+    lanes = [("User", 7, 11), ("Application", 29, 17), ("Language model", 68, 18), ("Weather tool", 91, 15)]
+    for n, x, w in lanes:
+        box(ax, x - w / 2, 70, w, 6, n, fill=G4, fs=7.5)
         ax.plot([x, x], [69.5, 3], color=G2, lw=0.7, ls=(0, (3, 3)))
-    X = dict(lanes)
+    X = {n: x for n, x, _ in lanes}
     msgs = [
-        ("User", "Application", "1  Weather in Leeds tomorrow?", False, 63),
+        ("User", "Application", "1  Weather in Leeds?", False, 63),
         ("Application", "Language model", "2  question + tool list", False, 56),
-        ("Language model", "Application", "3  get_weather(Leeds, tomorrow)", False, 47),
+        ("Language model", "Application", "3", False, 47),
         ("Application", "Weather tool", "4  run get_weather", False, 40),
         ("Weather tool", "Application", "5  forecast data", True, 33),
         ("Application", "Language model", "6  tool result as text", False, 26),
         ("Language model", "Application", "7  final answer", True, 19),
         ("Application", "User", "8  answer shown", True, 12),
     ]
+    mid = (X["Application"] + X["Language model"]) / 2   # labels kept clear of the model's lifeline
     for a, b, t, ret, y in msgs:
         xa, xb = X[a], X[b]
         arrow(ax, xa, y, xb, y, ls="--" if ret else "-", lw=0.8)
-        if t.startswith("3"):
-            # the structured request: a small framed label
-            box(ax, (xa + xb) / 2 - 13.3, y + 1.4, 26.6, 3.6, "", fill="white", lw=0.5,
+        if t == "3":
+            # the structured request: a small framed label in monospace, as the model emits it
+            box(ax, 31.6, y + 1.4, 34.4, 3.6, "", fill="white", lw=0.5,
                 style="round,pad=0.3,rounding_size=0.6")
-            ax.text((xa + xb) / 2, y + 3.2, t, ha="center", va="center", fontsize=6.3)
-            label(ax, X["Language model"] + 1.5, y + 3.2, "structured request", fs=6, ha="left", italic=True, color=G1)
+            ax.text(33.0, y + 3.2, "3", ha="left", va="center", fontsize=6.6)
+            ax.text(35.3, y + 3.1, "get_weather(location: Leeds)", ha="left", va="center",
+                    fontsize=5.8, family=MONO)
+            label(ax, X["Language model"] + 1.5, y + 3.2, "structured request", fs=6, ha="left",
+                  italic=True, color=G1)
         else:
-            ax.text((xa + xb) / 2, y + 1.2, t, ha="center", va="bottom", fontsize=6.6)
+            xm = (xa + xb) / 2 if {a, b} != {"Application", "Weather tool"} else mid
+            ax.text(xm, y + 1.2, t, ha="center", va="bottom", fontsize=6.6)
     # activation bar on the Application lifeline, messages 3-5
     ax.add_patch(F.FancyBboxPatch((X["Application"] - 1.1, 31.5), 2.2, 16.5, boxstyle="square,pad=0",
                                   fc=G3, ec=INK, lw=0.5, zorder=3))
     label(ax, X["Application"] - 2.5, 39.5, "holds permissions;\ndecides whether\nto run", fs=6, ha="right",
           italic=True, color=G1)
     # shaded note beside message 6, between the model and tool lifelines
-    box(ax, 66.8, 17.5, 20, 9.5, "tool output enters\nthe same context\nas the instructions", fill=G4,
+    box(ax, 70.3, 21.3, 18.6, 9.5, "tool output enters\nthe same context\nas the instructions", fill=G4,
         fs=6, italic=True, lw=0.5)
     save(fig, "fig-05-02")
 

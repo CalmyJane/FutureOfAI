@@ -38,11 +38,12 @@ def f1201():
                                                        fc="white", ec=G1, lw=0.4, zorder=3))
     labels = ["Alignment\ntraining", "Pre-release\nevaluations", "Interpretability\naudits",
               "Reasoning\nmonitoring", "Deployment\nsafeguards", "Governance\nframeworks"]
-    tags = ["12.1: RLHF,\nconstitutions", "12.5: red-teaming,\ncapability tests", "12.3",
-            "12.4: chain-of-\nthought monitors", "filters, access\ncontrols", "12.6: thresholds,\nexternal testing"]
+    tags = ["12.1: RLHF,\nconstitutions", "12.3: red-teaming,\ncapability tests", "12.4",
+            "12.5: chain-of-\nthought monitors", "12.6: control\nprotocols,\ncontainment",
+            "12.7: thresholds,\nexternal testing"]
     for x, l, t in zip(xs, labels, tags):
-        label(ax, x, 17, l, fs=6.6)
-        label(ax, x, 9.6, t, fs=5.8, color=G1, italic=True)
+        label(ax, x, 20.6, l, fs=6.6, va="top")
+        label(ax, x, 13.4, t, fs=5.8, color=G1, italic=True, va="top")
     # hazard and harm
     box(ax, 1.2, 37.5, 9, 6, "Hazard", fill=G4, fs=7.5)
     box(ax, 89.6, yp - 3, 9, 6, "Harm", fill=G1, fs=7.5)
@@ -79,10 +80,12 @@ def f1202():
     # stage 2 and 4: neuron columns
     shades = [G1, G3, G2, "white", G2, G3]
     ncy = [52 - i * 5.6 for i in range(6)]     # 52 .. 24
-    for xc in (31, 91):
-        for y, c in zip(ncy, shades):
+    # reconstruction is close but not exact: two units differ slightly in shade
+    recon = [G1, G3, G2, G4, G2, G2]
+    for xc, sh in ((31, shades), (91, recon)):
+        for y, c in zip(ncy, sh):
             dot(xc, y, 0.17, c)
-    label(ax, 31, 60, "Model neurons\n(one layer)", fs=6.8, weight="bold")
+    label(ax, 31, 60, "Model activations\n(one layer)", fs=6.8, weight="bold")
     label(ax, 91, 60, "Reconstructed\nactivations", fs=6.8, weight="bold")
     label(ax, 31, 17, "Concepts overlap\n(superposition)", fs=6.2, italic=True, color=G1)
     # stage 3: candidate features
@@ -113,3 +116,41 @@ def f1202():
     ax.plot([31, 31, 91, 91], [13.6, ye, ye, 22.2], color=G1, lw=0.6, ls=(0, (3, 2)))
     label(ax, 61, ye - 3.2, "Reconstruction error = unexplained part", fs=6.2, italic=True, color=G1)
     save(fig, "fig-12-02")
+
+
+@fig("fig-12-03")
+def f1203():
+    with F.plt.rc_context({"hatch.linewidth": 0.4, "hatch.color": G2}):
+        _f1203()
+
+
+def _f1203():
+    # Baker et al. (2025), Table 1: recall against a regex detector over all of training
+    groups = ["exit(0) hack", "SkipTest hack", "Both hacks"]
+    act, cot = [40, 80, 60], [93, 97, 95]
+    fig = F.figure(2.7)
+    ax = fig.add_axes([0.11, 0.2, 0.87, 0.74])
+    x = np.arange(len(groups))
+    bw = 0.34
+    xa, xc = x - bw / 2 - 0.01, x + bw / 2 + 0.01
+    ax.bar(xa, act, bw, color=G3, edgecolor=INK, lw=0.5, label="Actions only")
+    ax.bar(xc, cot, bw, color=G1, edgecolor=INK, lw=0.5, label="Chain of thought + actions")
+    for xs_, vs in ((xa, act), (xc, cot)):
+        for xi, v in zip(xs_, vs):
+            ax.text(xi, v + 1.5, f"{v}%", ha="center", va="bottom", fontsize=7.3,
+                    bbox=dict(fc="white", ec="none", pad=0.6))
+    ax.set_xticks(x)
+    ax.set_xticklabels(groups)
+    ax.tick_params(axis="x", length=0)
+    ax.set_xlim(-0.6, 2.6)
+    ax.set_ylim(0, 118)
+    ax.set_yticks(range(0, 101, 20))
+    ax.spines["left"].set_bounds(0, 100)
+    ax.yaxis.grid(True, color=G3, lw=0.4)
+    ax.set_axisbelow(True)
+    ax.set_ylabel("Recall (% of hacks detected)")
+    ax.legend(loc="upper left", ncol=2, fontsize=7.3, handlelength=1.4, handleheight=1.0,
+              bbox_to_anchor=(0.0, 1.04))
+    fig.text(0.11, 0.015, "Approximate precision (joint): actions only 81%, chain of thought 77%.",
+             fontsize=6.3, color=G1, style="italic")
+    F.save(fig, "fig-12-03")

@@ -102,7 +102,6 @@ def f0402():
         "BERT-Large": (-5, 0, "right"),
         "GPT-3": (-5, 0, "right"),
         "Chinchilla": (-3, -8, "center"),
-        "GPT-4": (-5, 0, "right"),
     }
     for lab, d, v, conf in EPOCH:
         x = year(d)
@@ -114,20 +113,18 @@ def f0402():
             dx, dy, ha = off[lab]
             ax.annotate(lab, (x, v), xytext=(dx, dy), textcoords="offset points", fontsize=7,
                         ha=ha, va="center")
-    # Grok 3 and GPT-4.5 are ten days and 0.04 orders of magnitude apart, so their markers
-    # coincide at this scale: one shared label. Llama 3.1 405B sits just above-right of GPT-4,
-    # so its label goes above-left of it with a leader line.
-    g3 = dict((e[0], e) for e in EPOCH)
-    xg = (year(g3["Grok 3"][1]) + year(g3["GPT-4.5"][1])) / 2
-    ax.annotate("Grok 3, GPT-4.5", (xg, 3.65e26), xytext=(2024.3, 10 ** 27.3), textcoords="data",
-                fontsize=7, ha="right", va="center",
-                arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2.5,
-                                relpos=(1, 0.3)))
-    xl, vl = year(g3["Llama 3.1 405B"][1]), g3["Llama 3.1 405B"][2]
-    ax.annotate("Llama 3.1 405B", (xl, vl), xytext=(2023.0, 10 ** 26.3), textcoords="data",
-                fontsize=7, ha="right", va="center",
-                arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2.5,
-                                relpos=(1, 0.3)))
+    # The 2023-25 points are too close for side labels: Grok 3 and GPT-4.5 are ten days and
+    # 0.04 orders of magnitude apart (markers coincide: one shared label), and Llama 3.1 405B
+    # sits just above-right of GPT-4. Labels are stacked to the left with leader lines.
+    e = {r[0]: r for r in EPOCH}
+    lead = [("Grok 3, GPT-4.5", (year(e["Grok 3"][1]) + year(e["GPT-4.5"][1])) / 2, 3.65e26, 27.2),
+            ("Llama 3.1 405B", year(e["Llama 3.1 405B"][1]), e["Llama 3.1 405B"][2], 26.25),
+            ("GPT-4", year(e["GPT-4"][1]), e["GPT-4"][2], 25.1)]
+    for lab, x, v, ty in lead:
+        ax.annotate(lab, (x, v), xytext=(2016.5, 10 ** ty), textcoords="data", fontsize=7,
+                    ha="right", va="center",
+                    arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1.5, shrinkB=3,
+                                    relpos=(1, 0.5)))
     h = [Line2D([], [], ls="", marker="o", color=INK, ms=4, label="estimate within ×3"),
          Line2D([], [], ls="", marker="o", mfc="white", mec=INK, ms=4, label="estimate within ×10")]
     ax.legend(handles=h, loc="upper left", fontsize=7, handletextpad=0.3, borderaxespad=0.2)
@@ -179,11 +176,16 @@ def f0403():
     off = {
         "GPT-2": (5, 0, "left"),
         "GPT-4": (-5, 4, "right"),
-        "Claude 3.7 Sonnet": (-6, 9, "right"),
         "o3": (5, -5, "left"),
         "GPT-5": (-5, 8, "right"),
-        "Claude Opus 4.6": (-14, 12, "right"),
-        "Claude Mythos Preview (early)": (8, 27, "right"),
+    }
+    # labels with leader lines, placed in data coordinates (x, minutes), ha="right";
+    # Claude 3.7 Sonnet's label would otherwise sit level with the o3 point, and the Mythos
+    # label sits above its own error bar (lead to the bar top), clear of Opus 4.6's bar.
+    lead = {
+        "Claude 3.7 Sonnet": ((2024.35, 210), "point", (1, 0.5)),
+        "Claude Opus 4.6": (None, "point", (0.5, 0.5)),
+        "Claude Mythos Preview (early)": ((2026.5, 6800), "bar", (0.93, 0)),
     }
     for lab, d, p, lo, hi in METR:
         x = year(d)
@@ -191,12 +193,20 @@ def f0403():
         ax.plot([x, x], [lo, hi], color=G1, lw=0.7, zorder=2)
         ax.plot([x], [p], "o", ms=3.6, zorder=3, mew=0.9,
                 mfc="white" if hollow else INK, mec=INK)
+        arrow = dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=3)
         if lab in off:
             dx, dy, ha = off[lab]
-            lead = dict(arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=3)) \
-                if lab == "Claude Opus 4.6" else {}
             ax.annotate(lab, (x, p), xytext=(dx, dy), textcoords="offset points", fontsize=7,
-                        ha=ha, va="center", **lead)
+                        ha=ha, va="center")
+        elif lab == "Claude Opus 4.6":
+            ax.annotate(lab, (x, p), xytext=(-14, 12), textcoords="offset points", fontsize=7,
+                        ha="right", va="center", arrowprops=arrow)
+        elif lab in lead:
+            xy_text, anchor, rel = lead[lab]
+            target = (x, hi) if anchor == "bar" else (x, p)
+            ax.annotate(lab, target, xytext=xy_text, textcoords="data", fontsize=7,
+                        ha="right", va="bottom" if anchor == "bar" else "center",
+                        arrowprops=dict(arrow, relpos=rel, shrinkB=1 if anchor == "bar" else 3))
     ax.set_xlabel("Model release date")
     ax.set_ylabel("50% time horizon (log scale)")
     F.save(fig, "fig-04-03")
