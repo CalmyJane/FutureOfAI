@@ -204,3 +204,90 @@ Chapter rewritten as dense nonfiction per work/DEEPEN-GUIDE.md. Objectives, Summ
 - Proposal 14.8: "cannot be sold or seized" → "cannot be sold or transferred with the service" (removed overclaim about seizure); objections added.
 - Proposals 14.1, 14.4, 14.7, 14.9, 14.10: explicit objections added.
 - Removed the reliability claim "80% horizon ~1/5" in favour of "about a quarter" (3.1 h vs >12 h).
+
+## Fact-check 2 (2026-10-23)
+
+Independent second fact-check per work/FACTCHECK2-GUIDE.md. About 230 claims checked (every number, date, quotation and table cell in the chapter; Tables 14.1–14.4; Brier box; Table 14.2 recomputed). Primary sources opened in this pass (not the writer's log): XPT accuracy PDF (pdftotext), FRI 22 Sept 2026 post (full text; byline and date confirmed), Armstrong & Sotala MIRI PDF, AI Impacts post, Steinhardt post, Grace et al. arXiv v3 HTML, ForecastBench arXiv v5 HTML, Berg et al. abstract (ScienceDirect via reader), OpenAlex abstracts (Mellers 2014/2015, Murphy 1973, Wolfers & Zitzewitz, Kirilenko et al., Muratori & Rizzoni, Srivastava et al., Kleinberg & Raghavan, Knight & Leveson, Bansal et al., Bick et al., Shumailov et al.), arXiv abstracts (Becker et al., Toups et al.), Epoch "Can AI scaling continue", METR TH1.1 blog, METR risk report, METR data file (benchmark_results_1_1.yaml), Kwa 2026 note, AI Index 2026 PDF (arXiv 2606.15708v3), Epoch trends dashboard text, Cottier et al. PDF, Census CES-WP-26-25 PDF, Humlum & Vestergaard BFI WP 2025-56 PDF, AI Act Art. 14 text, Digital Omnibus (artificialintelligenceact.eu reproduction), Federal Register API (91 FR 1684), GO-Science Annex C (GOV.UK HTML), ai-2027.com, titotal post, Knight Institute essay, HBR (Wack), Lighthill PDF, DfT explanatory memorandum PDF.
+
+### Reused keys checked against the sources themselves
+- sajadieh2026ai: "Global AI compute capacity grew 3.3x per year since 2022"; "The U.S.-China AI model performance gap has effectively closed" (PDF text). OK.
+- epochai2026trends: "Training compute for frontier language models has been growing at 5× per year since 2020". OK.
+- cottier2024rising: "2.4× per year since 2016 (90% CI: 2.0× to 2.9×)", amortised hardware + energy. OK (still arXiv preprint).
+- becker2025measuring: 16 developers, 246 tasks; forecast −24% completion time; actual +19%; ML experts −38%, economics −39%. OK (wording tightened, see below).
+- kwa2026clarifying: "Time horizon is not the length of time AIs can work independently"; error bars "a factor of ~2 in each direction"; "differs between domains by orders of magnitude"; "Doubling the time horizon does not double the degree of automation". OK.
+- bonney2026microstructure: Nov 2025–Jan 2026; 18% of firms; 32% employment-weighted. OK.
+- humlum2025large: BFI WP 2025-56: two rounds (late 2023, 2024), 11 occupations, ~25,000 workers, 7,000 workplaces; rules out effects > 1%. OK for this version (the March 2026 NBER revision says > 2%; ch14 cites the 2025 version).
+- europeanparliament2026regulation: Annex III → 2 Dec 2027; Annex I → 2 Aug 2028 (amended Art. 113). OK; original Annex I date was Aug 2027 (text corrected, below).
+- bis2026revision: Federal Register 2026-00789, 91 FR 1684, 15 Jan 2026; H200 presumption of denial → case-by-case, with certification conditions. OK.
+- europeanparliament2016regulation: GDPR Art. 17 erasure, Art. 20 portability. OK.
+- shumailov2024ai: "indiscriminate use of model-generated content in training causes irreversible defects ... tails of the original content distribution disappear". OK.
+- lighthill1973artificial: "In no part of the field have the discoveries made so far produced the major impact that was then promised"; "failure to recognise the implications of the 'combinatorial explosion'"; dated July 1972; commissioned by the SRC chairman. OK.
+- iea2026key: NOT re-verifiable in this session (iea.org returns 403 / Cloudflare challenge; reader proxy and Wayback also failed). Figures (485 TWh 2025; 945/1,008/868/833 TWh 2030; capex USD 715 bn +75%; HBM "through at least the end of 2027"; "compute-constrained ...") kept on the strength of the ch07 log (full PDF read there); 1,008 − 833 = 175 TWh recomputed.
+
+### Opening and Section 14.1
+- XPT: June–Oct 2022; 169 participants (89 SF, 80 experts); IMO medians 2035 (SF) / 2030 (DE); implied probability by 2025 2.3% / 8.6%; July 2025 GDM and OpenAI gold-level claims; 38 of 172 subquestions resolved; 0.18 SD, n.s.; 9.7% vs 24.6% over MATH, MMLU, QuALITY, IMO; hydrogen $4.50 / $3.50 vs $7.50; no-change and extrapolation indistinguishable from individuals; median aggregation ~1 SD; public −1.82 SD; no near-term/long-term correlation. All confirmed. Table A1.1: MATH 71/80 vs 87.92; MMLU 77.75/84.8 vs 88.7; compute 100,000/420,680 vs 578,703.7 petaFLOPS-days; IMO 2035/2030 vs 2025 (projected).
+- Grace et al.: 20,066 emailed, 2,778 responses, 15%; gamma CDF per respondent, mean of distributions; HLMI 2061/2060/2047; FAOL 2164/2116; fixed-probabilities 17 years vs fixed-years 34 years (HLMI fixed years 10/20/40, footnote 6); median 5% (mean 9%); 37.8–51.4%; equal weighting of framings. All confirmed.
+- Armstrong & Sotala: 257 predictions, 95 timeline; 21 of 62 "expert" at 16–25 years (34%); 55 predictions, 12 (22%) within five years; "fifty year gaps between predictions are common". Confirmed.
+- AI Impacts (17 May 2016): misread "expert authority" column (which records how a prediction was reached); AGI 54%, AI 27% at 10–25 years. The statement that the 10–25-year tendency survives is Armstrong's, in a comment quoted in the post; Grace also notes the corrected grouping is "pretty random".
+- Steinhardt (3 July 2022): contest launched Aug 2021 on Hypermind; MATH 12.7% → 50.3%; MMLU 57.1% → 67.5%; far tails; adversarial CIFAR-10 slower than forecast (66.6% vs 70.4%). Confirmed.
+- FRI review: LEAP launched mid-2025, initial 339 experts (76 CS, 76 industry, 68 economists, 119 policy); FrontierMath T1–3 31%/30% vs 40.7% (unadjusted); work hours 4%/3.6% vs 5.7%, outdated 2% baseline; Active Site RCT 22.5%/40%/16.2% vs 5.2%; AV 7.3% vs LLM projection 2.5% (SF 2%); 80% horizon of Mythos Preview 3.1 h on 8 May 2026; revenue $70 bn / $90 bn vs likely $140 bn; Wave 9 (May–June 2026) 50% by 2030; underestimate-bias statement; "not yet seen evidence of improved accuracy on more recent questions"; electricity/data-centre forecasts close to LLM projections. All confirmed.
+
+### Section 14.2
+- Mellers et al. 2014 (training, teaming, tracking; top 2% from Year 1) and 2015 ("Defying expectations of regression toward the mean 2 years in a row ... hundreds of questions"). Confirmed.
+- Brier box recomputed: A = 0.125, B = 0.205; (0.023−1)² = 0.9545 ≈ 0.955; (0.086−1)² = 0.8354 ≈ 0.835. Murphy 1973 abstract: uncertainty, reliability, resolution. Confirmed; propriety statement correct.
+- ForecastBench (arXiv v5, 28 Feb 2025; ICLR 2025): ~1,000 automatically generated questions; 200-question human subset; superforecaster median forecast 0.096, public median 0.121, Claude 3.5 Sonnet 0.122 (p < 0.001); top LLMs had access to market crowd forecasts. Scores are of each group's median forecast, not of the median individual (corrected).
+- Berg, Nelson & Rietz 2008: 964 polls, 1988–2004, market closer 74% of the time, significantly better in every election > 100 days ahead. Confirmed. Wolfers & Zitzewitz abstract confirmed.
+
+### Sections 14.3–14.5
+- Table 14.2 recomputed (1,461 days; 12 h × 2^(1461/t)): 188 d → 7.77 doublings, ×218, 2,622 h (1.3 working years); 158 d → 9.25, ×608, 7,290 h; 129 d → 11.33, ×2,566, 30,798 h (15.4 working years); 104 d → 14.05, ×16,939, 203,270 h. Table values correct.
+- METR: TH1.1 blog 196.5 / 130.8 [107–161] / 88.6 days; data file 187.778 / 128.744 [104.428, 158.012]; risk report "~12h [5h-61h]" (Feb–Mar 2026) and 16-hour limit. Data file: Claude Mythos Preview (early) p50 1,044.8 min (17.4 h), p80 186 min (3.1 h); Opus 4.6 p50 12.0 h.
+- Table 14.3 (Epoch, 20 Aug 2024): every cell confirmed (1–5 GW → 1e28–3e29; 2–45 GW → 2e28–2e30; 20–400 M H100e, median 100 M → 1e29–5e30, median 9e29; 400 T–20 Q effective tokens → 6e28–2e32; latency 3e30–1e32); 2e29 "roughly 10,000-fold" (GPT-4 ~2e25); power binds first, chips second.
+- GO-Science Annex C: > 70 experts; 27 sub-uncertainties → 5 critical uncertainties (names confirmed); 32 combinations → 13 ("implausible or incoherent" removed) → 5 by vote ("sufficiently diverse and interesting"); scenario names confirmed; "They are not predictions"; dated January 2024; GOV.UK page "Updated 28 April 2025".
+- AI 2027: authors; race-ending milestones SC Mar 2027, SAR Aug 2027, SIAR Nov 2027, ASI Dec 2027; ~50x algorithmic progress (Sept 2027); "not a recommendation or exhortation. Our goal is predictive accuracy"; 22 Nov 2025 note (modal year "at the time of publication"); Dec 2025 note (Eli's SC median 2030). titotal (19 June 2025): superexponential curve (~40% weight) with 10% shorter doublings, infinity at finite time; "only 11 datapoints". Narayanan & Kapoor quote and date confirmed. Wack quotes and Newland attribution confirmed (HBR).
+- Table 14.4: every cell traced to the checked sources above (reliability cell corrected).
+
+### Sections 14.6–14.7 (proposals)
+- Prior work checked: Kirilenko et al. abstract ("systemic intraday event ... large automated selling program was rapidly executed in the E-mini S&P 500 stock index futures market"); Toups et al. (3 modalities, 11 datasets, "systemic failure", NeurIPS 2023); Muratori & Rizzoni ("might create pronounced rebound peaks", synchronisation; PEVs included); Srivastava et al. (noisy large-scale training reduces backward compatibility even when accuracy rises); Kleinberg & Raghavan; Knight & Leveson (27 versions, one million tests); Bansal et al.; AI Act Art. 14(4)(b) and 14(5) (two natural persons; exception for law enforcement, migration, border control or asylum where Union or national law considers it disproportionate); GDPR Arts 17, 20.
+- DfT explanatory memorandum (prepared by the Department for Transport), para. 7.11: purpose quote ("If charge points all turn on or off ('switch') simultaneously (for example, when turning on after a power outage) this could cause grid instability"); delay up to 10 minutes; exceptions 7.11.1–7.11.3 (consumer cancels; immediate response e.g. contracted Demand Side Response; delay already applied e.g. via smart meter). Confirmed.
+- 50.2 Hz case: unchanged from the first fact-check (SOGL art. 153(2)(b); SysStabV §§ 2, 4; IEEE Spectrum 315,000 and EUR 65–170 m; Döring/Ecofys-IFK 14 GW).
+- All ten proposals remain labelled as the author's, untested research programmes; thresholds illustrative; no novelty or efficacy claims found.
+
+### Corrections (old → new)
+1. Opening: "published at leading AI conferences" → "leading AI venues" (JMLR is a journal).
+2. §14.1 Armstrong & Sotala: "fifty-year gaps between forecasts made at the same time" → "fifty-year gaps between them" (source wording).
+3. §14.1 AI Impacts: "A later re-analysis by Katja Grace found ... The tendency ... survived the correction" → "In a 2016 blog post Katja Grace showed ... In a reply included in the same post, Armstrong argued that the tendency ... survived the correction" (the survival claim is Armstrong's comment, not Grace's finding).
+4. §14.1 Steinhardt: "paid forecasters on the Hypermind platform, using a scoring rule ..." → "ran a contest on the Hypermind forecasting platform, whose forecasters are typically paid according to a scoring rule ..." (the post describes prize pools and Hypermind's usual payment rule).
+5. §14.1 FRI: "A September 2026 review of all its AI questions" → "A review of a selection of FRI's AI forecasts, which the institute describes as reasonably representative" (FRI states it covered a subset).
+6. §14.1 AV forecast: "looked high against current trends" → "looked high: FRI's projection from current trends, made with an AI model, was 2.5%".
+7. §14.1 caveat: electricity/data-centre forecasts "roughly on track" → added "judged against projections made with an AI model".
+8. §14.2 ForecastBench: "the median superforecaster scored ... the median member of the public" → "the superforecasters' median forecasts ... the public's median forecasts"; added that the best model had the market crowd forecasts; added FRI's 2026 note that some models now perform at superforecaster level on certain question types [@rosenberg2026how].
+9. Debate box: "experts were closer to the outcomes than superforecasters on every benchmark" → "On all four AI benchmark questions ... (MATH, MMLU, QuALITY and the Olympiad), experts gave higher probabilities than superforecasters to what actually happened" (superforecasters were closer on the non-benchmark parameter-count and training-cost questions).
+10. Debate box Becker: "after forecasting a 24% speed-up; ... a 38% speed-up" → "after forecasting that it would cut their completion time by 24%; ... a 38% reduction" (source metric).
+11. §14.3 METR 80% horizon: "best 80% about 3.1 hours, while the best 50% horizons were above 12 hours" → Mythos Preview 80% ≈ 3.1 h against a 50% horizon ≈ 17 h, beyond the reliably measured range (data file).
+12. §14.5 reliability and Table 14.4: "about a quarter of the best 50% horizon" → "less than a fifth" / "under a fifth (best model, May 2026)" (3.1/17.4 = 0.18; reverses the deepening pass's "about a quarter", which compared with the Feb–Mar frontier of 12 h rather than the same model).
+13. §14.5 Becker: "found them 19% slower with AI" → "found that allowing AI increased their task completion time by 19%".
+14. §14.4 GO-Science: "removed incoherent combinations" → "implausible or incoherent"; "None is presented as most likely; the set is meant to span the space" → report states the scenarios "are not predictions"; five chosen as "sufficiently diverse and interesting".
+15. §14.4 IEA: "states the range the agency considers plausible" → cut (interpretation not in source); spread of 175 TWh kept.
+16. §14.4 AI 2027: "at the time of writing" → "at the time of publication"; Dec 2025 medians specified as medians "for the arrival of a superhuman coder".
+17. §14.4 titotal: "The model assumed ..." → "The model's 'superexponential' variant, to which the forecasters gave roughly 40% weight, assumed ...".
+18. §14.5 Regulation: "due to apply from August 2026" → "(August 2027 for products covered by Annex I)".
+19. §14.6: signposting "The remainder of the chapter turns from methods to open problems. Its subject is a risk that ..." → "The methods above do not address one risk directly: ...".
+20. §14.6 Flash Crash: "Automated systems acting together have caused trouble before" → "Automated trading has caused trouble before" (Kirilenko et al. describe one large automated selling programme; HFTs did not change behaviour).
+21. Bib goscience2024ai note: "published on GOV.UK 28 April 2025" → "GOV.UK page last updated 28 April 2025" (page says "Updated"). Not a shared key.
+
+### Cuts
+- IEA "range the agency considers plausible" (interpretation). No other cuts.
+
+### Figures
+- No figure data, label or caption changes. fig-14-01 values (2060/2047; 2164/2116; 738 and 2,778 respondents) re-confirmed against Grace et al.
+
+### Shared bib entries
+- All 61 shared entries (ch01, ch04, ch05, ch07, ch08, ch09, ch10, ch11, ch12, ch13) compared programmatically: byte-identical. No shared entry edited.
+
+### Remaining uncertainties
+- iea2026key figures could not be re-opened (403); rely on ch07's full-PDF verification.
+- XPT MATH resolution: the paper's table gives 87.92%, its text 87.82% (GPT-4 Turbo); chapter's 87.9% follows the table.
+- Mythos Preview's ~17 h 50% horizon is from the September 2026 data file; the May 2026 page state was not archived, though FRI dates the 3.1 h 80% estimate to 8 May.
+- 14 GW worst case (Döring) and SysStabV via dejure.org: as in the first fact-check.
+- Body word count now about 9,600 (incl. tables, citations excluded), slightly above the 9,500 guide ceiling because of added precision.
+- pandoc --citeproc -t html: no warnings.
