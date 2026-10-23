@@ -154,3 +154,39 @@ Chapter rewritten as dense nonfiction (DEEPEN-GUIDE). Teaching apparatus removed
 - Further reading: Ananthaswamy 2024 replaced by He et al. 2016 (Ananthaswamy still cited in the opening).
 - Dropped as unverifiable or unnecessary: claim that Adam is "now the usual choice" for transformers (no primary source checked); "no method yet makes large image networks robust at no cost in accuracy" (not sourced); Nair & Hinton 2010 and Bengio et al. 1994 considered but not needed.
 - No existing verified correction undone (NYT wording, Rosenblatt affiliation, Szegedy quote, Goodfellow section locators, Zech accuracies, Krizhevsky p. 1098).
+
+## Fact-check 2 (2026-10-23)
+
+Independent second check after the deepening pass (about 210 claims, table cells and calculations). Sources re-read in full text (arXiv/JMLR/NeurIPS PDFs via pdftotext): Zhang et al. 1611.03530 (Table 1), Nakkiran et al. 1912.02292, He et al. 1512.03385 (Tables 1–2, 6; sec. 3.3, 4.2), Goodfellow et al. 1412.6572 (Fig. 1, sec. 3, 6), Geirhos et al. 1811.12231, Recht et al. 1902.10811, Ioffe & Szegedy 1502.03167, Santurkar et al. 1805.11604, He et al. 1502.01852, Goyal et al. 1706.02677, Kingma & Ba 1412.6980, Loshchilov & Hutter 1711.05101, Ba et al. 1607.06450, Ilyas et al. 1905.02175, Srivastava et al. 2014 (JMLR PDF; Table 2 and Table 9), Krizhevsky et al. 2012 (NeurIPS PDF). NVIDIA H100 product page re-fetched (FP32 67; BF16/FP16 Tensor 1,979 "With sparsity"; 3.35 TB/s); NVIDIA Hopper In-Depth blog (dense/sparse pairs, dense = half of sparse); NVIDIA structured-sparsity blog (2:4 = 50% zeros, up to 2× dense).
+
+### Worked examples recomputed in Python (all correct as printed)
+Table 2.1 values and slopes (σ′(0.2) 0.2475, tanh′(0.2) 0.9610, σ′(2) 0.1050); matrix layer (−3.4, 1.8) → (0, 1.8); softmax (0.6590, 0.2424, 0.0986), −ln 0.417 / 2.317; one-weight GD 0.44/0.488/0.4976/0.49952, loss 0.0144; nudge 0.3364; error factor 1 − 8η (0.2; −3), divergence above η = 0.25 (curvature 2x² = 8, η < 2/8); η = 0.5 → w 1.4, loss 3.24. Nine-parameter backprop: L 0.474077, p 0.622459; central finite differences reproduce every Table 2.3 gradient to 4 dp (−0.3775, −0.7551, +0.3775, +0.7551, −0.3775, +0.3775, −0.3775, −0.1888, −0.3775); updated parameters as printed; new h (1.2265, 0.2735), z 1.0423, p 0.7393, L 0.3021. Momentum 1, 1.9, 2.71, 3.439; 6.513; 9.948. Adam step 0.001 for g = −2.4 and −0.024 (m₁ −0.24, v₁ 0.00576). 0.25¹⁰ = 9.54×10⁻⁷; √(2/512) = 0.0625; 0.0256¹⁰ = 1.2×10⁻¹⁶. Convolution map rows (0, 3, 3); pooling (4, 2 / 2, 5); 1,728 + 64 = 1,792; FC equivalent 4.83×10¹¹; 225. Matmul 3.44×10¹⁰; reuse 2,731; 1,979/3.35 = 591 (sparse), 989.5/3.35 = 295 (dense). Adversarial 150,528 × 0.007 × 0.01 = 10.5.
+Formulas/notation checked: Adam (Kingma & Ba Alg. 1, ε outside the square root), AdamW (decoupled decay), batch norm (x − μ)/√(σ² + ε) then γ, β; layer norm; weight decay ½λ‖w‖², gradient λw, shrink factor (1 − ηλ) (Goodfellow 7.1.1); dropout retain probability p, test-time scaling; momentum terminal speed 1/(1 − β) (Goodfellow 8.3.2); He condition ½ n Var[w] = 1 (He 2015 eq. 10); Glorot variance 2/(n_in + n_out).
+
+### Paper numbers confirmed
+AlexNet ReLU six times faster to 25% CIFAR-10 training error (Fig. 1); ×2048 augmentation; weight-decay and dropout quotes; std 0.01; lr schedule. Goyal 8,192 / 256 GPUs / 1 hour / 5-epoch warm-up. Ioffe & Szegedy "14 times fewer training steps", 4.9% top-5 validation. Santurkar noise injection and quotes. He et al. Table 2 = top-1 error (%), 10-crop testing, ImageNet validation: plain 27.94/28.54, ResNet 27.88/25.03 (Figure 2.4 caption and spec correct); 152 layers, 8× deeper than VGG, 11.3 vs 19.6 billion FLOPs (= multiply-adds), 3.57% top-5 test; 1,202 layers, training error <0.1%, test 7.93% vs 6.43% (110 layers, best of 5; mean 6.61). Dropout MNIST 1.60 / 1.35 / 1.25 / 1.06; Table 9 L2 1.62, dropout + L2 1.25. Zhang Table 1 all twelve cells. Nakkiran "even quadrupling", 15% label noise. Geirhos 95.9% / 22.1% / 63.9%. Recht 3–15% and 11–14%, five years. Goodfellow ε = .007, 57.7% / 99.3%, 0.94% → 0.84%. Ilyas "non-robust features".
+
+### Corrections (old → new)
+- §2.4 FLOP rule: "two operations ... per parameter per example" → "per parameter for each input it processes (for a language model, each token)" (per-example is wrong for convolutional nets, where weights are reused across positions); Kaplan et al. now labelled a 2020 preprint.
+- Table 2.3 caption "Forward and backward quantities" → "Backward-pass quantities" (the table holds only backward quantities).
+- §2.5 vanishing gradients: "shrink the signal by a factor of up to 0.25¹⁰" → "the slopes alone multiply the signal over ten layers by at most 0.25¹⁰" (ambiguous direction of the bound); "sigmoid units" → "logistic sigmoid units" (Glorot's wording).
+- AdamW: specified that the usual way is adding weight decay "as a penalty term in the loss" (L2), which is what Loshchilov & Hutter show is not equivalent for Adam.
+- Layer normalisation: labelled as a 2016 preprint by Ba, Kiros and Hinton (arXiv only).
+- §2.5 residual: "By 2015 networks of 20 to 30 layers could be trained" → "the leading image networks had 16 to 30 layers" (He et al.: "depth of sixteen to thirty"); "(Figure 2.4)" was attached to the CIFAR-10 56- vs 20-layer result, which the figure does not show; the sentence now adds the ImageNet plain 34- vs 18-layer result and points to Figure 2.4b.
+- 152-layer ResNet: "fewer operations (11.3 billion against 19.6 billion)" → "11.3 billion multiply–adds per image against 19.6 billion for VGG-19" (He et al.'s FLOPs are multiply-adds; the chapter elsewhere counts a multiply and an add as two operations).
+- Table 2.4 AlexNet normalisation: "none" → "local response normalisation after two layers" (Krizhevsky et al. sec. 3.3: after the first and second convolutional layers).
+- H100: "with sparsity" now explained (dense matrices run at half the rate; @andersch2022nvidia added); "about 590 operations per byte" now stated as the sparse headline figure, "about 300 on dense matrices" added.
+- Adversarial panda: "each pixel moved by at most 0.007 on a 0-to-1 scale, the size of the smallest step in an 8-bit image" → each pixel moved by 0.007 according to the sign of the gradient, with the authors' own statement that 0.007 is the smallest 8-bit step "after GoogLeNet's conversion to real numbers" (the 0-to-1 scale was not in the source and is inconsistent with 1/255 = 0.0039).
+- Ilyas: "imperceptible to humans" → "brittle and incomprehensible to humans" (source wording).
+- Zhang: "reached 100% training accuracy" → "100% training accuracy, or very nearly" (AlexNet on random labels 99.82%); Table 2.5 column "Augmentation" → "Random-crop augmentation" (Zhang's column is random crop).
+
+### Figure specs
+- fig-02-01: "Show students" → "Show readers" (teaching wording). No data change.
+- fig-02-02 to fig-02-06: data, labels and captions match the text and sources; no change. Figure 2.4 caption unchanged (text reference moved to 2.4b).
+
+### Bibliography
+- Added andersch2022nvidia to bib/ch02.bib, byte-identical to bib/ch07.bib. No shared entry modified; all ch02 keys shared with other bib files verified byte-identical.
+
+### Remaining uncertainties
+- NYT 1958 wording still rests on Ananthaswamy 2024 (unchanged from fact-check 1).
+- H100 dense rate: the NVIDIA product page gives only the sparse figures; "half" rests on the Hopper In-Depth blog (1000/2000 preliminary pairs) and NVIDIA's 2:4 sparsity description.
