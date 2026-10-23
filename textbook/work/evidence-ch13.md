@@ -216,3 +216,60 @@ Chapter rewritten per DEEPEN-GUIDE: objectives, Summary, Key terms and Discussio
 
 ### Word count
 - Body (first line after title to end of §13.7): 9,464 words (wc -w, incl. tables and citation keys). pandoc --citeproc: no warnings.
+
+## Fact-check 2 (2026-10-23)
+
+Independent second fact-check after the deepening pass. About 230 claims checked (every article number, threshold, deadline, penalty, date and quotation in §13.2–13.7 and Tables 13.1–13.4, plus the worked compute example). Primary texts opened directly this time.
+
+### Sources opened (primary)
+- Reg. (EU) 2024/1689, full OJ text via EUR-Lex (r.jina.ai of legal-content/EN/TXT/HTML/?uri=OJ:L_202401689): Arts 2, 5, 6, 10(3), 14, 27, 43, 51–55, 73, 99, 101, 111, 113 and Annex III read verbatim.
+- Reg. (EU) 2026/1744, full OJ text via EUR-Lex (uri=OJ:L_202601744): Art. 1 points (5) Art. 4, (6) Art. 4a, (7) Art. 5(1)(ba)/(bb) and 5(1a), (17) Art. 40(2), (19) Art. 43(3), (22) Art. 57 (sandbox by 2 Aug 2027), (31) Art. 75(1), (32) Arts 75a–75c (inspections; periodic penalty payments "shall not exceed 5% of the average daily income or worldwide annual turnover"), (38) Art. 99(6a), (39) Art. 111(4), (40) Art. 113; recital wording "delayed availability of standards ..."; EP position 16 June 2026, Council 29 June 2026; signed Strasbourg 8 July 2026; entry into force third day after publication.
+- Commission GPAI guidelines: Commission page still 403 (also via r.jina.ai and Wayback, both blocked). Commission's own AI Act Service Desk FAQ (ai-act-service-desk.ec.europa.eu/en/faq, pages 3–4, fetched directly) confirms: Section 2.1 indicative criterion ">10^23 floating point operations" and generation of "language (text or audio), text-to-image, or text-to-video"; downstream modifier becomes provider if modification compute "greater than a third of the training compute of the original model"; two-week notification. Added as @europeancommission2026faq. The 18 July 2025 publication date still rests on the FLI summary (kept as second citation).
+- EO 14319 (govinfo FR 2025-07-28, 90 FR 35389): quotes confirmed. AG memorandum 9 Jan 2026 (justice.gov PDF): "sole responsibility" and grounds quote confirmed.
+- H.R. 9925: congress.gov API (introduced 23 July 2026, Obernolte, referred to Energy and Commerce and Science, Space, and Technology; latest action 23 July 2026) and introduced text on govinfo (BILLS-119hr9925ih), sec. 9: pre-emption of "new substantive obligations on artificial intelligence developers" in three Covered Subject Areas; rule of construction preserves generally applicable laws, deployer/user regulation, protection of minors.
+- AI Index 2026 PDF §8.4: state AI-related bills enacted "fewer than 10 in 2020 to 150 in 2025"; California 20, New York 10, Texas 12. §4.2: US $285.9bn, UK $5.9bn (UK first among European countries in Fig. 4.2.8).
+- SB 53 chaptered text (via CalMatters Digital Democracy bill page; leginfo 403): catastrophic-risk definition (>50 deaths/serious injuries or >$1bn, single incident, CBRN expert assistance, cyberattack or crime without meaningful human oversight, evading control); >10^26 incl. fine-tuning and RL; $500m; 15 days to OES; 24 h to "an authority, including any law enforcement agency or public safety agency"; ≤$1,000,000 per violation, AG only.
+- NY A9449 (assembly.state.ny.us): 72 hours to the office; "Office" within DFS; >10^26; $500m; ≤$1m first, ≤$3m subsequent (AG); disclosure statement and "required share"/assessments; effective 1 Jan 2027. Actions: substituted by S8828, signed 27 Mar 2026 as Chap. 96.
+- Texas HB 149 enrolled text and history (capitol.texas.gov): signed 22 June 2025; effective 1 Jan 2026; §§552.052 (manipulation), 552.053 (social scoring by governmental entity), discrimination section "(c) ... a disparate impact is not sufficient by itself"; AG exclusive, 60-day cure; $10,000–12,000 / $80,000–200,000 / $2,000–40,000 per day; no private right of action; sandbox ≤36 months.
+- xAI v. Weiser: CourtListener search API gives date filed 2026-04-09, D. Colo. 1:26-cv-01515. DOJ complaint in intervention (dated 24 Apr 2026) re-read. Colorado bill page returned 406 (relied on first fact-check).
+- CAC originals: algorithm provisions Art. 17 opt-out, Art. 24 filing "十个工作日内" with listed fields, in force 1 March 2022; deep synthesis Order No. 12, 25 Nov 2022, in force 10 Jan 2023. MFA Global AI Governance Action Plan (26 July 2025; "international public good"; open-source; Global South; Global Digital Compact; 13 numbered points).
+- UK government response (gov.uk, 13 Jan 2025): 47 Agree, 2 Partially agree (recs 13, 21), rec 24 consultation; "by at least 20x by 2030"; AI Growth Zones. DUA Act 2025 ss. 135–136 (legislation.gov.uk): 9 months; Royal Assent 19 June 2025.
+- UN Global Dialogue page: Geneva 6–7 July 2026; "Delegations from 163 countries"; Panel presented Preliminary Report on 6 July.
+- Court texts: Bartz order (CourtListener PDF); Kadrey order; Third Circuit Ross opinion (2,243 headnotes, "minimally transformative, at best", "rapidly developing", "not a generative AI", fn 7 DOJ statement 1 Sept 2026); Thaler (DC Cir., decided 18 March 2025); Getty [2025] EWHC 2863 (Ch) via Find Case Law XML (weights quote, "does not store or reproduce any Copyright Works and nor has it ever done so", "historic and extremely limited in scope", intangible article); LG München I press release 11/2025 (nine authors, models "4 und 4o", memorisation, §44b UrhG, outputs, "nicht rechtskräftig").
+- EDPB ChatGPT taskforce report PDF (taskforce 13 April 2023; "probabilistic nature" quote; T&Cs); Guidelines 03/2026 v1.0 PDF (adopted 07 July 2026 for consultation; "define precise collection criteria"; filters; "websites which clearly oppose the scraping"). OEIL 2022/0303(COD): "06/10/2025 Proposal withdrawn by Commission".
+- NBER w30028 abstract ("about a third of available apps"; entry "fell by half") and w32146 abstract (25%, 15%, 21%, "only a 0.1–0.6% rise in overall production costs"); Crossref: w32146 published in Journal of Political Economy, doi 10.1086/744118, online 18 Sept 2026 (published abstract not accessible, JPE 403). Draghi Part A text re-read.
+- Worked example recomputed: 6 × 10^11 × 1.5 × 10^13 = 9 × 10^24; with 2 × 10^13 tokens 1.2 × 10^25; 10^25/10^23 = 100. Table 13.1 deferrals 16 and 12 months confirmed.
+
+### Corrections (old → new)
+1. Art. 14(5): "exceptions in law enforcement and border control" → "except in law enforcement, migration, border control and asylum" (Art. 14(5) second subpara.).
+2. Art. 43: "notified body ... only where the provider has not fully applied harmonised standards" → provider may choose one and must use one where harmonised standards or common specifications do not exist or have not been fully applied (Art. 43(1)).
+3. Art. 73: two-day deadline now covers "a widespread infringement or a serious and irreversible disruption of critical infrastructure" (Art. 73(3) with Art. 3(49)(b)).
+4. GPAI guidelines: "According to a summary of Commission guidelines" → stated directly, sourced to the Commission's AI Act Service Desk FAQ plus FLI; "language" → "language (text or audio)"; one-third rule described as indicative criterion for "significant change".
+5. Omnibus SMC relief: lower-of fine cap for SMCs applies only to Art. 99(4) and (5) fines, not prohibited practices (new Art. 99(6a)). Text and Table 13.2 row corrected.
+6. EO 14319: "unless the user prompts them" → "unless those judgments are prompted by or readily accessible to the user"; disclosure option attributed to the OMB guidance the order required, "avoiding disclosure of model weights where practicable".
+7. FRONTIER Act: now described from the bill text itself (sec. 9), no longer "according to a law-school commentary"; scope is "AI developers" in three covered subject areas; "child-safety rules" → "rules protecting minors". @knapp2026hidden still cited for the 99–1 Senate vote.
+8. SB 53: 24-hour disclosure goes to an appropriate authority (law-enforcement or public-safety agency), not OES.
+9. GEMA: "lyrics of nine German songs" → "song lyrics by nine well-known German songwriters" (press release: "Liedtexte neun bekannter deutscher Urheberinnen und Urheber"); TDM exception specified as EU law in its German implementation (§44b UrhG).
+10. Draghi: claim that compute-threshold costs fall more easily on larger firms was a conflation; now: the report cites the threshold as an example of precaution and concludes that the overall regulatory burden leaves only larger companies, "which are often non-EU based", able to bear compliance costs.
+11. Demirer et al.: labelled as 2024 working paper since published in JPE (2026), numbers attributed to the working-paper version; quotation corrected to "only a 0.1–0.6% rise in overall production costs".
+
+### Bibliography
+- demirer2024data: @techreport (NBER WP 32146) → @article, Journal of Political Economy, 2026, doi 10.1086/744118, with note on NBER version; author "Diego J." → "Diego" (Crossref). Key unchanged; ch13 only.
+- nyassembly2026a9449: note that S8828 (same as A9449) was the bill signed as Chap. 96.
+- uscongress2026frontier: now also cites introduced text sec. 9 and committee referral.
+- New: europeancommission2026faq (AI Act Service Desk FAQ).
+- No shared entries edited.
+
+### Figure specs
+- fig-13-01, fig-13-02: "purpose" lines no longer address "students" (wording only; no data, label or caption change). tbl-13-01 data confirmed against the OJ texts. No figure needs redrawing.
+
+### Cuts
+- None needed beyond the rewordings above.
+
+### Remaining uncertainties
+- Commission GPAI guidelines page itself (and its 18 July 2025 date) not reachable; substance confirmed via Commission FAQ, date via FLI summary.
+- GPAI Code signatories (xAI safety-and-security chapter only) still rest on Politico and secondary reports; Commission list page 403.
+- Colorado SB26-189 provisions rely on the first fact-check (leg.colorado.gov returned 406).
+- Demirer et al. published (JPE) version not read; figures are from the 2024 working paper.
+- Bartz settlement details (>480,000 works, ~$3,100, final approval 20 July 2026) rely on Bloomberg Law and the settlement site as checked in the first fact-check.
+- Body word count after edits: about 9,640 (wc -w, title to start of Further reading, incl. tables and keys). pandoc --citeproc -t html: no warnings.

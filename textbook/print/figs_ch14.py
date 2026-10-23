@@ -50,14 +50,19 @@ def f1401():
 def f1402():
     fig = F.figure(2.8)
     ax = fig.add_axes([0.07, 0.13, 0.6, 0.83])
-    t = np.linspace(0, 10, 200)
+    t = np.linspace(0, 10, 300)
     yr = 2026 + t
-    U = 1 + 0.45 * t + 0.05 * t ** 2
-    L = 1 + 0.08 * t
+
+    def sig(x):
+        return 1 / (1 + np.exp(-x))
+    # fast acceleration: bends sharply upward around 2027-2029, then keeps rising
+    fast = 1 + 0.45 * t + 5.0 * (sig((t - 2.4) / 0.55) - sig(-2.4 / 0.55))
+    U = fast + 0.13 * t + 0.012 * t ** 2
+    L = 1 + 0.06 * t
     ax.fill_between(yr, L, U, color=G4, lw=0)
     ax.fill_between(yr, 1 + 0.3 * t, 1 + 0.62 * t, color=G3, lw=0, alpha=0.7)
     paths = [
-        (1 + 0.4 * t + 0.04 * t ** 2, "-", "Fast acceleration\n(e.g. AI 2027)"),
+        (fast, "-", "Fast acceleration\n(e.g. AI 2027)"),
         (1 + 0.45 * t, (0, (5, 2)), "Trend continues"),
         (1 + 0.3 * t, (0, (1.2, 1.5)), "Normal technology:\nslow diffusion"),
         (1 + 1.3 * (1 - np.exp(-t / 2)), (0, (5, 1.5, 1.2, 1.5)), "Plateau: power\nor data limits"),
@@ -65,16 +70,16 @@ def f1402():
     for yv, ls, lab in paths:
         ax.plot(yr, yv, color=INK, lw=1.1, ls=ls)
         ax.text(2036.3, yv[-1], lab, fontsize=7, va="center", ha="left", linespacing=1.1, clip_on=False)
-    ax.plot([2026], [1], "o", ms=3.5, color=INK)
+    ax.plot([2026], [1], "o", ms=3.5, color=INK, clip_on=False, zorder=5)
     ax.text(2026.2, 0.45, "today", fontsize=7, style="italic", va="center")
-    ax.annotate("Narrow: present is\n(mostly) known", xy=(2026.6, 1.25), xytext=(2026.3, 4.6), fontsize=6.8,
+    ax.annotate("Narrow: present is\n(mostly) known", xy=(2026.6, 1.25), xytext=(2026.3, 5.2), fontsize=6.8,
                 style="italic", color=G1, va="center", ha="left",
                 arrowprops=dict(arrowstyle="-", color=G2, lw=0.6))
-    ax.annotate("Wide: many futures\nremain possible", xy=(2034.6, 8.6), xytext=(2029.0, 9.6), fontsize=6.8,
+    ax.annotate("Wide: many futures\nremain possible", xy=(2035.2, 9.6), xytext=(2030.6, 11.2), fontsize=6.8,
                 style="italic", color=G1, va="center", ha="left",
                 arrowprops=dict(arrowstyle="-", color=G2, lw=0.6))
     ax.set_xlim(2026, 2036)
-    ax.set_ylim(0, 10.6)
+    ax.set_ylim(0, 12.2)
     ax.set_xticks(range(2026, 2037, 2))
     ax.tick_params(axis="x", labelsize=7.5)
     ax.set_yticks([])
@@ -93,8 +98,8 @@ def _agent(ax, x, y, s=2.2):
 @fig("fig-14-03")
 def f1403():
     fig, ax = canvas(2.9, ylim=(0, 66))
-    label(ax, 1, 63, "A. Conventional evaluation", fs=8, ha="left", weight="bold")
-    label(ax, 52, 63, "B. Population-level evaluation", fs=8, ha="left", weight="bold")
+    label(ax, 1, 62, "A. Conventional evaluation", fs=8, ha="left", va="baseline", weight="bold")
+    label(ax, 52, 62, "B. Population-level evaluation", fs=8, ha="left", va="baseline", weight="bold")
     ax.plot([48.5, 48.5], [2, 64], color=G2, lw=0.5)
     # Panel A
     box(ax, 1, 25, 11, 10, "One model\ninstance", fill=G4, fs=6.8)
@@ -121,7 +126,7 @@ def f1403():
         arrow(ax, 60.2, y, 70.6, ty_, lw=0.6, ms=5)
     box(ax, 71, 35, 26, 12, "", fill=G4)
     label(ax, 84, 43, "One stress scenario", fs=7.2)
-    label(ax, 84, 38.5, "e.g. sudden price drop", fs=6.3, italic=True, color=G1)
+    label(ax, 84, 38.5, "e.g. sudden price change", fs=6.3, italic=True, color=G1)
     arrow(ax, 84, 34.4, 84, 30.2, lw=0.7, ms=6)
     # bar-chart icon
     base = 19.5
