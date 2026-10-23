@@ -119,13 +119,15 @@ def f0402():
     # so its label goes above-left of it with a leader line.
     g3 = dict((e[0], e) for e in EPOCH)
     xg = (year(g3["Grok 3"][1]) + year(g3["GPT-4.5"][1])) / 2
-    ax.annotate("Grok 3, GPT-4.5", (xg, 3.65e26), xytext=(2025.9, 10 ** 27.35), textcoords="data",
+    ax.annotate("Grok 3, GPT-4.5", (xg, 3.65e26), xytext=(2024.3, 10 ** 27.3), textcoords="data",
                 fontsize=7, ha="right", va="center",
-                arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2.5))
+                arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2.5,
+                                relpos=(1, 0.3)))
     xl, vl = year(g3["Llama 3.1 405B"][1]), g3["Llama 3.1 405B"][2]
-    ax.annotate("Llama 3.1 405B", (xl, vl), xytext=(2023.4, 10 ** 26.3), textcoords="data",
+    ax.annotate("Llama 3.1 405B", (xl, vl), xytext=(2023.0, 10 ** 26.3), textcoords="data",
                 fontsize=7, ha="right", va="center",
-                arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2.5))
+                arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2.5,
+                                relpos=(1, 0.3)))
     h = [Line2D([], [], ls="", marker="o", color=INK, ms=4, label="estimate within ×3"),
          Line2D([], [], ls="", marker="o", mfc="white", mec=INK, ms=4, label="estimate within ×10")]
     ax.legend(handles=h, loc="upper left", fontsize=7, handletextpad=0.3, borderaxespad=0.2)
