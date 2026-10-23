@@ -13,3 +13,11 @@
 **reasoning model**: A language model trained, typically with reinforcement learning on problems with checkable answers, to produce a long chain of intermediate steps before giving its final answer, spending more computation per question.
 **AI agent**: A system in which an AI model, today usually a large language model, pursues a goal over several steps by choosing actions, carrying them out through tools such as software or a web browser, observing the results and repeating.
 **AI effect**: The repeated pattern in which a technology stops being called "AI" once people become used to it, so that the boundary of what counts as AI keeps moving.
+**heuristic**: A rule of thumb that narrows a search to promising options without guaranteeing the best answer, such as judging a chess position by its material balance.
+**combinatorial explosion**: The very rapid growth in the number of possibilities to check as a problem gets bigger, which makes exhaustive search impractical; Shannon estimated about 10^120^ variations in a game of chess.
+**production rule**: A single if-then statement of knowledge, such as "if the organism is gram-negative, rod-shaped and anaerobic, then there is suggestive evidence that it is bacteroides", used as the building block of expert systems.
+**certainty factor**: In MYCIN, a number from −1 to +1 attached to a rule or conclusion to express how strongly the evidence supports or opposes it; supporting factors were combined so that belief grew but never exceeded 1.
+**backward chaining**: A way of running rules that starts from a goal and works backwards to the facts needed to establish it, asking for information only when no rule can supply it.
+**hidden Markov model (HMM)**: A statistical model in which an observed sequence, such as the sound of speech, is produced by a sequence of hidden states whose transition and emission probabilities are learned from data; it dominated speech recognition from the 1980s until about 2010.
+**statistical machine translation**: Translation by choosing the output sentence that is most probable under a language model and a translation model, both estimated from large collections of existing translations.
+**pre-training**: Training a large model on broad unlabelled data, usually by self-supervision, before adapting it to particular tasks.
