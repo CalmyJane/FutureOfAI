@@ -32,7 +32,7 @@ def f1001():
         ax.text(x[i] + w / 2 + 0.01, yt + 4 if yt > 0 else 4, labs_t[i], ha="center", va="bottom", fontsize=7.5)
     ax.set_xlim(-0.6, 1.6)
     ax.set_ylim(-30, 140)
-    ax.set_yticks([-20, 0, 40, 80, 120])
+    ax.set_yticks([-20, 0, 20, 40, 60, 80, 100, 120])
     ax.set_xticks(x)
     ax.set_xticklabels(groups, fontsize=8)
     ax.tick_params(axis="x", length=0, pad=4)
@@ -40,7 +40,7 @@ def f1001():
     ax.set_ylabel("Change vs control group (%)", fontsize=7.5)
     ax.legend(loc="upper right", fontsize=7.5, handlelength=1.4, handleheight=0.9)
     ax.set_title("A. Turkey, high-school mathematics (randomised trial)", fontsize=8.5, loc="left", x=-0.12, pad=6)
-    fig.text(0.14, 0.485, "Nearly 1,000 students, grades 9–11, fall 2023; classes assigned to arms, students randomly assigned to classes.",
+    fig.text(0.14, 0.485, "Nearly 1,000 students, grades 9–11, autumn 2023; classes assigned to arms, students randomly assigned to classes.",
              fontsize=6.8, style="italic", color=G1)
 
     # Panel B: effect sizes in two other RCTs
@@ -76,7 +76,7 @@ def f1002():
     for yr, v in zip(years, n):
         ax.text(yr, v + 5, str(v), ha="center", va="bottom", fontsize=6.8)
     ax.set_xlim(2014.4, 2025.6)
-    ax.set_ylim(0, 350)
+    ax.set_ylim(0, 362)
     ax.set_xticks(years)
     ax.set_xticklabels([str(y) for y in years], fontsize=7.2)
     ax.tick_params(axis="x", length=0)
@@ -84,7 +84,7 @@ def f1002():
     ax.set_yticks(range(0, 351, 50))
     ax.set_xlabel("Year of FDA decision", fontsize=8)
     ax.set_ylabel("Devices authorised (number)", fontsize=8)
-    ax.text(2014.9, 330, "Total listed (1995–June 2026): 1,614\nradiology 1,230 (76%)\ncardiovascular 154; neurology 73",
+    ax.text(2014.9, 345, "Total listed (1995–June 2026): 1,614\n510(k) clearances: 1,553 (96%)\nradiology 1,230 (76%)\ncardiovascular 154; neurology 73",
             fontsize=7, va="top", ha="left", linespacing=1.3,
             bbox=dict(boxstyle="square,pad=0.5", fc="white", ec=G2, lw=0.5))
     F.save(fig, "fig-10-02")

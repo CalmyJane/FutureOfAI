@@ -17,7 +17,7 @@ def f1101():
         ("Malfunctions", [("Unreliable\noutputs", "11.2", False), ("Bias*", "11.3", True),
                           ("Loss of control", "11.6", False)]),
         ("Systemic risks", [("Labour market", "Ch. 8", False), ("Monoculture,\ncorrelated errors", "11.5", False),
-                            ("Over-reliance\n(automation bias)", "11.5", False), ("Market\nconcentration", "Ch. 7", False),
+                            ("Over-reliance\n(automation bias)", "11.5", False), ("Market\nconcentration", "11.5, Ch. 7", False),
                             ("Environmental\nharm*", "Ch. 7", True), ("Privacy*", "Ch. 10", True),
                             ("Copyright*", "Ch. 13", True)]),
     ]

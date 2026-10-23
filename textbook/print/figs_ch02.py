@@ -127,7 +127,7 @@ def f0203():
     az.annotate("slope = gradient\n= −2.4", xy=(0.226, L(0.2) - 2.4 * 0.026), xytext=(0.16, 0.1), fontsize=6.4,
                 color=G1, ha="left", va="center", arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkB=1))
     az.text(0.44, -0.012, "0.44", fontsize=6.4, ha="right", va="top")
-    az.annotate("0.488, then 0.4976", xy=(0.492, 0.004), xytext=(0.455, 0.2), fontsize=6.4, ha="center",
+    az.annotate("0.488, then 0.4976", xy=(0.492, 0.004), xytext=(0.527, 0.15), fontsize=6.4, ha="right",
                 arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2))
     az.text(0.525, 0.485, "learning rate 0.1:\neach step closes\n80% of the gap", fontsize=6.6,
             ha="right", va="top")
