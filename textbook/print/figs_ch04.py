@@ -98,14 +98,11 @@ def f0402():
         "NETtalk": (-5, 0, "right"),
         "LeNet-5": (-5, 0, "right"),
         "AlexNet": (-5, 0, "right"),
-        "Transformer": (5, -3, "left"),
-        "BERT-Large": (-5, 2, "right"),
+        "Transformer": (-5, 0, "right"),
+        "BERT-Large": (-5, 0, "right"),
         "GPT-3": (-5, 0, "right"),
-        "Chinchilla": (0, -8, "center"),
-        "GPT-4": (-5, 2, "right"),
-        "Llama 3.1 405B": (4, -8, "right"),
-        "Grok 3": (-5, -1, "right"),
-        "GPT-4.5": (-5, 7, "right"),
+        "Chinchilla": (-3, -8, "center"),
+        "GPT-4": (-5, 0, "right"),
     }
     for lab, d, v, conf in EPOCH:
         x = year(d)
@@ -113,9 +110,21 @@ def f0402():
             ax.plot([x], [v], "o", color=INK, ms=4, zorder=3)
         else:
             ax.plot([x], [v], "o", mfc="white", mec=INK, mew=0.9, ms=4, zorder=3)
-        dx, dy, ha = off[lab]
-        ax.annotate(lab, (x, v), xytext=(dx, dy), textcoords="offset points", fontsize=7,
-                    ha=ha, va="center")
+        if lab in off:
+            dx, dy, ha = off[lab]
+            ax.annotate(lab, (x, v), xytext=(dx, dy), textcoords="offset points", fontsize=7,
+                        ha=ha, va="center")
+    # Grok 3 and GPT-4.5 are ten days and 0.04 orders of magnitude apart, so their markers
+    # coincide at this scale: one shared label. Llama 3.1 405B sits just above-right of GPT-4,
+    # so its label goes below the cluster with a leader line.
+    g3 = dict((e[0], e) for e in EPOCH)
+    xg = (year(g3["Grok 3"][1]) + year(g3["GPT-4.5"][1])) / 2
+    ax.annotate("Grok 3, GPT-4.5", (xg, 3.65e26), xytext=(-5, 0), textcoords="offset points",
+                fontsize=7, ha="right", va="center")
+    xl, vl = year(g3["Llama 3.1 405B"][1]), g3["Llama 3.1 405B"][2]
+    ax.annotate("Llama 3.1 405B", (xl, vl), xytext=(2025.6, 10 ** 24.45), textcoords="data",
+                fontsize=7, ha="right", va="center",
+                arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2.5))
     h = [Line2D([], [], ls="", marker="o", color=INK, ms=4, label="estimate within ×3"),
          Line2D([], [], ls="", marker="o", mfc="white", mec=INK, ms=4, label="estimate within ×10")]
     ax.legend(handles=h, loc="upper left", fontsize=7, handletextpad=0.3, borderaxespad=0.2)
