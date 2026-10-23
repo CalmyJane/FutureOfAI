@@ -158,3 +158,59 @@ Applied work/DEEPEN-GUIDE.md. Objectives, Summary, Key terms and Discussion ques
 - Narayanan & Kapoor "slow diffusion leaves time to detect problems": not quoted from the essay; replaced with the verified resilience-vs-nonproliferation point.
 - XPT near-term accuracy claim (from ch14/kucinskas2025assessing): not repeated; Section 14.2 cross-referenced instead.
 - Removed teaching apparatus: objectives, Summary, Key terms, Discussion questions.
+
+## Fact-check 2 (2026-10-23)
+
+Independent second fact-check after the deepening pass (about 150 claims, numbers, quotes, table cells and worked calculations checked). Sources opened: Slattery et al. arXiv 2408.12622v3 (states it is the Patterns version); AA-Omniscience arXiv 2511.13029; Dahl et al. arXiv v2 and Crossref abstract (JLA 16(1):64–93); Koenecke et al. arXiv 2402.08021; Chouldechova arXiv 1703.00056; ProPublica methodology page (contingency tables); IC3 2024 report PDF; NCSC 2025 assessment page; ISR 2026 (arXiv 2602.21012) and ISR 2025 (arXiv 2501.17805) PDFs; DARPA AIxCC results page; Petrov & Volkov arXiv 2505.19915 and Crossref 10.1145/3733816.3760755; FSB report PDF (P14112024.pdf); Goddard et al. (Europe PMC); Budzyń et al. (Europe PMC); Carlsmith arXiv PDF; XPT working paper PDF; Grace et al. arXiv PDF; ACLU (Wessler) page; Raji & Buolamwini (Semantic Scholar abstract); Gender Shades PMLR PDF; Bostrom PDF; TIME LeCun interview (via r.jina.ai).
+
+### Points resolved
+- **Slattery et al.**: 42% AI / 38% human / 20% other; 35% / 35% intent; 62% post-, 13% pre-deployment, 25% both or unspecified; 7 domains, 24 subdomains; frameworks "averaging 8" subdomains, range 1–20 (supplement calls 8 the median); AI welfare 3%, multi-agent 7% of frameworks; 74 frameworks, 1,725 risks. Coding covered 1,480 (86%) risks causally and 1,506 (87%) by domain, so "codes each one twice" was inexact.
+- **AA-Omniscience**: OI = 100·(c − i)/(c + p + i + a); hallucination rate = i/(p + i + a); Grok 4 64%, GPT-5 (high) 81%, both 39% accuracy; Claude 4.1 Opus 36%, OI 4.8; three models above zero; all-abstain model 4th of 36. Worked example recomputed: 0.81 × 61 = 49.4; 39 − 49.4 = −10.4. The arithmetic holds exactly whatever the share of partial answers (they sit in the denominator of the rate and score 0), so "ignoring partially correct answers" was wrong as a caveat.
+- **Dahl et al.**: published abstract "at least 58% of the time"; Fig. 1 pooled reference-based tasks: GPT-4 0.58, GPT-3.5 0.69, PaLM 2 0.72, Llama 2 0.88; randomly selected federal cases; false premises; pro se litigants. Verified.
+- **Koenecke et al.**: "roughly 1%" of transcriptions; 38% of hallucinations with explicit harms; 13,140 segments; aphasia / non-vocal durations. Verified.
+- **Chouldechova example**: base rates 51% / 39% (paper, p. 6, eq. 2.6). (0.51/0.49)(0.4/0.6)(0.7) = 0.486; (0.39/0.61)(0.4/0.6)(0.7) = 0.298. Verified. From ProPublica's tables: base rates 1,901/3,696 = 51.4% and 966/2,454 = 39.4%; PPV 0.63 / 0.59; FNR 27.99% / 47.72%; the formula gives FPR 44.8% / 23.5%, matching ProPublica's 44.85% / 23.45%. This check was added to the box.
+- **FBI IC3 2024**: 859,532 complaints; $16.6 billion; 33% increase. Verified.
+- **NCSC 2025** (published 7 May 2025): all quotes verified; "most significant AI cyber development will highly likely come from AI-assisted vulnerability research and exploit development (VRED)", so the text now says that.
+- **AIxCC / "top 5% of 400+ teams"**: the ISR 2026 key-information bullet (p. 57) says one AI agent found 77% of vulnerabilities, "placing it in the top 5% of over 400 (mostly human) teams". This merges two different results. (a) DARPA AIxCC final (DARPA release, 8 Aug 2025, ISR ref. 471): the seven finalist teams' systems *together* found 54 synthetic vulnerabilities and patched 43; DARPA's editor's note corrected the total from 70 to 63, so 77% → 86% (semifinal 37%). (b) The top 5% of about 400 teams is Palisade Research's "AI vs. Humans" CTF on Hack The Box (14–16 March 2025; 403 registered teams; best AI team top 5%), from Petrov & Volkov (ISR ref. 461; published at the ACM HAIPS '25 workshop). The text now reports both separately with primary sources and notes the report's conflation.
+- **"94% of virology experts"**: ISR 2026 p. 64 (key information) and p. 66 (o3, ref. 549). Kept at policy level only; no operational detail.
+- **Cloud 67%**: ISR 2025 sec. 2.3.3 p. 126 ("Just three companies control 67% of cloud computing services"); Fig. 2.9 p. 125 cites Statista (Richter 2024), Q1 2024, worldwide cloud infrastructure services: AWS 31%, Microsoft 25%, Google 11%. The text now gives source, year and split; "on which most AI training and deployment runs" (not in source) replaced by the report's framing; page pin 123–125 → 123–126.
+- **FSB four vulnerabilities and the correlations quote**: verified in the report PDF (14 Nov 2024).
+- **Goddard et al.**: 13,821 retrieved, 74 included; mediators and mitigators verified. JAMIA 19(1):121–127.
+- **ISR 2026 2,784-person experiment**: verified (p. 89 key info; p. 91 body, ref. 826). **"6% deskilling"**: the report says "approximately 6% lower"; the underlying study (Budzyń et al. 2025, Lancet Gastroenterol Hepatol, ISR ref. 815) reports ADR 28.4% → 22.4%, an absolute fall of 6.0 percentage points (about 21% relative). The text now quotes the report and gives the study's figures; budzyn2025endoscopist copied byte-identical from ch08.bib (also in ch14.bib).
+- **Carlsmith (Table 11.3)**: 65/80/40/65/40/95% verified; product 0.0514; sensitivity ~0.1%–~40% and "~1-10% depending on my mood" (fn. 181); >10% update (abstract). Premises are on PDF pp. 49–51, not 48–50. Premise 4 is power-seeking "in misaligned and high-impact ways"; "misaligned" added. Premise 3 at 5% gives 0.64% (<1%), verified. "Warning shots" reason for premise 4 verified.
+- **Table 11.4 (XPT)**: AI catastrophe 2.13% vs 12%; AI extinction 0.38% vs 3%; nuclear catastrophe 4% vs 8%. The domain-expert medians for AI questions come from AI domain experts only (N = 30 catastrophe, N = 29 extinction; Table 15). The "59" is all domain experts across AI, nuclear and bio. The separate "3.9%" for AI domain experts (AI-section summary) is inconsistent with the report's own Table 15 (3%, same N = 29) and was cut. The ratio 3/0.38 = 7.9, so "about a factor of ten" → "about eightfold ('an order of magnitude' in the report's words)"; 12/2.13 = 5.6 ("nearly sixfold") verified.
+- **Grace et al.**: 2,778; median 5% (mean 9%); 38%–51%; 68.3%. Verified.
+- **ACLU "at least seven"**: Wessler, 30 April 2024: "at least seven wrongful arrests we know of in the United States". Labelled as ACLU (advocacy). Reid (Georgia resident, never in Louisiana, nearly a week in jail), the lineup cases (Woodruff, Oliver, Williams) and Parks (officer's comparison) verified. The article describes the pregnant carjacking arrest ("last year", i.e. 2023) without naming her in that sentence, but names Porcha Woodruff among the Detroit cases.
+- **Table 11.1**: ISR 2025 and 2026 subsection lists verified against both tables of contents; the caption already labels the MIT-domain mapping as the author's approximation.
+
+### Corrections (old → new)
+- §11.1 "codes each one twice" → "codes them in two ways; 86% of the risks contained enough detail for the causal coding and 87% for the domain coding".
+- §11.1 causal results: added the 20% "other" entity share and the 25% both/unspecified timing share; "almost equally ... intentional (35%) and unintentional (35%)" → "equally"; "during development" → "before deployment"; "The average framework covered only 8" → "A typical framework covered only 8".
+- §11.2 OI definition: partial answers score 0 and the score is averaged over all questions. Worked example: "Ignoring partially correct answers" → "Because the hallucination rate is measured over all questions not answered correctly ... (the author's arithmetic from the rounded published figures)".
+- §11.4 deepfakes "overwhelmingly targets women and girls" → "disproportionately" (report wording).
+- §11.4 NCSC "largest effect ... vulnerability research" → "most significant development ... vulnerability research and exploit development".
+- §11.4 AIxCC sentence rewritten (see above): 54 of 63 (86%), 43 patched, 37% at semifinal [@darpa2025ai]; Palisade CTF top 5% of 403 teams [@petrov2025evaluating]; note on the ISR conflation; page pin for the two ISR quotes (pp. 57–60).
+- §11.4 "could not exclude the possibility..." quote pinned to p. 12.
+- §11.5 cloud 67%: source (Statista, Q1 2024), split 31/25/11, page range 123–126; "on which most AI training and deployment runs" removed.
+- §11.5 deskilling: "about 6% lower" → the report's quoted "approximately 6% lower" plus the study's 28.4% → 22.4% (6 percentage points) [@budzyn2025endoscopist].
+- §11.3 Chouldechova box: added the check against ProPublica's actual figures (44.8% / 23.5%).
+- Table 11.3: premise 4 "misaligned, high-impact"; source pages 48–50 → 49–51.
+- Table 11.4: "Domain experts (59)" → "AI domain experts (30)" / "(29)"; 3.9% row cut; nuclear row "nuclear domain experts".
+- §11.6 "about a factor of ten for extinction" → "about eightfold ... ('an order of magnitude' in the report's words)".
+- Bib: new darpa2025ai (DARPA release), petrov2025evaluating (ACM HAIPS '25 workshop paper, DOI 10.1145/3733816.3760755); budzyn2025endoscopist copied unchanged from ch08.bib.
+
+### Cuts
+- XPT "AI experts within the domain experts 3.9%" row (internally inconsistent with the report's Table 15).
+- "on which most AI training and deployment runs" (unsupported).
+
+### Figure specs
+- No change. fig-11-01, fig-11-02 and fig-11-03 contain none of the corrected figures.
+
+### Shared bib entries
+- None edited. budzyn2025endoscopist added, byte-identical to ch08.bib and ch14.bib.
+
+### Remaining uncertainties
+- DARPA's original 77% is inferred from its editor's note (originally 70 synthetic vulnerabilities, 54 found); the superseded text itself was not read.
+- XPT 3% vs 3.9% for AI domain experts: the report is inconsistent; the table figure (3%) is used.
+- Mouton et al. (RAND) is still verified only through the ISR 2025 summary (unchanged from fact-check 1).
+- Teaching apparatus: none found. Body ≈ 9,140 words. pandoc --citeproc -t html: no warnings.
