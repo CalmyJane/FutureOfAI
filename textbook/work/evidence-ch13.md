@@ -155,7 +155,7 @@ Independent fact-check of ch13 against primary sources where reachable. About 15
 
 ## Deepening (2026-10-23)
 
-Chapter rewritten per DEEPEN-GUIDE: objectives, Summary, Key terms and Discussion questions removed; eight numbered sections (EU split into 13.2 architecture/prohibitions/timetable and 13.3 high-risk/GPAI/enforcement; new 13.8 liability, thresholds and the innovation debate). All earlier verified facts and fact-check corrections kept (SB 53 duty allocation, CoE status as of 22 Oct 2026, omnibus dates in Table 13.1, Getty/Kadrey wording, Garante appeal).
+Chapter rewritten per DEEPEN-GUIDE: objectives, Summary, Key terms and Discussion questions removed; seven numbered sections (13.1–13.6 keep their numbers and topics so cross-references from ch09, ch10 and ch12 still hold; §13.2 EU now has subsections; §13.7 now covers liability, compute thresholds and the innovation debate). All earlier verified facts and fact-check corrections kept (SB 53 duty allocation, CoE status as of 22 Oct 2026, omnibus dates in Table 13.1, Getty/Kadrey wording, Garante appeal).
 
 ### New claims (claim | exact figure/quote | URL | type)
 - AI Act Art. 2(1)(a),(c): providers covered "irrespective of whether those providers are established or located within the Union or in a third country"; output "is used in the Union"; exclusions Art. 2(3), 2(6) "for the sole purpose of scientific research and development", 2(10), 2(12) | https://artificialintelligenceact.eu/article/2/ | official (consolidated reproduction) [europeanparliament2024regulation]
@@ -215,4 +215,4 @@ Chapter rewritten per DEEPEN-GUIDE: objectives, Summary, Key terms and Discussio
 - Table 13.1 kept unchanged (omnibus dates). New: Table 13.2 (AI Act fine ceilings), Table 13.3 (frontier-model rules EU/California/New York), Table 13.4 (copyright decisions).
 
 ### Word count
-- Body (first line after title to end of §13.8): 9,487 words (wc -w, incl. tables and citation keys). pandoc --citeproc: no warnings.
+- Body (first line after title to end of §13.7): 9,487 words (wc -w, incl. tables and citation keys). pandoc --citeproc: no warnings.
