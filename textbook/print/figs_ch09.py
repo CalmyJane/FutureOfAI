@@ -7,8 +7,8 @@ import figstyle as F
 from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, save
 
 
-@fig("fig-09-01")
-def f0901():
+@fig("fig-09-03")
+def f0903():
     fig = F.figure(3.6)
     ax = fig.add_axes([0.335, 0.215, 0.645, 0.725])
     A = [
@@ -54,56 +54,121 @@ def f0901():
             bbox=dict(boxstyle="round,pad=0.4,rounding_size=0.3", fc=G4, ec=G2, lw=0.5))
     fig.text(0.015, 0.012, "Dashed line at 0: average effect of campaign contact and ads in US general\nelections \u2248 0 (Kalla & Broockman 2018, 49 field experiments). Whiskers: 95% CIs.",
              fontsize=6.4, ha="left", va="bottom", color=G1, style="italic", linespacing=1.15)
+    F.save(fig, "fig-09-03")
+
+
+@fig("fig-09-01")
+def f0901():
+    # Kirchenbauer et al. (2023), Fig. 6 legend and Sec. 7.1: T5-Large span attack on a
+    # gamma = 0.5, delta = 2.0 soft watermark (multinomial sampling), 500 sequences of T = 200 +/- 5 tokens.
+    eps = [0.0, 0.1, 0.3, 0.5, 0.7]
+    auc = [0.998, 0.988, 0.954, 0.838, 0.696]
+    ppl = [6.3, 13.1, 21.2, 28.4, 33.9]
+    fig = F.figure(2.75)
+    ax = fig.add_axes([0.12, 0.17, 0.74, 0.69])
+    ax2 = ax.twinx()
+    ax.set_xlim(-0.035, 0.735)
+    ax.set_ylim(0.4, 1.0)
+    ax2.set_ylim(0, 50)
+    ax.set_xticks(eps)
+    ax.set_xticklabels(["0", "0.1", "0.3", "0.5", "0.7"])
+    ax.set_yticks([0.5, 0.6, 0.7, 0.8, 0.9, 1.0])
+    ax.set_yticklabels(["0.5", "0.6", "0.7", "0.8", "0.9", "1.0"])
+    ax2.set_yticks(range(0, 51, 10))
+    for a in (ax, ax2):
+        a.tick_params(labelsize=7.5)
+    ax2.spines["right"].set_visible(True)
+    ax2.spines["top"].set_visible(False)
+    ax.axhline(0.5, color=G2, lw=0.7, ls=(0, (4, 2.5)), zorder=1)
+    ax.text(0.72, 0.507, "chance (AUC 0.5)", fontsize=6.6, ha="right", va="bottom", color=G1, style="italic")
+    ax.plot(eps, auc, color=INK, lw=1.3, marker="o", ms=4, mfc=INK, mec=INK, zorder=4, clip_on=False)
+    ax2.plot(eps, ppl, color=G2, lw=1.3, ls=(0, (4, 2)), marker="s", ms=3.8, mfc="white", mec=G1, mew=0.8, zorder=3, clip_on=False)
+    for x, v in zip(eps, auc):
+        ax.annotate(f"{v:.3f}", (x, v), xytext=(0, 5.5), textcoords="offset points", ha="center", va="bottom", fontsize=6.6)
+    for x, v in zip(eps, ppl):
+        ax2.annotate(f"{v:.1f}", (x, v), xytext=(0, -6), textcoords="offset points", ha="center", va="top", fontsize=6.6, color=G1)
+    ax.set_xlabel("Share of tokens replaced by the attacker (\u03b5)", fontsize=8)
+    ax.set_ylabel("Detection AUC", fontsize=8)
+    ax2.set_ylabel("Perplexity (lower = more fluent)", fontsize=8, rotation=270, labelpad=11)
+    from matplotlib.lines import Line2D
+    ax.legend(handles=[Line2D([], [], color=INK, lw=1.3, marker="o", ms=4, label="Detection AUC (left axis)"),
+                       Line2D([], [], color=G2, lw=1.3, ls=(0, (4, 2)), marker="s", ms=3.8, mfc="white", mec=G1, mew=0.8,
+                              label="Perplexity (right axis)")],
+              loc="lower center", bbox_to_anchor=(0.5, 1.02), ncol=2, fontsize=7.3, handlelength=2.6)
     F.save(fig, "fig-09-01")
 
 
 @fig("fig-09-02")
 def f0902():
-    fig, ax = canvas(2.45, ylim=(0, 56))
-    names = [("Create", "Camera or\nAI tool"), ("Sign manifest", "Who, what tool,\nwhen"),
-             ("Edit", "New signed\nentry added"), ("Publish and\ndisplay", "Platform shows\ncredentials"),
-             ("Viewer checks", "Signature\nvalid?")]
-    w, hgt, yb = 15, 13, 27
-    xs = [1 + i * 19.75 for i in range(5)]
-    for (t, s), x in zip(names, xs):
+    fig, ax = canvas(3.75, ylim=(0, 84))
+    dash = (0, (4, 2.5))
+    # ---- main path: four steps -------------------------------------------------
+    steps = [("Create", "Camera or AI tool signs\nmanifest 1; its actions\nbegin with \u201ccreated\u201d"),
+             ("Edit", "Editor adds signed\nmanifest 2 (\u201copened\u201d);\nmanifest 1 kept inside"),
+             ("Publish", "Platform displays\nContent Credentials"),
+             ("Validate", "Signatures, certificates\nand hashes; does the\nhard binding match?")]
+    w, hgt, yb = 20.5, 15.5, 53
+    xs = [0.6 + i * 26.4 for i in range(4)]
+    for (t, sub), x in zip(steps, xs):
         box(ax, x, yb, w, hgt, "", fill="white")
-        two = "\n" in t
-        label(ax, x + w / 2, yb + hgt - (3.2 if two else 2.6), t, fs=7.4, weight="bold")
-        label(ax, x + w / 2, yb + (2.9 if two else 3.6), s, fs=6.2, italic=True, color=G1)
+        label(ax, x + w / 2, yb + hgt - 2.7, t, fs=7.6, weight="bold")
+        label(ax, x + w / 2, yb + 6.0, sub, fs=6.1, italic=True, color=G1)
     ym = yb + hgt / 2
     for a, b in zip(xs, xs[1:]):
-        arrow(ax, a + w + 0.7, ym, b - 0.7, ym)
-    # padlock between boxes 2 and 3, above the arrow
-    px = (xs[1] + w + xs[2]) / 2
-    ax.add_patch(F.FancyBboxPatch((px - 1.1, yb + hgt + 3.0), 2.2, 2.1, boxstyle="square,pad=0", fc=G2, ec=INK, lw=0.6))
-    ax.add_patch(F.matplotlib.patches.Arc((px, yb + hgt + 5.1), 1.5, 2.6, theta1=0, theta2=180, color=INK, lw=0.8))
-    label(ax, px, yb + hgt + 9.6, "Hash binds manifest to file", fs=6.4, italic=True)
-    ax.plot([px, px], [yb + hgt + 2.8, ym + 1.0], color=G2, lw=0.5)
-    # watermark tag under box 1
-    ax.add_patch(F.FancyBboxPatch((xs[0] + 1.5, yb - 10), w - 3, 6, boxstyle="round,pad=0.3,rounding_size=1",
+        arrow(ax, a + w + 0.8, ym, b - 0.8, ym)
+    # callout above Validate
+    cx = xs[3] + w / 2
+    box(ax, xs[3] - 1.5, 74.5, w + 3, 7.0, "", fill=G4, lw=0.6, style="round,pad=0.4,rounding_size=2")
+    label(ax, cx, 79.6, "Provenance \u2260 truth", fs=7.4, italic=True, weight="bold")
+    label(ax, cx, 76.4, "Records origin, not accuracy", fs=6.0, italic=True, color=G1)
+    ax.plot([cx, cx], [74.0, yb + hgt + 0.5], color=G2, lw=0.5)
+    # optional watermark embedded at creation
+    ax.add_patch(F.FancyBboxPatch((xs[0] + 1.5, 39.5), w - 3, 7.5, boxstyle="round,pad=0.3,rounding_size=1",
                                   fc="white", ec=INK, lw=0.7, ls=":"))
-    label(ax, xs[0] + w / 2, yb - 7, "Invisible\nwatermark", fs=6.2)
-    ax.plot([xs[0] + w / 2, xs[0] + w / 2], [yb - 3.6, yb - 0.4], color=G2, lw=0.5, ls=":")
-    # recovery branch (dashed)
-    bx = (xs[2] + w + xs[3]) / 2
-    by = 3
-    box(ax, xs[2] - 2, by, 16, 8, "Manifest\nstripped", fill=G4, fs=7, lw=0.7)
-    arrow(ax, bx, ym - 0.4, xs[2] + 11, by + 8.8, ls="--", lw=0.8)
-    box(ax, xs[3] + 0.5, by, 15, 8, "Watermark\nlookup", fill=G4, fs=7, lw=0.7)
-    arrow(ax, xs[2] + 14.6, by + 4, xs[3] - 0.2, by + 4, ls="--", lw=0.8)
-    arrow(ax, xs[3] + 16.2, by + 4, xs[4] + w / 2, yb - 0.6, ls="--", lw=0.8, rad=0.35)
-    label(ax, xs[4] + w / 2 + 2.2, 10.5, "Recover from\ncloud", fs=6.2, italic=True, color=G1, ha="left")
-    # callout
-    cy = 47
-    box(ax, xs[4] - 2.5, cy, w + 5, 6.2, "", fill=G4, lw=0.6, style="round,pad=0.4,rounding_size=2")
-    label(ax, xs[4] + w / 2, cy + 4.3, "Provenance \u2260 truth", fs=7.4, italic=True, weight="bold")
-    label(ax, xs[4] + w / 2, cy + 1.4, "Records origin, not accuracy", fs=5.9, italic=True, color=G1)
-    ax.plot([xs[4] + w / 2, xs[4] + w / 2], [cy - 0.6, yb + hgt + 0.5], color=G2, lw=0.5)
+    label(ax, xs[0] + w / 2, 43.25, "Optional invisible\nwatermark in content", fs=6.1)
+    ax.plot([xs[0] + w / 2, xs[0] + w / 2], [47.4, yb - 0.5], color=G2, lw=0.5, ls=":")
+    # ---- recovery path (dashed) --------------------------------------------------
+    gx = (xs[1] + w + xs[2]) / 2
+    sx, sw = xs[1] + 2.0, 18.5
+    box(ax, sx, 39.5, sw, 7.5, "Manifest stripped\n(e.g. re-encoding)", fill=G4, fs=6.4, lw=0.7)
+    arrow(ax, gx, ym - 0.6, sx + sw - 3.5, 47.6, ls="--", lw=0.8)
+    lx, lw_ = xs[2] + 2.5, 19.0
+    box(ax, lx, 39.5, lw_, 7.5, "Soft-binding lookup in\na cloud repository", fill=G4, fs=6.4, lw=0.7)
+    arrow(ax, sx + sw + 0.6, 43.25, lx - 0.6, 43.25, ls="--", lw=0.8)
+    arrow(ax, lx + lw_ + 0.6, 43.25, cx, yb - 0.6, ls="--", lw=0.8, rad=0.35)
+    label(ax, xs[3] + 3.6, 40.6, "copy of the\nmanifest", fs=6.0, italic=True, color=G1, ha="left")
+    # ---- inside one manifest -----------------------------------------------------
+    ax.add_patch(F.FancyBboxPatch((0.6, 1.0), 99.4, 33.0, boxstyle="round,pad=0.3,rounding_size=1.5",
+                                  fc="none", ec=G2, lw=0.5, ls=(0, (2, 2))))
+    label(ax, 2.2, 31.2, "Inside each manifest", fs=7.2, weight="bold", ha="left")
+    # assertions
+    box(ax, 2.2, 2.6, 37.5, 25.0, "", fill="white", lw=0.7)
+    label(ax, 2.2 + 37.5 / 2, 25.0, "Assertions", fs=7.2, weight="bold")
+    items = ["Actions: \u201ccreated\u201d or \u201copened\u201d, then edits;",
+             "    AI output marked trainedAlgorithmicMedia",
+             "Ingredients: earlier files and their manifests",
+             "Hard binding: hash of the file\u2019s bytes",
+             "Soft binding: watermark or fingerprint"]
+    for i, t in enumerate(items):
+        bullet = "" if t.startswith(" ") else "\u2022 "
+        label(ax, 3.6, 21.0 - i * 3.9, bullet + t.strip() if bullet else "    " + t.strip(), fs=6.0, ha="left")
+    # claim
+    box(ax, 46.0, 9.0, 19.0, 15.5, "", fill="white", lw=0.7)
+    label(ax, 55.5, 21.6, "Claim", fs=7.2, weight="bold")
+    label(ax, 55.5, 14.6, "Lists every\nassertion by its\ncryptographic hash", fs=6.1, italic=True, color=G1)
+    # claim signature
+    box(ax, 71.5, 9.0, 27.0, 15.5, "", fill="white", lw=0.7)
+    label(ax, 85.0, 21.6, "Claim signature", fs=7.2, weight="bold")
+    label(ax, 85.0, 14.6, "COSE_Sign1, made with the\nkey of an X.509 certificate;\nRFC 3161 time-stamp", fs=6.1, italic=True, color=G1)
+    arrow(ax, 40.4, 16.75, 45.3, 16.75)
+    label(ax, 42.85, 19.0, "hashed", fs=6.0, italic=True, color=G1)
+    arrow(ax, 65.7, 16.75, 70.8, 16.75)
+    label(ax, 68.25, 19.0, "signed", fs=6.0, italic=True, color=G1)
     save(fig, "fig-09-02")
 
 
-@fig("fig-09-03")
-def f0903():
+@fig("fig-09-04")
+def f0904():
     fig = F.figure(2.9)
     ax = fig.add_axes([0.1, 0.27, 0.86, 0.6])
     cats = ["Clicked a traditional\nsearch result link", "Clicked a link inside\nthe AI summary", "Ended browsing session\non this page"]
@@ -132,4 +197,4 @@ def f0903():
               loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=2, fontsize=7.5, handlelength=1.4, handleheight=0.9)
     fig.text(0.1, 0.02, "18% of the 68,879 Google searches studied produced an AI summary.",
              fontsize=6.8, ha="left", va="bottom", style="italic", color=G1)
-    F.save(fig, "fig-09-03")
+    F.save(fig, "fig-09-04")

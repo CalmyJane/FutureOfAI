@@ -47,7 +47,7 @@ def f0601():
 @fig("fig-06-02")
 def f0602():
     # AlphaFold 2 pipeline after Jumper et al. 2021, Fig. 1e and Suppl. Algorithm 2 (spec fig-06-02)
-    fig, ax = canvas(2.97, ylim=(0, 66))
+    fig, ax = canvas(2.88, ylim=(2, 66))
     thin = dict(lw=0.5, color=G1, ms=6)
 
     def line(xs, ys, lw=0.5, color=G1):
@@ -61,13 +61,13 @@ def f0602():
     label(ax, 15.75, 62.7, "Input sequence", fs=6.8)
     ax.text(15.75, 59.3, "MKTAYIAK\u2026", ha="center", va="center", fontsize=6.3, family="DejaVu Sans Mono",
             color=G1)
-    box(ax, 3.5, 40, 11.5, 9, "Sequence\ndatabases", fs=6.2)
+    box(ax, 3.5, 40, 10.3, 9, "Sequence\ndatabases", fs=6.2)
     box(ax, 18, 40, 13, 9, "MSA (related\nsequences)", fill="white", fs=6.2)
-    box(ax, 3.5, 21, 11.5, 10, "Structure\ndatabase\n(PDB)", fs=6.2)
+    box(ax, 3.5, 21, 10.3, 10, "Structure\ndatabase\n(PDB)", fs=6.2)
     box(ax, 18, 22, 13, 8, "Templates", fill="white", fs=6.2)
-    arrow(ax, 9.25, 57, 9.25, 49.4, lw=0.7)
-    arrow(ax, 15.4, 44.5, 17.6, 44.5, lw=0.7, ms=6)
-    arrow(ax, 15.4, 26, 17.6, 26, lw=0.7, ms=6)
+    arrow(ax, 8.65, 57, 8.65, 49.4, lw=0.7)
+    arrow(ax, 14.2, 44.5, 17.6, 44.5, lw=0.7, ms=6)
+    arrow(ax, 14.2, 26, 17.6, 26, lw=0.7, ms=6)
     # sequence down the left margin: to the structure database and on to the pair representation
     line([1.6, 1.6], [56.6, 17])
     arrow(ax, 1.6, 26, 3.3, 26, lw=0.7, ms=6)
@@ -112,18 +112,18 @@ def f0602():
     line([I[0], K[0]], [I[1], K[1]], lw=0.7, color=G2)
     line([J[0], K[0]], [J[1], K[1]], lw=0.7, color=G2)
     line([I[0], J[0]], [I[1], J[1]], lw=1.5, color=INK)
-    for (x, y), t, dx, dy in ((I, "i", -1.3, 0), (J, "j", 1.3, 0), (K, "k", 0, 1.6)):
+    for (x, y), t, dx, dy in ((I, "i", -1.7, 0), (J, "j", 1.7, 0), (K, "k", 0, 1.6)):
         ax.plot([x], [y], "o", mfc="white", mec=INK, ms=3.2, mew=0.6)
         label(ax, x + dx, y + dy, t, fs=6, italic=True)
     label(ax, 72.5, 18.0, "triangle update:", fs=5.8, italic=True, color=G1)
     label(ax, 72.5, 15.8, "ik + jk \u2192 ij", fs=5.8, italic=True, color=G1)
 
     # column 4: structure module and output
-    box(ax, 83, 23, 15, 14, "Structure\nmodule", fill="white", fs=6.8)
-    label(ax, 90.5, 20.3, "residues as rigid", fs=5.8, italic=True, color=G1)
-    label(ax, 90.5, 18.2, "bodies; invariant", fs=5.8, italic=True, color=G1)
-    label(ax, 90.5, 16.1, "point attention", fs=5.8, italic=True, color=G1)
-    arrow(ax, 79.4, 30, 82.6, 30, lw=0.7, ms=6)
+    box(ax, 84.2, 23, 13.8, 14, "Structure\nmodule", fill="white", fs=6.8)
+    label(ax, 91.1, 20.3, "residues as rigid", fs=5.8, italic=True, color=G1)
+    label(ax, 91.1, 18.2, "bodies; invariant", fs=5.8, italic=True, color=G1)
+    label(ax, 91.1, 16.1, "point attention", fs=5.8, italic=True, color=G1)
+    arrow(ax, 79.4, 30, 83.8, 30, lw=0.7, ms=6)
     box(ax, 82, 43, 16, 21, fill="white")
     label(ax, 90, 61.4, "3D structure", fs=6.6)
     label(ax, 90, 58.8, "+ pLDDT", fs=6.6)
@@ -136,7 +136,7 @@ def f0602():
     label(ax, 86.6, 48.2, "high confidence", fs=5.8, ha="left", color=G1)
     ax.plot([83.6, 85.8], [45.8, 45.8], color=G3, lw=1.8)
     label(ax, 86.6, 45.8, "low confidence", fs=5.8, ha="left", color=G1)
-    arrow(ax, 90.5, 37.4, 90.5, 42.6, lw=0.7, ms=6)
+    arrow(ax, 91.1, 37.4, 91.1, 42.6, lw=0.7, ms=6)
 
     # recycling: Evoformer and structure-module outputs back to the representations
     line([98.4, 99.6, 99.6, 42], [30, 30, 5, 5], lw=0.8, color=INK)
@@ -151,7 +151,7 @@ def f0602():
 @fig("fig-06-03")
 def f0603():
     # timeline (spec fig-06-03)
-    fig, ax = canvas(3.2, ylim=(0, 72))
+    fig, ax = canvas(2.6, ylim=(6, 64.5))
     ev = [
         ("Jun 2023", "AlphaDev", "Faster sorting routines\nadded to LLVM C++ library", "p"),
         ("Dec 2023", "FunSearch", "Larger cap sets than\npreviously known", "p"),
