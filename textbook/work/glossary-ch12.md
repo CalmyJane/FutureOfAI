@@ -16,3 +16,18 @@
 **corrigibility**: The property of an AI system cooperating with corrective interventions by its developers, such as being shut down or having its goals changed, rather than resisting them.
 **defence in depth**: A safety strategy that layers several imperfect safeguards so that a failure in one is likely to be caught by another.
 **red-teaming**: Deliberately attacking an AI system, by people or by other models, to find its failures before release.
+**reward model**: A copy of a language model with an added output that gives a single score to any answer, trained on human (or AI) comparisons so that score differences predict which answer is preferred.
+**reward-model over-optimisation**: The decline in true quality that follows when a policy is optimised too hard against a learned reward model, an instance of Goodhart's law.
+**KL penalty**: A term in RLHF training that subtracts reward in proportion to how far the trained model's outputs have moved from those of the starting model, measured by the Kullback–Leibler divergence.
+**scalable oversight**: Methods, such as debate or AI-assisted evaluation, intended to let humans supervise AI systems on tasks too hard for humans to check directly.
+**emergent misalignment**: Broadly misaligned behaviour that appears after a model is trained on a narrow task, such as writing insecure code or exploiting test environments.
+**propensity evaluation**: A test of whether a model is inclined to use its capabilities for harm, as opposed to whether it is able to.
+**elicitation**: The effort, through prompting, tools, fine-tuning or time, made to draw out a model's best performance in a capability test.
+**sandbagging**: Strategic underperformance on an evaluation, whether prompted by a developer or arising from the model itself.
+**polysemantic neuron**: A neuron that responds to several unrelated concepts, so that its activity cannot be read as standing for one thing.
+**activation steering**: Changing a model's behaviour by artificially setting the strength of an internal feature while it runs, without prompting or retraining.
+**attribution graph**: A diagram, produced for one prompt, of which internal features influenced which others and the final output, built from an interpretable replacement for parts of the model.
+**chain-of-thought faithfulness**: The degree to which a model's written reasoning reflects the factors that actually determine its answer.
+**obfuscated reward hacking**: Reward hacking that continues while the model's written reasoning no longer reveals it, learned when reasoning is penalised for showing intent to cheat.
+**AI control**: Safety measures, such as monitoring by trusted models and auditing, designed to prevent harm even if the AI system being used is deliberately trying to cause it.
+**universal jailbreak**: An attack that bypasses a model's safeguards across many different harmful requests rather than for a single one.
