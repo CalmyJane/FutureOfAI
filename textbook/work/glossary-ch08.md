@@ -9,6 +9,7 @@
 **jagged technological frontier**: The uneven boundary of AI capabilities, under which AI may perform well on one task and poorly on another task that seems equally difficult to a human.
 **augmentation**: Use of AI to help a person carry out a task, with the person remaining involved in doing it.
 **automation (of tasks)**: Use of a technology to carry out a task with little or no human involvement, replacing work previously done by a person.
+**Hulten's theorem**: A result in growth accounting (Charles Hulten, 1978) stating that, for small changes in a competitive economy, the economy-wide productivity gain from a technology is approximately each affected task's share of GDP multiplied by the cost saving in that task, summed over tasks.
 **total factor productivity**: The part of output growth that cannot be explained by increases in capital or labour, often treated as a measure of technological and organisational improvement.
 **productivity J-curve**: The pattern in which a new general-purpose technology at first lowers measured productivity growth, because complementary investments are poorly measured, and later raises it.
 **deskilling**: The loss or weakening of human skills that occurs when a task is routinely handed over to a machine or AI system.

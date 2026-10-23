@@ -13,3 +13,13 @@
 **benchmark contamination**: The presence of test questions, or close variants, in a model's training data, which can inflate its benchmark score through memorisation.
 **time horizon**: METR's measure of AI capability: the length of task, counted in the time a skilled human needs, that an AI model or agent is predicted to complete with a stated reliability; usually reported at 50% success (the 50% time horizon).
 **50% time horizon**: The time horizon at which a model is predicted to succeed half the time; see *time horizon*.
+**power law**: A relationship in which one quantity changes as a fixed power of another, such as loss proportional to compute raised to −0.05; on logarithmic axes it appears as a straight line.
+**irreducible loss**: The part of a model's prediction error that no amount of extra compute, parameters or data can remove, because the text being predicted is partly unpredictable.
+**model FLOPs utilisation (MFU)**: The share of a chip's theoretical peak arithmetic speed that is actually spent on useful training operations; large training runs typically achieve 30–50%.
+**GPU-hour**: One graphics processor (or similar AI chip) running for one hour; the usual unit for billing and reporting the hardware time used to train or run a model.
+**petaflop/s-day (PF-day)**: A unit of compute equal to 10^15^ operations per second sustained for one day, or 8.64 × 10^19^ FLOP.
+**IsoFLOP profile**: A comparison of models of different sizes trained with the same total compute, used to find the model size that gives the lowest loss for that budget.
+**over-training**: Training a model on more tokens than compute-optimal rules suggest, accepting a higher training cost in exchange for a smaller model that is cheaper to run.
+**epoch**: One complete pass of training through a dataset; training for several epochs means the model sees the same data repeatedly.
+**coverage**: In repeated sampling, the fraction of problems for which at least one of the generated answers is correct.
+**benchmark**: A fixed set of test questions or tasks with known answers on which AI models are scored and compared.
