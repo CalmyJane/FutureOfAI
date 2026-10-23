@@ -60,7 +60,7 @@ def f1402():
     ax.fill_between(yr, L, U, color=G4, lw=0)
     ax.fill_between(yr, 1 + 0.3 * t, 1 + 0.62 * t, color=G3, lw=0, alpha=0.7)
     ax.plot(yr, fast, color=INK, lw=1.1, ls="-")
-    ax.text(2031.75, 11.4, "Fast acceleration\n(e.g. AI 2027)", fontsize=7, va="center", ha="right", linespacing=1.1)
+    ax.text(2031.4, 11.4, "Fast acceleration\n(e.g. AI 2027)", fontsize=7, va="center", ha="right", linespacing=1.1)
     paths = [
         (1 + 0.45 * t, (0, (5, 2)), "Trend continues"),
         (1 + 0.3 * t, (0, (1.2, 1.5)), "Normal technology:\nslow diffusion"),
@@ -71,7 +71,7 @@ def f1402():
         ax.text(2036.3, yv[-1], lab, fontsize=7, va="center", ha="left", linespacing=1.1, clip_on=False)
     ax.plot([2026], [1], "o", ms=3.5, color=INK, clip_on=False, zorder=5)
     ax.text(2026.2, 0.45, "today", fontsize=7, style="italic", va="center")
-    ax.annotate("Narrow: present is\n(mostly) known", xy=(2026.6, 1.3), xytext=(2026.3, 8.6), fontsize=6.8,
+    ax.annotate("Narrow: present is\n(mostly) known", xy=(2026.6, 1.3), xytext=(2026.3, 7.0), fontsize=6.8,
                 style="italic", color=G1, va="center", ha="left",
                 arrowprops=dict(arrowstyle="-", color=G2, lw=0.6, shrinkA=6, shrinkB=1, relpos=(0.12, 0)))
     ax.annotate("Wide: many futures\nremain possible", xy=(2035.0, 9.0), xytext=(2032.7, 11.3), fontsize=6.8,
@@ -145,51 +145,62 @@ def f1404():
     rng = np.random.default_rng(3)
     for k, (x0, title) in enumerate(((2, "A. Human overrides (today)"), (53, "B. Agent overrides (hypothetical)"))):
         W = 44
-        label(ax, x0, 79, title, fs=8, ha="left", weight="bold")
+        label(ax, x0, 78, title, fs=8, ha="left", va="baseline", weight="bold")
         sig = x0 + 7
-        # tick strip
+        win = 30  # default random delay window: up to 600 s = 10 minutes
+        # tick strip of device starts
         ya = 57
         ax.plot([x0, x0 + W], [ya, ya], color=INK, lw=0.7)
         arrow(ax, x0 + W - 1, ya, x0 + W + 0.6, ya, lw=0.7, ms=5)
-        label(ax, x0 + W / 2, ya - 3.6, "Time (minutes)", fs=6.6)
+        label(ax, x0 + W / 2 + 4, ya - 3.6, "Time (minutes)", fs=6.6)
         ax.plot([sig, sig], [17, 71], color=G1, lw=0.7, ls=(0, (3, 2)))
         label(ax, sig + 1, 72, "Price signal", fs=6.6, ha="left", italic=True)
+        # bracket marking the 10-minute random-delay window
+        ax.plot([sig, sig, sig + win, sig + win], [ya - 1.2, ya - 2.0, ya - 2.0, ya - 1.2], color=G2, lw=0.5)
+        label(ax, sig + 0.6, ya - 3.6, "10 min", fs=6, ha="left", color=G1)
         if k == 0:
-            xs = sig + rng.uniform(0, 30, 26)
+            xs = sig + rng.uniform(0, win, 26)
             for xv in xs:
                 ax.plot([xv, xv], [ya, ya + 4], color=G1, lw=0.6)
-            ov = [sig + 3, sig + 18.5, x0 + 41]
+            ov = [sig + 3, sig + 14, sig + 25]
             for xv in ov:
                 ax.plot([xv, xv], [ya, ya + 7], color=INK, lw=1.0)
                 ax.plot([xv], [ya + 7.6], "o", ms=2.2, mfc="white", mec=INK, mew=0.7)
             label(ax, x0 + 30, 68.5, "owner override", fs=6.4, italic=True)
-            ax.plot([x0 + 30, sig + 19], [66.6, ya + 8.4], color=G2, lw=0.5)
-            ax.plot([x0 + 35.5, x0 + 40.3], [66.6, ya + 8.4], color=G2, lw=0.5)
+            ax.plot([x0 + 26.5, sig + 14.4], [66.8, ya + 8.4], color=G2, lw=0.5)
+            ax.plot([x0 + 33.5, sig + 24.6], [66.8, ya + 8.4], color=G2, lw=0.5)
         else:
             xs = sig + rng.uniform(0.2, 1.6, 26)
             for xv in xs:
                 ax.plot([xv, xv], [ya, ya + 4], color=INK, lw=0.6)
-            for xv in sig + rng.uniform(4, 30, 3):
+            for xv in sig + rng.uniform(4, win, 3):
                 ax.plot([xv, xv], [ya, ya + 4], color=G1, lw=0.6)
             label(ax, sig + 3.5, 64.5, "agents cancel\ndelay together", fs=6.4, italic=True, ha="left")
-        # load sketch
-        yb, yr = 19, 38
+        # load sketch: the same devices start in both panels, so the final load is the same;
+        # what differs is how fast it arrives
+        yb, y0, y1, yref = 19, 22, 46, 38
         ax.plot([x0, x0], [yb, 50], color=INK, lw=0.6)
         ax.plot([x0, x0 + W], [yb, yb], color=INK, lw=0.6)
         label(ax, x0 - 2, 34, "Load", fs=6.6, rot=90)
-        ax.plot([x0, x0 + W], [yr, yr], color=INK, lw=0.7, ls=(0, (6, 2, 1.5, 2)))
         if k == 0:
-            xx = np.linspace(x0, x0 + W, 100)
-            yy = yb + 2 + np.clip((xx - sig) / 30, 0, 1) * 11
+            xx = [x0, sig, sig + win, x0 + W]
+            yy = [y0, y0, y1, y1]
             ax.plot(xx, yy, color=INK, lw=1.2)
-            label(ax, x0 + W - 0.5, yr + 3.6, "Reference incident: 3,000 MW\n(continental Europe)", fs=6.4, ha="right")
-            label(ax, sig + 17, 22.6, "Load rises gradually", fs=6.6, italic=True, ha="left")
+            label(ax, sig + 12.5, 28.5, "Same total load arrives\ngradually over 10 min", fs=6.4, italic=True,
+                  ha="left")
         else:
-            xx = [x0, sig, sig + 1.2, x0 + W]
-            yy = [yb + 2, yb + 2, 46, 46]
+            xx = [x0, sig, sig + 1.2, sig + win, x0 + W]
+            yy = [y0, y0, y1 - 2.5, y1, y1]
             ax.plot(xx, yy, color=INK, lw=1.2)
-            label(ax, sig + 3, yr - 3.8, "Reference incident: 3,000 MW\n(continental Europe)", fs=6.4, ha="left")
             label(ax, sig + 3, 48.6, "Load step", fs=6.6, italic=True, ha="left")
+            # dimension arrow: size of the reference incident, measured from the starting load
+            xr = sig + 18
+            ax.plot([sig + 1.5, xr + 2], [y0, y0], color=G2, lw=0.5, ls=(0, (1.5, 1.5)))
+            ax.plot([xr - 2, xr + 2], [yref, yref], color=INK, lw=0.7)
+            ax.add_patch(F.FancyArrowPatch((xr, y0), (xr, yref), arrowstyle="<|-|>", mutation_scale=5,
+                                           lw=0.6, color=INK, shrinkA=0, shrinkB=0))
+            label(ax, xr + 1.5, (y0 + yref) / 2, "Reference incident:\n3,000 MW\n(continental Europe)", fs=6.4,
+                  ha="left")
     box(ax, 12, 7.5, 76, 5, "Random delay up to 600 s by default; owner may cancel (UK SI 2021/1467, reg. 11)",
         fill=G4, fs=6.4, style="square,pad=0.6")
     label(ax, 50, 1.5, "Schematic, not to scale. Hypothetical mechanism, not a recorded event.", fs=6.4,
