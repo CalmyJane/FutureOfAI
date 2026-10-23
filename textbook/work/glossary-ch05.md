@@ -1,5 +1,8 @@
 # Glossary: Chapter 5
 
+**AI agent**: A system in which a language model pursues a goal by choosing actions, carrying them out through tools, observing the results and repeating, with some form of memory between steps.
+**workflow (agentic)**: A system in which language models and tools are combined along fixed, programmer-defined steps, as opposed to an agent that chooses its own steps.
+**ReAct**: An agent design in which a language model alternates written reasoning (thoughts), tool calls (actions) and the returned results (observations).
 **tool use**: The ability of a language model to request that external software (such as a search engine, calculator or code interpreter) be run and to use the result in its answer.
 **function calling**: A feature of model interfaces in which developers describe available functions and the model replies with a structured request naming a function and its arguments; the surrounding application decides whether to execute it.
 **Model Context Protocol (MCP)**: An open standard, released by Anthropic in 2024 and now governed under the Linux Foundation, that lets AI applications (clients) connect to data sources and tools (servers) through one common interface.
@@ -14,3 +17,13 @@
 **multi-agent system**: A system in which several AI agents, with the same or different owners, interact by exchanging messages, tasks or transactions.
 **collusion (between agents)**: Cooperation among AI agents that their owners or society did not intend and that harms others, one of three multi-agent failure types identified by Hammond and colleagues (with miscoordination and conflict).
 **permeability (of agent economies)**: The degree to which value and effects flow between an economy of transacting AI agents and the wider human economy; Tomašev and colleagues treat it as a key design choice.
+**plan-then-execute**: An agent design in which the full list of actions is fixed from the user's request before any external data is read, so that retrieved content cannot change which actions run.
+**context engineering**: The practice of deciding which information enters a model's limited context window at each step, using techniques such as compaction (summarising a long transcript), structured notes kept outside the window and sub-agents.
+**JSON-RPC**: A widely used format for remote procedure calls, in which requests and responses are JSON objects naming a method, its parameters and an identifier; MCP and A2A use it.
+**Agent Card**: In the A2A protocol, a machine-readable JSON document published at a fixed web address that describes an agent's identity, endpoint, authentication requirements and skills.
+**OSWorld**: A benchmark of 369 tasks in real operating systems used to measure computer-use agents; OSWorld-Verified is a corrected edition released in 2025.
+**pass@k**: The probability that at least one of k attempts at a task succeeds; it suits settings where a test or a person can pick out the successful attempt.
+**τ-bench**: A benchmark of simulated customer-service conversations (retail, airline and, in τ²-bench, telecom and banking) in which an agent must use tools and follow a written policy; it introduced the pass^k measure.
+**adaptive attack**: An attack on a security defence that is deliberately tailored to the defence's design, as opposed to a fixed set of previously known attack inputs.
+**mandate (AP2)**: In the Agent Payments Protocol, a cryptographically signed record of what a user authorised, such as the conditions for a purchase or a specific cart and price.
+**x402**: An open protocol that uses the HTTP status code 402 "Payment Required" to let a client, including an AI agent, pay for a web resource within the same request.
