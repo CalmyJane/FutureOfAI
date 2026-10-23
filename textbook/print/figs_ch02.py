@@ -91,7 +91,7 @@ def f0203():
     ax.set_yticklabels(["0", "1", "2", "3"], fontsize=7)
     ax.set_xlabel("Weight $w$", fontsize=8, labelpad=2)
     ax.set_ylabel("Loss", fontsize=8, labelpad=2)
-    zx, zy = (0.15, 0.53), (-0.03, 0.5)
+    zx, zy = (0.15, 0.53), (-0.06, 0.5)
     ax.add_patch(plt.Rectangle((zx[0], zy[0]), zx[1] - zx[0], zy[1] - zy[0], fill=False, ec=G2, lw=0.6, ls=":"))
     ax.plot([0.2], [L(0.2)], "o", color=INK, ms=3.6, zorder=4)
     ax.plot([0.5], [0], "o", mfc="white", mec=INK, ms=4, zorder=4)
@@ -101,7 +101,7 @@ def f0203():
                                 shrinkA=3, shrinkB=3, connectionstyle="arc3,rad=-0.3"))
     ax.text(0.68, 2.85, "learning rate 0.5:\novershoots", fontsize=6.8, color=G1, ha="center", va="center")
     ax.text(1.5, 3.2, "$w$ = 1.4\nloss 3.24", fontsize=6.6, ha="left", va="center")
-    ax.text(0.17, 0.62, "start", fontsize=6.6, ha="right", va="bottom")
+    ax.text(0.14, 0.12, "start", fontsize=6.6, ha="right", va="bottom")
     ax.text(0.5, -0.1, "minimum", fontsize=6.6, ha="center", va="top", color=G1)
     ax.text(0.34, 0.56, "close-up →", fontsize=6.2, ha="left", va="bottom", color=G1)
     # close-up panel: learning rate 0.1
@@ -119,14 +119,14 @@ def f0203():
         if b - a > 0.02:
             az.annotate("", xy=(b, L(b)), xytext=(a, L(a)),
                         arrowprops=dict(arrowstyle="-|>", color=INK, lw=0.9, mutation_scale=7, shrinkA=2,
-                                        shrinkB=2, connectionstyle="arc3,rad=0.25"))
+                                        shrinkB=2, connectionstyle="arc3,rad=-0.25"))
     for v in path_a:
         az.plot([v], [L(v)], "o", color=INK, ms=2.6 if v > 0.2 else 3.6, zorder=4)
     tx = np.array([0.168, 0.24])
     az.plot(tx, L(0.2) - 2.4 * (tx - 0.2), color=G2, lw=0.8)
     az.annotate("slope = gradient\n= −2.4", xy=(0.226, L(0.2) - 2.4 * 0.026), xytext=(0.16, 0.1), fontsize=6.4,
                 color=G1, ha="left", va="center", arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkB=1))
-    az.text(0.445, 0.035, "0.44", fontsize=6.4, ha="right", va="bottom")
+    az.text(0.44, -0.012, "0.44", fontsize=6.4, ha="right", va="top")
     az.annotate("0.488, then 0.4976", xy=(0.492, 0.004), xytext=(0.455, 0.2), fontsize=6.4, ha="center",
                 arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2))
     az.text(0.525, 0.485, "learning rate 0.1:\neach step closes\n80% of the gap", fontsize=6.6,
@@ -203,7 +203,7 @@ def f0205():
     assert pout.tolist() == [[4, 2], [2, 5]]
 
     s = 4.4  # cell size
-    fig, ax = canvas(3.4, ylim=(0, 76))
+    fig, ax = canvas(3.58, ylim=(-4, 76))
 
     def grid(x0, ytop, a, fills, fmt=str, fs=7.5, colors=None, bold=None):
         n_r, n_c = a.shape
@@ -244,12 +244,12 @@ def f0205():
     # (b) the highlighted window, carried to its output cell
     arrow(ax, xi + 2.5 * s, top + 0.4, xm + 1.5 * s, top + 0.4, lw=0.8, color=G1, ms=7, rad=-0.22)
     label(ax, 46, 70.6, "multiply and add", fs=6.5, color=G1, italic=True)
-    label(ax, 1, 29.5, "(b)", fs=8.2, weight="bold", ha="left")
-    label(ax, 8, 29.5, "Highlighted window, column by column:  (−1) × 0 × 3 rows  +  0 × 0 × 3 rows  "
+    label(ax, 1, 27.8, "(b)", fs=8.2, weight="bold", ha="left")
+    label(ax, 8, 27.8, "Highlighted window, column by column:  (−1) × 0 × 3 rows  +  0 × 0 × 3 rows  "
           "+  (+1) × 1 × 3 rows  =  3", fs=7.0, ha="left")
     # (d) max pooling
-    yp = 24
-    label(ax, 1, 26.5, "(d)", fs=8.2, weight="bold", ha="left")
+    yp = 21
+    label(ax, 1, 21.5, "(d)", fs=8.2, weight="bold", ha="left")
     xp = 9
     blockfill = {(0, 0): "white", (0, 1): G4, (1, 0): G4, (1, 1): "white"}
     for r in range(4):
@@ -271,7 +271,7 @@ def f0205():
             ax.text(x + s / 2, y + s / 2, str(pout[r, c]), ha="center", va="center", fontsize=7.5, weight="bold")
     label(ax, xo + 2 * s + 4, yp - 2 * s, "2 × 2 max pooling:\nkeep the largest value\nin each block "
           "(4 × 4 → 2 × 2)", fs=7, ha="left")
-    label(ax, 50, 2, "9 weights + 1 bias, reused at every position (a fully connected layer from "
+    label(ax, 50, -1.5, "9 weights + 1 bias, reused at every position (a fully connected layer from "
           "25 pixels to 9 outputs would need 225 weights)", fs=6.3, color=G1, italic=True)
     save(fig, "fig-02-05")
 
