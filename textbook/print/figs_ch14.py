@@ -167,6 +167,7 @@ def f1404():
                 ax.plot([xv, xv], [ya, ya + 7], color=INK, lw=1.0)
                 ax.plot([xv], [ya + 7.6], "o", ms=2.2, mfc="white", mec=INK, mew=0.7)
             label(ax, x0 + 30, 68.5, "owner override", fs=6.4, italic=True)
+            ax.plot([x0 + 22.5, sig + 3.4], [68.5, ya + 8.4], color=G2, lw=0.5)
             ax.plot([x0 + 26.5, sig + 14.4], [66.8, ya + 8.4], color=G2, lw=0.5)
             ax.plot([x0 + 33.5, sig + 24.6], [66.8, ya + 8.4], color=G2, lw=0.5)
         else:
