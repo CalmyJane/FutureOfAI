@@ -37,7 +37,7 @@ def f0801():
     wx0, wx1 = x0, x0 + 4 * (bw + gap) + bw
     wy = 6.5
     ax.fill([wx0, wx1, wx1, wx0], [wy + 3.6, wy + 0.25, wy - 0.25, wy - 3.6], color=G3, ec=G1, lw=0.5)
-    label(ax, wx0 + 1.5, wy, "Amount of causal evidence", fs=6.8, ha="left", va="center")
+    label(ax, wx0 + 1.5, wy, "Amount of evidence", fs=6.8, ha="left", va="center")
     label(ax, wx1, wy - 3.0, "less →", fs=6.3, ha="right", va="top", italic=True, color=G1)
     label(ax, wx0, wy - 3.9, "more", fs=6.3, ha="left", va="top", italic=True, color=G1)
     save(fig, "fig-08-01")
@@ -45,26 +45,31 @@ def f0801():
 
 @fig("fig-08-02")
 def f0802():
-    fig = F.figure(3.6)
+    H = 3.9
+    fig = F.figure(H)
     L, W = 0.42, 0.555
     # Panel A
     A = [
         ("Noy & Zhang", "RCT; n=453; 2023", -40, None, True),
         ("Peng et al.", "RCT; n=95; 2022", -55.8, (-89, -21), True),
-        ("Dell'Acqua et al.", "RCT; n=758; 2023", -25.1, None, True),
+        ("Dell'Acqua et al., inside frontier", "RCT; n=758; 2023", -25.1, None, True),
         ("METR early 2025", "RCT; n=16; 2025", 19, (2, 39), True),
-        ("METR late 2025, returning devs", "RCT; n=10; 2025", -18, (-38, 9), True),
-        ("METR late 2025, new devs", "RCT; n=47; 2025", -4, (-15, 9), True),
+        ("METR late 2025, returning devs", "RCT; n=10; from Aug 2025", -18, (-38, 9), True),
+        ("METR late 2025, new devs", "RCT; n=47; from Aug 2025", -4, (-15, 9), True),
     ]
     B = [
         ("Brynjolfsson et al.", "quasi-exp.; n=5,172; 2020–21", 15, None, False),
-        ("Dell'Acqua et al.", "RCT; n=758; 2023", 12.2, None, True),
-        ("Cui et al.", "3 field RCTs; n=4,867", 26.08, (5.9, 46.3), True),
+        ("Dell'Acqua et al., inside frontier", "RCT; n=758; 2023", 12.2, None, True),
+        ("Cui et al.", "3 field RCTs; n=4,867; 2022–23", 26.08, (5.9, 46.3), True),
     ]
-    rowh = 0.06
-    axA = fig.add_axes([L, 0.935 - rowh * len(A), W, rowh * len(A)])
-    yb = 0.215
-    axB = fig.add_axes([L, yb, W, rowh * len(B)])
+    # layout in inches, converted to figure fractions
+    rowh = 0.245
+    yb = 0.80                                   # bottom of panel B axes
+    btop = yb + rowh * len(B)
+    btitle = btop + 0.12                        # top of the "B" panel title
+    abot = btitle + 0.52                        # room for panel A ticks and axis label
+    axA = fig.add_axes([L, abot / H, W, rowh * len(A) / H])
+    axB = fig.add_axes([L, yb / H, W, rowh * len(B) / H])
 
     def panel(ax, rows, xlim, ticks, xlabel):
         n = len(rows)
@@ -75,8 +80,8 @@ def f0802():
                 for c in ci:
                     ax.plot([c, c], [y - 0.13, y + 0.13], color=INK, lw=0.9)
             ax.plot([est], [y], marker="o", ms=4.6, mfc=INK if rct else "white", mec=INK, mew=0.9, zorder=3)
-            ax.text(xlim[0] - (xlim[1] - xlim[0]) * 0.03, y + 0.15, name, ha="right", va="center", fontsize=7.2)
-            ax.text(xlim[0] - (xlim[1] - xlim[0]) * 0.03, y - 0.24, f"({meta})", ha="right", va="center",
+            ax.text(xlim[0] - (xlim[1] - xlim[0]) * 0.03, y + 0.21, name, ha="right", va="center", fontsize=7.2)
+            ax.text(xlim[0] - (xlim[1] - xlim[0]) * 0.03, y - 0.25, f"({meta})", ha="right", va="center",
                     fontsize=6.1, color=G1)
         ax.axvline(0, color=G2, lw=0.7)
         ax.set_xlim(*xlim)
@@ -92,11 +97,11 @@ def f0802():
 
     panel(axA, A, (-100, 50), [-100, -75, -50, -25, 0, 25, 50], "Change in time to complete task (%)")
     tr = axA.get_xaxis_transform()
-    axA.text(-100, -0.255, "← faster", ha="left", va="center", fontsize=6.3, style="italic", color=G1, transform=tr)
-    axA.text(50, -0.255, "slower →", ha="right", va="center", fontsize=6.3, style="italic", color=G1, transform=tr)
+    axA.text(-100, -0.33 / (rowh * len(A)), "← faster", ha="left", va="center", fontsize=6.3, style="italic", color=G1, transform=tr)
+    axA.text(50, -0.33 / (rowh * len(A)), "slower →", ha="right", va="center", fontsize=6.3, style="italic", color=G1, transform=tr)
     panel(axB, B, (-10, 50), [-10, 0, 10, 20, 30, 40, 50], "Change in output (%)")
-    fig.text(0.01, 0.985, "A  Time per task", fontsize=8.2, weight="bold", va="top")
-    fig.text(0.01, 0.43, "B  Output", fontsize=8.2, weight="bold", va="top")
+    fig.text(0.01, 1 - 0.054 / H, "A  Time per task", fontsize=8.2, weight="bold", va="top")
+    fig.text(0.01, btitle / H, "B  Output", fontsize=8.2, weight="bold", va="top")
     from matplotlib.lines import Line2D
     fig.legend(handles=[Line2D([], [], ls="", marker="o", ms=4.6, mfc=INK, mec=INK, label="randomised"),
                         Line2D([], [], ls="", marker="o", ms=4.6, mfc="white", mec=INK, label="quasi-experimental")],
