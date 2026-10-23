@@ -38,7 +38,7 @@ def f0801():
     wy = 6.5
     ax.fill([wx0, wx1, wx1, wx0], [wy + 3.6, wy + 0.25, wy - 0.25, wy - 3.6], color=G3, ec=G1, lw=0.5)
     label(ax, wx0 + 1.5, wy, "Amount of evidence", fs=6.8, ha="left", va="center")
-    label(ax, wx1, wy - 3.0, "less →", fs=6.3, ha="right", va="top", italic=True, color=G1)
+    label(ax, wx1, wy - 3.9, "less →", fs=6.3, ha="right", va="top", italic=True, color=G1)
     label(ax, wx0, wy - 3.9, "more", fs=6.3, ha="left", va="top", italic=True, color=G1)
     save(fig, "fig-08-01")
 

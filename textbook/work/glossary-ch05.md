@@ -20,7 +20,7 @@
 **plan-then-execute**: An agent design in which the full list of actions is fixed from the user's request before any external data is read, so that retrieved content cannot change which actions run.
 **context engineering**: The practice of deciding which information enters a model's limited context window at each step, using techniques such as compaction (summarising a long transcript), structured notes kept outside the window and sub-agents.
 **JSON-RPC**: A widely used format for remote procedure calls, in which requests and responses are JSON objects naming a method, its parameters and an identifier; MCP and A2A use it.
-**Agent Card**: In the A2A protocol, a machine-readable JSON document published at a fixed web address that describes an agent's identity, endpoint, authentication requirements and skills.
+**Agent Card**: In the A2A protocol, a machine-readable JSON document, typically published at a standard web address, that describes an agent's identity, endpoint, authentication requirements and skills.
 **OSWorld**: A benchmark of 369 tasks in real operating systems used to measure computer-use agents; OSWorld-Verified is a corrected edition released in 2025.
 **pass@k**: The probability that at least one of k attempts at a task succeeds; it suits settings where a test or a person can pick out the successful attempt.
 **τ-bench**: A benchmark of simulated customer-service conversations (retail, airline and, in τ²-bench, telecom and banking) in which an agent must use tools and follow a written policy; it introduced the pass^k measure.

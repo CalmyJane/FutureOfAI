@@ -40,7 +40,7 @@ def f1001():
     ax.set_ylabel("Change vs control group (%)", fontsize=7.5)
     ax.legend(loc="upper right", fontsize=7.5, handlelength=1.4, handleheight=0.9)
     ax.set_title("A. Turkey, high-school mathematics (randomised trial)", fontsize=8.5, loc="left", x=-0.12, pad=6)
-    fig.text(0.14, 0.485, "Nearly 1,000 students, grades 9–11, fall 2023; classes randomised.",
+    fig.text(0.14, 0.485, "Nearly 1,000 students, grades 9–11, fall 2023; classes assigned to arms, students randomly assigned to classes.",
              fontsize=6.8, style="italic", color=G1)
 
     # Panel B: effect sizes in two other RCTs

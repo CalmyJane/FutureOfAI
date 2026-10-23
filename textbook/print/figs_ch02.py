@@ -80,32 +80,32 @@ def f0203():
 
     fig = F.figure(2.55)
     # main panel: whole curve, overshoot path
-    ax = fig.add_axes([0.085, 0.15, 0.5, 0.8])
+    ax = fig.add_axes([0.085, 0.15, 0.47, 0.8])
     w = np.linspace(-0.05, 1.5, 300)
     ax.plot(w, L(w), color=INK, lw=1.2)
-    ax.set_xlim(-0.05, 1.55)
-    ax.set_ylim(-0.12, 3.75)
+    ax.set_xlim(-0.05, 1.85)
+    ax.set_ylim(-0.4, 3.75)
     ax.set_xticks([0, 0.2, 0.5, 1, 1.4])
     ax.set_xticklabels(["0", "0.2", "0.5", "1", "1.4"], fontsize=7)
     ax.set_yticks([0, 1, 2, 3])
     ax.set_yticklabels(["0", "1", "2", "3"], fontsize=7)
     ax.set_xlabel("Weight $w$", fontsize=8, labelpad=2)
     ax.set_ylabel("Loss", fontsize=8, labelpad=2)
+    zx, zy = (0.15, 0.53), (-0.03, 0.5)
+    ax.add_patch(plt.Rectangle((zx[0], zy[0]), zx[1] - zx[0], zy[1] - zy[0], fill=False, ec=G2, lw=0.6, ls=":"))
     ax.plot([0.2], [L(0.2)], "o", color=INK, ms=3.6, zorder=4)
     ax.plot([0.5], [0], "o", mfc="white", mec=INK, ms=4, zorder=4)
     ax.plot([w_b], [L(w_b)], "o", mfc=G2, mec=G1, ms=3.6, zorder=4)
     ax.annotate("", xy=(w_b, L(w_b)), xytext=(0.2, L(0.2)),
                 arrowprops=dict(arrowstyle="-|>", color=G1, lw=0.9, ls=(0, (3, 2)), mutation_scale=8,
                                 shrinkA=3, shrinkB=3, connectionstyle="arc3,rad=-0.3"))
-    ax.text(0.62, 2.95, "learning rate 0.5:\novershoots", fontsize=6.8, color=G1, ha="center", va="center")
-    ax.text(1.34, 3.24, "$w$ = 1.4\nloss 3.24", fontsize=6.6, ha="right", va="center")
-    ax.text(0.23, 0.55, "start\n$w$ = 0.2, loss 0.36", fontsize=6.6, ha="left", va="bottom")
-    ax.text(0.5, -0.06, "minimum", fontsize=6.6, ha="center", va="top", color=G1)
-    # zoom frame
-    zx, zy = (0.15, 0.53), (-0.03, 0.42)
-    ax.add_patch(plt.Rectangle((zx[0], zy[0]), zx[1] - zx[0], zy[1] - zy[0], fill=False, ec=G2, lw=0.6, ls=":"))
+    ax.text(0.68, 2.85, "learning rate 0.5:\novershoots", fontsize=6.8, color=G1, ha="center", va="center")
+    ax.text(1.5, 3.2, "$w$ = 1.4\nloss 3.24", fontsize=6.6, ha="left", va="center")
+    ax.text(0.17, 0.62, "start", fontsize=6.6, ha="right", va="bottom")
+    ax.text(0.5, -0.1, "minimum", fontsize=6.6, ha="center", va="top", color=G1)
+    ax.text(0.34, 0.56, "close-up →", fontsize=6.2, ha="left", va="bottom", color=G1)
     # close-up panel: learning rate 0.1
-    az = fig.add_axes([0.68, 0.15, 0.3, 0.8])
+    az = fig.add_axes([0.65, 0.15, 0.34, 0.8])
     wz = np.linspace(zx[0], zx[1], 200)
     az.plot(wz, L(wz), color=INK, lw=1.2)
     az.set_xlim(*zx)
@@ -118,17 +118,19 @@ def f0203():
     for a, b in zip(path_a, path_a[1:]):
         if b - a > 0.02:
             az.annotate("", xy=(b, L(b)), xytext=(a, L(a)),
-                        arrowprops=dict(arrowstyle="-|>", color=INK, lw=0.9, mutation_scale=7, shrinkA=2, shrinkB=2))
+                        arrowprops=dict(arrowstyle="-|>", color=INK, lw=0.9, mutation_scale=7, shrinkA=2,
+                                        shrinkB=2, connectionstyle="arc3,rad=0.25"))
     for v in path_a:
         az.plot([v], [L(v)], "o", color=INK, ms=2.6 if v > 0.2 else 3.6, zorder=4)
-    tx = np.array([0.16, 0.25])
+    tx = np.array([0.168, 0.24])
     az.plot(tx, L(0.2) - 2.4 * (tx - 0.2), color=G2, lw=0.8)
-    az.text(0.255, 0.355, "slope = gradient\n= −2.4", fontsize=6.4, color=G1, ha="left", va="top")
-    az.text(0.445, 0.07, "0.44", fontsize=6.4, ha="right", va="bottom")
-    az.annotate("0.488, then 0.4976", xy=(0.49, 0.003), xytext=(0.43, 0.17), fontsize=6.4, ha="center",
+    az.annotate("slope = gradient\n= −2.4", xy=(0.226, L(0.2) - 2.4 * 0.026), xytext=(0.16, 0.1), fontsize=6.4,
+                color=G1, ha="left", va="center", arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkB=1))
+    az.text(0.445, 0.035, "0.44", fontsize=6.4, ha="right", va="bottom")
+    az.annotate("0.488, then 0.4976", xy=(0.492, 0.004), xytext=(0.455, 0.2), fontsize=6.4, ha="center",
                 arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2))
-    az.text(0.34, 0.39, "learning rate 0.1:\neach step closes 80%\nof the gap", fontsize=6.6,
-            ha="center", va="top")
+    az.text(0.525, 0.485, "learning rate 0.1:\neach step closes\n80% of the gap", fontsize=6.6,
+            ha="right", va="top")
     F.save(fig, "fig-02-03")
 
 
@@ -201,7 +203,7 @@ def f0205():
     assert pout.tolist() == [[4, 2], [2, 5]]
 
     s = 4.4  # cell size
-    fig, ax = canvas(3.25, ylim=(0, 72))
+    fig, ax = canvas(3.4, ylim=(0, 76))
 
     def grid(x0, ytop, a, fills, fmt=str, fs=7.5, colors=None, bold=None):
         n_r, n_c = a.shape
@@ -217,33 +219,34 @@ def f0205():
     def kfmt(v):
         return "+1" if v > 0 else ("−1" if v < 0 else "0")
 
-    top = 58
+    top = 60
+    yt = top - 5 * s - 2.6   # titles below the grids
     # (a) image
     xi = 3
-    label(ax, 1, 70, "(a)", fs=8.2, weight="bold", ha="left")
-    label(ax, xi + 2.5 * s, 62, "Image (5 × 5)", fs=7.5)
+    label(ax, 1, 73, "(a)", fs=8.2, weight="bold", ha="left")
+    label(ax, xi + 2.5 * s, yt, "Image (5 × 5)", fs=7.5)
     grid(xi, top, img, lambda v: G1 if v == 0 else "white", colors=lambda v: "white" if v == 0 else INK)
     # highlighted window: rows 1-3, columns 2-4
     ax.add_patch(plt.Rectangle((xi + s, top - 3 * s), 3 * s, 3 * s, fill=False, ec=INK, lw=2.0, zorder=5))
     # kernel
     xk = 36
-    label(ax, 30.5, top - 2.5 * s, "∗", fs=12)
-    label(ax, xk + 1.5 * s, 62, "Kernel (3 × 3):\nvertical-edge detector", fs=7.2)
+    label(ax, 30.5, top - 2.5 * s, "$\\ast$", fs=12)
+    label(ax, xk + 1.5 * s, yt - 1.2, "Kernel (3 × 3):\nvertical-edge detector", fs=7.2)
     grid(xk, top - s, ker, lambda v: "white", fmt=kfmt)
     # (c) feature map
     xm = 75
     label(ax, 61, top - 2.5 * s, "=", fs=11)
-    label(ax, 67.5, 70, "(c)", fs=8.2, weight="bold", ha="left")
-    label(ax, xm + 1.5 * s, 62, "Feature map (3 × 3)", fs=7.5)
-    grid(xm, top - s, fmap, lambda v: G3 if v else "white")
-    ax.add_patch(plt.Rectangle((xm + s, top - 2 * s), s, s, fill=False, ec=INK, lw=2.0, zorder=5))
-    label(ax, xm + 1.5 * s, top - 4 * s - 2.6, "5 − 3 + 1 = 3 positions\nper row and column", fs=6.3, color=G1)
-    # (b) the highlighted calculation
-    label(ax, 1, 31.5, "(b)", fs=8.2, weight="bold", ha="left")
-    label(ax, 8, 31.5, "Highlighted window, column by column:  (−1) × 0 × 3 rows  +  0 × 0 × 3 rows  "
+    label(ax, 92, 73, "(c)", fs=8.2, weight="bold", ha="left")
+    grid(xm, top, fmap, lambda v: G3 if v else "white")
+    ax.add_patch(plt.Rectangle((xm + s, top - s), s, s, fill=False, ec=INK, lw=2.0, zorder=5))
+    label(ax, xm + 1.5 * s, top - 3 * s - 3.0, "Feature map (3 × 3)", fs=7.5)
+    label(ax, xm + 1.5 * s, yt - 1.2, "5 − 3 + 1 = 3 positions\nper row and column", fs=6.3, color=G1)
+    # (b) the highlighted window, carried to its output cell
+    arrow(ax, xi + 2.5 * s, top + 0.4, xm + 1.5 * s, top + 0.4, lw=0.8, color=G1, ms=7, rad=-0.22)
+    label(ax, 46, 70.6, "multiply and add", fs=6.5, color=G1, italic=True)
+    label(ax, 1, 29.5, "(b)", fs=8.2, weight="bold", ha="left")
+    label(ax, 8, 29.5, "Highlighted window, column by column:  (−1) × 0 × 3 rows  +  0 × 0 × 3 rows  "
           "+  (+1) × 1 × 3 rows  =  3", fs=7.0, ha="left")
-    arrow(ax, xi + 2.5 * s, top - 3 * s - 0.4, xi + 2.5 * s, 34, lw=0.7, color=G1, ms=6)
-    arrow(ax, 93.5, 34, xm + 1.5 * s, top - 2 * s - 0.4, lw=0.7, color=G1, ms=6, rad=0.35)
     # (d) max pooling
     yp = 24
     label(ax, 1, 26.5, "(d)", fs=8.2, weight="bold", ha="left")
