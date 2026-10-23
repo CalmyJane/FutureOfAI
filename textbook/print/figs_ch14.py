@@ -10,33 +10,39 @@ from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, 
 
 @fig("fig-14-01")
 def f1401():
-    fig = F.figure(2.3)
-    ax = fig.add_axes([0.25, 0.30, 0.72, 0.56])
+    # dot plot: a bar from an arbitrary start year would give bar length no meaning
+    fig = F.figure(2.1)
+    ax = fig.add_axes([0.25, 0.33, 0.72, 0.55])
     groups = ["High-level machine\nintelligence (HLMI)", "Full automation\nof labour (FAOL)"]
-    v22 = [2060, 2164]
-    v23 = [2047, 2116]
+    v22, n22 = [2060, 2164], [461, 202]
+    v23, n23 = [2047, 2116], [1714, 774]
     y = np.array([1.0, 0.0])
-    h = 0.32
-    left = 2020
-    ax.barh(y + h / 2 + 0.01, [v - left for v in v22], h, left=left, color=G3, edgecolor=INK, lw=0.5,
-            label="2022 survey (738 respondents)")
-    ax.barh(y - h / 2 - 0.01, [v - left for v in v23], h, left=left, color=G1, edgecolor=INK, lw=0.5,
-            label="2023 survey (2,778 respondents)")
-    for yi, a, b in zip(y, v22, v23):
-        ax.text(a + 2, yi + h / 2 + 0.01, str(a), va="center", fontsize=7.5)
-        ax.text(b + 2, yi - h / 2 - 0.01, str(b), va="center", fontsize=7.5)
-    ax.axvline(2026, color=INK, lw=0.7, ls=(0, (3, 2)), ymin=0, ymax=1)
-    ax.text(2026, 1.62, "today", ha="center", va="bottom", fontsize=7, style="italic")
+    ax.axvline(2026, color=G2, lw=0.6, ls=(0, (3, 2)), zorder=1)
+    ax.text(2026, 1.5, "today", ha="center", va="bottom", fontsize=7, style="italic")
+    for yi, a, na, b_, nb in zip(y, v22, n22, v23, n23):
+        ax.plot([b_, a], [yi, yi], color=G2, lw=1.0, zorder=2)
+        ax.plot([a], [yi], "o", ms=5.5, mfc="white", mec=INK, mew=0.9, zorder=3)
+        ax.plot([b_], [yi], "o", ms=5.5, mfc=INK, mec=INK, mew=0.9, zorder=3)
+        # 2023 (earlier year) labelled to its left edge, 2022 to its right edge, so labels never collide
+        ax.text(a - 2.5, yi + 0.17, str(a), ha="left", va="bottom", fontsize=7.5)
+        ax.text(b_ + 2.5, yi + 0.17, str(b_), ha="right", va="bottom", fontsize=7.5)
+        ax.text(a - 2.5, yi - 0.17, f"n = {na}", ha="left", va="top", fontsize=6.2, color=G1)
+        ax.text(b_ + 2.5, yi - 0.17, f"n = {nb:,}", ha="right", va="top", fontsize=6.2, color=G1)
     ax.set_xlim(2020, 2180)
-    ax.set_ylim(-0.55, 1.6)
+    ax.set_ylim(-0.55, 1.5)
     ax.set_xticks(range(2020, 2181, 20))
     ax.tick_params(axis="x", labelsize=7.5)
     ax.set_yticks(y)
     ax.set_yticklabels(groups, fontsize=7.8)
     ax.tick_params(axis="y", length=0, pad=5)
+    ax.spines["left"].set_visible(False)
     ax.set_xlabel("Year at which aggregate forecast reaches 50% probability", fontsize=7.8)
-    ax.legend(loc="upper center", bbox_to_anchor=(0.38, -0.33), ncol=2, fontsize=7.2,
-              handlelength=1.3, columnspacing=1.4)
+    h = [ax.plot([], [], "o", ms=5.5, mfc="white", mec=INK, mew=0.9, ls="none")[0],
+         ax.plot([], [], "o", ms=5.5, mfc=INK, mec=INK, mew=0.9, ls="none")[0]]
+    ax.legend(h, ["2022 survey", "2023 survey"], loc="upper center", bbox_to_anchor=(0.38, -0.36), ncol=2,
+              fontsize=7.2, handletextpad=0.4, columnspacing=1.6)
+    ax.text(1.0, -0.47, "n = respondents answering the question", transform=ax.transAxes, ha="right", va="top", fontsize=6.2,
+            color=G1)
     F.save(fig, "fig-14-01")
 
 
