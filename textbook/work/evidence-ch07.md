@@ -205,3 +205,51 @@ Rewrite to the DEEPEN-GUIDE. Teaching apparatus removed (objectives, Summary, Ke
 - Cut: Mistral 7B "outperforms Llama 2 13B" company benchmark claim (length).
 - Not used (could not verify from primary source): TSMC CoWoS capacity figures; JEDEC HBM3 per-stack bandwidth (jedec.org 403); TSMC 3DFabric CoWoS description (403, Wayback empty); Stargate investment (openai.com 403); Bommasani et al. 2024 Science abstract (403); GHG Protocol dual-reporting requirement (page does not state it); H800 interconnect specification (no primary source found).
 - Tables added: 7.1 number formats; 7.2 accelerator specifications; 7.3 per-query energy estimates; 7.4 hyperscaler capex; 7.5 open-weight licences.
+
+## Fact-check 2 (2026-10-23)
+
+Independent second check of the deepened chapter (about 230 claims: every number in Tables 7.1–7.5, all worked calculations, chip specifications, export-control thresholds, filings, energy and licence claims). Sources opened this pass: NVIDIA Hopper in-depth blog (spec table), H100, HGX and DGX B200 product pages, Hopper and Blackwell press releases, Google Ironwood blog, TOP500 June 2025; DeepSeek-V3 arXiv HTML v2; arXiv API/PDF for Gholami, Jouppi 2017/2023, Micikevicius 2017/2022, Kalamkar, Kaplan, Qi, Tamirisa, Elsworth; govinfo full text of 87 FR 62186 and 88 FR 73458; Federal Register API (90 FR 4544, 90 FR 47201, 90 FR 50857, 91 FR 1684, 91 FR 43034); EDGAR full text of Nvidia FY2026 10-K, ASML 2025 20-F, TSMC 2025 20-F, Microsoft FY2026 10-K; SEC XBRL capex for Amazon, Alphabet, Meta; LBNL 2024 report PDF; Altman blog; Epoch GPT-4o energy and open-models pages; Mistral LCA post; Llama 4 LICENSE and USE_POLICY; Gemma Terms of Use; MRL-0.1; DeepSeek-V3 LICENSE-MODEL; Hugging Face API (V3, V3-0324, R1, Qwen3, gpt-oss, GLM-5, Mistral Large 2411, Gemma 3); International AI Safety Report 2026 PDF; Amodei essay; OpenReview search.
+
+### Recomputed
+- 6ND: 6 × 37e9 × 14.8e12 = 3.29e24 ≈ 3.3e24 (correct). Ridge point 989.5/3.35 = 295 FLOP/byte (correct). 70B × 2 B = 140 GB; 140 GB / 3.35 TB/s = 41.8 ms (correct). H100 TPP 1,979 × 8 = 15,832; density 15,832/814 = 19.4 (correct; 88 FR 73458 Technical Note 3 confirms TPP uses dense figures, Note 1 TPP = 2 × MacTOPS × bit length). 180K GPU-h/2,048/24 = 3.66 days (correct). Capex changes 59/80/74/87% (correct). Number formats: FP16 65,504; E4M3 448; E5M2 57,344; FP32 3.40e38 correct; BF16 = (2 − 2^−7) × 2^127 = 3.39e38 (table had 3.38e38, copied from Kalamkar's truncated value).
+- B200 derivation: HGX B200 FP16/BF16 36 PFLOPS and FP8 72 PFLOPS "Specification in Sparse. Dense is ½ sparse" → 2,250 and 4,500 TFLOPS dense per GPU (correct). Memory/bandwidth (180 GB, 8 TB/s) come from DGX B200 1,440 GB / 64 TB/s, not HGX (HGX lists 1.4 TB). DGX B200 ~14.3 kW max confirmed.
+- H100: 132 SMs, 4 tensor cores/SM = 528; 80bn transistors; 814 mm²; 5 HBM3 stacks, 10 × 512-bit; 3.35 TB/s; 1,979/3,958 TFLOPS "with sparsity"; NVLink 18 links 900 GB/s, 7× PCIe Gen5 128 GB/s; 700 W vs 400 W — all confirmed. Ironwood 4,614 TFLOPs peak (FP8), 192 GB, 7.37 TB/s, ICI 1.2 TBps bidirectional, 9,216 chips, 42.5 EF, >24× El Capitan, 2× perf/watt vs Trillium — confirmed. TPU v4 OCS <5% cost, <3% power — confirmed.
+- DeepSeek FP8: "accumulation precision of FP8 GEMM on NVIDIA H800 GPUs is limited to retaining around 14 bits" (confirmed); "relative loss error ... consistently below 0.25%" on test models trained ~1T tokens (confirmed); 1×128 / 128×128 scaling confirmed.
+- Gholami: 3.0×/2 yrs FLOPS, 1.6× DRAM bandwidth, 1.4× interconnect over 20 years (abstract) — confirmed.
+
+### Corrections (old → new)
+- Table 7.1 BF16 "3.38 × 10^38" → "3.39 × 10^38"; caption notes values computed from bit layouts.
+- DeepSeek FP8: "loss ... stayed within 0.25%" → "relative loss error of FP8-trained test models, trained on about a trillion tokens, stayed below 0.25%".
+- Table 7.2 caption: B200 derivation now states arithmetic from HGX B200, memory and bandwidth from DGX B200, calculation by the author.
+- 88 FR 73458: added that a second tier (3A090.b) catches somewhat less dense chips and that the rule counts dense performance.
+- 15% arrangement: the only source is Nvidia's FY2026 10-K ("USG officials expressed an expectation that the USG will receive 15% or more of the revenue generated from licensed sales of our products, but the USG did not publish a regulation codifying such requirement"). Text now attributes it explicitly ("According to Nvidia's annual report, US officials said ...") and says "of its products", not only H20.
+- Amodei quote: "are the only thing" was from "Well-enforced export controls are the only thing ..."; now "that, well enforced, they 'are the only thing ...'".
+- TSMC Arizona: "where operations began in 2025" → "where its first fab entered high-volume production at the end of 2024" (TSMC 20-F: "Our first facility successfully entered high volume production at the end of 2024").
+- Google narrow boundary: "Counting only the accelerators and host on highly utilised machines" → "Counting only the active accelerators, on a sample of highly utilised machines" (Elsworth et al. Table 1: Existing Approach excludes CPU & DRAM, idle machines and overhead; 0.10 Wh). Table 7.3 cell "cooling overhead" → "data-centre overhead" (PUE overhead).
+- SMR: "rose from about 25 GW at the end of 2024 to 45 GW in January 2026" → "had reached about 25 GW by the end of 2024, and a further 20 GW was announced in January 2026" (matches the IEA wording recorded in the Deepening log; avoids implying a 45 GW total at a date the source does not state).
+- Cost box cross-check: 3.3e24 over 2.788M total GPU-hours (≈330 TFLOPS) → over the 2.664M pre-training GPU-hours (9.6e9 GPU-s, ≈340 TFLOPS), since 6ND counts only pre-training.
+- Microsoft leases: added "some subject to conditions" (10-K: "with some arrangements subject to certain contractual conditions being met").
+- TAR: "A preprint by Tamirisa and colleagues" → "Tamirisa and colleagues, in a paper at ICLR 2025".
+
+### Bibliography (ch07.bib only; none of these keys is shared)
+- micikevicius2017mixed: arXiv misc → ICLR 2018 (arXiv comment "Published as a conference paper at ICLR 2018"; OpenReview r1gs9JgRZ).
+- qi2023finetuning: arXiv misc → ICLR 2024 (OpenReview hTEGyKf0dZ, "ICLR 2024 oral").
+- tamirisa2024tamper: arXiv misc → ICLR 2025 (OpenReview 4FIjRodbW6, "ICLR 2025 Poster").
+- Others unchanged; Kalamkar, FP8 formats, Lermen, Seger, Sastry, Heim, Shavit, Cottier remain arXiv/preprints (no archival venue found).
+
+### Confirmed without change (selection)
+- ASML 20-F: 48 EUV (44), 327 litho systems, €32.7bn, NXE:3800E 220 wph, EXE:5200B shipped April 2025, HVM from 2027, Zeiss sole supplier and capacity limit, licences for EUV and specific DUV immersion, China 29.1% (36.1%), NL metrology controls 15 Jan 2025, EU Nov 2025 incl. DUV immersion; EUV 13.5 nm.
+- TSMC 20-F: NT$3,809,054m (US$121,423m); HPC 58% (43% 2023); 3nm 24%, 5nm 36%; 2nm volume production 2025; top-10 78%, largest 19%, second 17%; capex US$40,895m; 2026 US$52–56bn incl. advanced packaging; CoWoS wording.
+- Nvidia 10-K: revenue $215,938m; Data Center end market $193,737m vs $47,525m FY2024; China incl. HK $19,677m vs $25,048m; US $149,617m; 22%/14% customers; H20 wording, $4.5bn charge, ~$60m; Feb 2026 H200 licence, no revenue; China discouragement; CoWoS.
+- BIS 2022: 600 Gbyte/s and bit length × TOPS ≥ 4800 (both required). Affiliates rule 90 FR 47201 (effective 29 Sep 2025); suspension 90 FR 50857 effective 10 Nov 2025, stayed until 9 Nov 2026.
+- Capex (XBRL): Amazon 82,999 → 131,819; Alphabet 52,535 → 91,447; Meta 37,256 → 69,691; Microsoft 64,551 → 115,948; leases $329.1bn FY2027–FY2033.
+- LBNL: ~60 TWh 2014–16; 176 TWh (4.4%) 2023; 325–580 TWh (6.7–12.0%) 2028; 74–132 GW at 50% utilisation; H100 nodes 74% of TDP; inference ~60% of AI server energy 2023; training 50–53% by 2028; 21.2bn L (2014), 66bn L (2023), 84%; hyperscale 60–124bn L 2028.
+- Per query: Google 0.24 Wh (0.14/0.06/0.02/0.02), 0.10 Wh narrow, 33×, 44×, 0.26 mL, 2024 LB 345 vs MB 94 gCO2e/kWh; Altman 0.34 Wh; Epoch 0.3 Wh, 500 tokens, 100B active, 1,500 W, 70%, 10%, 0.1–4 Wh range, 2.5 Wh/10k, ~40 Wh/100k, de Vries 2,000 output tokens/A100/max power; Mistral 20.4 kt, 281,000 m³, 1.14 g, 45 mL, upstream manufacturing included, Carbone 4 and ADEME.
+- Epoch open-closed lag 5–22 months (90% CI), "about one year", compute lag ~15 months. IASR: "less than one year ahead", first OpenAI open weights since GPT-2 (2019), data filtering "10 times more effectively", BLOOM/GPT-NeoX table row, "hundreds of millions of dollars to develop".
+- Licences: Llama 4 (effective 5 Apr 2025; 700M MAU on release date; "Built with Llama"; AUP EU multimodal restriction, end users excepted); Gemma §3.1/§3.2 (last modified 1 Apr 2026; page now points Gemma 4 to a separate licence, so the Gemma 3 row stands); MRL §3.2 research only; DeepSeek-V3 model licence with use-based restrictions; V3-0324, R1, GLM-5 MIT; Qwen3 and gpt-oss Apache 2.0; GLM-5 744B/40B.
+- Figure specs fig-07-01..04: consistent with the text after these corrections; no data, label or caption changes needed.
+
+### Remaining uncertainties
+- iea.org and the IEA PDF returned 403 and the Wayback Machine refused connections this pass, so IEA claims (Alberta, HBM/packaging, memory prices, helium, transformer and turbine lead times, SMR, PUE, Annex tables) rest on the earlier full-PDF readings recorded above, not on a fresh reading.
+- AI Index 2026 figures not re-opened this pass (verified from the full PDF in the first fact-check).
+- The 15% revenue expectation is reported only by Nvidia (a company filing describing officials' statements); no Federal Register or BIS document codifies it.

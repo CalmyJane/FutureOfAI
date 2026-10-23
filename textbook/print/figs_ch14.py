@@ -53,16 +53,15 @@ def f1402():
     t = np.linspace(0, 10, 300)
     yr = 2026 + t
 
-    def sig(x):
-        return 1 / (1 + np.exp(-x))
-    # fast acceleration: bends sharply upward around 2027-2029, then keeps rising
-    fast = 1 + 0.45 * t + 5.0 * (sig((t - 2.4) / 0.55) - sig(-2.4 / 0.55))
-    U = fast + 0.13 * t + 0.012 * t ** 2
+    # fast acceleration: bends sharply upward from about 2028 and leaves the chart (schematic)
+    fast = 1 + 0.45 * t + 0.35 * (np.exp(t / 1.9) - 1)
+    U = fast + 0.15 * t + 0.03 * t ** 2
     L = 1 + 0.06 * t
     ax.fill_between(yr, L, U, color=G4, lw=0)
     ax.fill_between(yr, 1 + 0.3 * t, 1 + 0.62 * t, color=G3, lw=0, alpha=0.7)
+    ax.plot(yr, fast, color=INK, lw=1.1, ls="-")
+    ax.text(2031.75, 11.4, "Fast acceleration\n(e.g. AI 2027)", fontsize=7, va="center", ha="right", linespacing=1.1)
     paths = [
-        (fast, "-", "Fast acceleration\n(e.g. AI 2027)"),
         (1 + 0.45 * t, (0, (5, 2)), "Trend continues"),
         (1 + 0.3 * t, (0, (1.2, 1.5)), "Normal technology:\nslow diffusion"),
         (1 + 1.3 * (1 - np.exp(-t / 2)), (0, (5, 1.5, 1.2, 1.5)), "Plateau: power\nor data limits"),
@@ -72,12 +71,12 @@ def f1402():
         ax.text(2036.3, yv[-1], lab, fontsize=7, va="center", ha="left", linespacing=1.1, clip_on=False)
     ax.plot([2026], [1], "o", ms=3.5, color=INK, clip_on=False, zorder=5)
     ax.text(2026.2, 0.45, "today", fontsize=7, style="italic", va="center")
-    ax.annotate("Narrow: present is\n(mostly) known", xy=(2026.6, 1.25), xytext=(2026.3, 5.2), fontsize=6.8,
+    ax.annotate("Narrow: present is\n(mostly) known", xy=(2026.6, 1.3), xytext=(2026.3, 8.6), fontsize=6.8,
                 style="italic", color=G1, va="center", ha="left",
-                arrowprops=dict(arrowstyle="-", color=G2, lw=0.6))
-    ax.annotate("Wide: many futures\nremain possible", xy=(2035.2, 9.6), xytext=(2030.6, 11.2), fontsize=6.8,
+                arrowprops=dict(arrowstyle="-", color=G2, lw=0.6, shrinkA=6, shrinkB=1, relpos=(0.12, 0)))
+    ax.annotate("Wide: many futures\nremain possible", xy=(2035.0, 9.0), xytext=(2032.7, 11.3), fontsize=6.8,
                 style="italic", color=G1, va="center", ha="left",
-                arrowprops=dict(arrowstyle="-", color=G2, lw=0.6))
+                arrowprops=dict(arrowstyle="-", color=G2, lw=0.6, shrinkA=4, shrinkB=1, relpos=(0.6, 0)))
     ax.set_xlim(2026, 2036)
     ax.set_ylim(0, 12.2)
     ax.set_xticks(range(2026, 2037, 2))
