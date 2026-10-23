@@ -82,7 +82,7 @@ def f0402():
     ax = fig.add_axes([0.12, 0.12, 0.86, 0.85])
     ax.set_yscale("log")
     ax.set_xlim(1955, 2026)
-    ax.set_ylim(1e5, 1e27 * 1.6)
+    ax.set_ylim(1e5, 10 ** 27.9)  # headroom above 10^27 for the top labels
     ax.set_xticks(range(1960, 2021, 10))
     ax.yaxis.set_major_locator(FixedLocator([10.0 ** k for k in range(6, 28, 3)]))
     ax.yaxis.set_minor_locator(FixedLocator([10.0 ** k for k in range(5, 28)]))
@@ -116,13 +116,14 @@ def f0402():
                         ha=ha, va="center")
     # Grok 3 and GPT-4.5 are ten days and 0.04 orders of magnitude apart, so their markers
     # coincide at this scale: one shared label. Llama 3.1 405B sits just above-right of GPT-4,
-    # so its label goes below the cluster with a leader line.
+    # so its label goes above-left of it with a leader line.
     g3 = dict((e[0], e) for e in EPOCH)
     xg = (year(g3["Grok 3"][1]) + year(g3["GPT-4.5"][1])) / 2
-    ax.annotate("Grok 3, GPT-4.5", (xg, 3.65e26), xytext=(-5, 0), textcoords="offset points",
-                fontsize=7, ha="right", va="center")
+    ax.annotate("Grok 3, GPT-4.5", (xg, 3.65e26), xytext=(2025.9, 10 ** 27.35), textcoords="data",
+                fontsize=7, ha="right", va="center",
+                arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2.5))
     xl, vl = year(g3["Llama 3.1 405B"][1]), g3["Llama 3.1 405B"][2]
-    ax.annotate("Llama 3.1 405B", (xl, vl), xytext=(2025.6, 10 ** 24.45), textcoords="data",
+    ax.annotate("Llama 3.1 405B", (xl, vl), xytext=(2023.4, 10 ** 26.3), textcoords="data",
                 fontsize=7, ha="right", va="center",
                 arrowprops=dict(arrowstyle="-", color=G2, lw=0.5, shrinkA=1, shrinkB=2.5))
     h = [Line2D([], [], ls="", marker="o", color=INK, ms=4, label="estimate within ×3"),
