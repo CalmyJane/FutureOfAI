@@ -215,4 +215,4 @@ Chapter rewritten per DEEPEN-GUIDE: objectives, Summary, Key terms and Discussio
 - Table 13.1 kept unchanged (omnibus dates). New: Table 13.2 (AI Act fine ceilings), Table 13.3 (frontier-model rules EU/California/New York), Table 13.4 (copyright decisions).
 
 ### Word count
-- Body (first line after title to end of §13.7): 9,487 words (wc -w, incl. tables and citation keys). pandoc --citeproc: no warnings.
+- Body (first line after title to end of §13.7): 9,464 words (wc -w, incl. tables and citation keys). pandoc --citeproc: no warnings.
