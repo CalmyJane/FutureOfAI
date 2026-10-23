@@ -151,3 +151,36 @@ Chapter rewritten under work/DEEPEN-GUIDE.md. Teaching apparatus removed (object
 - Original base transformer "12 hours on eight GPUs" dropped (length; still in evidence above).
 - Generic advice sentences on how to frame requests removed.
 - Vocabulary-table "year" column not used for cl100k_base because its release year was not verified.
+
+## Fact-check 2 (23 October 2026)
+
+Independent second check after the deepening pass; about 190 claims checked. Primary sources re-read as full text (arXiv / ACL Anthology PDFs via pdftotext): Kalai 2509.04664, Vaswani 1706.03762, Llama 3 2407.21783, DeepSeek-V3 2412.19437, Mixtral 2401.04088, Shazeer 1701.06538, DeepSeekMath 2402.03300, Tülu 3 2411.15124, InstructGPT 2203.02155, DPO 2305.18290, DPR 2004.04906, vLLM 2309.06180, GQA 2305.13245, FlashAttention 2205.14135, FineWeb 2406.17557, Fan 1805.04833, Geva 2012.14913, Kaplan 2001.08361, Constitutional AI 2212.08073, Lost in the middle 2307.03172, Holtzman 1904.09751 (v1, v2 and final), word2vec 1301.3781, Sennrich P16-1162, Jain N19-1357, Mikolov N13-1090; Elhage 2021 HTML.
+
+**Recomputed (all matched unless listed under corrections):** Table 3.1 IDs, vocab sizes 50,257 / 100,277 / 200,019, model→encoding mapping, " strawberry", " 12345678", parrot emoji (tiktoken 0.14.0); Table 3.2 by running Sennrich Algorithm 1 verbatim (10 merges, counts 9,9,9,7,7,6,6,6,5,3); Table 3.5 (NumPy; weights 0.620/0.074/0.306, output (0.773, 0.227)); Table 3.6 (124,439,808; MLP = 2/3 of block; Kaplan 84,934,656, 0.14% below; 2N = 170,108,928); Tables 3.7 and 3.8 and the temperature hand-check (gpt2, gpt2-xl, Qwen2.5-1.5B, transformers 5.20.2, torch 2.14.1 CPU float32; logits 8.78/8.35; e^0.43 = 1.537, e^0.86 = 2.363; nuclei 3,068/10, 951/14, 103/4; top-5 shares identical); Table 3.9 (73,728 B; 75.5 MB; 819,200 B; 516,096 B, 66.06 GB; 8,257,536 B, 1.057 TB); −ln 0.273 = 1.298, −ln 0.032 = 3.442; σ(1) = 0.731; GRPO (1,0,0,1) → ±1 with population std 0.5 (sample std would give ±0.87); 128,000² = 1.64 × 10^10.
+
+**Corrections (old → new)**
+- Kalai scoring rule: "with t = 0.75 a wrong answer costs 2 points" → "costs 0.75/0.25 = 3 points (the preprint's own worked example says 2, an arithmetic slip)". The paper (p. 13) writes "t = 0.75 (penalty 2)", but t/(1 − t) = 3, and only penalty 3 makes guessing break even at 75% confidence.
+- Holtzman quote "bland and strangely repetitive" appears only in arXiv v1 (2019), not in the ICLR 2020 version cited → "or searching for the most likely sequence as beam search does, leads to what @holtzman2020curious call degeneration: text that is 'bland, incoherent, or gets stuck in repetitive loops'" (final abstract).
+- Sennrich: "used 59,500 merges for their translation systems" → "In their English–German experiments ... 59,500 merges for each language, or 89,500 for a single vocabulary shared by both" (Table 1 / Section 4.1).
+- BPE: "no word is ever 'unknown'" → "no word made of characters seen in training is ever 'unknown'" (character-level BPE can still meet unseen characters; byte-level fix follows in the next paragraph).
+- DeepSeek-V3 load balancing: "instead of adding the usual balancing penalty" → "relies mainly on adjusting a bias term ... of which it keeps only a very small sequence-level version" (Section 2.1.2, complementary sequence-wise auxiliary loss).
+- Constitutional AI RL phase: "the model compares pairs of its own responses" → "the fine-tuned model produces pairs of responses, a separate feedback model (typically a pre-trained language model) judges ..." (abstract; Section 4.1).
+- Dense retrieval: "a question is embedded the same way" → "by a second encoder trained alongside the first" (DPR is a dual encoder).
+- Kaplan FLOP sentence: clarified that 2N covers the blocks only; added output layer ≈ 77 million (2 × 50,257 × 768) and the context-length attention term (Kaplan Eq. 2.2, C_forward ≈ 2N + 2 n_layer n_ctx d_model).
+- KV cache: "recomputing them ... would make the total cost grow with the square of the length" → "would make the work of the weight multiplications grow with the square of the length instead of linearly" (attention itself is quadratic with or without a cache).
+- Table 3.9: GPT-2 small "72 KB" (binary) → "74 KB" (decimal, consistent with 75 MB, 0.52 MB, 66 GB); caption notes Kwon et al.'s 800 KB = 819,200 bytes and decimal units otherwise.
+- Context costs: "1.6 × 10^10 query–key scores" → "query–key pairs ..., half of which the causal mask discards".
+- Pre-training: "n tokens supplies n separate predictions" → "n − 1 separate next-token predictions".
+- RoPE: "the dot product depends only on the difference between their angles" → "the positions enter their dot product only through the difference between the two rotation angles" (the score also depends on content).
+- Position: "Attention by itself ignores order" → "Attention by itself, without the causal mask, ignores order" (causal masking alone leaks order).
+- Figure 3.1 caption (chapter and fig-03-01 spec): source now "@mikolov2013linguistic and @mikolov2013efficient"; country–capital relations come from the word2vec test set (1301.3781 Table 1), not from N13-1090. No drawing/data change.
+
+**Verified unchanged (selection):** attention formula and √d_k rationale ("extremely small gradients"), multi-head quote, h = 8 / d_k = 64, sinusoid PE formula and "2π to 10000 · 2π"; Jain & Wallace quote; Elhage residual-stream quote (exact); Geva "two-thirds" and key–value memories; Llama 3 Table 3 (126 layers, 16,384, 53,248 FFN, 128 heads, 8 KV heads, SwiGLU, 128,000 vocab, RoPE θ = 500,000), GQA quote, tokeniser 100K + 28K, 3.17 → 3.94, 15.6T tokens, URL/document/line de-duplication, "dirty word" counting, Llama 2-based quality classifiers, data mix 50/25/17/8 and scaling-law mix selection; Mixtral 8 experts / top-2 / 47B / 13B; Shazeer ">1000x"; DeepSeek-V3 1 shared + 256 routed, 8 active, 37B/671B, 14.8T; Fan k = 10; GQA "severe bottleneck" and quality/speed claim; Kwon 800 KB, 1.6 GB, 20.4–38.2%, 2–4×; FlashAttention 3× GPT-2 1K; Liu lost-in-the-middle; GPT-1/2/3 corpus figures; FineWeb 15T / 96 snapshots / 1.3T / "dramatically better"; InstructGPT ~40 contractors, 13k/33k/31k prompts, K = 4–9, 6B RM, per-token KL, 100x quote; DPO loss (Eq. 7), quotes and results; Tülu 3 RLVR quote (exact); GRPO critic-free, (r − mean)/std; Karpukhin 21,015,324 passages, 100 words, 78.4 vs 59.1; Kalai IIV ≳ 2×, 20% singleton example, three incorrect dates, "vast majority" binary grading. DeepSeek-R1, Epoch AI, Chen, Templeton, Lindsey, Mata numbers as previously verified.
+
+**Cuts:** none.
+
+**Remaining uncertainties / notes**
+- GRPO example uses the population standard deviation (0.5); implementations using the sample standard deviation give advantages of ±0.87. The text states 0.5 explicitly, so it is internally consistent.
+- Llama 3 "128,000-token context" is Meta's "128K"; with 131,072 tokens the cache would be 67.6 GB (text says "about 66 GB" for 128,000 tokens, which is exact for that length).
+- Example prompts containing "students" ("Students in Edinburgh ...", "After the lecture, the students went to the") are computed data, not teaching apparatus; kept.
+- Body length (first line after title to end of §3.7) is now about 9,700 words, slightly above the 9,500 target, because of the precision additions.
