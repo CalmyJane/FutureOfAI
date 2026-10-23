@@ -18,7 +18,6 @@ OUT_MD = os.path.join(TB, "delivery", "understanding-ai.md")
 
 TITLE = "Understanding AI"
 SUBTITLE = "Technology, Trends and the Decade Ahead"
-TAG = "A Course Text"
 AUTHOR = "Jan Göbel"
 YEAR = "2026"
 
@@ -105,13 +104,12 @@ def front_matter(toc):
 <section class="titlepage">
   <p class="t-title">{TITLE}</p>
   <p class="t-sub">{SUBTITLE}</p>
-  <p class="t-tag">{TAG}</p>
   <div class="t-rule"></div>
   <p class="t-author">{AUTHOR}</p>
 </section>
 <section class="copyright">
   <p>© {YEAR} {AUTHOR}. All rights reserved.</p>
-  <p>Evidence in this book is current to October 2026. Web sources were checked between October 20 and 22, 2026. Citations follow APA 7; full references are at the end of the book.</p>
+  <p>Evidence in this book is current to October 2026. Web sources were checked between 20 and 23 October 2026. Citations follow APA 7; full references are at the end of the book.</p>
   <p>Figures drawn for this edition. Set in EB Garamond (SIL Open Font License).</p>
   <p>ISBN: [to be assigned]<br>Publisher and printer: [imprint details]</p>
 </section>

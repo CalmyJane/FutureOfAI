@@ -34,7 +34,7 @@ sup, sub { line-height: 0; }
 .halftitle p, .titlepage p, .copyright p { text-indent: 0; }
 .titlepage { text-align: center; padding-top: 32mm; }
 .t-title { font-size: 28pt; font-weight: 600; line-height: 1.1; margin-bottom: 5mm; }
-.t-sub { font-size: 13pt; font-style: italic; margin-bottom: 3mm; }
+.t-sub { font-size: 13pt; font-style: italic; margin-bottom: 16mm; }
 .t-tag { font-size: 10pt; font-variant: small-caps; letter-spacing: 0.12em; margin-bottom: 16mm; }
 .t-rule { width: 30mm; margin: 0 auto 16mm; border-top: 0.6pt solid #000; }
 .t-author { font-size: 14pt; letter-spacing: 0.08em; }
