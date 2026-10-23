@@ -10,7 +10,7 @@ def f1301():
     fig, ax = canvas(3.3, ylim=(0, 74))
     # pyramid: four trapezoid levels, top level darkest
     y0, xc = 3.0, 38.0
-    hs = [12.0, 13.5, 13.0, 21.0]            # bottom .. top
+    hs = [12.0, 13.5, 14.3, 21.0]            # bottom .. top
     wb, wt = 60.0, 30.0                       # width at base and at apex
     ytop = y0 + sum(hs)
 
@@ -21,7 +21,7 @@ def f1301():
         ("Minimal risk: no new duties", "Spam filters · Video games", "", G4, INK),
         ("Transparency risk: disclosure", "Chatbots · Deepfakes ·\nAI-generated content", "Art. 50; from Aug 2026", G3, INK),
         ("High risk: strict requirements", "Hiring, credit, education ·\nProduct safety components",
-         "Annex I and III; from Dec 2027 / Aug 2028", G2, INK),
+         "Annex III: Dec 2027; Annex I: Aug 2028", G2, INK),
         ("Unacceptable risk:\nbanned", "Social scoring ·\nUntargeted face scraping ·\nEmotion recognition\nat work or school",
          "Art. 5; since Feb 2025", G1, "white"),
     ]
@@ -48,7 +48,7 @@ def f1301():
     # dashed bracket spanning all tiers
     bx = 71.0
     ax.plot([bx - 2, bx, bx, bx - 2], [y0, y0, ytop, ytop], color=INK, lw=0.7, ls=(0, (3, 2)))
-    ax.plot([bx, 74.5], [(y0 + ytop) / 2] * 2, color=INK, lw=0.7, ls=(0, (3, 2)))
+    ax.plot([bx, 74.5], [34.0] * 2, color=INK, lw=0.7, ls=(0, (3, 2)))
     # GPAI column
     cx, cw = 75.5, 24.0
     label(ax, cx + cw / 2, 69.5, "General-purpose\nAI models", fs=7.2, weight="bold")
@@ -65,7 +65,7 @@ def f1301():
             linespacing=1.05)
     ax.text(cx + cw / 2, 22.6, "> 10$^{25}$ FLOP\n(presumed)\nEvaluations,\nincident reports",
             ha="center", va="top", fontsize=6.2, linespacing=1.15)
-    ax.text(cx + cw / 2, 5.2, "Art. 55", ha="center", va="bottom", fontsize=5.9, style="italic")
+    ax.text(cx + cw / 2, 5.2, "Arts 51, 55; since Aug 2025", ha="center", va="bottom", fontsize=5.9, style="italic")
     arrow(ax, cx + cw / 2, 35.8, cx + cw / 2, 32.2, lw=0.7, ms=6)
     save(fig, "fig-13-01")
 
@@ -116,12 +116,12 @@ def f1302():
         ("EU", 2025, 2, "Prohibitions apply", "f", "u", "center"),
         ("EU", 2025, 7, "GPAI Code published", "h", "d", "right"),
         ("EU", 2025, 8, "GPAI duties apply", "f", "u", "left"),
-        ("EU", 2026, 7, "Digital Omnibus\nin force", "f", "u", "center"),
+        ("EU", 2026, 7, "Digital Omnibus\nin force", "f", "d", "center"),
         ("United States", 2023, 10, "EO 14110 signed", "e", "u", "center"),
         ("United States", 2025, 1, "EO 14110 revoked", "e", "u", "center"),
-        ("United States", 2025, 9, "California\nSB 53 signed", "f", "u", "left"),
-        ("United States", 2025, 12, "EO on state laws", "e", "d", "center"),
-        ("United States", 2026, 5, "Colorado replaces\nAI Act", "f", "u", "left"),
+        ("United States", 2025, 9, "California SB 53 signed", "f", "u", "left"),
+        ("United States", 2025, 12, "EO 14365 on state laws", "e", "d", "center"),
+        ("United States", 2026, 5, "Colorado replaces\nAI Act", "f", "d", "left"),
         ("China", 2023, 8, "Generative AI measures", "f", "u", "center"),
         ("China", 2025, 9, "Labelling rules apply", "f", "u", "center"),
         ("China", 2026, 7, "Anthropomorphic AI rules", "f", "u", "center"),
@@ -134,7 +134,8 @@ def f1302():
         ("International", 2024, 9, "CoE treaty opens", "f", "d", "left"),
         ("International", 2025, 2, "Paris statement", "h", "u", "center"),
         ("International", 2025, 8, "UN Panel and Dialogue", "h", "d", "left"),
-        ("International", 2026, 2, "India Impact Summit", "h", "u", "center"),
+        ("International", 2026, 2, "India Impact Summit", "h", "u", "right"),
+        ("International", 2026, 7, "UN Dialogue, Geneva", "h", "u", "center"),
     ]
     MON = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
     fs, lh = 5.9, 2.35
@@ -152,7 +153,7 @@ def f1302():
             ax.text(tx, yc - 1.2 - lh * n, d, ha=ha, va="top", fontsize=fs, color=G1, style="italic", zorder=6)
     # legend
     lyg = 1.2
-    for lx, kind, t in [(14, "f", "binding law or regulation"), (44, "e", "executive order"), (66, "h", "non-binding")]:
+    for lx, kind, t in [(10, "f", "binding law, regulation or treaty"), (44, "e", "executive order"), (66, "h", "non-binding")]:
         _dot(ax, lx, lyg, kind)
         label(ax, lx + 1.8, lyg, t, fs=6.4, ha="left")
     save(fig, "fig-13-02")
