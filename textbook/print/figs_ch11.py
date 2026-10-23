@@ -75,9 +75,9 @@ def _f1102():
     x, bw = _bars(ax, ["HELM\n(4 options)", "Hugging Face\n(mostly 10 options)"], obs, ch, None, None,
                   ["Observed agreement", "Chance agreement"], (0, 1.0), np.arange(0, 1.01, 0.2),
                   lambda t: f"{t * 100:.0f}%")
-    for xi, v, t in zip(x - bw / 2, obs, ["60%", "42%"]):
+    for xi, v, t in zip(x - bw / 2 - 0.01, obs, ["60%", "42%"]):
         ax.text(xi, v + 0.02, t, ha="center", va="bottom", fontsize=7.5)
-    for xi, v, t in zip(x + bw / 2, ch, ["33%", "13%"]):
+    for xi, v, t in zip(x + bw / 2 + 0.01, ch, ["33%", "13%"]):
         ax.text(xi, v + 0.02, t, ha="center", va="bottom", fontsize=7.5)
     ax.set_xlim(-0.6, 1.6)
     ax.set_ylim(0, 1.12)

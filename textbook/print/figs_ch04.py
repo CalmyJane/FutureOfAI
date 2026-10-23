@@ -50,7 +50,8 @@ def f0401():
     ax.text(10 ** 0.0, c * 1.07, "Irreducible loss", fontsize=7.5, va="bottom", color=G1)
     ax.text(10 ** 0.2, 1.55, "Small training runs", fontsize=7.5, ha="left", va="top")
     ax.text(10 ** 2.15, 2.25, "Fitted trend", fontsize=7.5, ha="left", va="bottom", style="italic")
-    ax.text(10 ** 4.9, L(10 ** 4.9) * 0.8, "Extrapolation", fontsize=7.5, ha="left", va="top", style="italic")
+    # above the dotted line: the curve falls away to the right, so the label never crosses it
+    ax.text(10 ** 5.3, L(10 ** 5.3) * 1.15, "Extrapolation", fontsize=7.5, ha="left", va="bottom", style="italic")
     ax.annotate("Planned large run\n(prediction)", xy=(xp, L(xp)), xytext=(10 ** 9.0, 0.36), fontsize=7.5,
                 ha="center", va="bottom", arrowprops=dict(arrowstyle="-", color=G2, lw=0.6, shrinkB=4))
     ax.set_xlabel("Training compute (log scale)", labelpad=4)

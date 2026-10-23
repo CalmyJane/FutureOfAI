@@ -96,7 +96,7 @@ def f1003():
     stages = ["Intake and\nhistory", "Tests and\nimaging", "Diagnosis", "Treatment\ndecision", "Documen-\ntation", "Follow-up"]
     tools = ["Patient-facing\nchatbot", "Image triage,\nscreening", "Diagnostic\nsuggestions", "Risk alerts", "Ambient\nscribe", "Reminders,\nmonitoring"]
     evid = ["Conversation\nsafety study", "Screening\nRCT", "Clinician-\nwith-AI trial", "External\nvalidation", "Accuracy and\ntime study", "Outcome\nstudy"]
-    x0, step, w = 15.5, 14.2, 11.6
+    x0, step, w = 14.0, 14.7, 11.2
     ys, yt, ye = 38, 20, 6
     hs, ht = 9, 8
     for i in range(6):
@@ -107,7 +107,8 @@ def f1003():
         ax.plot([cx, cx], [ys - 0.6, yt + ht + 0.5], color=G1, lw=0.6, ls=(0, (2, 1.6)))
         label(ax, cx, ye, evid[i], fs=6.2, italic=True, color=G1)
         if i < 5:
-            arrow(ax, x0 + i * step + w + 0.3, ys + hs / 2, x0 + (i + 1) * step - 0.3, ys + hs / 2, lw=0.8, ms=6)
+            a = arrow(ax, x0 + i * step + w + 0.45, ys + hs / 2, x0 + (i + 1) * step - 0.45, ys + hs / 2, lw=0.8, ms=6)
+            a.shrinkA = a.shrinkB = 0
     for y, t in ((ys + hs / 2, "Care stage"), (yt + ht / 2, "AI tool"), (ye, "Evidence\nneeded")):
         label(ax, 0.5, y, t, fs=7, ha="left", weight="bold")
     # bracket over row 1
