@@ -227,3 +227,44 @@ Structural changes (no facts added; wording-level changes not listed):
 - §11.7: "at least four ways" and "Several considerations structure the weighing." rewritten; old Chapter 12/13 signpost paragraph replaced by a closing synthesis paragraph (ends with the Chapter 12/13 pointers).
 - Long sentences split throughout (ACLU settlement, NCSC, CrowdStrike, cloud shares, Safety Report fraud/automation-bias citations).
 - No AUC in this chapter (T-25 not applicable). No figure changes. pandoc --citeproc: no warnings.
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Gaps from earlier logs closed with search + fetch; then spot checks of load-bearing claims. Web-search budget for the session ran out near the end; remaining checks used direct fetches of primary pages.
+
+### Logged gaps
+- mouton2024operational (RAND; previously only via ISR 2025 summary) → primary PDF read (mirror of RAND RR-A2977-2: https://www.fie.undef.edu.ar/ceptm/wp-content/uploads/2024/02/RAND_RRA2977-2.pdf; rand.org still 403). Key finding: "We found no statistically significant difference in the viability of plans generated with or without LLM assistance"; teams randomly given LLM + internet or internet only; "existing LLMs (as of summer 2023)"; published January 2024. → CORRECTED: text now reports the study's own finding (plan viability) instead of the ISR paraphrase (information "at similar rates").
+- souly2025poisoning (preprint) → PUBLISHED SINCE: accepted at NeurIPS 2026 (poster, 10 Dec 2026), same authors; abstract numbers unchanged (250 documents; 600M–13B; 6B–260B tokens) → text "in a 2025 preprint" → "in a paper accepted at the NeurIPS 2026 conference"; bib → @inproceedings. https://neurips.cc/virtual/2026/poster/154663
+- kalai2025why (preprint) → still preprint on arXiv (v1, no journal-ref). An Argonne seminar listing (seen only in search snippets; page 403) cites "Nature, 2026", but no Nature page or DOI found → unchanged, label kept.
+- jackson2025aa (AA-Omniscience preprint) → still arXiv v1, no venue found → unchanged.
+- carlsmith2022power → arXiv v2, no venue; ">10%" update in abstract confirmed → unchanged.
+- bommasani2022picking (previously via search summary) → arXiv abstract read: outcome homogenisation is "the extent to which particular individuals or groups experience negative outcomes from all decision-makers"; "sharing training data reliably exacerbates homogenization"; foundation-model results "mixed", depend on adaptation → CORRECTED definition ("same people receive the same outcome across different deployments" → "particular individuals or groups receive negative outcomes from every decision-maker"). https://arxiv.org/abs/2211.13972
+- grother2019face (previously only Crossref + news release) → full NISTIR 8280 PDF read: 189 algorithms, 99 developers, 18.27M images of 8.49M people confirmed; report says false-positive rates "often vary by factors of 10 to beyond 100 times"; the Asian/African American vs Caucasian "factor of 10 to 100" and the one-to-many "higher rates of false positives for African American females" wording is the NIST news release. → CORRECTED "produced the most false matches for African American women" → "produced more false matches" (release says "higher rates", not highest; report body shows elevated FMR for Asian and Black women and highest one-to-many FP for American Indians in some settings). https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8280.pdf ; https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software
+- darpa2025ai (original 70 not read) → editor's note now read verbatim: "A former version of this update stated the Final Competition included 70 synthetic vulnerabilities ... 63 ... (54) remained unchanged ... 86% ... patched 68%"; semifinal 37% found → confirmed; the 77% = 54/70 inference now directly supported. https://www.darpa.mil/news/2025/aixcc-results
+- perrigo2024meta (read via jina) → TIME page fetched directly: 13 Feb 2024, Billy Perrigo; both quotes confirmed. LeCun's departure from Meta (announced 19 Nov 2025, AP) supports "at the time" → confirmed.
+- raji2019actionable (Semantic Scholar abstract) → full abstract via Semantic Scholar API re-read: 7 months, 17.7%–30.4% reduction for darker-skinned females (Aug 2018), Amazon 31.37%, Kairos 22.50% → confirmed.
+- jiang2025artificial ("more than 70 models" from blog) → NeurIPS blog quote "an extensive empirical study across more than 70 models"; arXiv comment "NeurIPS 2025 D&B Paper (Oral)"; 26K queries → confirmed.
+- charlotin2026ai (moving count) → 2,207 cases on 24 Oct 2026 → text "2,202" → "more than 2,200" (robust to updates); urldate updated. https://www.damiencharlotin.com/hallucinations/
+- moffatt2024moffatt, gebru2023statement, obermeyer/hofmann/dratsch (Europe PMC abstracts) → no new gaps; Dratsch means re-confirmed via search (RSNA coverage) → unchanged.
+- XPT 3% vs 3.9% inconsistency → internal to the source; nothing further to verify.
+
+### Spot checks (load-bearing claims)
+- AI Incident Database 362 (2025) vs 233 (2024); 22%–94% across 26 models → confirmed (AI Index 2026 responsible-AI page).
+- Anthropic espionage case: 13 Nov 2025, mid-Sept detection, "high confidence", roughly thirty targets, "small number of cases", 80–90%, 4–6 decision points, ten days, "occasionally hallucinated credentials" → confirmed. https://www.anthropic.com/news/disrupting-AI-espionage
+- ISR 2026 published February 2026 (official page: 3 Feb 2026), >100 experts, >30 countries → confirmed. https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
+- Slattery et al. Patterns 7(5):101517, May 2026, ten authors → confirmed (Crossref).
+- Kim et al. 0.423 vs 0.127 (HF), 0.6 vs 1/3 (HELM), >350 models → confirmed (arXiv HTML 2506.07962).
+- Dratsch 79.7/19.8, 81.3/24.8, 82.3/45.5 → confirmed.
+- RAND study date and design → confirmed (above).
+- Kalai/AA-Omniscience/Souly venue status → as above.
+- No later developments found that make other sentences wrong (Williams settlement, Air Canada, Mata, NCSC, FSB, CrowdStrike, Carlsmith, Grace, XPT unchanged).
+
+### Figures/tables
+- fig-11-02: 0.60 / 0.33 / 0.423 / 0.127 re-verified against Kim et al. → no change.
+- fig-11-03: six means re-verified → no change.
+- fig-11-01, Tables 11.1–11.4: no external numbers changed → no change.
+
+### Shared bib keys
+- None changed. souly2025poisoning, charlotin2026ai exist only in bib/ch11.bib. bommasani2022picking (also ch14) not edited.
+
+pandoc --citeproc: no warnings. Body word count +8.

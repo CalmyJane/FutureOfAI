@@ -306,3 +306,60 @@ Final prose pass following work/POLISH-GUIDE.md, panel2 policy-analyst points fo
 ### Word count
 - Body (first line after title to end of §13.7, incl. tables and keys): 9,632 before → 9,472 after (wc -w). pandoc --citeproc -t html: no warnings.
 - No figure caption or table changed.
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Scope: ch13 plus preface (ch00). WebSearch budget for the session ran out near the end; remaining checks used direct WebFetch of known URLs.
+
+### Logged gaps
+- GPAI Code: xAI signed only the safety and security chapter; Meta not a signatory → confirmed (Commission page still 403; search snippet of Commission signatory page "Safety and Security Chapter ... alternative adequate means"; CSA note 29 Aug 2026: Meta still not signed) → digital-strategy.ec.europa.eu/en/policies/contents-code-gpai ; labs.cloudsecurityalliance.org/research/csa-research-note-eu-ai-act-gpai-enforcement-20260829-csa-st/
+- Commission GPAI guidelines date 18 July 2025 → confirmed → wilmerhale.com/en/insights/blogs/wilmerhale-privacy-and-cybersecurity-law/20250724-european-commission-issues-guidelines-for-providers-of-general-purpose-ai-models
+- xAI filing date → confirmed 9 Apr 2026 (CourtListener API: X. AI LLC v. Weiser, D. Colo., filed 2026-04-09, not terminated) → courtlistener.com search API; Bloomberg Law/Colorado Politics 28 Apr 2026 on minute order
+- Colorado SB26-189 provisions → confirmed (signed 14 May 2026, Ch. 131; duties from 1 Jan 2027; notice; 30-day explanation after adverse decision; correction; human review; CCPA deceptive trade practice, AG; no private right of action; AG rules by 1 Jan 2027) → https://leg.colorado.gov/bills/sb26-189 ; hklaw.com/en/insights/publications/2026/05/colorado-governor-signs-sb-189
+- Bartz settlement figures → corrected: per-work "about $3,100" → "about $3,000 ... before costs and fees" (final approval order, Dkt. 680, 20 July 2026: "estimated per-work payment of approximately $3,000"; 482,460 works on Works List; destruction of LibGen/PiLiMi files, Settlement Agreement ¶2.2) → susmangodfrey.com/wp-content/uploads/2026/07/Order-on-Final-Approval.pdf (also courthousenews copy). Claimant notices: confirmed, week of 4 Sept 2026 → authorsguild.org/news/important-information-regarding-anthropic-copyright-settlement-claim-notices/ (settlement site still 403; anthropicsettlement2026 no longer cited). Note: Writer Beware reports appeals of final approval filed Aug 2026 (not confirmed in a primary source; not added).
+- Demirer et al. published version → JPE doi 10.1086/744118 online 18 Sept 2026 (Crossref) confirmed; JPE abstract 403; NBER page (latest revision Oct 2026) gives 25%, 15%, 21%, "only a 0.1–0.6% rise" → numbers confirmed; text kept → nber.org/papers/w32146
+- Getty v Stability appeal → confirmed permission granted 16 Dec 2025 (Joanna Smith J); no Court of Appeal judgment found as of Oct 2026 → taylorwessing.com/en/insights-and-events/insights/2026/01/next-steps-for-getty-v-stability-why-has-permission-to-appeal-been-granted
+- GEMA v OpenAI appeal → no OLG München judgment found; "not final" stands → searches (Bird & Bird, Fieldfisher)
+- UN Global Dialogue Geneva 6–7 July 2026, 163 countries, Panel preliminary report; next session New York 3–4 May 2027 → confirmed → https://www.un.org/global-dialogue-ai-governance/en
+- CoE CETS 225: 21 signatures, EU first Party (ratified 15 May 2026), not in force → confirmed → coe.int news "European Union ratifies..." and "Framework Convention marks two years" (Sept 2026)
+- Preprints Sastry, Heim & Koessler, Hooker → still unpublished (arXiv/GovAI/Cohere pages only); labels kept
+- ISO/IEC 42001 → iso.org 403; search budget exhausted; still indirectly verified (Microsoft compliance page)
+- Seoul commitments 16 → 20 → confirmed (UK list via CASRAI/regulations.ai trackers: 16 May 2024 + 4 Feb 2025)
+- PLD dates → previously verified on Commission page; not re-opened
+
+### Load-bearing claims spot-checked
+- Reg. 2026/1744: OJ 24 July 2026, in force 27 July, dated 8 July; Annex III 2 Dec 2027, Annex I 2 Aug 2028; Art. 50(2) existing systems 2 Dec 2026; new bans 2 Dec 2026; sandbox by 2 Aug 2027; AI Office competence → confirmed → cuatrecasas.com (digital-omnibus-ai-has-been-published); ertico.com; cooley.com. Citation fix: Council approval 29 June now cited to the regulation, not the 17 June Council note.
+- GPAI enforcement powers from 2 Aug 2026 → confirmed (CSA note 3 Aug 2026)
+- EO 14409 (signed 2 June 2026, 91 FR 34565) → corrected: "asked agencies, including the standards body NIST" → Treasury, NSA and CISA, consulting others incl. NIST; NSA director determines "covered frontier model"; 30-day access "before they plan to release such models to other trusted partners"; licensing disclaimer confirmed → govinfo FR-2026-06-05/html/2026-11415.htm (full text read)
+- FRONTIER Act H.R. 9925: introduced 23 July 2026 (Obernolte), referred to E&C and SS&T, no later action → confirmed as of 24 Oct 2026 (date in text updated) → api.congress.gov/v3/bill/119/hr/9925
+- No federal pre-emption statute as of Sept–Oct 2026 → consistent (search)
+- NY RAISE chapter amendment S8828 signed 27 Mar 2026; effective 1 Jan 2027; 72 hours → confirmed → wiley.law alert; dwt.com 2026/04
+- Senate 99–1 (July 2025); AG task force memo 9 Jan 2026 → confirmed (search)
+- Third Circuit Thomson Reuters v. Ross, No. 25-2153, 29 Sept 2026, "minimally transformative, at best", distinguishes generative AI → confirmed → akingump.com tracker; haynesboone.com alert
+- DOJ statement of interest 1 Sept 2026 in In re OpenAI (25-md-3143); summary judgment pending → confirmed → news.bloombergtax.com (trump-administration-backs-openai-in-ny-times-copyright-suit)
+- Kadrey: torrenting/distribution claims still pending (4th amended complaint; SJ hearing Feb 2027) → added → Joint CMC Statement, Dkt. 749, 25 June 2026 (PDF text read)
+- Thaler: cert denied 2 March 2026 (No. 25-449) → added → supremecourt.gov docket 25-449
+- Copyright Office Part 3 still pre-publication → confirmed → https://www.copyright.gov/ai/
+- Garcia v. Character Technologies: notice of settlement in principle (M.D. Fla.), Jan 2026, terms undisclosed, 90-day stay → added → decrypt.co/353927 (Reuters-based); CourtListener throttled, docket not read
+- Raine v. OpenAI: OpenAI's answer (25 Nov 2025) argues claims barred by Section 230 → added → NBC News (Angela Yang), nbcbayarea.com/.../3987283/
+- Garante €15m fine annulled by Tribunal of Rome (18 Mar 2026) on competence (one-stop-shop: Irish authority competent from 15 Feb 2024); merits not decided → added clause → diritto.it (Papini, 3 June 2026); Garante note (No. 4153/2026, publ. 18/03/2026) confirmed on garanteprivacy.it docweb 10085432. Note: diritto.it gives judgment no. 4785; Garante's own note gives 4153/2026 (bib unchanged).
+- UK King's Speech 13 May 2026, no AI bill → confirmed → iapp.org; lewissilkin.com 2026/05/13
+- UK copyright report 18 Mar 2026; opt-out "no longer" preferred; ~3% of respondents supported → confirmed → osborneclarke.com; lewissilkin.com 2026/03/24
+- China anthropomorphic measures: five agencies (CAC, NDRC, MIIT, MPS, SAMR), 10 Apr 2026, effective 15 July 2026 → confirmed → hunton.com blog; digitalpolicyalert.org
+- EDPB Guidelines 03/2026 adopted 7 July 2026, consultation to 30 Oct 2026 → confirmed → edpb.europa.eu public consultation page
+- AI Liability Directive withdrawal 6 Oct 2025 (OJ C/2025/5423) → confirmed → eur-lex.europa.eu/procedure/EN/2022_303 ; europarl legislative train
+- Paris statement: 63 countries + AU Commission + EU; US, UK absent → confirmed (list counted) → elysee.fr statement page
+- India summit 16–20 Feb 2026, Bharat Mandapam (leaders' plenary 19 Feb; expo extended to 21 Feb) → consistent → en.wikipedia.org/wiki/India_AI_Impact_Summit_2026; impact.indiaai.gov.in agenda (PIB 403)
+- OECD 47 adherents; HAIP launched Feb 2025, 20 organisations → confirmed → oecd.ai/en/ai-principles ; oecd.ai/en/hiroshima
+- Janßen et al. (NBER w30028) still a working paper → confirmed (Crossref)
+
+### Preface
+- "more than five hundred references" → corrected to "almost nine hundred" (890 unique keys cited across chapters and present in print/all.bib on 24 Oct 2026, before this pass's 7 additions).
+- Other preface statements are structural (14 chapters, five parts, box types) → consistent with chapters.
+
+### Figures/tables
+- fig-13-01, fig-13-02 specs: all dates re-checked against the sources above; no changes. Table 13.1–13.3 unchanged. Table 13.4: Kadrey status "Ruling binds 13 authors only" → "...; torrenting claim pending"; caption source list adds @usdcnortherncal2026kadrey.
+
+### Bibliography
+- New (ch13 only): usdcnortherncal2026bartz, authorsguild2026important, usdcnortherncal2026kadrey, ussupremecourt2026thaler, papini2026openai, vismaya2026google, yang2025openai. No shared keys edited. anthropicsettlement2026 and trump2026inaugurating remain in bib but uncited.
+- Body word count 9,632 (title to Further reading). pandoc --citeproc: no warnings.
