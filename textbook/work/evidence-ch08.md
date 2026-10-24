@@ -177,3 +177,24 @@ Independent check after the deepening pass, about 260 claims (every number, date
 - The Acemoglu worked arithmetic is attributed to the April 2024 working paper; the published version's intermediate inputs could not be read (OUP full text inaccessible).
 - Peng et al., Becker et al., Shen & Tamkin, Autor (2024), Canaries and Hosseini Maasoum & Lichtinger remain unpublished working papers/preprints as of 23 Oct 2026 (Crossref search).
 - pandoc --citeproc -t html: no warnings.
+
+## Polish (2026-10-24)
+
+Structural changes
+- New Table 8.1 (Eloundou et al. exposure: α/β/ζ × human/GPT-4 task shares; worker shares with >50% of tasks exposed). Existing tables renumbered 8.1→8.2, 8.2→8.3, 8.3→8.4 (captions, labels tbl:08-02…04 and in-text references updated; no cross-chapter references exist). Prose that restated the Eloundou numbers replaced by the takeaway (measure matters more than labeller).
+- §8.1: two sentences added explaining why the IMF (~40%) and ILO (~one in four) headline figures differ.
+- Version histories moved to parentheses/captions with the latest figure in text: Bick et al. (54.6% Aug 2025 leads; reweighting in text without numbers, 39.4%→44.6% and Feb 2025 "nearly 40%" in Table 8.2 caption; Table 8.2 row 1 now "Aug 2025 | 54.6%"); Humlum & Vestergaard (March 2026 version leads in §8.2 and §8.4; May 2025 2.8% and 1% bound in parentheses; Table 8.2 caption notes the 2.8% is from the May 2025 version); ADP (19% leads; 15% and 13% in a parenthesis); Acemoglu (published 0.66%/0.53% now opens the box; working-paper arithmetic follows).
+- Debate box closer folded into prose (italic "What would decide it." label removed).
+- §8.8 "The first/second/third/fourth concerns…" run rewritten with varied subjects; closing synthesis paragraph added at end of §8.8.
+- T-26: Digital Omnibus glossed at first use ("the EU's 2026 amending regulation to the AI Act (Section 13.2)").
+- Count openers removed ("Three further findings…", "Exposure measures share three weaknesses", "Three patterns hold…", "four positions can be distinguished"); punchline endings cut ("The question is open."; "The selection problem is itself a finding."); long sentences split (average ≈22 words).
+
+Facts added (verified)
+- eloundou2023gpts (arXiv v5 PDF re-read 2026-10-24, Table 3 task-level means): α 0.15 human / 0.14 GPT-4; β 0.31 / 0.35; ζ 0.47 / 0.56; core tasks weighted twice supplemental. Worker shares from text: α human 3%, ζ human "up to 49%", β 19% (labeller not stated), β ≥10% of tasks 80%.
+- eloundou2024gpts (Science abstract via Semantic Scholar API): "roughly 1.8% of jobs could have over half their tasks affected by LLMs with simple interfaces and general training … just over 46% of jobs" with complementary software.
+- cazzaniga2024genai (SDN PDF re-read): exposure = Felten–Raj–Seamans AIOE (ability overlap); high/low thresholds "represented by their median values" and described as "relative measures"; framework "offer[s] only a relative interpretation".
+- gmyrek2025generative (WP140 Table 5 re-read): "Exposed" = Gradients 1–4; lowest gradient requires μ < 0.4 and μ + σ ≥ 0.5; minimal-exposure and not-exposed categories are outside the one-in-four figure.
+- bls2026productivity (new bib entry; BLS Productivity and Costs, Q2 2026 revised, 3 Sep 2026, https://www.bls.gov/news.release/prod2.nr0.htm): nonfarm business labour productivity +2.2% year on year in 2026 Q2; 2.1% annualised since 2019 Q4 vs 1.5% in 2007 Q4–2019 Q4 cycle and 2.1% long-term since 1947 Q1. | institutional (official statistics)
+
+Facts removed (cuts for length/number density; all previously verified)
+- Bick et al. "1–5% of work hours assisted" (superseded by 4.1%/5.7%); Cui et al. builds +38.38% and commits +13.55% (now qualitative); Microsoft 8.5% two-week take-up; Penn Wharton "nearly 3% by 2055"; Fairwork "none of the other twelve more than 3" (now "No platform scored above 5"); Felten application list shortened; Noy & Zhang control-group text-editor detail; MIT preprint title and QJE contact; OpenAI's "very seriously" statement; Budzyń "several published letters"; METR repository age and commit counts; DALL-E 2/Midjourney names; repeated Eloundou wage finding in §8.8; "89% … Philippines" repetition in §8.6.
