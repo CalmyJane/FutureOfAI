@@ -273,3 +273,36 @@ Independent second fact-check after the deepening pass. About 230 claims checked
 - Demirer et al. published (JPE) version not read; figures are from the 2024 working paper.
 - Bartz settlement details (>480,000 works, ~$3,100, final approval 20 July 2026) rely on Bloomberg Law and the settlement site as checked in the first fact-check.
 - Body word count after edits: about 9,640 (wc -w, title to start of Further reading, incl. tables and keys). pandoc --citeproc -t html: no warnings.
+
+## Polish (2026-10-24)
+
+Final prose pass following work/POLISH-GUIDE.md, panel2 policy-analyst points for ch13 and audit-consistency2 T-02.
+
+### Structural changes
+- Opening: Colorado sentence split into three (retreat; xAI suit and DOJ; agreement and replacement).
+- §13.1: "Four families of instrument recur below" count opener removed; "A second distinction" → "Laws also differ in scope".
+- §13.2: Annex III areas turned into an eight-item bulleted list (parallel to Art. 5). "Small mid-cap" sentence split in two. Standalone "Whether the ceilings matter…" closing line merged into the enforcement paragraph. Omnibus adoption dates compressed (signature date 8 July dropped; publication 24 July kept; entry into force 27 July stays in the opening).
+- §13.3: executive orders named by function, number in parentheses: Biden's safety order (EO 14110), "AI dominance" order (EO 14179), procurement order (EO 14319), pre-emption order (EO 14365), cyber-evaluation order (EO 14409). EO 14434 ("Super Intelligence" terminology) sentence cut, as allowed by the panel ticket; bib entry trump2026inaugurating left in bib/ch13.bib but no longer cited. "The first/second/third kind" run varied. Texas penalty detail reduced to the top figure ("up to $200,000 for uncurable violations"); curable range removed.
+- §13.4: one sentence added on enforcement campaigns (CAC Qinglang campaign, April 2025). Labelling measures and Global AI Governance Action Plan sentences shortened (WAIC/Shanghai venue and Global Digital Compact link dropped). UK action plan: "partially agreed to two / no position on TDM" detail dropped.
+- §13.5–13.6: tightened (UN Panel "three-year terms", EDPB taskforce April 2023 date, Copyright Office January 2025 copyrightability report, Ross "prices in line with", Judge Bibas name, GEMA "OpenAI controlled training and architecture" clause, AI Act TDM opt-out reminder after GEMA all dropped). EDPB Opinion 28/2024 count opener ("set out three points") removed.
+- §13.7 Liability rewritten and expanded: separates regulatory penalties (paid to the state) from liability/compensation; fixes "Liability is developing through state laws, such as SB 53's civil penalties" (now: state laws create penalties, not compensation; AG-only enforcement, no private right of action). EU PLD paragraph expanded; US litigation and Section 230 paragraphs added.
+- Debate box: "(Section 7.7)" removed from the $285.9bn/$5.9bn sentence; now attributed to the 2026 AI Index directly (T-02).
+- Chapter ending: closing synthesis paragraph added after the debate box.
+
+### Facts added (all verified 2026-10-24)
+- PLD (EU) 2024/2853 (Commission page, @europeancommission2024liability, re-opened): "On 8 December 2024, the new Product Liability Directive comes into force"; transposition by 9 December 2026; applies to products placed on the market as of 9 December 2026, earlier products under the 1985 directive; "all types of software … including applications, operating systems and AI-systems"; damage includes psychological harm and "destruction or corruption of data"; evidence disclosure and alleviated burden of proof "where needed"; victims "have 3 years to bring the claim". (EUR-Lex OJ text blocked: HTTP 202 empty / WebFetch blank.)
+- Garcia v. Character Technologies, M.D. Fla. 6:24-cv-1903-ACC-UAM, Doc. 115 (order PDF read via CourtListener RECAP storage): signed 20 May, filed 21 May 2025; defendants argued First Amendment and that Character A.I. is not a product; IIED dismissed without leave, motions otherwise denied; Alphabet dismissed without prejudice; Google sufficiently alleged as component-part manufacturer and aider/abettor; "the Court is not prepared to hold that Character A.I.'s output is speech"; product "so far as Plaintiff's claims arise from defects in the Character A.I. app rather than ideas or expressions within the app". The order contains no Section 230 argument (text search). Judge Conway identified from the order's self-citations "(Conway, J.)" and initials ACC. New bib: usdcmdfla2025garcia.
+- Raine v. OpenAI (SF Superior Court, filed 26 Aug 2025): design defect, failure to warn, negligence, UCL, wrongful death (Tech Policy Press, Justin Hendrix, 26 Aug 2025). New bib: hendrix2025breaking.
+- Seven further suits against OpenAI and Sam Altman, 6 Nov 2025, California Superior Courts (four LA, three SF), GPT-4o; claims incl. wrongful death, product liability, negligence (press release of plaintiffs' counsel SMVLC/TJLP; attributed as such). New bib: smvlc2025seven.
+- 47 U.S.C. § 230(c)(1) and (f)(3) wording (Cornell LII). New bib: lii2026section230.
+- CAC notice 30 April 2025, "清朗·整治AI技术滥用" campaign, three months, two phases; targets include unregistered generative AI products, unlabelled content, "一键脱衣", unauthorised voice/face cloning, AI rumours, harm to minors. New bib: cac2025qinglang.
+
+### Not added (could not verify)
+- Character.AI/Google settlement of Garcia (reported January 2026 by Reuters per Wikipedia; Reuters, AP, CNN, Guardian, NYT and Wayback all unreachable). Garcia's current status therefore not stated.
+- Whether OpenAI invoked Section 230 in Raine (not in any source reachable). Any appellate ruling on Section 230 and generative output.
+- PLD free/open-source exclusion and 10-/25-year longstop periods (Commission page gives 10 years; dropped for length, not added).
+- CAC enforcement outcomes (numbers of apps removed, fines) and filed-service counts.
+
+### Word count
+- Body (first line after title to end of §13.7, incl. tables and keys): 9,632 before → 9,472 after (wc -w). pandoc --citeproc -t html: no warnings.
+- No figure caption or table changed.

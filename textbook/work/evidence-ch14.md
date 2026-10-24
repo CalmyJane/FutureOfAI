@@ -291,3 +291,33 @@ Independent second fact-check per work/FACTCHECK2-GUIDE.md. About 230 claims che
 - 14 GW worst case (Döring) and SysStabV via dejure.org: as in the first fact-check.
 - Body word count now about 9,600 (incl. tables, citations excluded), slightly above the 9,500 guide ceiling because of added precision.
 - pandoc --citeproc -t html: no warnings.
+
+## Polish (2026-10-24)
+
+Final prose pass per work/POLISH-GUIDE.md, panel-2 general-reader report and audit-consistency2 tickets. Body (excluding Further reading and citation keys, including tables) about 9,620 → 9,415 words.
+
+### Structural changes
+- §14.1 Early predictions: Dartmouth, Simon and Lighthill quotations replaced by a one-sentence back-reference to Chapter 1 (T-21). Armstrong/Sotala paragraph cut to proportions; Grace 2016 correction and Armstrong's reply merged into two sentences (62/21, 55/12, 27% figures dropped; 54% given as "more than half").
+- §14.1 Steinhardt and LEAP paragraphs: numbers already in Table 14.1 no longer restated (MATH forecast "about a quarter" of the outcome, 12.7/50.3).
+- "Three caveats…" and "Three results matter…" openers rewritten; §14.2 survey results split into two paragraphs (2016 value 2061 and 2022 full-automation 2164 dropped from text; still in Grace et al. / Figure 14.1).
+- XPT extinction medians now state the answering subsets (88 superforecasters, 29 AI domain experts), as in Table 11.4 (T-14).
+- Debate box: italic "What would decide it" label removed; closer folded into prose.
+- §14.3: METR caveat list (kwa2026clarifying) replaced by back-reference to Section 4.7 (T-16); 80%/50% horizon point stated once (§14.3); §14.5 refers back. Everyday comparison added for 2 × 10^29: "if GPT-4's training had taken one day, a run 10,000 times larger on the same hardware would take about 27 years" (author's arithmetic from the existing 10,000× figure).
+- 19% developer-trial result stated once (Debate box); §14.5 refers back.
+- §14.4 AI 2027 November/December 2025 notes merged; criticism paragraph no longer uses "The first … The second" shape.
+- §14.5: compute stock now "AI Index, drawing on Epoch AI data, 3.3×; Epoch's own dashboard 3.4× (Chapter 4)" (T-10; epochai2026trends already in bib). Adoption updated to Bick et al. Aug 2025 54.6% with a parenthesis on the revision of the earlier "nearly 40%" (T-09; Table 14.4 row and source list updated, bick2025state). Danish nulls now the March 2026 revision, >2% two years after ChatGPT's launch, humlum2025still (T-08). Regulation dates condensed: Digital Omnibus deferral "by a year or more" to Dec 2027 (Annex III) / Aug 2028 (Annex I).
+- §14.6–14.7 restructured: section opens with the 50.2 Hz case box; new Table 14.5 (proposal / research question / main objection) for all ten proposals, stated as the author's untested proposals. Full prose kept for 14.2, 14.3 and 14.6; 14.1, 14.4, 14.5, 14.7–14.10 compressed; italic *Research question:* / *Objections:* labels removed throughout. A2A launch details cut to a back-reference to Section 5.3 (T-22; Linux Foundation sentence removed). Endoscopy study cut to a back-reference to Section 8.7, Pedersen trial kept (T-23).
+- Closing synthesis paragraph added at end of §14.7 (end of chapter and book).
+
+### Facts added
+- glazer2024frontiermath (arXiv 2411.04872, abstract read 2026-10-24): "a benchmark of hundreds of original, exceptionally challenging mathematics problems crafted and vetted by expert mathematicians"; "Solving a typical problem requires multiple hours of effort from a researcher". Used in the Table 14.1 caption to gloss FrontierMath. New bib entry.
+- bick2025state and humlum2025still copied byte-identical from bib/ch08.bib (verified programmatically).
+
+### Facts removed from text
+- Dartmouth/Simon/Lighthill quotations (in Chapter 1); Armstrong sub-counts; MATH/MMLU/RCT forecast figures duplicated from Table 14.1; XPT 0.18 SD; Grace 2016 (2061) and 2022 full-automation (2164) values; METR caveat list; Becker 19% repeat; Bick "nearly 40%" as headline; Humlum ">1%"; A2A launch and Linux Foundation details; Budzyń numbers; Zheng et al. "scalable substitute" framing; Longpre et al. audit (1,800 datasets, 70%); Lewis et al. fix to imitate humans; several objection details in compressed proposals (14.1 simulation narrowness, 14.4 trade secrets, 14.5 reservist quality, 14.9 memorial agents, 14.10 release slowdown) — the first three remain summarised in Table 14.5.
+
+### Tables and captions
+- Table 14.1 caption: FrontierMath gloss added. Table 14.4: compute row source named; adoption row 54.6% (Aug 2025); source list bick2024rapid → bick2025state. New Table 14.5. No figure or figure-caption changes.
+
+### Checks
+- pandoc --citeproc -t html: no warnings.
