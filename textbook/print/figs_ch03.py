@@ -69,37 +69,51 @@ def f0302():
     box(ax, 0.5, 11.5, 10.5, 5, "Position\ninfo", fill="white", fs=6.2, lw=0.6, style="round,pad=0,rounding_size=1")
     arrow(ax, 11.2, 14, 15.3, 14, lw=0.6, ms=5)
     label(ax, 13.2, 16.1, "+", fs=8)
-    for x in cols:
-        arrow(ax, x, 16.7, x, 21.8, lw=0.6, ms=5)
-    # 3 transformer block
+    # 3 transformer block; each token's vector runs up its own residual stream (vertical line)
     box(ax, 2, 20.5, 62, 29, "", fill="white", lw=0.9, style="round,pad=0,rounding_size=2")
-    label(ax, 33, 46.8, "Transformer block", fs=7.6, weight="bold")
-    # masked attention
+    label(ax, 9, 46.0, "Transformer\nblock", fs=7.6, weight="bold")
+    label(ax, 2.5, 18.6, "residual stream", fs=5.9, ha="left", italic=True, color=G1)
+    ax.plot([12.6, 19.3], [18.6, 18.6], color=G1, lw=0.4)
+    # masked attention: information flows from earlier tokens (and the token itself) into each stream
     box(ax, 15.5, 22, 45, 12, "", fill=G4, lw=0.5, style="round,pad=0,rounding_size=1")
     label(ax, 9, 29.5, "Masked\nattention", fs=6.6)
     label(ax, 9, 23.9, "itself and\nearlier only", fs=5.9, italic=True, color=G1)
+    ay = 25.0
     for j in range(1, 5):
         for i in range(j):
             d = cols[j] - cols[i]
-            a = F.FancyArrowPatch((cols[j], 24.2), (cols[i], 24.2), arrowstyle="-|>", mutation_scale=4,
-                                  lw=0.45, color=G1, connectionstyle=f"arc3,rad={0.3 if d > 10 else 0.45}",
+            a = F.FancyArrowPatch((cols[i], ay), (cols[j], ay), arrowstyle="-|>", mutation_scale=4,
+                                  lw=0.45, color=G1, connectionstyle=f"arc3,rad={-0.3 if d > 10 else -0.45}",
                                   shrinkA=1, shrinkB=1, zorder=3)
             ax.add_patch(a)
     for x in cols:
-        ax.add_patch(F.Circle((x, 24.2), 0.6, fc=INK, ec=INK, zorder=4))
-        arrow(ax, x, 34.2, x, 37.3, lw=0.6, ms=5)
-    # feed-forward
-    label(ax, 9, 39.5, "Feed-\nforward", fs=6.6)
+        # self-attention loop below each point
+        a = F.FancyArrowPatch((x - 0.5, ay - 0.6), (x + 0.5, ay - 0.6), arrowstyle="-|>", mutation_scale=3.5,
+                              lw=0.45, color=G1, connectionstyle="arc3,rad=-2.2", shrinkA=0.5, shrinkB=0.5,
+                              zorder=3)
+        ax.add_patch(a)
+    # residual streams (drawn over the attention box)
     for x in cols:
-        box(ax, x - 3.4, 37.5, 6.8, 4.5, "", fill=G4, lw=0.5, style="round,pad=0,rounding_size=0.8")
-        label(ax, x, 39.75, "FF", fs=6.2, color=G1)
+        ax.plot([x, x], [16.7, 49.5], color=INK, lw=0.7, zorder=2.5)
+        ax.add_patch(F.Circle((x, ay), 0.6, fc=INK, ec=INK, zorder=4))
+    # feed-forward: reads from the stream, processes each token on its own, adds its result back
+    label(ax, 9, 39.5, "Feed-\nforward", fs=6.6)
+    fy, fh = 37.2, 4.4
+    for x in cols:
+        box(ax, x + 1.4, fy, 4.6, fh, "", fill=G4, lw=0.5, style="round,pad=0,rounding_size=0.8")
+        label(ax, x + 3.7, fy + fh / 2, "FF", fs=6.2, color=G1)
+        ax.plot([x, x + 3.7, x + 3.7], [35.7, 35.7, fy], color=INK, lw=0.5, zorder=2.5)
+        arrow(ax, x + 3.7, fy + fh, x + 3.7, 43.6, lw=0.5, ms=4, style="-")
+        arrow(ax, x + 3.7, 43.6, x + 0.75, 43.6, lw=0.5, ms=4)
+        ax.add_patch(F.Circle((x, 43.6), 0.8, fc="white", ec=INK, lw=0.5, zorder=4))
+        ax.plot([x - 0.5, x + 0.5], [43.6, 43.6], color=INK, lw=0.5, zorder=5)
+        ax.plot([x, x], [43.1, 44.1], color=INK, lw=0.5, zorder=5)
     # × N bracket
     ax.plot([65, 66.2, 66.2, 65], [21, 21, 49, 49], color=INK, lw=0.6)
-    ax.text(68.3, 35, "× N blocks\n(e.g. 96 in GPT-3)", fontsize=6.2, rotation=90, ha="center", va="center",
+    ax.text(68.6, 35, "× N blocks\n(e.g. 96 in GPT-3)", fontsize=6.2, rotation=90, ha="center", va="center",
             linespacing=1.1)
-    # 4 output layer
-    for x in cols[-1:]:
-        arrow(ax, x, 49.7, x, 53.3, lw=0.6, ms=5)
+    # 4 output layer (only the last position's vector is used to predict the next token)
+    arrow(ax, cols[-1], 49.0, cols[-1], 53.3, lw=0.6, ms=5)
     box(ax, 15.5, 53.5, 45, 4.5, "Output layer", fill=G4, fs=7.2, lw=0.7, style="round,pad=0,rounding_size=1")
     arrow(ax, 38, 58.2, 38, 61.0, lw=0.6, ms=5)
     # 5 next-token probabilities

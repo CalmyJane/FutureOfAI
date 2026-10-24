@@ -116,12 +116,12 @@ def f1302():
         ("EU", 2025, 2, "Prohibitions apply", "f", "u", "center"),
         ("EU", 2025, 7, "GPAI Code published", "h", "d", "right"),
         ("EU", 2025, 8, "GPAI duties apply", "f", "u", "left"),
-        ("EU", 2026, 7, "Digital Omnibus\nin force", "f", "d", "center"),
+        ("EU", 2026, 7, "Omnibus in force", "f", "u", "center"),
         ("United States", 2023, 10, "EO 14110 signed", "e", "u", "center"),
         ("United States", 2025, 1, "EO 14110 revoked", "e", "u", "center"),
         ("United States", 2025, 9, "California SB 53 signed", "f", "u", "left"),
-        ("United States", 2025, 12, "EO 14365 on state laws", "e", "d", "center"),
-        ("United States", 2026, 5, "Colorado replaces\nAI Act", "f", "d", "left"),
+        ("United States", 2025, 12, "EO 14365 on state laws", "e", "d", "right"),
+        ("United States", 2026, 5, "Colorado AI Act replaced", "f", "d", "left"),
         ("China", 2023, 8, "Generative AI measures", "f", "u", "center"),
         ("China", 2025, 9, "Labelling rules apply", "f", "u", "center"),
         ("China", 2026, 7, "Anthropomorphic AI rules", "f", "u", "center"),
@@ -135,7 +135,7 @@ def f1302():
         ("International", 2025, 2, "Paris statement", "h", "u", "center"),
         ("International", 2025, 8, "UN Panel and Dialogue", "h", "d", "left"),
         ("International", 2026, 2, "India Impact Summit", "h", "u", "right"),
-        ("International", 2026, 7, "UN Dialogue, Geneva", "h", "u", "center"),
+        ("International", 2026, 7, "UN Global Dialogue", "h", "u", "center"),
     ]
     MON = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
     fs, lh = 5.9, 2.35
