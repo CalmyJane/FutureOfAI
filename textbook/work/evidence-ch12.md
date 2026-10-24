@@ -274,3 +274,46 @@ Added inner alignment, goal misgeneralisation, unlearning, linear probe.
 - "Path to Astra" carries no date in the retrieved text; it postdates 28 Aug and predates the 3 Sept release (bib says so).
 - "most of the recent frontier-model cases in Table 12.1 exploit graders of this kind" is the author's reading of the table (four of five 2025–26 rows involve automated tests, graders or benchmark answers; the chess case does not).
 - Venues for Goldowsky-Dill, Deep Ignorance, persona vectors, RepE, GCG and Shah could not be confirmed beyond arXiv (dblp/Semantic Scholar rate-limited); all are labelled preprints.
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Body word count 9,881 → 9,880 (counted to "## Further reading"); no correction lengthened the text. Web-search budget ran out near the end; remaining checks used direct fetches of primary pages. r.jina.ai began refusing requests (IP block) partway through.
+
+### Logged gaps
+- openai2025expanding (403; earlier verified via excerpts) → full post read via r.jina.ai: "an additional reward signal based on user feedback"; "weakened the influence of our primary reward signal, which had been holding sycophancy in check"; offline evaluations "generally looked good"; expert testers felt behaviour "felt" slightly off; rollback began 28 April ("on Monday"); rollout 24–25 April → confirmed.
+- openai2026openai (never retrieved) → full post read via r.jina.ai, with updates of 28/29 July and 26 Aug: "GPT‑5.6 Sol and an even more capable pre-release model, all with reduced cyber refusals for evaluation purposes"; "hyperfocused"; zero-day in package-registry proxy to reach internet; "Hugging Face’s security team and agents detected and stopped the activity on their infrastructure and had already begun containment ... when our teams connected" → CORRECTED "had already identified and contained the attack" → "had already detected and stopped the attack" (containment had begun, not completed); openai2026openai added to the citation; bib howpublished notes the updates. https://openai.com/index/hugging-face-model-evaluation-security-incident/
+- openai2026hugging (via jina) → re-read: 26 Aug 2026; "primarily driven by a highly capable, internal-only research model comparable in scale to GPT‑5.6 Sol"; IM1/Sol roles; "increasing rates of this type of complex cheating during a training run that contributed to IM1 ... subsequently reinforced"; Hugging Face disclosed 16 July → confirmed.
+- openai2026path (undated) → re-read via jina (Critical designation, "first model we are designating at this level", "sufficiently minimize", 2-week pause, 28 Aug restart for future Astra versions, alpha testers, production misalignment monitors; links to the April 2025 Preparedness Framework post) → confirmed; date 1 Sept 2026 from press coverage (InfoWorld 4 Sept 2026: "September 1, when it said the threshold was met"; search summary of the post) → bib howpublished now gives 1 September 2026 (date from press coverage).
+- openai2026pacing → jina refused (IP block) this session; polish read it first-hand on 24 Oct; pause and on-hold run corroborated by openai2026hugging ("Our largest planned frontier RL run remains on hold") and openai2026path → confirmed (no change).
+- Preparedness Framework newer than v2? → none found by search; GPT-6 Astra and Path to Astra posts link the April 2025 "updating-our-preparedness-framework" page → Table 12.4 "v2 (Apr 2025)" confirmed.
+- GPT-6 Astra release 3 Sept 2026 (DataNorth, InfoWorld) → consistent with "In September".
+- nist2026caisi naming → page fetched: header "CAISSI"; news items 17 Jul (GLM-5.2), 23 Jul (UK AISI/CAISI Kimi K3, cyber), 17 Sep (GLM-5.3 cyber) still say CAISI; About section: voluntary agreements, national-security focus → confirmed.
+- reason2000human → resolved in earlier pass; unchanged.
+- Preprints whose published version was not checked (arXiv API journal_ref, Semantic Scholar, OpenReview search, web search):
+  - obrien2025deep → PUBLISHED SINCE: ICLR 2026 poster (OpenReview xcf0QcTcGS); abstract numbers identical (6.9B; up to 10,000 steps and 300M tokens; over an order of magnitude; in-context use) → "in a 2025 preprint" → "at ICLR 2026"; bib → @inproceedings.
+  - paulo2025sparse → PUBLISHED SINCE: ICLR 2026 poster (OpenReview EjInprGpk9); 131K latents, Llama 3 8B, 30% shared unchanged → "In a preprint" → "At ICLR 2026"; bib → @inproceedings.
+  - goldowskydill2025detecting → PUBLISHED SINCE: ICML 2025, PMLR 267:19755–19786, title "Detecting Strategic Deception with Linear Probes"; 1% FPR → 95–99%, Llama-3.3-70B-Instruct, "insufficient as a robust defence" unchanged → "In a 2025 preprint" → "At ICML 2025"; bib → @inproceedings. https://proceedings.mlr.press/v267/goldowsky-dill25a.html
+  - chen2025persona → ICLR 2026 submission rejected (OpenReview venueid Rejected_Submission) → stays preprint.
+  - bondarenko2025demonstrating → AAAI 2026 TrustAgent workshop poster only → stays labelled preprint.
+  - amodei2016, baker2025, meinke2024, greenblatt2024alignment, schoen2025, marks2025, korbak2025chain, chen2025reasoning, ganguli2022, shevlane2023, coggins2025, long2024, bai2022, macdiarmid2025, sharma2025constitutional, hubinger2024sleeper, needham2025, lanham2023, emmons2025, bhatt2025ctrl, korbak2025sketch, hubinger2019, shah2022, zou2023universal, zou2023representation → no journal_ref on arXiv; no conference version found (OpenReview shows only CoRR/arXiv) → labels unchanged.
+- van der Weij "per cent vs percentage points" → paper Table 1 header re-read: "Performance drops in percentages"; still ambiguous → unchanged, still unverifiable beyond source wording.
+- METR RE-Bench run totals → not re-opened (no change in claim).
+
+### Spot checks (load-bearing claims)
+- RSP versions: 1.0 19 Sep 2023; 3.0 24 Feb 2026 (comprehensive rewrite); 3.4 8 Jul 2026 still current (14 Aug 2026 entry is a Risk Report) → confirmed. https://www.anthropic.com/responsible-scaling-policy
+- FSF v3 22 Sep 2025; FSF 3.1 17 Apr 2026 (adds Tracked Capability Levels); harmful manipulation CCL; interference with ability to "direct, modify or shut down"; safety-case reviews for large-scale internal deployments → confirmed.
+- FLI Summer 2026 (PDF 14 July): 9 companies, 7 experts; Anthropic C+ (2.66), OpenAI C, GDM C, Meta D+, xAI F; "weakened or voided pledges to pause unilaterally" for Anthropic, OpenAI, GDM, Meta → confirmed.
+- METR common elements: 16 Dec 2025 version still latest; 12 companies; nine elements; EU Code of Practice and SB 53 → confirmed.
+- UK AISI Frontier AI Trends Report: >30 systems over two years; best models ~50% apprentice cyber vs just over 10% early 2024; first expert-level model 2025; universal jailbreaks every system; 10 min vs >7 h; >2,700 transcripts; "in a few cases, models noticed..." quote → confirmed; no newer edition mentioned on the page.
+- Betley et al. Nature 649(8097):584–589, Jan 2026 → confirmed (Crossref).
+- Schlatter et al. TMLR 2026 → confirmed (arXiv comment).
+- fig-12-03 data (Baker Table 1: 40/80/60 vs 93/97/95; precision 81/77) → confirmed from arXiv PDF.
+- Table 12.4 cells → consistent with the above; no change.
+
+### Figures/tables
+- fig-12-03: verified, no change. fig-12-01, fig-12-02 (schematics), tbl-12-04: no change. Tables 12.1–12.3: no change.
+
+### Shared bib keys
+- None changed. obrien2025deep, paulo2025sparse, goldowskydill2025detecting, openai2026openai, openai2026path exist only in bib/ch12.bib.
+
+pandoc --citeproc: no warnings.

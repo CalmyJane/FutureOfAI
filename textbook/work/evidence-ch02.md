@@ -238,3 +238,37 @@ Final prose pass following work/POLISH-GUIDE.md, ML-expert panel report (panel2,
 
 ### Bibliography
 - Added to bib/ch02.bib: hendrycks2016gaussian, shazeer2020glu, chowdhery2023palm, touvron2023llama, zhang2019root, kimiteam2025kimi, hu2024minicpm, loshchilov2017sgdr, pascanu2013difficulty, baydin2018automatic, hanley1982meaning (new); devlin2019bert, radford2019language, grattafiori2024llama, deepseekai2024deepseekv3, micikevicius2017mixed, nvidia2024blackwell (copied byte-identical from other chapters' bib files).
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Logged gaps re-opened with WebSearch/WebFetch and arXiv full texts (pdftotext); ~30 load-bearing claims spot-checked. No text, table, figure spec or bib change was needed.
+
+### Logged gaps
+- newyorktimes1958new wording → original still paywalled; search confirms a UPI story datelined 7 July, printed 8 July 1958, and secondary reproductions agree on "walk, talk, see, write, reproduce itself and be conscious of its existence"; Cornell Chronicle confirms headline "NEW NAVY DEVICE LEARNS BY DOING: Psychologist Shows Embryo of Computer Designed to Read and Grow Wiser" → consistent; citation form "as reproduced in" kept → https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon
+- lefkowitz2019professors → "In July 1958", Office of Naval Research, IBM 704, "After 50 trials ...", Rosenblatt "a research psychologist and project engineer at the Cornell Aeronautical Laboratory" → confirmed (same URL)
+- szegedy2014intriguing ICLR 2014 venue (previously only via a secondary reference list) → Google Research publication page lists "International Conference on Learning Representations (2014)" → confirmed → https://research.google/pubs/intriguing-properties-of-neural-networks/
+- zeiler2014visualizing layer descriptions (writer's log only) → arXiv 1311.2901v3 Fig. 2 caption: "Layer 2 responds to corners and other edge/color conjunctions. Layer 3 ... similar textures ... Layer 4 ... dog faces ... Layer 5 shows entire objects ... e.g. keyboards" → confirmed → https://arxiv.org/abs/1311.2901
+- geirhos2020shortcut p. 665 quote (writer's log only) → arXiv 2004.07780v5 abstract: "Shortcuts are decision rules that perform well on standard benchmarks but fail to transfer to more challenging testing conditions"; cow "at an unexpected location (such as a beach rather than grassland)" → confirmed → https://arxiv.org/abs/2004.07780
+- H100 dense rate = half of sparse (previously inferred from blog) → NVIDIA H100 datasheet footnote: "* Shown with sparsity. Specifications 1/2 lower without sparsity."; product page still FP32 67, BF16/FP16 Tensor 1,979 "* With sparsity", 3.35 TB/s → confirmed → https://www.nvidia.com/en-us/data-center/h100/ ; datasheet copy https://www.MEGWARE.com/fileadmin/user_upload/LandingPage%20NVIDIA/nvidia-h100-datasheet.pdf
+- Preprints, published since? goyal2017accurate, ba2016layer, hendrycks2016gaussian, shazeer2020glu, hu2024minicpm, kaplan2020scaling, touvron2023llama, kimiteam2025kimi → no peer-reviewed version found (arXiv only) → labels kept; micikevicius2017mixed (ICLR 2018) and zhang2019root (NeurIPS 2019) already listed as published.
+
+### Spot-checks (full texts)
+- kimiteam2025kimi → "1.04 trillion-parameter" MoE, 32B activated; Muon "substantially outperforms AdamW" at same compute; "exploding attention logits"; WSD, constant 2e-4 for first 10T tokens after 500-step warm-up, then cosine over 5.5T → confirmed → https://arxiv.org/abs/2507.20534
+- touvron2023llama → pre-normalisation "to improve the training stability"; RMSNorm; SwiGLU; AdamW β2 0.95; final LR "10% of the maximal"; weight decay 0.1; gradient clipping 1.0; 2,000 warm-up steps → confirmed → https://arxiv.org/abs/2302.13971
+- deepseekai2024deepseekv3 → AdamW; "gradient clipping norm is set to 1.0"; "most compute-density operations are conducted in FP8" → confirmed → https://arxiv.org/abs/2412.19437
+- chowdhery2023palm → "We use SwiGLU activations"; "trained without dropout, although dropout of 0.1 is used for finetuning in most cases" → confirmed → https://arxiv.org/abs/2204.02311
+- grattafiori2024llama → "We pre-train Llama 3 405B using AdamW" → confirmed → https://arxiv.org/abs/2407.21783
+- hu2024minicpm → Warmup-Stable-Decay, "conducive to continuous training", "un-predefined pre-training token number" → confirmed → https://arxiv.org/abs/2404.06395
+- goyal2017accurate → minibatch 8192, 256 GPUs, one hour → confirmed → https://arxiv.org/abs/1706.02677
+- nvidia2024blackwell → 18 Mar 2024; GB200 NVL72 "72 Blackwell GPUs and 36 Grace CPUs"; "new 4-bit floating point AI inference capabilities" → confirmed → https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing
+- zhang2017understanding Table 1 (Table 2.5) → Inception 1,649,402 params, 100/89.05, 100/85.75, random 100/9.78; AlexNet 1,387,786, 99.90/81.22, 100/76.07, random 99.82/9.86; "neither necessary nor by itself sufficient"; "For linear models, SGD always converges to a solution with small norm" → confirmed → https://arxiv.org/abs/1611.03530
+- he2016deep Table 2 (fig-02-04 spec) → top-1 (10-crop, ImageNet val) plain 27.94/28.54, ResNet 27.88/25.03 → confirmed; spec unchanged → https://arxiv.org/abs/1512.03385
+- recht2019imagenet → 3%–15% CIFAR-10, 11%–14% ImageNet, ~five years → confirmed → https://arxiv.org/abs/1902.10811
+- geirhos2019imagenettrained → humans shape 95.9% of correct decisions; ResNet-50 22.1% vs 77.9%; 63.9% → confirmed → https://arxiv.org/abs/1811.12231
+- nakkiran2021deep → "even quadrupling"; 15% label noise → confirmed → https://arxiv.org/abs/1912.02292
+- ioffe2015batch "14 times fewer training steps"; santurkar2018how "little to do with the success", "significantly smoother"; he2015delving 30-layer, "Xavier" "completely stalls"; kingma2015adam defaults and "trust region"; loshchilov2019decoupled "substantially improves Adam's generalization performance"; goodfellow2015explaining 57.7%/99.3%, ε .007, 0.94% → 0.84%; ilyas2019adversarial "non-robust features", "brittle and (thus) incomprehensible to humans" → all confirmed (arXiv 1502.03167, 1805.11604, 1502.01852, 1412.6980, 1711.05101, 1412.6572, 1905.02175)
+- zech2018variable → 158,323 radiographs; 34.2% vs ~1%; AUC 0.861; 99.95%/99.98%; 0.931 vs 0.815; confounding conclusion → confirmed → https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002683
+- Figures: only fig-02-04 carries external data (checked above); fig-02-01/02/03/05 are author calculations, fig-02-06 schematic. No spec change.
+
+### Still unverifiable from primary text
+- NYT 8 July 1958 article itself (paywalled); wording rests on consistent reproductions, as cited.

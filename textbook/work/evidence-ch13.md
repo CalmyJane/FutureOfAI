@@ -363,3 +363,5 @@ Scope: ch13 plus preface (ch00). WebSearch budget for the session ran out near t
 ### Bibliography
 - New (ch13 only): usdcnortherncal2026bartz, authorsguild2026important, usdcnortherncal2026kadrey, ussupremecourt2026thaler, papini2026openai, vismaya2026google, yang2025openai. No shared keys edited. anthropicsettlement2026 and trump2026inaugurating remain in bib but uncited.
 - Body word count 9,632 (title to Further reading). pandoc --citeproc: no warnings.
+- (Coordinator, 2026-10-24) ISO/IEC 42001:2023 publication confirmed via web search: first edition published 18 December 2023 (IEC webstore https://webstore.iec.ch/publication/90574; Standards Australia announcement). Text says "published in 2023": confirmed.
+- (Coordinator, 2026-10-24) Bartz final approval 20 July 2026 by Judge Martínez-Olguín, 53 objections overruled, confirmed via Authors Alliance (https://www.authorsalliance.org/2026/07/21/bartz-v-anthropic-settlement-receives-final-approval/) and the order PDF. No primary confirmation of an appeal found; text correctly says nothing about appeals.

@@ -228,3 +228,61 @@ Prose pass following work/POLISH-GUIDE.md, panel2 reports and audit-consistency2
 - §10.6: legislation paragraph no longer restates Table 10.3 row by row (SB 243 summarised; New York, Illinois, Nevada as takeaway); debate-box closer reworded and folded into prose; doubled OpenAI attribution reduced.
 - §10.8: new closing synthesis paragraph (set-up, outcome measured, thin evidence vs fast adoption, protection of disclosures); the cross-domain moral at the end of the Be My Eyes paragraph cut.
 - Long sentences (>45 words) split throughout. Body word count 8,831 → about 8,800. Pandoc --citeproc: no warnings.
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Gaps from earlier logs, then spot-checks. The WebSearch budget ran out late in the pass; the remaining checks used direct fetches of primary pages (PubMed E-utilities, arXiv API, OpenAlex, publisher and company pages).
+
+### Logged gaps
+- desimone2025chalkboards (working paper) → no journal version found; World Bank record (WPS, 20 May 2025): 0.31 SD overall, 0.23 SD English, 1.5–2 years of schooling, largest effects for girls and higher performers → confirmed; "working paper" label kept → https://openknowledge.worldbank.org/entities/publication/15e1ff08-15ae-4f7a-b2a8-d146e6c113ee/full
+- kosmyna2025brain (preprint) → arXiv v2 (31 Dec 2025), no journal_ref; a Jan 2026 arXiv comment (2601.00856) treats it as unpublished → still a preprint
+- fang2025ai / phang2025investigating (preprints) → arXiv no journal_ref; Crossref shows only a Research Square posting (27 Apr 2026) for Fang et al. → still preprints
+- henkel2024effective / wang2024tutor (preprints) → no journal_ref (Wang v3, 10 Oct 2026); Wang abstract re-read: 900 tutors, 1,800 students, +4 pp (p<0.01), +9 pp for lower-rated tutors, $20 per tutor annually, 550,000+ messages, more guiding questions / fewer answers given away → confirmed, still preprints → https://arxiv.org/abs/2410.03017
+- lukac2025ambient (seconds from UCLA release) → NEJM AI 2(12), Dec 2025 (online 26 Nov 2025); 238 physicians, 14 specialties, ~72,000 encounters, Nov 2024–Jan 2025; Nabla 4:30 → 3:49 (−41 s vs −18 s control), 9.5% larger reduction than control; DAX n.s. → confirmed (UCLA release, Newswise, HealthDay) → https://www.uclahealth.org/news/release/ucla-study-finds-ai-scribes-may-reduce-documentation-time
+- heinz2025randomized / kelly2025first (between-group results unreadable) → coverage (MIT Technology Review, ScienceDaily) reports only within-group 51% / 31% / 19% → text already attributes these to the university and says they are within-group; still no between-group numbers → https://www.technologyreview.com/2025/03/28/1114001/the-first-trial-of-generative-ai-therapy-shows-it-might-help-with-depression/
+- kraft2019interpreting / kraft2020interpreting → published article still not reachable; numbers stay cited to the working paper → unchanged
+- stadler2024cognitive (abstract not reopened in FC2) → OpenAlex abstract: 91 university students randomly assigned to ChatGPT-3.5 or Google; nanoparticles-in-sunscreen task; "significantly lower cognitive load" but "lower-quality reasoning and argumentation" → confirmed → https://api.openalex.org/works/doi:10.1016/j.chb.2024.108386
+- zeff2025openaic (openai.com blocked) → openai.com still 403; TechCrunch, Decrypt and others agree: 0.15% of weekly active users, "explicit indicators of potential suicidal planning or intent", >800 million weekly users, 91% vs 77% → confirmed (secondary; attributed to OpenAI in text) → https://techcrunch.com/2025/10/27/openai-says-over-a-million-people-talk-to-chatgpt-about-suicide-weekly/
+- openai2025response (read via jina) → preservation duty ended as of 26 Sep 2025 (stipulated order signed 9 Oct 2025); flagged accounts still retained → consistent with text → https://www.engadget.com/ai/openai-no-longer-has-to-preserve-all-of-its-chatgpt-data-with-some-exceptions-192422093.html
+- fda2026artificial → page moved (301) to .../artificial-intelligence-enabled-medical-devices/list-artificial-intelligence-enabled-medical-devices; same version (content current 09/04/2026, published 09/22/2026); re-parsed: 1,614 rows; 2015–2025 = 6, 18, 27, 65, 80, 114, 129, 162, 226, 235, 335 (2026: 181); K 1,553 / DEN 40 / P 21; Radiology 1,230, Cardiovascular 154, Neurology 73; "not a comprehensive resource" and LLM-tagging sentence present → confirmed; **bib URL updated** → https://www.fda.gov/medical-devices/artificial-intelligence-enabled-medical-devices/list-artificial-intelligence-enabled-medical-devices
+
+### Spot-checks (PubMed abstracts re-read unless stated)
+- bastani2025generative (PNAS 122(26), erratum 122(34)): nearly 1,000 students; +48% / +127% practice; −17% exam; "crutch" → confirmed
+- kestin2025ai (Sci Rep 15:17458) → confirmed
+- goh2024large (50 physicians, 26 attendings / 24 residents, 29 Nov–29 Dec 2023) → confirmed
+- goh2025gpt (92 physicians, Nov 2023–Apr 2024; +6.5%, 95% CI 2.7–10.2; +119.3 s; −0.9% vs LLM alone) → confirmed
+- wong2021external (27,697 / 38,455; 2,552 sepsis; AUC 0.63; 183 (7%); "implemented at hundreds of US hospitals", "not been adequately evaluated") → confirmed
+- wong2026multicenter (4 systems; 227,091 encounters, 31 Aug 2023–11 Mar 2025; AUROC 0.82–0.92; PPV 0.13–0.26) → confirmed
+- han2024randomised (70 of 86 positive; single-centre predominance; publication bias) → confirmed
+- plana2022randomized (41 RCTs; median 294; 21 (51%) single-site; no full CONSORT-AI adherence) → confirmed
+- liu2019comparison (82 studies; 25 external; 14 same-sample; 87.0/86.4; 92.5/90.5) → confirmed
+- takita2025systematic (83 studies; 52.1%; p=0.10, 0.93, 0.007) → confirmed
+- lang2023artificial (MASAI safety analysis, four Swedish sites) → confirmed
+- gommers2026interval (Lancet 407(10527):505–514, 31 Jan 2026; 20% non-inferiority margin) → confirmed
+- eisemann2025nationwide (463,094 women, 12 sites, 119 radiologists, Jul 2021–Feb 2023; 6.7 vs 5.7 per 1,000; recall 37.4 vs 38.3; radiologists chose whether to use AI; "The study was funded by Vara", the maker of the AI viewer) → confirmed; **wording corrected** (see corrections) → PMC11922743
+- vaccaro2024combinations (106 studies, 370 effect sizes; g = −0.23, 95% CI −0.39 to −0.07) → confirmed
+- tu2025towards (159 scenarios; 20 PCPs; 30/32; 25/26; unfamiliar synchronous text chat) → confirmed
+- brodeur2026conversational → now in print: Lancet 408(10565):1732–1744 (24 Oct 2026; online 8 Oct 2026); 114 enrolled / 98 completed; zero safety stops; one hallucination; five additions; 33 of 44; Alphabet → confirmed; **bib updated**
+- willett2023highperformance (9.1% / 23.8% WER; 125,000 words; 62 wpm) and card2024accurate (45-year-old man; 99.6%, 90.2%, 97.5% over 8.4 months; ~32 wpm; >248 h) → confirmed
+- stephenson2026student (HEPI Report 199 PDF): 1,054 students, Savanta, Dec 2025; 94% for assessed work; 12% (2026) vs 8% (2025) vs 3% (2024) direct inclusion; 65% assessment changed significantly; explaining concepts and summarising most common → confirmed → https://www.hepi.ac.uk/wp-content/uploads/2026/03/HEPI-Report-199-Gen-AI-Survey-2026.pdf
+- silberling2026openai (ChatGPT Health, Jan 2026; >230 million weekly; not used for training) → confirmed (multiple reports of the OpenAI announcement)
+- ftc2025launches (11 Sep 2025; seven companies; 3-0) → confirmed → https://www.ftc.gov/news-events/news/press-releases/2025/09/ftc-launches-inquiry-ai-chatbots-acting-companions
+- anthropic2025updates (28 Aug 2025; choose by 8 Oct 2025; five years vs 30 days; Commercial Terms services excluded) → confirmed → https://www.anthropic.com/news/updates-to-our-consumer-terms
+- characterai2025taking (29 Oct 2025; "no later than November 25"; "two hours per day"; own age model plus Persona) → confirmed → https://blog.character.ai/u18-chat-announcement/
+- turkle2026artificial (Little, Brown; on sale 29 Sep 2026) → confirmed → https://www.hachettebookgroup.com/titles/sherry-turkle/artificial-intimacy/9780316573993/
+- Newer developments checked: FDA list (no newer version than Sept 2026); AMIE now in print; no published versions of the ch10 preprints; Character.AI and FTC items unchanged. Not re-checked this pass (search budget exhausted): Garante Replika/OpenAI items, WHO 1.3 billion, Speech Accessibility Project, Be My Eyes, NLLB/Seamless, Pew teens 2025 (all verified in FC1–FC2).
+
+### Corrections (old → new)
+1. §10.5 German screening study: "funded by a different AI vendor" → "funded by Vara, the company whose AI system it evaluated" (the old wording implied MASAI was vendor-funded; PMC11922743 funding statement).
+
+### Bib changes (ch10.bib only; keys not shared)
+- brodeur2026conversational: added volume 408, number 10565, pages 1732–1744; note "Published online 8 October 2026".
+- fda2026artificial: URL updated to the new list address; urldate 2026-10-24.
+
+### Figures and tables
+- fig-10-02: data re-counted from the live list, all values match. Spec wording only: "content current as of 04/09/2026" → "4 September 2026 (shown on the page as 09/04/2026)" to remove the date-format ambiguity. No data change.
+- fig-10-01 values (Bastani, De Simone, Kestin) confirmed; no change. Tables 10.1–10.3 unchanged.
+
+### Still unverifiable
+- Therabot between-group results (NEJM AI full text unreachable); text makes only a qualitative between-group claim.
+- Kraft numbers rest on the working paper.
