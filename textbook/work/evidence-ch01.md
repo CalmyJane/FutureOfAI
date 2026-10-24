@@ -266,3 +266,4 @@ Gaps from earlier logs (mirror-only, unread primaries, preprints) re-opened with
 
 ### Still unverifiable from primary text
 - OpenAI's own 900M post (403); Hendler 2008 full text (closed, earlier publisher-page readings only); Bachant & McDermott 1984 full text. All three are already worded or attributed so that the chapter claims no more than the accessible sources support.
+- (Coordinator, 2026-10-24) 900 million weekly users: OpenAI announcement of 27 Feb 2026 confirmed via TechCrunch (https://techcrunch.com/2026/02/27/chatgpt-reaches-900m-weekly-active-users). Text already labels it a company figure.

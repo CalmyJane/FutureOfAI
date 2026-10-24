@@ -236,3 +236,37 @@ Structural changes (POLISH-GUIDE global prose rules; audit-consistency2 ch06 tic
 
 Facts added: none (TPU gloss is a definition, consistent with Chapter 7). Facts removed: as listed above.
 No figure-caption or table changes. Pandoc --citeproc: no warnings.
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Gaps from earlier logs:
+- messeri2024artificial (full text paywalled; roles via Yale News) → confirmed again from Yale News (Oracle: search, evaluate, summarise literature; Surrogate: stand-in data incl. replacing human participants; Quant: analyse vast datasets; Arbiter: evaluate studies, replacing peer review); Nature full text still paywalled → https://news.yale.edu/2024/03/07/doing-more-learning-less-risks-ai-research
+- tao2026ai (read earlier by git clone) → confirmed by direct fetch: #728 "Full solution (Lean)", Aristotle + GPT-5.2 Pro, 6 Jan 2026, literature "Pomerance (2014)" similar; "The wiki is no longer updated. The latest data is as of Jun 30, 2026"; disclaimers include selection bias for AI success rates → https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems
+- Later Erdős results → not added (chapter's #728 discussion is historical); still not verified.
+- noaa2025noaa go-live date → still unverifiable (release says "has launched"; page updated 17 Feb 2026). Newer development found: AIGFS v1.1 implemented 27 July 2026 (12 UTC cycle), with spherical-harmonic loss, fine-tuning on four years of GDAS analyses, autoregressive training to 72 h; "Together these changes improve tropical cyclone intensity forecasts, improve forecast precipitation, and reduce the so-called blurring issue" → sentence added in §6.3, Table 6.1 weakness cell and caption updated, new entry nws2026aigfs → https://www.weather.gov/media/notification/pdf_2026/scn26-68_AIGFS_v1.1.pdf
+- si2024can / si2025ideationexecution camera-ready → venues confirmed (ICLR 2025 poster 29961; ICLR 2026 poster 10010564); OpenReview pages blocked by bot check, so camera-ready numbers still not compared (ICLR 2025 abstract states novelty p < 0.05; chapter's p < 0.01 is the paper's Test 1, checked in FC2) → https://iclr.cc/virtual/2025/poster/29961 ; https://www.iclr.cc/virtual/2026/poster/10010564
+- chervonyi2025goldmedalist (preprint) → published since: JMLR 26(241):1–39, 2025; abstract "84%" vs 54% unchanged; text "according to a preprint by its developers" → "according to its developers' paper in the *Journal of Machine Learning Research*"; bib → @article → https://jmlr.org/papers/v26/25-1654.html
+- novikov2025alphaevolve, mitchener2025kosmos, petrov2025proof (arXiv v5, 4 Sep 2025; abstract "25%" / "less than 5%" confirmed), sothanaphan2026resolution (v5, 26 Jan 2026), achim2025aristotle, chen2025seedprover, lang2024aifs, lu2024ai → still preprints (no journal/conference version found); labels kept.
+- georgiev2025mathematical → confirmed PNAS 123(40) e2536158123, online 30 Sep 2026 (Crossref) → https://api.crossref.org/works/10.1073/pnas.2536158123
+- CASP hyphen, AIFS operational vs preprint details → unchanged (no new source).
+
+Spot-checks (claim → outcome → URL):
+- ECMWF AIFS 25 Feb 2025: "gains of up to 20%" incl. TC tracks; ~1,000× less energy; same initial conditions → confirmed → https://www.ecmwf.int/en/about/media-centre/news/2025/ecmwfs-ai-forecasts-become-operational
+- AIFS ENS 1 July 2025: 51 members, 31 km vs 9 km, up to 20% incl. surface temperature, >10× faster, ~1,000× less energy, "remains indispensable" → confirmed → https://www.ecmwf.int/en/about/media-centre/news/2025/ecmwfs-ensemble-ai-forecasts-become-operational
+- IFS 50r1 / AIFS v2, 12 May 2026; first data-driven wave and snow-cover forecasts → confirmed. HRES: source says ECMWF "removed the duplication between the old 'HRES' single forecast and the Ensemble control"; text "removed HRES as a separate forecast, merging it with the control run" → corrected to "ended the duplication between HRES and the control forecast of its ensemble" → https://www.ecmwf.int/en/about/media-centre/news/2026/ifs-cycle-50r1-aifsv2-live
+- NOAA 17 Dec 2025 release: GraphCast "as an initial foundation", GDAS fine-tuning, 99.7%, 31 members, 9%, 18–24 h, HGEFS "most major verification metrics", v1.0 TC intensity degradation, "many large-scale features" → confirmed → https://www.noaa.gov/news-release/noaa-deploys-new-generation-of-ai-driven-global-weather-models
+- A-Lab correction (19 Jan 2026): secondary record gives corrected tally "36 of 57 targeted compounds" (i.e. one target removed from 58; 40 reported successes after removal) → wording corrected: removed compound now stated before the 36-of-40 tally (old "A further compound was removed" implied a removal beyond the 40) → https://kingy.ai/mathematics-science-breakthrough-tracker/records/science-correction-2026-a-lab-autonomous-materials/ (Nature page behind login; FC1 read correction text)
+- Mathlib statistics → updated to page as of 24 Oct 2026: 139,569 definitions, 291,178 theorems, 772 contributors (was 139,563 / 291,099) → https://leanprover-community.github.io/mathlib_stats.html
+- Gemini Deep Think IMO 2025 (21 July 2025): 5 of 6, 35/42, natural language within 4.5 h, "officially graded and certified by IMO coordinators" → confirmed → https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/
+- Decoder 18 Oct 2025: Weil's "10 (!) previously unsolved Erdős problems"; Bloom "a dramatic misinterpretation"; open = he doesn't know solution; tweets mostly deleted; Tao on literature search → confirmed → https://the-decoder.com/leading-openai-researcher-announced-a-gpt-5-math-breakthrough-that-never-happened/
+- Sothanaphan #728 writeup (GPT-5.2 Pro + Aristotle, operated by Kevin Barreto; Lean proof) → confirmed → https://arxiv.org/abs/2601.07421
+- Sakana ICLR 2025 workshop (12 Mar 2025): 3 papers, 6/7/6, withdrawn by protocol, reviewers told some of 43 submissions might be AI-generated, none good enough for main track → confirmed → https://sakana.ai/ai-scientist-first-publication/
+- lu2026towards: Nature 651:914–919, online 25 Mar 2026; workshop with 70% acceptance; "taxing overwhelmed review systems" → confirmed → https://api.crossref.org/works/10.1038/s41586-026-10265-5
+- hao2026artificial: Nature 649:1237–1243, online 14 Jan 2026 → metadata confirmed (numbers checked in FC2) → https://api.crossref.org/works/10.1038/s41586-025-09922-y
+- Si et al. 2025: 43 executors, >100 h, blind review, AI ideas' scores dropped more → confirmed (ICLR 2026 summary)
+- Fig. 6.3 timeline entries re-checked against the above (AG2 not on the timeline; Georgiev PNAS Sep 2026 correct) → no change. Figs 6.1, 6.2 conceptual → no data changes.
+
+Spec changes: figures/specs/tbl-06-01.md NOAA weakness cell "Worse tropical cyclone intensity forecasts (v1.0)" → "… (v1.0; July 2026 upgrade reported to improve them)", source key nws2026aigfs added to row and caption.
+Bibliography changes (ch06.bib only; no shared keys): chervonyi2025goldmedalist (@article JMLR), lean2026mathlib urldate, new nws2026aigfs.
+Pandoc --citeproc: no warnings. Body (before Further reading) 9,803 words.
+Note: web-search budget was exhausted during this pass; later checks used direct fetches (Crossref, publisher and agency pages).

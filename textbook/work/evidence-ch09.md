@@ -272,3 +272,4 @@ Gaps from earlier logs, then spot-checks. The WebSearch budget ran out near the 
 ### Still unverifiable
 - Hackenburg et al. conversation-vs-static percentages, durability, personalisation and inaccuracy figures: accepted manuscript only.
 - Costello 27.4% (preprint) and Argyle numbers (preprint): published full texts not reachable.
+- (Coordinator, 2026-10-24) Hackenburg et al. "The levers of political persuasion with conversational AI", Science (Dec 2025), DOI 10.1126/science.aea3884: N = 76,977 UK adults, 19 LLMs, 707 issues, 466,769 claims fact-checked, confirmed via Oxford press release (https://www.ox.ac.uk/news/2025-12-11-study-reveals-how-conversational-ai-can-exert-influence-over-political-beliefs) and arXiv 2507.13919. Detailed effect sizes still rest on the LSE accepted manuscript.

@@ -216,3 +216,43 @@ Structural changes (POLISH-GUIDE global prose rules; audit-consistency2 ch05 tic
 
 Facts added: none (the Cohen's kappa gloss is a standard definition, no citation). Facts removed: as listed above.
 No figure-caption changes; table captions changed only by the added ids. Pandoc --citeproc: no warnings.
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Gaps from earlier logs (closed / still open):
+- openai2026why (read earlier only via search extraction / r.jina.ai) → confirmed by web search of the primary page (direct fetch still 403): 23 Feb 2026; audit of 138 problems (27.6% of the set) o3 did not solve consistently in 64 runs; "at least 59.4%" with flawed tests or descriptions; contamination; SWE-bench Pro recommended → https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/
+- openai2024introducing → confirmed: 13 Aug 2024; 93 Python developers; 1,699 random samples annotated; 500 verified; GPT-4o 33.2% → https://openai.com/index/introducing-swe-bench-verified/
+- openai2023function → confirmed: 13 June 2023; functions described with JSON schema, model returns JSON arguments → https://openai.com/index/function-calling-and-other-api-updates/ ; https://simonwillison.net/2023/Jun/13/function-calling/
+- openai2025computer (read earlier via r.jina.ai, undated) → confirmed: OSWorld 38.1% (human 72.4%), WebArena 58.1% (human 78.2%); Operator launch 23 Jan 2025 → https://openai.com/index/computer-using-agent/ (localised version) ; TechCrunch 23 Jan 2025
+- debenedetti2024agentdojo track (not verified earlier) → confirmed NeurIPS 2024 Datasets and Benchmarks Track; bib booktitle updated → https://proceedings.neurips.cc/paper_files/paper/2024/hash/97091a5177d8dc64b1da8bf3e1f6fb54-Abstract-Datasets_and_Benchmarks_Track.html
+- cemri2025why track → still unverifiable (NeurIPS 2025 spotlight poster; track not stated on neurips.cc or MLAnthology); bib unchanged → https://neurips.cc/virtual/2025/poster/121528
+- sajadieh2026ai OSWorld 66.3% version → still unverifiable (Anthropic's Opus 4.5 page and Epoch AI model page give no version); text already says "version not stated"
+- barres2025tau2 (preprint) → published since: ICML 2026 (oral, session "Oral 6B Agentic Systems"); text "described in a preprint" → "published at ICML in 2026"; bib → @inproceedings → https://icml.cc/virtual/2026/session/68671
+- nasr2025attacker (preprint) → published since: USENIX Security '26, pp. 1467–1486, same 14 authors; abstract numbers unchanged (12 defences, >90%); text now "released in 2025 and published at the USENIX Security Symposium in 2026"; bib → @inproceedings → https://www.usenix.org/conference/usenixsecurity26/presentation/nasr
+- hadfield2025economy (forthcoming handbook) → published since: ch. 5 of *The Economics of Transformative AI*, ed. Agrawal, Brynjolfsson, Korinek (University of Chicago Press/NBER; published Sept 2026, citation field says 2025); NBER PDF (Dec 2025 revision) blocked (403), so quotes kept from arXiv v1 and labelled "quoted here from the preprint version"; correlated-errors quote re-found in arXiv text by search → https://www.nber.org/books-and-chapters/economics-transformative-ai/economy-ai-agents
+- becker2025measuring → still a preprint (no journal version found); numbers confirmed (16 developers, 246 tasks, +19%, −24% forecast). METR's Feb 2026 follow-up judged its new data unreliable (selection effects); chapter's "one small study … cannot settle the question" remains accurate → https://arxiv.org/abs/2507.09089
+- wallace2024instruction, packer2023memgpt, beurerkellner2025design, tomasev2025virtual, deng2025swebench → still preprints (no venue found by search); labels kept. chen2021evaluating, hammond2025multi unchanged (preprint / technical report).
+- kapoor2025ai TMLR 2025 → confirmed (TMLR bib file jmlr.org/tmlr/papers/bib/Ckh17xN2R2.bib; Kapoor CV)
+
+Spot-checks (claim → outcome → URL):
+- AAIF 9 Dec 2025; Anthropic, Block, OpenAI; >10,000 servers; 97M+ SDK downloads; ChatGPT, Cursor, Gemini, Microsoft Copilot, VS Code → confirmed → https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation
+- MCP current revision 2026-07-28; stateless, handshake removed, version/capabilities in _meta; Roots, Sampling, Logging deprecated; elicitation still present (via MRTR) → confirmed → https://modelcontextprotocol.io/specification/versioning ; https://modelcontextprotocol.io/specification/2026-07-28/changelog
+- A2A latest 1.0.0; task states; JSON-RPC, gRPC, HTTP+JSON; opacity quote → confirmed → https://a2a-protocol.org/latest/specification/
+- Linux Foundation A2A 23 June 2025, "more than 100 leading technology companies" → confirmed → https://linuxfoundation.org/press/linux-foundation-launches-the-agent2agent-protocol-project-to-enable-secure-intelligent-communication-between-ai-agents
+- Project Vend 2 (18 Dec 2025): discounts −~80%, giveaways halved, "largely eliminated", ~8×, "in spite of the CEO", onions quote and 1958 Act, "friend who just wants to be nice", "capable"/"completely robust", Sonnet 4.0→4.5, SF/NY/London → confirmed → https://www.anthropic.com/research/project-vend-2
+- OSWorld 369 tasks, 72.36%, 12.24% → confirmed → https://arxiv.org/abs/2404.07972
+- OSWorld newer development: site now redirects to osworld-v1.xlang.ai with notice "2026-06-26: OSWorld 2.0 is now available"; OSWorld 2.0 (arXiv 2606.29537, v1 28 June, v2 13 July 2026): 108 long-horizon workflows, median ~1.6 h for humans, best agent (Claude Opus 4.8) 20.6% binary completion at 500 steps → added one sentence to §5.4 and new entry yuan2026osworld → https://osworld-v2.xlang.ai/ ; https://arxiv.org/abs/2606.29537
+- OSWorld-Verified leaderboard values (86.0%, 90.2%) → not re-read (leaderboard table loads dynamically); kept from Fact-check 2
+- τ-bench site: 2026 additions are branded τ³-bench (Feb 2026 audit "Audited and fixed 50+ tasks across the airline and retail domains"; Mar 2026 banking, "~700 documents"); best banking pass^1 55.2% (Qwen 3.8 Max) → corrected naming in §5.5 text and Table 5.3 caption; numbers confirmed → https://taubench.com/
+- Multi-agent research system: 13 June 2025; Opus 4 lead, Sonnet 4 subagents; +90.2%; ~4× / ~15× tokens; 80% of BrowseComp variance; coding less parallelisable → confirmed → https://www.anthropic.com/engineering/multi-agent-research-system
+- AP2: 16 Sept 2025; >60 organisations; authorisation definition; "tamper-proof, cryptographically-signed digital contracts"; "non-repudiable audit trail"; automatic Cart Mandate quote; A2A x402 extension with Coinbase, Ethereum Foundation, MetaMask → confirmed → https://cloud.google.com/blog/products/ai-machine-learning/announcing-agents-to-payments-ap2-protocol
+- x402 Foundation 2 Apr 2026 under Linux Foundation; 40 launch members; premier members incl. card networks, cloud providers, payment firms → confirmed → https://docs.cdp.coinbase.com/x402/support/x402-foundation
+- NCSC (Chismon, 8 Dec 2025) three quotes → confirmed → https://www.ncsc.gov.uk/blog-post/prompt-injection-is-not-sql-injection
+- CVE-2025-32711: published 11 June 2025; description; Microsoft 9.3 CRITICAL (S:C), NIST 7.5 HIGH; PR:N/UI:N → confirmed → https://services.nvd.nist.gov/rest/json/cves/2.0?cveId=CVE-2025-32711
+- Willison trifecta elements and "95% is very much a failing grade" → confirmed → https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/
+- Replit (The Register, 21 July 2025): "instructions not to change any code without permission"; rollback said impossible, then worked; "a catastrophic error of judgement"; experiment duration not stated ("Day 7" post 17 July) → confirmed ("multi-day") → https://www.theregister.com/2025/07/21/replit_saastr_vibe_coding_incident/
+- SWE-bench Verified details (above); Fig. 5.3 values recomputed (p^n) → unchanged and correct.
+
+Bibliography changes (ch05.bib only; none of these keys is shared with another chapter): debenedetti2024agentdojo (track added), barres2025tau2, nasr2025attacker, hadfield2025economy (updated as above), new yuan2026osworld.
+Pandoc --citeproc: no warnings. Body (before Further reading) 9,759 words.
+Note: web-search budget was exhausted near the end of this pass; remaining checks used direct fetches.
