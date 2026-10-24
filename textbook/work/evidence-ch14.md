@@ -321,3 +321,50 @@ Final prose pass per work/POLISH-GUIDE.md, panel-2 general-reader report and aud
 
 ### Checks
 - pandoc --citeproc -t html: no warnings.
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Logged gaps
+- kucinskas2025assessing → confirmed (PDF text re-extracted): June–Oct 2022, 169 (89 SF, 80 DE); 38 of 172 subquestions resolved mid-2025; 0.18 SD n.s.; IMO 2.3%/8.6%, medians 2035/2030, gold July 2025 (GDM, OpenAI); 9.7% vs 24.6%; hydrogen $4.50/$3.50 vs $7.50; public −1.82 SD; median aggregation ~1 SD; no-change/extrapolation indistinguishable; no near/long-term correlation; MMLU 77.75/84.8/88.7; compute 100,000/420,680/578,703.7. Still an FRI working paper (no journal version found) → https://forecastingresearch.org/pdf/near-term-xpt-accuracy.pdf
+- XPT MATH resolution: tables 87.92%, text and resolution appendix 87.82% (GPT-4 Turbo, April 2024) → corrected: Table 14.1 cell 87.9% → "about 88%", caption notes both values.
+- karger2023forecasting / karger2025subjective: 0.38% vs 3% AI extinction by 2100; N = 88 SF and 29 AI experts; "Few minds were changed" → confirmed in working paper PDF (https://forecastingresearch.org/pdf/existential-risk-persuasion-tournament.pdf); IJF article full text not accessible (metadata only); kept as joint citation.
+- rosenberg2026how (previously read via r.jina.ai) → confirmed by direct fetch: 22 Sept 2026, authors; LEAP mid-2025, 339 experts; FrontierMath 31/30 vs 40.7% (unadjusted; Epoch later found errors in ~42% of problems) → caption now says "unadjusted score"; work hours 4/3.6 vs 5.7% (2% baseline later revised to 3.35%); Active Site RCT 22.5/40/16.2 vs 5.2%; AV 7.3% vs LLM 2.5%; Mythos Preview 80% 3.1 h (8 May 2026); revenue $70bn/$90bn vs ~$140bn; Wave 9 50% by 2030; underestimate-bias quote; "not yet seen evidence"; "reasonably representative" → https://forecastingresearch.org/research/ai-progress-accuracy-update
+- metr2026task: data file re-downloaded: all_time_stitched 187.778 d; from_2023_on 128.744 [104.428, 158.012]; Mythos Preview (early) p50 1,044.8 min, p80 185.9 min; Opus 4.6 p50 718.8 min → confirmed. NEW: time-horizons page changelog shows last model added 8 May 2026 and on 8 Sept 2026 "Clarified that this page is no longer actively updated" → corrected: "data file as updated in September 2026" → "data file, to which the last model was added in May 2026 (in September METR said it was no longer actively updating its time-horizon page)"; Table 14.2 lead-in "September 2026 data file" → "that data file" → https://metr.org/time-horizons/ ; https://metr.org/assets/benchmark_results_1_1.yaml
+- metr2026time → confirmed 196.5 / 130.8 [107, 161] / 88.6 days; 170 → 228 tasks → https://metr.org/blog/2026-01-29-time-horizon-1-1/
+- metr2026risk → confirmed "~12h [5h-61h]", window 16 Feb–16 Mar 2026, 16-hour limit → https://metr.org/blog/2026-05-19-frontier-risk-report/
+- kokotajlo2025ai (previously via jina) → confirmed by direct fetch: 3 Apr 2025; authors; SC Mar, SAR Aug, SIAR Nov, ASI Dec 2027; ~50x (Sept 2027); "not a recommendation or exhortation"; July 2025 +1.5 yr; 22 Nov 2025 modal/median note; Dec 2025 Lifland 2030 → https://ai-2027.com/ . NEW development: Q1 2026 update (2 Apr 2026) shortened AC medians (Kokotajlo late 2029 → mid 2028; Lifland early 2032 → mid 2030); Q2.5 update (16 Aug 2026) "slightly shorter": AC p50 Kokotajlo Nov 2027, Lifland Jan 2030 → sentence added with new key lifland2026q25 → https://blog.aifutures.org/p/q1-2026-timelines-update ; https://blog.aifutures.org/p/q25-2026-timelines-update-uplift
+- iea2026key: iea.org still 403. Secondary reports of the IEA text say USD 715 bn is capex of five technology companies (Alphabet, Meta, Microsoft, AWS, Oracle), >USD 400 bn in 2025, +75%, mostly on data centres; ch07 (PDF read) says "hyperscalers and newer specialised providers" → corrected: "The IEA expects data-centre capital spending of about USD 715 billion" → "According to the IEA, the largest cloud and AI infrastructure companies expect capital spending, most of it on data centres, of about USD 715 billion"; "far below annual capital spending on data centres" → "far below that capital spending"; Table 14.4 cell likewise → https://ae-solar.com/company/news/149 (secondary) ; ch07 log. TWh figures not re-openable (rely on ch07 full-PDF read).
+- bick2025state: St. Louis Fed (13 Nov 2025): 54.6% Aug 2025; earlier estimate 39.4% for August 2024 revised to 44.6% → corrected: "earlier estimate of nearly 40% for late 2024" → "earlier estimate of 39.4% for August 2024 was revised upwards, to 44.6%" → https://www.stlouisfed.org/on-the-economy/2025/nov/state-generative-ai-adoption-2025
+- ho2024algorithmic → confirmed NeurIPS 2024 abstract: ~8 months, 90% interval ~2–22 months → https://proceedings.neurips.cc/paper_files/paper/2024/hash/6b066da6a23bc55f9b887e7298102884-Abstract.html
+- 14 GW worst case (doring2012dealing) → still secondary only; study press release (VDE/FNN, Ecofys, IFK, TSOs, BSW, 20 Sept 2011) read: ~315,000 installations > 10 kWp, ~9 GW to retrofit, EUR 65–175 m, does not state 14 GW. Kept with explicit attribution to Döring/Ecofys → https://www.vde.com/resource/blob/824828/e0b227dba34542c12db365dc745af6b1/vde-fnn-studie-50-2hz-pressemitteilung-data.pdf
+- germany2012sysstabv: gesetze-im-internet.de returned 503; search results from gesetze-im-internet.de/gesetze.legal confirm 20 July 2012, BGBl. I S. 1635, in force 26 July 2012, § 2(1) LV > 10 kW commissioned after 31 Aug 2005 and before 1 Jan 2012 → confirmed (secondary copies) → https://gesetze.legal/bund/sysstabv/2
+- wack1985scenarios volume/pages: still unverifiable (sources give Sept–Oct 1985 issue only); bib unchanged (month/year/URL).
+- mitchell2021why → confirmed arXiv abstract (AI spring/winter) → https://arxiv.org/abs/2104.12871
+- steinhardt2022ai → confirmed (3 July 2022; Aug 2021 Hypermind; MATH 12.7 vs 50.3; MMLU 57.1 vs 67.5; adversarial CIFAR-10 70.4 forecast vs 66.6) → https://bounded-regret.ghost.io/ai-forecasting-one-year-in/
+- berg2008prediction (previously via jina) → confirmed 964 polls, 1988–2004, 74%, >100 days; IJF 24(2):285–300 (RePEc) → https://ideas.repec.org/a/eee/intfor/v24y2008i2p285-300.html
+- pedersen2026learning → Crossref confirms Endoscopy 58(9):1003–1014, published 3 June 2026, authors; secondary summary: no sustained upskilling or deskilling (PDR-5). Abstract not reopened (Europe PMC 503, Thieme bot wall).
+- Preprints, published-since check: becker2025measuring, cottier2024rising, korbak2025chain, ide2025automation (also CEPR DP 20940), glazer2024frontiermath, hammond2025multi → no peer-reviewed version found; labels unchanged.
+- grace2025thousands → confirmed JAIR vol. 84, published 6 Oct 2025; arXiv v3 8 Oct 2025; six venues (NeurIPS, ICML, ICLR, AAAI, IJCAI, JMLR); 20,066 emailed; 2,778, 15%; 2061/2060/2047; 34 vs 17 years; 5% (mean 9%); 37.8–51.4%; equal weight → https://www.jair.org/index.php/jair/article/view/19087 ; https://arxiv.org/html/2401.02843v3
+
+Spot checks (load-bearing)
+- karger2025forecastbench → confirmed Table 2: 0.096 / 0.121 / 0.122 (Claude 3.5 Sonnet, freeze values), p < 0.001; top LLMs had crowd forecasts → https://arxiv.org/html/2409.19839v5
+- europeanparliament2026regulation → confirmed: Reg. (EU) 2026/1744, OJ 24 July 2026, in force 27 July 2026; Annex III 2 Dec 2027, Annex I 2 Aug 2028 (law-firm summaries) → https://www.mondaq.com/uk/new-technology/1825722/eu-digital-omnibus-on-ai-enters-into-force
+- bis2026revision → confirmed 15 Jan 2026 rule, H200 presumption of denial → case-by-case with conditions; no later change found → https://datacenterdynamics.com/en/news/nvidia-h200-chips-can-be-exported-to-china-on-case-by-case-basis-us-government/
+- pew2025how → confirmed 51% vs 15%; Aug 12–18 2024 (n 5,410), experts Aug 14–Oct 31 2024 (n 1,013) → URL in bib
+- smith2026designing → confirmed 25 Aug 2026 issue brief; agents "should be subject to a duty of loyalty" → URL in bib
+- humlum2025still → confirmed effects "larger than 2%" ruled out, two years after ChatGPT; May 2025, rev. March 2026 → https://www.nber.org/papers/w33777
+- bonney2026microstructure → confirmed 18% / 32%, Nov 2025–Jan 2026, CES 26-25 April 2026 → PDF in bib
+- epochai2026trends → confirmed 5×/yr since 2020; compute capacity 3.4×/yr since 2022; dated 5 Feb 2026 → https://epoch.ai/trends
+- brynjolfsson2026canaries → confirmed 19% below, data through June 2026, revised 12 Aug 2026 → https://digitaleconomy.stanford.edu/publications/canaries-in-the-coal-mine/
+- sevilla2024can → confirmed every Table 14.3 cell, 2e29, ~10,000× GPT-4, power then chips, 20 Aug 2024 → https://epoch.ai/blog/can-ai-scaling-continue-through-2030
+- kim2025correlated → confirmed >350 LLMs; 60%; "larger and more accurate models have highly correlated errors, even with distinct architectures and providers" → https://proceedings.mlr.press/v267/kim25e.html
+- uk2021electric → confirmed reg. 11(1)–(3) (1800 s; 600 s; owner cancel; DSR exception) → https://www.legislation.gov.uk/uksi/2021/1467/regulation/11
+- buser2025reliability, knight1986experimental, dratsch2023automation → confirmed against OpenAlex abstracts (1,199,838 events/728 screeners/~100 events/hit rate < 0.9; 27 versions/one million tests; 79.7% vs 19.8%, 27 radiologists).
+- faa2013manual: faa.gov 403 this session; unchanged from earlier PDF read.
+
+Figures
+- fig-14-01: HLMI 2060 (n 461) → 2047 (n 1,714); FAOL 2164 (n 202) → 2116 (n 774) re-confirmed against Table 6 (arXiv v3). No change. fig-14-02/-03 schematic; fig-14-04 3,000 MW and 600 s re-confirmed. No spec changes.
+
+Notes
+- WebSearch per-turn budget was exhausted near the end of this pass; the 738-respondent 2022 total (not in text or figure) was not re-searched.
+- pandoc --citeproc: no warnings.

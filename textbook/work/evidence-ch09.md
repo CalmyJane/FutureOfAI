@@ -233,3 +233,42 @@ Cuts (facts removed from text, still verified in sources)
 - CETaS sentence at the end of the liar's-dividend subsection (duplicated §9.4 monitoring paragraph).
 - Deepfake-Eval-2024 hours/image counts (45 h video, 56.5 h audio, 1,975 images); Costello sample size of 128 claims; Argyle per-year vote shares except 2012 (now "within six percentage points"; correlations as range 0.90–0.94); Pew 2026 monthly errors (11.3/14.7/11.2); Pew search: click rates now in words with reference to Figure 9.4, cut the 8%/53%/60% query-length shares, 67-word median and Wikipedia/YouTube/Reddit 15%; DNR 2026 sample sizes, under-35 16%, social-media click-through 36%.
 - Doubled attributions "according to the company" removed (3 places).
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Gaps from earlier logs, then spot-checks. The WebSearch budget ran out near the end of the pass, so the last checks used direct fetches of primary pages only.
+
+### Logged gaps
+- stockwell2024threat (CETaS pages behind Cloudflare, earlier read via jina) → 16 UK / 11 EU+French viral cases, "no evidence" of a meaningful effect on results → confirmed via search (CETaS page still 403; Turing written evidence and IET/UKTN coverage agree; "27" in one report = 16 + 11) → https://engx.theiet.org/b/articles/posts/researchers-find-no-evidence-that-ai-generated-content-impacted-recent-european-elections
+- europeanparliament2026regulation (omnibus OJ date taken from ch13) → Reg. (EU) 2026/1744, OJ 24 July 2026, in force 27 July 2026; Art. 50(2) grace period to 2 Dec 2026 for systems on the market before 2 Aug 2026; NCII and CSAM prohibitions from 2 Dec 2026; Annex III 2 Dec 2027, Annex I 2 Aug 2028 → confirmed (law-firm summary; EUR-Lex returned no text) → https://cdp.cooley.com/digital-ai-omnibus-delays-key-deadlines-introduces-new-rules/
+- jonesday2026european (Commission page 403) → final Code of Practice 10 June 2026, voluntary, "at least two layers of machine-readable marking where necessary" → confirmed (Jones Day, CEPIC reproduction of the Commission release; SCL and IDPC give later dates for their own posts) → https://www.cepic.org/post/commission-publishes-code-of-practice-on-marking-and-labelling-ai-generated-content
+- hackenburg2025levers (published Science text paywalled) → Science 390(6777), 4 Dec 2025; 76,977; 19 LLMs; 707 issues; 466,769 claims; up to 51% / 27%; about half of explainable variation → confirmed (Oxford OII release). Conversation-versus-static percentages (41%/52%), 36–42% durability, 0.43 points and 30.0% vs 16.0% → still only in the LSE accepted manuscript; science.org 403, Europe PMC down. Kept as before. → https://www.oii.ox.ac.uk/oxford-researchers-reveal-how-conversational-ai-can-change-political-opinions/
+- costello2024durably ("one in four", 27.4%) → Science 13 Sep 2024; 2,190; about 20%; 2 months; spillover → confirmed (MIT Sloan/IDE summaries). 27.4% stays labelled as the preprint figure; Science full text not reachable → https://ide.mit.edu/insights/debunker-chatbot-makes-a-splash-spurs-debate/
+- argyle2023out (numbers from preprint) → published full text still not reachable; "preprint version" label kept → unchanged
+- chandra2025deepfake (preprint) → arXiv v5 (27 May 2026), no journal_ref; search found no published version → still a preprint, label kept → https://arxiv.org/abs/2503.02857
+- goldstein2023generative (preprint) → arXiv only, no journal_ref → still a preprint → https://arxiv.org/abs/2301.04246
+- gowal2025synthidimage (preprint, uncited in body) → no journal_ref → unchanged
+- piccardi2025reranking → arXiv journal_ref "Science 390(6776), 27 November 2025", DOI 10.1126/science.adu5584 → bib confirmed
+- solea2024romanias (Romania; not re-fetched) → annulment 6 Dec 2024, run-off due 8 Dec, declassified files released 4 Dec, ~25,000 TikTok accounts (per declassified documents), Georgescu "officialized coup" → confirmed (AP via KSAT; The Hacker News) → https://www.ksat.com/news/world/2024/12/06/romanias-top-court-annuls-first-round-of-presidential-vote-won-by-far-right-candidate/
+- Grok outcomes after Jan 2026 (not checked earlier) → Ofcom investigation "remains ongoing" (Ofcom statement, 15 Jan 2026); no later decision found; EC proceedings opened 26 Jan 2026, no preliminary findings or fine found → text makes no outcome claim; no change → https://www.theregister.com/2026/01/15/ofcom_grok_probe/
+- afp2026musks (CCDH figures) → ~3 million sexualised images, ~23,000 apparently of children, 11 days (29 Dec–9 Jan), consent not established → confirmed (AFP via Philstar/CP24; Decrypt) → https://www.philstar.com/business/2026/01/23/2502988/musks-grok-created-three-million-sexualized-images-research-says
+- europeancommission2024commission (TikTok proceedings) → still open in Jan 2026 (Commission confirmation, retention order extended); no preliminary findings found → no change → https://agerpres.ro/english/2026/01/27/european-commission-confirms-investigation-into-romania-s-elections-and-tiktok-s-interference-is-sti--1522513
+
+### Spot-checks (load-bearing claims)
+- Opening: ElevenLabs, "instant voice cloning for as little as $5 a month"; ElevenLabs used in the Biden robocall; 604 = 304 + 300 listeners; 220 speakers; first two prompts → confirmed (Barrington et al. full text, Europe PMC PMC11958761)
+- Kramer: FCC $6m fine (unpaid per AP, Nov 2025); acquittal June 2025; later federal civil default judgment (League of Women Voters v. Kramer, Nov 2025, $7,500 to each of three voters) → text still correct (it does not claim the fine was paid); civil judgment not added → https://www.wcax.com/2025/11/25/political-consultant-defies-court-order-lawsuit-over-ai-robocalls-that-mimicked-biden/
+- kohli2025how → Gemini app SynthID check, Nov 2025; "over 20 billion" pieces of AI-generated content watermarked since 2023 → confirmed → https://blog.google/technology/ai/ai-image-verification-gemini-app/
+- pew2026well (re-read in full, Sept 2026 page) → Opus 4.6; total error 12.4 (11.3/14.7/11.2); Rep/Lean Rep 16.1; Dem/Lean Dem 13.6; college graduates 11.9; "none had an average error of less than 12 points"; 86% vs 45% billionaires (chart); >90% vs 69% police; "far less politically diverse"; no plans to use AI to generate survey results; twins from demographics + 2025 typology survey → confirmed. **Corrected** police item wording (see corrections) → https://www.pewresearch.org/data-labs/2026/09/30/how-well-synthetic-samples-replicate-public-opinion/ (via r.jina.ai; direct 403)
+- egan2026digital (re-read) → >2,500 sites, −33% globally Nov 2024–Nov 2025, −38% US; −43% expected over three years; AI effect "widely assumed"; hard news "mostly remain excluded"; weekly chatbot news 7% → 10%; no increase in USA, UK, France, Germany; trust 20% vs 37%; UK 6%; click-through 42%, search 44%; 48 markets → confirmed → https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026/dnr-executive-summary
+- uscongress2025tools → platform duties from 19 May 2026 → confirmed; FTC began enforcing on 19 May 2026 (reporting portal; warning letters 20 May) → text still correct, no addition needed → https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-begins-enforcing-take-it-down-act
+- Other spot-checks rest on the full-text reads in fact-checks 1–2 and were re-confirmed this pass only through the sources above: Kirchenbauer numbers (recomputed in FC2), SynthID-Text, Jovanović, C2PA 2.2, Pixel 10, Pennycook, Meta <1%, Kapoor & Narayanan, Schiff et al., Kalla & Broockman, Goldstein 2024, Hackenburg & Margetts, Hackenburg PNAS, Lin et al. (Nature 648), Salvi et al., Pew 2025, EBU, DSA articles, X €120m (IP/25/2934), House Judiciary report, Kaushal et al. No change.
+
+### Corrections (old → new)
+1. §9.6 Pew: "said police should be allowed to stop anyone who fits a suspect's description" → "said police should be allowed to stop and search anyone who fits the general description of a crime suspect" (Pew wording).
+
+### Figures and tables
+- fig-09-03 Pew/Lin/Hackenburg values and fig-09-04 Pew 2025 values unchanged (sources as above and in FC2). fig-09-01/02 unchanged. Tables 9.1–9.3 unchanged (dates in Table 9.3 confirmed against the omnibus summary and FTC release).
+
+### Still unverifiable
+- Hackenburg et al. conversation-vs-static percentages, durability, personalisation and inaccuracy figures: accepted manuscript only.
+- Costello 27.4% (preprint) and Argyle numbers (preprint): published full texts not reachable.
