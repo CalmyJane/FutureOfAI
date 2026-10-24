@@ -142,7 +142,7 @@ def _bars_base(ax, ymax, step):
 @fig("fig-07-03")
 def f0703():
     fig = F.figure(2.9)
-    ax = fig.add_axes([0.12, 0.2, 0.86, 0.76])
+    ax = fig.add_axes([0.12, 0.215, 0.86, 0.75])
     cats = ["2023", "2024", "2025", "Headwinds", "High\nEfficiency", "Base\nCase", "Lift-Off"]
     vals = [360, 416, 485, 833, 868, 945, 1008]
     xs = [0, 1, 2, 3.8, 4.8, 5.8, 6.8]
@@ -158,8 +158,8 @@ def f0703():
     ax.text(2.8, 1150, "Estimates", fontsize=7, ha="right", va="center", style="italic", color=G1)
     ax.set_xticks(xs)
     ax.set_xticklabels(cats, fontsize=7.3, linespacing=1.0)
-    ax.text(5.3, -205, "2030 (four IEA cases)", ha="center", va="center", fontsize=7.3, color=G1)
-    ax.plot([3.45, 7.15], [-160, -160], color=G2, lw=0.6, clip_on=False)
+    ax.text(5.3, -228, "2030 (four IEA cases)", ha="center", va="center", fontsize=7.3, color=G1)
+    ax.plot([3.45, 7.15], [-183, -183], color=G2, lw=0.6, clip_on=False)
     _bars_base(ax, 1200, 200)
     ax.set_xlim(-0.6, 7.4)
     fig.text(0.12, 0.008, "The IEA text rounds the 2030 Base Case to ‘about 950 TWh’. 2023–2025 are estimates.",
