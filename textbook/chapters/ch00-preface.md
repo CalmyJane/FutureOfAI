@@ -2,7 +2,7 @@
 
 This book describes artificial intelligence as it stands in October 2026: how the technology works, what has driven its progress, what it is already doing to work, science, media and public life, how it fails, and how governments are trying to control it. It is written for readers who want the substance rather than the headlines. No programming is assumed, but the book does not avoid technical detail. Where an equation is the clearest way to explain a mechanism, the equation is given, together with a plain-language explanation and a worked number.
 
-Public discussion of AI swings between promise and alarm, and much of it rests on anecdotes, company announcements and forecasts presented as facts. This book tries to do something different: to report what is known, how it is known and how well it is known. Every factual claim that is not common knowledge carries a citation, and the full list of almost nine hundred references is at the end of the book. Where the evidence is clear, the book says so plainly. Where informed people disagree, it sets out the strongest evidence on each side.
+Public discussion of AI swings between promise and alarm, and much of it rests on anecdotes, company announcements and forecasts presented as facts. This book tries to do something different: to report what is known, how it is known and how well it is known. Every factual claim that is not common knowledge carries a citation, and the full list of roughly nine hundred references is at the end of the book. Where the evidence is clear, the book says so plainly. Where informed people disagree, it sets out the strongest evidence on each side.
 
 ## How the book is organised
 
