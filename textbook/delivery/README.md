@@ -1,23 +1,36 @@
-# Understanding AI: Technology, Trends and the Decade Ahead — A Course Text
+# Understanding AI: Technology, Trends and the Decade Ahead
 
-Author: Jan Göbel · Evidence current to 22 October 2026
+Author: Jan Göbel · Evidence current to October 2026 (web sources checked 20–24 October 2026)
 
 ## Files
-- `understanding-ai_A5_interior.pdf` — print-ready interior: A5 (148 × 210 mm), no bleed, PDF/X-4 with sRGB output intent, 402 pages (even), fonts embedded (EB Garamond, SIL OFL). Cover and ISBN still to be added by the publisher/print-on-demand service.
-- `understanding-ai.md` — the full assembled manuscript in Markdown (for editing or conversion).
+- `understanding-ai_A5_interior.pdf`: the print-ready interior. A5 (148 × 210 mm), no bleed, PDF/X-4 with sRGB output intent, 540 pages (an even number), all fonts embedded (EB Garamond, SIL OFL). The publisher or print-on-demand service still needs to add the cover and ISBN.
+- `understanding-ai.md`: the full manuscript in Markdown, for editing or conversion.
 
 ## Contents
-Preface with a 14-week course plan; 14 chapters in five parts (How AI Works; The Frontier; Society and Economy; Risk, Safety and Governance; The Decade Ahead); 41 figures and 10 tables drawn for this edition; glossary of 218 terms; APA 7 reference list of 583 sources.
+- A preface on how the book is organised and how evidence is labelled.
+- 14 chapters in five parts: How AI Works; The Frontier; Society and Economy; Risk, Safety and Governance; The Decade Ahead.
+- About 182,000 words including references, 46 figures and 61 tables.
+- A glossary of 375 terms.
+- An APA 7 reference list of 890 cited sources.
 
-Each chapter: learning objectives, an opening documented case, numbered sections, Key concept / Case study / Debate / Going deeper boxes, summary, key terms, discussion questions and annotated further reading.
+This edition is written as nonfiction, not as a course text: there are no learning objectives, summaries, key terms or discussion questions. Each chapter opens with a documented case and goes into the mechanisms, numbers and evidence in depth. It uses Concept, Case study, Debate and Going deeper boxes, ends with a synthesis paragraph and closes with annotated further reading.
 
 ## How the text was checked
-1. Every chapter was written from verified sources (each claim logged in `work/evidence-chNN.md` with URL and evidence type).
-2. An independent fact-check of every chapter re-checked numbers, dates, quotations, attributions and bibliographic details against primary sources; corrections and remaining uncertainties are listed in the "Fact-check" section of each evidence log.
-3. A simulated reader panel (first-year social-science student, computer-science master's student, STS lecturer) reviewed sample chapters; all chapters were then revised (clarity, balance, evidence labelling, missing perspectives such as hidden data labour, unions, surveillance and privacy).
-4. A whole-book consistency audit removed contradictions, duplicate tellings and broken cross-references; duplicate citation keys and glossary entries were merged.
+1. **Deepening:** each chapter was rewritten to about 7,500–9,900 words from verified sources. Every new claim is logged with its URL and evidence type in `work/evidence-chNN.md`.
+2. **Two independent fact-checks per chapter:** numbers, dates, quotations, attributions and bibliographic details were re-checked against primary sources. Corrections and remaining uncertainties are in each evidence log.
+3. **Figure and table audit:** every figure was checked against its source data and its spec file (`figures/specs/`), then redrawn where labels, values, scales or captions were wrong.
+4. **Specialist reader panel:** a general reader, a policy analyst and a machine-learning expert reviewed the chapters (`work/panel2/`). A whole-book consistency audit removed contradictions, duplicate explanations and broken cross-references.
+5. **Prose polish:** every chapter got a final pass for clarity, sentence length and number density, and to remove filler.
+6. **Build checks:** no missing citations, consistent bibliography entries across chapters, and every section, table and figure cross-reference resolves.
 
-Limitations: the session's web-search quota ran out during writing, so later verification used direct fetches of primary pages, DOI/Crossref/arXiv/PubMed metadata and archived or mirrored copies. A few sources (some company pages that block automated access) are cited via reputable secondary reports, which the text says. Remaining uncertainties are listed per chapter in the evidence logs. A human expert review before teaching use is still recommended, especially for the fast-moving 2026 material (models, benchmarks, laws in force).
+## Limitations
+- **Web search:** the quota ran out early, so verification used direct fetches of primary pages, DOI/Crossref/arXiv/OpenAlex/Europe PMC metadata and mirrored copies.
+- **IEA reports:** the IEA website blocks automated access, so these figures rest on an earlier reading of the full report PDF.
+- **Paywalled papers:** some were checked against accepted manuscripts or preprints.
+- **Company sources:** these are labelled as company claims in the text. Some OpenAI pages were read through a text mirror.
+- **Fast-moving material:** model names, benchmark scores, export controls and which laws are in force will date quickly. A human expert review of this 2026 material before publication is still recommended.
+
+Remaining uncertainties are listed for each chapter in the evidence logs.
 
 ## Rebuilding
-`python3 textbook/print/figures.py` (figures) then `python3 textbook/print/build.py` (PDF). Requires pandoc ≥ 3.1, WeasyPrint, matplotlib.
+Run `python3 textbook/print/figures.py` to build the figures, then `python3 textbook/print/build.py` to build the PDF. Requires pandoc ≥ 3.1, WeasyPrint and matplotlib.
