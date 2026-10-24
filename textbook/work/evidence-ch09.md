@@ -216,3 +216,20 @@ None found (no objectives, summary, key terms, discussion questions or student r
 - Hackenburg et al. (Science): numbers from the LSE accepted manuscript (published text paywalled); the manuscript's own figures imply 2.94/6.1 = 48% rather than 41% for GPT-4o, so the 41% may use a different baseline; kept as the authors state it.
 - Grok case: later outcomes of the Ofcom and Commission investigations (after January 2026) not checked; the text makes no claim about outcomes.
 - Deepfake-Eval-2024 remains a preprint as of v5 (May 2026).
+
+## Polish (2026-10-24)
+
+Structural changes
+- §9.3 C2PA: body reduced to plain description (signed record at creation; each edit adds a signed record; any unrecorded change breaks the seal and validation fails; stripping and soft-binding lookup in one sentence; signer certificates/anonymity and "cannot tell you whether … true" kept). Technical detail (manifest store, JUMBF, assertions, `c2pa.actions`, `trainedAlgorithmicMedia`/IPTC, ingredients, claim, claim signature with X.509 in COSE_Sign1, RFC 3161 time-stamp, active manifest, hard/soft binding, "shall not be used as a hard binding") moved into a new Going deeper box "Inside a C2PA manifest". "COSE" now given as COSE_Sign1, matching the Figure 9.2 caption. No facts added.
+- §9.5 Hackenburg et al. (Science) paragraph rewritten to lead with the finding (most persuasive set-ups least accurate); prose keeps 76,977 participants and 30.0% vs 16.0% inaccurate claims. Remaining numbers moved to Table 9.2, new row "Hackenburg et al. 2025 (Science), levers": post-training up to +51%, prompting up to +27%, personalisation +0.43 (never >1), ~0.3 points per claim, claims ~half of explainable variation, maximal persuasion 15.9 (26.1 among initial opponents) vs 9.4 average, 30.0% vs 16.0% inaccurate, 466,769 claims fact-checked.
+- Table 9.2 Lin row: added US 95% CI 2.02–3.74 and exact CA/PL figures (10.05, 9.94), removed from prose along with per-country sample sizes (already in table).
+- Debate box (§9.4): "Largely, yes" recap of §9.4 cut to one sentence (citations retained); italic "What evidence would decide it" label removed and folded into the "Not proven" paragraph.
+- §9.8 closing paragraph extended into a chapter synthesis (production vs reach, detection, marking, private conversational persuasion, measurement gap).
+- T-03: cross-attention now described as a variant of the Chapter 3 attention mechanism in which the image attends to the prompt's words.
+- T-25: AUC full definition kept in §9.2 (ch02 gives only a one-clause gloss); ch10/ch12 can back-reference Chapter 9.
+
+Cuts (facts removed from text, still verified in sources)
+- SynthID-Image preprint sentence ("over ten billion images and video frames", "trusted testers"; gowal2025synthidimage now uncited in body) — superseded by the November 2025 figure.
+- CETaS sentence at the end of the liar's-dividend subsection (duplicated §9.4 monitoring paragraph).
+- Deepfake-Eval-2024 hours/image counts (45 h video, 56.5 h audio, 1,975 images); Costello sample size of 128 claims; Argyle per-year vote shares except 2012 (now "within six percentage points"; correlations as range 0.90–0.94); Pew 2026 monthly errors (11.3/14.7/11.2); Pew search: click rates now in words with reference to Figure 9.4, cut the 8%/53%/60% query-length shares, 67-word median and Wikipedia/YouTube/Reddit 15%; DNR 2026 sample sizes, under-35 16%, social-media click-through 36%.
+- Doubled attributions "according to the company" removed (3 places).
