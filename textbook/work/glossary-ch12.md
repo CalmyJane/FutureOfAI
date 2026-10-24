@@ -31,3 +31,7 @@
 **obfuscated reward hacking**: Reward hacking that continues while the model's written reasoning no longer reveals it, learned when reasoning is penalised for showing intent to cheat.
 **AI control**: Safety measures, such as monitoring by trusted models and auditing, designed to prevent harm even if the AI system being used is deliberately trying to cause it.
 **universal jailbreak**: An attack that bypasses a model's safeguards across many different harmful requests rather than for a single one.
+**inner alignment**: The problem of ensuring that a model which has itself become an optimiser pursues the objective it was trained on rather than a different learned objective (a mesa-objective); outer alignment is the problem of making the trained objective match what developers intend.
+**goal misgeneralisation**: A failure in which a model keeps its capabilities in new situations but pursues an unintended goal that coincided with the intended one during training; it can occur even when the training objective is correct.
+**unlearning**: Training a model to remove specific knowledge, such as hazardous technical information, while preserving its other capabilities.
+**linear probe**: A simple classifier trained to read a property, such as whether a response is deceptive, directly from a model's internal activations.
