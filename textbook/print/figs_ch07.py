@@ -158,11 +158,11 @@ def f0703():
     ax.text(2.8, 1150, "Estimates", fontsize=7, ha="right", va="center", style="italic", color=G1)
     ax.set_xticks(xs)
     ax.set_xticklabels(cats, fontsize=7.3, linespacing=1.0)
-    ax.text(5.3, -215, "2030 (four IEA cases)", ha="center", va="center", fontsize=7.3, color=G1)
-    ax.plot([3.45, 7.15], [-165, -165], color=G2, lw=0.6, clip_on=False)
+    ax.text(5.3, -205, "2030 (four IEA cases)", ha="center", va="center", fontsize=7.3, color=G1)
+    ax.plot([3.45, 7.15], [-160, -160], color=G2, lw=0.6, clip_on=False)
     _bars_base(ax, 1200, 200)
     ax.set_xlim(-0.6, 7.4)
-    fig.text(0.12, 0.015, "The IEA text rounds the 2030 Base Case to ‘about 950 TWh’. 2023–2025 are estimates.",
+    fig.text(0.12, 0.008, "The IEA text rounds the 2030 Base Case to ‘about 950 TWh’. 2023–2025 are estimates.",
              fontsize=6.4, color=G1, ha="left", style="italic")
     F.save(fig, "fig-07-03")
 
@@ -189,7 +189,7 @@ def f0704():
     ax.legend(handles=[Patch(fc=G1, ec=G1, lw=0.6, label="2024"),
                        Patch(fc=G4, ec=INK, lw=0.6, hatch="////", label="2030 (Base Case)")],
               loc="upper right", bbox_to_anchor=(1.0, 1.0), fontsize=7.3, handlelength=1.6)
-    ax.text(3.5, 360, "World total:\n416 TWh (2024)\n945 TWh (2030)", ha="right", va="top", fontsize=6.8,
+    ax.text(3.5, 392, "World total:\n416 TWh (2024)\n945 TWh (2030)", ha="right", va="top", fontsize=6.8,
             color=G1, style="italic")
     fig.text(0.12, 0.012, "Rest of world = world minus the three named regions; IEA totals may not sum exactly because of rounding.",
              fontsize=6.0, color=G1, ha="left", style="italic")
