@@ -184,3 +184,22 @@ Independent second check after the deepening pass; about 190 claims checked. Pri
 - Llama 3 "128,000-token context" is Meta's "128K"; with 131,072 tokens the cache would be 67.6 GB (text says "about 66 GB" for 128,000 tokens, which is exact for that length).
 - Example prompts containing "students" ("Students in Edinburgh ...", "After the lecture, the students went to the") are computed data, not teaching apparatus; kept.
 - Body length (first line after title to end of §3.7) is now about 9,700 words, slightly above the 9,500 target, because of the precision additions.
+
+## Polish (2026-10-24)
+
+Final prose pass per work/POLISH-GUIDE.md, panel2 policy-analyst report (ch3 points) and audit-consistency2 tickets T-19, T-20 (T-25 AUC: not applicable, ch03 does not use AUC). Body (title to end of §3.7, tables and captions included) 9,804 → about 9,670 words; whole file 9,909 → about 9,800 (wc).
+
+**Structural changes**
+- §3.3 GPT-2 parameter count: component-by-component arithmetic removed from the prose (Table 3.6 carries it); text keeps the takeaways (feed-forward ≈ two-thirds of each block, embeddings nearly a third of the model, weight tying, Kaplan 12·L·d² within 0.15%) and the 2N rule. "exactly two-thirds" → "two-thirds": with biases the MLP share is 4,722,432 / 7,087,872 = 66.63% (exactly 2/3 only for weight matrices); Geva's "two-thirds" unchanged. The output-layer figure (≈77 million operations, 2 × 50,257 × 768) is no longer spelled out; the sentence says the output layer and context-length attention term add to 2N.
+- §3.3 Position information: rewritten opening. Attention ignores order because weights depend on content alone; the causal mask decides visibility and leaks order only indirectly (later positions see more tokens); explicit position comes from position encodings (keeps the second fact-check's correction). Sinusoid formula kept, with pos, d and i defined (i = pair index 0 … d/2 − 1, per Vaswani §3.5). RoPE "base frequency 500,000" now explained (constant setting the slowest rotation speed of the geometric series θ_i = base^(−2i/d); larger base keeps distant positions distinguishable), per Su et al. and Llama 3 §3.2.
+- §3.3 MoE: DeepSeek-V3 sentence relabelled once ("DeepSeek-V3's technical report describes …"); 14.8T pre-training tokens dropped from text (still verified; appears in ch04); load-balancing detail cut to one clause (bias on routing score adjusted by load); auxiliary sequence-level loss detail removed.
+- §3.4: temperature percentages and nucleus numbers that restated Table 3.8 replaced by reference to the table; KV-cache "square of the length" sentence simplified (recomputation means reprocessing the whole text per token, so twice the length ≈ four times the work); OPT and Llama 3 cache arithmetic that restated Table 3.9 reduced to the two headline sizes (1.6 GB per 2,048-token OPT-13B request; 66 GB per 128,000-token Llama 3 405B context).
+- §3.2 worked example: intermediate exponentials and the explicit value-vector sum trimmed (Table 3.5 carries them); dot products, scaled scores, softmax sum and weights kept.
+- Sourcing hedges reduced to one label per source: Qwen2.5 ("according to the company's technical report" removed; citation only), o1 ("OpenAI's system card describes …"), Chen et al. ("In a preprint, …"), Gemini 1.5 second mention (label removed), DeepSeek-R1 parenthesis shortened.
+- §3.7 interpretability (T-20): superposition, Golden Gate clamping, rhyme planning and Dallas→Texas detail cut to two sentences plus "Section 12.4 describes these methods and their limits". elhage2022toy no longer cited in the chapter (bib entry left, unused); templeton2024scaling and lindsey2025biology still cited (debate box still refers to Lindsey's planning/two-step results).
+- §3.5 RLHF and Constitutional AI kept in full (T-19); RLHF paragraph split in two; CAI opening sentence untangled.
+- New closing synthesis paragraph after the debate box at the end of §3.7 (no new facts).
+- Prose: count-announcing openers removed ("three settings shape how", "Two costs limit the window"); ~20 sentences over 40 words split; average sentence length about 22 words.
+
+**Facts added:** none. **Facts removed from text:** DeepSeek-V3 14.8T tokens; GPT-2 per-component parameter arithmetic (in Table 3.6); explicit 77M output-layer operations; DeepSeek-V3 sequence-level auxiliary loss; superposition/toy-model finding, 34M-feature SAE, Golden Gate clamping detail, rhyme-planning quotation (all in ch12 §12.4).
+**Tables / figure captions:** unchanged.
