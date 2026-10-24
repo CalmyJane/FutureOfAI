@@ -121,7 +121,7 @@ def f1302():
         ("United States", 2025, 1, "EO 14110 revoked", "e", "u", "center"),
         ("United States", 2025, 9, "California SB 53 signed", "f", "u", "left"),
         ("United States", 2025, 12, "EO 14365 on state laws", "e", "d", "right"),
-        ("United States", 2026, 5, "Colorado AI Act replaced", "f", "d", "left"),
+        ("United States", 2026, 5, "Colorado law replaced", "f", "d", "left"),
         ("China", 2023, 8, "Generative AI measures", "f", "u", "center"),
         ("China", 2025, 9, "Labelling rules apply", "f", "u", "center"),
         ("China", 2026, 7, "Anthropomorphic AI rules", "f", "u", "center"),

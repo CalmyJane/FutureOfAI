@@ -13,9 +13,9 @@ def f0701():
     x0, w = 11, 61
     h, gap, yb = 11.2, 1.8, 1.5
     bands = [
-        ("Chip-making tools", "ASML (EUV: sole maker)", True),
+        ("Chip-making tools", "ASML (EUV: sole maker);\nZeiss (ASML’s sole optics supplier)", True),
         ("Chip fabrication", "TSMC, Samsung", True),
-        ("Memory & packaging", "SK Hynix, Samsung, Micron (HBM);\nASE, Amkor (packaging)", False),
+        ("Memory & packaging", "SK Hynix, Samsung, Micron (HBM);\nTSMC (CoWoS), ASE, Amkor (packaging)", True),
         ("Chip design", "Nvidia, AMD, Google (TPU), Huawei", False),
         ("Cloud & data centres", "Hyperscalers (e.g. Google, Amazon,\nMicrosoft, Meta); neo-clouds", False),
         (None, None, False),
@@ -69,7 +69,7 @@ def _yr(y, m, d=1):
 
 @fig("fig-07-02")
 def f0702():
-    fig, ax = canvas(3.3, ylim=(0, 74))
+    fig, ax = canvas(3.55, ylim=(-6, 74))
     t0, t1, xa, xb = 2022.62, 2026.72, 3.0, 88.0
 
     def X(t):
@@ -86,12 +86,22 @@ def f0702():
         (_yr(2023, 10, 17), "17 Oct 2023", "Thresholds revised", "adds performance density;\nA800/H800 covered", "t", -1, 1, "r"),
         (_yr(2024, 12, 2), "2 Dec 2024", "HBM and tools", "controls on high-bandwidth\nmemory, more equipment", "t", 1, 1, "r"),
         (_yr(2025, 1, 13), "13 Jan 2025", "AI Diffusion Framework", "global tiered licensing; closed-\nweight model controls", "t", -1, 1, "r"),
-        (_yr(2025, 4, 9), "9 Apr 2025", "H20 licence required", "Nvidia told licence\nneeded for China", "t", 1, 2, "l"),
-        (_yr(2025, 5, 13), "13 May 2025", "Rescission announced", "not enforced;\nreplacement promised", "o", -1, 2, "r"),
+        (_yr(2025, 4, 9), "9 Apr 2025", "H20 licence required", "Nvidia told licence\nneeded for China", "t", 1, 2, "r"),
+        (_yr(2025, 5, 13), "13 May 2025", "Rescission announced", "diffusion rule not enforced;\nreplacement promised", "o", -1, 2, "r"),
+        (_yr(2025, 9, 29), "29 Sep / 10 Nov 2025", "Affiliates rule, then stayed", "50%-owned affiliates of listed\nentities covered; stayed for a year", "t", 1, 2, "l"),
         (_yr(2026, 1, 15), "15 Jan 2026", "H200 case-by-case", "China review moved from\ndenial to case-by-case", "o", 1, 1, "l"),
         (_yr(2026, 7, 10), "10 Jul 2026", "UAE licence-free access", "partner access to advanced\ncomputing items", "d", -1, 1, "r"),
     ]
     lev = {1: 6.0, 2: 21.5}
+
+    def mark(x, kind):
+        if kind == "t":
+            ax.plot([x], [ay], marker="s", ms=4.6, mfc=INK, mec=INK, zorder=3)
+        elif kind == "o":
+            ax.plot([x], [ay], marker="o", ms=5, mfc="white", mec=INK, mew=0.9, zorder=3)
+        else:
+            ax.plot([x], [ay], marker="D", ms=4.4, mfc=G2, mec=INK, mew=0.8, zorder=3)
+
     for t, date, lab, note, kind, side, level, al in ev:
         x = X(t)
         d = lev[level]
@@ -103,18 +113,19 @@ def f0702():
         label(ax, tx, ybase + 11.6, date, fs=6.3, ha=ha, va="center", color=G1)
         label(ax, tx, ybase + 8.2, lab, fs=7.4, ha=ha, va="center", weight="bold")
         label(ax, tx, ybase + 3.0, note, fs=6.1, ha=ha, va="center", italic=True, color=G1)
-        if kind == "t":
-            ax.plot([x], [ay], marker="s", ms=4.6, mfc=INK, mec=INK, zorder=3)
-        elif kind == "o":
-            ax.plot([x], [ay], marker="o", ms=5, mfc="white", mec=INK, mew=0.9, zorder=3)
-        else:
-            ax.plot([x], [ay], marker="D", ms=4.4, mfc=G2, mec=INK, mew=0.8, zorder=3)
+        mark(x, kind)
+    # suspension of the Affiliates rule (10 Nov 2025): own marker, joined to the 29 Sep stem
+    xs_, xa_ = X(_yr(2025, 11, 10)), X(_yr(2025, 9, 29))
+    ax.plot([xs_, xs_, xa_], [ay + 1.6, ay + 4.0, ay + 4.0], color=G2, lw=0.5, zorder=1)
+    mark(xs_, "o")
     from matplotlib.lines import Line2D
     hs = [Line2D([], [], ls="", marker="s", ms=4.6, mfc=INK, mec=INK, label="tightening"),
           Line2D([], [], ls="", marker="o", ms=5, mfc="white", mec=INK, label="loosening / withdrawal"),
           Line2D([], [], ls="", marker="D", ms=4.4, mfc=G2, mec=INK, label="partner access")]
-    ax.legend(handles=hs, loc="lower center", bbox_to_anchor=(0.5, -0.06), ncol=3, fontsize=7,
+    ax.legend(handles=hs, loc="lower center", bbox_to_anchor=(0.5, 0.03), ncol=3, fontsize=7,
               handletextpad=0.3, columnspacing=1.6)
+    label(ax, 50, -4.0, "Effective dates, except 17 Oct 2023 and 13 May 2025 (announcements) and 9 Apr 2025 (notice to Nvidia).",
+          fs=6.0, color=G1, italic=True)
     save(fig, "fig-07-02")
 
 

@@ -15,12 +15,12 @@ MONO = "DejaVu Sans Mono"
 
 @fig("fig-03-01")
 def f0301():
-    """Embedding-space sketch (spec fig-03-02)."""
+    """Embedding-space sketch (spec fig-03-01)."""
     fig, ax = canvas(2.8, ylim=(0, 63))
     # unlabelled axes
     arrow(ax, 3, 3, 3, 61, lw=0.6, ms=6)
     arrow(ax, 3, 3, 98, 3, lw=0.6, ms=6)
-    label(ax, 97, 6.2, "2-D sketch of a space with hundreds of dimensions", fs=6.2, ha="right", italic=True, color=G1)
+    label(ax, 97, 6.2, "2-D sketch of a space with hundreds or thousands of dimensions", fs=6.2, ha="right", italic=True, color=G1)
 
     def pt(x, y, t, dx=0, dy=2.6, ha="center"):
         ax.add_patch(F.Circle((x, y), 0.75, fc=INK, ec=INK, lw=0.5, zorder=3))
@@ -43,7 +43,7 @@ def f0301():
     label(ax, 72, 53.5, "country → capital", fs=6.4, italic=True, color=G1)
     # cluster 3: animals
     ax.add_patch(Ellipse((20, 15.5), 26, 13, fc=G4, ec=G2, lw=0.6, zorder=1))
-    for t, x, y in (("cat", 14, 17), ("dog", 21, 13.5), ("horse", 26.5, 18)):
+    for t, x, y in (("cat", 14, 17), ("dog", 21, 13.5), ("horse", 26.5, 16.8)):
         pt(x, y, t, dy=-2.6 if t == "dog" else 2.6)
     label(ax, 35.5, 10, "animals", fs=6.4, italic=True, color=G1, ha="left")
     # inset
@@ -54,7 +54,7 @@ def f0301():
 
 @fig("fig-03-02")
 def f0302():
-    """Decoder-only transformer with attention inset (spec fig-03-03)."""
+    """Decoder-only transformer with attention inset (spec fig-03-02)."""
     fig, ax = canvas(3.6, ylim=(0, 80))
     cols = [20, 29, 38, 47, 56]
     toks = ["The", "␣cat", "␣sat", "␣on", "␣the"]
@@ -71,7 +71,7 @@ def f0302():
     label(ax, 13.2, 16.1, "+", fs=8)
     # 3 transformer block; each token's vector runs up its own residual stream (vertical line)
     box(ax, 2, 20.5, 62, 29, "", fill="white", lw=0.9, style="round,pad=0,rounding_size=2")
-    label(ax, 9, 45.4, "Transformer\nblock", fs=7.2, weight="bold")
+    label(ax, 9, 46.1, "Transformer\nblock", fs=7.0, weight="bold")
     label(ax, 2.5, 18.6, "residual stream", fs=5.9, ha="left", italic=True, color=G1)
     ax.plot([15.2, 19.4], [18.6, 18.6], color=G1, lw=0.4)
     # masked attention: information flows from earlier tokens (and the token itself) into each stream
@@ -94,7 +94,7 @@ def f0302():
         ax.plot([x, x], [16.7, 49.5], color=INK, lw=0.7, zorder=2.5)
         ax.add_patch(F.Circle((x, ay), 0.6, fc=INK, ec=INK, zorder=4))
     # feed-forward: reads from the stream, processes each token on its own, adds its result back
-    label(ax, 9, 39.5, "Feed-\nforward", fs=6.6)
+    label(ax, 9, 38.9, "Feed-\nforward", fs=6.6)
     fy, fh = 37.2, 4.4
     for x in cols:
         box(ax, x + 1.4, fy, 4.6, fh, "", fill=G4, lw=0.5, style="round,pad=0,rounding_size=0.8")
@@ -149,7 +149,7 @@ def f0302():
 
 @fig("fig-03-03")
 def f0303():
-    """Training pipeline (spec fig-03-04)."""
+    """Training pipeline (spec fig-03-03)."""
     fig, ax = canvas(3.3, ylim=(0, 74))
     rs = "round,pad=0,rounding_size=1.2"
     pill = "round,pad=0,rounding_size=2.4"
@@ -177,7 +177,7 @@ def f0303():
             label(ax, cx, PY + 1.8, osub, fs=6.1, italic=True, color=G1)
         else:
             label(ax, cx, PY + PH / 2, o, fs=6.8, weight="bold")
-        arrow(ax, cx, SY - 0.2, cx, PY + PH + 0.3, lw=0.8, ms=6, ls="--" if k == 3 else "-")
+        arrow(ax, cx, SY - 0.2, cx, PY + PH + 0.3, lw=0.8, ms=6)
     # links from each output to the next stage
     for k in range(3):
         (x, w), (nx, nw) = C[k], C[k + 1]
@@ -208,19 +208,19 @@ def f0303():
     x, w = C[2]
     box(ax, x - 1.5, 62, 12, 9.5, "Human\nrankings\n(RLHF)", fill="white", fs=6.1, lw=0.6, style=rs)
     box(ax, x + 11.5, 62, 12, 9.5, "Principles +\nAI feedback\n(RLAIF)", fill="white", fs=6.1, lw=0.6, style=rs)
-    box(ax, x + 2, 48.5, 18, 6.5, "Reward model", fill=G4, fs=6.6, lw=0.6, style=rs)
+    box(ax, x + 2, 48.5, 18, 6.5, "Reward model\n(not used by DPO)", fill=G4, fs=6.2, lw=0.6, style=rs)
     arrow(ax, x + 4.5, 61.8, x + 8, 55.2, lw=0.7, ms=5)
     arrow(ax, x + 17.5, 61.8, x + 14, 55.2, lw=0.7, ms=5)
     arrow(ax, x + w / 2, 48.3, x + w / 2, SY + SH + 0.3, lw=0.8, ms=6)
     # checkable problems
     x, w = C[3]
-    box(ax, x + 0.5, IY, w - 1, 8, "Problems with\ncheckable\nanswers", fill="white", fs=6.2, lw=0.6, style=rs)
+    box(ax, x + 0.5, IY, w - 1, 9.5, "Problems with\ncheckable\nanswers", fill="white", fs=6.2, lw=0.6, style=rs)
     arrow(ax, x + w / 2, IY - 0.3, x + w / 2, SY + SH + 0.3, lw=0.8, ms=6)
     # compute annotation under the row
     def brace(xa, xb, txt):
         y = 8.5
         ax.plot([xa, xa, xb, xb], [y + 1.2, y, y, y + 1.2], color=G1, lw=0.6)
-        label(ax, (xa + xb) / 2, y - 2.6, txt, fs=6.5, italic=True, color=G1)
+        label(ax, (xa + xb) / 2, y - 1.3, txt, fs=6.5, italic=True, color=G1, va="top")
     brace(C[0][0], C[0][0] + C[0][1], "most compute")
     brace(C[1][0], C[2][0] + C[2][1], "far less data")
     brace(C[3][0], C[3][0] + C[3][1], "growing share\nof compute")

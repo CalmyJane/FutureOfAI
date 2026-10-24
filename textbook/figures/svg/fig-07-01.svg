@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-23T22:13:00.391503</dc:date>
+    <dc:date>2026-10-24T01:35:32.552685</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -41,7 +41,7 @@ Q 38.124 217.9035 38.124 221.0985
 L 38.124 250.4925 
 Q 38.124 253.6875 41.328 253.6875 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 1.8; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 1.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 177.498 241.866 
@@ -54,7 +54,7 @@ C 172.051828 232.64139 171.4104 234.185585 171.4104 235.7955
 C 171.4104 237.405415 172.051828 238.94961 173.193417 240.087992 
 C 174.335006 241.226374 175.88355 241.866 177.498 241.866 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 41.328 212.1525 
@@ -67,7 +67,7 @@ Q 38.124 176.3685 38.124 179.5635
 L 38.124 208.9575 
 Q 38.124 212.1525 41.328 212.1525 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 1.8; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 1.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
     <path d="M 177.498 200.331 
@@ -80,7 +80,7 @@ C 172.051828 191.10639 171.4104 192.650585 171.4104 194.2605
 C 171.4104 195.870415 172.051828 197.41461 173.193417 198.552992 
 C 174.335006 199.691374 175.88355 200.331 177.498 200.331 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 41.328 170.6175 
@@ -93,9 +93,22 @@ Q 38.124 134.8335 38.124 138.0285
 L 38.124 167.4225 
 Q 38.124 170.6175 41.328 170.6175 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #ececec; stroke: #1a1a1a; stroke-width: 0.7; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 1.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
+    <path d="M 177.498 158.796 
+C 179.11245 158.796 180.660994 158.156374 181.802583 157.017992 
+C 182.944172 155.87961 183.5856 154.335415 183.5856 152.7255 
+C 183.5856 151.115585 182.944172 149.57139 181.802583 148.433008 
+C 180.660994 147.294626 179.11245 146.655 177.498 146.655 
+C 175.88355 146.655 174.335006 147.294626 173.193417 148.433008 
+C 172.051828 149.57139 171.4104 151.115585 171.4104 152.7255 
+C 171.4104 154.335415 172.051828 155.87961 173.193417 157.017992 
+C 174.335006 158.156374 175.88355 158.796 177.498 158.796 
+z
+" clip-path="url(#pdc74f2834c)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
     <path d="M 41.328 129.0825 
 L 230.364 129.0825 
 Q 233.568 129.0825 233.568 125.8875 
@@ -106,9 +119,9 @@ Q 38.124 93.2985 38.124 96.4935
 L 38.124 125.8875 
 Q 38.124 129.0825 41.328 129.0825 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #ececec; stroke: #1a1a1a; stroke-width: 0.7; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #ececec; stroke: #1a1a1a; stroke-width: 0.7; stroke-linejoin: miter"/>
    </g>
-   <g id="patch_8">
+   <g id="patch_9">
     <path d="M 41.328 87.5475 
 L 230.364 87.5475 
 Q 233.568 87.5475 233.568 84.3525 
@@ -119,9 +132,9 @@ Q 38.124 51.7635 38.124 54.9585
 L 38.124 84.3525 
 Q 38.124 87.5475 41.328 87.5475 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #ececec; stroke: #1a1a1a; stroke-width: 0.7; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #ececec; stroke: #1a1a1a; stroke-width: 0.7; stroke-linejoin: miter"/>
    </g>
-   <g id="patch_9">
+   <g id="patch_10">
     <path d="M 41.328 46.0125 
 L 230.364 46.0125 
 Q 233.568 46.0125 233.568 42.8175 
@@ -132,9 +145,9 @@ Q 38.124 10.2285 38.124 13.4235
 L 38.124 42.8175 
 Q 38.124 46.0125 41.328 46.0125 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #ececec; stroke: #1a1a1a; stroke-width: 0.7; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #ececec; stroke: #1a1a1a; stroke-width: 0.7; stroke-linejoin: miter"/>
    </g>
-   <g id="patch_10">
+   <g id="patch_11">
     <path d="M 111.1752 41.859 
 L 163.7208 41.859 
 Q 166.284 41.859 166.284 39.303 
@@ -145,9 +158,9 @@ Q 108.612 14.382 108.612 16.938
 L 108.612 39.303 
 Q 108.612 41.859 111.1752 41.859 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 0.6; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
-   <g id="patch_11">
+   <g id="patch_12">
     <path d="M 173.6532 41.859 
 L 226.1988 41.859 
 Q 228.762 41.859 228.762 39.303 
@@ -158,19 +171,19 @@ Q 171.09 14.382 171.09 16.938
 L 171.09 39.303 
 Q 171.09 41.859 173.6532 41.859 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 0.6; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 0.6; stroke-linejoin: miter"/>
    </g>
-   <g id="patch_12">
+   <g id="patch_13">
     <path d="M 17.298 251.685175 
 Q 17.298 131.957135 17.298 13.123522 
-" clip-path="url(#pd2fc7f3a44)" style="fill: none; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pdc74f2834c)" style="fill: none; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: round"/>
     <path d="M 15.698 16.323522 
 L 17.298 13.123522 
 L 18.898 16.323522 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: round"/>
    </g>
-   <g id="patch_13">
+   <g id="patch_14">
     <path d="M 268.812 84.3525 
 L 310.464 84.3525 
 Q 313.668 84.3525 313.668 81.1575 
@@ -181,29 +194,29 @@ Q 265.608 54.9585 265.608 58.1535
 L 265.608 81.1575 
 Q 265.608 84.3525 268.812 84.3525 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 0.7; stroke-linejoin: miter"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #ffffff; stroke: #1a1a1a; stroke-width: 0.7; stroke-linejoin: miter"/>
    </g>
-   <g id="patch_14">
+   <g id="patch_15">
     <path d="M 262.964504 69.6555 
 Q 249.748266 69.6555 237.426456 69.6555 
-" clip-path="url(#pd2fc7f3a44)" style="fill: none; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pdc74f2834c)" style="fill: none; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: round"/>
     <path d="M 240.626456 71.2555 
 L 237.426456 69.6555 
 L 240.626456 68.0555 
 z
-" clip-path="url(#pd2fc7f3a44)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: round"/>
+" clip-path="url(#pdc74f2834c)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: round"/>
    </g>
    <g id="line2d_1">
     <path d="M 241.578 253.6875 
 L 245.4228 253.6875 
 L 245.4228 93.2985 
 L 241.578 93.2985 
-" clip-path="url(#pd2fc7f3a44)" style="fill: none; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: square"/>
+" clip-path="url(#pdc74f2834c)" style="fill: none; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: square"/>
    </g>
    <g id="line2d_2">
     <path d="M 245.4228 173.493 
 L 249.9084 173.493 
-" clip-path="url(#pd2fc7f3a44)" style="fill: none; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: square"/>
+" clip-path="url(#pdc74f2834c)" style="fill: none; stroke: #1a1a1a; stroke-width: 0.8; stroke-linecap: square"/>
    </g>
    <g id="text_1">
     <!-- Chip-making tools -->
@@ -1012,7 +1025,7 @@ z
     </g>
    </g>
    <g id="text_2">
-    <!-- ASML (EUV: sole maker) -->
+    <!-- ASML (EUV: sole maker); -->
     <g style="fill: #4d4d4d" transform="translate(44.532 241.110816) scale(0.063 -0.063)">
      <defs>
       <path id="EBGaramond-Regular-1" d="M 173 -32 
@@ -2015,6 +2028,37 @@ Q 742 -1190 608 -1325
 Q 563 -1370 499 -1370 
 z
 " transform="scale(0.015625)"/>
+      <path id="EBGaramond-Regular-99b" d="M 672 1683 
+Q 531 1683 425 1789 
+Q 320 1895 320 2035 
+Q 320 2183 425 2285 
+Q 531 2387 672 2387 
+Q 819 2387 921 2285 
+Q 1024 2183 1024 2035 
+Q 1024 1895 921 1789 
+Q 819 1683 672 1683 
+z
+M 243 -941 
+Q 128 -941 128 -870 
+Q 128 -845 150 -822 
+Q 173 -800 218 -794 
+Q 358 -762 499 -685 
+Q 640 -608 736 -464 
+Q 832 -320 832 -96 
+Q 832 -19 761 80 
+Q 691 179 582 186 
+Q 442 198 362 275 
+Q 282 352 282 454 
+Q 282 582 387 665 
+Q 493 749 634 749 
+Q 864 749 1014 573 
+Q 1165 397 1165 128 
+Q 1165 -115 1069 -310 
+Q 973 -506 825 -646 
+Q 678 -787 521 -864 
+Q 365 -941 243 -941 
+z
+" transform="scale(0.015625)"/>
      </defs>
      <use xlink:href="#EBGaramond-Regular-1"/>
      <use xlink:href="#EBGaramond-Regular-5c" transform="translate(69.203125 0)"/>
@@ -2038,6 +2082,403 @@ z
      <use xlink:href="#EBGaramond-Regular-1b8" transform="translate(875.8125 0)"/>
      <use xlink:href="#EBGaramond-Regular-1fa" transform="translate(914.8125 0)"/>
      <use xlink:href="#EBGaramond-Regular-a12" transform="translate(948.21875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-99b" transform="translate(979.71875 0)"/>
+    </g>
+    <!-- Zeiss (ASML’s sole optics supplier) -->
+    <g style="fill: #4d4d4d" transform="translate(44.532 250.342088) scale(0.063 -0.063)">
+     <defs>
+      <path id="EBGaramond-Regular-7e" d="M 3411 -32 
+Q 3136 -32 2880 -29 
+Q 2624 -26 2384 -22 
+Q 2144 -19 1917 -16 
+Q 1690 -13 1478 -13 
+Q 1286 -13 1094 -16 
+Q 902 -19 717 -19 
+L 224 -19 
+Q 198 -19 188 25 
+Q 179 70 179 70 
+Q 179 102 240 208 
+Q 301 314 390 442 
+Q 480 570 550 666 
+Q 877 1114 1152 1488 
+Q 1427 1862 1683 2217 
+Q 1939 2573 2204 2953 
+Q 2470 3334 2778 3795 
+Q 2790 3808 2796 3821 
+Q 2803 3834 2803 3846 
+Q 2803 3866 2777 3878 
+Q 2752 3891 2682 3898 
+Q 2509 3904 2256 3907 
+Q 2003 3910 1747 3910 
+Q 1562 3910 1389 3910 
+Q 1216 3910 1094 3898 
+Q 941 3885 749 3773 
+Q 557 3661 467 3424 
+Q 442 3366 400 3292 
+Q 358 3219 288 3219 
+Q 262 3219 246 3241 
+Q 230 3264 230 3290 
+Q 230 3328 246 3376 
+Q 262 3424 275 3462 
+Q 301 3533 336 3657 
+Q 371 3782 406 3932 
+Q 442 4083 448 4218 
+Q 454 4288 486 4307 
+Q 518 4326 544 4326 
+Q 570 4326 630 4294 
+Q 691 4262 742 4237 
+Q 806 4211 969 4172 
+Q 1133 4134 1293 4134 
+Q 1453 4134 1667 4134 
+Q 1882 4134 2099 4134 
+Q 2298 4134 2486 4134 
+Q 2675 4134 2857 4137 
+Q 3040 4141 3219 4144 
+Q 3398 4147 3578 4154 
+Q 3610 4154 3638 4109 
+Q 3667 4064 3648 4038 
+L 3258 3520 
+Q 2925 3072 2656 2707 
+Q 2387 2342 2144 2000 
+Q 1901 1658 1648 1283 
+Q 1395 909 1094 448 
+Q 1075 422 1075 371 
+Q 1075 333 1094 301 
+Q 1114 269 1146 262 
+Q 1286 250 1472 240 
+Q 1658 230 1869 230 
+Q 2086 230 2316 240 
+Q 2547 250 2771 262 
+Q 3322 307 3565 960 
+Q 3578 998 3619 1046 
+Q 3661 1094 3706 1094 
+Q 3763 1094 3763 1011 
+Q 3763 986 3737 861 
+Q 3712 736 3673 576 
+Q 3635 416 3593 275 
+Q 3552 134 3526 77 
+Q 3507 38 3484 3 
+Q 3462 -32 3411 -32 
+z
+" transform="scale(0.015625)"/>
+      <path id="EBGaramond-Regular-1ce" d="M 282 -19 
+Q 224 -19 189 -3 
+Q 154 13 154 51 
+Q 154 102 202 121 
+Q 250 141 301 154 
+Q 435 186 505 234 
+Q 576 282 576 397 
+L 576 1786 
+Q 576 1958 515 2092 
+Q 454 2227 288 2253 
+Q 256 2259 240 2278 
+Q 224 2298 224 2336 
+Q 224 2406 282 2413 
+Q 538 2470 704 2569 
+Q 870 2669 954 2733 
+Q 1011 2778 1043 2778 
+Q 1082 2778 1082 2746 
+Q 1082 2694 1066 2544 
+Q 1050 2394 1037 2211 
+Q 1024 2029 1024 1882 
+L 1024 397 
+Q 1024 288 1097 237 
+Q 1171 186 1299 154 
+Q 1350 141 1398 121 
+Q 1446 102 1446 51 
+Q 1446 -19 1318 -19 
+Q 1197 -19 1123 -9 
+Q 1050 0 982 6 
+Q 915 13 800 13 
+Q 691 13 620 6 
+Q 550 0 480 -9 
+Q 410 -19 282 -19 
+z
+M 794 3302 
+Q 660 3302 567 3395 
+Q 474 3488 474 3622 
+Q 474 3763 567 3856 
+Q 660 3949 794 3949 
+Q 935 3949 1027 3856 
+Q 1120 3763 1120 3622 
+Q 1120 3488 1027 3395 
+Q 935 3302 794 3302 
+z
+" transform="scale(0.015625)"/>
+      <path id="EBGaramond-Regular-a48" d="M 377 2726 
+Q 262 2726 262 2797 
+Q 262 2822 284 2844 
+Q 307 2867 352 2873 
+Q 492 2905 633 2982 
+Q 774 3059 870 3203 
+Q 966 3347 966 3571 
+Q 966 3648 895 3747 
+Q 825 3846 716 3853 
+Q 576 3865 496 3942 
+Q 416 4019 416 4121 
+Q 416 4249 521 4332 
+Q 627 4416 768 4416 
+Q 998 4416 1148 4240 
+Q 1299 4064 1299 3795 
+Q 1299 3552 1203 3356 
+Q 1107 3161 959 3020 
+Q 812 2880 655 2803 
+Q 499 2726 377 2726 
+z
+" transform="scale(0.015625)"/>
+      <path id="EBGaramond-Regular-1f7" d="M 256 -1824 
+Q 224 -1824 173 -1814 
+Q 122 -1805 122 -1766 
+Q 122 -1715 170 -1692 
+Q 218 -1670 269 -1651 
+Q 365 -1619 454 -1577 
+Q 544 -1536 544 -1408 
+L 544 1837 
+Q 544 1888 515 1990 
+Q 486 2093 422 2189 
+Q 358 2285 250 2304 
+Q 224 2310 211 2336 
+Q 198 2362 198 2387 
+Q 198 2419 211 2438 
+Q 224 2458 243 2464 
+Q 486 2522 659 2589 
+Q 832 2656 986 2720 
+Q 992 2720 992 2723 
+Q 992 2726 998 2726 
+Q 1011 2726 1024 2707 
+Q 1037 2688 1037 2669 
+Q 1037 2611 1021 2486 
+Q 1005 2362 1005 2285 
+Q 1005 2234 1011 2227 
+Q 1075 2291 1244 2390 
+Q 1414 2490 1632 2570 
+Q 1850 2650 2048 2650 
+Q 2381 2650 2614 2474 
+Q 2848 2298 2973 2019 
+Q 3098 1741 3098 1440 
+Q 3098 1152 2989 880 
+Q 2880 608 2681 390 
+Q 2483 173 2220 41 
+Q 1958 -90 1658 -90 
+Q 1568 -90 1443 -61 
+Q 1318 -32 1200 13 
+Q 1082 58 1018 115 
+Q 1011 115 1004 41 
+Q 998 -32 995 -112 
+Q 992 -192 992 -211 
+L 992 -1408 
+Q 992 -1491 1059 -1539 
+Q 1126 -1587 1212 -1609 
+Q 1299 -1632 1363 -1651 
+Q 1414 -1670 1462 -1692 
+Q 1510 -1715 1510 -1766 
+Q 1510 -1805 1459 -1814 
+Q 1408 -1824 1370 -1824 
+Q 1184 -1824 1059 -1808 
+Q 934 -1792 768 -1792 
+Q 659 -1792 592 -1798 
+Q 525 -1805 454 -1814 
+Q 384 -1824 256 -1824 
+z
+M 1754 109 
+Q 1850 109 1987 166 
+Q 2125 224 2262 352 
+Q 2400 480 2493 697 
+Q 2586 915 2586 1235 
+Q 2586 1606 2490 1830 
+Q 2394 2054 2253 2169 
+Q 2112 2285 1965 2323 
+Q 1818 2362 1715 2362 
+Q 1562 2362 1398 2298 
+Q 1235 2234 1123 2154 
+Q 1011 2074 1011 2029 
+Q 1011 1888 1008 1744 
+Q 1005 1600 1001 1465 
+Q 998 1331 995 1225 
+Q 992 1120 992 1062 
+Q 992 806 1110 588 
+Q 1229 371 1405 240 
+Q 1581 109 1754 109 
+z
+" transform="scale(0.015625)"/>
+      <path id="EBGaramond-Regular-204" d="M 1210 -90 
+Q 896 -90 720 102 
+Q 544 294 544 672 
+L 544 2157 
+Q 544 2208 505 2230 
+Q 467 2253 339 2253 
+L 301 2253 
+Q 269 2253 246 2294 
+Q 224 2336 224 2381 
+Q 224 2394 243 2419 
+Q 262 2445 269 2451 
+Q 397 2541 502 2630 
+Q 608 2720 694 2806 
+Q 781 2893 838 2963 
+Q 870 2995 892 3017 
+Q 915 3040 947 3040 
+Q 979 3040 1008 3027 
+Q 1037 3014 1030 2970 
+L 998 2682 
+Q 992 2611 1030 2585 
+Q 1069 2560 1152 2560 
+L 1882 2560 
+Q 1907 2560 1926 2518 
+Q 1946 2477 1946 2419 
+Q 1946 2362 1926 2307 
+Q 1907 2253 1882 2253 
+L 1248 2253 
+Q 1088 2253 1040 2227 
+Q 992 2202 992 2074 
+L 992 813 
+Q 992 557 1101 409 
+Q 1210 262 1414 262 
+Q 1600 262 1702 291 
+Q 1805 320 1888 378 
+Q 1901 390 1914 390 
+Q 1939 390 1948 361 
+Q 1958 333 1958 301 
+Q 1958 269 1852 173 
+Q 1747 77 1577 -6 
+Q 1408 -90 1210 -90 
+z
+" transform="scale(0.015625)"/>
+      <path id="EBGaramond-Regular-1ae" d="M 1363 -96 
+Q 1043 -96 784 67 
+Q 525 230 374 515 
+Q 224 800 224 1152 
+Q 224 1568 406 1907 
+Q 589 2246 896 2448 
+Q 1203 2650 1574 2650 
+Q 1990 2650 2304 2426 
+Q 2381 2368 2381 2304 
+Q 2381 2253 2336 2189 
+Q 2291 2125 2227 2083 
+Q 2163 2042 2106 2042 
+Q 2074 2042 2042 2064 
+Q 2010 2086 1971 2112 
+Q 1830 2221 1657 2317 
+Q 1485 2413 1370 2413 
+Q 1056 2413 861 2121 
+Q 666 1830 666 1357 
+Q 666 1056 797 813 
+Q 928 570 1149 429 
+Q 1370 288 1638 288 
+Q 1824 288 1958 349 
+Q 2093 410 2246 563 
+Q 2259 576 2278 585 
+Q 2298 595 2310 595 
+Q 2381 595 2381 506 
+Q 2381 467 2358 419 
+Q 2336 371 2285 307 
+Q 2182 179 2041 86 
+Q 1901 -6 1731 -51 
+Q 1562 -96 1363 -96 
+z
+" transform="scale(0.015625)"/>
+      <path id="EBGaramond-Regular-207" d="M 2342 -122 
+Q 2298 -122 2298 -70 
+Q 2298 -6 2314 118 
+Q 2330 243 2330 326 
+Q 2330 339 2330 348 
+Q 2330 358 2330 365 
+Q 2080 122 1827 16 
+Q 1574 -90 1274 -90 
+Q 1069 -90 902 -3 
+Q 736 83 640 252 
+Q 544 422 544 672 
+L 544 1971 
+Q 544 2112 480 2195 
+Q 416 2278 269 2336 
+Q 237 2349 211 2368 
+Q 186 2387 186 2438 
+Q 186 2496 214 2515 
+Q 243 2534 282 2541 
+Q 499 2554 617 2576 
+Q 736 2598 915 2643 
+Q 934 2650 944 2650 
+Q 954 2650 966 2650 
+Q 1037 2650 1030 2560 
+Q 1011 2413 1001 2313 
+Q 992 2214 992 2067 
+L 992 819 
+Q 992 666 1069 534 
+Q 1146 403 1270 320 
+Q 1395 237 1530 237 
+Q 1696 237 1821 256 
+Q 1946 275 2067 365 
+Q 2138 416 2246 531 
+Q 2355 646 2355 845 
+L 2355 2016 
+Q 2355 2150 2275 2217 
+Q 2195 2285 2092 2310 
+Q 1990 2336 1926 2336 
+Q 1869 2336 1830 2358 
+Q 1792 2381 1792 2445 
+Q 1792 2502 1833 2521 
+Q 1875 2541 1926 2541 
+Q 2125 2547 2256 2556 
+Q 2387 2566 2492 2588 
+Q 2598 2611 2714 2643 
+Q 2726 2650 2745 2653 
+Q 2765 2656 2778 2656 
+Q 2861 2656 2861 2586 
+Q 2861 2579 2857 2563 
+Q 2854 2547 2848 2528 
+Q 2842 2509 2832 2419 
+Q 2822 2330 2812 2234 
+Q 2803 2138 2803 2086 
+L 2803 608 
+Q 2803 435 2838 361 
+Q 2874 288 2918 288 
+Q 2970 288 3069 297 
+Q 3168 307 3213 307 
+Q 3245 307 3277 294 
+Q 3309 282 3309 224 
+Q 3309 173 3283 157 
+Q 3258 141 3219 134 
+Q 2970 102 2790 38 
+Q 2611 -26 2470 -83 
+Q 2451 -90 2412 -106 
+Q 2374 -122 2342 -122 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#EBGaramond-Regular-7e"/>
+     <use xlink:href="#EBGaramond-Regular-1b8" transform="translate(60.296875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ce" transform="translate(99.296875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1fd" transform="translate(123.796875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1fd" transform="translate(156.09375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-97a" transform="translate(188.390625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-a11" transform="translate(208.390625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1" transform="translate(239.890625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-5c" transform="translate(309.09375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-43" transform="translate(355.59375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-3e" transform="translate(445.6875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-a48" transform="translate(498.59375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1fd" transform="translate(522.796875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-97a" transform="translate(555.09375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1fd" transform="translate(575.09375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ea" transform="translate(607.390625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1de" transform="translate(655.390625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1b8" transform="translate(679.390625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-97a" transform="translate(718.390625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ea" transform="translate(738.390625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1f7" transform="translate(787.890625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-204" transform="translate(839.796875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ce" transform="translate(871.203125 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ae" transform="translate(895.703125 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1fd" transform="translate(936.40625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-97a" transform="translate(968.703125 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1fd" transform="translate(988.703125 0)"/>
+     <use xlink:href="#EBGaramond-Regular-207" transform="translate(1021 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1f7" transform="translate(1073.703125 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1f7" transform="translate(1125.609375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1de" transform="translate(1176.015625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ce" transform="translate(1200.015625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1b8" transform="translate(1224.515625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1fa" transform="translate(1263.515625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-a12" transform="translate(1296.921875 0)"/>
     </g>
    </g>
    <g id="text_3">
@@ -2929,73 +3370,6 @@ Q 678 -787 521 -864
 Q 365 -941 243 -941 
 z
 " transform="scale(0.015625)"/>
-      <path id="EBGaramond-Regular-207" d="M 2342 -122 
-Q 2298 -122 2298 -70 
-Q 2298 -6 2314 118 
-Q 2330 243 2330 326 
-Q 2330 339 2330 348 
-Q 2330 358 2330 365 
-Q 2080 122 1827 16 
-Q 1574 -90 1274 -90 
-Q 1069 -90 902 -3 
-Q 736 83 640 252 
-Q 544 422 544 672 
-L 544 1971 
-Q 544 2112 480 2195 
-Q 416 2278 269 2336 
-Q 237 2349 211 2368 
-Q 186 2387 186 2438 
-Q 186 2496 214 2515 
-Q 243 2534 282 2541 
-Q 499 2554 617 2576 
-Q 736 2598 915 2643 
-Q 934 2650 944 2650 
-Q 954 2650 966 2650 
-Q 1037 2650 1030 2560 
-Q 1011 2413 1001 2313 
-Q 992 2214 992 2067 
-L 992 819 
-Q 992 666 1069 534 
-Q 1146 403 1270 320 
-Q 1395 237 1530 237 
-Q 1696 237 1821 256 
-Q 1946 275 2067 365 
-Q 2138 416 2246 531 
-Q 2355 646 2355 845 
-L 2355 2016 
-Q 2355 2150 2275 2217 
-Q 2195 2285 2092 2310 
-Q 1990 2336 1926 2336 
-Q 1869 2336 1830 2358 
-Q 1792 2381 1792 2445 
-Q 1792 2502 1833 2521 
-Q 1875 2541 1926 2541 
-Q 2125 2547 2256 2556 
-Q 2387 2566 2492 2588 
-Q 2598 2611 2714 2643 
-Q 2726 2650 2745 2653 
-Q 2765 2656 2778 2656 
-Q 2861 2656 2861 2586 
-Q 2861 2579 2857 2563 
-Q 2854 2547 2848 2528 
-Q 2842 2509 2832 2419 
-Q 2822 2330 2812 2234 
-Q 2803 2138 2803 2086 
-L 2803 608 
-Q 2803 435 2838 361 
-Q 2874 288 2918 288 
-Q 2970 288 3069 297 
-Q 3168 307 3213 307 
-Q 3245 307 3277 294 
-Q 3309 282 3309 224 
-Q 3309 173 3283 157 
-Q 3258 141 3219 134 
-Q 2970 102 2790 38 
-Q 2611 -26 2470 -83 
-Q 2451 -90 2412 -106 
-Q 2374 -122 2342 -122 
-z
-" transform="scale(0.015625)"/>
       <path id="EBGaramond-Regular-1e4" d="M 282 -19 
 Q 224 -19 189 -3 
 Q 154 13 154 51 
@@ -3756,50 +4130,6 @@ Q 768 -1690 659 -1757
 Q 550 -1824 410 -1824 
 z
 " transform="scale(0.015625)"/>
-      <path id="EBGaramond-Regular-1ce" d="M 282 -19 
-Q 224 -19 189 -3 
-Q 154 13 154 51 
-Q 154 102 202 121 
-Q 250 141 301 154 
-Q 435 186 505 234 
-Q 576 282 576 397 
-L 576 1786 
-Q 576 1958 515 2092 
-Q 454 2227 288 2253 
-Q 256 2259 240 2278 
-Q 224 2298 224 2336 
-Q 224 2406 282 2413 
-Q 538 2470 704 2569 
-Q 870 2669 954 2733 
-Q 1011 2778 1043 2778 
-Q 1082 2778 1082 2746 
-Q 1082 2694 1066 2544 
-Q 1050 2394 1037 2211 
-Q 1024 2029 1024 1882 
-L 1024 397 
-Q 1024 288 1097 237 
-Q 1171 186 1299 154 
-Q 1350 141 1398 121 
-Q 1446 102 1446 51 
-Q 1446 -19 1318 -19 
-Q 1197 -19 1123 -9 
-Q 1050 0 982 6 
-Q 915 13 800 13 
-Q 691 13 620 6 
-Q 550 0 480 -9 
-Q 410 -19 282 -19 
-z
-M 794 3302 
-Q 660 3302 567 3395 
-Q 474 3488 474 3622 
-Q 474 3763 567 3856 
-Q 660 3949 794 3949 
-Q 935 3949 1027 3856 
-Q 1120 3763 1120 3622 
-Q 1120 3488 1027 3395 
-Q 935 3302 794 3302 
-z
-" transform="scale(0.015625)"/>
       <path id="EBGaramond-Regular-383" d="M 192 -26 
 Q 154 -26 109 -16 
 Q 64 -6 64 32 
@@ -3889,39 +4219,6 @@ Q 442 6 362 -10
 Q 282 -26 192 -26 
 z
 " transform="scale(0.015625)"/>
-      <path id="EBGaramond-Regular-1ae" d="M 1363 -96 
-Q 1043 -96 784 67 
-Q 525 230 374 515 
-Q 224 800 224 1152 
-Q 224 1568 406 1907 
-Q 589 2246 896 2448 
-Q 1203 2650 1574 2650 
-Q 1990 2650 2304 2426 
-Q 2381 2368 2381 2304 
-Q 2381 2253 2336 2189 
-Q 2291 2125 2227 2083 
-Q 2163 2042 2106 2042 
-Q 2074 2042 2042 2064 
-Q 2010 2086 1971 2112 
-Q 1830 2221 1657 2317 
-Q 1485 2413 1370 2413 
-Q 1056 2413 861 2121 
-Q 666 1830 666 1357 
-Q 666 1056 797 813 
-Q 928 570 1149 429 
-Q 1370 288 1638 288 
-Q 1824 288 1958 349 
-Q 2093 410 2246 563 
-Q 2259 576 2278 585 
-Q 2298 595 2310 595 
-Q 2381 595 2381 506 
-Q 2381 467 2358 419 
-Q 2336 371 2285 307 
-Q 2182 179 2041 86 
-Q 1901 -6 1731 -51 
-Q 1562 -96 1363 -96 
-z
-" transform="scale(0.015625)"/>
       <path id="EBGaramond-Regular-f" d="M 307 -32 
 Q 224 -32 173 -16 
 Q 122 0 122 38 
@@ -3994,37 +4291,6 @@ Q 1331 2445 1440 2409
 Q 1549 2374 1626 2374 
 z
 " transform="scale(0.015625)"/>
-      <path id="EBGaramond-Regular-99b" d="M 672 1683 
-Q 531 1683 425 1789 
-Q 320 1895 320 2035 
-Q 320 2183 425 2285 
-Q 531 2387 672 2387 
-Q 819 2387 921 2285 
-Q 1024 2183 1024 2035 
-Q 1024 1895 921 1789 
-Q 819 1683 672 1683 
-z
-M 243 -941 
-Q 128 -941 128 -870 
-Q 128 -845 150 -822 
-Q 173 -800 218 -794 
-Q 358 -762 499 -685 
-Q 640 -608 736 -464 
-Q 832 -320 832 -96 
-Q 832 -19 761 80 
-Q 691 179 582 186 
-Q 442 198 362 275 
-Q 282 352 282 454 
-Q 282 582 387 665 
-Q 493 749 634 749 
-Q 864 749 1014 573 
-Q 1165 397 1165 128 
-Q 1165 -115 1069 -310 
-Q 973 -506 825 -646 
-Q 678 -787 521 -864 
-Q 365 -941 243 -941 
-z
-" transform="scale(0.015625)"/>
      </defs>
      <use xlink:href="#EBGaramond-Regular-5c"/>
      <use xlink:href="#EBGaramond-Regular-3d" transform="translate(46.5 0)"/>
@@ -4059,110 +4325,193 @@ z
      <use xlink:href="#EBGaramond-Regular-a12" transform="translate(1381.984375 0)"/>
      <use xlink:href="#EBGaramond-Regular-99b" transform="translate(1413.484375 0)"/>
     </g>
-    <!-- ASE, Amkor (packaging) -->
+    <!-- TSMC (CoWoS), ASE, Amkor (packaging) -->
     <g style="fill: #4d4d4d" transform="translate(44.532 167.256338) scale(0.063 -0.063)">
      <defs>
-      <path id="EBGaramond-Regular-1f7" d="M 256 -1824 
-Q 224 -1824 173 -1814 
-Q 122 -1805 122 -1766 
-Q 122 -1715 170 -1692 
-Q 218 -1670 269 -1651 
-Q 365 -1619 454 -1577 
-Q 544 -1536 544 -1408 
-L 544 1837 
-Q 544 1888 515 1990 
-Q 486 2093 422 2189 
-Q 358 2285 250 2304 
-Q 224 2310 211 2336 
-Q 198 2362 198 2387 
-Q 198 2419 211 2438 
-Q 224 2458 243 2464 
-Q 486 2522 659 2589 
-Q 832 2656 986 2720 
-Q 992 2720 992 2723 
-Q 992 2726 998 2726 
-Q 1011 2726 1024 2707 
-Q 1037 2688 1037 2669 
-Q 1037 2611 1021 2486 
-Q 1005 2362 1005 2285 
-Q 1005 2234 1011 2227 
-Q 1075 2291 1244 2390 
-Q 1414 2490 1632 2570 
-Q 1850 2650 2048 2650 
-Q 2381 2650 2614 2474 
-Q 2848 2298 2973 2019 
-Q 3098 1741 3098 1440 
-Q 3098 1152 2989 880 
-Q 2880 608 2681 390 
-Q 2483 173 2220 41 
-Q 1958 -90 1658 -90 
-Q 1568 -90 1443 -61 
-Q 1318 -32 1200 13 
-Q 1082 58 1018 115 
-Q 1011 115 1004 41 
-Q 998 -32 995 -112 
-Q 992 -192 992 -211 
-L 992 -1408 
-Q 992 -1491 1059 -1539 
-Q 1126 -1587 1212 -1609 
-Q 1299 -1632 1363 -1651 
-Q 1414 -1670 1462 -1692 
-Q 1510 -1715 1510 -1766 
-Q 1510 -1805 1459 -1814 
-Q 1408 -1824 1370 -1824 
-Q 1184 -1824 1059 -1808 
-Q 934 -1792 768 -1792 
-Q 659 -1792 592 -1798 
-Q 525 -1805 454 -1814 
-Q 384 -1824 256 -1824 
-z
-M 1754 109 
-Q 1850 109 1987 166 
-Q 2125 224 2262 352 
-Q 2400 480 2493 697 
-Q 2586 915 2586 1235 
-Q 2586 1606 2490 1830 
-Q 2394 2054 2253 2169 
-Q 2112 2285 1965 2323 
-Q 1818 2362 1715 2362 
-Q 1562 2362 1398 2298 
-Q 1235 2234 1123 2154 
-Q 1011 2074 1011 2029 
-Q 1011 1888 1008 1744 
-Q 1005 1600 1001 1465 
-Q 998 1331 995 1225 
-Q 992 1120 992 1062 
-Q 992 806 1110 588 
-Q 1229 371 1405 240 
-Q 1581 109 1754 109 
+      <path id="EBGaramond-Regular-73" d="M 2144 -102 
+Q 2131 -102 2105 -44 
+Q 2080 13 2054 77 
+L 672 3546 
+Q 595 3712 486 3817 
+Q 378 3923 211 3968 
+Q 109 4000 54 4032 
+Q 0 4064 0 4109 
+Q 0 4147 51 4163 
+Q 102 4179 186 4179 
+Q 333 4179 464 4169 
+Q 595 4160 755 4160 
+Q 934 4160 1094 4166 
+Q 1254 4173 1350 4173 
+Q 1434 4173 1485 4157 
+Q 1536 4141 1536 4102 
+Q 1536 4058 1485 4032 
+Q 1434 4006 1325 3974 
+Q 1248 3955 1222 3894 
+Q 1197 3834 1197 3763 
+Q 1197 3661 1222 3574 
+Q 1248 3488 1248 3488 
+Q 1395 3117 1516 2809 
+Q 1638 2502 1756 2217 
+Q 1875 1933 2006 1635 
+Q 2138 1338 2298 973 
+Q 2330 902 2352 908 
+Q 2374 915 2394 966 
+L 2893 2202 
+Q 2912 2253 2921 2288 
+Q 2931 2323 2931 2349 
+Q 2931 2387 2918 2428 
+Q 2906 2470 2880 2534 
+L 2515 3443 
+Q 2432 3648 2253 3785 
+Q 2074 3923 1907 3968 
+Q 1805 4000 1750 4032 
+Q 1696 4064 1696 4109 
+Q 1696 4147 1747 4163 
+Q 1798 4179 1882 4179 
+Q 1984 4179 2077 4172 
+Q 2170 4166 2269 4163 
+Q 2368 4160 2483 4160 
+Q 2630 4160 2755 4166 
+Q 2880 4173 2976 4173 
+Q 3059 4173 3110 4157 
+Q 3162 4141 3162 4102 
+Q 3162 4051 3098 4019 
+Q 3034 3987 2966 3948 
+Q 2899 3910 2899 3834 
+Q 2899 3821 2902 3808 
+Q 2906 3795 2912 3782 
+Q 2925 3757 2960 3657 
+Q 2995 3558 3043 3436 
+Q 3091 3315 3136 3209 
+Q 3181 3104 3200 3059 
+Q 3232 2982 3254 2979 
+Q 3277 2976 3315 3059 
+Q 3366 3174 3420 3321 
+Q 3475 3469 3516 3600 
+Q 3558 3731 3571 3782 
+Q 3578 3802 3578 3827 
+Q 3578 3904 3520 3942 
+Q 3462 3981 3401 4016 
+Q 3341 4051 3341 4102 
+Q 3341 4141 3392 4157 
+Q 3443 4173 3526 4173 
+Q 3667 4173 3718 4166 
+Q 3770 4160 3859 4160 
+Q 3968 4160 4045 4169 
+Q 4122 4179 4237 4179 
+Q 4320 4179 4371 4163 
+Q 4422 4147 4422 4109 
+Q 4422 4064 4371 4035 
+Q 4320 4006 4211 3981 
+Q 4006 3936 3932 3872 
+Q 3859 3808 3776 3674 
+Q 3744 3616 3683 3481 
+Q 3622 3347 3555 3187 
+Q 3488 3027 3437 2886 
+Q 3418 2842 3402 2758 
+Q 3386 2675 3398 2643 
+L 4058 947 
+Q 4070 915 4089 928 
+Q 4109 941 4128 986 
+Q 4288 1408 4489 2067 
+Q 4691 2726 4909 3462 
+Q 4928 3520 4937 3581 
+Q 4947 3642 4947 3693 
+Q 4947 3789 4905 3865 
+Q 4864 3942 4755 3968 
+Q 4691 3987 4617 4019 
+Q 4544 4051 4544 4096 
+Q 4544 4134 4595 4150 
+Q 4646 4166 4730 4166 
+Q 4858 4166 4963 4163 
+Q 5069 4160 5190 4160 
+Q 5350 4160 5497 4169 
+Q 5645 4179 5766 4179 
+Q 5850 4179 5901 4163 
+Q 5952 4147 5952 4109 
+Q 5952 4064 5901 4035 
+Q 5850 4006 5741 3981 
+Q 5587 3949 5481 3849 
+Q 5376 3750 5315 3632 
+Q 5254 3514 5216 3418 
+L 4083 70 
+Q 4077 45 4045 -16 
+Q 4013 -77 3981 -77 
+Q 3955 -77 3923 -38 
+Q 3891 0 3872 45 
+Q 3706 429 3584 733 
+Q 3462 1037 3350 1344 
+Q 3238 1651 3085 2022 
+Q 3066 2067 3053 2057 
+Q 3040 2048 3014 1984 
+Q 2861 1619 2749 1337 
+Q 2637 1056 2528 765 
+Q 2419 474 2285 96 
+Q 2259 32 2220 -35 
+Q 2182 -102 2144 -102 
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#EBGaramond-Regular-1"/>
-     <use xlink:href="#EBGaramond-Regular-5c" transform="translate(69.203125 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1a" transform="translate(115.703125 0)"/>
-     <use xlink:href="#EBGaramond-Regular-999" transform="translate(172.109375 0)"/>
-     <use xlink:href="#EBGaramond-Regular-97a" transform="translate(195.109375 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1" transform="translate(215.109375 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1e3" transform="translate(284.3125 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1dc" transform="translate(362.109375 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1ea" transform="translate(409.015625 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1fa" transform="translate(458.515625 0)"/>
-     <use xlink:href="#EBGaramond-Regular-97a" transform="translate(491.921875 0)"/>
-     <use xlink:href="#EBGaramond-Regular-a11" transform="translate(511.921875 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1f7" transform="translate(543.421875 0)"/>
-     <use xlink:href="#EBGaramond-Regular-19f" transform="translate(593.328125 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1ae" transform="translate(633.234375 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1dc" transform="translate(673.9375 0)"/>
-     <use xlink:href="#EBGaramond-Regular-19f" transform="translate(720.84375 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1c5" transform="translate(760.75 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1ce" transform="translate(804.25 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1e4" transform="translate(828.75 0)"/>
-     <use xlink:href="#EBGaramond-Regular-1c5" transform="translate(881.546875 0)"/>
-     <use xlink:href="#EBGaramond-Regular-a12" transform="translate(925.046875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-62"/>
+     <use xlink:href="#EBGaramond-Regular-5c" transform="translate(67 0)"/>
+     <use xlink:href="#EBGaramond-Regular-43" transform="translate(113.5 0)"/>
+     <use xlink:href="#EBGaramond-Regular-10" transform="translate(203.59375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-97a" transform="translate(274.59375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-a11" transform="translate(294.59375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-10" transform="translate(326.09375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ea" transform="translate(397.09375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-73" transform="translate(446.59375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ea" transform="translate(528.1875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-5c" transform="translate(577.6875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-a12" transform="translate(624.1875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-999" transform="translate(655.6875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-97a" transform="translate(678.6875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1" transform="translate(698.6875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-5c" transform="translate(767.890625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1a" transform="translate(814.390625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-999" transform="translate(870.796875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-97a" transform="translate(893.796875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1" transform="translate(913.796875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1e3" transform="translate(983 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1dc" transform="translate(1060.796875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ea" transform="translate(1107.703125 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1fa" transform="translate(1157.203125 0)"/>
+     <use xlink:href="#EBGaramond-Regular-97a" transform="translate(1190.609375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-a11" transform="translate(1210.609375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1f7" transform="translate(1242.109375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-19f" transform="translate(1292.015625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ae" transform="translate(1331.921875 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1dc" transform="translate(1372.625 0)"/>
+     <use xlink:href="#EBGaramond-Regular-19f" transform="translate(1419.53125 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1c5" transform="translate(1459.4375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1ce" transform="translate(1502.9375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1e4" transform="translate(1527.4375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-1c5" transform="translate(1580.234375 0)"/>
+     <use xlink:href="#EBGaramond-Regular-a12" transform="translate(1623.734375 0)"/>
     </g>
    </g>
    <g id="text_11">
+    <!-- ! -->
+    <g style="fill: #ffffff" transform="translate(176.483 155.5265) scale(0.07 -0.07)">
+     <use xlink:href="#EBGaramond-Bold-99d"/>
+    </g>
+   </g>
+   <g id="text_12">
+    <!-- chokepoint -->
+    <g style="fill: #1a1a1a" transform="translate(186.7896 154.157219) scale(0.068 -0.068)">
+     <use xlink:href="#EBGaramond-Italic-1cd"/>
+     <use xlink:href="#EBGaramond-Italic-1ea" transform="translate(29.296875 0)"/>
+     <use xlink:href="#EBGaramond-Italic-209" transform="translate(78.09375 0)"/>
+     <use xlink:href="#EBGaramond-Italic-1fb" transform="translate(114.09375 0)"/>
+     <use xlink:href="#EBGaramond-Italic-1d7" transform="translate(159.59375 0)"/>
+     <use xlink:href="#EBGaramond-Italic-216" transform="translate(193.6875 0)"/>
+     <use xlink:href="#EBGaramond-Italic-209" transform="translate(237.59375 0)"/>
+     <use xlink:href="#EBGaramond-Italic-1ed" transform="translate(275.59375 0)"/>
+     <use xlink:href="#EBGaramond-Italic-203" transform="translate(303.5 0)"/>
+     <use xlink:href="#EBGaramond-Italic-223" transform="translate(356.203125 0)"/>
+    </g>
+   </g>
+   <g id="text_13">
     <!-- Chip design -->
     <g style="fill: #1a1a1a" transform="translate(44.532 104.54725) scale(0.08 -0.08)">
      <defs>
@@ -4240,7 +4589,7 @@ z
      <use xlink:href="#EBGaramond-Bold-1e4" transform="translate(446.015625 0)"/>
     </g>
    </g>
-   <g id="text_12">
+   <g id="text_14">
     <!-- Nvidia, AMD, Google (TPU), Huawei -->
     <g style="fill: #4d4d4d" transform="translate(44.532 116.266613) scale(0.063 -0.063)">
      <defs>
@@ -4752,7 +5101,7 @@ z
      <use xlink:href="#EBGaramond-Regular-1ce" transform="translate(1457.21875 0)"/>
     </g>
    </g>
-   <g id="text_13">
+   <g id="text_15">
     <!-- Cloud &amp; data centres -->
     <g style="fill: #1a1a1a" transform="translate(44.532 64.08475) scale(0.08 -0.08)">
      <defs>
@@ -4846,7 +5195,7 @@ z
      <use xlink:href="#EBGaramond-Bold-1fd" transform="translate(846.703125 0)"/>
     </g>
    </g>
-   <g id="text_14">
+   <g id="text_16">
     <!-- Hyperscalers (e.g. Google, Amazon, -->
     <g style="fill: #4d4d4d" transform="translate(44.532 74.731612) scale(0.063 -0.063)">
      <defs>
@@ -5014,48 +5363,6 @@ Q 563 0 486 -9
 Q 410 -19 282 -19 
 z
 " transform="scale(0.015625)"/>
-      <path id="EBGaramond-Regular-204" d="M 1210 -90 
-Q 896 -90 720 102 
-Q 544 294 544 672 
-L 544 2157 
-Q 544 2208 505 2230 
-Q 467 2253 339 2253 
-L 301 2253 
-Q 269 2253 246 2294 
-Q 224 2336 224 2381 
-Q 224 2394 243 2419 
-Q 262 2445 269 2451 
-Q 397 2541 502 2630 
-Q 608 2720 694 2806 
-Q 781 2893 838 2963 
-Q 870 2995 892 3017 
-Q 915 3040 947 3040 
-Q 979 3040 1008 3027 
-Q 1037 3014 1030 2970 
-L 998 2682 
-Q 992 2611 1030 2585 
-Q 1069 2560 1152 2560 
-L 1882 2560 
-Q 1907 2560 1926 2518 
-Q 1946 2477 1946 2419 
-Q 1946 2362 1926 2307 
-Q 1907 2253 1882 2253 
-L 1248 2253 
-Q 1088 2253 1040 2227 
-Q 992 2202 992 2074 
-L 992 813 
-Q 992 557 1101 409 
-Q 1210 262 1414 262 
-Q 1600 262 1702 291 
-Q 1805 320 1888 378 
-Q 1901 390 1914 390 
-Q 1939 390 1948 361 
-Q 1958 333 1958 301 
-Q 1958 269 1852 173 
-Q 1747 77 1577 -6 
-Q 1408 -90 1210 -90 
-z
-" transform="scale(0.015625)"/>
       <path id="EBGaramond-Regular-9f3" d="M 224 1088 
 Q 186 1088 186 1126 
 Q 186 1235 214 1350 
@@ -5101,7 +5408,7 @@ z
      <use xlink:href="#EBGaramond-Regular-1fd" transform="translate(1082.609375 0)"/>
     </g>
    </g>
-   <g id="text_15">
+   <g id="text_17">
     <!-- Models &amp; -->
     <g style="fill: #1a1a1a" transform="translate(44.532 24.86125) scale(0.08 -0.08)">
      <use xlink:href="#EBGaramond-Bold-43"/>
@@ -5129,7 +5436,7 @@ z
      <use xlink:href="#EBGaramond-Bold-1fd" transform="translate(467.765625 0)"/>
     </g>
    </g>
-   <g id="text_16">
+   <g id="text_18">
     <!-- Closed-weight -->
     <g style="fill: #1a1a1a" transform="translate(118.243391 25.4195) scale(0.07 -0.07)">
      <defs>
@@ -5215,7 +5522,7 @@ z
      <use xlink:href="#EBGaramond-Regular-204" transform="translate(517.296875 0)"/>
     </g>
    </g>
-   <g id="text_17">
+   <g id="text_19">
     <!-- API access -->
     <g style="fill: #4d4d4d" transform="translate(125.774563 35.600906) scale(0.062 -0.062)">
      <defs>
@@ -5507,7 +5814,7 @@ z
      <use xlink:href="#EBGaramond-Italic-21c" transform="translate(348.96875 0)"/>
     </g>
    </g>
-   <g id="text_18">
+   <g id="text_20">
     <!-- Open-weight -->
     <g style="fill: #1a1a1a" transform="translate(182.310063 25.4195) scale(0.07 -0.07)">
      <defs>
@@ -5560,7 +5867,7 @@ z
      <use xlink:href="#EBGaramond-Regular-204" transform="translate(471.90625 0)"/>
     </g>
    </g>
-   <g id="text_19">
+   <g id="text_21">
     <!-- downloadable -->
     <g style="fill: #4d4d4d" transform="translate(183.726563 35.700688) scale(0.062 -0.062)">
      <defs>
@@ -5820,7 +6127,7 @@ z
      <use xlink:href="#EBGaramond-Italic-1d7" transform="translate(488.46875 0)"/>
     </g>
    </g>
-   <g id="text_20">
+   <g id="text_22">
     <!-- depends on ←      supplies → -->
     <g style="fill: #4d4d4d" transform="translate(11.6277 168.442594) rotate(-90) scale(0.066 -0.066)">
      <defs>
@@ -5927,7 +6234,7 @@ z
      <use xlink:href="#EBGaramond-Regular-b85" transform="translate(1005.59375 0)"/>
     </g>
    </g>
-   <g id="text_21">
+   <g id="text_23">
     <!-- Targets of -->
     <g style="fill: #1a1a1a" transform="translate(253.1124 164.443531) scale(0.07 -0.07)">
      <defs>
@@ -6466,7 +6773,7 @@ z
      <use xlink:href="#EBGaramond-Italic-964" transform="translate(274.703125 0)"/>
     </g>
    </g>
-   <g id="text_22">
+   <g id="text_24">
     <!-- Energy -->
     <g style="fill: #1a1a1a" transform="translate(279.957375 65.559487) scale(0.072 -0.072)">
      <use xlink:href="#EBGaramond-Regular-1a"/>
@@ -6589,7 +6896,7 @@ z
      <use xlink:href="#EBGaramond-Regular-1b4" transform="translate(197 0)"/>
     </g>
    </g>
-   <g id="text_23">
+   <g id="text_25">
     <!-- needs electricity -->
     <g style="fill: #4d4d4d" transform="translate(271.950078 41.061769) scale(0.062 -0.062)">
      <defs>
@@ -6713,7 +7020,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pd2fc7f3a44">
+  <clipPath id="pdc74f2834c">
    <rect x="2.88" y="2.88" width="320.4" height="255.6"/>
   </clipPath>
  </defs>
