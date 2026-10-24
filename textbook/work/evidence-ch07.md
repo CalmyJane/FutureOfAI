@@ -253,3 +253,18 @@ Independent second check of the deepened chapter (about 230 claims: every number
 - iea.org and the IEA PDF returned 403 and the Wayback Machine refused connections this pass, so IEA claims (Alberta, HBM/packaging, memory prices, helium, transformer and turbine lead times, SMR, PUE, Annex tables) rest on the earlier full-PDF readings recorded above, not on a fresh reading.
 - AI Index 2026 figures not re-opened this pass (verified from the full PDF in the first fact-check).
 - The 15% revenue expectation is reported only by Nvidia (a company filing describing officials' statements); no Federal Register or BIS document codifies it.
+
+## Polish (2026-10-24)
+
+Structural changes (prose rules of POLISH-GUIDE; audit-consistency2 tickets):
+- T-17: §7.1 opening 6ND derivation (Kaplan rule, 6 × 37e9 × 14.8e12) cut to a back-reference to Section 4.1 keeping only the result (≈3.3 × 10^24 FLOP, cited to deepseekai2024deepseekv3). §7.7 EU-threshold sentence and the cost box cross-check now refer to Section 4.1 instead of "the 6ND estimate of Section 7.1". kaplan2020scaling no longer cited in the text (bib entry left in place).
+- T-18: §7.5 opening no longer restates Cottier's 2.4×/yr trend, CI and cost breakdown (all in Section 4.4); keeps GPT-4 cost, the >$1 bn-by-2027 extrapolation and "only the most well-funded organizations" (not in ch04), Amodei, IASR. Cost box: Cottier method shortened to one sentence with Section 4.4 reference; DeepSeek GPU-hour breakdown condensed (119K + 5K stated as 124K added; per-trillion-token figures removed).
+- T-11: GPT-4 "about $40 million in 2023 dollars", attributed to Cottier et al.; dollar-year verified from the arXiv v2 PDF figure axes ("Cost (2023 USD, log scale)"); the text gives no other price year. Added cross-reference: Epoch's database now gives $37 million (Table 4.3, ch04).
+- T-10: compute-stock sentence now "2026 AI Index, drawing on Epoch AI's data … 3.3 times … (Epoch's own dashboard gives 3.4 times; Section 4.4)", matching ch04's wording.
+- H800 glossed at first use (§7.1 FP8 paragraph) as an Nvidia GPU that could be sold to China until the 2023 tightening (Section 7.3) — from nvidia2023form already in log; §7.3 repeat shortened to "which the first rule had left uncontrolled".
+- Debate box: italic "What would tip the balance" label removed; closing folded into prose.
+- Added closing synthesis paragraph at the end of §7.7 (no new facts); removed the previous closing line it replaced.
+- Paragraph splits for number density: Blackwell/TPU systems; Epoch per-query / other outputs; grid & gas / nuclear & emissions; training emissions / Mistral LCA; water (LBNL / AI estimates).
+
+Facts removed from the text (all still in sources above): H100 ridge-point arithmetic step (295); Blackwell 208bn transistors and 1.8 TB/s NVLink (in Table 7.2); ASML 2024 EUV count (44) and NXE:3800E 220 wafers/h; memory inventories four months → three weeks; IEA China/Europe TWh (in Figure 7.4); LBNL 74–132 GW capacity at 50% utilisation; LBNL training-server share 50–53% now "about half"; Gemini per-component Wh (58% accelerator share kept); Epoch's 1,500 W / 70% power assumptions and the 100,000-token 40 Wh case; Google 2024 emission factors 345/94 g/kWh; TSMC 3 nm/5 nm wafer shares; AI Index model counts per developer and 93 vs 2; Arena percentages 15.2%/0.5% and scores 1,503/1,454 (gap 49 points, 3.4% kept); hyperscale/colocation 84% water share.
+No facts added except the dollar-year of the Cottier GPT-4 figure (verified as above). No table or figure-caption changes.
