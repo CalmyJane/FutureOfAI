@@ -214,3 +214,16 @@ Independent second fact-check after the deepening pass (about 150 claims, number
 - XPT 3% vs 3.9% for AI domain experts: the report is inconsistent; the table figure (3%) is used.
 - Mouton et al. (RAND) is still verified only through the ISR 2025 summary (unchanged from fact-check 1).
 - Teaching apparatus: none found. Body ≈ 9,140 words. pandoc --citeproc -t html: no warnings.
+
+## Polish (2026-10-24)
+
+Structural changes (no facts added; wording-level changes not listed):
+- §11.1: repository paragraph split in two (results / why schemes differ); dropped the "20% other" and "25% both phases" shares as separate figures (now "the rest") and the 1–20 range (now "none covered all of them", since the maximum was 20 of 24).
+- §11.2: AA-Omniscience paragraph split into definition and worked example; Grok 4's 64% hallucination rate cut; the AI Index 22–94% sentence cut from prose (kept in Table 11.2). Dahl, Magesh and Whisper percentages that duplicate Table 11.2 replaced by takeaways in prose ("most answers from every model tested"; "more than a third").
+- §11.3: Kleinberg et al. result split and "balance" defined in place.
+- §11.4: cyber paragraph split (company/ISR reports vs competitions); "according to the company" removed from the GTIG sentence (doubled attribution); ISR/DARPA 77% note shortened (revised figure already in the sentence before).
+- §11.5: T-23 — endoscopy numbers (28.4% → 22.4%) removed; back-reference to Section 8.7, Chapter 10 reference made "Section 10.5". budzyn2025endoscopist still cited.
+- §11.6: T-24 — Grace et al. 15% response rate and 38–51% range removed; pointer to Section 14.2. T-14 — text and Table 11.4 caption now state that the table uses the subsets answering the AI risk questions (88 superforecasters; 30/29 AI domain experts) vs the full sample of 89 superforecasters and 80 domain experts cited in Chapter 14. T-01 — "Section 14.2" → "Sections 14.1–14.2". "Three features stand out." rewritten. Debate box: "*What would decide it.*" label removed, folded into prose.
+- §11.7: "at least four ways" and "Several considerations structure the weighing." rewritten; old Chapter 12/13 signpost paragraph replaced by a closing synthesis paragraph (ends with the Chapter 12/13 pointers).
+- Long sentences split throughout (ACLU settlement, NCSC, CrowdStrike, cloud shares, Safety Report fraud/automation-bias citations).
+- No AUC in this chapter (T-25 not applicable). No figure changes. pandoc --citeproc: no warnings.
