@@ -191,8 +191,8 @@ def f0603():
             h = ax.text(x, yy, txt, ha="center", va=va, **kw)
             yy += sgn * (height(h) + gap)
     from matplotlib.lines import Line2D
-    h = [Line2D([], [], ls="", marker="o", color=INK, ms=4, label="peer-reviewed paper"),
-         Line2D([], [], ls="", marker="o", mfc="white", mec=INK, ms=4, label="company announcement / preprint"),
+    h = [Line2D([], [], ls="", marker="o", color=INK, ms=4, label="first reported in a peer-reviewed paper"),
+         Line2D([], [], ls="", marker="o", mfc="white", mec=INK, ms=4, label="first reported by company or preprint"),
          Line2D([], [], ls="", marker="s", color=INK, ms=4, label="Lean-verified proof")]
     ax.legend(handles=h, loc="lower center", ncol=3, fontsize=6.3, bbox_to_anchor=(0.5, -0.02),
               handletextpad=0.3, columnspacing=1.2)
