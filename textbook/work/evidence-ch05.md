@@ -196,3 +196,23 @@ Recomputed (python): 0.995^24 = 0.887, 0.995^168 = 0.431; 0.95^20 = 0.358; 0.99^
 - SWE-bench Pro Table 2 (commercial) does not state whether the $2 cost cap applied; text says only "reported in a separate table".
 - OpenAI CUA page read through a reader proxy; the page itself is undated (date from TechCrunch and "Today we introduced… Operator").
 - AI Index 66.3% OSWorld figure: version (original vs Verified) not stated by the source; flagged in Table 5.1.
+
+## Polish (2026-10-24)
+
+Structural changes (POLISH-GUIDE global prose rules; audit-consistency2 ch05 tickets; no panel reader covered this chapter):
+- T-06: `{#tbl:05-01}`–`{#tbl:05-04}` added to the Table 5.1–5.4 captions (caption text unchanged).
+- T-13: CaMeL now "first posted as a preprint in 2025 and published in 2026 at the IEEE Conference on Secure and Trustworthy Machine Learning (SaTML)" (bib already @inproceedings SaTML 2026).
+- T-16: §5.4 METR time-horizon passage cut to two sentences (129-day doubling since 2023, Claude Opus 4.6 ≈ 12 h, one METR caveat quoted) + "Chapter 4 (Section 4.7)". Removed from ch05: 7-month doubling, Claude 3.7 Sonnet 50/60 min, o3 2 h, 5–61 h interval, factor-of-two error bars, domain differences, "doubling … does not double the degree of automation" (all in ch04 §4.7 or kwa2026clarifying). kwa2025measuring no longer cited in ch05 text.
+- Box label "**Case:**" → "**Case study:**" (Replit box).
+- "Two features of this format shape everything that follows." rewritten as direct statements; "The discussion here stays at the level of concepts and defences." deleted; Greshake taxonomy split into its own paragraph.
+- Count openers removed: "An agent has four parts", "This has two limits", "using three main techniques", "rests on three ideas" (A2A First/Second/Third rewritten as narrative), "Two measures with similar names", "Defences fall into four families" (The first/second/third/fourth family → varied openings), "Figure 5.3 plots it for three per-step rates". "The risk is not hypothetical." rewritten.
+- MCP version history: current (28 July 2026) revision in the text; March 2025 additions (OAuth 2.1, Streamable HTTP, tool annotations) moved to a parenthesis; June 2025 client features recast (elicitation current; sampling/roots/logging deprecated in 2026).
+- Number pile-ups trimmed: SWE-bench Pro paragraph (public/held-out set counts 731/11/12/276, GPT-5 commercial 15.7%, Opus 4.1 capped 22.7% cut; capped GPT-5 41.8 → 25.9% kept); Park et al. TrueSkill ablation ratings 26.88/25.64/22.95 cut (29.89 and 21.21 kept); Claude 3.5 OSWorld 22.0% (in Table 5.1) and CUA WebVoyager 87% cut from prose; compounding example 0.98^30 ≈ 55% cut; MAST percentages 12.4% and 13.2% cut (15.7% kept); Cohen's kappa glossed.
+- Punchline endings merged: "Shared protocols lower the cost…" folded into the A2A paragraph; "The seven-point gap … is the price of the protection" folded into the CaMeL results sentence.
+- Doubled attributions: Project Vend verdict, MCP adoption figures ("not independently audited" merged into the attribution), AP2 backers.
+- Debate box: italic "*What could resolve it:*" label removed; closing folded into prose.
+- AP2 paragraph split (launch design / current Checkout and Payment Mandates); long sentences split throughout (mean sentence length ≈ 26 → ≈ 22 words).
+- Chapter ending: closing paragraph kept (cross-references to Chapters 11 and 14) and followed by a four-sentence synthesis (closed loop as source of usefulness and weakness; compounding, pass^k, injection; safeguards outside the model; Project Vend's "capable" vs "completely robust").
+
+Facts added: none (the Cohen's kappa gloss is a standard definition, no citation). Facts removed: as listed above.
+No figure-caption changes; table captions changed only by the added ids. Pandoc --citeproc: no warnings.

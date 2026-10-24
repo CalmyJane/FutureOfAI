@@ -222,3 +222,17 @@ None required; no unverifiable claim found in the new material.
 - The AIFS architecture/training details come from the June 2024 preprint and may differ in the operational versions (AIFS Single v1 of February 2025 and v2 of May 2026).
 - OpenAlex API daily budget was exhausted midway; later metadata checks used Crossref and OpenReview instead.
 - CASP quote: the PMC author manuscript reads "protein folding problem" (no hyphen); the publisher abstract reads "protein-folding problem"; the chapter keeps the hyphenated publisher wording.
+
+## Polish (2026-10-24)
+
+Structural changes (POLISH-GUIDE global prose rules; audit-consistency2 ch06 ticket; no panel reader covered this chapter):
+- TPU glossed at first use (§6.2, AlphaFold training): "Google's TPU v3 (Tensor Processing Unit, the company's own AI accelerator chip; Chapter 7)".
+- Count openers removed: "Two caveats apply to every comparison. First… Second…" (Forecast skill box), "Two tests probe…", "The protein case combines four things…", "Three responses follow:" (§6.8, now three varied sentences), "They describe three." (illusions of understanding recast so the three illusions are not identical "An illusion of … arises when" sentences). "four distinguishable jobs" in §6.1 kept as the chapter's one such sentence.
+- Number pile-ups trimmed: GraphCast grid (1,038,240 points and 235,680,480 values cut; 721 × 1,440 and 227 values per point kept), "of the remaining 1,280" cut; GenCast and AIFS paragraphs refer to Table 6.1 for speed/energy figures (AIFS "gains of up to 20%" and AIFS ENS "ten times faster" now only in the table; AIFS fine-tuning years 2019–2020 cut); Kosmos 85.5%/82.1% now only in Table 6.3; "4 × 48 = 192" arithmetic shortened to "192 intermediate structures".
+- Long paragraphs split: AlphaFold structure module / recycling and training; CASP14 results / qualifiers; GraphCast data / architecture; AIFS deterministic / ensemble; independent weather evaluations; Selz & Craig / Sun et al.; AlphaEvolve mathematics / engineering. Long sentences split throughout (mean ≈ 24 → ≈ 21 words).
+- Punchline "Grading full proofs instead of final answers changed the measured result." merged into the preceding sentence. Intro signposting ("Where an independent evaluation exists, it is set beside the original claim") cut.
+- Debate box: italic "*What would decide it.*" label removed; closing folded into prose.
+- Chapter ending: four-sentence synthesis after the debate box (dependence on human and physics-based infrastructure; failure at the edge of experience; independent evaluations finding less than announced; replication share as the missing measure).
+
+Facts added: none (TPU gloss is a definition, consistent with Chapter 7). Facts removed: as listed above.
+No figure-caption or table changes. Pandoc --citeproc: no warnings.
