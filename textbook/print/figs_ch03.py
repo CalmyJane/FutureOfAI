@@ -5,7 +5,7 @@ The tokenisation table-figure (spec tbl-03-01.md) became Tables 3.1 and 3.2 in c
 import math
 
 import numpy as np
-from matplotlib.patches import Ellipse, Rectangle
+from matplotlib.patches import Arc, Ellipse, Rectangle
 
 import figstyle as F
 from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, save
@@ -71,9 +71,9 @@ def f0302():
     label(ax, 13.2, 16.1, "+", fs=8)
     # 3 transformer block; each token's vector runs up its own residual stream (vertical line)
     box(ax, 2, 20.5, 62, 29, "", fill="white", lw=0.9, style="round,pad=0,rounding_size=2")
-    label(ax, 9, 46.0, "Transformer\nblock", fs=7.6, weight="bold")
+    label(ax, 9, 45.4, "Transformer\nblock", fs=7.2, weight="bold")
     label(ax, 2.5, 18.6, "residual stream", fs=5.9, ha="left", italic=True, color=G1)
-    ax.plot([12.6, 19.3], [18.6, 18.6], color=G1, lw=0.4)
+    ax.plot([15.2, 19.4], [18.6, 18.6], color=G1, lw=0.4)
     # masked attention: information flows from earlier tokens (and the token itself) into each stream
     box(ax, 15.5, 22, 45, 12, "", fill=G4, lw=0.5, style="round,pad=0,rounding_size=1")
     label(ax, 9, 29.5, "Masked\nattention", fs=6.6)
@@ -87,11 +87,8 @@ def f0302():
                                   shrinkA=1, shrinkB=1, zorder=3)
             ax.add_patch(a)
     for x in cols:
-        # self-attention loop below each point
-        a = F.FancyArrowPatch((x - 0.5, ay - 0.6), (x + 0.5, ay - 0.6), arrowstyle="-|>", mutation_scale=3.5,
-                              lw=0.45, color=G1, connectionstyle="arc3,rad=-2.2", shrinkA=0.5, shrinkB=0.5,
-                              zorder=3)
-        ax.add_patch(a)
+        # attention to itself: a small loop at each point
+        ax.add_patch(Arc((x + 1.0, ay - 1.0), 2.0, 2.0, theta1=150, theta2=100, lw=0.45, color=G1, zorder=3))
     # residual streams (drawn over the attention box)
     for x in cols:
         ax.plot([x, x], [16.7, 49.5], color=INK, lw=0.7, zorder=2.5)
@@ -103,8 +100,8 @@ def f0302():
         box(ax, x + 1.4, fy, 4.6, fh, "", fill=G4, lw=0.5, style="round,pad=0,rounding_size=0.8")
         label(ax, x + 3.7, fy + fh / 2, "FF", fs=6.2, color=G1)
         ax.plot([x, x + 3.7, x + 3.7], [35.7, 35.7, fy], color=INK, lw=0.5, zorder=2.5)
-        arrow(ax, x + 3.7, fy + fh, x + 3.7, 43.6, lw=0.5, ms=4, style="-")
-        arrow(ax, x + 3.7, 43.6, x + 0.75, 43.6, lw=0.5, ms=4)
+        ax.plot([x + 3.7, x + 3.7, x + 2.2], [fy + fh, 43.6, 43.6], color=INK, lw=0.5, zorder=2.5)
+        arrow(ax, x + 2.6, 43.6, x + 0.75, 43.6, lw=0.5, ms=4)
         ax.add_patch(F.Circle((x, 43.6), 0.8, fc="white", ec=INK, lw=0.5, zorder=4))
         ax.plot([x - 0.5, x + 0.5], [43.6, 43.6], color=INK, lw=0.5, zorder=5)
         ax.plot([x, x], [43.1, 44.1], color=INK, lw=0.5, zorder=5)
