@@ -128,7 +128,7 @@ def f0302():
 
     # inset: attention from "its"
     box(ax, 72, 2, 27.5, 76, "", fill="white", lw=0.6, style="round,pad=0,rounding_size=1.5")
-    label(ax, 85.75, 74.3, "Attention from 'its'\n(layer 5 of 6)", fs=6.5, weight="bold")
+    label(ax, 85.75, 74.3, "Attention from 'its'\n(encoder, layer 5 of 6)", fs=6.5, weight="bold")
     words = "The Law will never be perfect , but its application should be just".split()
     top, step = 66.5, 4.6
     ys = [top - i * step for i in range(len(words))]
@@ -223,5 +223,5 @@ def f0303():
         label(ax, (xa + xb) / 2, y - 1.3, txt, fs=6.5, italic=True, color=G1, va="top")
     brace(C[0][0], C[0][0] + C[0][1], "most compute")
     brace(C[1][0], C[2][0] + C[2][1], "far less data")
-    brace(C[3][0], C[3][0] + C[3][1], "growing share\nof compute")
+    brace(C[3][0], C[3][0] + C[3][1], "small but\ngrowing share")
     save(fig, "fig-03-03")

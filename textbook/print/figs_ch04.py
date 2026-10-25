@@ -73,6 +73,7 @@ EPOCH = [
     ("Llama 3.1 405B", "2024-07-23", 3.8e25, True),
     ("Grok 3", "2025-02-17", 3.5e26, False),
     ("GPT-4.5", "2025-02-27", 3.8e26, False),
+    ("GPT-6 Astra", "2026-09-03", 9.4e26, False),  # Epoch "Likely"; release date per Epoch's records
 ]
 
 
@@ -81,8 +82,8 @@ def f0402():
     fig = F.figure(3.0)
     ax = fig.add_axes([0.12, 0.12, 0.86, 0.85])
     ax.set_yscale("log")
-    ax.set_xlim(1955, 2026)
-    ax.set_ylim(1e5, 10 ** 27.9)  # headroom above 10^27 for the top labels
+    ax.set_xlim(1955, 2027.5)
+    ax.set_ylim(1e5, 10 ** 28.2)  # headroom above 10^27 for the top labels
     ax.set_xticks(range(1960, 2021, 10))
     ax.yaxis.set_major_locator(FixedLocator([10.0 ** k for k in range(6, 28, 3)]))
     ax.yaxis.set_minor_locator(FixedLocator([10.0 ** k for k in range(5, 28)]))
@@ -117,7 +118,8 @@ def f0402():
     # 0.04 orders of magnitude apart (markers coincide: one shared label), and Llama 3.1 405B
     # sits just above-right of GPT-4. Labels are stacked to the left with leader lines.
     e = {r[0]: r for r in EPOCH}
-    lead = [("Grok 3, GPT-4.5", (year(e["Grok 3"][1]) + year(e["GPT-4.5"][1])) / 2, 3.65e26, 27.2),
+    lead = [("GPT-6 Astra", year(e["GPT-6 Astra"][1]), e["GPT-6 Astra"][2], 28.0),
+            ("Grok 3, GPT-4.5", (year(e["Grok 3"][1]) + year(e["GPT-4.5"][1])) / 2, 3.65e26, 27.2),
             ("Llama 3.1 405B", year(e["Llama 3.1 405B"][1]), e["Llama 3.1 405B"][2], 26.25),
             ("GPT-4", year(e["GPT-4"][1]), e["GPT-4"][2], 25.1)]
     for lab, x, v, ty in lead:

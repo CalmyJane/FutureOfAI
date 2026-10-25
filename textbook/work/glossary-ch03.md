@@ -41,4 +41,14 @@
 **hallucination**: A fluent but false or unsupported statement produced by an AI model, such as an invented citation; the term is a metaphor, since the model perceives nothing, and the behaviour arises partly because training and scoring reward confident guessing.
 **retrieval-augmented generation (RAG)**: A technique in which a system first searches a collection of documents and places the relevant passages in the model's context window before it answers.
 **interpretability**: The study of what the internal computations and representations of a trained model mean.
-**superposition**: The hypothesis, supported by toy models, that networks represent more features than they have dimensions by storing them as overlapping directions, which makes individual neurons respond to several unrelated things.
+**in-context learning**: A model's ability to perform a new task from instructions or worked examples given in its prompt, without any change to its weights.
+**encoder**: The part of a transformer that reads a whole input without a causal mask, so each token can attend to tokens on both sides; BERT is an encoder-only model.
+**decoder**: The part of a transformer that generates output one token at a time under a causal mask; GPT-style chatbots are decoder-only models.
+**induction head**: An attention circuit that finds an earlier occurrence of the current token and predicts the token that followed it, completing patterns of the form [A][B] … [A] → [B]; a proposed mechanism for in-context learning.
+**special token**: A vocabulary entry that does not stand for ordinary text, such as an end-of-text marker or a marker for the start of a chat turn.
+**chat template**: The format that turns a conversation of system, user and assistant messages into a single token sequence, using special tokens to mark each turn.
+**speculative decoding**: A way to speed up generation in which a small model drafts several tokens and the large model checks them in one parallel pass, keeping only those it would itself have produced.
+**RMSNorm**: A simplified form of layer normalisation that rescales each vector by its root-mean-square size without subtracting the mean.
+**calibration**: The match between a model's confidence and its accuracy; a calibrated model is right about 70% of the time on answers it gives 70% probability.
+**knowledge cut-off**: The date after which a model's training data end, so that it has no knowledge of later events unless they are supplied in its context.
+**value network**: In reinforcement learning, a second network that predicts how good a partial output or state is, used as a baseline when judging the reward; GRPO does without one.
