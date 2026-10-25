@@ -296,3 +296,22 @@ Changes made:
 
 Error sweep: re-read in full; arithmetic re-checked (80 million ×, 6ND values, GPU-hours, 77B/1.55T, 2.5× Astra/GPT-4.5, HLE ~4× from 13.4% to 54.8%); no new errors found.
 Pandoc --citeproc: no warnings. Body 8,754 words. Figures: no redraws needed.
+
+## Source audit (2026-10-25)
+
+Scope: every citation in text, boxes, tables and captions (about 110 citation instances, 51 keys) checked against this log; bib entries checked; DOIs re-resolved on Crossref (hoffmann 068431-2176, ho 079017-1856, kwa 085713-3086: titles, pages, first authors match); arXiv API: sajadieh2026ai DOI 2606.15708 = "Artificial Intelligence Index Report 2026" (v1 14 Apr 2026). Shared keys: all byte-identical in content; epochai2026data (vs ch12) and openai2026gpt6 (vs ch05/ch12) differ only in field alignment whitespace (not edited).
+
+Citations corrected:
+- §4.7 validity: "One review summarised by the AI Index found flawed questions in nine widely used benchmarks at rates from 2% on part of MMLU to 42% on GSM8K [@sajadieh2026ai]" → primary source [@truong2025fantastic], wording corrected. The primary paper (Truong et al., "Fantastic Bugs and Where to Find Them in AI Benchmarks", NeurIPS 2025 D&B; arXiv 2511.16842v1, PDF read, Figure 1 right inspected as image) reports the NUMBER of truly invalid questions among the 50 flagged per benchmark ("2% corresponds to one question" of precision@50): MMLU Math 2, OpenBookQA 2, MMLU Cli 6, MMLU Med 6, AIR-Bench 9, MedQA 23, ThaiExam 26, MMLU 5Sub 31, GSM8K 42 (i.e. 4%–84% precision). "2% to 42%" as benchmark-wide flaw rates is a misreading in the secondary source (for GSM8K the paper uses 88 of 997 invalid, ≈9%). New text: "When experts reviewed the 50 questions flagged as most suspect by a statistical screen in each of nine widely used benchmarks, between 2 (on part of MMLU) and 42 (on GSM8K) proved flawed." https://arxiv.org/abs/2511.16842
+- §4.6 "Epoch estimated declines of 9 to 900 times per year" (attributed to Epoch, cited only via AI Index 2025 in the previous sentence) → added primary [@cottier2025llm]: "The rate of decline varies dramatically depending on the performance milestone, ranging from 9x to 900x per year" (Cottier, Snodin, Owen, Adamczewski, 12 Mar 2025). https://epoch.ai/data-insights/llm-inference-price-trends
+
+Uncited claims found and resolved:
+- Opening: Llama 3.1 405B "released in July 2024" → [@meta2024llama] (model card: "Model Release Date: July 23, 2024"). https://github.com/meta-llama/llama-models/blob/main/models/llama3_1/MODEL_CARD.md
+- §4.2 quotation "more than seven orders of magnitude" and the fitted laws (paragraph without key) → [@kaplan2020scaling].
+- §4.2 quotation "do not have a fundamental meaning" and 2^−0.076 ≈ 0.95 note → [@kaplan2020scaling].
+- §4.3 Hoffmann's two explanations of Kaplan's result (fixed schedule; small models) → [@hoffmann2022empirical].
+- §4.5 Villalobos's 3–15× repetition allowance (paragraph cited only Muennighoff) → [@villalobos2024position].
+- §4.7 HLE public set "fixed on 3 April 2025" (date from lastexam.ai / Scale leaderboard, not the Nature paper) → [@centerforaisafety2026benchmark; @scale2026humanity].
+- Checked, primary not swapped: inference-energy figures (Jegham et al.) stay cited to the AI Index 2026, because the DeepSeek V3.2 / GPT-5 (high) values come from the authors' live dashboard, not from the latest paper (arXiv 2505.09598v6 tables list DeepSeek-R1/V3, no V3.2).
+
+Bib: added cottier2025llm, truong2025fantastic. No existing entries corrected. Claims softened/cut: the 2%–42% claim reworded as above. Body (to Further reading) 8,768 words; pandoc --citeproc clean.

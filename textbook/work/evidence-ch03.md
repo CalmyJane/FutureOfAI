@@ -253,3 +253,27 @@ Counts: gaps closed 8 (1 published since, 7 confirmed / still-preprint status co
 - Re-ran Sennrich Algorithm 1 → Table 3.2 merges and counts match.
 - Recomputed: Table 3.5 attention (2.83/0.71/2.12; sum 27.29; 0.620/0.074/0.306; (0.773, 0.227); token 2 0.330/0.670); Table 3.6 every row and total 124,439,808, FFN share 2/3, Kaplan approximation 0.14%; 2N ≈ 170M; Table 3.9 (74 KB/75 MB; 819,200 B; 0.52 MB/66 GB; 8.3 MB/1.06 TB; ×16); temperature ratios e^0.43 ≈ 1.54, e^0.86 ≈ 2.36, consistent with Table 3.8 (7.5/4.9, 51.7/21.9); losses −ln 0.273 ≈ 1.30, −ln 0.032 ≈ 3.44; σ(1) ≈ 73%; 128,000² ≈ 1.6 × 10¹⁰; GRPO (mean 0.5, sd 0.5, ±1); t/(1 − t) = 3 → all correct.
 - Cross-references (Sections 1.7, 2.1, 2.3, 2.5, 3.4, 3.5, 3.7, 12.4, 12.5; Chapters 4, 11, 12) checked against chapter headings → consistent. No errors found.
+
+## Source audit (2026-10-25)
+
+Scope: every citation in text, boxes, tables and captions (about 130 citation instances, 52 keys) checked against this log; bib entries checked for type and completeness; DOIs re-resolved on Crossref (ouyang 068431-2011, wei2022chain 068431-1800, dao 068431-1189, petrov 075280-1608, rafailov 075280-2338, penedo 079017-0970, ji 10.1145/3571730, karpukhin 2020.emnlp-main.550: titles, pages, first authors match). arXiv API: deepseekai2026deepseekv4 = 2606.19348v1, published 2026-04-26 (ID/date combination is as arXiv reports it). Shared keys compared with all other bibs: all byte-identical.
+
+Citations corrected / strengthened (no wrong citations found):
+- "Most recent open models use rotary position embeddings" was supported only by @su2024roformer (the method paper) → now [@su2024roformer; @qwen2024qwen25; @deepseekai2024deepseekv3]: Qwen2.5 report §2 "Rotary Positional Embeddings (RoPE, Su et al., 2024)"; DeepSeek-V3 §2.1.1 decoupled key "that carries Rotary Positional Embedding (RoPE)" (both PDFs read, https://arxiv.org/pdf/2412.15115 ; https://arxiv.org/pdf/2412.19437). Llama 3 already cited in the same paragraph.
+- Figure 3.3 caption: "in recent models this stage can use a substantial share of the training computation" had no supporting source among the caption's citations → added "share of computation from @you2025how" (Epoch: R1 RL stage ≈ 20% of V3 pre-training cost).
+
+Uncited claims found and resolved (citation added in the paragraph):
+- §3.1 Sennrich 59,500 / 89,500 merges (paragraph named the authors but carried no key) → [@sennrich2016neural].
+- §3.3 block counts 12 / 96 / 126 → [@radford2019language; @brown2020language; @grattafiori2024llama] (all already logged).
+- §3.3 GPT-2 FFN 768 → 3,072 → 768 with GELU → [@radford2018improving; @radford2019language]: GPT-1 §4.1 "we used 3072 dimensional inner states"; "Gaussian Error Linear Unit (GELU)"; GPT-2 "largely follows the details of the OpenAI GPT model" (PDF read, https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf).
+- §3.5 reward-model loss, σ(1), PPO on ~31,000 prompts, per-token KL penalty → [@ouyang2022training] (logged above; paper: KL penalty "to mitigate over-optimization of the reward model").
+- §3.5 quotation "despite having 100x fewer parameters" (own paragraph, no key) → [@ouyang2022training].
+- §3.5 DPO quotations "Your Language Model is Secretly a Reward Model", "substantially simpler to implement and train" and results (separate paragraph from the first DPO citation) → [@rafailov2023direct].
+- §3.5 "Post-training ... has traditionally used far less data and computation than pre-training" → [@edelman2025why] (copied byte-identical from bib/ch04.bib; "100× more pre-training than post-training compute" before late 2024, logged in evidence-ch04).
+- §3.6 singleton-rate paragraph (20% birthday example, Turing estimator, quotation "a state-of-the-art open-source language model") → [@kalai2025why].
+- §3.6 scoring-rule paragraph (binary grading meta-evaluation, t/(1 − t) penalty) → [@kalai2025why].
+- §3.7 AIME paragraph (15.6 → 77.9%, "Wait, wait. Wait..." quotation, 71.0% preprint, R1 79.8%, MIT licence) → [@guo2025deepseek].
+
+Checked and left uncited: author computations (labelled in text), cross-references, "Before 2017 most language models were recurrent networks" (textbook history), UTF-8 byte counts, per-token pricing of services (common knowledge).
+
+Bib: added edelman2025why. No entries corrected. Claims softened/cut: none. Body (to end of §3.7) 9,736 words; pandoc --citeproc clean.
