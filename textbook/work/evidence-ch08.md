@@ -282,3 +282,22 @@ Changes made (old → new)
 Bib (ch08.bib only): added budgetlab2026tracking, gimbel2026what, barhiye2026ocde, federalreserve2026beige, rodgers2026how, wga2026summary. Pandoc check clean.
 
 Not checked (shared web-search budget exhausted): SAG-AFTRA 2026 deal AI terms beyond first pass; any WGA ratification vote figure.
+
+## Final gap check (2026-10-25)
+
+### SAG-AFTRA 2026 TV/Theatrical contract (AMPTP)
+- Ratified in national vote closing 4 June 2026: 91.42% yes / 8.58% no, return 19.25%; term 1 July 2026–30 June 2030 (four years). Source: SAG-AFTRA release "SAG-AFTRA Members Approve 2026 TV/Theatrical Contracts Tentative Agreement" (https://www.sagaftra.org/sag-aftra-members-approve-2026-tvtheatrical-contracts-tentative-agreement) seen only via search-result extracts (sagaftra.org blocks fetches with a captcha; referendum booklet PDF also blocked); figures corroborated by AP (5 Jun 2026: "more than 90% of votes", about 19% turnout, four-year term) → https://spectrumlocalnews.com/ca/california/entertainment/2026/06/05/actors-union-approves-contract-studios-streamers ; Variety/THR/Deadline pages redirect to a paywall gateway, not read.
+- AI terms (SAG-AFTRA National Board release of 11 May 2026, as reported by SHOOT Online, 12 May 2026 → https://www.shootonline.com/article/sag-aftra-national-board-approves-tv-theatrical-deal-membership-to-vote-on-ratification/): "builds on SAG-AFTRA's existing guidelines around AI including new provisions strengthening consent and compensation"; "principle strongly favoring human performances"; "Producers do not intend to use a synthetic in a human role that would otherwise be performed by a human" unless "significant additional value" is added; digital replicas may not cross picket lines; protections for minors' replicas; "articulable business reason" required to scan. AP confirms the "significant additional value" test.
+- Search extracts also mention arbitration/damages for synthetic-performer violations and notice-and-bargain if performances are licensed for AI training; not verified in a readable source → not used.
+- ch08 before: no mention of SAG-AFTRA or actors at all; §8.6 "Collective bargaining" covered only the WGA. Added 2 sentences.
+
+### WGA 2026 MBA ratification
+- ch08 does not state or imply a ratification vote date or share → skipped per task.
+
+### Changes made (old → new)
+1. §8.6: duplicated WGA 2026 sentence at end of first paragraph removed (the next paragraph already gives the same facts, term 2 May 2026–1 May 2030, with the same citation); closing sentence "The contracts leave the technology in use but allocate control over it." moved to end of second paragraph.
+2. §8.6: added "The actors' union SAG-AFTRA ratified a 2026–2030 contract in June 2026 by 91% of votes. It strengthens consent and compensation rules for digital replicas and states that producers do not intend to use an AI-generated "synthetic" performer in a human role unless it adds "significant additional value" [@ap2026actors; @shoot2026sagaftra]."
+3. Trims (to hold body at 9,899 words by wc): WGA "The Guild may then ask to discuss the licence, including payment to writers" → "The Guild may then seek talks, including on pay"; Nairobi union "for Facebook, TikTok and ChatGPT" removed; AFL-CIO "the US union federation" → "the union federation"; Goldman "almost $7 trillion," removed; §8.1 Figure 8.1 sentence condensed; offshore-study sentence condensed.
+
+### Bib (ch08.bib only)
+- Added ap2026actors, shoot2026sagaftra (keys not in other bibs). Pandoc check clean.

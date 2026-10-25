@@ -3,7 +3,7 @@
 Author: Jan Göbel · Evidence current to October 2026 (web sources checked 20–25 October 2026, the last passes with web search)
 
 ## Files
-- `understanding-ai_A5_interior.pdf`: the print-ready interior. A5 (148 × 210 mm), no bleed, PDF/X-4 with sRGB output intent, 566 pages (an even number), all fonts embedded (EB Garamond, SIL OFL). The publisher or print-on-demand service still needs to add the cover and ISBN.
+- `understanding-ai_A5_interior.pdf`: the print-ready interior. A5 (148 × 210 mm), no bleed, PDF/X-4 with sRGB output intent, 564 pages (an even number), all fonts embedded (EB Garamond, SIL OFL). The publisher or print-on-demand service still needs to add the cover and ISBN.
 - `understanding-ai.md`: the full manuscript in Markdown, for editing or conversion.
 
 ## Contents
@@ -11,7 +11,7 @@ Author: Jan Göbel · Evidence current to October 2026 (web sources checked 20�
 - 14 chapters in five parts: How AI Works; The Frontier; Society and Economy; Risk, Safety and Governance; The Decade Ahead.
 - About 191,000 words including references, 46 figures and 61 tables.
 - A glossary of 375 terms.
-- An APA 7 reference list of 1,002 cited sources.
+- An APA 7 reference list of 1,007 cited sources.
 
 This edition is written as nonfiction, not as a course text: there are no learning objectives, summaries, key terms or discussion questions. Each chapter opens with a documented case and goes into the mechanisms, numbers and evidence in depth. It uses Concept, Case study, Debate and Going deeper boxes, ends with a synthesis paragraph and closes with annotated further reading.
 
