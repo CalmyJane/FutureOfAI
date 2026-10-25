@@ -417,3 +417,29 @@ Closes items the first pass could not search. ~40 searches used.
 - Copyright courts: Concord v. Anthropic SJ hearing 21 Oct 2026, no ruling found; In re OpenAI (NYT) no ruling; Kadrey torrenting claim SJ hearing set for 25 Feb 2027 (consistent with "pending") → no change.
 
 Changes: §13.2 enforcement sentence reworded; §13.7 PLD sentence added; §13.7 AG-suit sentence added. New bib (ch13 only): bundestag2026produkthaftung, mekelburg2026florida, ap2026states. pandoc --citeproc: no warnings.
+
+## Source audit (2026-10-25)
+
+Scope: all 176 citation instances (102 keys) in paragraphs, boxes, tables and captions checked against this log and, where the log was thin, against the source. Bib entries reviewed for completeness and APA type. No wrong citations found; earlier passes had already replaced secondary sources where primaries were reachable (GEMA court press release, Bartz final-approval order, SB 53 and RAISE statute texts, H.R. 9925 text, Commission FAQ).
+
+### Citations corrected (old → new)
+- None replaced. Additions where a claim relied on a citation outside its paragraph:
+  - Bartz box, paragraph 2 (Alsup holdings; quotations "exceedingly transformative and was a fair use", "training schoolchildren to write well") had no citation in the paragraph → added @usdcnortherncal2025bartz.
+  - §13.2 face-database ban "already fined ... Clearview AI case" → added @edpb2024dutch (was cross-reference only).
+  - §13.2 AI-system definition "follows the OECD's wording closely" → added @oecd2024principles (OECD.AI page gives the definition "a machine-based system that, for explicit or implicit objectives, infers ..."; re-opened today).
+  - §13.5 "their definition of an AI system was adopted almost word for word in the EU AI Act" → added @europeanparliament2024regulation (Art. 3(1)).
+  - §13.5 harmonised standards "give a legal presumption of conformity" → added @europeanparliament2024regulation (Art. 40(1)); previously only the omnibus was cited.
+  - Colorado box "As of October 2026 the federal case remained open" → added @usdccolorado2026docket.
+
+### Sources added
+- Fair-use four factors (§13.6) → lii2026section107 → https://www.law.cornell.edu/uscode/text/17/107 (17 U.S.C. § 107, "Limitations on exclusive rights: Fair use": purpose and character, nature, amount and substantiality, market effect; read 2026-10-25). "Transformative" gloss is case law, covered by the Bartz and Ross citations in the same section.
+
+### Re-checked
+- europeancommission2024liability (Commission PLD page, re-opened 2026-10-25): "all types of software ... including applications, operating systems and AI-systems"; liability for defects that "became apparent after their release, as a result of updates, upgrades or a machine-learning feature"; psychological harm; "destruction or corruption of data"; access to evidence; "alleviate the burden of proof where needed"; 3 years; 8 Dec 2024 / 9 Dec 2026. Supports the §13.7 PLD sentences. The page does not use "no-fault", but describes compensation without proof of fault (victim proves defect, damage, causation); wording kept.
+
+### Claims softened/cut
+- None.
+
+### Bibliography
+- New (ch13 only): lii2026section107. No shared keys changed. anthropicsettlement2026 and trump2026inaugurating remain in bib/ch13.bib but uncited (harmless).
+- pandoc --citeproc: no warnings. Body (excluding Further reading and citation keys) 9,783 words.

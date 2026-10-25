@@ -408,3 +408,23 @@ pandoc --citeproc: no warnings. Body ~9,840 words (excluding Further reading and
 - Metaculus: AGI question pages and API return 403 (authentication required); ch14 cites no Metaculus figure → nothing to verify; not added.
 - Trims for length: Maes–Garreau sentence (§14.1) removed; AI 2027 late-2025 note shortened; Iowa Electronic Markets sentence and METR parenthesis tightened.
 - New bib: grace2026advanced; copied bastounis2026navierstokes. pandoc --citeproc: no warnings.
+
+## Source audit (2026-10-25)
+
+Scope: all 171 citation instances (107 keys) in paragraphs, boxes, tables and captions checked against this log; bib entries reviewed. No wrong citations found. Body near the word cap, so fixes are citation additions only, plus one two-word cut.
+
+### Citations corrected / added (claim → key)
+- §14.1 "Dartmouth proposal of 1955 ... Herbert Simon's twenty-year forecast of 1960" (dates; previously only a Chapter 1 cross-reference) → added @mccarthy2006proposal and @simon1960new (both already in bib/ch14.bib and verified in this log; mccarthy2006proposal byte-identical with bib/ch01.bib).
+- §14.2 framing paragraph: 2060 → 2047 HLMI, 17 vs 34 years, FAOL 2116 carried only @grace2026advanced (2024 round) → added @grace2025thousands.
+- §14.2 risk paragraph: median 5% (mean 9%), 38–51%, and "give the two equal weight" are 2023-round results but the paragraph cited only @grace2026advanced → added @grace2025thousands (twice, so each 2023 claim sits next to its source).
+- §14.1 Navier–Stokes: "The official statement of this Millennium Prize Problem admits such a forced version" was supported only by a news report (@thenextweb2026openai) → added primary source fefferman2006existence → https://www.claymath.org/wp-content/uploads/2022/06/navierstokes.pdf (Fefferman's official problem description; text extracted: prize for proof of one of four statements; (C) and (D) are breakdown with "a smooth f(x, t)", the external force, and smooth divergence-free initial data).
+
+### Claims softened/cut
+- §14.4 "where the economist Pierre Wack developed scenario planning" → "where Pierre Wack developed ..." ("economist" not supported by the cited HBR article, whose bio describes him as retired head of Shell's business environment division).
+
+### Re-checked
+- nist2026caisideepseek (re-opened): page dated 1 May 2026; "CAISI conducted the evaluation in April 2026"; "lag behind the frontier by about 8 months"; "the most capable PRC AI model evaluated by CAISI to date" → text ("In April 2026 ... estimated") consistent.
+
+### Bibliography
+- New (ch14 only): fefferman2006existence. No shared keys changed.
+- pandoc --citeproc: no warnings. Body (excluding Further reading and citation keys) 9,700 words.
