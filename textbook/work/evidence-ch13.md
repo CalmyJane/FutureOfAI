@@ -401,3 +401,6 @@ Body word count 9,642 → 9,773. The shared per-turn web-search budget ran out b
 - New (ch13 only): bertuzzi2026eus, californiagovernor2026governor, mcginty2026gema. No shared keys edited.
 
 pandoc --citeproc: no warnings.
+- (Coordinator, 2026-10-25) Council of Europe AI convention status re-checked via Dutch treaty database (https://verdragenbank.overheid.nl/en/Treaty/Details/013947_p.html): 21 signatories, only EU ratified (15 May 2026); North Macedonia signed 8 May 2026. Text confirmed.
+- (Coordinator, 2026-10-25) Added China's AI-agent implementation opinions (CAC/NDRC/MIIT, 8 May 2026), Xinhua via english.www.gov.cn. Enforcement details from CSA note not used (unconfirmed).
+- (Coordinator, 2026-10-25) California SB 867 (AI-chatbot toys moratorium to 1 Jan 2031, signed Sept 2026) confirmed via PIRG/Ballard Spahr; age threshold inconsistent across sources, so not added to ch10.
