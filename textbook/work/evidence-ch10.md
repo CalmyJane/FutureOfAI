@@ -343,3 +343,69 @@ Body now 9,741 words (wc).
 Bib (ch10.bib only): added agweyu2026generative, covington2026fda, texas2026attorney, ballardspahr2026california, fenwick2026california, nyassembly2026a10379. Pandoc check clean.
 
 Figures: none changed.
+
+## Revision after external review (Oct 2026)
+
+Review: review/05-ch09-ch10.md (sections A–E, Chapter 10). One line per change; source URL last.
+
+### Log corrections
+- Line 9 (nickow2020impressive) rewritten: the bib cites the AERJ 2024 article, pooled ES 0.288 SD (SE 0.029); 0.37 SD was the 2020 NBER WP figure. Text (0.288) was already correct; reviewer agrees → https://doi.org/10.3102/00028312231208687 . Text now says "a 2024 meta-analysis".
+- Line 11: "chatterji2025people" → "chatterji2025how" (the only key that exists; NBER WP 34255). No text change needed.
+- Earlier note (Fact-check 3) that Agweyu raw rates were omitted "because raw and adjusted directions differ" is superseded: both are now reported (see A10.3).
+
+### Factual and reference fixes (A)
+- A10.1 Folk & Dunn: debate box rewritten from the abstract (Psych Sci 37(4):276–286, doi 10.1177/09567976261427747, Crossref): use predicted later increases in a single-item emotional-isolation measure; on the broader social-connection measure, lower connection predicted later use but use did not predict lower connection; analyses exploratory. "2,149 adults in four English-speaking countries" → "more than 2,000 adults in four Western countries" (abstract wording) → https://api.crossref.org/works/10.1177/09567976261427747
+- A10.2 Vaccaro: added human–AI vs humans alone, g = 0.64 (95% CI 0.53–0.74 per PMC11659167 as quoted in review; not re-fetched), and that the loss is relative to the AI alone.
+- A10.3 Penda (Agweyu, Nature Medicine): raw treatment failure 102/4,693 (2.2%) vs 94/4,654 (2.0%) now given beside adjusted OR 0.77 (0.55–1.08), P = 0.13; noted directions differ; neither significant (Europe PMC abstract) → https://doi.org/10.1038/s41591-026-04503-6
+- A10.4 Kraft box: "all the AI tutoring results below are large" → "the positive … results below are large, often implausibly so, and two of the trials found harm"; added that Kraft's benchmarks are for standardised tests while most trials used tests written for the study.
+- A10.5 Therabot: access was 4 weeks with daily prompts + 4 weeks without prompts (8 weeks); now leads with the between-group result (significant reductions vs waitlist at 4 and 8 weeks; abstract via c4tbh.org). Press-release within-group 51%/31% dropped → https://www.c4tbh.org/randomized-trial-of-a-generative-ai-chatbot-for-mental-health-treatment
+- A10.6 New York: enacted law now cited to the statute (General Business Law Art. 47, §§1700–1704, L. 2025 ch. 58 part U, budget bill S-3008C; in effect 5 Nov 2025) and the Governor's press release (10 Nov 2025: "detect and implement a safety protocol if a user expresses suicidal ideation or self harm"; reminders "every three hours of continued use"); A10379 cited only for the pending bill. New keys newyork2025gbl47 (nysenate.gov returns 403 to scripts; URL is the official statute page) and nygovernor2025hochul → https://www.governor.ny.gov/news/governor-hochul-pens-letter-ai-companion-companies-notifying-them-safeguard-requirements-are ; Table 10.3 NY row and caption updated.
+- A10.7 FDA list: "a search … found" → "The author's search … found"; added the regulatory boundary: 21 U.S.C. 360j(o)(1)(A) and (C) (Cures Act s. 3060) exclude administrative-support and electronic-patient-record software from the device definition; worded as "can fall on the non-device side" (no FDA statement on scribes found). New key uscode21360jo → https://www.law.cornell.edu/uscode/text/21/360j
+- A10.8 Rori: REVIEWER PARTLY REJECTED. The abstract says "assigned", but the full text says "Schools were randomly assigned to two groups: a control group, which included students from six schools; and a treatment group, which included students from five schools" (arXiv 2402.09809 PDF, sec. 3.1; also Limitations). Kept "randomly", added 5/6 split. On whether Rori is LLM-based: the paper describes a curriculum of 500+ micro-lessons with hints and worked solutions, and "various NLP methods, including specialized language models (LLMs)" so students can chat in natural language. Text and Table 10.1 now describe it as scripted micro-lessons with language models interpreting messages ("less of a chatbot than the other tutors"); kept in the table → https://arxiv.org/pdf/2402.09809 . Text "main randomised studies" → "main controlled studies".
+- A10.9 EU AI Act: high-risk only where the device needs third-party conformity assessment (Art. 6(1)); "which excludes most devices in the lowest risk class" added (author's gloss on MDR classes).
+- A10.10 PCCP: added FDA final guidance (December 2024) → https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial-intelligence (HTTP 200; date per law-firm summaries, e.g. https://www.foley.com/insights/publications/2025/01/fda-final-guidance-ai-device-software-predetermined-change-control-plan/). New key fda2024marketing.
+- A10.11 "pre-school to year 12" → "from pre-kindergarten to the end of secondary school".
+- A10.12 "solved more practice problems" → "scored higher on practice problems".
+- A10.13 "In the Pew survey" → "In Pew's 2024 survey" (sidoti2025quarter).
+- A10.14 De Freitas: "In five studies" → "In a series of studies, mostly experiments"; "rests on experiments" → "rests mainly on experiments".
+- Dated user figure: "with more than 800 million weekly users" → "With the more than 800 million weekly users ChatGPT had at the time" (October 2025, zeff2025openaic).
+
+### Technical and conceptual (B)
+- B10.1 Nigeria: attrition 334/671 control vs 235/657 treated missed the endline (log line 5: 337 and 422 sat it); authors' Lee bounds and IPW (WPS 11125, pp. 16–17, Tables 10–11: "since the difference in attrition between the treatment and control groups is significant, we first provide Lee-bounds estimates") described as resting on assumptions; "1.5 to 2 years" explained as an EYOS conversion (Evans & Yuan 2019; WP p. 17: 0.238 SD = 1.5 years, 0.31 SD = 2 years, implying ≈0.16 SD per year, computed) → https://documents.worldbank.org/curated/en/099548105192529324/pdf/IDU-c09f40d8-9ff8-42dc-b315-591157499be7.pdf . Effect-size box now points to the Nigerian trial as the worked example of ITT vs effect on participants and of attrition; "estimand" is now used. WWC threshold claim not added (handbook not checked).
+- B10.2 Maryland: rewritten as harder to interpret; ITT −0.37 with ~15% take-up implies ≈ −2.5 SD per user (computed: 0.37/0.15), implausible, so probably not a tutor-use effect; said to deserve more caution than the Turkish trial. LMS participation figure cut.
+- B10.3 Kestin: added that each format covered one lesson on one topic and that post-tests were written for the study "by a separate team member from those involved in designing the AI or teaching the lessons" and did not affect grades (Sci Rep full text, Methods) → https://www.nature.com/articles/s41598-025-97652-6.pdf ; linked to Cheung & Slavin.
+- B10.4 VanLehn 0.79 vs Nickow 0.288: one reconciling sentence, worded as "probably" (study type: RCT-only field meta-analysis vs smaller studies/researcher tests). VanLehn's study mix was not verified in full text, so no specific claim about it is made.
+- B10.5 Detector bias counter-evidence: Jiang et al. 2024 (Computers & Education 217:105070; ETS authors, interest disclosed) — abstract not accessible (ScienceDirect 403; Semantic Scholar abstract null); finding taken from the ETS author's 2026 chapter (arXiv 2603.02353, p. 15–16: "Jiang et al. (2024a; 2024b), based on a large dataset, showed that carefully developed detectors do not necessarily bias against non-native English speakers") and worded accordingly; plus Al Ali et al. 2026 preprint (Czech; "no systematic bias against non-native speakers") → https://doi.org/10.1016/j.compedu.2024.105070 , https://arxiv.org/abs/2603.02353 , https://arxiv.org/abs/2602.05769 . Glossary entry for AI-text detector softened.
+- B10.6 Epic box: added Epic's internal AUC claim 0.76–0.83 (Wong 2021 Discussion, PMC8218233); noted the 2021 and 2026 evaluations are not like for like; lesson reframed as vendor claims vs independent results, and passing external validation ≠ benefit (impact trial needed) → https://pmc.ncbi.nlm.nih.gov/articles/PMC8218233/
+- B10.7 AMIE: Tu et al. and McDuff et al. now introduced as Google studies; Brodeur "funded by Alphabet, Google's parent company".
+- B10.8 Brodeur: PCPs returned surveys for 60 of 98 visits; 33/44 among those who read the transcript (Lancet abstract via Europe PMC) → https://doi.org/10.1016/S0140-6736(26)01535-7
+- B10.9 Lukac: uptake 33.5% (DAX, 24,696 visits) and 29.5% (Nabla, 23,653 visits) added; trial estimates the effect of offering a scribe (NEJM AI abstract via Europe PMC) → https://doi.org/10.1056/AIoa2501000
+- B10.10 MASAI: added that the comparator was double reading, so results do not transfer directly to single-reader systems (reasoning; no US practice claim made).
+- B10.11 Survey/self-selection caveat paragraph moved before the companion studies and reworded as a reading guide.
+
+### Writing (C)
+- Legal number dump split into "scale of exposure" (OpenAI 0.15%) and "legal response"; state roll-call cut to "By late October 2026 ten had sued OpenAI" (Florida + eight in October + Texas, per the cited reports); Character.AI policy shortened; settlement labelled "according to CNN".
+- SB 243 / SB 1119 / SB 867 prose cut to what changed (disclosure → design); details left to Table 10.3; law-firm sources labelled.
+- Synthesis paragraph moved out of 10.8 under a new heading "10.9 Design, measurement and rules".
+- Opening: "reached opposite headline results" → "point in different directions".
+- "Desirable difficulty" now cited to Bjork (1994) (Crossref: MIT Press, Metacognition, pp. 185–206, doi 10.7551/mitpress/4561.003.0011).
+- 10.8 retitled "Accessibility and language access"; translation sentence reworded as language access.
+- Further reading: Wong et al. described as an external validation study.
+- Labels: Covington client alert labelled; "US$" → "$" throughout (5 places).
+- Mid-sentence colons: 14 replaced.
+- Trims to pay for additions: Lee/Gerlich survey details, BCI word-error detail, OpenAI memory and Anthropic retention details, OpenAI preservation-order details, Maryland participation figure. Chapter ≈9.7k → ≈10.6k words.
+
+### Structure and coverage (D)
+- Bean et al. (Nature Medicine 32:609–615, 2026; doi 10.1038/s41591-025-04074-y; published version of arXiv 2504.18919): 1,298 UK participants, ten scenarios, GPT-4o/Llama 3/Command R+ vs own sources; models alone 94.9% conditions; users <34.5% conditions, disposition <44.2%, "both no better than the control group" (Crossref abstract). Added after ChatGPT Health. The review's "less often than controls" was not in the abstract; the text uses "no better than" → https://doi.org/10.1038/s41591-025-04074-y
+- Teachers: EEF Teacher Choices trial (Roy et al., Dec 2024; NFER): cluster RCT, 34 schools (129 teachers) ChatGPT vs 34 schools (130 teachers) non-GenAI, Year 7–8 science; 56.2 vs 81.5 min/week (31% saving); blind expert panel found no quality difference; diaries; pupil outcomes not measured. EEF site behind Cloudflare; report PDF read from EEF's CDN → https://d2tic4wvo1iusb.cloudfront.net/production/documents/projects/chatgpt_in_lesson_planning_-_evaluation_report.pdf ; summary https://scale.stanford.edu/ai/repository/chatgpt-lesson-preparation-teacher-choices-trial-evaluation-report
+- 10.6 split with two ### subheadings ("The evidence on companions and well-being"; "Regulating companion chatbots") rather than renumbering sections (cross-references to 10.7 and 10.8 elsewhere would break).
+- Balance: education working papers/preprints (Nigeria, Rori, Maryland, Kestin) now get explicit design caveats (B10.1–B10.3).
+
+### Figures and tables (E)
+- Fig. 10.1: y-axis ticks extended to 140 (ylim 145); Panel B title and caption "two other trials (three estimates)". Spec synced; py_compile OK.
+- Fig. 10.3: "External validation" → "External validation + impact trial"; "Accuracy and time study" → "Time, accuracy and safety audit". Spec synced.
+- Table 10.1: Henkel design "Schools randomly assigned (5 treatment, 6 control)"; Rori set-up described; Liu result adds "about 15% of students offered the tutor used it".
+- Table 10.3: NY row cites the statute; SB 243 "at least $1,000 per violation"; caption adds fenwick2026california and newyork2025gbl47.
+
+### Bib changes (ch10.bib only)
+Added: fda2024marketing, uscode21360jo, bjork1994memory, jiang2024detecting, hao2026detecting, alali2026different, bean2026reliability, roy2024chatgpt, newyork2025gbl47, nygovernor2025hochul. No entries removed; no shared entries edited.
