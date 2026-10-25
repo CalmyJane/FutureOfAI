@@ -63,14 +63,15 @@ def f1402():
     ax.fill_between(yr, 1 + 0.3 * t, 1 + 0.62 * t, color=G3, lw=0, alpha=0.7)
     ax.plot(yr, fast, color=INK, lw=1.1, ls="-")
     ax.text(2031.4, 11.4, "Fast acceleration\n(e.g. AI 2027)", fontsize=7, va="center", ha="right", linespacing=1.1)
-    paths = [
-        (1 + 0.45 * t, (0, (5, 2)), "Trend continues"),
-        (1 + 0.3 * t, (0, (1.2, 1.5)), "Normal technology:\nslow diffusion"),
-        (1 + 1.3 * (1 - np.exp(-t / 2)), (0, (5, 1.5, 1.2, 1.5)), "Plateau: power\nor data limits"),
+    paths = [  # (curve, dash pattern, label, vertical label offset)
+        (1 + 0.45 * t, (0, (5, 2)), "Trend continues", 0.45),
+        (1 + 0.3 * t, (0, (1.2, 1.5)), "Normal technology:\nslow diffusion", 0.0),
+        # follows the trend until about 2030, then flattens (Epoch AI expects scaling to remain feasible to ~2030)
+        (1 + 0.4 * t - 0.4 * np.log1p(np.exp(t - 4.5)), (0, (5, 1.5, 1.2, 1.5)), "Plateau after 2030:\nconstraints bind", -0.6),
     ]
-    for yv, ls, lab in paths:
+    for yv, ls, lab, dy in paths:
         ax.plot(yr, yv, color=INK, lw=1.1, ls=ls)
-        ax.text(2036.3, yv[-1], lab, fontsize=7, va="center", ha="left", linespacing=1.1, clip_on=False)
+        ax.text(2036.3, yv[-1] + dy, lab, fontsize=7, va="center", ha="left", linespacing=1.1, clip_on=False)
     ax.plot([2026], [1], "o", ms=3.5, color=INK, clip_on=False, zorder=5)
     ax.text(2026.2, 0.45, "today", fontsize=7, style="italic", va="center")
     ax.annotate("Narrow: present is\n(mostly) known", xy=(2026.6, 1.3), xytext=(2026.3, 7.0), fontsize=6.8,
@@ -202,9 +203,9 @@ def f1404():
             ax.plot([xr - 2, xr + 2], [yref, yref], color=INK, lw=0.7)
             ax.add_patch(F.FancyArrowPatch((xr, y0), (xr, yref), arrowstyle="<|-|>", mutation_scale=5,
                                            lw=0.6, color=INK, shrinkA=0, shrinkB=0))
-            label(ax, xr + 1.5, (y0 + yref) / 2, "Reference incident:\n3,000 MW\n(continental Europe)", fs=6.4,
+            label(ax, xr + 1.5, (y0 + yref) / 2, "Reference incident:\n3,000 MW (continental\nEurope, for scale)", fs=6.4,
                   ha="left")
-    box(ax, 12, 7.5, 76, 5, "Random delay up to 600 s by default; owner may cancel (UK SI 2021/1467, reg. 11)",
+    box(ax, 12, 7.5, 76, 5, "UK rule: random delay up to 600 s by default; owner may cancel (SI 2021/1467, reg. 11)",
         fill=G4, fs=6.4, style="square,pad=0.6")
     label(ax, 50, 1.5, "Schematic, not to scale. Hypothetical mechanism, not a recorded event.", fs=6.4,
           italic=True, color=G1)

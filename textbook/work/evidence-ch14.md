@@ -428,3 +428,71 @@ Scope: all 171 citation instances (107 keys) in paragraphs, boxes, tables and ca
 ### Bibliography
 - New (ch14 only): fefferman2006existence. No shared keys changed.
 - pandoc --citeproc: no warnings. Body (excluding Further reading and citation keys) 9,700 words.
+
+## Revision after external review (Oct 2026)
+
+Review: review/07-ch13-ch14.md (Ch14 part). Claims re-verified before change; reviewer items that did not survive checking are noted.
+
+### (A) Factual and reference fixes
+- A1 Final paragraph rewritten and moved into a new §14.8 "What to watch". Old claim ("often too fast on how quickly that capability changes firms, earnings and institutions") contradicted Table 14.1. FRI review re-opened (https://forecastingresearch.org/research/ai-progress-accuracy-update): work hours 4%/3.6% vs 5.7% (underestimated); combined Anthropic+OpenAI run rate medians $70bn/$90bn vs likely $140bn; FRI: forecasters "on track to significantly underestimate adoption"; data-centre/electricity forecasts "broadly accurate". New text: recent forecasts mostly too slow on benchmarks and, where measured, on adoption and revenue; too-early record concerns human-level AI; no scored forecast of firm/institutional change. "No evaluation of a single system will reveal them" (overclaim, B9) removed.
+- A2 Armstrong & Sotala: expert-third statistic dropped; the robust clustering (many predictions 15–25 years ahead) kept [@armstrong2015how]; Grace's correction now labelled "a 2016 blog post by Katja Grace on the AI Impacts website".
+- A3 AI Futures medians: now like-for-like "automated coder" medians, April 2026 → August 2026: Kokotajlo May 2028 → Nov 2027; Lifland Jul 2030 → Jan 2030 (blog re-opened: https://blog.aifutures.org/p/q25-2026-timelines-update-uplift). The superhuman-coder 2030 sentence removed.
+- A4 Debate box: "38 resolved tournament questions" → "38 resolved sub-questions (from 32 questions)"; same parenthesis added in §14.1. (XPT PDF figures as recorded in this log, lines on kucinskas2025assessing.)
+- A5 GPT-6 Astra: "under its strictest safeguards" → "with what the company described as its strictest safeguards"; added GPT-5.6 Sol restriction to US-government-approved partners and FRI's view that it "does not appear to be the result of a binding directive" (FRI page re-opened). Table 14.4 regulation cell updated.
+- A6 Danish study: sample (≈25,000 workers, 11 occupations) now cited to the BFI 2025 version humlum2025large (abstract: "11 exposed occupations (25,000 workers, 7,000 workplaces)"), the >2% bound to the March 2026 NBER revision humlum2025still (abstract re-opened: "ruling out effects larger than 2% two years after the launch of ChatGPT"). Labelled as a working paper. Headline null stated as such.
+- A7 50.2 Hz: primary press release of the study's commissioners read (VDE/FNN, BSW-Solar, TSOs, 20 Sep 2011; PDF https://www.vde.com/resource/blob/824828/e0b227dba34542c12db365dc745af6b1/vde-fnn-studie-50-2hz-pressemitteilung-data.pdf): "rund 9 GW installierte Leistung ertüchtigt"; costs "65 bis 175 Mio. Euro"; study by Ecofys and IFK Stuttgart. Box now gives 9 GW and €65–175 million from this source (new bib vde2011nachruestung) and attributes the 14 GW worst case to one of the study's authors (doring2012dealing). IEEE Spectrum kept only for the 50.2 Hz rule and ≥315,000 installations.
+- A8 Sitkoff & Schanzenbach: misuse corrected. Their paper (Yale LJ 115, 2005) links abolition of the Rule Against Perpetuities since 1986 to competition for trust business made mobile by the 1986 GST tax, not to deference to the dead (abstract via HLS page and search: ~$100bn moved; abolition raised a state's trust assets ~$6bn/20%). Text now: "Since 1986 many US states have abolished the rule for trusts, competing for trust business that federal tax changes of that year made mobile, which suggests that legislatures may not hold such a line for long." Table 14.5 objection changed accordingly.
+- A9 IEA scenarios RE-VERIFIED from the report PDF (downloaded from https://iea.blob.core.windows.net/assets/3179f7f8-01f6-4dd6-bffa-c9f7b73f1dc9/KeyQuestionsonEnergyandAI.pdf; Annex A, Table A.1 "World data centres by case"): electricity consumption 2025 485 TWh; 2030 Base 945, Lift-Off 1,008, High Efficiency 868, Headwinds 833 TWh (2035: 1,193 / 1,637 / 1,013 / 942). Capex: "Leading hyperscalers and neo-clouds have announced a 75% increase in capital expenditure for 2026, amounting to USD 715 billion ... substantially more than annual investment in the entire energy sector of the United States, which totalled slightly less than USD 600 billion in 2024." The report also says Lift-Off "appears closer to our Base Case in the near-term" because of physical constraints; added one sentence explaining the narrow 2030 spread. All figures correct; "USD" → "$".
+- A10 ESPAI: direct extinction/disempowerment question median 5% (2023) → 10% (2024) (ESPAI 2024 PDF, Table 4: median 10.0% vs 2023 survey median 5.0%; https://aiimpacts.org/wp-content/uploads/2026/09/ESPAI2024.pdf); 38–51% now explicitly 2023.
+- A11 2024 round labelled "published by AI Impacts as a report, not in a peer-reviewed journal".
+- A12 "applies the lesson of the 50.2 hertz case" → "applies the same logic".
+- A13 3 GW illustration: now explicitly continental ("if a similar rule applied in continental Europe ... the size of that grid's reference incident"); the GB parenthesis dropped. Fig. 14.4 caption and labels say the delay rule is British and the reference incident is continental "for scale".
+- A14 Doubling times: the 188/129-day sentence moved into the window paragraph next to Table 14.2, with the data-file description.
+
+### (B) Methodological
+- B1 Proposals tied to evidence: framing moved to the top of §14.6, stating that they are the author's research proposals and mapping 14.1–14.4 to adoption-driven risk and compute-triggered rules (§13.2), 14.5–14.6 to the AI Act's human-oversight assumptions, 14.7–14.10 to liability and records for agents. New policy proposals (option b) not added, for length; preface wording ("ten research proposals") is for the central editor.
+- B2 Proposal 14.6 incentive flaw fixed: capacity set for the role by a regulator/standards body from the measured curve; organisation liable for volume above the reference capacity; individual results only gate eligibility to sign, never lower exposure. Adoption route and fit with AI Act Art. 26(2) ("assign human oversight to natural persons who have the necessary competence, training and authority", https://artificialintelligenceact.eu/article/26/) and negligence standards added. Art. 14(5) material removed (now only in ch13 log).
+- B3 M-1: added the hardest-step paragraph (choosing the plausible wrong action; start from the family's own observed worst error).
+- B4 Flash Crash: kept only for "automated trading can move markets within minutes" [@kirilenko2017flash]; added the August 2007 quant crowding episode as the closer analogy, Khandani & Lo, J. Financial Markets 14(1):1–46 (2011), doi 10.1016/j.finmar.2010.07.005 (Crossref checked; abstract via NBER w14465 / NY Fed: unwinding of similar quantitative equity portfolios). Portfolio insurance 1987 not added (no source read).
+- B5 Window rule stated as a general rule in the reading-questions paragraph.
+- B6 Prediction markets: condensed and given one AI data point from FRI's review (fn. 6): 2023 FRI study question on AI writing 10,000 lines of bug-free code by 2030; median forecaster likely underestimated; Metaculus community prediction tracking it at 98% "yes". Metaculus pages themselves return 403.
+- B7 AI 2027 self-scoring added: Lifland & Kokotajlo, "Grading AI 2027's 2025 Predictions", 12 Feb 2026 (quantitative progress "roughly 65% of the pace"; July 2026 update ~75%; most qualitative predictions on pace) https://blog.aifutures.org/p/grading-ai-2027s-2025-predictions; labelled as non-peer-reviewed blog posts by the scenario's authors.
+- B8 CAISI vs AI Index: now says plainly that benchmark near-parity and an eight-month capability lag measure different things and need not conflict.
+- B9 Opinion leakage: "they miss the analogous risk" now "In the author's view ..."; final overclaim removed.
+
+### (C) Writing
+- :21 330-word paragraph rebuilt around one topic sentence; Navier–Stokes reduced to one sentence pointing to Section 6.6 (where ch06 covers it) plus FRI's resolution note. kakaes2026ai, thenextweb2026openai, brumfiel2026ai, bastounis2026navierstokes, fefferman2006existence no longer cited in ch14 → removed from ch14.bib (still used in ch06 and its bib).
+- :45 participle fixed ("after barely moving between 2016 and 2022"); "even more than".
+- :92 METR bullet trimmed; GPT-5.6 Sol cheating result moved to the limits paragraph; model names reduced.
+- :111 "27 years on the same hardware" sentence cut (misleading against Epoch's conclusion).
+- :137 split into scenario description and revisions/self-scoring.
+- :3 opener reworded as suggested.
+- §14.6 transition fixed (framing first, box second); 14.8–14.10 compressed into one paragraph (Srivastava et al. dropped; srivastava2020empirical removed from bib).
+- 14.7 name unified: "Legible twins for agent-to-agent deals".
+- "USD 715 billion/bn" → "$715 billion" in text and Table 14.4.
+- GO-Science and Wack paragraphs trimmed; mid-sentence colons reduced.
+- Ending: new §14.8 with six signposts, a return to the opening records, and a labelled "The author's bottom line".
+
+### (D) Structure and coverage
+- D1 Economic forecasts paragraph added in §14.5 (Acemoglu ≤0.66% TFP over ten years; Aghion & Bunel ≈0.68 pp a year, working paper; Goldman Sachs 7% global GDP, bank research), linked to Chapter 8; entries copied byte-identical from bib/ch08.bib.
+- D2 Author synthesis: given in the labelled bottom line.
+- D3 §14.6–14.7 retitled "Open problems the forecasts miss: ..."; trimmed; not split into a separate chapter (structural change outside this brief).
+- D4 Tetlock's *Expert Political Judgment* and Epoch GATE not added (length; no new source read). Lighthill report (1973) now cited in §14.1 (quotation re-read at chilton-computing.org.uk: "In no part of the field have the discoveries made so far produced the major impact that was then promised"; commissioned by the Science Research Council).
+
+### (E) Figures and tables
+- Fig. 14.2: plateau path now follows the trend to about 2030 and flattens afterwards, label "Plateau after 2030: constraints bind"; caption cites Villalobos for data and states Epoch's 2030 feasibility conclusion. Script, spec updated; rendered locally to check label spacing.
+- Fig. 14.4: labels "(continental Europe, for scale)" and "UK rule: ..."; caption explains the pairing.
+- Table 14.1 caption: MATH 87.92/87.82 trivia removed; FrontierMath gloss moved to text.
+- Table 14.3: text now says four constraints "with power in two variants" (five rows).
+- Table 14.4: "$715 billion"; regulation cell adds company-imposed release limits (Jun 2026).
+- Table 14.5: 14.6 objection adds "tests can be gamed"; 14.9 objection rewritten.
+- Fig. 14.1 broken-axis suggestion not taken (optional).
+
+### Orphans and bibliography
+- Orphans resolved: humlum2025large (cited for the Danish sample), kwa2026clarifying (cited for METR's own statement of limits; note re-opened: "Time horizon is not the length of time AIs can work independently", error bars ~2×), lighthill1973artificial (cited, §14.1), linuxfoundation2025linux (cited: A2A handed to the Linux Foundation), longpre2024large (cited in Proposal 14.4: >1,800 text datasets audited, licence omission >70% on hosting sites; Crossref abstract read).
+- Added: khandani2011what, lifland2026grading, vde2011nachruestung, acemoglu2025simple, aghion2024ai, goldmansachs2023generative.
+- Removed: kakaes2026ai, thenextweb2026openai, brumfiel2026ai, bastounis2026navierstokes, fefferman2006existence, srivastava2020empirical.
+- All keys resolve; no uncited entries. Body ≈ 10,800 words (was ≈ 9,900): additions requested by the review (economic forecasts, AI 2027 scoring, §14.8, proposal fixes) partly offset by cuts.
+
+### Labelling pass (first mentions)
+- Blogs/posts: Steinhardt (blog), Grace 2016 (AI Impacts blog post), titotal (blog post), AI Futures updates (blog posts, not peer-reviewed), FRI review (published on the institute's website). Reports: ESPAI 2024 (AI Impacts report, not peer-reviewed). Preprints: FrontierMath, Cottier, Becker, Korbak (already). Working papers: Kučinskas (already), Humlum & Vestergaard, Bonney, Brynjolfsson, Ide, Aghion & Bunel. Company claims: Google DeepMind/OpenAI IMO ("reported"), OpenAI Astra ("what the company described as"). News: Fortune (already). Technical report: Hammond et al. Bank research: Goldman Sachs. Usage/survey data: Bick et al. ("reported on the St. Louis Fed's blog").
