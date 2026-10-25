@@ -110,7 +110,7 @@ def front_matter(toc):
 </section>
 <section class="copyright">
   <p>© {YEAR} {AUTHOR}. All rights reserved.</p>
-  <p>Evidence in this book is current to October 2026. Web sources were checked between 20 and 23 October 2026. Citations follow APA 7; full references are at the end of the book.</p>
+  <p>Evidence in this book is current to October 2026. Web sources were checked between 20 and 25 October 2026. References follow APA 7 and are numbered. Sources are not cited in the running text: the line at the foot of each page lists the numbers of the sources used on that page.</p>
   <p>Figures drawn for this edition. Set in EB Garamond (SIL Open Font License).</p>
   <p>ISBN: [to be assigned]<br>Publisher and printer: [imprint details]</p>
 </section>
@@ -155,9 +155,17 @@ def notes_to_pageline(body):
     body = re.sub(r'<span class="fn"><span class="srcnote">.*?</span></span></span>',
                   lambda m: f'<span class="srcm" id="srcm{next(counter)}" data-nums="{nums(m)}">\u2060</span>',
                   body, flags=re.S)
+    # every other citation (narrative mentions, table cells, captions) also joins its page's line
+    def mark(m):
+        mark.i += 1
+        ks = [str(num[k]) for k in m.group(1).split() if k in num]
+        return m.group(0) + f'<span class="srcm" id="srcx{mark.i}" data-nums="{" ".join(ks)}">\u2060</span>'
+    mark.i = 0
+    body = re.sub(r'<span class="citation" data-cites="([^"]+)">.*?</span>', mark, body, flags=re.S)
     # "Kestin et al. (2025)" -> "Kestin et al."
-    body = re.sub(r'(<span class="narr"><span class="citation"[^>]*>(?:<a [^>]*>)?)(.*?)\s*\([^()]*\d{4}[a-z]?[^()]*\)',
-                  r"\1\2", body)
+    def strip_year(m):
+        return re.sub(r'\s*\((?:<a [^>]*>)?\d{4}[a-z]?(?:</a>)?(?:,[^()]*)?\)', "", m.group(0))
+    body = re.sub(r'<span class="narr"><span class="citation"[^>]*>.*?</span>', strip_year, body, flags=re.S)
     return body
 
 
@@ -186,7 +194,7 @@ def stamp_pagelines(document, doc, pdf_path):
     from reportlab.pdfgen import canvas
 
     mm = 72 / 25.4
-    nums = dict(re.findall(r'<span class="srcm" id="(srcm\d+)" data-nums="([^"]*)">', doc))
+    nums = dict(re.findall(r'<span class="srcm" id="(src[mx]\d+)" data-nums="([^"]*)">', doc))
     where = marker_pages(document)
     pages = {}
     for mid, pi in where.items():
@@ -299,7 +307,13 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", type=int, help="build a single chapter (sample)")
     ap.add_argument("--notes", action="store_true", help="per-paragraph source notes at the page foot")
-    ap.add_argument("--pageline", action="store_true", help="one line of source numbers at the page foot")
+    ap.add_argument("--pageline", action="store_true", help="one line of source numbers at the page foot (default)")
+    ap.add_argument("--inline", action="store_true", help="old style: APA author-date citations in the text")
     ap.add_argument("--out", default=OUT_PDF)
     a = ap.parse_args()
-    build(a.only, a.notes or a.pageline, a.out, "pageline" if a.pageline else "foot")
+    if a.inline:
+        build(a.only, False, a.out)
+    elif a.notes:
+        build(a.only, True, a.out, "foot")
+    else:
+        build(a.only, True, a.out, "pageline")
