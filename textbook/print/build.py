@@ -252,25 +252,33 @@ def stamp_pagelines(document, doc, pdf_path):
     writer = PdfWriter(clone_from=reader)
     W, H = 148 * mm, 210 * mm
     width = 113 * mm
-    for pi, ns in pages.items():
-        x0 = 20 * mm if pi % 2 == 0 else 15 * mm  # right-hand pages have the wider inner margin on the left
-        text = " · ".join(f"{n} ({'; '.join(ns[n])})" if ns[n] else str(n) for n in sorted(ns))
-        lines = simpleSplit(text, "EBG", 7.4, width - 12 * mm)
-        buf = BytesIO()
-        c = canvas.Canvas(buf, pagesize=(W, H), initialFontName="EBG", initialFontSize=7.4)
-        c.setLineWidth(0.4)
-        c.line(x0, 17.6 * mm, x0 + 22 * mm, 17.6 * mm)
-        y = 15.0 * mm
-        for i, ln in enumerate(lines):
-            if i == 0:
-                c.setFont("EBG-It", 7.4)
-                c.drawString(x0, y, "Sources")
-                c.setFont("EBG", 7.4)
-            c.drawString(x0 + 11 * mm, y, ln)
-            y -= 2.9 * mm
-        c.save()
-        buf.seek(0)
-        writer.pages[pi].merge_page(PdfReader(buf).pages[0])
+    # one overlay document for all pages, so the font subset is embedded once
+    buf = BytesIO()
+    c = canvas.Canvas(buf, pagesize=(W, H), initialFontName="EBG", initialFontSize=7.4)
+    for pi in range(len(reader.pages)):
+        ns = pages.get(pi)
+        if ns:
+            x0 = 20 * mm if pi % 2 == 0 else 15 * mm  # right-hand pages have the wider inner margin on the left
+            text = " · ".join(f"{n} ({'; '.join(ns[n])})" if ns[n] else str(n) for n in sorted(ns))
+            lines = simpleSplit(text, "EBG", 7.4, width - 12 * mm)
+            c.setLineWidth(0.4)
+            c.line(x0, 17.6 * mm, x0 + 22 * mm, 17.6 * mm)
+            y = 15.0 * mm
+            for k, ln in enumerate(lines):
+                if k == 0:
+                    c.setFont("EBG-It", 7.4)
+                    c.drawString(x0, y, "Sources")
+                    c.setFont("EBG", 7.4)
+                c.drawString(x0 + 11 * mm, y, ln)
+                y -= 2.9 * mm
+        c.showPage()
+    c.save()
+    buf.seek(0)
+    overlay = PdfReader(buf)
+    for pi in pages:
+        writer.pages[pi].merge_page(overlay.pages[pi])
+        writer.pages[pi].compress_content_streams()  # merging leaves the page content uncompressed
+    writer.compress_identical_objects(remove_identicals=True, remove_orphans=True)
     with open(pdf_path, "wb") as f:
         writer.write(f)
     return len(pages)
