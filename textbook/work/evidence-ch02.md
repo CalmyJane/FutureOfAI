@@ -283,7 +283,7 @@ Logged gaps re-opened with WebSearch/WebFetch and arXiv full texts (pdftotext); 
 
 ### Changes made
 - §2.5 Adam: added "DeepSeek-V4, released in 2026, also used Muon [@deepseekai2026deepseekv4]."
-- §2.6: added "Its own successor, Vera Rubin, which Nvidia said in August 2026 was in full production, quotes 4-bit rates for training too [@aubrey2026inside; @nvidia2026nvidia]."
+- §2.6: added "Its own successor, Vera Rubin, which Nvidia said in August 2026 was in full production, quotes 4-bit rates for training too [@aubrey2026inside; @nvidia2026nvidia]." [Superseded in the Oct 2026 revision: the Vera Rubin production-status sentence was cut; nvidia2026nvidia removed.]
 - Trim for length: §2.8 removed the clause explaining that 0.007 is the smallest 8-bit step after GoogLeNet's conversion (low-value detail). Body 9,869 → 9,879 words.
 - Bib: added deepseekai2026deepseekv4 (also added identically to ch03.bib), aubrey2026inside, nvidia2026nvidia.
 

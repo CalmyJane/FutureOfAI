@@ -68,7 +68,7 @@ Independent fact-check against primary sources (EU Publications Office XHTML of 
 - ch01.md: Recital 12 "symbolic representations" → "symbolic representation of the task to be solved".
 - ch01.md: "Almost every high-profile AI system since about 2012 has used deep learning" (stronger than the source) → attributed paraphrase of Mitchell (2021): deep neural networks "power all of the major AI advances we've seen in the past decade".
 - ch01.md: chatterji2025how now labelled as an NBER working paper, not peer-reviewed.
-- ch01.md: 900M labelled as a company figure reported by the press and not independently verified.
+- ch01.md: 900M labelled as a company figure reported by the press and not independently verified. [Superseded in the Oct 2026 revision: the 900M figure and malik2026chatgpt were removed; the text and Fig. 1.3 now end at 1.2 billion (Sept 2026, bastian2026openai).]
 - ch01.md: AlexNet sentence: added that 15.3% used extra pre-training data, while the official-data result was 16.4% (as in Fig. 1.2) (Russakovsky et al. Table; Krizhevsky et al. §6).
 - ch01.md: AI Index adoption paragraph: specified US adults 18–64 for the 53% figure, added the Microsoft-telemetry measure (US 24th, 28.3%, H2 2025) and an explanation of the difference.
 - ch01.md: METR study "preprint published in March 2025" → "first posted as a preprint in March 2025 and later presented at NeurIPS 2025" (OpenReview CGNJL6CeV0, venue "NeurIPS 2025 poster"; arXiv journal_ref NeurIPS 2025).
@@ -283,7 +283,7 @@ Note: the shared WebSearch budget ran out part-way through this pass; remaining 
 
 ### Changes
 - §Intro para 2: added 1.2 bn weekly users (Sept 2026, company figure).
-- §1.7 adoption: 54.6% (Aug 2025) → 62% (May 2026), up from 45% (Aug 2024); revision parenthesis shortened (39.4/44.6 detail removed; still cites bick2025state). Added Microsoft Q1 2026 rank 21st, 31.3%.
+- §1.7 adoption: 54.6% (Aug 2025) → 62% (May 2026), up from 45% (Aug 2024); revision parenthesis shortened (39.4/44.6 detail removed; still cites bick2025state). Added Microsoft Q1 2026 rank 21st, 31.3%. [Superseded in the Oct 2026 revision: adoption paragraph cut to one figure per method; 45%, 39%, 24th/28.3% and bick2025state removed.]
 - Debate box: added Oct 2026 ClockBench 83.3% vs 90.7%.
 - New bib: bastian2026openai, bick2026what, lavistaferres2026state; copied clockbench2026clockbench.
 
@@ -291,7 +291,7 @@ Note: the shared WebSearch budget ran out part-way through this pass; remaining 
 Re-read in full; arithmetic re-checked (Table 1.2 0.44/0.34; 175B/117M ≈ 1,500; GLUE 7.7; budget items 13,000 vs 13,500). No errors found.
 
 ### Figures
-- fig-01-03: "Feb 2026 900M weekly users" milestone remains true; no redraw required. Optional: add "Sept 2026 1.2B weekly users, company figure" (bastian2026openai) if redrawn.
+- fig-01-03: "Feb 2026 900M weekly users" milestone remains true; no redraw required. Optional: add "Sept 2026 1.2B weekly users, company figure" (bastian2026openai) if redrawn. [Superseded in the Oct 2026 revision: the 900M figure and malik2026chatgpt were removed; the text and Fig. 1.3 now end at 1.2 billion (Sept 2026, bastian2026openai).]
 
 ### Other chapters
 - ch08 (line 57, Table 8.2 row) and ch14 previously used 54.6% (Aug 2025) as the latest Bick et al. figure; the 1 Sept 2026 St. Louis Fed post gives 62% for May 2026 (ch14 updated; ch08 not edited).
@@ -316,9 +316,9 @@ About 150 citations checked (paragraphs, boxes, tables, figure captions) against
 ### Sources added (claim → key → URL)
 - Opening: AI Act definition applying since February 2025 → europeanparliament2024regulation, art. 113 (Chapters I–II apply from 2 Feb 2025) → https://eur-lex.europa.eu/eli/reg/2024/1689/oj ; US regulators' fines for false AI claims → sec2024sec (already verified).
 - §1.4 Minsky and Papert's *Perceptrons* (1969) → minsky1969perceptrons (copied byte-identical from bib/ch02.bib; verified in evidence-ch02) → https://mlanthology.org/misc/1969/minsky1969misc-perceptrons
-- §1.3 concept box: EU guidelines resolve the grey zone case by case → europeancommission2025guidelines, paras 41, 62 (already verified: "may nevertheless fall outside"; "No automatic determination or exhaustive lists").
+- §1.3 concept box: EU guidelines resolve the grey zone case by case → europeancommission2025guidelines, paras 41, 62 (already verified: "may nevertheless fall outside"; "No automatic determination or exhaustive lists"). [Superseded in the Oct 2026 revision: the concept box was cut and its examples merged into §1.2.]
 - §1.7 scaling laws published in 2020 → kaplan2020scaling (copied byte-identical from bib/ch02.bib) → https://arxiv.org/abs/2001.08361
-- Debate box: 33% relative cut in speech errors and BERT's 7.7-point GLUE gain → seide2011conversational, devlin2019bert (already verified); AlphaGo combined learned networks with explicit search → silver2016mastering (already verified). Box may fall on a different page from the original citations.
+- Debate box: 33% relative cut in speech errors and BERT's 7.7-point GLUE gain → seide2011conversational, devlin2019bert (already verified); AlphaGo combined learned networks with explicit search → silver2016mastering (already verified). Box may fall on a different page from the original citations. [Superseded in the Oct 2026 revision: both numbers removed from the debate box because they compare learned with learned methods; replaced by the GPT-3 few-shot result.]
 
 ### Checked, no change
 - Mitchell 2021 Simon (1960) and Minsky (1967) quotations match the arXiv text verbatim (refs [10], [12]); kept as secondary (primary books not accessible).

@@ -269,7 +269,7 @@ def f0205():
             x, y = xo + c * s, yp - s - (r + 1) * s
             ax.add_patch(plt.Rectangle((x, y), s, s, fc=blockfill[(r, c)], ec=INK, lw=0.7))
             ax.text(x + s / 2, y + s / 2, str(pout[r, c]), ha="center", va="center", fontsize=7.5, weight="bold")
-    label(ax, xo + 2 * s + 4, yp - 2 * s, "2 × 2 max pooling:\nkeep the largest value\nin each block "
+    label(ax, xo + 2 * s + 4, yp - 2 * s, "2 × 2 max pooling\n(a separate example):\nkeep the largest value\nin each block "
           "(4 × 4 → 2 × 2)", fs=7, ha="left")
     label(ax, 50, -1.5, "9 weights + 1 bias, reused at every position (a fully connected layer from "
           "25 pixels to 9 outputs would need 225 weights)", fs=6.3, color=G1, italic=True)
