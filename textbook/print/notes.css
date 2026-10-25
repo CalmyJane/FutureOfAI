@@ -1,0 +1,8 @@
+/* Source notes at the foot of the page: one per paragraph, numbered within each chapter. */
+@page { @footnote { border-top: 0.4pt solid #000; padding-top: 1.2mm; margin-top: 3mm; max-height: 35%; } }
+section.level1 { counter-reset: footnote; }
+.nobr { white-space: nowrap; }
+.fn { float: footnote; font-size: 7.6pt; line-height: 1.25; text-align: left; hyphens: manual; text-indent: 0; white-space: normal; }
+.fn::footnote-marker { content: counter(footnote) "\00a0\00a0"; font-size: 7.6pt; }
+::footnote-call { content: counter(footnote); vertical-align: super; font-size: 6.2pt; line-height: 0; }
+.fn a { color: inherit; }

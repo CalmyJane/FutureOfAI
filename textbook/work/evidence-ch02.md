@@ -1,0 +1,311 @@
+# Evidence log: Chapter 2 (How Neural Networks Learn)
+
+All sources checked on 2026-10-22. Bibliographic metadata checked against Crossref (api.crossref.org) unless stated otherwise.
+
+| Key | Claim supported | Exact number / quote | URL checked | Evidence type |
+|---|---|---|---|---|
+| lefkowitz2019professors | July 1958 ONR demonstration; IBM 704; after 50 trials learned to distinguish cards marked left vs right; NYT headline | "After 50 trials, the computer taught itself to distinguish cards marked on the left from cards marked on the right" (paraphrased in text) | https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon | news (university news office; used for event) |
+| newyorktimes1958new | NYT report, 8 July 1958, p. 25: "walk, talk, see, write, reproduce itself and be conscious of its existence" | quote as given; original not accessed directly (paywalled archive); wording confirmed via Ananthaswamy 2024 sample and Cornell Chronicle headline | https://cdn.penguin.co.uk/dam-assets/books/9780241586488/9780241586488-sample.pdf | news (historical event) |
+| ananthaswamy2024why | Secondary source for NYT quote; press demonstration was the day before the NYT story; Further reading | "The Navy revealed the embryo of an electronic computer today that it expects will be able to walk, talk, see, write, reproduce itself and be conscious of its existence." Published Allen Lane / Dutton 2024, ISBN 978-0-241-58648-8 | https://cdn.penguin.co.uk/dam-assets/books/9780241586488/9780241586488-sample.pdf | book (popular science) |
+| lecun1998gradient | LeNet-5 cheque reading; ~60,000 trainable parameters; 345,308 connections; train error 0.35% vs test 0.95%; authors at AT&T Labs-Research | "It is deployed commercially and reads several million checks per day" (abstract); "reading millions of checks per month in several banks across the United States" (Sec. I); "345 308 connections, but only 60 000 trainable free parameters"; "test error rate stabilizes ... at 0.95%. The error rate on the training set reaches 0.35%" | https://gwern.net/doc/ai/nn/cnn/1998-lecun.pdf ; DOI 10.1109/5.726791 | peer-reviewed |
+| mcculloch1943logical | Idealised neurons described with logic because of "all-or-none" character; fixed connections | "Because of the 'all-or-none' character of nervous activity, neural events and the relations among them can be treated by means of propositional logic." (abstract, p. 115) | https://www.cs.cmu.edu/~./epxing/Class/10715/reading/McCulloch.and.Pitts.pdf (1990 reprint); DOI 10.1007/BF02478259 | peer-reviewed |
+| rosenblatt1958perceptron | Perceptron stores information in connections | "the information is contained in connections or associations rather than topographic representations" (p. 387) | https://homepages.math.uic.edu/~lreyzin/papers/rosenblatt58.pdf ; DOI 10.1037/h0042519 | peer-reviewed |
+| goodfellow2016deep | ReLU default recommendation (ch. 6); XOR solution (sec. 6.1); Minsky XOR critique and backlash (ch. 6 history); universal approximation caveat (sec. 6.4.1); backprop cost same order as forward pass (sec. 6.5); history: Linnainmaa 1976, Werbos 1981, independent rediscovery (sec. 6.6); generalisation vs optimisation (sec. 5.2); hyperparameters definition (sec. 5.3); early stopping (sec. 7.8); GPUs (sec. 12.1.2) | "In modern neural networks, the default recommendation is to use the rectified linear unit"; "We are not guaranteed, however, that the training algorithm will be able to learn that function"; early stopping "is probably the most commonly used form of regularization in deep learning"; "the number of computations for the gradient computation is of the same order as the number of computations for the forward computation"; XOR solution W = all ones, c = [0, −1], w = [1, −2] | https://www.deeplearningbook.org/contents/mlp.html ; /ml.html ; /regularization.html ; /applications.html | textbook (MIT Press) |
+| minsky1969perceptrons | Book proved limits of single-layer perceptrons (e.g. XOR) | MIT Press, Cambridge MA, 1969 | https://mlanthology.org/misc/1969/minsky1969misc-perceptrons ; library catalogue records | book (scholarly monograph) |
+| cybenko1989approximation | Single hidden layer of sigmoid units can approximate any continuous function | title and metadata confirmed; result as standardly stated (on compact domains) | DOI 10.1007/BF02551274 | peer-reviewed |
+| krizhevsky2012imagenet | AlexNet 60 million parameters, 650,000 neurons; 1.2M training / 50k validation / 150k test images; dropout used; 5–6 days on two GTX 580 GPUs | "60 million parameters and 650,000 neurons"; "roughly 1.2 million training images, 50,000 validation images, and 150,000 testing images"; "between five and six days to train on two GTX 580 3GB GPUs"; "can be improved simply by waiting for faster GPUs and bigger datasets to become available" (p. 2) | https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf | peer-reviewed (conference) |
+| brown2020language | GPT-3 has 175 billion parameters | "GPT-3, an autoregressive language model with 175 billion parameters" | https://arxiv.org/abs/2005.14165 ; NeurIPS 2020 proceedings page (pp. 1877–1901) | peer-reviewed (conference) |
+| lecun2015deep | Weights as "knobs" (p. 436); hundreds of millions of weights and labelled examples (p. 436); hilly landscape (p. 437); SGD "surprisingly quickly" (pp. 436–437); poor local minima "rarely a problem", saddle points (p. 438); layer hierarchy edges→motifs→parts→objects, "not designed by human engineers" (p. 436); ConvNet four key ideas (p. 439); simple/complex cells, neocognitron (p. 439); chain-rule figure (Fig. 1) | quotes as given; page numbers checked against PDF page breaks | https://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf ; DOI 10.1038/nature14539 | peer-reviewed (review) |
+| rumelhart1986learning | Backprop popularised; hidden units come to represent features | "internal 'hidden' units which are not part of the input or output come to represent important features of the task domain" (abstract, p. 533) | https://inspirehep.net/api/literature/2171919 (abstract record); DOI 10.1038/323533a0 | peer-reviewed |
+| zhang2017understanding | Networks can fit random labels and even random noise | "easily fit a random labeling of the training data" | https://arxiv.org/abs/1611.03530 (published ICLR 2017) | peer-reviewed (conference) |
+| belkin2019reconciling | Double-descent curve | "increasing model capacity beyond the point of interpolation results in improved performance" | DOI 10.1073/pnas.1903070116 (abstract via Semantic Scholar) | peer-reviewed |
+| srivastava2014dropout | Dropout randomly drops units during training to reduce overfitting | "The key idea is to randomly drop units (along with their connections) from the neural network during training." | https://jmlr.org/papers/v15/srivastava14a.html | peer-reviewed |
+| zeiler2014visualizing | Visualised features by layer: layer 2 corners/edge-colour conjunctions; layer 3 textures; layer 4 dog faces; layer 5 whole objects (keyboards, dogs) | "Layer 2 responds to corners and other edge/color conjunctions. Layer 3 ... similar textures (e.g. mesh patterns ...). Layer 4 ... dog faces ... Layer 5 shows entire objects ... e.g. keyboards" | https://arxiv.org/abs/1311.2901 ; DOI 10.1007/978-3-319-10590-1_53 | peer-reviewed (conference) |
+| szegedy2014intriguing | Semantic information spread across units; imperceptible perturbation causes misclassification | "it is the space, rather than the individual units, that contains the semantic information"; "imperceptible perturbation" | https://arxiv.org/abs/1312.6199 | peer-reviewed (conference, ICLR 2014; bib updated at fact-check) |
+| hubel1962receptive | Simple and complex cells in cat visual cortex (inspiration for CNNs) | metadata confirmed; CNN-inspiration link stated in LeCun et al. 2015, p. 439 | DOI 10.1113/jphysiol.1962.sp006837 | peer-reviewed |
+| fukushima1980neocognitron | Neocognitron as root of ConvNets | metadata confirmed; "ConvNets have their roots in the neocognitron" (LeCun et al. 2015, p. 439) | DOI 10.1007/BF00344251 | peer-reviewed |
+| raina2009large | GPU training cut time for 4-layer, 100M-parameter model from weeks to ~a day | "from several weeks to around a single day" (abstract). NOTE: abstract speed-up factor differs between versions (55x vs 70x), so no factor is quoted | https://mlanthology.org/icml/2009/raina2009icml-large/ ; DOI 10.1145/1553374.1553486 | peer-reviewed (conference) |
+| goodfellow2015explaining | Panda 57.7% → gibbon 99.3% after imperceptible perturbation | "panda" 57.7% confidence; "gibbon" 99.3% confidence (Fig. 1, GoogLeNet on ImageNet) | https://arxiv.org/pdf/1412.6572v3 (ICLR 2015) | peer-reviewed (conference) |
+| geirhos2020shortcut | Definition of shortcut learning | "Shortcuts are decision rules that perform well on standard benchmarks but fail to transfer to more challenging testing conditions" (p. 665) | DOI 10.1038/s42256-020-00257-z | peer-reviewed (perspective) |
+| kirkpatrick2017overcoming | Catastrophic forgetting widely thought inevitable; EWC slows learning on important weights | "it has been widely thought that catastrophic forgetting is an inevitable feature of connectionist models" (p. 3521) | DOI 10.1073/pnas.1611835114 | peer-reviewed |
+| zech2018variable | Pneumonia CNNs; 158,323 radiographs; prevalence 34.2% / 1.2% / 1.0%; hospital sorting AUC 0.861; hospital ID 99.95% / 99.98%; internal AUC 0.931 vs external 0.815 | "CNNs robustly identified hospital system and department within a hospital, which ... may confound predictions" | DOI 10.1371/journal.pmed.1002683 | peer-reviewed |
+| azevedo2009equal | Adult male human brain ~86 billion neurons | "86.1 +/- 8.1 billion NeuN-positive cells" | PubMed 19226510; DOI 10.1002/cne.21974 | peer-reviewed |
+| beniaguev2021single | A 5–8 layer temporally convolutional DNN needed to capture I/O of a detailed model of a layer-5 cortical pyramidal neuron | "A temporally convolutional DNN with five to eight layers was required" | PubMed 34380016; DOI 10.1016/j.neuron.2021.07.002 | peer-reviewed |
+| lillicrap2020backpropagation | Backprop historically viewed as biologically problematic; feedback connections may approximate error signals | "historically it has been viewed as biologically problematic" (p. 335) | PubMed 32303713; DOI 10.1038/s41583-020-0277-3 | peer-reviewed (review) |
+| yamins2014performance | Performance-optimised networks predict IT and V4 neural responses | "its top output layer turns out to be highly predictive of IT spiking responses"; "intermediate layers are highly predictive of neural responses in the V4 cortex" | PubMed 24812127; DOI 10.1073/pnas.1403112111 | peer-reviewed |
+| nielsen2015neural | Further reading | "Michael A. Nielsen, 'Neural Networks and Deep Learning', Determination Press, 2015" | http://neuralnetworksanddeeplearning.com/about.html | book (online) |
+
+## Author-computed arithmetic (no citation needed)
+- Neuron: 0.5×2 + (−1)×1 + 0.2 = 0.2; inputs (1,1) → −0.3 → ReLU 0; sigmoid(0.2) = 0.5498.
+- XOR network: h1 = ReLU(x1+x2), h2 = ReLU(x1+x2−1), y = h1 − 2·h2 (matches Goodfellow et al. 2016, sec. 6.1).
+- Figure 2.2 parameter count: 3×4 + 4×2 = 20 weights, 4 + 2 = 6 biases, 26 total.
+- Cross-entropy: −ln 0.9 = 0.105; −ln 0.1 = 2.303; −ln 0.01 = 4.605.
+- Gradient-descent example: w=0.2, x=2, t=1 → loss 0.36; w=0.21 → 0.3364; exact slope 2(wx−t)x = −2.4; lr 0.1 → w=0.44, loss 0.0144; lr 0.5 → w=1.4, loss 3.24.
+- Chain-rule box: x=1, w1=2, w2=0.5, t=2 → h=2, y=1, L=1; dL/dy=−2, dL/dw2=−4, dL/dh=−1, dL/dw1=−1; after lr 0.1 step: w2=0.9, w1=2.1, y=1.89.
+
+## Claims dropped
+- Raina et al. (2009) speed-up factor (70x vs 55x across abstract versions): not quoted.
+- "Far more than a child needs" (data-efficiency comparison): no source verified; cut.
+
+## Fact-check (2026-10-22)
+
+Independent check of all numbers, dates, quotations, attributions, worked arithmetic and bibliography (about 120 claims checked). Sources re-read: Penguin sample of Ananthaswamy 2024 (prologue), Cornell Chronicle 2019, Rosenblatt 1958 PDF, LeCun et al. 1998 PDF, LeCun et al. 2015 PDF, Krizhevsky et al. 2012 PDF, Szegedy et al. arXiv v4, Goodfellow et al. 2015 arXiv v3, deeplearningbook.org chapters 1, 5, 6, 7, 12, Europe PMC abstracts (Zech, Kirkpatrick, Lillicrap, Beniaguev, Yamins), Crossref metadata for every DOI, ML Anthology (Raina).
+
+### Writer's flags
+1. NYT 1958 quote: original (nytimes.com archive, Wayback) blocked (403 / connection reset). Verified against a reliable reproduction: Ananthaswamy 2024 prologue quotes the opening paragraph verbatim, with date (8 July 1958) and page (25); Cornell Chronicle confirms the headline. The original sentence's subject is "the embryo of an electronic computer", not "the machine's successors", so the sentence was rewritten to quote the original wording and the citation now reads "[@newyorktimes1958new, p. 25; as reproduced in @ananthaswamy2024why]".
+2. LeCun et al. 1998: confirmed 60,000 trainable parameters, 345,308 connections (text "more than 340,000" correct), training error 0.35% after 19 passes, test error 0.95%, MNIST 60,000 training / 10,000 test images, "several million checks per day", "millions of checks per month in several banks across the United States", AT&T Labs-Research. No change needed.
+3. Goodfellow et al. section numbers: ReLU default recommendation is in sec. 6.1 (was "ch. 6"; made precise); Minsky-Papert "backlash" is in ch. 1, sec. 1.2.1, not ch. 6 (corrected); sec. 6.1 (XOR solution), 6.4.1 (universal approximation, "We are not guaranteed"), 6.5 (backprop cost "of the same order" as forward), 6.6 (Linnainmaa 1976, Werbos 1981, rediscovery), 5.2 (generalisation vs optimisation), 5.3 (hyperparameters), 7.8 (early stopping quote), 12.1.2 (GPU implementations) all confirmed.
+4. Szegedy et al.: changed bib from @misc arXiv preprint to @inproceedings, ICLR 2014 (Banff); confirmed via Goodfellow et al. 2015 reference list ("ICLR, abs/1312.6199, 2014"). Text "a widely cited preprint" -> "a widely cited study".
+
+### Corrections (old -> new)
+- "the Cornell psychologist Frank Rosenblatt" -> "Frank Rosenblatt, a research psychologist at the Cornell Aeronautical Laboratory" (Cornell Chronicle; he joined the university faculty later).
+- NYT sentence: "expected the machine's successors to 'walk, talk, ...'" -> "had revealed 'the embryo of an electronic computer' that it expected 'will be able to walk, talk, ...'".
+- Szegedy quote "imperceptible perturbation" -> "imperceptible non-random perturbation" (exact wording, arXiv v4 p. 2; abstract says "hardly perceptible").
+- [@goodfellow2016deep, ch. 6] (ReLU) -> sec. 6.1; [@goodfellow2016deep, ch. 6] (backlash) -> sec. 1.2.1.
+- [@lecun2015deep, p. 437] (gradient definition) -> p. 436; "surprisingly quickly" pp. 436-437 -> p. 437.
+- Krizhevsky quote completed ("... bigger datasets to become available") and locator "p. 2" -> "p. 1098" (proceedings pagination, consistent with bib pages 1097-1105).
+- "The underlying mathematics, a rule from calculus called the chain rule, was developed ... from the 1960s onwards" -> chain rule is centuries old; its efficient application was developed from the 1960s (Goodfellow sec. 6.6).
+- "ImageNet competition data used to train AlexNet ... 150,000 test images" -> "dataset on which AlexNet was trained and evaluated" (test images are not training data).
+- Zech: ">99.9% accuracy identifying hospital system" restricted to NIH and Mount Sinai radiographs (99.95% / 99.98%; IU not reported).
+- Raina: "four-layer network" -> "four-layer network (a 'deep belief network')" (as in abstract).
+- Further reading: "chapters 5-8 cover everything in this chapter" -> "chapters 5-9 cover most of this chapter" (CNNs are ch. 9; GPUs ch. 12).
+- Bib: szegedy2014intriguing -> @inproceedings ICLR 2014; zeiler2014visualizing: added "Part I" and LNCS volume 8689.
+
+### Worked arithmetic re-checked (all correct)
+Neuron 0.2 / -0.3 -> 0; sigmoid(0.2) = 0.550; Figure 2.2: 12 + 8 = 20 weights + 6 biases = 26; XOR network matches Goodfellow eq. 6.4-6.6 and gives 0,1,1,0; squared errors 0.64, 0.01; cross-entropy 0.105, 2.303, 4.605; gradient example (0.36, 0.3364, slope -2.4, w 0.44, loss 0.0144; lr 0.5 -> 1.4, loss 3.24; lr 0.1 contracts error by factor 0.2 per step, so converges to 0.5 as stated); chain-rule box (h 2, y 1, L 1; gradients -2, -4, -1, -1; w2 0.9, w1 2.1, y 1.89); 2 x 3 = 6; 1,000 x 1,000 inputs x 1,000 neurons = 10^9 weights. Figure specs 2.1-2.4 consistent with text; no figure data changed.
+
+### Remaining uncertainties
+- NYT 1958 article not seen in the original; wording rests on Ananthaswamy 2024 (verbatim, with date and page) and the Cornell Chronicle headline.
+- Szegedy et al. ICLR 2014 venue confirmed via a secondary reference list (OpenReview/dblp blocked); this is the well-known venue.
+- Zeiler & Fergus layer descriptions and the Geirhos p. 665 quote rest on the writer's log (Crossref metadata confirmed; full text not re-read).
+
+## Revision (2026-10-22, after reader panel)
+
+Panel points (Mia) and global fixes applied; no new sources.
+- XOR: new Table 2.1 (inputs, target, h1 = sum, h2 = ReLU(sum - 1), output h1 - 2h2) plus a paragraph explaining linear separability: (1,0) and (0,1) both map to hidden point (1,0), the 0 cases to (0,0) and (2,1); the line h1 - 2h2 = 0.5 separates them (checked: 1 > 0.5; 0 < 0.5; 0 < 0.5). Follows Goodfellow et al. sec. 6.1. Caption carries "Calculation by the author".
+- Gradient step sign: text now says gradient descent moves opposite to the slope; step = -learning rate x slope = -0.1 x (-2.4) = +0.24 (weight 0.2 -> 0.44); lr 0.5: -0.5 x (-2.4) = +1.2 (weight -> 1.4). Arithmetic unchanged from fact-check.
+- Double descent: now explicitly about model size, not training time (Figure 2.4's x-axis); test error falls, rises to the interpolation threshold, then falls again (Belkin et al. 2019). Q5 no longer ties the Zhang puzzle to Figure 2.4 but to the classical account in Section 2.5. Figure 2.4 spec unchanged.
+- Universal approximation: "continuous function" explained in plain words (no sudden jumps); main sentence now "imitate any smooth input-output rule".
+- Cross-entropy: loss defined as -ln(probability), a unitless number like squared error; 0.9 -> ~0.1 (-ln 0.9 = 0.105), 0.1 -> ~2.3 (-ln 0.1), 0.01 -> ~4.6 (-ln 0.01); each tenfold drop adds ~2.3.
+- Name lists lightened: backprop history (Linnainmaa, Werbos sentence removed; still cites Goodfellow sec. 6.6 for multiple discovery); CNN history (Hubel and Wiesel, Fukushima names removed; citations kept).
+- Repetitions: "the standard textbook" (4x) replaced by one introduction of Goodfellow, Bengio and Courville's *Deep Learning* and later "Goodfellow and colleagues"; "LeCun, Bengio and Hinton" (5x) reduced to one full introduction ("a widely cited 2015 review") and "the 2015 review"; Further reading "The standard graduate textbook" -> "A widely used graduate textbook".
+- Analogy-limit formula: kept one explicit sentence (fog analogy, which Q2 uses); mixing desk, firm, factory and GPU limits folded into the sentences.
+- Saddle-point sentence split into four; added LeCun et al. p. 438 point that saddle points have very similar objective values, so it matters little which one training settles near (checked against the Nature PDF).
+- Cross-references: §2.6 paragraph-final references to Ch. 12 and Ch. 3 removed (one kept, to Ch. 4/7). "Its abstract notes" -> "It notes".
+- Citations: duplicate goodfellow2015explaining in the adversarial paragraph removed.
+- Body word count: 6,021 -> 6,247. pandoc --citeproc: no warnings.
+
+## Consistency pass (2026-10-22, cross-chapter audit)
+- §2.3 fog analogy: "breaks down in instructive ways" → "Real training differs from the walk in fog in three respects." (only remaining "breaks down" is discussion question 2 about the fog analogy).
+- §2.6: "one pattern stands out" signpost removed.
+- Debate closer "What would settle it" → "Evidence that could resolve it" (varied across chapters). No new sources.
+
+## Deepening (2026-10-23)
+
+Chapter rewritten as dense nonfiction (DEEPEN-GUIDE). Teaching apparatus removed (objectives, Summary, Key terms, Discussion questions). Sections now 2.1–2.8; Section 2.6 still holds CNNs and GPUs (cross-references in ch01 l.117 and ch07 l.19 to "Section 2.6" remain valid). Full texts read locally (arXiv/PMLR/JMLR/NeurIPS PDFs converted with pdftotext; deeplearningbook.org HTML chapters 6, 7, 8, 9).
+
+### New claims and sources
+
+| Key | Claim supported | Exact number / quote | URL checked | Evidence type |
+|---|---|---|---|---|
+| krizhevsky2012imagenet (existing) | ReLU 6x faster than tanh to 25% training error on CIFAR-10 (four-layer conv net) | "reaches a 25% training error rate on CIFAR-10 six times faster than an equivalent network with tanh neurons" (Fig. 1) | proceedings.neurips.cc PDF | peer-reviewed |
+| krizhevsky2012imagenet | Training recipe: batch 128, momentum 0.9, weight decay 0.0005 ("important for the model to learn"; "not merely a regularizer: it reduces the model's training error"); init Gaussian std 0.01; lr 0.01 divided by 10, reduced three times; ~90 cycles over 1.2M images; dropout 0.5 in first two FC layers ("substantial overfitting" without); augmentation by random 224×224 crops + reflections, factor 2048, "suffers from substantial overfitting" without; RGB intensity (PCA) augmentation; 96 first-layer kernels 11×11×3, "frequency- and orientation-selective kernels, as well as various colored blobs" | as quoted | same | peer-reviewed |
+| goodfellow2016deep (existing) | ReLU "cannot learn via gradient-based methods on examples for which their activation is zero" (6.3.1); MSE with saturating outputs gives poor results, reason cross-entropy preferred (6.2.1); depth: shallow model may need hidden units exponential in n; regions exponential in depth (6.4.1); L2 penalty ½‖w‖² = weight decay (7.1.1); "The best way to make a machine learning model generalize better is to train it on more data" (7.4); momentum update and terminal velocity ‖g‖/(1−α), α=0.9 multiplies max speed by 10 (8.3.2); symmetry breaking (8.4); Adam = adaptive moments (8.5.3); choice of optimiser "seems to depend largely on the user's familiarity with the algorithm" (8.5.4); vanishing/exploding via repeated multiplication (8.2.5); most advances from changing model family, skip connections mitigate vanishing gradient (8.7.5); convolution: sparse interactions, parameter sharing, equivariant representations (9.2) | as quoted | https://www.deeplearningbook.org/contents/{mlp,regularization,optimization,convnets}.html | textbook |
+| kingma2015adam | Adam algorithm; defaults α=0.001, β1=0.9, β2=0.999, ε=10^-8 (Algorithm 1); bias correction; step approximately bounded by α, "trust region", invariant to gradient scale (sec. 2.1); ICLR 2015 | as quoted | https://arxiv.org/abs/1412.6980 (v9) | peer-reviewed (conference) |
+| loshchilov2019decoupled | L2 and weight decay not equivalent for Adam; decoupling "substantially improves Adam's generalization performance"; ICLR 2019 | as quoted | https://arxiv.org/abs/1711.05101 (v3) | peer-reviewed (conference) |
+| goyal2017accurate | ResNet-50, minibatch 8192, 256 GPUs, one hour, no loss of accuracy; linear scaling rule (multiply lr by k); gradual warm-up over first 5 epochs | "no loss of accuracy when training with large minibatch sizes up to 8192 images" | https://arxiv.org/abs/1706.02677 (v2) | preprint (labelled) |
+| vaswani2017attention (reused, ch01/ch03) | Adam β1 0.9, β2 0.98, ε 10^-9; warm-up 4,000 steps then inverse-sqrt decay; residual connection around each sub-layer + layer norm, LayerNorm(x + Sublayer(x)); dropout 0.1; label smoothing 0.1; ~25,000 source + 25,000 target tokens per batch; no init or weight decay reported | as quoted | https://arxiv.org/abs/1706.03762 (v5) | peer-reviewed (conference) |
+| glorot2010understanding | Before 2006 deep MLPs "were not successfully trained"; logistic sigmoid "unsuited for deep networks with random initialization", drives top hidden layer into saturation; normalised init U[±√6/√(nj+nj+1)] (variance 2/(nin+nout)); PMLR 9:249–256 | as quoted | https://proceedings.mlr.press/v9/glorot10a.html + PDF | peer-reviewed (conference) |
+| he2015delving (reused, ch01) | Var[y_L] = Var[y_1] ∏ ½ n_l Var[w_l] (eq. 9); condition ½ n_l Var[w_l] = 1 → std √(2/n_l); std 0.01 makes deeper nets stall; 30-layer model converges with theirs, "Xavier" "completely stalls" | as quoted | https://arxiv.org/abs/1502.01852 | peer-reviewed (conference) |
+| ioffe2015batch | Normalise per minibatch, learned scale/shift; "same accuracy with 14 times fewer training steps"; ensemble 4.9% top-5 validation error (4.8% test); internal covariate shift motivation; PMLR 37:448–456 | as quoted | https://proceedings.mlr.press/v37/ioffe15.html + arXiv 1502.03167v3 | peer-reviewed (conference) |
+| santurkar2018how | Noise injected after BatchNorm, performance difference almost non-existent; stability "has little to do with the success of BatchNorm"; landscape "significantly smoother"; NeurIPS 2018 | as quoted | https://arxiv.org/abs/1805.11604 ; NeurIPS proceedings page | peer-reviewed (conference) |
+| ba2016layer | Layer norm: mean/variance over summed inputs of a layer for a single training case; no batch dependence | abstract | https://arxiv.org/abs/1607.06450 | preprint (labelled implicitly as method paper; arXiv only) |
+| he2016deep (reused, ch01) | 56-layer plain higher training error than 20-layer on CIFAR-10 (Fig. 1); degradation not caused by overfitting; F(x) := H(x) − x, output F(x)+x; Table 2 top-1 (10-crop, ImageNet val): plain 18 27.94, plain 34 28.54, ResNet-18 27.88, ResNet-34 25.03; 152 layers, 8× deeper than VGG, 11.3 vs 19.6 billion FLOPs; ensemble 3.57% top-5 test; 1202-layer: "no optimization difficulty", training error <0.1%, test 7.93% vs 110-layer 6.43%, attributed to overfitting; recipe SGD batch 256, lr 0.1 /10 on plateau, wd 0.0001, momentum 0.9, no dropout, BN after each conv, init as [13] (He 2015), scale/crop/flip/colour augmentation | as quoted | https://arxiv.org/abs/1512.03385 (v1) | peer-reviewed (conference) |
+| kaplan2020scaling (reused, ch04) | Forward pass ≈ 2N operations per token; backward ≈ twice forward; C ≈ 6N per token | "approximately twice the compute as the forwards pass" | https://arxiv.org/abs/2001.08361 | preprint |
+| nvidia2026h100 | H100 SXM: FP32 67 teraFLOPS; BF16/FP16 Tensor Core 1,979 teraFLOPS "* With sparsity"; memory bandwidth 3.35 TB/s | as quoted | https://www.nvidia.com/en-us/data-center/h100/ | company claim (labelled) |
+| srivastava2014dropout (existing) | Retain p = 0.5 hidden "close to optimal", input closer to 1; p = 0.8 for inputs in experiments; 2^n thinned networks; scaled weights at test time; MNIST: best standard nets 1.60%, dropout 1.35%, + ReLU 1.25%, + max-norm 1.06%; Table 9 (784-1024-1024-2048-10 ReLU): L2 1.62%, dropout + L2 1.25% | as quoted | https://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf | peer-reviewed |
+| zhang2017understanding (existing) | Fit random labels and Gaussian-noise images with zero training error; training time increases "only by a small constant factor"; Table 1 CIFAR-10: Inception 1,649,402 params, 100/89.05 (aug+wd), 100/85.75 (none), random labels 100/9.78; AlexNet 1,387,786 params 99.90/81.22, 100/76.07, random 99.82/9.86; explicit regularisation "neither necessary nor by itself sufficient" | as quoted | https://arxiv.org/abs/1611.03530 (v2) | peer-reviewed (conference) |
+| belkin2019reconciling (existing) | Fig. 1 classical U and double-descent curve, interpolation threshold; "modern" models usually outperform optimal "classical" model on test set | as quoted | arXiv 1812.11118v2 | peer-reviewed |
+| nakkiran2021deep | Double descent in model size and in training epochs (ResNets, CNNs, transformers); strongest with label noise (e.g. 15%); regimes where "even quadrupling" training samples hurts; J. Stat. Mech. 2021(12):124003 | as quoted | arXiv 1912.02292; Crossref DOI 10.1088/1742-5468/ac3a74 | peer-reviewed |
+| recht2019imagenet | New test sets; accuracy drops 3%–15% CIFAR-10, 11%–14% ImageNet; ~five years of progress; ranking almost exactly preserved; gains translate to larger gains; not adaptivity but "harder" images; PMLR 97:5389–5400 | as quoted | https://proceedings.mlr.press/v97/recht19a.html + arXiv 1902.10811v2 | peer-reviewed (conference) |
+| geirhos2019imagenettrained | Cue-conflict: humans shape 95.9% of correct decisions; ResNet-50 22.1% shape vs 77.9% texture; Fig. 1 cue-conflict image "Indian elephant" 63.9%; Stylized-ImageNet training yields shape-based representation; ICLR 2019 | as quoted | https://arxiv.org/abs/1811.12231 (v3) | peer-reviewed (conference) |
+| geirhos2020shortcut (existing) | Cow at unexpected location (beach rather than grassland) not classified correctly | "A cow at an unexpected location (such as a beach rather than grassland) is not classified correctly" | arXiv 2004.07780v5 | peer-reviewed (perspective) |
+| goodfellow2015explaining (existing) | ε = .007, "corresponds to the magnitude of the smallest bit of an 8 bit image encoding after GoogLeNet's conversion to real numbers"; linearity argument: activation grows by εmn, "many infinitesimal changes to the input that add up to one large change to the output"; adversarial training of maxout net: 0.94% → 0.84% error | as quoted | https://arxiv.org/abs/1412.6572 (v3) | peer-reviewed (conference) |
+| ilyas2019adversarial | Adversarial examples attributable to "non-robust features" that are highly predictive yet brittle and incomprehensible to humans; NeurIPS 2019 | as quoted | https://arxiv.org/abs/1905.02175 ; NeurIPS proceedings page | peer-reviewed (conference) |
+
+### Author-computed arithmetic (verified with Python, script in session scratchpad)
+- Table 2.1: σ(−2)=0.119, σ(0)=0.5, σ(0.2)=0.550, σ(2)=0.881; tanh −0.964, 0, 0.197, 0.964; slopes at 0.2: σ′=0.248, tanh′=0.961; σ′(2)=0.105.
+- Matrix layer: rows (0.5, −1, 2), (1, 0.5, 0), b (0.1, −0.2), x (1, 2, −1) → (−3.4, 1.8) → ReLU (0, 1.8).
+- Softmax (2.0, 1.0, 0.1) → (0.659, 0.242, 0.099); −ln 0.659 = 0.417; −ln 0.099 (exact p 0.0986) = 2.317.
+- One-weight GD: weights 0.2 → 0.44 → 0.488 → 0.4976 → 0.49952; error factor 1 − 8η (0.2 at η=0.1; −3 at η=0.5); divergence above η = 0.25; nudge to 0.21 → loss 0.3364 (fall 0.0236).
+- Nine-parameter backprop (x=(1,2), t=1, W1 rows (0.5,0.25), (−0.5,0.5), b1=0, v=(1,−1), c=0): z1=(1.0,0.5), z=0.5, p=0.6225, L=0.4741; ∂L/∂z=−0.3775; dv=(−0.3775,−0.1888); dh=(−0.3775,+0.3775); dW1 rows (−0.3775,−0.7551), (+0.3775,+0.7551); after lr 0.1: W1 rows (0.5378,0.3255), (−0.5378,0.4245), b1 (0.0378,−0.0378), v (1.0378,−0.9811), c 0.0378 → h (1.2265,0.2735), z 1.0423, p 0.7393, L 0.3021. All gradients confirmed by finite differences (ε = 10^-6).
+- Momentum β=0.9, constant gradient: 1, 1.9, 2.71, 3.439; 6.513 after 10; 9.948 after 50.
+- Adam first step, g=−2.4: m1=−0.24, v1=0.00576, m̂=−2.4, v̂=5.76, step +0.001; g=−0.024 also +0.001.
+- 0.25^10 = 9.54×10^-7. He std √(2/512) = 0.0625; ½×512×0.01² = 0.0256; 0.0256^10 = 1.2×10^-16.
+- Convolution: 5×5 image rows (0,0,0,1,1), kernel rows (−1,0,1) → map rows (0,3,3); 2×2 max-pool of (1,3,0,2/4,2,1,0/0,1,5,2/2,0,3,1) → (4,2/2,5); 3×3×3×64 = 1,728 (+64 = 1,792); FC equivalent 150,528 × 3,211,264 = 4.83×10^11; 25 × 9 = 225; 11×11×3×96 = 34,848 (not quoted).
+- Matmul: 2×1,024×4,096² = 3.44×10^10; reuse 2n³/3n² = 2,731 for n = 4,096; 1,979e12/3.35e12 = 591 operations per byte (company headline figures, with sparsity).
+- Adversarial illustration: 224×224×3 = 150,528; 0.007 × 0.01 × 150,528 = 10.5 (illustrative weight magnitude 0.01, stated as such).
+
+### Cuts and changes
+- Teaching apparatus removed (objectives, Summary, Key terms, six discussion questions).
+- Mixing-desk, firm-hierarchy, exam and CPU-clerks analogies cut (no information content).
+- "Data hunger" paragraph (LeCun 2015 p. 436 hundreds of millions of weights/examples) cut for length; source still cited elsewhere.
+- Concept box "The gradient" folded into main text.
+- Further reading: Ananthaswamy 2024 replaced by He et al. 2016 (Ananthaswamy still cited in the opening).
+- Dropped as unverifiable or unnecessary: claim that Adam is "now the usual choice" for transformers (no primary source checked); "no method yet makes large image networks robust at no cost in accuracy" (not sourced); Nair & Hinton 2010 and Bengio et al. 1994 considered but not needed.
+- No existing verified correction undone (NYT wording, Rosenblatt affiliation, Szegedy quote, Goodfellow section locators, Zech accuracies, Krizhevsky p. 1098).
+
+## Fact-check 2 (2026-10-23)
+
+Independent second check after the deepening pass (about 210 claims, table cells and calculations). Sources re-read in full text (arXiv/JMLR/NeurIPS PDFs via pdftotext): Zhang et al. 1611.03530 (Table 1), Nakkiran et al. 1912.02292, He et al. 1512.03385 (Tables 1–2, 6; sec. 3.3, 4.2), Goodfellow et al. 1412.6572 (Fig. 1, sec. 3, 6), Geirhos et al. 1811.12231, Recht et al. 1902.10811, Ioffe & Szegedy 1502.03167, Santurkar et al. 1805.11604, He et al. 1502.01852, Goyal et al. 1706.02677, Kingma & Ba 1412.6980, Loshchilov & Hutter 1711.05101, Ba et al. 1607.06450, Ilyas et al. 1905.02175, Srivastava et al. 2014 (JMLR PDF; Table 2 and Table 9), Krizhevsky et al. 2012 (NeurIPS PDF). NVIDIA H100 product page re-fetched (FP32 67; BF16/FP16 Tensor 1,979 "With sparsity"; 3.35 TB/s); NVIDIA Hopper In-Depth blog (dense/sparse pairs, dense = half of sparse); NVIDIA structured-sparsity blog (2:4 = 50% zeros, up to 2× dense).
+
+### Worked examples recomputed in Python (all correct as printed)
+Table 2.1 values and slopes (σ′(0.2) 0.2475, tanh′(0.2) 0.9610, σ′(2) 0.1050); matrix layer (−3.4, 1.8) → (0, 1.8); softmax (0.6590, 0.2424, 0.0986), −ln 0.417 / 2.317; one-weight GD 0.44/0.488/0.4976/0.49952, loss 0.0144; nudge 0.3364; error factor 1 − 8η (0.2; −3), divergence above η = 0.25 (curvature 2x² = 8, η < 2/8); η = 0.5 → w 1.4, loss 3.24. Nine-parameter backprop: L 0.474077, p 0.622459; central finite differences reproduce every Table 2.3 gradient to 4 dp (−0.3775, −0.7551, +0.3775, +0.7551, −0.3775, +0.3775, −0.3775, −0.1888, −0.3775); updated parameters as printed; new h (1.2265, 0.2735), z 1.0423, p 0.7393, L 0.3021. Momentum 1, 1.9, 2.71, 3.439; 6.513; 9.948. Adam step 0.001 for g = −2.4 and −0.024 (m₁ −0.24, v₁ 0.00576). 0.25¹⁰ = 9.54×10⁻⁷; √(2/512) = 0.0625; 0.0256¹⁰ = 1.2×10⁻¹⁶. Convolution map rows (0, 3, 3); pooling (4, 2 / 2, 5); 1,728 + 64 = 1,792; FC equivalent 4.83×10¹¹; 225. Matmul 3.44×10¹⁰; reuse 2,731; 1,979/3.35 = 591 (sparse), 989.5/3.35 = 295 (dense). Adversarial 150,528 × 0.007 × 0.01 = 10.5.
+Formulas/notation checked: Adam (Kingma & Ba Alg. 1, ε outside the square root), AdamW (decoupled decay), batch norm (x − μ)/√(σ² + ε) then γ, β; layer norm; weight decay ½λ‖w‖², gradient λw, shrink factor (1 − ηλ) (Goodfellow 7.1.1); dropout retain probability p, test-time scaling; momentum terminal speed 1/(1 − β) (Goodfellow 8.3.2); He condition ½ n Var[w] = 1 (He 2015 eq. 10); Glorot variance 2/(n_in + n_out).
+
+### Paper numbers confirmed
+AlexNet ReLU six times faster to 25% CIFAR-10 training error (Fig. 1); ×2048 augmentation; weight-decay and dropout quotes; std 0.01; lr schedule. Goyal 8,192 / 256 GPUs / 1 hour / 5-epoch warm-up. Ioffe & Szegedy "14 times fewer training steps", 4.9% top-5 validation. Santurkar noise injection and quotes. He et al. Table 2 = top-1 error (%), 10-crop testing, ImageNet validation: plain 27.94/28.54, ResNet 27.88/25.03 (Figure 2.4 caption and spec correct); 152 layers, 8× deeper than VGG, 11.3 vs 19.6 billion FLOPs (= multiply-adds), 3.57% top-5 test; 1,202 layers, training error <0.1%, test 7.93% vs 6.43% (110 layers, best of 5; mean 6.61). Dropout MNIST 1.60 / 1.35 / 1.25 / 1.06; Table 9 L2 1.62, dropout + L2 1.25. Zhang Table 1 all twelve cells. Nakkiran "even quadrupling", 15% label noise. Geirhos 95.9% / 22.1% / 63.9%. Recht 3–15% and 11–14%, five years. Goodfellow ε = .007, 57.7% / 99.3%, 0.94% → 0.84%. Ilyas "non-robust features".
+
+### Corrections (old → new)
+- §2.4 FLOP rule: "two operations ... per parameter per example" → "per parameter for each input it processes (for a language model, each token)" (per-example is wrong for convolutional nets, where weights are reused across positions); Kaplan et al. now labelled a 2020 preprint.
+- Table 2.3 caption "Forward and backward quantities" → "Backward-pass quantities" (the table holds only backward quantities).
+- §2.5 vanishing gradients: "shrink the signal by a factor of up to 0.25¹⁰" → "the slopes alone multiply the signal over ten layers by at most 0.25¹⁰" (ambiguous direction of the bound); "sigmoid units" → "logistic sigmoid units" (Glorot's wording).
+- AdamW: specified that the usual way is adding weight decay "as a penalty term in the loss" (L2), which is what Loshchilov & Hutter show is not equivalent for Adam.
+- Layer normalisation: labelled as a 2016 preprint by Ba, Kiros and Hinton (arXiv only).
+- §2.5 residual: "By 2015 networks of 20 to 30 layers could be trained" → "the leading image networks had 16 to 30 layers" (He et al.: "depth of sixteen to thirty"); "(Figure 2.4)" was attached to the CIFAR-10 56- vs 20-layer result, which the figure does not show; the sentence now adds the ImageNet plain 34- vs 18-layer result and points to Figure 2.4b.
+- 152-layer ResNet: "fewer operations (11.3 billion against 19.6 billion)" → "11.3 billion multiply–adds per image against 19.6 billion for VGG-19" (He et al.'s FLOPs are multiply-adds; the chapter elsewhere counts a multiply and an add as two operations).
+- Table 2.4 AlexNet normalisation: "none" → "local response normalisation after two layers" (Krizhevsky et al. sec. 3.3: after the first and second convolutional layers).
+- H100: "with sparsity" now explained (dense matrices run at half the rate; @andersch2022nvidia added); "about 590 operations per byte" now stated as the sparse headline figure, "about 300 on dense matrices" added.
+- Adversarial panda: "each pixel moved by at most 0.007 on a 0-to-1 scale, the size of the smallest step in an 8-bit image" → each pixel moved by 0.007 according to the sign of the gradient, with the authors' own statement that 0.007 is the smallest 8-bit step "after GoogLeNet's conversion to real numbers" (the 0-to-1 scale was not in the source and is inconsistent with 1/255 = 0.0039).
+- Ilyas: "imperceptible to humans" → "brittle and incomprehensible to humans" (source wording).
+- Zhang: "reached 100% training accuracy" → "100% training accuracy, or very nearly" (AlexNet on random labels 99.82%); Table 2.5 column "Augmentation" → "Random-crop augmentation" (Zhang's column is random crop).
+
+### Figure specs
+- fig-02-01: "Show students" → "Show readers" (teaching wording). No data change.
+- fig-02-02 to fig-02-06: data, labels and captions match the text and sources; no change. Figure 2.4 caption unchanged (text reference moved to 2.4b).
+
+### Bibliography
+- Added andersch2022nvidia to bib/ch02.bib, byte-identical to bib/ch07.bib. No shared entry modified; all ch02 keys shared with other bib files verified byte-identical.
+
+### Remaining uncertainties
+- NYT 1958 wording still rests on Ananthaswamy 2024 (unchanged from fact-check 1).
+- H100 dense rate: the NVIDIA product page gives only the sparse figures; "half" rests on the Hopper In-Depth blog (1000/2000 preliminary pairs) and NVIDIA's 2:4 sparsity description.
+
+## Polish (2026-10-24)
+
+Final prose pass following work/POLISH-GUIDE.md, ML-expert panel report (panel2, ## ch02) and audit-consistency2 (## ch02, ## Global T-25). Body word count (title to start of Further reading, raw wc incl. tables and keys): 9,506 -> 9,876. pandoc --citeproc: no warnings.
+
+### Facts added (all checked against full text; PDFs via arXiv, pdftotext; metadata via arXiv API, Crossref, JMLR/PMLR pages)
+| Key | Claim supported | Exact number / quote | URL checked | Evidence type |
+|---|---|---|---|---|
+| hendrycks2016gaussian | GELU = zΦ(z), Φ standard Gaussian CDF | "The GELU activation function is xΦ(x), where Φ(x) the standard Gaussian cumulative distribution function" | https://arxiv.org/abs/1606.08415 | preprint |
+| devlin2019bert (copied byte-identical from ch01.bib) | BERT uses GELU | "We use a gelu activation (Hendrycks and Gimpel, 2016)" (Appendix A.2) | https://arxiv.org/abs/1810.04805 | peer-reviewed |
+| shazeer2020glu | GLU = component-wise product of two linear projections, one activated; some variants improve quality over ReLU/GELU in Transformer FFN | "some of them yield quality improvements over the typically-used ReLU or GELU activations" | https://arxiv.org/abs/2002.05202 | preprint |
+| chowdhery2023palm | PaLM uses SwiGLU; trained without dropout, 0.1 in most fine-tuning | "We use SwiGLU activations"; "The model was trained without dropout, although dropout of 0.1 is used for finetuning in most cases" (sec. 2, 5) | https://arxiv.org/abs/2204.02311 ; JMLR 24(240):1-113 https://jmlr.org/papers/v24/22-1144.html | peer-reviewed |
+| touvron2023llama | Llama: pre-normalisation "to improve the training stability", RMSNorm, SwiGLU, AdamW (β2 0.95), cosine schedule to 10% of max, weight decay 0.1, gradient clipping 1.0, 2,000 warm-up steps | quotes as given (sec. 2.2-2.3) | https://arxiv.org/abs/2302.13971 | preprint (company technical report) |
+| zhang2019root | RMSNorm normalises by root mean square, drops re-centring, computationally cheaper than LayerNorm | "RMSNorm regularizes the summed inputs ... according to root mean square"; "re-centering invariance in LayerNorm is dispensable"; "computationally simpler" | https://arxiv.org/abs/1910.07467 (NeurIPS 2019 per arXiv comment) | peer-reviewed |
+| radford2019language (copied byte-identical from ch03.bib) | Pre-norm in GPT-2 (Chapter 3 cites the same) | as in ch03 evidence log | - | technical report |
+| grattafiori2024llama (copied byte-identical from ch03/ch04.bib) | Llama 3 405B pre-trained with AdamW, cosine schedule | "We pre-train Llama 3 405B using AdamW ... a linear warm up of 8,000 steps, and a cosine learning rate schedule" (sec. 3.4.1) | https://arxiv.org/abs/2407.21783 | preprint (company report) |
+| deepseekai2024deepseekv3 (copied byte-identical from ch07.bib) | AdamW β1 0.9, β2 0.95, wd 0.1; gradient clipping norm 1.0; FP8 mixed-precision framework ("most compute-density operations are conducted in FP8") | quotes as given (sec. 3.3, 4.2) | https://arxiv.org/abs/2412.19437 | preprint (company report) |
+| kimiteam2025kimi | Kimi K2: 1.04 trillion total / 32 billion activated parameters (MoE), 2025; MuonClip = Muon (momentum M_t, Newton-Schulz(M_t)) + QK-Clip; Muon "substantially outperforms AdamW" at equal compute in Moonlight experiments; instability from exploding attention logits; WSD schedule, constant 2e-4 for first 10T tokens after 500-step warm-up, then cosine decay over 5.5T | quotes as given (sec. 2.1, Algorithm 1, sec. 3.4) | https://arxiv.org/abs/2507.20534 | preprint (company report) |
+| hu2024minicpm | WSD = warmup, stable, decay stages; suits continuous training with un-predefined token count; intermediate checkpoints reusable | "conducive to continuous training"; "un-predefined pre-training token number and makes the reusing of model intermediate checkpoints highly feasible" | https://arxiv.org/abs/2404.06395 | preprint |
+| loshchilov2017sgdr | Cosine annealing of the learning rate | "we decay the learning rate with a cosine annealing for each batch" | https://arxiv.org/abs/1608.03983 (ICLR 2017) | peer-reviewed |
+| pascanu2013difficulty | Gradient-norm clipping: rescale gradient when its norm exceeds a threshold; proposed for RNN exploding gradients | Algorithm 1, sec. 3.2 | https://arxiv.org/abs/1211.5063 ; PMLR 28(3):1310-1318 https://proceedings.mlr.press/v28/pascanu13.html | peer-reviewed |
+| baydin2018automatic | AD "similar to but more general than backpropagation"; frameworks TensorFlow, PyTorch | abstract; sec. 1 | https://arxiv.org/abs/1502.05767 ; JMLR 18(153):1-43 | peer-reviewed |
+| goodfellow2016deep (existing) | Computational graphs (sec. 6.5.1: nodes are variables, directed edge from input to result of an operation); backprop "a special case of ... reverse mode accumulation" (sec. 6.5.9); dropout alternative "multiply the states of the units by 2 during training" with inclusion probability 1/2 (sec. 7.12; generalised in text as 1/p) | quotes as given | https://www.deeplearningbook.org/contents/mlp.html ; .../regularization.html | book |
+| kaplan2020scaling (existing) | N excludes embeddings; C_forward ≈ 2N + 2 n_layer n_ctx d_model; context term small for d_model > n_ctx/12; C ≈ 6N per training token | eq. 2.2 and following text (sec. 2.1) | https://arxiv.org/abs/2001.08361 | preprint |
+| he2016deep (existing) | Original ResNet applies ReLU after the addition | "We adopt the second nonlinearity after the addition (i.e., σ(y), see Fig. 2)" | https://arxiv.org/abs/1512.03385 | peer-reviewed |
+| zhang2017understanding (existing) | SGD as implicit regulariser: "For linear models, SGD always converges to a solution with small norm" | quote as given (sec. 1.1) | https://arxiv.org/abs/1611.03530 | peer-reviewed |
+| micikevicius2017mixed, nvidia2024blackwell (copied byte-identical from ch07.bib) | FP32 master copy with 16-bit storage; Blackwell announced 18 March 2024, B200 GPUs, GB200 NVL72 with 72 Blackwell GPUs, "4-bit floating point AI inference capabilities" | press release re-fetched | https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing | peer-reviewed / company claim |
+| hanley1982meaning | AUC = probability that a randomly chosen diseased subject is ranked above a randomly chosen non-diseased one | abstract (Europe PMC) | DOI 10.1148/radiology.143.1.7063747 (Crossref: Radiology 143(1):29-36, April 1982) | peer-reviewed |
+
+### [VERIFY] items from the ML-expert report (re-checked in LeCun et al. 1998 PDF)
+- Cheques: Sec. I says LeNet-5's system "is reading millions of checks per month in several banks across the United States"; the abstract and conclusion say the full graph-transformer cheque reader "reads several million checks per day". Chapter's "millions of bank cheques a month" matches Sec. I and is kept. "Handwritten amounts" -> "the amounts, handwritten or printed" (Sec. I: "reading handwritten and machine-printed bank checks").
+- "345,308 connections" is the paper's own figure ("The network in Fig. 2 contains 345 308 connections, but only 60 000 trainable free parameters"); kept.
+
+### Structural and content changes
+- §2.1: third repetition of the 0.2 / −0.3 ReLU example cut (Figure 2.1 caption keeps it). Goodfellow's "default recommendation" dated to 2016; new paragraph on GELU (BERT) and gated units/SwiGLU (Shazeer; PaLM, Llama), with pointer to Chapter 3.
+- §2.2: "Two consequences follow" rewritten; depth/shallow-network sentence untangled; Cybenko quote "we are not guaranteed" folded into paraphrase.
+- §2.3: softmax probability "0.099" -> "0.0986" (consistent with −ln 0.0986); cross-entropy cost list (0.9/0.1/0.01) reduced to the ln 10 ≈ 2.3 rule; one-weight iterates 0.488/0.4976/0.49952 and the η = 0.5 output value dropped; "hilly landscape" duplicate dropped.
+- §2.4: 6N rule now states N excludes embeddings, attention's context-dependent term is omitted (Kaplan's d_model > n_ctx/12 condition), and inference ≈ 2N per token; paragraph split. New paragraph on computational graphs and reverse-mode automatic differentiation.
+- §2.5: AlexNet recipe sentence replaced by pointer to Table 2.4 (epochs kept); momentum build-up sequence reduced to one figure (6.5× after ten steps); Adam β2/ε for the transformer replaced by pointer to Table 2.4. Added: cosine decay (SGDR; Llama) and warmup–stable–decay (MiniCPM; Kimi K2); AdamW as common choice for LLM pre-training (Llama, Llama 3, DeepSeek-V3) and Muon/MuonClip (Kimi K2); gradient clipping (Pascanu et al.; Llama and DeepSeek-V3 at norm 1.0); pre-norm and RMSNorm (GPT-2, Llama). Batch-norm ensemble 4.9% top-5 sentence cut. Residual-gradient wording corrected: shortcut gives the gradient an identity path, with F's contribution added (not "at least unchanged"); note that the original ResNet applies ReLU after the addition. VGG multiply–add figures (11.3 vs 19.6 billion) replaced by "cheaper to run" (number pile-up).
+- §2.6: convolution walk-through shortened (figure carries the detail); n − k + 1 sentence and 225-weight comparison cut; pooling numeric example cut (Figure 2.5d referenced); Zeiler & Fergus layer list condensed; Raina et al. 2009 GPU sentence cut for length (raina2009large left in bib, now uncited); H100 paragraph split; new paragraph on mixed precision (Micikevicius; DeepSeek-V3 FP8) and Blackwell, pointing to Chapter 7.
+- §2.7: ImageNet split numbers cut; "Four are standard" removed; dropout: inverted-dropout implementation (Goodfellow 7.12), MNIST 1.35% and the fixed-architecture 1.62/1.25 comparison cut, PaLM no-dropout pre-training added; Zhang "small constant factor" quote cut; one sentence on SGD as implicit regulariser added; closing "practical rule" sentence cut (now in chapter synthesis).
+- §2.8: AUC given its full definition at first use in the book (Global ticket T-25), cited to Hanley & McNeil; Recht punchline sentence cut; Ilyas "not malfunctioning but" rewritten; debate box closer folded into prose (no italic label); new closing synthesis paragraph after the debate box.
+
+### Captions and tables
+- Table 2.1 caption: "(Section 2.5)" -> "(Sections 2.4–2.5)" (audit ticket T-05). No other caption or table changed. Figure 2.1 caption still carries the −0.3 example (now its only occurrence besides §2.1's worked total of 0.2).
+
+### Bibliography
+- Added to bib/ch02.bib: hendrycks2016gaussian, shazeer2020glu, chowdhery2023palm, touvron2023llama, zhang2019root, kimiteam2025kimi, hu2024minicpm, loshchilov2017sgdr, pascanu2013difficulty, baydin2018automatic, hanley1982meaning (new); devlin2019bert, radford2019language, grattafiori2024llama, deepseekai2024deepseekv3, micikevicius2017mixed, nvidia2024blackwell (copied byte-identical from other chapters' bib files).
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Logged gaps re-opened with WebSearch/WebFetch and arXiv full texts (pdftotext); ~30 load-bearing claims spot-checked. No text, table, figure spec or bib change was needed.
+
+### Logged gaps
+- newyorktimes1958new wording → original still paywalled; search confirms a UPI story datelined 7 July, printed 8 July 1958, and secondary reproductions agree on "walk, talk, see, write, reproduce itself and be conscious of its existence"; Cornell Chronicle confirms headline "NEW NAVY DEVICE LEARNS BY DOING: Psychologist Shows Embryo of Computer Designed to Read and Grow Wiser" → consistent; citation form "as reproduced in" kept → https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon
+- lefkowitz2019professors → "In July 1958", Office of Naval Research, IBM 704, "After 50 trials ...", Rosenblatt "a research psychologist and project engineer at the Cornell Aeronautical Laboratory" → confirmed (same URL)
+- szegedy2014intriguing ICLR 2014 venue (previously only via a secondary reference list) → Google Research publication page lists "International Conference on Learning Representations (2014)" → confirmed → https://research.google/pubs/intriguing-properties-of-neural-networks/
+- zeiler2014visualizing layer descriptions (writer's log only) → arXiv 1311.2901v3 Fig. 2 caption: "Layer 2 responds to corners and other edge/color conjunctions. Layer 3 ... similar textures ... Layer 4 ... dog faces ... Layer 5 shows entire objects ... e.g. keyboards" → confirmed → https://arxiv.org/abs/1311.2901
+- geirhos2020shortcut p. 665 quote (writer's log only) → arXiv 2004.07780v5 abstract: "Shortcuts are decision rules that perform well on standard benchmarks but fail to transfer to more challenging testing conditions"; cow "at an unexpected location (such as a beach rather than grassland)" → confirmed → https://arxiv.org/abs/2004.07780
+- H100 dense rate = half of sparse (previously inferred from blog) → NVIDIA H100 datasheet footnote: "* Shown with sparsity. Specifications 1/2 lower without sparsity."; product page still FP32 67, BF16/FP16 Tensor 1,979 "* With sparsity", 3.35 TB/s → confirmed → https://www.nvidia.com/en-us/data-center/h100/ ; datasheet copy https://www.MEGWARE.com/fileadmin/user_upload/LandingPage%20NVIDIA/nvidia-h100-datasheet.pdf
+- Preprints, published since? goyal2017accurate, ba2016layer, hendrycks2016gaussian, shazeer2020glu, hu2024minicpm, kaplan2020scaling, touvron2023llama, kimiteam2025kimi → no peer-reviewed version found (arXiv only) → labels kept; micikevicius2017mixed (ICLR 2018) and zhang2019root (NeurIPS 2019) already listed as published.
+
+### Spot-checks (full texts)
+- kimiteam2025kimi → "1.04 trillion-parameter" MoE, 32B activated; Muon "substantially outperforms AdamW" at same compute; "exploding attention logits"; WSD, constant 2e-4 for first 10T tokens after 500-step warm-up, then cosine over 5.5T → confirmed → https://arxiv.org/abs/2507.20534
+- touvron2023llama → pre-normalisation "to improve the training stability"; RMSNorm; SwiGLU; AdamW β2 0.95; final LR "10% of the maximal"; weight decay 0.1; gradient clipping 1.0; 2,000 warm-up steps → confirmed → https://arxiv.org/abs/2302.13971
+- deepseekai2024deepseekv3 → AdamW; "gradient clipping norm is set to 1.0"; "most compute-density operations are conducted in FP8" → confirmed → https://arxiv.org/abs/2412.19437
+- chowdhery2023palm → "We use SwiGLU activations"; "trained without dropout, although dropout of 0.1 is used for finetuning in most cases" → confirmed → https://arxiv.org/abs/2204.02311
+- grattafiori2024llama → "We pre-train Llama 3 405B using AdamW" → confirmed → https://arxiv.org/abs/2407.21783
+- hu2024minicpm → Warmup-Stable-Decay, "conducive to continuous training", "un-predefined pre-training token number" → confirmed → https://arxiv.org/abs/2404.06395
+- goyal2017accurate → minibatch 8192, 256 GPUs, one hour → confirmed → https://arxiv.org/abs/1706.02677
+- nvidia2024blackwell → 18 Mar 2024; GB200 NVL72 "72 Blackwell GPUs and 36 Grace CPUs"; "new 4-bit floating point AI inference capabilities" → confirmed → https://nvidianews.nvidia.com/news/nvidia-blackwell-platform-arrives-to-power-a-new-era-of-computing
+- zhang2017understanding Table 1 (Table 2.5) → Inception 1,649,402 params, 100/89.05, 100/85.75, random 100/9.78; AlexNet 1,387,786, 99.90/81.22, 100/76.07, random 99.82/9.86; "neither necessary nor by itself sufficient"; "For linear models, SGD always converges to a solution with small norm" → confirmed → https://arxiv.org/abs/1611.03530
+- he2016deep Table 2 (fig-02-04 spec) → top-1 (10-crop, ImageNet val) plain 27.94/28.54, ResNet 27.88/25.03 → confirmed; spec unchanged → https://arxiv.org/abs/1512.03385
+- recht2019imagenet → 3%–15% CIFAR-10, 11%–14% ImageNet, ~five years → confirmed → https://arxiv.org/abs/1902.10811
+- geirhos2019imagenettrained → humans shape 95.9% of correct decisions; ResNet-50 22.1% vs 77.9%; 63.9% → confirmed → https://arxiv.org/abs/1811.12231
+- nakkiran2021deep → "even quadrupling"; 15% label noise → confirmed → https://arxiv.org/abs/1912.02292
+- ioffe2015batch "14 times fewer training steps"; santurkar2018how "little to do with the success", "significantly smoother"; he2015delving 30-layer, "Xavier" "completely stalls"; kingma2015adam defaults and "trust region"; loshchilov2019decoupled "substantially improves Adam's generalization performance"; goodfellow2015explaining 57.7%/99.3%, ε .007, 0.94% → 0.84%; ilyas2019adversarial "non-robust features", "brittle and (thus) incomprehensible to humans" → all confirmed (arXiv 1502.03167, 1805.11604, 1502.01852, 1412.6980, 1711.05101, 1412.6572, 1905.02175)
+- zech2018variable → 158,323 radiographs; 34.2% vs ~1%; AUC 0.861; 99.95%/99.98%; 0.931 vs 0.815; confounding conclusion → confirmed → https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1002683
+- Figures: only fig-02-04 carries external data (checked above); fig-02-01/02/03/05 are author calculations, fig-02-06 schematic. No spec change.
+
+### Still unverifiable from primary text
+- NYT 8 July 1958 article itself (paywalled); wording rests on consistent reproductions, as cited.
+
+## News sweep (2026-10-25)
+
+### Developments checked (July–25 October 2026)
+- Frontier releases Sept–Oct 2026 (GPT-6 Astra/Sol/Luna, Claude Opus/Sonnet 5.5, Gemini 4 Argon, Meta Muse Wonder, Mistral Large 4 1.05T MoE) → no ch02 sentence depends on them (GPT-3/AlexNet/LeNet parameter counts are historical) → https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/ ; https://www.dutchstartup.ai/en/news/google-openai-anthropic-and-mistral-release-new-frontier-models-in-late
+- Nvidia Vera Rubin: Q2 FY2027 results (26 Aug 2026) "Vera Rubin, now in full production"; racks running at CoreWeave, Google Cloud, Azure, OCI, Nebius → https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx . Rubin GPU table lists "NVFP4 training (PFLOPS)" 35 (dense) and NVFP4 inference 50; 288 GB HBM4, 22 TB/s → https://developer.nvidia.com/blog/inside-the-nvidia-rubin-platform-six-new-chips-one-ai-supercomputer/ (K. Aubrey, 5 Jan 2026). Blackwell sentence was not wrong but read as if Blackwell were the latest generation → one sentence added.
+- Optimisers: DeepSeek-V4 technical report (arXiv 2606.19348, submitted 26 Apr 2026) abstract: "(3) and the Muon optimizer for faster convergence and greater training stability"; also "Manifold-Constrained Hyper-Connections (mHC) that enhance conventional residual connections" (enhance, not replace, so the residual-connection text stands) → https://arxiv.org/abs/2606.19348
+- H100 product page figures (67 / 1,979 sparse / 3.35 TB/s) re-checked in fact-check 3; no change.
+
+### Changes made
+- §2.5 Adam: added "DeepSeek-V4, released in 2026, also used Muon [@deepseekai2026deepseekv4]."
+- §2.6: added "Its own successor, Vera Rubin, which Nvidia said in August 2026 was in full production, quotes 4-bit rates for training too [@aubrey2026inside; @nvidia2026nvidia]."
+- Trim for length: §2.8 removed the clause explaining that 0.007 is the smallest 8-bit step after GoogLeNet's conversion (low-value detail). Body 9,869 → 9,879 words.
+- Bib: added deepseekai2026deepseekv4 (also added identically to ch03.bib), aubrey2026inside, nvidia2026nvidia.
+
+### Error sweep (all worked calculations re-computed with Python)
+- Table 2.1 (sigmoid/tanh/ReLU values and slopes), Fig. 2.1 (0.2; −0.3), Fig. 2.2 (26 parameters), matrix layer (−3.4, 1.8 → (0, 1.8)), XOR Table 2.2 and the separating line, squared error (0.64, 0.01), softmax (0.659, 0.242, 0.0986; 0.417, 2.317), one-weight descent (−2.4; 0.3364; 0.44/0.88/0.0144; factor 1 − 8η; η = 0.5 → 1.4, 3.24; threshold 0.25), nine-parameter backprop box (all gradients, updated parameters, h = (1.2265, 0.2735), z = 1.0423, p = 0.7393, L = 0.3021), momentum (6.513 after ten steps; 10× top speed), Adam first step (m₁ −0.24, v₁ 0.00576, step 0.001), 0.25¹⁰ ≈ 9.5 × 10⁻⁷, He init (0.0625; 0.0256¹⁰ ≈ 1.2 × 10⁻¹⁶), 2 × 1,024 × 4,096² ≈ 3.4 × 10¹⁰, reuse 2 × 4,096/3 ≈ 2,731, H100 590 / 295 ops per byte, conv 1,728 weights vs 4.8 × 10¹¹, Fig. 2.5 window (cols 2–4 → 3) and feature map, crops 2 × 32² = 2,048, adversarial 0.007 × 0.01 × 150,528 ≈ 10.5 → all correct.
+- Cross-references to Sections 2.3–2.7, Chapters 3, 4, 7 and 12, and Tables/Figures 2.1–2.6 → consistent. No errors found.
+
+## Source audit (2026-10-25)
+
+About 130 citations checked (paragraphs, boxes, Tables 2.1–2.5, figure captions) against this log; bib entries reviewed for type and preprint/published status (all consistent with the fact-check logs; all keys shared with other chapters byte-identical). Zhang et al. "CIFAR-10 (50,000 training images in 10 classes)" re-checked in the arXiv text (appendix: "50,000 training and 10,000 validation images, split into 10 classes").
+
+### Citations corrected
+- None wrong.
+
+### Sources added (claim → key → URL)
+- §2.5 Momentum: "AlexNet and the 2015 ResNets used momentum 0.9 (Table 2.4)" relied on the table caption alone, which may fall on another page → added [@krizhevsky2012imagenet; @he2016deep] (already verified: momentum 0.9 in both recipes) → https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf ; https://arxiv.org/abs/1512.03385
+- §2.5 Adam: "The original transformer was trained with Adam (Table 2.4)" → added [@vaswani2017attention] (already verified: Adam β1 0.9, β2 0.98) → https://arxiv.org/abs/1706.03762
+
+### Uncited claims reviewed and left as they are
+- Worked arithmetic, examples and definitions (author's own); "Gradient descent and backpropagation were in place by 1986" (summary of the cited Rumelhart et al. paragraph); "parameters correspond loosely to synapses" (author's reasoning).
+
+### Claims softened or cut
+- None.
+
+pandoc --citeproc: no warnings. Body 9,889 words (title to Further reading, raw wc; limit 9,900).

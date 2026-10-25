@@ -1,0 +1,100 @@
+/* Understanding AI — A5 course text, no bleed (148 x 210 mm). */
+@font-face { font-family: "EBG"; src: url(fonts/EBGaramond-Regular.ttf); font-weight: 400; font-style: normal; }
+@font-face { font-family: "EBG"; src: url(fonts/EBGaramond-RegularItalic.ttf); font-weight: 400; font-style: italic; }
+@font-face { font-family: "EBG"; src: url(fonts/EBGaramond-SemiBold.ttf); font-weight: 600; font-style: normal; }
+@font-face { font-family: "EBG"; src: url(fonts/EBGaramond-SemiBoldItalic.ttf); font-weight: 600; font-style: italic; }
+@font-face { font-family: "EBG"; src: url(fonts/EBGaramond-Bold.ttf); font-weight: 700; font-style: normal; }
+@font-face { font-family: "EBG"; src: url(fonts/EBGaramond-BoldItalic.ttf); font-weight: 700; font-style: italic; }
+
+@page {
+  size: 148mm 210mm;
+  margin: 17mm 15mm 19mm 20mm;
+  @bottom-center { content: counter(page); font: 9pt "EBG"; }
+}
+@page :left {
+  margin: 17mm 20mm 19mm 15mm;
+  @top-left { content: "Understanding AI"; font: italic 8.5pt "EBG"; }
+}
+@page :right { @top-right { content: string(runhead, first-except); font: italic 8.5pt "EBG"; } }
+@page front { @bottom-center { content: none; } @top-left { content: none; } @top-right { content: none; } }
+@page blank { @bottom-center { content: none; } @top-left { content: none; } @top-right { content: none; } }
+@page :blank { @bottom-center { content: none; } @top-left { content: none; } @top-right { content: none; } }
+
+html { font-family: "EBG", serif; font-size: 10.3pt; line-height: 1.36; color: #000; hyphens: auto; text-align: justify; }
+body { margin: 0; }
+p { margin: 0; text-indent: 1.1em; orphans: 2; widows: 2; }
+h1 + p, h2 + p, h3 + p, figure + p, div + p, ul + p, ol + p, table + p, section > p:first-child { text-indent: 0; }
+strong { font-weight: 600; }
+a { color: inherit; text-decoration: none; }
+sup, sub { line-height: 0; }
+
+/* front matter */
+.halftitle, .titlepage, .copyright, .toc { page: front; break-before: right; }
+.halftitle { padding-top: 55mm; text-align: center; font-size: 16pt; letter-spacing: 0.04em; }
+.halftitle p, .titlepage p, .copyright p { text-indent: 0; }
+.titlepage { text-align: center; padding-top: 32mm; }
+.t-title { font-size: 28pt; font-weight: 600; line-height: 1.1; margin-bottom: 5mm; }
+.t-sub { font-size: 13pt; font-style: italic; margin-bottom: 16mm; }
+.t-tag { font-size: 10pt; font-variant: small-caps; letter-spacing: 0.12em; margin-bottom: 16mm; }
+.t-rule { width: 30mm; margin: 0 auto 16mm; border-top: 0.6pt solid #000; }
+.t-author { font-size: 14pt; letter-spacing: 0.08em; }
+.copyright { break-before: left; padding-top: 110mm; font-size: 8.3pt; line-height: 1.35; text-align: left; }
+.copyright p { margin-bottom: 3mm; }
+.toc-title { font-size: 15pt; font-weight: 600; text-align: center; margin: 0 0 5mm; }
+.toc ol { list-style: none; padding: 0; margin: 0; font-size: 9.6pt; line-height: 1.3; text-align: left; }
+.toc-part { font-variant: small-caps; letter-spacing: 0.05em; margin-top: 2.4mm; font-size: 9.2pt; }
+.toc-entry { margin: 0.3mm 0 0 4mm; }
+.toc-entry a::after { content: leader(" . ") target-counter(attr(href), page); }
+
+/* parts */
+.part { page: blank; break-before: right; break-after: right; text-align: center; padding-top: 62mm; }
+.part-label { text-indent: 0; font-variant: small-caps; letter-spacing: 0.15em; font-size: 11pt; margin-bottom: 4mm; }
+.part-title { font-size: 20pt; font-weight: 400; font-style: italic; line-height: 1.2; margin: 0 8mm; }
+
+/* chapters */
+section.level1 { break-before: right; }
+section.level1 > h1 { text-align: center; margin: 12mm 2mm 8mm; font-weight: 600; font-size: 17pt; line-height: 1.2; hyphens: manual; }
+.ch-label { display: block; font-variant: small-caps; letter-spacing: 0.15em; font-size: 10pt; font-weight: 400; margin-bottom: 3mm; }
+.ch-title { display: block; string-set: runhead content(); }
+.glossary > h1, .references-chapter > h1 { string-set: runhead content(); }
+h2 { font-size: 11.2pt; font-weight: 600; text-align: left; margin: 6mm 0 2mm; break-after: avoid; hyphens: manual; }
+h3 { font-size: 10.3pt; font-style: italic; font-weight: 400; margin: 4mm 0 1mm; break-after: avoid; }
+ul, ol { margin: 2mm 0 2mm 1mm; padding-left: 5mm; }
+li { margin-bottom: 0.8mm; text-align: left; }
+blockquote { margin: 3mm 5mm; font-size: 9.8pt; }
+hr { border: 0; border-top: 0.4pt solid #000; width: 25%; margin: 5mm auto; }
+
+/* learning objectives */
+.objectives { border-top: 0.8pt solid #000; border-bottom: 0.8pt solid #000; padding: 2.5mm 0 1.5mm; margin: 0 0 6mm; font-size: 9.5pt; text-align: left; }
+.objectives p { text-indent: 0; }
+.objectives ul { margin-top: 1mm; }
+
+/* boxes */
+.box { margin: 4.5mm 0; padding: 2.8mm 3.5mm 2.2mm; font-size: 9.3pt; line-height: 1.32; text-align: left; break-inside: avoid; border-radius: 1.5mm; }
+.box p { text-indent: 0; margin-bottom: 1.4mm; }
+.box > p:first-child strong { font-variant: small-caps; letter-spacing: 0.04em; font-size: 9.8pt; }
+.concept { background: #efefef; }
+.case { border: 0.6pt solid #000; }
+.debate { border-left: 2.5pt solid #000; border-radius: 0; padding-left: 4mm; background: #f6f6f6; }
+.deeper { border: 0.6pt dashed #000; }
+
+/* figures and tables */
+figure { margin: 5mm 0 5mm; break-inside: avoid; text-align: center; }
+figure img { width: 100%; max-height: 120mm; object-fit: contain; }
+figcaption { font-size: 8.4pt; line-height: 1.28; text-align: left; margin-top: 2mm; hyphens: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 8.4pt; line-height: 1.25; text-align: left; margin: 4mm 0; break-inside: auto; }
+th { font-weight: 600; border-bottom: 0.8pt solid #000; padding: 1mm; vertical-align: bottom; }
+td { border-bottom: 0.3pt solid #000; padding: 1mm; vertical-align: top; }
+tr { break-inside: avoid; }
+
+/* end-of-chapter apparatus */
+section.level2[id^="summary"], section.level2[id^="key-terms"], section.level2[id^="discussion-questions"], section.level2[id^="further-reading"] { font-size: 9.5pt; text-align: left; }
+section.level2[id^="summary"] > h2 { border-top: 0.6pt solid #000; padding-top: 3mm; }
+
+/* glossary and references */
+.glossary p { text-indent: 0; margin-bottom: 1.6mm; font-size: 9.2pt; line-height: 1.3; text-align: left; padding-left: 4mm; text-indent: -4mm; }
+#refs { font-size: 8.4pt; line-height: 1.3; text-align: left; hyphens: manual; }
+.csl-entry { margin-bottom: 1.6mm; padding-left: 5mm; text-indent: -5mm; overflow-wrap: anywhere; }
+.citation { hyphens: manual; }
+
+.endblank { break-before: page; page: blank; }

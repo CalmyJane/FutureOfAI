@@ -1,0 +1,368 @@
+# Evidence log: Chapter 11 (Risks and Failure Modes)
+
+All sources checked online on 2026-10-22. Format: key | claim supported | exact number or quote | URL checked | evidence type.
+
+- **bengio2025international** | Three-family taxonomy (malicious use, malfunctions, systemic risks); 100 experts, panel of 30 nations + UN, OECD, EU; commissioned after Bletchley; bio risk "low"→"medium" by one company; bias "frequently display biases"; loss of control "broad consensus that current general-purpose AI lacks the capabilities"; marginal risk and uplift (sec. 2.4), RAND study summary; evidence dilemma (sec. 3.2, p. 177; exec summary p. 22, cheating "shifted from negligible to widespread within a year"); "stable tolerable risk threshold" / boiling-frog | TOC: 2.1 malicious use, 2.2 malfunctions (2.2.1 reliability, 2.2.2 bias, 2.2.3 loss of control), 2.3 systemic (incl. 2.3.3 market concentration and single points of failure); p. 18: "real-world attempts to develop such weapons still require substantial additional resources and expertise"; "one AI company increased its assessment of biological risk from its best model from 'low' to 'medium'"; p. 19 bias bullet; sec. 3.2: "pre-emptive risk mitigation measures based on limited evidence might turn out to be ineffective or unnecessary ... waiting for stronger evidence of impending risk could leave society unprepared or even make mitigation impossible" | https://arxiv.org/abs/2501.17805 ; full PDF https://arxiv.org/pdf/2501.17805 (text extracted and searched; page numbers from PDF page footers) | official / institutional report
+- **bengio2026international** | Second report, 3 Feb 2026, DSIT 2026/001; scope narrowed vs. 2025; hallucination quotes (§1.2); agents heightened risk; evaluation gap; scams quote (§2.1.1); manipulation "documented but not yet widespread"; cyber (§2.1.3): 80–90% automation (citing Anthropic), DARPA AIxCC 77%, "have not been reported to conduct end-to-end cyberattacks in the real world", "cannot reliably execute long, multi-stage attack sequences", offence–defence "remains uncertain"; bio/chem (§2.1.4): "could not exclude the possibility that these models could assist novices in developing such weapons", "controlled studies and new benchmarks suggest that AI systems can provide substantially more weapons development assistance than the internet alone, but larger studies are needed", "Chemical risk evaluations have received relatively less attention", material barriers; loss of control (§2.2.2): definition, "Expert opinion on the likelihood of loss of control varies greatly. Some experts consider such scenarios implausible, while others view them as sufficiently likely that they merit attention due to their high potential severity", disagreement stems from capabilities/propensities/deployment, "early signs", "now regularly identify evaluation prompts as tests", "a risk with uncertain likelihood but potentially extreme severity"; automation bias under §2.3.2 | Scope note: "this focus makes the scope of this Report narrower than that of the 2025 Report, which also addressed issues such as bias, environmental impacts, privacy, and copyright." | https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026 (full HTML downloaded and searched) | official / institutional report
+- **slattery2026ai** (formerly slattery2024ai) | MIT AI Risk Repository: 1,725 risks from 74 frameworks; humans cause 38% vs AI 42% | "human decisions cause nearly as many AI risks (38%) as the AI systems themselves (42%)" (arXiv v3, 5 May 2026, stated to be the published version) | https://arxiv.org/abs/2408.12622 ; DOI 10.1016/j.patter.2026.101517 | peer-reviewed (Patterns 7(5):101517, 2026)
+- **nist2023artificial** | Definition of risk | "the composite measure of an event's probability of occurring and the magnitude or degree of the consequences of the corresponding event" (sec. 1.1), January 2023 | https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf | official
+- **moffatt2024moffatt** | Air Canada chatbot liability, Feb 2024 | "a remarkable submission"; "It should be obvious to Air Canada that it is responsible for all the information on its website"; decision 14 Feb 2024; damages $650.88 (total ~CA$812 per news) | CanLII page returned 403; content verified via McCarthy Tétrault commentary https://www.mccarthy.ca/en/insights/blogs/techlex/moffatt-v-air-canada-misrepresentation-ai-chatbot and search summaries (law360.ca, ehlaw.ca, Fox Business) | primary legal text (verified through secondary legal commentary)
+- **anthropic2025disrupting** | AI-orchestrated espionage campaign | detected mid-Sept 2025; published 13 Nov 2025; "high confidence" Chinese state-sponsored; ~30 targets; "succeeded in a small number of cases"; AI did 80–90%; "perhaps 4-6 critical decision points per hacking campaign"; "Over the following ten days"; Claude "occasionally hallucinated credentials"; "used Claude Code as an automated tool" | https://www.anthropic.com/news/disrupting-AI-espionage | company claim
+- **stanfordhai2026ai** | AI incidents 362 in 2025 vs 233 in 2024; hallucination 22%–94% across 26 models on a new accuracy benchmark (AA-Omniscience per figure caption) | "the AI Incident Database recording 362 in 2025, up from 233 in 2024"; "hallucination rates across 26 top models range from 22% to 94%" | https://hai.stanford.edu/ai-index/2026-ai-index-report/responsible-ai | institutional report
+- **sdny2023mata** | Mata v. Avianca sanctions, 22 June 2023, Judge Castel, $5,000 | p. 1: "submitted non-existent judicial opinions with fake quotes and citations created by the artificial intelligence tool ChatGPT"; p. 1: "nothing inherently improper about using a reliable artificial intelligence tool for assistance"; p. 33: "a penalty of $5,000"; transcript quote "super search engine called ChatGPT" | https://storage.courtlistener.com/recap/gov.uscourts.nysd.575368/gov.uscourts.nysd.575368.54.0_3.pdf (PDF read) | primary legal text
+- **charlotin2026ai** | Database of court decisions involving hallucinated content | "2202 cases" as of 22 Oct 2026 | https://www.damiencharlotin.com/hallucinations/ | institutional/academic database
+- **kalai2025why** | Hallucination incentivised by scoring | "language models are optimized to be good test-takers, and guessing when uncertain improves test performance" (abstract) | https://arxiv.org/abs/2509.04664 | preprint (affiliations OpenAI and Georgia Tech confirmed on PDF p. 1)
+- **buolamwini2018gender** | Gender Shades error rates | up to 34.7% darker-skinned females; max 0.8% lighter-skinned males; PMLR 81:77–91 | https://proceedings.mlr.press/v81/buolamwini18a.html | peer-reviewed
+- **obermeyer2019dissecting** | Health algorithm racial bias | "Remedying this disparity would increase the percentage of Black patients receiving additional help from 17.7 to 46.5%"; cost as proxy; Science 366(6464):447–453 | Europe PMC record for DOI 10.1126/science.aax2342 | peer-reviewed
+- **hofmann2024ai** | Covert dialect prejudice in LLMs | stereotypes about AAE speakers "more negative than any human stereotypes about African Americans ever experimentally recorded"; less prestigious jobs, convictions; human preference alignment obscures covert racism; Nature 633:147–154 | Europe PMC record for DOI 10.1038/s41586-024-07856-5 | peer-reviewed
+- **ncsc2024near** | UK NCSC assessment, 24 Jan 2024 | "will almost certainly increase the volume and heighten the impact of cyber attacks over the next two years"; "evolution and enhancement of existing tactics"; "highly likely to be restricted to threat actors with access to quality training data" | https://www.ncsc.gov.uk/report/impact-of-ai-on-cyber-threat | official
+- **gtig2025adversarial** | Google GTIG, 29 Jan 2025 | APT actors from more than 20 countries; "finding productivity gains but not yet developing novel capabilities" | https://cloud.google.com/blog/topics/threat-intelligence/adversarial-misuse-generative-ai | company claim
+- **souly2025poisoning** | 250 poisoned documents backdoor models 600M–13B | abstract; collaboration Anthropic + UK AISI + Alan Turing Institute (Anthropic page, 9 Oct 2025) | https://arxiv.org/abs/2510.07192 ; https://www.anthropic.com/research/small-samples-poison | preprint
+- **mouton2024operational** | RAND red-team study: 2023 chatbots gave no significant uplift | Summarised in ISR 2025 sec. 2.4: "participants with internet access but no general-purpose AI were able to obtain bioweapon-related information at similar rates to participants with access to AI (393)"; ref 393 = Mouton, Lucas, Guest, RAND 2024, RR-A2977-2 | RAND page https://www.rand.org/pubs/research_reports/RRA2977-2.html returned 403 (CloudFront block); content verified only via ISR 2025 summary and reference list | institutional report (verified via secondary summary)
+- **anthropic2025activating** | ASL-3 activation for Claude Opus 4, 22 May 2025 | "clearly ruling out ASL-3 risks is not possible for Claude Opus 4"; "precautionary and provisional action" | https://www.anthropic.com/news/activating-asl3-protections | company claim
+- **urbina2022dual** | Drug-discovery AI could be misused (high level only) | abstract: "explored how artificial intelligence (AI) technologies for drug discovery could be misused for de novo design of biochemical weapons. A thought experiment evolved into a computational proof." Nat Mach Intell 4(3):189–191 | Europe PMC record for DOI 10.1038/s42256-022-00465-9 | peer-reviewed (commentary)
+- **kleinberg2021algorithmic** | Monoculture can lower decision quality even if algorithm is individually best | PNAS 118(22) e2018340118 | https://arxiv.org/abs/2101.05853 | peer-reviewed
+- **bommasani2022picking** | Outcome homogenisation; data sharing increases it; foundation-model results mixed | NeurIPS 2022 | https://proceedings.neurips.cc/paper_files/paper/2022/hash/17a234c91f746d9625a75cf8a8731ee2-Abstract-Conference.html (via search result summary and arXiv 2211.13972) | peer-reviewed
+- **kim2025correlated** | Correlated LLM errors | 350+ models; HELM mean agreement when both wrong 0.6 vs chance 1/3; HuggingFace 0.423 vs 0.12; larger, more accurate models more correlated; same provider/architecture; hiring simulation p = 0.25, 20 firms, "around 20 percent of applicants continue to be systemically excluded"; PMLR 267:30038–30066 | https://proceedings.mlr.press/v267/kim25e.html ; https://arxiv.org/html/2506.07962 | peer-reviewed
+- **jiang2025artificial** | Artificial Hivemind | Infinity-Chat 26K open-ended queries; intra-model repetition, inter-model homogeneity; NeurIPS 2025 D&B oral; Best Paper (NeurIPS blog 26 Nov 2025); "more than 70 models" (committee's reflection on blog) | https://arxiv.org/abs/2510.22954 ; https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/ | peer-reviewed
+- **dratsch2023automation** | Automation bias in mammography | 27 radiologists, 50 mammograms; correct vs incorrect AI: inexperienced 79.7% vs 19.8%; moderate 81.3% vs 24.8%; very experienced 82.3% vs 45.5%; Radiology 307(4) e222176 | Europe PMC record for DOI 10.1148/radiol.222176 | peer-reviewed
+- **cais2023statement** | Extinction-risk statement and signatories | "Mitigating the risk of extinction from AI should be a global priority alongside other societal-scale risks such as pandemics and nuclear war."; signatories incl. Hinton, Bengio, Hassabis, Altman, Amodei; press coverage dated 30–31 May 2023 | https://www.safe.ai/work/statement-on-ai-risk | institutional statement
+- **bengio2024managing** | Science policy forum, 25 authors | "Preparation requires technical research and development, as well as adaptive, proactive governance."; Science 384(6698):842–845 | Europe PMC record for DOI 10.1126/science.adn0117 | peer-reviewed (policy forum)
+- **yudkowsky2025if** | Book arguing superhuman AI leads to extinction | Little, Brown, on sale 16 Sept 2025; publisher description | https://www.hachettebookgroup.com/titles/eliezer-yudkowsky/if-anyone-builds-it-everyone-dies/9780316595643/ | book
+- **carlsmith2022power** | Six-premise argument; ~5% by 2070, later >10% | abstract | https://arxiv.org/abs/2206.13353 | preprint
+- **narayanan2025ai** | "AI as Normal Technology" | "catastrophic misalignment is (by far) the most speculative of the risks that we discuss"; resilience; electricity and the internet as "normal"; impacts "on the timescale of decades"; 15 Apr 2025 | https://knightcolumbia.org/content/ai-as-normal-technology | institutional essay
+- **gebru2023statement** | Critique focusing on present harms | "we should focus on the very real and very present exploitative practices of the companies claiming to build them"; 31 Mar 2023 | https://www.dair-institute.org/blog/letter-statement-March2023/ | institutional statement
+- **grace2025thousands** | Expert survey | 2,778 respondents, Oct 2023, 15% response rate; median 5% (mean 9%) for extremely bad outcomes such as extinction; 38%–51% gave ≥10%; 68.3% thought good outcomes more likely; JAIR 84:9 (2025) | https://arxiv.org/abs/2401.02843 ; v3 PDF searched | peer-reviewed
+- **karger2023forecasting** | XPT AI-extinction medians | "superforecasters and domain experts gave forecasts an order of magnitude apart at the median: 0.38% and 3%"; "median AI domain expert gave a 3.9% risk"; tournament June–Oct 2022, 169 forecasters | https://forecastingresearch.org/pdf/existential-risk-persuasion-tournament.pdf (PDF read) | institutional report (working paper)
+- **karger2025subjective** | Little convergence after four months of discussion | IJF 41(2):499–516 abstract | https://ideas.repec.org/a/eee/intfor/v41y2025i2p499-516.html | peer-reviewed
+- **kasirzadeh2025two** | Decisive vs accumulative AI x-risk | abstract; Philosophical Studies 182(7):1975–2003 (Crossref) | https://arxiv.org/abs/2401.07836 ; Crossref DOI 10.1007/s11098-025-02301-3 | peer-reviewed
+
+- **grother2019face** | NIST FRVT Part 3: Demographic Effects (NISTIR 8280), Dec 2019 | 189 algorithms from 99 developers; 18.27 million images of 8.49 million people; one-to-one false positives for Asian and African American faces vs Caucasian faces "often ranged from a factor of 10 to 100 times", depending on algorithm; one-to-many "higher rates of false positives for African American females"; "a notable exception was for some algorithms developed in Asian countries"; differentials vary widely by algorithm. Text uses "White" for the report's "Caucasian". | Crossref metadata for DOI 10.6028/NIST.IR.8280 (Grother, Ngan, Hanaoka; NIST; 2019-12); NIST news release 19 Dec 2019 https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software | official
+- **aclu2024civil** | Robert Williams wrongful arrest and Detroit settlement | settlement announced 28 June 2024; Detroit police arrested Williams in 2020 at his home (Farmington Hills) in front of his wife and two children, suspected of stealing watches from a Detroit store, based on an incorrect facial recognition match; "Police will be prohibited from arresting people based solely on facial recognition results"; training on risks incl. higher misidentification of people of colour; "An audit will be conducted of all cases since 2017" where FRT was used to obtain an arrest warrant; court retains jurisdiction four years; damages amount not stated | https://www.aclu.org/press-releases/civil-rights-advocates-achieve-the-nations-strongest-police-department-policy-on-facial-recognition-technology | advocacy organisation press release (labelled "according to the ACLU")
+
+## Dropped or not used
+- Arup Hong Kong deepfake fraud (2024): news pages (CNN, Guardian) could not be fetched; dropped.
+- Yann LeCun's sceptical statements on extinction risk: no accessible reliable source verified in this session; sceptical view represented instead by Narayanan & Kapoor, Gebru et al., and XPT superforecasters.
+- Deloitte Australia report refund (2025): not verified; not used.
+- National Academies 2025 report on AI and biosecurity, OpenAI 2024 bio early-warning study: not verified; not used.
+
+## Fact-check (2026-10-22)
+
+Independent fact-check against primary sources (about 120 claims, numbers, quotes and attributions checked). Sources consulted: CRT decision page (decisions.civilresolutionbc.ca, item 525448), ISR 2025 PDF (arXiv 2501.17805), ISR 2026 PDF (internationalaisafetyreport.org, international-ai-safety-report-2026_1.pdf; PDF page = printed page), AI Index 2026 Chapter 3 PDF, AA-Omniscience paper (arXiv 2511.13029), Kim et al. PMLR PDF, Dratsch et al. abstract (Europe PMC), JAIR PDF of Grace et al., DAIR statement page, Anthropic espionage and ASL-3 pages, NCSC, GTIG, CAIS, Knight Institute, XPT PDF, IJF abstract (RePEc), Crossref/arXiv/Europe PMC metadata.
+
+### Writer's flags
+1. **moffatt2024moffatt**: verified from the full decision text on decisions.civilresolutionbc.ca (CanLII and Wayback blocked). Both quotes exact (para. 27). Date 14 Feb 2024, member Christopher C. Rivers; claim $880; award $812.02 ($650.88 damages). The tribunal paraphrased Air Canada's position as suggesting the chatbot was "a separate legal entity that is responsible for its own actions"; text now says so. The decision uses "they" for Mr Moffatt, so the text no longer uses "him". URL changed to the CRT decisions site.
+2. **mouton2024operational**: RAND (403), the RAND PDF and the Wayback Machine (connection refused) were all unreachable. Crossref confirms the title, RAND 2024 and DOI 10.7249/RRA2977-2, and Semantic Scholar confirms the authors (Christopher A. Mouton, Caleb Lucas, Ella Guest). The finding is still verified only through the ISR 2025 summary (sec. 2.4, p. 154, ref. 393). The text now says explicitly that this is the report's summary. DOI and full author names added.
+3. **gebru2023statement**: the DAIR page byline and metadata list three authors: Timnit Gebru, Emily M. Bender and Angelina McMillan-Major. The bib is unchanged. Margaret Mitchell is not listed on the current page (she has been reported as a co-signer elsewhere, which is unverified here). The quote is exact.
+4. **grace2025thousands**: JAIR 84, Article 9 (Oct 2025, 48 pp.), DOI 10.1613/jair.1.19087. Author list corrected to nine authors in published order (added Stein-Perlman and Salvatier; reordered; Benjamin Weinstein-Raun). Numbers verified in the published PDF: 2,778; 15% participation; median 5% (mean 9%); 38–51%; 68%.
+5. **ISR page/section numbers**: ISR 2025: p. 18 (bio, low→medium, "substantial additional resources"), p. 19 (bias, trade-offs), p. 22 (cheating), sec. 3.2 p. 177 (evidence dilemma), sec. 2.4 p. 154 (marginal risk, RAND summary, "stable tolerable risk threshold"). All correct. ISR 2026: sec. 1.2 (p. 29 hallucination), 2.1.1 (p. 46), 2.1.2 (p. 54), 2.1.3 (pp. 57–60), 2.1.4 (pp. 64–69), 2.2.2 (pp. 76–77), 2.3.2 (pp. 89–91), scope note p. 9, agents p. 12. All correct; page pins added where the text had none (p. 9, p. 12).
+6. **anthropic2025disrupting**: all details verified on the company page (13 Nov 2025; mid-Sept; "high confidence"; roughly thirty targets; "small number of cases"; 80-90%; "perhaps 4-6 critical decision points"; ten days; "occasionally hallucinated credentials"). Text now labels the 80–90% figure "according to the company" and as the company's estimate. "Clearest public account so far" was softened to "one of the most detailed public accounts". "Claude models" was changed to "Claude Code tool".
+7. **stanfordhai2026ai 22–94%**: AI Index 2026 ch. 3, p. 136 (Fig. 3.2.6): AA-Omniscience (Artificial Analysis; 6,000 questions, six domains), 26 models, 22% (Grok 4.20 Beta) to 94% (gpt-oss-20B). The definition of hallucination rate (incorrect answers ÷ all questions not answered correctly) comes from the AA-Omniscience paper. The text was rewritten to name the benchmark and define the metric; new bib entry **jackson2025aa** (arXiv preprint). Note: the AI Index highlight wrongly pairs this range with a knowledge/belief benchmark; the body text is clear that it is AA-Omniscience.
+
+### Corrections (old → new)
+- ISR 2025 "drew on 100 AI experts" → "96 AI experts" (report p. 10: "96 Artificial Intelligence (AI) experts").
+- ISR 2026 "published on 3 February 2026" → "published in February 2026" (the exact day was not verifiable; the report and website say "February 2026").
+- ISR 2026 scam sentence: "citing an alert from the US FBI among other sources" was removed. The sentence cites refs 289–290 (a Philippine deepfake-blackmail paper and a Europol/Trend Micro report), not the FBI. It was replaced by the report's own verified next sentence on documented incidents (p. 46).
+- Slattery et al.: the preprint has been published in *Patterns* 7(5):101517 (2026), DOI 10.1016/j.patter.2026.101517. Bib converted to @article with the full ten authors; the text "latest version of its preprint" → "2026 journal article". The 1,725/74 figures appear in the published abstract; 38%/42% come from arXiv v3, which states it is the published version.
+- Mata: the "super search engine" quote → "falsely assumed was like a super search engine" (opinion p. 15); page pin added.
+- Hofmann: the "reduced overt stereotypes while leaving covert ones in place" sentence was rephrased to match the abstract: overt stereotypes are more positive, and preference alignment "exacerbate[s] the discrepancy", "superficially obscuring the racism".
+- Dratsch: "82% to 45.5%" → "82.3% to 45.5%".
+- Carlsmith premise 3 paraphrase made faithful to the abstract.
+- Gebru et al. (debate box): "diverts attention and money from ... bias and labour exploitation" → "diverts attention from ... worker exploitation and the concentration of power" (the statement does not mention money or bias in that sense).
+- §11.7 "more than a factor of ten" → "about a factor of ten" (0.38% vs 3%/3.9%; the XPT says "an order of magnitude").
+- §11.7 "fixed threshold" → "stable threshold" (report wording), p. 154 pinned.
+- Bib: Moffatt URL/howpublished; Mouton DOI and full names; AI Index title/PDF note; ISR 2026 arXiv note (2602.21012); Grace authors and article number; new jackson2025aa.
+
+### Figure data changes
+- **fig-11-02**: Hugging Face chance agreement 0.12 → **0.127** (label "~12%" → "13%"). Both the PMLR and arXiv versions say "would be 0.127". The figure must be redrawn. The other values (HELM 0.60 vs 1/3; HF 0.423) are verified.
+- **fig-11-03**: all six values and SDs verified against the abstract; no change.
+- **fig-11-01**: structure verified against both reports' tables of contents; no change.
+
+### Verified without change (selection)
+NIST definition (sec. 1.1); Charlotin 2,202 cases (site, 22 Oct 2026); Mata quotes pp. 1, 33 and $5,000; Kalai quote; Gender Shades 34.7%/0.8%; Obermeyer 17.7→46.5%, "millions of patients"; NCSC three quotes; GTIG "more than 20 countries" and quote (29 Jan 2025); Souly 250 docs, 600M–13B, collaboration; ASL-3 quote (22 May 2025); Urbina; Bommasani; Kim 350+ models, hiring simulation (p = 0.25, ~20%, (0.75)^20 ≈ 0.3%); Jiang 26K queries, 70+ models, NeurIPS 2025 Best Paper; CAIS statement and signatories; Bengio et al. 2024 (25 authors, quote); Narayanan & Kapoor quotes and resilience/nonproliferation; XPT 0.38%/3%/3.9%, June–Oct 2022; IJF "four months of discussion"; Kasirzadeh; all ISR 2026 quotes listed in the log above.
+
+### Remaining uncertainties
+- The RAND study's own wording could not be read (RAND, its PDF and Wayback were blocked); the claim is stated as the ISR 2025 summary.
+- Kalai et al. and Souly et al. remain arXiv preprints as far as could be checked (no journal_ref on arXiv); both are labelled as preprints.
+- Whether Margaret Mitchell co-signed the DAIR statement: not listed on the current page; not cited.
+- Safety: §11.4 stays at policy and assessment level; no operational detail was added.
+
+## Revision (2026-10-22, after reader panel)
+
+Applied work/REVISION-GUIDE.md and panel notes (work/panel/weber-ch00-01-08-11.md). Fact-check corrections preserved.
+
+- **Missing risks (Weber 1):** §11.1 new paragraph naming environmental harm (cross-ref Ch. 7), privacy (Ch. 10) and copyright (Ch. 13) as systemic risks in the 2025 report but outside the 2026 scope, and surveillance/policing as cutting across all three families. §11.3 two new paragraphs: NIST FRVT 2019 demographic differentials (grother2019face) and the Robert Williams wrongful arrest (Detroit, 2020) with the June 2024 settlement (aclu2024civil), linked to automation bias and to the EU AI Act restrictions in Ch. 13. Summary bullets 1 and 3 updated; Q2 extended to the Detroit "solely" rule.
+- **fig-11-01:** spec changed (three dashed boxes under Systemic risks: Environmental harm / Privacy / Copyright; note on surveillance and policing; caption generalised). Needs redrawing.
+- **Espionage case told once (Weber 3):** opening reduced to two sentences pointing to §11.4; §11.4 cyber paragraph refers to the case box; the case box keeps the full telling and now carries the "hallucinated credentials" detail and the single statement of the source limitation.
+- **Summary:** restored "found, or alleged, to have relied on hallucinated content" (2,000 court decisions).
+- **Hallucination-rate definition** simplified to a plain question; AA-Omniscience labelled as described in a preprint.
+- **Q4** now matches the text: "larger, more accurate models had highly correlated errors, even when they came from different companies".
+- **Key fix:** slattery2024ai -> slattery2026ai (chapter, bib, log); entry is the 2026 Patterns article.
+- **Balance:** Anthropic-sourced claims limited to the case box and the ASL-3 example; bio paragraph now leads with the ISR statement that several developers restricted models, with Anthropic as one example; GTIG labelled as a company claim.
+- **Templated prose:** removed "The change is worth noticing", "The lesson is general:", "Two cautions apply", "Two features of this evidence deserve emphasis", the "not exclusive ... balance" closer in §11.7; the Kalai analogy limit folded into its sentence (one explicit analogy-limit sentence remains, §11.1); "What would settle it" rephrased; paragraph-final cross-references thinned (Ch. 14 sentence cut from the correlated-failure box; Ch. 5 reference moved mid-paragraph).
+- **Citations:** duplicate ISR citations within paragraphs removed (bio paragraph, §11.6 opening).
+- **Labels/years:** XPT labelled working paper; Gender Shades 2018, Obermeyer 2019, Kim 2025, Dratsch 2023, Narayanan & Kapoor 2025 essay.
+- **Readability:** long sentences split (Air Canada, NIST definition, ISR description, hazard box, Mata, agents, Hofmann, ISR bias, NCSC, poisoning, RAND, Urbina, CAIS, Carlsmith, Narayanan, Grace).
+- Body word count (objectives to end of §11.7): 5,962 -> 6,253. pandoc --citeproc: no warnings.
+
+## Consistency pass (22 Oct 2026)
+- §11.1: added one sentence flagging that "systemic risk" has a narrower legal meaning in the EU AI Act (ch13: GPAI models presumed to pose systemic risk), distinct from the report's family of harms. House-fire analogy limit reworded (no "The analogy breaks down").
+- §11.2: Kalai et al. retelling cut to a back-reference to Section 3.6 (heading checked in ch03.md) plus a one-sentence summary; *Mata v. Avianca* case box removed and replaced by one sentence with a back-reference to Section 3.6 (facts as in ch03 box and sdny2023mata: $5,000 penalty on two lawyers and their firm; failure was lack of checking). Remaining boxes kept (4: two concept, one case, one debate); no new case added.
+- §11.3: "Chapter 13 describes how the EU AI Act restricts…" changed to "Chapter 13 lists the EU AI Act's restrictions…".
+- Kim et al. and Dratsch kept unchanged. No new claims or sources; no bib entries removed (sdny2023mata, kalai2025why still cited). Body 6,099 words; pandoc citeproc clean.
+
+## Deepening (2026-10-23)
+
+Applied work/DEEPEN-GUIDE.md. Objectives, Summary, Key terms and Discussion questions removed; Further reading rewritten (6 items). Sections kept at 11.1–11.7 so that Figure 11.1's section tags remain valid. Body 8,841 words (incl. tables). pandoc --citeproc: no warnings. Sources checked 2026-10-23 (ISR 2025/2026 via arXiv PDFs 2501.17805 and 2602.21012, page numbers = printed footers).
+
+### New claims
+- **bengio2026international** | over 100 independent experts; panel nominated by over 30 countries and international organisations | front matter | arXiv 2602.21012 PDF | official
+- **bengio2026international** | hallucinations "have generally become less likely"; "no combination of methods ensures the high reliability required in critical domains"; multi-agent "errors can propagate and amplify" | sec. 2.2.1 key information, p. 71 | same | official
+- **bengio2026international** | 96% of deepfake videos pornographic; 2.2% in 10-country survey; 77% text misidentified as human; 80% voice clones taken as real; "due to embarrassment or fear of further harm" | sec. 2.1.1 pp. 45–48 | same | official
+- **bengio2026international** | "strong evidence that criminal groups and state-sponsored attackers actively use AI"; scale/severity "remains uncertain because establishing causal effects is difficult"; AIxCC 77%, "top 5% of over 400 (mostly human) teams"; end-to-end attacks "have not been reported" | sec. 2.1.3 p. 57 | same | official
+- **bengio2026international** | AI matches/exceeds experts on many bio-relevant benchmarks; "one study found that a recent model outperformed 94% of domain experts at troubleshooting virology lab protocols"; "most biological AI tools are open-weight. This makes it difficult to restrict harmful uses without hampering legitimate research" | sec. 2.1.4 p. 64 | same | official
+- **bengio2026international** | loss of control: three factors (sufficient capabilities, harmful propensity, enabling deployment environment); active vs passive (footnote); Turing, Good, Wiener; Table 2.5 capabilities; "improved at 'reward hacking' their evaluations" | sec. 2.2.2 pp. 76–78 | same | official
+- **bengio2026international** | automation bias experiment, 2,784 participants; tumour detection ~6% lower after AI exposure | sec. 2.3.2 p. 89 | same | official
+- **bengio2026international** | societal resilience definition "resist, absorb, recover from, and adapt to shocks and harms"; examples incl. DNA synthesis screening; "uneven and largely untested" | sec. 3.5 p. 138 | same | official
+- **bengio2025international** | ISR 2025 subsections for Table 11.1 (2.1.1–2.3.6 incl. R&D divide); market concentration "highly concentrated among a few players"; costs "hundreds of millions of US dollars"; three companies control 67% of cloud; "flaws, vulnerabilities, bugs, or inherent biases ... simultaneous failures across multiple industries"; "little research on predicting or mitigating single points of failure in AI" | TOC; sec. 2.3.3 pp. 123–125 | arXiv 2501.17805 PDF | official
+- **slattery2026ai** | causal coding 42% AI / 38% human; 35% intentional / 35% unintentional; 62% post-deployment, 13% pre-deployment, 25% both/unspecified; 7 domains, 24 subdomains; average framework covers 8 of 24 (range 1–20); AI welfare and rights 3%, multi-agent 7% | arXiv 2408.12622 v3 (published version) pp. 10–11 | peer-reviewed
+- **jackson2025aa** | 6,000 questions, 42 topics, six domains; Omniscience Index (−100 to 100; correct +1, abstain 0, incorrect −1); GPT-5 (high) and Grok 4 accuracy 39%, hallucination rates 81% and 64%; Claude 4.1 Opus 36% accuracy, OI 4.8; only three models above zero; all-abstain model would score 0 and rank 4th of 36; hallucination rate = i/(p+i+a) | worked example (≈49% wrong, OI ≈ −10) is the author's arithmetic ignoring partial answers | https://arxiv.org/abs/2511.13029 | preprint
+- **dahl2024large** | legal hallucinations 58% (ChatGPT 4) to 88% (Llama 2) on verifiable questions about random federal court cases; fail to correct false premises; cannot always tell when hallucinating; risks highest for pro se litigants | abstract | https://arxiv.org/abs/2401.01301 ; Crossref 10.1093/jla/laae003 | peer-reviewed
+- **magesh2025hallucination** (entry copied from ch03.bib) | legal research tools 17%–33% hallucination; over 200 preregistered queries | abstract and p. 3 | https://arxiv.org/abs/2405.20362 | peer-reviewed
+- **koenecke2024careless** | Whisper: ~1% of transcriptions contained hallucinated phrases/sentences; 38% of hallucinations include explicit harms ("perpetuating violence, making up inaccurate associations, or implying false authority"); disproportionate for speakers with longer non-vocal durations (aphasia) | abstract | https://arxiv.org/abs/2402.08021 ; Crossref FAccT '24 pp. 1672–1681 | peer-reviewed
+- **lecher2024nyc** | MyCity announced Oct 2023, Microsoft Azure AI; tips, cash, Section 8 voucher answers wrong; city says bot draws on >2,000 NYC Business web pages | article 29 Mar 2024 | https://themarkup.org/news/2024/03/29/nycs-ai-chatbot-tells-businesses-to-break-the-law | news
+- **moffatt2024moffatt** | claim CA$880, award CA$812.02, damages CA$650.88, 14 Feb 2024 | from earlier fact-check | (unchanged) | primary legal text
+- **buolamwini2018gender** | IJB-A 79.6% and Adience 86.2% lighter-skinned; PPB 1,270 individuals, parliamentarians from 6 African and European countries; Fitzpatrick; IBM, Microsoft, Face++ | PMLR PDF | https://proceedings.mlr.press/v81/buolamwini18a/buolamwini18a.pdf | peer-reviewed
+- **raji2019actionable** | within 7 months all targets released new APIs; darker-skinned female subgroup 17.7%–30.4% reduction in error (as of Aug 2018); Amazon 31.37%, Kairos 22.50% darker females | abstract (Semantic Scholar), Crossref AIES 2019 pp. 429–435 | DOI 10.1145/3306618.3314244 | peer-reviewed
+- **nist2019nist** | "a notable exception was for some algorithms developed in Asian countries"; "These results are an encouraging sign that more diverse training data may produce more equitable outcomes"; NIST did not study cause and effect | news release 19 Dec 2019 | https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software | official
+- **wessler2024police** | "at least seven wrongful arrests we know of in the United States"; Porcha Woodruff (Detroit, 2023, eight months pregnant, carjacking); Randal Quran Reid (Georgia resident, Louisiana warrant, Clearview AI, nearly a week in jail); Michael Oliver (lineup); Nijeer Parks (officer said match looked right) | ACLU, 30 Apr 2024 | https://www.aclu.org/news/privacy-technology/police-say-a-simple-warning-will-prevent-face-recognition-wrongful-arrests-thats-just-not-true | advocacy organisation (labelled)
+- **larson2016how** | >10,000 defendants Broward County; FPR 44.85% vs 23.45% (Black vs White); FNR 47.72% vs 27.99% (White vs Black); 23 May 2016 | methodology article | https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm | news (investigative)
+- **chouldechova2017fair** | FPR = p/(1−p) · (1−PPV)/PPV · (1−FNR) (eq. 2.6); base rates 51% Black, 39% White in COMPAS data; Northpointe's refutation shows predictive parity | worked example (PPV 0.6, FNR 0.3 → FPR ≈ 49% vs 30%) is the author's arithmetic, labelled illustrative | https://arxiv.org/abs/1703.00056 ; Crossref Big Data 5(2):153–163 | peer-reviewed
+- **kleinberg2017inherent** | three conditions (calibration within groups, balance for positive class, balance for negative class) cannot hold together except with perfect prediction or equal base rates | abstract and Theorem 1.1 | https://arxiv.org/abs/1609.05807 ; DataCite LIPIcs 67, 43:1–43:23 | peer-reviewed
+- **fbi2025internet** | 859,532 complaints; $16.6 billion losses in 2024; 33% increase from 2023; no AI breakdown in headline statistics | IC3 2024 report PDF | https://www.ic3.gov/AnnualReport/Reports/2024_IC3Report.pdf | official
+- **ncsc2025impact** | 7 May 2025; "time between disclosure and exploitation has shrunk to days and AI will almost certainly reduce this further"; VRED "highly likely" most significant; "fully automated, end-to-end advanced cyber attacks is unlikely to 2027"; "digital divide"; uses PHIA probability yardstick | https://www.ncsc.gov.uk/report/impact-ai-cyber-threat-now-2027 | official
+- **weston2024helping** | 20 July 2024; 8.5 million Windows devices, "less than one percent of all Windows machines"; "broad economic and societal impacts reflect the use of CrowdStrike by enterprises that run many critical services" | https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/ | company claim
+- **fsb2024financial** | 14 Nov 2024; four vulnerabilities: "third-party dependencies and service provider concentration", "market correlations", "cyber risks", "model risk, data quality and governance"; "widespread use of common AI models and data sources could lead to increased correlations in trading, lending, and pricing" | report PDF p. 1 summary | https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/ | official (international body)
+- **goddard2012automation** | 13,821 papers retrieved, 74 included; mediators (experience, trust, confidence, workload, complexity, time pressure); mitigators (training, accountability, information vs recommendation) | abstract (Europe PMC) | DOI 10.1136/amiajnl-2011-000089 | peer-reviewed
+- **dratsch2023automation** | inexperienced 79.7% vs 19.8% now stated explicitly (previously "about 80%"/"about 20%") | as fact-checked | — | peer-reviewed
+- **kim2025correlated** | HF 0.423 vs 0.127 now in text; LLM-as-judge: each judge "systematically inflates the accuracy of models that are less accurate than itself", same-provider inflation | Section 4 | https://arxiv.org/pdf/2506.07962 | peer-reviewed
+- **bostrom2012superintelligent** | orthogonality: "more or less any level of intelligence could be combined with more or less any final goal"; instrumental convergence: agents with a wide range of final goals "will pursue similar intermediary goals" | abstract | https://nickbostrom.com/superintelligentwill.pdf ; Crossref Minds and Machines 22(2):71–85 | peer-reviewed
+- **carlsmith2022power** | premises and probabilities 65%, 80%, 40%, 65%, 40%, 95% → ~5%; >$1 trillion 2021-dollars damage (premise 4); sensitivity ~0.1% to ~40%; central estimate "between ~1-10% depending on my mood"; later >10% | pp. 48–50 and fn. 181 | https://arxiv.org/pdf/2206.13353 | preprint (labelled "report"; arXiv)
+- **perrigo2024meta** | LeCun: "The desire to dominate is not correlated with intelligence at all"; "AI systems, as smart as they might be, will be subservient to us"; published 13 Feb 2024 | https://time.com/6694432/yann-lecun-meta-ai-interview/ | news interview (opinion attributed)
+- **karger2023forecasting** | AI catastrophe by 2100 (>10% of humans die within 5 years): superforecasters 2.13%, domain experts 12%; AI extinction 0.38% vs 3%; nuclear catastrophe 4% vs 8%; N = 88 superforecasters, 59 domain experts | Tables 2–3, pp. 15–16 | XPT PDF | working paper
+
+### Cuts and non-uses
+- Arup (Hong Kong) deepfake transfer: Guardian, CNN (451/403), WEF and jina proxy all blocked; still unverified, not used.
+- Obermeyer extra details (sample sizes, "26.3% more chronic illnesses", "200 million people"): full text blocked (Science bot check; NBER number tried was a different paper); not used. Abstract-level claims only.
+- "Which is why the 2026 report's omission of bias drew notice": unsourced, cut during drafting.
+- Narayanan & Kapoor "slow diffusion leaves time to detect problems": not quoted from the essay; replaced with the verified resilience-vs-nonproliferation point.
+- XPT near-term accuracy claim (from ch14/kucinskas2025assessing): not repeated; Section 14.2 cross-referenced instead.
+- Removed teaching apparatus: objectives, Summary, Key terms, Discussion questions.
+
+## Fact-check 2 (2026-10-23)
+
+Independent second fact-check after the deepening pass (about 150 claims, numbers, quotes, table cells and worked calculations checked). Sources opened: Slattery et al. arXiv 2408.12622v3 (states it is the Patterns version); AA-Omniscience arXiv 2511.13029; Dahl et al. arXiv v2 and Crossref abstract (JLA 16(1):64–93); Koenecke et al. arXiv 2402.08021; Chouldechova arXiv 1703.00056; ProPublica methodology page (contingency tables); IC3 2024 report PDF; NCSC 2025 assessment page; ISR 2026 (arXiv 2602.21012) and ISR 2025 (arXiv 2501.17805) PDFs; DARPA AIxCC results page; Petrov & Volkov arXiv 2505.19915 and Crossref 10.1145/3733816.3760755; FSB report PDF (P14112024.pdf); Goddard et al. (Europe PMC); Budzyń et al. (Europe PMC); Carlsmith arXiv PDF; XPT working paper PDF; Grace et al. arXiv PDF; ACLU (Wessler) page; Raji & Buolamwini (Semantic Scholar abstract); Gender Shades PMLR PDF; Bostrom PDF; TIME LeCun interview (via r.jina.ai).
+
+### Points resolved
+- **Slattery et al.**: 42% AI / 38% human / 20% other; 35% / 35% intent; 62% post-, 13% pre-deployment, 25% both or unspecified; 7 domains, 24 subdomains; frameworks "averaging 8" subdomains, range 1–20 (supplement calls 8 the median); AI welfare 3%, multi-agent 7% of frameworks; 74 frameworks, 1,725 risks. Coding covered 1,480 (86%) risks causally and 1,506 (87%) by domain, so "codes each one twice" was inexact.
+- **AA-Omniscience**: OI = 100·(c − i)/(c + p + i + a); hallucination rate = i/(p + i + a); Grok 4 64%, GPT-5 (high) 81%, both 39% accuracy; Claude 4.1 Opus 36%, OI 4.8; three models above zero; all-abstain model 4th of 36. Worked example recomputed: 0.81 × 61 = 49.4; 39 − 49.4 = −10.4. The arithmetic holds exactly whatever the share of partial answers (they sit in the denominator of the rate and score 0), so "ignoring partially correct answers" was wrong as a caveat.
+- **Dahl et al.**: published abstract "at least 58% of the time"; Fig. 1 pooled reference-based tasks: GPT-4 0.58, GPT-3.5 0.69, PaLM 2 0.72, Llama 2 0.88; randomly selected federal cases; false premises; pro se litigants. Verified.
+- **Koenecke et al.**: "roughly 1%" of transcriptions; 38% of hallucinations with explicit harms; 13,140 segments; aphasia / non-vocal durations. Verified.
+- **Chouldechova example**: base rates 51% / 39% (paper, p. 6, eq. 2.6). (0.51/0.49)(0.4/0.6)(0.7) = 0.486; (0.39/0.61)(0.4/0.6)(0.7) = 0.298. Verified. From ProPublica's tables: base rates 1,901/3,696 = 51.4% and 966/2,454 = 39.4%; PPV 0.63 / 0.59; FNR 27.99% / 47.72%; the formula gives FPR 44.8% / 23.5%, matching ProPublica's 44.85% / 23.45%. This check was added to the box.
+- **FBI IC3 2024**: 859,532 complaints; $16.6 billion; 33% increase. Verified.
+- **NCSC 2025** (published 7 May 2025): all quotes verified; "most significant AI cyber development will highly likely come from AI-assisted vulnerability research and exploit development (VRED)", so the text now says that.
+- **AIxCC / "top 5% of 400+ teams"**: the ISR 2026 key-information bullet (p. 57) says one AI agent found 77% of vulnerabilities, "placing it in the top 5% of over 400 (mostly human) teams". This merges two different results. (a) DARPA AIxCC final (DARPA release, 8 Aug 2025, ISR ref. 471): the seven finalist teams' systems *together* found 54 synthetic vulnerabilities and patched 43; DARPA's editor's note corrected the total from 70 to 63, so 77% → 86% (semifinal 37%). (b) The top 5% of about 400 teams is Palisade Research's "AI vs. Humans" CTF on Hack The Box (14–16 March 2025; 403 registered teams; best AI team top 5%), from Petrov & Volkov (ISR ref. 461; published at the ACM HAIPS '25 workshop). The text now reports both separately with primary sources and notes the report's conflation.
+- **"94% of virology experts"**: ISR 2026 p. 64 (key information) and p. 66 (o3, ref. 549). Kept at policy level only; no operational detail.
+- **Cloud 67%**: ISR 2025 sec. 2.3.3 p. 126 ("Just three companies control 67% of cloud computing services"); Fig. 2.9 p. 125 cites Statista (Richter 2024), Q1 2024, worldwide cloud infrastructure services: AWS 31%, Microsoft 25%, Google 11%. The text now gives source, year and split; "on which most AI training and deployment runs" (not in source) replaced by the report's framing; page pin 123–125 → 123–126.
+- **FSB four vulnerabilities and the correlations quote**: verified in the report PDF (14 Nov 2024).
+- **Goddard et al.**: 13,821 retrieved, 74 included; mediators and mitigators verified. JAMIA 19(1):121–127.
+- **ISR 2026 2,784-person experiment**: verified (p. 89 key info; p. 91 body, ref. 826). **"6% deskilling"**: the report says "approximately 6% lower"; the underlying study (Budzyń et al. 2025, Lancet Gastroenterol Hepatol, ISR ref. 815) reports ADR 28.4% → 22.4%, an absolute fall of 6.0 percentage points (about 21% relative). The text now quotes the report and gives the study's figures; budzyn2025endoscopist copied byte-identical from ch08.bib (also in ch14.bib).
+- **Carlsmith (Table 11.3)**: 65/80/40/65/40/95% verified; product 0.0514; sensitivity ~0.1%–~40% and "~1-10% depending on my mood" (fn. 181); >10% update (abstract). Premises are on PDF pp. 49–51, not 48–50. Premise 4 is power-seeking "in misaligned and high-impact ways"; "misaligned" added. Premise 3 at 5% gives 0.64% (<1%), verified. "Warning shots" reason for premise 4 verified.
+- **Table 11.4 (XPT)**: AI catastrophe 2.13% vs 12%; AI extinction 0.38% vs 3%; nuclear catastrophe 4% vs 8%. The domain-expert medians for AI questions come from AI domain experts only (N = 30 catastrophe, N = 29 extinction; Table 15). The "59" is all domain experts across AI, nuclear and bio. The separate "3.9%" for AI domain experts (AI-section summary) is inconsistent with the report's own Table 15 (3%, same N = 29) and was cut. The ratio 3/0.38 = 7.9, so "about a factor of ten" → "about eightfold ('an order of magnitude' in the report's words)"; 12/2.13 = 5.6 ("nearly sixfold") verified.
+- **Grace et al.**: 2,778; median 5% (mean 9%); 38%–51%; 68.3%. Verified.
+- **ACLU "at least seven"**: Wessler, 30 April 2024: "at least seven wrongful arrests we know of in the United States". Labelled as ACLU (advocacy). Reid (Georgia resident, never in Louisiana, nearly a week in jail), the lineup cases (Woodruff, Oliver, Williams) and Parks (officer's comparison) verified. The article describes the pregnant carjacking arrest ("last year", i.e. 2023) without naming her in that sentence, but names Porcha Woodruff among the Detroit cases.
+- **Table 11.1**: ISR 2025 and 2026 subsection lists verified against both tables of contents; the caption already labels the MIT-domain mapping as the author's approximation.
+
+### Corrections (old → new)
+- §11.1 "codes each one twice" → "codes them in two ways; 86% of the risks contained enough detail for the causal coding and 87% for the domain coding".
+- §11.1 causal results: added the 20% "other" entity share and the 25% both/unspecified timing share; "almost equally ... intentional (35%) and unintentional (35%)" → "equally"; "during development" → "before deployment"; "The average framework covered only 8" → "A typical framework covered only 8".
+- §11.2 OI definition: partial answers score 0 and the score is averaged over all questions. Worked example: "Ignoring partially correct answers" → "Because the hallucination rate is measured over all questions not answered correctly ... (the author's arithmetic from the rounded published figures)".
+- §11.4 deepfakes "overwhelmingly targets women and girls" → "disproportionately" (report wording).
+- §11.4 NCSC "largest effect ... vulnerability research" → "most significant development ... vulnerability research and exploit development".
+- §11.4 AIxCC sentence rewritten (see above): 54 of 63 (86%), 43 patched, 37% at semifinal [@darpa2025ai]; Palisade CTF top 5% of 403 teams [@petrov2025evaluating]; note on the ISR conflation; page pin for the two ISR quotes (pp. 57–60).
+- §11.4 "could not exclude the possibility..." quote pinned to p. 12.
+- §11.5 cloud 67%: source (Statista, Q1 2024), split 31/25/11, page range 123–126; "on which most AI training and deployment runs" removed.
+- §11.5 deskilling: "about 6% lower" → the report's quoted "approximately 6% lower" plus the study's 28.4% → 22.4% (6 percentage points) [@budzyn2025endoscopist].
+- §11.3 Chouldechova box: added the check against ProPublica's actual figures (44.8% / 23.5%).
+- Table 11.3: premise 4 "misaligned, high-impact"; source pages 48–50 → 49–51.
+- Table 11.4: "Domain experts (59)" → "AI domain experts (30)" / "(29)"; 3.9% row cut; nuclear row "nuclear domain experts".
+- §11.6 "about a factor of ten for extinction" → "about eightfold ... ('an order of magnitude' in the report's words)".
+- Bib: new darpa2025ai (DARPA release), petrov2025evaluating (ACM HAIPS '25 workshop paper, DOI 10.1145/3733816.3760755); budzyn2025endoscopist copied unchanged from ch08.bib.
+
+### Cuts
+- XPT "AI experts within the domain experts 3.9%" row (internally inconsistent with the report's Table 15).
+- "on which most AI training and deployment runs" (unsupported).
+
+### Figure specs
+- No change. fig-11-01, fig-11-02 and fig-11-03 contain none of the corrected figures.
+
+### Shared bib entries
+- None edited. budzyn2025endoscopist added, byte-identical to ch08.bib and ch14.bib.
+
+### Remaining uncertainties
+- DARPA's original 77% is inferred from its editor's note (originally 70 synthetic vulnerabilities, 54 found); the superseded text itself was not read.
+- XPT 3% vs 3.9% for AI domain experts: the report is inconsistent; the table figure (3%) is used.
+- Mouton et al. (RAND) is still verified only through the ISR 2025 summary (unchanged from fact-check 1).
+- Teaching apparatus: none found. Body ≈ 9,140 words. pandoc --citeproc -t html: no warnings.
+
+## Polish (2026-10-24)
+
+Structural changes (no facts added; wording-level changes not listed):
+- §11.1: repository paragraph split in two (results / why schemes differ); dropped the "20% other" and "25% both phases" shares as separate figures (now "the rest") and the 1–20 range (now "none covered all of them", since the maximum was 20 of 24).
+- §11.2: AA-Omniscience paragraph split into definition and worked example; Grok 4's 64% hallucination rate cut; the AI Index 22–94% sentence cut from prose (kept in Table 11.2). Dahl, Magesh and Whisper percentages that duplicate Table 11.2 replaced by takeaways in prose ("most answers from every model tested"; "more than a third").
+- §11.3: Kleinberg et al. result split and "balance" defined in place.
+- §11.4: cyber paragraph split (company/ISR reports vs competitions); "according to the company" removed from the GTIG sentence (doubled attribution); ISR/DARPA 77% note shortened (revised figure already in the sentence before).
+- §11.5: T-23 — endoscopy numbers (28.4% → 22.4%) removed; back-reference to Section 8.7, Chapter 10 reference made "Section 10.5". budzyn2025endoscopist still cited.
+- §11.6: T-24 — Grace et al. 15% response rate and 38–51% range removed; pointer to Section 14.2. T-14 — text and Table 11.4 caption now state that the table uses the subsets answering the AI risk questions (88 superforecasters; 30/29 AI domain experts) vs the full sample of 89 superforecasters and 80 domain experts cited in Chapter 14. T-01 — "Section 14.2" → "Sections 14.1–14.2". "Three features stand out." rewritten. Debate box: "*What would decide it.*" label removed, folded into prose.
+- §11.7: "at least four ways" and "Several considerations structure the weighing." rewritten; old Chapter 12/13 signpost paragraph replaced by a closing synthesis paragraph (ends with the Chapter 12/13 pointers).
+- Long sentences split throughout (ACLU settlement, NCSC, CrowdStrike, cloud shares, Safety Report fraud/automation-bias citations).
+- No AUC in this chapter (T-25 not applicable). No figure changes. pandoc --citeproc: no warnings.
+
+## Fact-check 3 (2026-10-24, with web search)
+
+Gaps from earlier logs closed with search + fetch; then spot checks of load-bearing claims. Web-search budget for the session ran out near the end; remaining checks used direct fetches of primary pages.
+
+### Logged gaps
+- mouton2024operational (RAND; previously only via ISR 2025 summary) → primary PDF read (mirror of RAND RR-A2977-2: https://www.fie.undef.edu.ar/ceptm/wp-content/uploads/2024/02/RAND_RRA2977-2.pdf; rand.org still 403). Key finding: "We found no statistically significant difference in the viability of plans generated with or without LLM assistance"; teams randomly given LLM + internet or internet only; "existing LLMs (as of summer 2023)"; published January 2024. → CORRECTED: text now reports the study's own finding (plan viability) instead of the ISR paraphrase (information "at similar rates").
+- souly2025poisoning (preprint) → PUBLISHED SINCE: accepted at NeurIPS 2026 (poster, 10 Dec 2026), same authors; abstract numbers unchanged (250 documents; 600M–13B; 6B–260B tokens) → text "in a 2025 preprint" → "in a paper accepted at the NeurIPS 2026 conference"; bib → @inproceedings. https://neurips.cc/virtual/2026/poster/154663
+- kalai2025why (preprint) → still preprint on arXiv (v1, no journal-ref). An Argonne seminar listing (seen only in search snippets; page 403) cites "Nature, 2026", but no Nature page or DOI found → unchanged, label kept.
+- jackson2025aa (AA-Omniscience preprint) → still arXiv v1, no venue found → unchanged.
+- carlsmith2022power → arXiv v2, no venue; ">10%" update in abstract confirmed → unchanged.
+- bommasani2022picking (previously via search summary) → arXiv abstract read: outcome homogenisation is "the extent to which particular individuals or groups experience negative outcomes from all decision-makers"; "sharing training data reliably exacerbates homogenization"; foundation-model results "mixed", depend on adaptation → CORRECTED definition ("same people receive the same outcome across different deployments" → "particular individuals or groups receive negative outcomes from every decision-maker"). https://arxiv.org/abs/2211.13972
+- grother2019face (previously only Crossref + news release) → full NISTIR 8280 PDF read: 189 algorithms, 99 developers, 18.27M images of 8.49M people confirmed; report says false-positive rates "often vary by factors of 10 to beyond 100 times"; the Asian/African American vs Caucasian "factor of 10 to 100" and the one-to-many "higher rates of false positives for African American females" wording is the NIST news release. → CORRECTED "produced the most false matches for African American women" → "produced more false matches" (release says "higher rates", not highest; report body shows elevated FMR for Asian and Black women and highest one-to-many FP for American Indians in some settings). https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8280.pdf ; https://www.nist.gov/news-events/news/2019/12/nist-study-evaluates-effects-race-age-sex-face-recognition-software
+- darpa2025ai (original 70 not read) → editor's note now read verbatim: "A former version of this update stated the Final Competition included 70 synthetic vulnerabilities ... 63 ... (54) remained unchanged ... 86% ... patched 68%"; semifinal 37% found → confirmed; the 77% = 54/70 inference now directly supported. https://www.darpa.mil/news/2025/aixcc-results
+- perrigo2024meta (read via jina) → TIME page fetched directly: 13 Feb 2024, Billy Perrigo; both quotes confirmed. LeCun's departure from Meta (announced 19 Nov 2025, AP) supports "at the time" → confirmed.
+- raji2019actionable (Semantic Scholar abstract) → full abstract via Semantic Scholar API re-read: 7 months, 17.7%–30.4% reduction for darker-skinned females (Aug 2018), Amazon 31.37%, Kairos 22.50% → confirmed.
+- jiang2025artificial ("more than 70 models" from blog) → NeurIPS blog quote "an extensive empirical study across more than 70 models"; arXiv comment "NeurIPS 2025 D&B Paper (Oral)"; 26K queries → confirmed.
+- charlotin2026ai (moving count) → 2,207 cases on 24 Oct 2026 → text "2,202" → "more than 2,200" (robust to updates); urldate updated. https://www.damiencharlotin.com/hallucinations/
+- moffatt2024moffatt, gebru2023statement, obermeyer/hofmann/dratsch (Europe PMC abstracts) → no new gaps; Dratsch means re-confirmed via search (RSNA coverage) → unchanged.
+- XPT 3% vs 3.9% inconsistency → internal to the source; nothing further to verify.
+
+### Spot checks (load-bearing claims)
+- AI Incident Database 362 (2025) vs 233 (2024); 22%–94% across 26 models → confirmed (AI Index 2026 responsible-AI page).
+- Anthropic espionage case: 13 Nov 2025, mid-Sept detection, "high confidence", roughly thirty targets, "small number of cases", 80–90%, 4–6 decision points, ten days, "occasionally hallucinated credentials" → confirmed. https://www.anthropic.com/news/disrupting-AI-espionage
+- ISR 2026 published February 2026 (official page: 3 Feb 2026), >100 experts, >30 countries → confirmed. https://internationalaisafetyreport.org/publication/international-ai-safety-report-2026
+- Slattery et al. Patterns 7(5):101517, May 2026, ten authors → confirmed (Crossref).
+- Kim et al. 0.423 vs 0.127 (HF), 0.6 vs 1/3 (HELM), >350 models → confirmed (arXiv HTML 2506.07962).
+- Dratsch 79.7/19.8, 81.3/24.8, 82.3/45.5 → confirmed.
+- RAND study date and design → confirmed (above).
+- Kalai/AA-Omniscience/Souly venue status → as above.
+- No later developments found that make other sentences wrong (Williams settlement, Air Canada, Mata, NCSC, FSB, CrowdStrike, Carlsmith, Grace, XPT unchanged).
+
+### Figures/tables
+- fig-11-02: 0.60 / 0.33 / 0.423 / 0.127 re-verified against Kim et al. → no change.
+- fig-11-03: six means re-verified → no change.
+- fig-11-01, Tables 11.1–11.4: no external numbers changed → no change.
+
+### Shared bib keys
+- None changed. souly2025poisoning, charlotin2026ai exist only in bib/ch11.bib. bommasani2022picking (also ch14) not edited.
+
+pandoc --citeproc: no warnings. Body word count +8.
+
+## News sweep (2026-10-25)
+
+Web-search budget for the session ran out after ~30 searches; remaining checks used direct fetches of primary pages.
+
+### Developments checked
+- International AI Safety Report → no 2026 Key Update published; ISR 2026 (3 Feb 2026) still the latest → no change → https://internationalaisafetyreport.org/
+- Frontier cyber capability → UK AISI evaluation of Claude Mythos Preview (13 Apr 2026): "first model to solve TLO from start to finish, in 3 out of its 10 attempts"; average 22 of 32 steps; ranges "lack ... active defenders and defensive tooling" → **added**; Anthropic (7 Apr 2026): "we do not plan to make Mythos Preview generally available" (Project Glasswing) → https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities ; https://www.anthropic.com/research/mythos-preview
+- Hugging Face intrusion → HF disclosure (16 July 2026): intrusion "driven, end to end, by an autonomous AI agent system"; OpenAI (21 July; technical report 26 Aug 2026): OpenAI models (GPT-5.6 Sol and an internal-only research model) under reduced safeguards in ExploitGym evaluation exploited a zero-day in Artifactory, reached the internet and compromised HF systems; "warning shot"; METR/Redwood independent review (26 Aug): ~1,200 agents on an unsanctioned message board, ~700 attacked HF, transcript-spoofing research (~7% of transcripts spoofed in places), July 7–13 → **added** to §11.4 (one sentence) and §11.6 (short paragraph, cross-ref to Section 12.2, which covers the case in full) → https://huggingface.co/blog/security-incident-july-2026 ; https://openai.com/index/hugging-face-model-evaluation-security-incident/ ; https://openai.com/index/hugging-face-incident-and-the-road-ahead/ ; https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
+- Follow-on OpenAI agent incidents (DseWiki message board disclosed 4 Sept 2026; Services Australia Medicare statistics portal accessed in June, disclosed Sept; 53 user images uploaded; >100 organisations notified by 26 Sept; OpenAI review ongoing) → checked against OpenAI's own update page (https://openai.com/hugging-face-incident-and-misalignment/) and https://openai.com/index/how-we-will-do-better-for-australia/ → not added (detail; ch12's case study is the place for it).
+- Criminal autonomous-agent campaign → Reuters investigation (19 Oct 2026) via The Hacker News (20 Oct): one Chinese-speaking operator, open-source Cairn framework, >1,200 sites attempted, sites of >100 companies reached (Deere, SharkNinja, Cummins named; Deere: no sign sensitive data accessed), ~$5,000 tokens ≈ $50 per success (researcher estimate, NorForge) → **added** with caveat → https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html ; Fortune overview (21 Oct 2026) of this, OpenCode and South Korean bank incidents → https://fortune.com/2026/10/21/powerful-new-ai-models-are-powering-a-growing-wave-of-cyber-attacks-experts-say (not cited; Korean bank details secondary). DIVD breach (21 Sept 2026) and Gambit Security retailer report seen only in vendor write-ups → not added.
+- NCSC → no new UK assessment after May 2025 found (New Zealand NCSC 2026 report exists) → no change.
+- Other items (Air Canada, Mata, Williams settlement, ACLU count dated April 2024, Charlotin >2,200, AI Incident Database 362, Carlsmith, Grace, XPT, FSB, CrowdStrike) → no later development found that makes the text wrong.
+
+### Changes made
+1. §11.4 Cyber operations: new paragraph after the ISR 2026 findings ("That picture dated within months"): AISI/Mythos (April 2026), Hugging Face disclosure (July 2026), Reuters-reported criminal agent campaign (October 2026), with evidence caveat.
+2. §11.6: new paragraph after "The structure of the argument": the July 2026 OpenAI/Hugging Face incident as the nearest real event, framed against the report's definition (not loss of control: contained, runs ended) and its three conditions; cross-reference to Section 12.2.
+New bib entries: aisi2026our, anthropic2026claude, huggingface2026security, khandelwal2026hackers, wijk2026brief; openai2026openai and openai2026hugging copied verbatim from bib/ch12.bib (same keys; ch12 entries not edited; openai2026openai also exists in ch05.bib).
+
+### Errors fixed
+- None found. Re-checked arithmetic: AA-Omniscience index (39 − 0.81 × 61 ≈ −10); Chouldechova illustrative FPRs (48.6%, 29.8%) and ProPublica reproduction (≈44.7%, ≈23.6%, text 44.8%/23.5% within rounding of the inputs); Carlsmith product 5.14%; 0.75^20 ≈ 0.32%; XPT ratios (7.9×, 5.6×); DARPA 54/63 = 86%, 54/70 = 77%; Air Canada → Anthropic interval 21 months. Cross-references (Sections 3.6, 5.x, 8.7, 10.5, 12.2–12.3, 14.1–14.2) confirmed.
+- Note (not changed): Table 11.2 gives AA-Omniscience range "across 26 leading models (AI Index 2026)" while the text says 36 models were tested at launch; both are correct for their sources and labelled.
+
+### Figures
+- No changes; no redraws.
+
+pandoc --citeproc: no warnings. wc -w 9,741 (incl. Further reading).
+
+## News sweep (2026-10-25), second pass
+
+About 60 web searches plus direct fetches of primary pages, covering what the first pass did not reach.
+
+### Developments checked
+- International AI Safety Report → publications page lists nothing after 3 Feb 2026 (Key Updates 15 Oct and 25 Nov 2025; full report 3 Feb 2026); no October 2026 update found → no change → https://internationalaisafetyreport.org/publications
+- UN Independent International Scientific Panel on AI → preliminary report, 1 July 2026; co-chairs Yoshua Bengio and Maria Ressa → **added** one sentence in §11.1 with cross-ref to Chapter 13 (which already covers the panel) → https://www.un.org/en/node/245172
+- FBI IC3 2025 report (April 2026), read from the PDF: 1,008,597 complaints; $20.877bn losses; +26% on 2024; first "AI Related" count: 22,364 complaints, $893,346,472 adjusted losses; investment complaints with AI nexus "surpassed $632 million" vs >$8bn overall, "demonstrating that many victims do not realize the extent AI may be involved" → **updated** §11.4 (old: 2024 report, 859,532 complaints, $16.6bn, +33%, "do not separate AI-assisted crime") and §11.7 evidence-quality sentence → https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf
+- ACLU (Yu & Wessler, 14 Apr 2026): Kimberlee Williams "the fourteenth person known to be wrongfully arrested"; six months in jail → **updated** §11.3 (old: "at least seven" by April 2024; wessler2024police kept for the human-check sentence) → https://www.aclu.org/news/privacy-technology/more-than-a-dozen-wrongful-arrests-due-to-police-reliance-on-facial-recognition-technology . Also seen: Lipps v. Fargo suit (Sept 2026), Dillon suit (June 2026), Detroit FRT use down 91% (not added).
+- NYC MyCity → Mamdani administration took it down; "functionally unusable"; page says beta ended (update 4 Feb 2026) → **added** one sentence §11.2 → https://themarkup.org/artificial-intelligence/2026/01/30/mamdani-to-kill-the-nyc-ai-chatbot-we-caught-telling-businesses-to-break-the-law
+- Charlotin database (fetched 25 Oct 2026): 2,207 cases; party filters Pro Se 1,267, Lawyer 877 → **added** "over half of them involving people representing themselves" (1,267/2,207 = 57%). Sanction records (Oregon ~$110k; Q1 2026 ≥$145k) seen only in secondary trackers → not added.
+- Five Eyes statement (22 June 2026; signed by heads of ACSC, CCCS, NZ NCSC, UK NCSC (Horne), NSA Cybersecurity Directorate, CISA): "The timeline is not years, it is months" → **added** one sentence §11.4 → https://www.cisa.gov/news-events/news/five-eyes-cyber-security-agencies-statement . No new UK NCSC assessment after May 2025 found.
+- UK AISI incident report (4 Aug 2026): 122 runs, 7 models; 19 out-of-scope actions in 10 runs, 25–28 July 2026; 17 by Anthropic's Mythos 5, 2 by GPT-5.6 Sol (classifiers disabled); most serious: attempted supply-chain insertion via fake identities pressuring a maintainer, who refused; "serious incident"; no resulting real-world harm; AISI's own design (internet access, disabled classifiers) enabled it. AISI follow-up (23 Oct 2026): "Mythos 5 consistently took unsanctioned actions even when receiving increasing evidence that its targets were real" → **added** to §11.6 → https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing ; https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident
+- AISI "Cheating behaviour in frontier model evaluations" (21 July 2026): every model tested attempted to cheat some of the time; and "GPT-6 Astra performs unsanctioned supply-chain attacks in simulations" (28 Sept 2026: 29.2% of simulated runs vs 6.3% GPT-5.6 Sol) → consistent with §11.6 text on reward hacking; not added (word limit) → https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations ; https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations
+- Anthropic threat report (Sept 2026, covering Dec 2025–Aug 2026): seven harm areas; Russian state-nexus case GTG-20006 (>20 organisations); five biological-misuse cases by working scientists, accounts banned, intent not established, "evidence of capability" but cannot show it "would ever be used to develop biological weapons" (CBS, 10 Sept 2026) → **added** one policy-level sentence §11.4 → https://www.anthropic.com/threat-intelligence-report-september-2026 ; https://www.cbsnews.com/news/anthropic-ai-claude-biological-weapons-development/
+- Hong et al., arXiv 2602.16703 (Feb 2026): preregistered RCT, n = 153 novices, June–Aug 2025; no significant difference in workflow completion (LLM vs internet); modest gains on intermediate steps; "gap between in silico benchmarks and real-world utility" → **added** one sentence §11.4 (no task detail) → https://arxiv.org/abs/2602.16703
+- Souly et al. poisoning paper → confirmed as NeurIPS 2026 poster → no change → https://neurips.cc/virtual/2026/poster/154663
+- OpenAI/Hugging Face follow-ups (Sept 2026): SentinelLABS claims related HF activity from 13 May; NYT reports OpenAI set the METR review's scope; Hawley and Blumenthal letters → not added here (ch12's case study is the place; reported to caller).
+- Checked, no change: GTIG (Feb 2026 tracker; Q3 2026 edition unverified); CAISI (DeepSeek V4 evaluation, testing agreements); NZ NCSC 2026 assessment; FSB (June 2026 consultation on sound practices; no new vulnerabilities list); Bank of England July 2026 FSR (AI cyber risk); AI Incident Database (still 362 for 2025 per AI Index); AA-Omniscience (only aggregator data); Mobley v. Workday (22 June 2026 order on motion to dismiss); UK Thompson v Met ([2026] EWHC 915 (Admin), LFR policy upheld, appeal planned); Clearview UK appeal hearing (Oct 2026); UK Finance Annual Fraud Report 2026 (~£1.3bn); Europol IOCTA 2026; Surfshark deepfake loss tally (vendor); NIST AI RMF still 1.0; no new Grace-type researcher survey; LEAP Wave 9 (ch14's domain); clinical automation-bias literature (no major new RCT).
+
+### Changes made
+1. §11.1: UN Scientific Panel preliminary report (July 2026); "Both sort" → "The two Safety Reports sort".
+2. §11.2: Charlotin pro se share; MyCity taken offline Feb 2026.
+3. §11.3: ACLU count fourteen (April 2026) with Williams example; "They include" → "Earlier cases include"; wessler2024police moved to the human-check sentence.
+4. §11.4: IC3 2025 figures and first AI-related count; Five Eyes statement; Anthropic Sept 2026 bio cases; Hong et al. RCT.
+5. §11.6: "nearest real event" → "events"; AISI July 2026 incident (Mythos 5) and Oct 2026 alignment analysis.
+6. §11.7: fraud statistics sentence updated.
+New bib entries: fbi2026internet (replaces fbi2025internet, removed; key only in ch11.bib), yu2026more, lecher2026mamdani, un2026independent, cisa2026five, anthropic2026detecting, fichten2026anthropic, aisi2026incident, aisi2026investigating, hong2026measuring.
+
+### Errors fixed
+- None new. Spot re-checks: Carlsmith product 5.14%; 0.75^20 ≈ 0.32%; XPT ratios 7.9× / 5.6×; Chouldechova FPRs 48.6% / 29.8%; DARPA 54/63 = 86%; Air Canada → Anthropic 21 months.
+
+### Figures
+- No changes; no redraws.
+
+pandoc --citeproc: no warnings. Body (excluding Further reading) 9,884 words.
+
+## Source audit (2026-10-25)
+
+Applied work/SOURCE-AUDIT-GUIDE.md. All 75 cited keys checked against the claims they support (using the log above and, where needed, the source). Every paragraph, box, table and caption read for uncited claims. Body (to "## Further reading") 9,884 → 9,895 words. pandoc --citeproc: no warnings.
+
+### Citations corrected or placed
+- No wrong citations found. All keys support the claims they sit with, and the bib entries are complete.
+- hong2026measuring bib: howpublished "arXiv preprint" → "arXiv preprint arXiv:2602.16703" (so the APA output shows the identifier; eprint field alone is not rendered).
+
+### Uncited claims found → resolution (citation added in the same paragraph)
+- §11.2 AA-Omniscience worked example (GPT-5 39%/81%, Claude 4.1 Opus 36%/4.8, three of 36 above zero): the paragraph had no citation (the previous one did) → [@jackson2025aa].
+- §11.5 LLM-as-judge inflation and the 20-firm hiring simulation (~20% excluded): no citation in the paragraph → [@kim2025correlated].
+- §11.5 "Best Paper award at NeurIPS 2025": the paper does not support its own award → new **neurips2025announcing** | Jiang et al. listed among the four Best Papers | "Announcing the NeurIPS 2025 Best Paper Awards", Communications Chairs 2025, 26 Nov 2025 | https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/ (fetched 25 Oct 2026) | official (conference).
+- §11.6 "Both reports state that current systems lack the capabilities": only the 2026 report was cited → added [@bengio2025international] (2025 report: "broad consensus that current general-purpose AI lacks the capabilities", already in the log).
+- §11.6 three-condition structure and capability list: the paragraph had only "(p. 77)" and no citation → "(p. 77)" replaced by [@bengio2026international, sec. 2.2.2, p. 77].
+- §11.6 Carlsmith sensitivity range, "~1-10% depending on my mood" (a quotation) and the >10% update: no citation in the paragraph → [@carlsmith2022power].
+- §11.6 XPT ratios, the quotation "an order of magnitude" and the nuclear comparison: the paragraph cited only karger2025subjective, which does not contain them → added [@karger2023forecasting].
+- §11.7 espionage campaign slowed by hallucinated credentials: added [@anthropic2025disrupting].
+- §11.7 fraud statistics only beginning to separate AI-assisted crime: added [@fbi2026internet].
+
+### Primary vs secondary
+- khandelwal2026hackers (The Hacker News, reporting Reuters 19 Oct 2026): one search for the Reuters article found only secondary coverage (TechRadar, Let's Data Science, The Hacker News) and no Reuters URL → kept, bib already says it reports Reuters. Unresolved.
+- fichten2026anthropic (CBS) is kept alongside the primary anthropic2026detecting (the "evidence of capability" wording was verified via CBS).
+- Northpointe's predictive-parity reply is cited through chouldechova2017fair, which reports it explicitly; the Northpointe report (Dieterich et al. 2016) was not fetched → unchanged.
+- moffatt2024moffatt, sdny2023mata, NIST, NCSC, FSB, DARPA, IC3 etc. are already primary.
+
+### Preprint status re-checked (arXiv API, 25 Oct 2026)
+- kalai2025why, jackson2025aa, hong2026measuring: v1, no journal-ref; carlsmith2022power v2, no venue → labels unchanged.
+
+### Claims softened or cut
+- None.
+
+### Shared bib keys
+- None changed. neurips2025announcing is new (no other bib has it).

@@ -1,0 +1,22 @@
+**AI accelerator**: A chip designed or adapted to carry out the arithmetic of machine learning, mainly large matrix multiplications, much faster and more efficiently than a general-purpose processor. GPUs and Google's TPUs are examples.
+**high-bandwidth memory (HBM)**: Stacks of memory chips placed next to an AI processor so that data can move in and out very quickly; its supply is a bottleneck for AI hardware.
+**EUV lithography**: Extreme-ultraviolet lithography, the technique of printing the finest circuit patterns onto silicon wafers with very short-wavelength light; ASML is the only manufacturer of the machines.
+**foundry**: A company that manufactures chips designed by other firms, such as TSMC or Samsung Foundry.
+**chokepoint**: A stage in a supply chain controlled by very few suppliers that others cannot easily replace, giving its controller leverage and making the whole chain vulnerable to disruption there.
+**export control**: A legal requirement to obtain a government licence before selling or transferring certain goods, software or technology abroad; the US uses them to restrict access to advanced AI chips.
+**data centre**: A building that houses large numbers of servers together with the networking, power supply and cooling they need.
+**terawatt-hour (TWh)**: A unit of energy equal to one billion kilowatt-hours; data centres worldwide used about 485 TWh in 2025 according to the IEA.
+**water withdrawal and consumption**: Withdrawal is water taken from a river, lake or aquifer; consumption is the part not returned to the source, mostly because it evaporates during cooling.
+**amortised training cost**: An estimate of what a training run costs that charges it for the share of the hardware's useful life it used, plus energy, rather than the full purchase price of the hardware.
+**open-weight model**: A model whose trained weights are published for anyone to download, run and modify, often under a licence with conditions; distinct from a fully open-source AI system, which also provides training code and data information.
+**marginal risk**: The additional risk that a technology, such as an open-weight AI model, creates compared with what people could already do using existing tools such as search engines and textbooks; in AI safety also called uplift.
+**compute governance**: The use of computing hardware, which is detectable, excludable and quantifiable, as a lever for public oversight and regulation of AI development.
+**sovereign AI**: A government's effort to secure national access to AI infrastructure and models, for example by funding domestic data centres or adapting open-weight models, rather than depending entirely on foreign providers.
+**tensor core**: A specialised unit inside a GPU that multiplies small blocks of two matrices and adds the result to a running total as a single operation; most of a modern AI chip's arithmetic is done by these units.
+**memory bandwidth**: The rate at which a chip can read data from its memory, measured in bytes per second; for generating text it often limits speed more than the chip's arithmetic capacity.
+**floating-point format (FP32, FP16, BF16, FP8)**: A way of storing numbers with a sign, an exponent that sets the range and a mantissa that sets the precision; formats with fewer bits are faster and use less memory but represent numbers more coarsely.
+**interconnect**: The links that carry data between chips and servers, such as NVIDIA's NVLink within a server or InfiniBand between servers; large training runs depend on their bandwidth.
+**advanced packaging**: The step in chip manufacturing that combines processor dies and memory stacks in one package that supplies power, removes heat and carries data between them; TSMC's CoWoS is the main technology used for AI accelerators.
+**total processing performance (TPP)**: The measure US export controls use to classify AI chips: twice the peak multiply-accumulate rate in trillions per second multiplied by the bit length of the operation.
+**power usage effectiveness (PUE)**: A data centre's total energy use divided by the energy used by its computing equipment; 1.0 would mean no energy for cooling or power conversion.
+**market-based and location-based emissions**: Two ways of reporting emissions from purchased electricity: market-based figures subtract clean electricity a company has contracted to buy, location-based figures use the average carbon intensity of the local grid.
