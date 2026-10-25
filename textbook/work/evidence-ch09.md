@@ -384,3 +384,35 @@ Added: anadolu2026openai, huo2026openai, euelectionobservationmission2026final, 
 None changed; no redraws.
 
 pandoc --citeproc: no warnings. Body (to Further reading) 9,894 words.
+
+## Source audit (2026-10-25)
+
+Per work/SOURCE-AUDIT-GUIDE.md. All 155 citation instances (88 keys) in prose, boxes, tables and captions checked against this log; DOIs re-checked against Crossref (all match on year, volume, issue, pages, first author; Chesney DOI and DNR DOI resolve via doi.org, non-Crossref). Primary sources fetched directly (openai.com via r.jina.ai, transparency.meta.com PDF, EC presscorner API, tse.jus.br via r.jina.ai, ftc.gov via r.jina.ai, legislation.gov.uk). 3 web searches.
+
+### Citations corrected (old → new)
+- anadolu2026openai + huo2026openai → **openai2026disrupting** (primary OpenAI report, 8 Oct 2026, read in full): "closely resembled complex influence operations of the pre-AI age, but used AI to make some of the workflows easier"; operations landing content "in real media outlets, rather than relying on fake social media distribution, tend to have the highest potential reach" → https://openai.com/index/disrupting-ai-enabled-false-front-operations/ . Both news entries removed from bib.
+- constantin2026openai (TNW) → **openai2026advancing** (OpenAI, "Advancing content provenance…", 19 May 2026): SynthID on images from ChatGPT, Codex and the API alongside C2PA; preview of a public verification tool → https://openai.com/index/advancing-content-provenance/ . TNW entry removed.
+- cnnbrasil2026tse (news) → **tse2026resolucao** (TSE Resolution 23.755, approved 2 Mar 2026, signed 3 Mar 2026; full text read): Art. 9-B labelling "de modo explícito, destacado e acessível"; § 3-A bans new synthetic content using the image, voice or statements of candidates or public figures from 72 h before to 24 h after the vote; Art. 28 § 1-C bars AI systems from recommending candidates even on request → https://www.tse.jus.br/eleicoes/eleicoes-2026-content/normas-e-documentacoes/arquivos-2026/resolucao-e-voto-propaganda . **Wording fixed**: "bans new synthetic content from 72 hours before a vote" → "bans new deepfakes of candidates from 72 hours before a vote" (the ban is limited to content depicting candidates/public figures). CNN Brasil entry removed.
+- chan2025google (AP) → **europeancommission2025commissionb** (press release IP/25/2964, 9 Dec 2025, read via presscorner API): formal antitrust investigation into Google's use of web publishers' content for AI Overviews and AI Mode and of YouTube content → https://ec.europa.eu/commission/presscorner/detail/en/ip_25_2964 . AP entry removed.
+- meta2026adversarial: bib URL changed from third-party copy (combatantisemitism.org) to Meta's own transparency centre PDF (https://transparency.meta.com/sr/H2-2026-adversarial-threat-report/, 56 pp.); quotes re-confirmed (p. 34 "Every one of the CIB networks … incorporated some form of generative AI"; p. 36 "behavioral detection approaches remain effective"); page note 34–35 → 34–36.
+- senatecommerce2026cruz kept for the first conviction; **ftc2026ftc** added for FTC enforcement from 19 May 2026 (FTC release "FTC Begins Enforcing the TAKE IT DOWN Act": "The Federal Trade Commission today began enforcing…", TakeItDown.ftc.gov) → https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-begins-enforcing-take-it-down-act
+- Grok box and Table 9.3, Online Safety Act fines (£18m or 10%): added primary **ukparliament2023online** alongside The Register (Sch. 13 para. 4(1): "whichever is the greater of (a) £18 million, and (b) 10% of the person's qualifying worldwide revenue") → https://www.legislation.gov.uk/ukpga/2023/50/schedule/13/paragraph/4
+- wang2023neural: bib is the 2025 TASLP version while text says "described in a 2023 preprint"; journal abstract (OpenAlex) also contains "only a 3-second enrolled recording" and the emotion/acoustic-environment claim, and bib note records the 2023 preprint → no change.
+
+### Uncited claims found and resolved
+- §9.4 "Many commentators predicted that generative AI would flood these campaigns…" → cited **simon2023misinformation** (the article's subject is these fears).
+- §9.4 Romania sentence ("alleged coordinated amplification … and undisclosed paid promotion") → cited **solea2024romanias** (re-read: 25,000 TikTok accounts; paid influencers who "did not disclose that their promotions were sponsored").
+- Grok box closing claim (AI Act NCII prohibition from 2 Dec 2026) → cited **europeanparliament2026regulation**.
+- §9.8 DSA researcher data access: covered by the paragraph's DSA citations (Art. 40); no extra marker added (word limit).
+- C2PA Deeper box, first paragraph: covered by c2pa2025content in the box's second paragraph; stray ",." typo after "web browsing" fixed.
+- Checked and judged covered or common knowledge/the book's reasoning: definitions in §9.1; base-rate arithmetic; cross-references (Sections 2.8, 9.5, 9.7, 9.8, 13.6; Chapters 7, 10, 13); closing synthesis paragraphs.
+
+### Considered, not changed
+- Penske v. Google: court opinion not reachable (CourtListener API rate-limited, site 403); TheWrap kept.
+- jones2026ofcom, reuters2026concerns, afp2026musks, ax2026ai, kreko2026hungarys, jonesday2026european, willecke2026transparency, europeancommission2026strong: primary pages 403 or the cited source is the primary analyst/reporting; kept as before.
+- gowal2025synthidimage remains in bib but is uncited in the body (not printed by citeproc).
+
+### Bib
+Added: openai2026disrupting, openai2026advancing, tse2026resolucao, europeancommission2025commissionb, ftc2026ftc, ukparliament2023online. Removed (ch09-only, no longer cited): anadolu2026openai, huo2026openai, constantin2026openai, cnnbrasil2026tse, chan2025google. Changed: meta2026adversarial (URL, page note). No shared entries touched.
+
+pandoc --citeproc: no warnings. Body (to Further reading) 9,900 words by wc (9,851 excluding citation markup).

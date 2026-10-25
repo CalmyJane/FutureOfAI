@@ -343,3 +343,32 @@ Body now 9,741 words (wc).
 Bib (ch10.bib only): added agweyu2026generative, covington2026fda, texas2026attorney, ballardspahr2026california, fenwick2026california, nyassembly2026a10379. Pandoc check clean.
 
 Figures: none changed.
+
+## Source audit (2026-10-25)
+
+Per work/SOURCE-AUDIT-GUIDE.md. All 157 citation instances (110 keys) checked against this log; DOIs re-checked against Crossref (all match; wong2021external Crossref lists first page only). Primary pages fetched directly (openai.com via r.jina.ai, fda.gov PDF, CalMatters Digital Democracy bill texts, Crossref/OpenAlex). 1 web search (FDA discussion-paper URL).
+
+### Citations corrected (old → new)
+- zeff2025openaia (TechCrunch) → **openai2025introducingc** (OpenAI, "Introducing study mode in ChatGPT", 29 Jul 2025): guiding questions, quizzes, hints "instead of providing answers outright"; "Easily toggle study mode on and off" → https://openai.com/index/chatgpt-study-mode/
+- coldewey2023openai (TechCrunch) → **openai2023new** (OpenAI classifier post, 31 Jan 2023): "As of July 20, 2023, the AI classifier is no longer available due to its low rate of accuracy" → https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text/
+- covington2026fda (law-firm alert) → **fda2026considerations** (FDA CDRH discussion paper, 18 Aug 2026, PDF read): "does not represent draft or final guidance"; feedback sought on "risk assessment, premarket evaluation, postmarket monitoring" → https://www.fda.gov/media/194242/download
+- zeff2025openaic: added primary **openai2025strengthening** (27 Oct 2025): "around 0.15% of users active in a given week have conversations that include explicit indicators of potential suicidal planning or intent"; "91% compliant … compared to 77% for the previous GPT-5 model" → https://openai.com/index/strengthening-chatgpt-responses-in-sensitive-conversations/ . TechCrunch kept for the 800 million weekly users (not on OpenAI page).
+- silberling2026openai (TechCrunch) → **openai2026introducing** ("Introducing ChatGPT Health", Jan 2026): "over 230 million people globally ask health and wellness related questions on ChatGPT every week"; "Conversations in Health are not used to train our foundation models"; wellness apps (Apple Health, Function, MyFitnessPal). Page shows initial access via waitlist for a small group → "launched" → "introduced" → https://openai.com/index/introducing-chatgpt-health/
+- wiggers2024chatgpt (TechCrunch) → **openai2024memory** ("Memory and new controls for ChatGPT", 13 Feb 2024, with updates of 10 Apr 2025 and later): view/delete memories, turn off, temporary chat; April 2025 update references "all your past conversations", not by default for users who opted out of memory → https://openai.com/index/memory-and-new-controls-for-chatgpt/ . zeff2025openaib kept for the EU/UK exclusion (not on OpenAI page).
+- SB 1119 and SB 867: added primary statute texts **california2026sb1119** (Chapter 190, Statutes of 2026; read: age assurance, risk assessment from 1 Jul 2027, defaults incl. one-hour session and two-hour daily limit, bans on "Expressing or simulating romantic interest in the child" and encouraging reliance, civil penalty up to $15,000 per affected child per intentional violation) and **california2026sb867** (Chapter 189; "Toy means a physical product designed, marketed, or manufactured for use in play by children under 16 years of age"; prohibition until 1 Jan 2031) alongside the law-firm analyses; also added to Table 10.3 caption.
+
+### Uncited claims found and resolved
+- Effect-size box: Cohen's conventions (0.2 small, 0.8 large) had no citation → cited **cohen1988statistical** (Statistical Power Analysis for the Behavioral Sciences, 2nd ed., Erlbaum 1988; Crossref DOI of Routledge reissue) and **kraft2020interpreting** (abstract: "effects that are small by Cohen's standards are large relative to the impacts of most field-based interventions"). "come from laboratory psychology" could not be verified → **softened** to "were proposed for the behavioural sciences in general".
+- §10.2 "desirable difficulty" (term) → cited primary **bjork1994memory** (Bjork 1994, in Metcalfe & Shimamura, *Metacognition*, MIT Press, pp. 185–205; Crossref 10.7551/mitpress/4561.003.0011).
+- §10.2 Chapter 8 endoscopy cross-reference (observational fall; later small trial no effect) → cited **budzyn2025endoscopist** and **pedersen2026learning** (copied byte-identical from ch08.bib).
+- §10.6 New York companion-chatbot law (disclosure, self-harm detection) had no citation in the paragraph → cited **gluck2025understanding** (already the Table 10.3 source).
+- Checked and judged covered or the book's reasoning: estimand/ITT definitions; percentile and false-alarm arithmetic; assessment-design options in §10.3 (general description); Concept box definitions; closing synthesis paragraph; cross-references.
+
+### Considered, not changed
+- Florida v. OpenAI (CNN): Florida AG June release not found on the newsroom first page; kept. Eight-state suits (Kansas Reflector) kept.
+- Be My Eyes, Character.AI, Anthropic, Garante, FTC, NYC items are already primary.
+
+### Bib
+Added: cohen1988statistical, bjork1994memory, budzyn2025endoscopist, pedersen2026learning (both byte-identical to ch08), openai2025introducingc, openai2023new, fda2026considerations, openai2025strengthening, openai2026introducing, openai2024memory, california2026sb1119, california2026sb867. Removed (ch10-only, no longer cited): zeff2025openaia, coldewey2023openai, covington2026fda, silberling2026openai, wiggers2024chatgpt. Corrected: lukac2025ambient and heinz2025randomized article numbers added as pages (AIoa2501000, AIoa2400802); desimone2025chalkboards url added (had urldate without url). No shared entries touched.
+
+pandoc --citeproc: no warnings. Body (to Further reading) 9,560 words by wc.

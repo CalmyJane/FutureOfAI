@@ -203,24 +203,30 @@ def stamp_pagelines(document, doc, pdf_path):
     pdfmetrics.registerFont(TTFont("EBG-It", os.path.join(PRINT, "fonts", "EBGaramond-RegularItalic.ttf")))
     reader = PdfReader(pdf_path)
     writer = PdfWriter(clone_from=reader)
+    writer.pdf_header = reader.pdf_header  # keep the PDF/X-4 version header (pypdf would write 1.3)
     W, H = 148 * mm, 210 * mm
     width = 113 * mm
     for pi, ns in pages.items():
         x0 = 20 * mm if pi % 2 == 0 else 15 * mm  # right-hand pages have the wider inner margin on the left
         text = " · ".join(map(str, sorted(ns)))
-        lines = simpleSplit(text, "EBG", 7.4, width - 12 * mm)
+        avail = width - 11 * mm
+        size = 7.4
+        while size > 6.6 and pdfmetrics.stringWidth(text, "EBG", size) > avail:
+            size -= 0.2
+        lines = simpleSplit(text, "EBG", size, avail)
         buf = BytesIO()
-        c = canvas.Canvas(buf, pagesize=(W, H), initialFontName="EBG", initialFontSize=7.4)
+        c = canvas.Canvas(buf, pagesize=(W, H), initialFontName="EBG", initialFontSize=size)
         c.setLineWidth(0.4)
-        c.line(x0, 17.6 * mm, x0 + 22 * mm, 17.6 * mm)
-        y = 15.0 * mm
+        top = 15.0 * mm if len(lines) == 1 else 16.2 * mm  # two lines: start higher, clear of the folio
+        c.line(x0, top + 2.6 * mm, x0 + 22 * mm, top + 2.6 * mm)
+        y = top
         for i, ln in enumerate(lines):
             if i == 0:
-                c.setFont("EBG-It", 7.4)
+                c.setFont("EBG-It", size)
                 c.drawString(x0, y, "Sources")
-                c.setFont("EBG", 7.4)
+                c.setFont("EBG", size)
             c.drawString(x0 + 11 * mm, y, ln)
-            y -= 2.9 * mm
+            y -= 2.7 * mm
         c.save()
         buf.seek(0)
         writer.pages[pi].merge_page(PdfReader(buf).pages[0])

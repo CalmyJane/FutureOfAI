@@ -3,15 +3,15 @@
 Author: Jan Göbel · Evidence current to October 2026 (web sources checked 20–25 October 2026, the last passes with web search)
 
 ## Files
-- `understanding-ai_A5_interior.pdf`: the print-ready interior. A5 (148 × 210 mm), no bleed, PDF/X-4 with sRGB output intent, 564 pages (an even number), all fonts embedded (EB Garamond, SIL OFL). The publisher or print-on-demand service still needs to add the cover and ISBN.
+- `understanding-ai_A5_interior.pdf`: the print-ready interior. A5 (148 × 210 mm), no bleed, PDF/X-4 with sRGB output intent, 542 pages (an even number), all fonts embedded (EB Garamond, SIL OFL). The publisher or print-on-demand service still needs to add the cover and ISBN.
 - `understanding-ai.md`: the full manuscript in Markdown, for editing or conversion.
 
 ## Contents
 - A preface on how the book is organised and how evidence is labelled.
 - 14 chapters in five parts: How AI Works; The Frontier; Society and Economy; Risk, Safety and Governance; The Decade Ahead.
-- About 191,000 words including references, 46 figures and 61 tables.
+- About 181,000 words including references, 46 figures and 61 tables.
 - A glossary of 375 terms.
-- An APA 7 reference list of 1,007 cited sources.
+- A numbered APA 7 reference list of 1,020 cited sources. Sources are not cited in the running text: a line at the foot of each page lists the numbers of the sources used on that page (tables and figures also name their sources in their captions).
 
 This edition is written as nonfiction, not as a course text: there are no learning objectives, summaries, key terms or discussion questions. Each chapter opens with a documented case and goes into the mechanisms, numbers and evidence in depth. It uses Concept, Case study, Debate and Going deeper boxes, ends with a synthesis paragraph and closes with annotated further reading.
 
@@ -23,7 +23,8 @@ This edition is written as nonfiction, not as a course text: there are no learni
 5. **Third fact-check with web search:** after the polish, every chapter was checked again using web search to close the gaps logged in the earlier passes: claims that had been uncertain, blocked or confirmed only by secondary sources, preprints that have since been published, and developments up to October 2026. About 25 corrections followed, and seven newer developments were added.
 6. **News sweep (25 October 2026):** every chapter was checked against news from July to late October 2026 (model releases, leaderboards, studies, court rulings, laws, export controls, incidents, official statistics). Outdated statements were corrected and major developments added, each verified and cited; every chapter was also re-read for errors and its worked arithmetic recomputed.
 7. **Prose polish:** every chapter got a final pass for clarity, sentence length and number density, and to remove filler.
-8. **Build checks:** no missing citations, consistent bibliography entries across chapters, and every section, table and figure cross-reference resolves.
+8. **Source audit (25 October 2026):** because readers no longer see which sentence a source belongs to, every citation in every chapter was checked against its source, weak or secondary citations were replaced by primary sources where reachable, and every paragraph's factual claims were checked for a source in the same paragraph (about 60 citations added).
+9. **Build checks:** no missing citations, consistent bibliography entries across chapters, and every section, table and figure cross-reference resolves.
 
 ## Limitations
 - **Blocked sites:** some publishers and companies (iso.org, parts of openai.com) refuse automated access. Those claims rest on official copies or reputable reports and are labelled.
@@ -35,4 +36,4 @@ This edition is written as nonfiction, not as a course text: there are no learni
 Remaining uncertainties are listed for each chapter in the evidence logs.
 
 ## Rebuilding
-Run `python3 textbook/print/figures.py` to build the figures, then `python3 textbook/print/build.py` to build the PDF. Requires pandoc ≥ 3.1, WeasyPrint and matplotlib.
+Run `python3 textbook/print/figures.py` to build the figures, then `python3 textbook/print/build.py` to build the PDF (`--inline` gives the older APA in-text citation layout). Requires pandoc ≥ 3.1, WeasyPrint and matplotlib.
