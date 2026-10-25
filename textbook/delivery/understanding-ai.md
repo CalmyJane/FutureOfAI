@@ -4039,7 +4039,7 @@ Each scenario is in effect a choice of values for a small number of variables, a
 | Data | Public text stock exhausted 2026–2032 (median 2028) | Gains in domains without automatic checking of answers |
 | Algorithms | Efficiency halving time ~8 months (90% CI ~2–22) | Measured acceleration of research by AI tools |
 | Reliability and agents | 80% horizon under a fifth of 50% horizon (best model, May 2026); early-2025 RCT showing slowdown, follow-up unreliable | Agents running long tasks unsupervised in production |
-| Adoption | 62% of US adults aged 18–64 used generative AI (May 2026); 18% of US firms use AI | Large, measured changes in firm output or employment |
+| Adoption | 62% of US adults aged 18–64 used generative AI (May 2026); 18% of US firms used AI (late 2025–early 2026) | Large, measured changes in firm output or employment |
 | Regulation | EU high-risk rules deferred to 2027–2028; first safety pause voluntary (OpenAI, Aug 2026) | First binding restriction on a model release |
 | Geopolitics | US–China gap "effectively closed" (AI Index) or about 8 months (CAISI) | Changes in chip export rules or in domestic chip output |
 
