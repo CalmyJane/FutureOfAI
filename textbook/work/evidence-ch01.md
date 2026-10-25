@@ -267,3 +267,33 @@ Gaps from earlier logs (mirror-only, unread primaries, preprints) re-opened with
 ### Still unverifiable from primary text
 - OpenAI's own 900M post (403); Hendler 2008 full text (closed, earlier publisher-page readings only); Bachant & McDermott 1984 full text. All three are already worded or attributed so that the chapter claims no more than the accessible sources support.
 - (Coordinator, 2026-10-24) 900 million weekly users: OpenAI announcement of 27 Feb 2026 confirmed via TechCrunch (https://techcrunch.com/2026/02/27/chatgpt-reaches-900m-weekly-active-users). Text already labels it a company figure.
+
+## News sweep (2026-10-25)
+
+Note: the shared WebSearch budget ran out part-way through this pass; remaining checks used WebFetch/curl of known URLs only. Not searched: new AI-washing enforcement (SEC/FTC) after July 2026, any change to the AI Act definition beyond the Digital Omnibus (earlier check: none).
+
+### Developments checked
+- ChatGPT users → OpenAI cited "more than 1.2 billion weekly ChatGPT users" at DevDay (late Sept 2026), reported by The Decoder (Bastian, 29 Sept 2026, upd. 9 Oct) citing OpenAI/Axios; earlier ~1 bn reports (The Information via TNW, 29 Jul 2026; OpenAI ads post, Aug 2026). OpenAI pages 403. → added as company figure (bastian2026openai) → https://the-decoder.com/chatgpt-now-reaches-1-2-billion-people-every-week-openai-says/
+- US adult adoption → St. Louis Fed, Bick, Blandin, Deming & Schumacher, "What Work Does Generative AI Do?" (1 Sept 2026): adults using AI "rose from 45% to 62%" Aug 2024 → May 2026; work use 33% → 45%. The live tracker (genaiadoptiontracker.com) shows 60.8% for August 2026 (work 40.5%); the dated blog figure was used. → 54.6% (Aug 2025) → 62% (May 2026) (bick2026what) → https://www.stlouisfed.org/on-the-economy/2026/sep/what-work-does-generative-ai-do
+- Microsoft diffusion → Q1 2026 post (Lavista Ferres, 7 May 2026): US "from 24th to 21st", "31.3% usage rate by the working age population" → added (lavistaferres2026state) → https://blogs.microsoft.com/on-the-issues/2026/05/07/the-state-of-global-ai-diffusion-in-2026/ . Q2 2026 post (21 Sept 2026) gives global 18.8% but no US figure; MediaPost reports US 21st at 33.0% (secondary, not used).
+- ClockBench (coordinator input from ch04 check) → Oct 2026 leaderboard: Gemini 4 Argon 83.3% vs average human 90.7% → sentence added; clockbench2026clockbench copied byte-identical from bib/ch04.bib.
+- OSWorld-Verified → results xlsx re-downloaded 25 Oct: latest entries dated 2026-08-01; best general model still claude-fable-5 85.96%; an agentic framework (Intelligence-Indeed Agent, 25 Jul 2026) has 90.19% — chapter's "best general-purpose model … about 86%" still correct → no change.
+- METR time-horizon page → no longer actively updated (8 Sept 2026); Kwa et al. claim unchanged → no change.
+- IMO 2026 → company claims (Huawei, Xiaohongshu, AFP ~23 Jul 2026) of perfect scores; chapter's 2025 gold-medal-level statement remains accurate as dated → no change.
+
+### Changes
+- §Intro para 2: added 1.2 bn weekly users (Sept 2026, company figure).
+- §1.7 adoption: 54.6% (Aug 2025) → 62% (May 2026), up from 45% (Aug 2024); revision parenthesis shortened (39.4/44.6 detail removed; still cites bick2025state). Added Microsoft Q1 2026 rank 21st, 31.3%.
+- Debate box: added Oct 2026 ClockBench 83.3% vs 90.7%.
+- New bib: bastian2026openai, bick2026what, lavistaferres2026state; copied clockbench2026clockbench.
+
+### Error sweep
+Re-read in full; arithmetic re-checked (Table 1.2 0.44/0.34; 175B/117M ≈ 1,500; GLUE 7.7; budget items 13,000 vs 13,500). No errors found.
+
+### Figures
+- fig-01-03: "Feb 2026 900M weekly users" milestone remains true; no redraw required. Optional: add "Sept 2026 1.2B weekly users, company figure" (bastian2026openai) if redrawn.
+
+### Other chapters
+- ch08 (line 57, Table 8.2 row) and ch14 previously used 54.6% (Aug 2025) as the latest Bick et al. figure; the 1 Sept 2026 St. Louis Fed post gives 62% for May 2026 (ch14 updated; ch08 not edited).
+
+pandoc --citeproc: no warnings. Body ~8,930 words.

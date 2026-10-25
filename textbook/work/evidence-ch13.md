@@ -365,3 +365,39 @@ Scope: ch13 plus preface (ch00). WebSearch budget for the session ran out near t
 - Body word count 9,632 (title to Further reading). pandoc --citeproc: no warnings.
 - (Coordinator, 2026-10-24) ISO/IEC 42001:2023 publication confirmed via web search: first edition published 18 December 2023 (IEC webstore https://webstore.iec.ch/publication/90574; Standards Australia announcement). Text says "published in 2023": confirmed.
 - (Coordinator, 2026-10-24) Bartz final approval 20 July 2026 by Judge Martínez-Olguín, 53 objections overruled, confirmed via Authors Alliance (https://www.authorsalliance.org/2026/07/21/bartz-v-anthropic-settlement-receives-final-approval/) and the order PDF. No primary confirmation of an appeal found; text correctly says nothing about appeals.
+
+## News sweep (2026-10-25)
+
+Body word count 9,642 → 9,773. The shared per-turn web-search budget ran out before China, CoE ratifications and several privacy items could be re-searched; those rest on the 22–24 Oct checks.
+
+### Legal-status statements checked
+- FRONTIER Act H.R. 9925: congress.gov API, actions only 23 Jul 2026 (introduced; referred to E&C and SS&T) → "As of 24 October" → "As of 25 October 2026"; status unchanged.
+- No federal AI statute passed: Axios 15 Sept 2026 (Hawley–Blumenthal pressing for a vote), Nextgov 2 Oct 2026 (bills introduced only) → "no comprehensive federal AI statute" confirmed.
+- Executive orders: Federal Register list to EO 14437 (19 Oct 2026); only AI-related new order is EO 14434 (29 Sept 2026, terminology: "Super Intelligence"), text read on govinfo → not added to ch13 (covered in ch12 §12.7); trump2026inaugurating remains uncited in ch13.
+- AI Litigation Task Force: no suit filed against any state law found (DLA Piper, mid-2026); only federal involvement is Colorado → text consistent.
+- xAI v. Weiser (D. Colo. 1:26-cv-01515): stayed per 27 Apr order; no later docket entries found (aichallengewatch; CourtListener throttled) → "the federal case remained open" kept.
+- NY RAISE Act: no change since 27 Mar 2026 amendment; effective 1 Jan 2027 → confirmed.
+- California 2026 session: NEW SB 813 (independent verification organisations) and AB 1405 (AI auditor registry) signed 9 Sept 2026 (governor's press release) → ADDED one sentence before Table 13.3 [@californiagovernor2026governor]. Other bills signed (Stauss Firm 1 Oct 2026): SB 867 and SB 1119 (companion chatbots: toys; child-safety audits), AB 1609 (customer-service chatbots), SB 1000/AB 2713 (AI Transparency Act amendments), SB 947 (automated decisions in discipline/termination) → not added (minor for ch13; SB 867/SB 1119 relevant to ch10). No amendment to SB 53 found.
+- EU AI Act: NEW AI Office first enforcement steps — requests for information to OpenAI and Anthropic over the Hugging Face and Anthropic cyber-evaluation incidents (Virkkunen, International AI Summit, Dublin; Euronews, Bertuzzi, 14 Oct 2026); disputed reach given R&D exemption (Barry Scannell quoted) → ADDED one sentence in "Enforcement and penalties" [@bertuzzi2026eus]. Also found: Commission consultation (12 Oct–9 Nov 2026) on a draft implementing regulation on fining procedures; European Council conclusions of 16 Oct 2026 silent on AI → not added.
+- GPAI Code of Practice: no change in Meta (not signed) / xAI (safety chapter only) positions found → confirmed.
+- Thomson Reuters v. Ross (3rd Cir., 29 Sept 2026) → confirmed (Ballard Spahr, Baker Botts alerts, Oct 2026).
+- In re OpenAI (S.D.N.Y. 25-md-3143): cross-motions for summary judgment on fair use filed 4 Sept 2026, replies due 6 Nov; no ruling → "pending in October 2026" confirmed (secondary trackers).
+- Concord v. Anthropic: summary-judgment hearing on fair use 21 Oct 2026, no ruling → not added.
+- Bartz v. Anthropic: Publishers' Coordination Counsel appealed the fee award (Aug 2026; does not affect payouts per blog reading) → settlement status unchanged; not added.
+- Getty v Stability: no Court of Appeal hearing or judgment found → "No appeal decision had been reported by October 2026" kept.
+- GEMA v OpenAI: no OLG München decision found → "not final" kept. NEW: GEMA v Suno, LG München I, 31 July 2026 (42nd civil chamber; six songs; training use and outputs; provider, not users, responsible; not final; Suno considering appeal) → ADDED one sentence after the GEMA v OpenAI paragraph [@mcginty2026gema]; corroborated by t3n (1 Aug 2026, https://t3n.de/news/gema-ki-musikgenerator-suno-1755936/). Court press release not found. Table 13.4 not changed (selected decisions).
+- UK: no AI bill; copyright still at March 2026 report stage; Creative Industries AI Summit (Manchester, 9 Oct 2026, "Manchester Principles") → not added (no outcome confirmed). Reports name Andy Burnham as Prime Minister; chapter names no PM.
+- Next summit (Geneva 2027) only in weak sources → not added.
+- CoE CETS 225: treaty office page 403 today; 22 Oct check (21 signatures, EU sole ratification) stands.
+- China, EDPB, Garante, PLD transposition: not re-searched (budget); prior checks of 22–24 Oct stand.
+
+### Errors
+- Arithmetic (10^25 example; 12- and 16-month deferrals) and cross-references (Sections 4.1, 7.7) re-checked → no errors found.
+
+### Figures/tables
+- No changes; no redraws.
+
+### Bibliography
+- New (ch13 only): bertuzzi2026eus, californiagovernor2026governor, mcginty2026gema. No shared keys edited.
+
+pandoc --citeproc: no warnings.

@@ -368,3 +368,35 @@ Figures
 Notes
 - WebSearch per-turn budget was exhausted near the end of this pass; the 738-respondent 2022 total (not in text or figure) was not re-searched.
 - pandoc --citeproc: no warnings.
+
+## News sweep (2026-10-25)
+
+Note: the shared WebSearch budget ran out part-way through this pass (remaining checks by WebFetch of known URLs). Not searched: AI-bubble/market news, Anthropic IPO, IEA World Energy Outlook 2026, Grace/AI Impacts survey after 2023 (one search found none), Metaculus primary pages (secondary only: weak-AGI community forecast ~2028 in July 2026; not added).
+
+### Developments checked
+- AI Futures Project → blog archive: no timelines update after the Q2.5 update of 16 Aug 2026 (Kokotajlo AC p50 Nov 2027, ASI Mar 2029; Lifland AC Jan 2030, ASI Jul 2033). Later posts: "AI 2040: Plan A" (9 Jul), "How to pace the US frontier" (5 Aug), Senate testimony (2 Oct) → chapter current, no change → https://blog.aifutures.org/archive ; https://blog.aifutures.org/p/q25-2026-timelines-update-uplift
+- METR → time-horizons page: last model added 8 May 2026, "no longer actively updated" (8 Sept) → text current. New: GPT-5.6 Sol predeployment evaluation (26 Jun 2026): 50% horizon ~11.3 h (cheating = failure; 95% CI 5–40 h), >270 h (cheating = success), 71 h (discarded); "we do not consider any of these numbers to represent a robust measurement" → sentence added to §14.3 (metr2026summary) → https://metr.org/blog/2026-06-26-gpt-5-6-sol/ . Claude Opus 5.5 summary (22 Sept 2026) gives no time horizon → no change. Other METR posts (Jul–Oct 2026) on incidents/monitoring → not needed.
+- METR developer study → "We are Changing our Developer Productivity Experiment Design" (24 Feb 2026): late-2025 returning devs −18% (CI −38% to +9%), new −4% (−15% to +9%); data "an unreliable signal" (selection). ch14 §14.5 said the trial "found that AI made them slower" without the follow-up (ch08 reports it) → corrected; Table 14.4 cell → "early-2025 RCT showing slowdown, follow-up unreliable" (metr2026changing copied from bib/ch08.bib) → https://metr.org/blog/2026-02-24-uplift-update/
+- FRI → research list: only a 28 Sept 2026 editorial after the 22 Sept review. Review re-read: LEAP "launched in mid-2025" (a secondary site says Nov 2025; FRI wording kept); Navier–Stokes passage: experts 10%, superforecasters 5.4% for an AI solving a Millennium Prize Problem by end-2027, "not completely clear whether the current situation meets our resolution criteria"; fn 15: GPT-6 Astra ECI 167 vs medians 165/169 (not added) → https://forecastingresearch.org/research/ai-progress-accuracy-update
+- Navier–Stokes claim → Quanta (Kakaes, 8 Sept 2026): OpenAI internal model, ~10,000 agents, 88 h, 3D singularity, Lean-checked; NPR (Brumfiel, 22 Sept 2026, read via WUNC repost): 166-page manuscript, community "largely considers the proof correct", Maynard/Gómez-Serrano quotes on readability, priority dispute (Buckmaster/Alpöge). Clay Institute: still lists the problem unsolved per secondary reports (implicator.ai: Bridson "deliberately unhurried") — not stated in text. → 3 sentences added to §14.1 (kakaes2026ai, brumfiel2026ai) → https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/ ; https://www.wunc.org/2026-09-22/ai-solved-one-of-maths-hardest-problems-humanity-learned-nothing-so-far
+- Adoption → Bick et al. St. Louis Fed (1 Sept 2026): 45% → 62% (Aug 2024 → May 2026) → 54.6% (Aug 2025) → 62% (May 2026) in text and Table 14.4 (bick2026what, copied from bib/ch01.bib); revision parenthesis shortened. Census BTOS: Census story (May 2026) 17–20% Dec 2025–May 2026, consistent with 18% → no change.
+- Pew → short read (McClain & Park, 18 Aug 2026): 52% more concerned than excited, 22–28 Jun 2026, n = 3,488 → clause added (mcclain2026young) → https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai/
+- OpenAI pause / GPT-6 Astra (from ch12's verified sources) → added one sentence to Regulation; Table 14.4 regulation cell; forlini2026openai and openai2026path copied byte-identical from bib/ch12.bib.
+- US–China gap → NIST CAISI evaluation of DeepSeek V4 Pro (released 1 May 2026): "lag behind the frontier by about 8 months", most capable PRC model evaluated → sentence added; Table 14.4 geopolitics cell (nist2026caisi) → https://www.nist.gov/news-events/news/2026/05/caisi-evaluation-deepseek-v4-pro . Bloomberg Intelligence LiveBench ~3% gap (Sept 2026, secondary) not used.
+- Export controls → found only BIS 31 May 2026 guidance (subsidiaries of Chinese-headquartered firms; secondary) and no new rule Jul–Oct 2026; "shifted repeatedly" still accurate → no change.
+- EU AI Act → Omnibus in force 27 Jul 2026; AI Office GPAI enforcement powers from 2 Aug 2026 (law-firm summaries) → text current, no change.
+- Revenue → OpenAI run rate ~$50 bn end-Sept (FT/Bloomberg) or ~$70 bn (Axios); Anthropic ~$65 bn end-July (Bloomberg). FRI's "likely ~$140 bn combined" is attributed to FRI → no change. Capex: hyperscaler 2026 plans ~$700–725 bn (secondary) consistent with IEA's 715 bn → no change.
+- Epoch → trends page still dated 5 Feb 2026 → no change.
+
+### Error sweep
+Re-read in full. Table 14.2 recomputed (7.8/9.2/11.3/14.0 doublings; ×220/610/2,600/17,000; 2,600/7,300/31,000/200,000 h); Brier example (0.125, 0.205, 0.955, 0.835); 2.8×/yr; 27 years; 175 TWh; 3 GW — all correct. Error fixed: developer-trial statement (above).
+
+### Figures
+No figure data or caption changes; no redraws.
+
+### Other chapters
+- ch08 uses 54.6% (Aug 2025) as latest Bick et al. figure; newer 62% (May 2026) exists.
+- ch04 (§4.7) may wish to note METR's GPT-5.6 Sol evaluation (cheating makes horizons non-robust, 11 h to >270 h).
+
+pandoc --citeproc: no warnings. Body ~9,840 words (excluding Further reading and citation keys).
+- (Coordinator, 2026-10-25) Navier–Stokes sentence corrected: OpenAI's result concerns a forced fluid (smooth external force), from smooth initial data at rest; OpenAI says it establishes statement (C)/(D) of the Clay formulation but "We do not intend to claim the Millennium Prize". Source: The Next Web (https://thenextweb.com/news/openai-navier-stokes-proof-published-millennium-prize), OpenAI page https://openai.com/index/navier-stokes-solution/ (403 to fetcher).

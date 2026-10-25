@@ -317,3 +317,37 @@ Body word count 9,881 → 9,880 (counted to "## Further reading"); no correction
 - None changed. obrien2025deep, paulo2025sparse, goldowskydill2025detecting, openai2026openai, openai2026path exist only in bib/ch12.bib.
 
 pandoc --citeproc: no warnings.
+
+## News sweep (2026-10-25)
+
+Body word count 9,880 → 9,900 (counted to "## Further reading"). Search budget (shared per-turn limit) ran out during the ch13 sweep; all ch12 topics below were checked before that.
+
+### Developments checked
+- OpenAI Preparedness Framework: GPT-6 Sol/Luna October 2026 safety page (7 Oct 2026) still links preparedness-framework-v2.pdf; treats Sol/Luna as High (cyber, bio/chem), below Critical → Table 12.4 "v2 (Apr 2025)" and "Astra the first model designated Critical" still correct. https://deploymentsafety.openai.com/gpt-6-october/model-safety-training-and-evaluation . The 18 Aug "complete rewrite" claim (Enterprise DNA via TNW) is still not in a primary source → not added (as in fact-check 1).
+- GPT-6 Astra release 3 Sept 2026 (Bloomberg Government, Constellation, Techmeme) → consistent with "In September".
+- Anthropic RSP: v3.4 (8 Jul 2026) still latest; page last updated 14 Aug 2026 (Risk Report) → no change. https://www.anthropic.com/responsible-scaling-policy
+- Google DeepMind FSF: v3.1 (17 Apr 2026) still latest; no Sept/Oct update found → no change.
+- Hugging Face / ExploitGym incident: coverage (TechCrunch, Axios 21 Jul; UPI 29 Jul) consistent with box; no later OpenAI findings beyond the 26 Aug report → no change.
+- NEW: Anthropic, "Investigating three real-world incidents in our cybersecurity evaluations" (30 Jul 2026, updated 3 Aug): 141,006 runs reviewed; three incidents (six runs) in which Claude Opus 4.7, Claude Mythos 5 and an internal research model compromised three outside organisations; misconfiguration with evaluation partner Irregular gave live internet access though prompts said none, so models treated reachable systems as in scope; "In none of these situations did Claude exfiltrate itself or deliberately attempt to escape its test environment" → ADDED one sentence in §12.6 (containment paragraph) [@anthropic2026investigating]. Corroborated by Nextgov (Kelley, 31 Jul 2026). https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals ; no operational detail included.
+- NEW: White House (Office of the National Cyber Director) asked OpenAI and Anthropic not to share new models with the UK AISI until US testing (Politico, 24 Sept 2026; IT Pro, Kelly, 25 Sept; TNW, 25 Sept); Anthropic appears to have complied; AISI director's letter: lacks access to Anthropic's model; AISI did test GPT-6 Astra pre-release → ADDED one sentence in §12.7 institutes paragraph [@kelly2026openai]. https://itpro.com/security/openai-and-anthropic-snub-uks-ai-security-institute-on-new-model-testing ; https://thenextweb.com/news/white-house-openai-anthropic-uk-ai-security-institute-models (politico.com not reachable by our tools).
+- NIST CAISSI page (fetched 25 Oct): header CAISSI; news items to 16 Oct 2026 (incident-readiness practices), 17 Sep (GLM-5.3), 23 Jul (joint UK AISI/CAISI Kimi K3) still say CAISI → text confirmed.
+- EO 14434 text (govinfo, 91 FR 63129) re-read: terminology order only ("Super Intelligence"/"SI" in non-statutory documents) → text confirmed. No later AI executive order (Federal Register list to EO 14437, 19 Oct 2026).
+- International AI Safety Report: no new Key Update found after Feb 2026 edition → no change.
+- UK AISI: no new Frontier AI Trends Report after Dec 2025 → no change.
+- METR: no new report on GPT-6/Astra found; June 2026 GPT-5.6 Sol pre-deployment note not cited → no change.
+- EU AI Office (Euronews, 14 Oct 2026) sent requests for information to OpenAI and Anthropic over these incidents → added to ch13 (not ch12, to stay within cap).
+- Interpretability/CoT: no major new results found Jul–Oct 2026 that affect claims.
+
+### Cuts to offset additions
+- §12.5: removed sentence on circuit tracing distinguishing a genuine calculation from a claimed calculator (redundant with §12.4's statement that attribution graphs distinguished faithful from backward reasoning; lindsey2025biology still cited twice).
+- §12.7: removed Epoch AI compute estimate for Astra (9.4e26, "likely"; Section 4.4) — epochai2026data now uncited in ch12 (entry kept; shared with ch04).
+- §12.7: tightened the frameworks/law sentence and the Astra safeguards sentence.
+
+### Errors
+- Arithmetic re-checked (0.05 × ln 20 ≈ 0.15; ln 1000 − 0.999 ≈ 5.9, √ ≈ 2.4; Table 12.3 2+8 = 10%, 2+18 = 20%; 2.0 → 20.5 ≈ tenfold); cross-references (Sections 2.8, 3.5, 3.7, 4.2, 7.6) exist → no errors found.
+
+### Figures/tables
+- No figure or table changes; no redraws.
+
+pandoc --citeproc: no warnings.
+- (Coordinator, 2026-10-25) Added reported US reversal of the AISI-access request (LBC, 12 Oct 2026, citing the Telegraph; https://www.lbc.co.uk/tech/white-house-uk-ai-models/). Anthropic 30 July disclosure (141,006 runs, three organisations, misconfigured internet access) cross-checked via Anadolu/UPI/Defense One.
