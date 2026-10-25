@@ -223,3 +223,37 @@ Facts removed (cuts for length/number density; all previously verified)
 ### Figure / table specs
 - figures/specs/tbl-08-01.md was out of step with the chapter's Table 8.2: caption said "Table 8.1" and row 1 was "Bick, Blandin & Deming (late 2024) ... nearly 40% | bick2024rapid", whereas the chapter table (after the Polish pass) gives "(Aug 2025) ... 54.6%" from bick2025state. Spec caption replaced with the chapter's Table 8.2 caption; row 1 → "Bick, Blandin & Deming (Aug 2025) | US adults aged 18–64 | Use generative AI | 54.6% | bick2025state"; footnote updated (reweighting 39.4% → 44.6%; Danish time saving from May 2025 version). Needs redraw.
 - fig-08-02: all values re-checked against METR 2026 post and earlier logs; no change.
+
+## News sweep (2026-10-25)
+
+### Developments checked
+- BLS Productivity and Costs: Q2 2026 revised (3 Sep 2026) remains latest; Q3 release not out (due early Nov). Text (2.2% y/y; 2.1% since 2019 Q4) unchanged → https://www.bls.gov/news.release/archives/prod2_09032026.htm
+- Census BTOS national file (downloaded 25 Oct 2026; cycle 202621, ref 21 Sep–4 Oct 2026, published 22 Oct 2026): AI use in any business function 24.6%; H1 2026 cycles 17.5–21.7%. Question now says "Super Intelligence or SI (formerly referred to as Artificial Intelligence or AI)" → https://www.census.gov/hfp/btos/downloads/National.xlsx
+- Executive Order 14434 "Inaugurating the Era of Super Intelligence" (29 Sep 2026; Sec. 2(a) terminology) → https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/ (bib entry copied from ch12 key trump2026inaugurating)
+- Bick, Blandin & Deming now published: Management Science 72(10):8440–8456, Oct 2026, doi 10.1287/mnsc.2025.02523 (Crossref abstract: late 2024 45% adults; 27% used for work previous week; 10% every workday; 1–7% of hours; 1.4% time savings).
+- St. Louis Fed GenAI Adoption Tracker (FRED blog, 27 Aug 2026): used for work previous week 28.2% (Q3 2024) → 39.2% (Q2 2026); hours assisted 4.1% → 6.3%; time saved 1.6% → 2.2% → https://fred.stlouisfed.org/blog/2026/08/does-generative-ai-save-time-at-work/
+- Bick, Blandin, Deming & Schumacher (St. Louis Fed, 1 Sep 2026): 62% of adults 18–64 use genAI in May 2026, up from 45% Aug 2024 → https://www.stlouisfed.org/on-the-economy/2026/sep/what-work-does-generative-ai-do (coordinator item; verified; bib copied byte-identical from ch01/ch14)
+- BLS AI exposure categories (27 Aug 2026; 831 occupations; theoretical: Felten et al., Eloundou et al., Eisfeldt et al.; observed: Anthropic, Microsoft Copilot; "Exposure does not imply job loss…") → https://www.bls.gov/emp/publications/ai-exposure-categories.htm ; projections release https://www.bls.gov/news.release/archives/ecopro_08272026.htm
+- Challenger, Gray & Christmas September 2026 report (1 Oct 2026): AI cited for 120,136 cuts YTD, ~21% of all, leading reason; total YTD cuts 573,195, −39% y/y → https://www.challengergray.com/wp-content/uploads/2026/10/Challenger-Report-September-2026.pdf
+- Fairlie & Wu, NBER WP 35796 (Sept 2026): no significant rise in recent graduates' relative unemployment in summer 2026 → https://www.nber.org/papers/w35796
+- Humlum & Vestergaard Brookings article (6 Oct 2026) restates the March 2026 NBER version; no new data → no change.
+- Canaries (Aug 2026 version) still latest; METR no new study since Feb 2026 note; Anthropic Economic Index latest June 2026; Digital Omnibus (Reg. 2026/1744, OJ 24 Jul 2026) dates confirmed; ILO July 2026 ASEAN study and IMF Oct 2026 WEO do not affect text; Eurostat 2025 (19.95% of EU enterprises) next update Dec 2026 – not added; SAG-AFTRA 2026 TV/theatrical deal (ratified June 2026, AI provisions) – not added (minor; outside window).
+- Not checked (shared search budget exhausted): Yale Budget Lab tracker after April 2026; Penn Wharton update; Goldman Sachs updates.
+
+### Changes made (old → new)
+1. §8.2 Bick et al.: "By August 2025, 54.6%" → "By May 2026, 62% … up from 45% in August 2024" (bick2026what); "matched the pace of the PC" → "faster than the PC"; late-2024 work use 23%/9% (Feb 2025 WP) → 27%/10% (published Management Science version, bick2026rapid); added tracker Q2 2026: 39.2% weekly work use, 6.3% hours, 2.2% time saved (stlouisfed2026does).
+2. §8.2 BTOS: "in early 2026 about 20%" → "between about 18% and 22% in the first half of 2026, and 24.6% in the two weeks to 4 October 2026" (census2026business); note on "Super Intelligence" wording (trump2026inaugurating).
+3. Table 8.2: row 1 54.6% → 62% (May 2026); row 2 23% (late 2024) → 39.2% (tracker Q2 2026); row 4 about 20% (early 2026) → 24.6% (21 Sep–4 Oct 2026); caption and sources updated.
+4. §8.1: added BLS exposure categories (2 sentences).
+5. §8.4: added Challenger AI-attributed cuts paragraph with caveat.
+6. Debate box: added Fairlie & Wu.
+7. Trims for length: Danish occupation list shortened; METR $150/hour, Cui builds/commits sentence, Fairwork survey detail removed.
+
+### Errors found in error sweep
+- Late-2024 Bick figures (23%, 9%) superseded by published version (27%, 10%); "matched" PC pace contradicted the paper ("faster"). Fixed. Arithmetic in Tables 8.1, 8.4 and the canaries gap rechecked: consistent.
+
+### Figures/specs
+- figures/specs/tbl-08-01.md rows 1, 2, 4, caption and footnote updated → needs redraw if rendered as a figure.
+
+### Bib (ch08.bib only)
+- Added: bick2026rapid, bick2026what (identical to ch01/ch14), stlouisfed2026does, census2026business, trump2026inaugurating (identical to ch12), bls2026artificial, challenger2026september, fairlie2026early.

@@ -286,3 +286,35 @@ Gaps from earlier logs, then spot-checks. The WebSearch budget ran out late in t
 ### Still unverifiable
 - Therabot between-group results (NEJM AI full text unreachable); text makes only a qualitative between-group claim.
 - Kraft numbers rest on the working paper.
+
+## News sweep (2026-10-25)
+
+### Developments checked
+- FDA AI-enabled device list: page still "Content current as of 09/04/2026" (fetched 25 Oct 2026); no newer update → no change.
+- Liu et al., EdWorkingPaper 26-1598 (Univ. of Maryland, 30 Sep 2026; version Oct 2026): RCT, 2,379 undergraduates, 30 instructors randomised within course blocks, autumn 2025; GPT-4o RAG tutor; final grades −0.37 SD (exact-match), not significant in full sample; LMS participation −0.90 SD; first-generation losses >2×; ~15% of treated students used tutor → https://edworkingpapers.com/sites/default/files/ai26-1598.pdf
+- Pew "How Teens Use and View AI" (24 Feb 2026; 1,458 teens, 25 Sep–9 Oct 2025): 54% used chatbots for schoolwork; 10% all/most; 12% emotional support/advice; 16% casual conversation → https://www.pewresearch.org/internet/2026/02/24/how-teens-use-and-view-ai/
+- NYC moratorium on student-facing generative AI, 2-K to grade 8, 2026–27; companion chatbots banned all grades; HS pilots (2 Sep 2026) → https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat
+- California SB 1119 "Adam's Law" signed 10 Sep 2026; most duties from 1 Jul 2027; age assurance; risk assessment; defaults (1-hour session, 2-hour daily cap); prohibited behaviours; penalties up to $5,000/$15,000 per child → https://www.zwillgen.com/artificial-intelligence/adams-law-california-raises-the-bar-for-child-chatbot-protections/ ; https://www.commonsensemedia.org/press-releases/governor-newsom-signs-adams-law-setting-first-real-safety-standard-for-kids-and-chatbots (governor's press release and leginfo not reachable: 403).
+- SB 867 (companion chatbots in toys; coordinator item): NOT verified (search budget exhausted; Courthouse News 403; Common Sense release does not mention it) → not added.
+- Character.AI/Google settlements of five suits (FL, NY, CO, TX), 7 Jan 2026, terms undisclosed → CNN via https://kvia.com/news/business-technology/cnn-business-consumer/2026/01/07/character-ai-and-google-agree-to-settle-lawsuits-over-teen-mental-health-harms-and-suicides/
+- Florida v. OpenAI (1 Jun 2026; first state) → CNN via abc17news; eight states (IA, KS, NE, WV, AR, AZ, ID, MT) announced suits 14 Oct 2026 under consumer-fraud laws → https://www.hppr.org/hppr-news/2026-10-16/kansas-attorney-general-and-others-move-to-sue-openai-in-state-courts ; Texas AG suit 23 Oct 2026 (WBAP report only; not added).
+- Italian Garante fine on Character Technologies €158,000 (press release 9 Jul 2026) → https://www.garanteprivacy.it/home/docweb/-/docweb-display/print/10269594
+- Folk & Dunn, Psychological Science 37(4):276–286 (2026), doi 10.1177/09567976261427747: 4-wave 12-month panel, 2,149 adults; bidirectional isolation–chatbot-use associations; exploratory.
+- FTC 6(b) companion study: no report yet (chair said June 2026 expected "next year"); New York A10379 (minors) passed legislature June 2026, signing not confirmed → not added. FDA generative-AI mental-health guidance still draft priority → not added. No new Therabot trial; ambient-scribe 2026 trials (JAMIA crossover etc.) not added (minor).
+
+### Changes made (old → new)
+1. §10.1: Pew 26% ChatGPT schoolwork (autumn 2024) → 54% chatbots for schoolwork, 10% all/most (autumn 2025), with 2024 figure kept as comparison.
+2. §10.2 + Table 10.1: added Liu et al. Maryland RCT (paragraph and table row).
+3. §10.2: added NYC moratorium sentence.
+4. §10.6: added Pew 12%/16% emotional-support figures; Folk & Dunn panel in debate box; Character.AI/Google settlements; Florida and eight-state suits against OpenAI.
+5. §10.6: "SB 243 … is the most detailed" → "set the first detailed rules"; added SB 1119 sentence and Table 10.3 row; caption "2025" → "2025–2026".
+6. §10.6 data protection: added Garante Character.AI fine.
+
+### Error sweep
+- Rechecked arithmetic (Table 10.2 counts/shares; percentiles for 0.3/0.63 SD; 150 false alarms; MASAI ratio; 0.15% × 800m; Bastani 32%→27%): all consistent. Cross-references (Section 2.8 AUC; Section 11.5 automation bias; Table 13.1; Section 13.6) consistent. Superlative "SB 243 is the most detailed" outdated by SB 1119 → fixed.
+
+### Figures
+- No figure data changed.
+
+### Bib (ch10.bib only)
+- Added: mcclain2026how, liu2026effects, nyc2026mayor, folk2026how, duffy2026character, gold2026florida, opsahl2026kansas, zwillgen2026adams, garante2026character.
