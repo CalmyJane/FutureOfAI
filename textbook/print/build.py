@@ -206,7 +206,12 @@ def stamp_pagelines(document, doc, pdf_path):
     writer.pdf_header = reader.pdf_header  # keep the PDF/X-4 version header (pypdf would write 1.3)
     W, H = 148 * mm, 210 * mm
     width = 113 * mm
-    for pi, ns in pages.items():
+    # all lines go into one overlay document, so the font is embedded once and shared
+    order = sorted(pages)
+    buf = BytesIO()
+    c = canvas.Canvas(buf, pagesize=(W, H), initialFontName="EBG", initialFontSize=7.4)
+    for pi in order:
+        ns = pages[pi]
         x0 = 20 * mm if pi % 2 == 0 else 15 * mm  # right-hand pages have the wider inner margin on the left
         text = " · ".join(map(str, sorted(ns)))
         avail = width - 11 * mm
@@ -214,8 +219,6 @@ def stamp_pagelines(document, doc, pdf_path):
         while size > 6.6 and pdfmetrics.stringWidth(text, "EBG", size) > avail:
             size -= 0.2
         lines = simpleSplit(text, "EBG", size, avail)
-        buf = BytesIO()
-        c = canvas.Canvas(buf, pagesize=(W, H), initialFontName="EBG", initialFontSize=size)
         c.setLineWidth(0.4)
         top = 15.0 * mm if len(lines) == 1 else 16.2 * mm  # two lines: start higher, clear of the folio
         c.line(x0, top + 2.6 * mm, x0 + 22 * mm, top + 2.6 * mm)
@@ -227,9 +230,15 @@ def stamp_pagelines(document, doc, pdf_path):
                 c.setFont("EBG", size)
             c.drawString(x0 + 11 * mm, y, ln)
             y -= 2.7 * mm
-        c.save()
-        buf.seek(0)
-        writer.pages[pi].merge_page(PdfReader(buf).pages[0])
+        c.showPage()
+    c.save()
+    buf.seek(0)
+    overlay = PdfReader(buf)
+    for k, pi in enumerate(order):
+        writer.pages[pi].merge_page(overlay.pages[k])
+    for k, pi in enumerate(order):
+        writer.pages[pi].compress_content_streams()
+    writer.compress_identical_objects(remove_identicals=True, remove_orphans=True)
     with open(pdf_path, "wb") as f:
         writer.write(f)
     return len(pages)
