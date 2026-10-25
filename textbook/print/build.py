@@ -71,17 +71,17 @@ def merge_glossary():
 
 
 # ---------------------------------------------------------------- assemble
-def assemble():
+def assemble(only=None):
     parts = []
     pre = os.path.join(CH, "ch00-preface.md")
-    if os.path.exists(pre):
+    if os.path.exists(pre) and only is None:
         parts.append(open(pre, encoding="utf-8").read())
-    for n in range(1, 15):
+    for n in (range(1, 15) if only is None else [only]):
         f = os.path.join(CH, f"ch{n:02d}.md")
         if not os.path.exists(f):
             print(f"warning: missing {f}", file=sys.stderr)
             continue
-        if n in PARTS:
+        if n in PARTS and only is None:
             p, t = PARTS[n]
             parts.append(f'```{{=html}}\n<section class="part"><p class="part-label">{p}</p><h1 class="part-title">{t}</h1></section>\n```')
         md = open(f, encoding="utf-8").read()
@@ -89,7 +89,8 @@ def assemble():
         md = re.sub(r"[ \t]*\{#tbl:[\w-]+\}[ \t]*$", "", md, flags=re.M)
         parts.append(md)
     gloss, n_terms = merge_glossary()
-    parts.append(gloss)
+    if only is None:
+        parts.append(gloss)
     parts.append("# References {.unnumbered .references-chapter}\n\n::: {#refs}\n:::\n")
     return "\n\n".join(parts), n_terms
 
@@ -117,14 +118,35 @@ def front_matter(toc):
 """
 
 
-def build():
+def notes_to_footnotes(body):
+    """Turn pandoc's end-of-document notes into inline spans that WeasyPrint floats to the page foot."""
+    notes = {}
+    m = re.search(r'<(aside|section) id="footnotes"[^>]*>.*?</\1>', body, re.S)
+    if m:
+        for n in re.finditer(r'<li id="(fn\d+)">(.*?)</li>', m.group(0), re.S):
+            inner = re.sub(r'<a href="#fnref\d+"[^>]*>.*?</a>', "", n.group(2), flags=re.S)
+            inner = re.sub(r"^\s*<p>|</p>\s*$", "", inner.strip())
+            notes[n.group(1)] = inner.strip()
+        body = body.replace(m.group(0), "")
+    # keep the note call on the same line as the word it follows
+    body = re.sub(r'([^\s<>]*)<a href="#(fn\d+)" class="footnote-ref"[^>]*><sup>\d+</sup></a>',
+                  lambda x: f'<span class="nobr">{x.group(1)}<span class="fn">{notes.get(x.group(2), "")}</span></span>', body)
+    # source notes: "(Smith, 2024; Jones, 2025)" -> "Smith, 2024; Jones, 2025."
+    body = re.sub(r'(<span class="srcnote"><span class="citation"[^>]*>)\((.*?)\)(</span></span>)',
+                  r"\1\2.\3", body, flags=re.S)
+    return body
+
+
+def build(only=None, notes=False, out_pdf=OUT_PDF):
     keys, problems = merge_bib()
-    md, n_terms = assemble()
+    md, n_terms = assemble(only)
     used = {k for k in cited_keys(md) if k in keys}
     missing = sorted(k for k in cited_keys(md) if k not in keys and not k.startswith("fig:") and "." not in k)
-    open(OUT_MD, "w", encoding="utf-8").write(md)
+    if only is None:
+        open(OUT_MD, "w", encoding="utf-8").write(md)
+    filters = ["--lua-filter", os.path.join(PRINT, "srcnotes.lua")] if notes else []
     html_body = subprocess.run(
-        ["pandoc", "-f", "markdown-tex_math_dollars", "-t", "html5", "--citeproc", "--section-divs",
+        ["pandoc", "-f", "markdown-tex_math_dollars", "-t", "html5", *filters, "--citeproc", "--section-divs",
          "--bibliography", os.path.join(PRINT, "all.bib"), "--csl", os.path.join(PRINT, "apa.csl"),
          "--metadata", "link-citations=true", "--wrap=none"],
         input=md, capture_output=True, text=True,
@@ -133,6 +155,8 @@ def build():
         print(html_body.stderr)
         sys.exit(1)
     body = html_body.stdout
+    if notes:
+        body = notes_to_footnotes(body)
     warn = [l for l in html_body.stderr.splitlines() if l.strip()]
 
     # table of contents from h1s
@@ -154,9 +178,11 @@ def build():
     body = re.sub(r"<h1([^>]*)>(Chapter \d+|Preface)\s*:?\s*(.*?)</h1>", chap, body)
 
     css = open(os.path.join(PRINT, "book.css"), encoding="utf-8").read()
+    if notes:
+        css += open(os.path.join(PRINT, "notes.css"), encoding="utf-8").read()
     doc = (f'<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>{TITLE}</title>'
            f'<meta name="author" content="{AUTHOR}"><style>{css}</style></head><body>'
-           f'{front_matter("".join(toc))}{body}</body></html>')
+           f'{front_matter("".join(toc)) if only is None else ""}{body}</body></html>')
     open(OUT_HTML, "w", encoding="utf-8").write(doc)
 
     from weasyprint import HTML
@@ -166,9 +192,9 @@ def build():
         doc = doc.replace("</body>", '<div class="endblank"></div></body>')
         open(OUT_HTML, "w", encoding="utf-8").write(doc)
         document = HTML(OUT_HTML, base_url=PRINT).render()
-    document.write_pdf(OUT_PDF, pdf_variant="pdf/x-4", output_intent="srgb")
+    document.write_pdf(out_pdf, pdf_variant="pdf/x-4", output_intent="srgb")
     words = len(re.sub(r"<[^>]+>", " ", body).split())
-    print(f"{OUT_PDF}: {len(document.pages)} pages; ~{words} words incl. references")
+    print(f"{out_pdf}: {len(document.pages)} pages; ~{words} words incl. references")
     print(f"bib entries: {len(keys)}; cited: {len(used)}; glossary terms: {n_terms}")
     for p in problems:
         print("BIB:", p)
@@ -179,4 +205,10 @@ def build():
 
 
 if __name__ == "__main__":
-    build()
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--only", type=int, help="build a single chapter (sample)")
+    ap.add_argument("--notes", action="store_true", help="per-paragraph source notes at the page foot")
+    ap.add_argument("--out", default=OUT_PDF)
+    a = ap.parse_args()
+    build(a.only, a.notes, a.out)
