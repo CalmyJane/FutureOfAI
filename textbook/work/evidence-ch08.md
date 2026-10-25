@@ -257,3 +257,28 @@ Facts removed (cuts for length/number density; all previously verified)
 
 ### Bib (ch08.bib only)
 - Added: bick2026rapid, bick2026what (identical to ch01/ch14), stlouisfed2026does, census2026business, trump2026inaugurating (identical to ch12), bls2026artificial, challenger2026september, fairlie2026early.
+
+### News sweep (2026-10-25), second pass: items left open by the first pass
+Developments checked
+- Yale Budget Lab: AI topic page lists tracker update 14 Oct 2026 ("Measures of AI usage show no connection to changes in employment or unemployment"; SDID "does not yet clearly indicate an AI-related labor market footprint") → https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market ; Gimbel, Kendall & Nunn, 7 May 2026, synthetic difference-in-differences, "no statistically or economically significant effects as of yet" → https://budgetlab.yale.edu/research/what-we-do-and-dont-know-about-how-ai-affecting-labor-market . Also a 20 Jul 2026 report on "potential AI futures" (not added).
+- Penn Wharton Budget Model: AI tag page (https://budgetmodel.wharton.upenn.edu/t/AI) lists only the Sept 2025 projection; no 2026 update → no change.
+- Goldman Sachs: Jan 2026 report (Briggs & Dong, 6–7% displacement) and June/July 2026 "Exchanges" podcast (≈9%, ~15m workers over a decade; peak unemployment effect <1%) known only via secondary outlets (PYMNTS, Allwork, OECD.AI incident log); no Goldman primary reachable → not added. Chapter's Goldman reference is the 2023 GDP estimate, still accurate as a historical estimate.
+- OECD Employment Outlook 2026 (7 Jul 2026): Cormann: no sign that firms' increased AI use causes a general fall in employment; youth entry harder, trend predates genAI. oecd.org returned 403; verified via AFP-based report in Journal du Net (8 Jul 2026) → https://www.journaldunet.com/business/1552481-... (bib barhiye2026ocde). ADDED one sentence. If the author prefers the OECD report itself as citation, replace once oecd.org can be checked.
+- IMF: SDN/2026/001 (Jaumotte et al., Jan 2026, new skills/AI skills in postings) predates window; not added.
+- Federal Reserve Beige Book, 14 Oct 2026: "Five Districts reported that some firms had either reduced staffing levels (through attrition), delayed hiring, or anticipated less job creation after increasing productivity by investing in AI." → https://www.federalreserve.gov/monetarypolicy/beigebook202610-summary.htm . ADDED.
+- St. Louis Fed, Rodgers & Kassens, 30 Jun 2026 (CPS + JOLTS + Lightcast decomposition, Apr 2023–Dec 2025): ages 18–24 unemployment +3.51 pp; AI job demand accounts for one-third of the increase and 45% of the fall in E/P; falling openings account for most → https://www.stlouisfed.org/on-the-economy/2026/jun/how-shifts-labor-supply-demand-shape-outcomes-young-workers . ADDED to debate box ("case that it is"), with "though falling job openings explain most of it".
+- BLS/JOLTS: no new BLS AI-specific release beyond the Aug 2026 exposure categories (already in text); Q3 productivity release not out.
+- Productivity RCTs Jul–Oct 2026: nothing major. Seen: German IT apprentices RCT (673 students, working paper Jul 2026), NBER w34851 education-gap online experiment (May 2026), registry entries without results → not added.
+- WGA (error found while trimming): 2026 WGA MBA (MOA dated 4 Apr 2026; term 2 May 2026–1 May 2030) "preserves all of the protections negotiated in 2023" and requires written notice to the Guild if companies license writers' work to train a commercial GAI system → https://www.wga.org/contracts/contracts/mba/summary-of-the-2026-wga-mba ; MOA PDF https://www.wga.org/uploadedfiles/contracts/2026_mba_moa.pdf . The chapter described only the 2023 agreement "covering 25 September 2023 to 1 May 2026", which read as current. UPDATED.
+
+Changes made (old → new)
+1. §8.4 Yale: added "Its tracker, updated in October 2026, still finds no clear AI footprint, and a May 2026 comparison of exposed occupations with a weighted set of unexposed ones found no significant effects so far" (budgetlab2026tracking; gimbel2026what).
+2. §8.4: added OECD Employment Outlook 2026 sentence (barhiye2026ocde).
+3. §8.4 employers' statements: added Beige Book sentence; caveat "Announcements record the reasons firms give…" → "Both record what firms say, not measured effects, and announcements are not net of hiring." (federalreserve2026beige)
+4. Debate box: added St. Louis Fed decomposition sentence (rodgers2026how).
+5. §8.6 WGA: added 2026 agreement sentence (wga2026summary); "The agreement leaves the technology in use and allocates control over it, drawing by negotiation the line between augmentation and automation" → "The contracts leave the technology in use but allocate control over it."
+6. Trims for length (body now 9,899 words by wc): Eloundou annotator sentence condensed; ILO expert-round wording condensed; Danish occupation list; removed two parentheticals citing the May 2025 Danish version (humlum2025large still cited in Table 8.2 and elsewhere); canaries parenthetical shortened; Demirci "remaining jobs more complex" sentence removed; Autor "possibility, not forecast" sentence removed (hedge retained in preceding sentence); BTOS low-use sector list shortened; Penn Wharton diffusion list shortened; AIOE ability examples removed.
+
+Bib (ch08.bib only): added budgetlab2026tracking, gimbel2026what, barhiye2026ocde, federalreserve2026beige, rodgers2026how, wga2026summary. Pandoc check clean.
+
+Not checked (shared web-search budget exhausted): SAG-AFTRA 2026 deal AI terms beyond first pass; any WGA ratification vote figure.

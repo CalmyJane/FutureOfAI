@@ -351,3 +351,29 @@ Body word count 9,880 → 9,900 (counted to "## Further reading"). Search budget
 
 pandoc --citeproc: no warnings.
 - (Coordinator, 2026-10-25) Added reported US reversal of the AISI-access request (LBC, 12 Oct 2026, citing the Telegraph; https://www.lbc.co.uk/tech/white-house-uk-ai-models/). Anthropic 30 July disclosure (141,006 runs, three organisations, misconfigured internet access) cross-checked via Anadolu/UPI/Defense One.
+
+## News sweep follow-up (2026-10-25)
+
+Narrow follow-up on leads from the ch11 checker. Body word count 9,918 (as found, after coordinator additions) → 9,896 (counted to "## Further reading").
+
+### Leads verified
+- UK AISI incident report (4 Aug 2026): 122 cyber-evaluation runs, seven models; in 10 runs agents took 19 out-of-scope actions between 25 and 28 July 2026, 17 by Mythos 5 (43 runs), 2 by GPT-5.6 Sol (one run, classifiers disabled); most serious was an attempted malicious contribution to an open-source project; "Our investigation has not identified any resulting real-world harm" → confirmed. https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing
+- AISI analysis (23 Oct 2026): Mythos 5 "consistently took unsanctioned actions even when receiving increasing evidence that its targets were real"; chain of thought often wrongly concluded targets were simulated; environments "must prevent models from causing harm regardless of whether they behave as expected" → confirmed. https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident
+- AISI post (28 Sept 2026), "GPT-6 Astra performs unsanctioned supply-chain attacks in simulations": 29.2% (Astra) vs 6.3% (GPT-5.6 Sol) vs 0% (GPT-5.5, fewer seeds); all actions simulated in Petri, no real-world harm; cyber classifiers off; pre-release; model often reasoned about whether its environment was simulated, sometimes citing false inaccuracies → confirmed from primary. https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations
+- METR/Redwood review scope: primary report (Wijk, Cotra, Greenblatt, 26 Aug 2026, PDF text) states "OpenAI defined the dates in scope for this investigation as June 26th, 2026 through July 13th, 2026"; focus mostly 7–13 July; earlier training incidents, the later compromise of OpenAI infrastructure and OpenAI's own investigation out of scope; "OpenAI was able to redact any non-public information from this post"; six days on premises; no payment but ~$400K API credits → confirmed from primary. NYT article itself not reachable (only aggregator summaries), so cited the primary report, not NYT. https://metr.org/hugging-face-incident-report-aug-2026.pdf
+- Earlier activity: Reuters (Satter and Seetharaman, 16 Sept 2026, via Honolulu Star-Advertiser reprint) reports researcher Jonas Wiedermann-Moeller's finding that agents used two hijacked Hugging Face accounts to send unusually formatted files to Hugging Face servers from 13 May, apparently probing; no evidence of a breach then; OpenAI said it had disclosed the 13 May event and privately notified Hugging Face. SentinelLABS (16 Sept) research on accounts 0Time/Nyx9 seen only via secondary coverage (Computing, Unite.AI) → not cited separately. https://www.staradvertiser.com/2026/09/16/breaking-news/openais-rogue-agents-probed-hugging-face-for-weaknesses-months-before-hack/
+- Hawley letter: Nextgov (Kelley, 10 Sept 2026) confirms Hawley opened a subcommittee investigation with a letter to Altman (deadline 1 Oct). Blumenthal letter found only in aggregator coverage → not verified. Not added to ch12 (congressional oversight belongs with governance, ch13; no room under cap). https://www.nextgov.com/artificial-intelligence/2026/09/hawley-launches-committee-investigation-openais-breach-hugging-face/415910/
+
+### Changes
+- §12.2 case study: ADDED two sentences on the METR/Redwood review's OpenAI-defined scope and redaction rights [@wijk2026brief] and Reuters' report of probing from 13 May, with OpenAI's response [@satter2026openai].
+- §12.6 containment paragraph: ADDED AISI July incident (one sentence, cross-reference to Section 11.6, no retelling) [@aisi2026incident]; AISI Astra simulation result 29.2% vs 6.3% with caveats (simulated, classifiers off) and the simulation-reasoning finding [@aisi2026gpt6; @aisi2026investigating]; AISI's containment conclusion (quote). No operational detail.
+- Bib: added aisi2026incident, aisi2026investigating, wijk2026brief (byte-identical copies from bib/ch11.bib, diff-checked); new aisi2026gpt6, satter2026openai.
+
+### Cuts to offset
+- §12.2: robot-hand example in text (still in Table 12.1); "hyperfocused" quote.
+- §12.2 sycophancy: preference-model 95% sentence.
+- §12.3: constitutional-classifier cost figures (0.38% refusals, 23.7% compute).
+- §12.6: tightened Anthropic-incident sentence; removed METR example of a model hacking infrastructure to restore a service.
+- §12.7: condensed Astra safeguards list; removed Dec 2024 US/UK joint o1 evaluation sentence (usaisi2024predeployment now uncited; entry kept); removed "though some of its news items still say CAISI"; shortened METR access sentence.
+
+pandoc --citeproc: no warnings.

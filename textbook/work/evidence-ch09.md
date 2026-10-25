@@ -309,3 +309,52 @@ Trims to stay near the limit (no facts lost that are load-bearing): VALL-E hour 
 - No figure data or captions changed; no redraws.
 
 pandoc --citeproc: no warnings. wc -w 9,921 (incl. Further reading; body ≈ 9,750).
+
+## News sweep, second pass (2026-10-25)
+
+Continuation of the first pass, which had run out of searches. About 45 web searches plus direct fetches before the shared per-turn search limit was reached; topics not reached are listed at the end.
+
+### Developments checked
+- Meta *Adversarial Threat Report, Second Half 2026* (Aug 2026; PDF read in full, pp. 34–35; copy hosted on combatantisemitism.org, not found on transparency.meta.com) → "Every one of the CIB networks we disrupted and shared in this report incorporated some form of generative AI"; "full-stack synthetic personas", automated pipelines, video generation; "behavioral detection approaches remain effective" → **added** 1 sentence to §9.1 after the Dec 2024 "incremental gains" quote → https://combatantisemitism.org/wp-content/uploads/2026/09/Meta-H2-2026-Adversarial-Threat-Report.pdf . OpenAI Oct 2026 "false front" report (Russia op rated Category 5 on its Breakout Scale) seen only in secondary coverage (openai.com 403) → not used.
+- SynthID Detector opened to the public (Kohli, Google blog, 7 Oct 2026): "available globally in English starting today"; partners "OpenAI, NVIDIA, Kakao, and soon, Apple"; "over 180 billion images and videos" watermarked → **replaced** the Nov 2025 Gemini-app sentence (kohli2025how removed from bib; key only in ch09.bib) → https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/
+- Apple iPhone 18 Pro (Apple Newsroom, 9 Sept 2026): opt-in "Apple Reference Image", signed sensor data developed by Private Cloud Compute into "an unalterable reference image"; release does not mention C2PA/Content Credentials; mentions "upcoming support for the SynthID standard"; not at launch in China or for capture in the EU → **added** 1 sentence to §9.3 provenance adoption → https://www.apple.com/newsroom/2026/09/apple-debuts-iphone-18-pro-and-iphone-18-pro-max/
+- C2PA versions: 2.3 (Jan 2026, live video) and reportedly 2.4 (Apr 2026). Text cites 2.2 as source, not as "latest" → no change.
+- US midterms: Reuters (Ax & Coster, 28 Mar 2026, read via Star-Advertiser republication): NRSC deepfake ad of James Talarico, "AI generated" in easy-to-miss font, one of three national-Republican deepfake ads; 28 states with AI-in-political-ads laws, mostly disclosure (Public Citizen); "no federal regulation" → **added** to §9.4. NPR (16 Sept 2026) notes many AI ads are satire/parody → consistent with Kapoor & Narayanan; not cited. Minnesota deepfake law litigation (X Corp) unresolved → not added.
+- Brazil: TSE Resolution 23.755 (approved 2 Mar 2026, CNN Brasil): explicit, prominent AI labels; no new synthetic content 72 h before and 24 h after voting; AI systems may not recommend candidates; joint platform liability. AP (3 Sept 2026, via Jamaica Gleaner): TSE defined political-ad deepfake 5–2; declined 4–3 to punish Flávio Bolsonaro over AI images of his father. First round 4 Oct 2026 (Flávio Bolsonaro ≈47%, Lula ≈45%); run-off today, result not known → **added** 1 sentence (rules only) → https://www.cnnbrasil.com.br/eleicoes/tse-atualiza-regras-e-impoe-limites-a-ia-na-eleicao-de-2026/ ; https://jamaica-gleaner.com/article/world-news/20260903/electoral-court-sets-new-standards-ai-deepfakes
+- Sweden (13 Sept 2026; MPF "Holiday" network ~1,200 fake X accounts), Saxony-Anhalt (6 Sept 2026; fake videos against seven candidates, Zeit via secondary), Colombia (EU EOM run-off statement 23 June 2026 reportedly cites "unprecedented use of AI"; PDF 403) → secondary or unverified → not added.
+- UK CMA publisher conduct requirement (3 June 2026, GOV.UK): publisher controls to stop content being used in Google's AI search features; attribution with clear links; nine months to implement; six-monthly compliance reports → **added** to §9.7 → https://www.gov.uk/government/news/cma-secures-fairer-deal-for-publishers-and-improves-google-search-services-in-uk
+- European Commission antitrust investigation into Google's use of publisher/YouTube content for AI Overviews/AI Mode (AP, Kelvin Chan, 9 Dec 2025) → **added** half-sentence → https://www.wsls.com/business/2025/12/09/google-facing-a-new-antitrust-probe-in-europe-over-content-it-uses-for-ai/ . European Publishers Council complaint (Feb 2026) not added.
+- Penske Media v. Google (D.D.C.): Judge Mehta dismissed antitrust suit 30 Sept 2026, "an expectation is not an agreement", without prejudice (TheWrap, 1 Oct 2026; AP-style coverage on northeasttimes.com 403). Chegg's parallel suit reportedly also dismissed (secondary only) → **added** Penske only → https://www.thewrap.com/industry-news/public-policy-legal/penske-media-lawsuit-google-ai-search-dismissed/
+- Publisher deals (Google News AI pilot >400 publications; OpenAI India deals; new suits vs OpenAI by Seattle Times, Newsday etc.; Meta commercial terms 30 Oct 2026) → copyright/licensing belongs to Section 13.6; not added. Possible item for ch13 (not verified at primary level).
+- AI search traffic: Chartbeat Publisher Playbook (Google referrals −40.2% Jul 2025–Jul 2026), AOP study (Press Gazette, 20 July 2026) → vendor/trade data, not added; DNR 2026 figures unchanged. No new Pew study; no EBU/BBC 2026 follow-up found.
+- TAKE IT DOWN Act: first conviction 9 April 2026 (Ohio man, AI-generated images; Senate Commerce release 19 May 2026; DOJ SDOH release identified but not readable; defendant reportedly James Strahler II, sentenced Sept 2026 per Spectrum News); FTC enforcement from 19 May 2026, TakeItDown.ftc.gov, letters to 15 companies (FTC release) → **added** 1 sentence. **Corrects the first pass's "no prosecution found".** → https://www.commerce.senate.gov/press/rep/release/cruz-klobuchar-mark-one-year-of-take-it-down-act-as-ftc-enforcement-begins/ ; https://www.ftc.gov/news-events/news/press-releases/2026/05/ftc-begins-enforcing-take-it-down-act
+- DEFIANCE Act: passed Senate 13 Jan 2026, pending in House → not added.
+- UK: creation of sexually explicit deepfakes an offence from 6 Feb 2026 (Data (Use and Access) Act 2025 s.138; secondary sources); nudification-tool offence in Crime and Policing Bill → not added to Table 9.3 (flag for ch13 if it covers UK law).
+- Grok/X: no Commission preliminary findings and no Ofcom provisional decision found after 14 Oct 2026; Irish DPC GDPR inquiry and French criminal probe (Feb 2026) exist → box unchanged. Last search on Ofcom was blocked by the search limit.
+- DSA: no new X, Meta or TikTok non-compliance decisions found Jul–Oct 2026; TikTok/Romania still open → no change.
+- Persuasion: no larger study than Hackenburg et al.; arXiv 2604.09200 (14,779 UK adults, petition/donation actions) preprint → not added. Chatbot voting-advice audits (Copenhagen Apr 2026; Liberties/Hungary Jul 2026; Common Cause CITED California Oct 2026) → not added.
+- Detection: SynthForensics (arXiv 2602.04939, mean AUC drop 29%) and Runway "Turing Reel" (company study) → consistent with §9.2; not added.
+- International AI Safety Report: no new Key Update found → no change. YouTube automatic AI labels (May 2026) → not added.
+
+### Changes made
+1. §9.1: Meta Aug 2026 finding (every disrupted network used generative AI; behavioural detection still effective).
+2. §9.3: SynthID Detector public (Oct 2026) replaces Nov 2025 Gemini-app sentence.
+3. §9.3: Apple Reference Image (Sept 2026), no C2PA mention.
+4. §9.4: US midterm deepfake ads; 28 state laws; Brazil TSE rules.
+5. §9.7: CMA conduct requirement; Commission antitrust probe; Penske dismissal.
+6. §9.8: first TAKE IT DOWN conviction; FTC enforcement from 19 May 2026.
+Trims: Costello preprint 27.4% vs 2.4% (preprint-only figure, flagged unverifiable in FC3); Pew "no group below 12 points (11.9)" aside; Pew long-search sentence; closing-paragraph sentence repeating the debate box; StyleGAN2 gloss; diffusion "fresh randomness" gloss; Kapoor "most common non-deceptive use"; Piccardi "using a language model" repeat; Kaushal sentence tightened.
+
+### Bib
+Added: meta2026adversarial, kohli2026were, apple2026apple, ax2026ai, cnnbrasil2026tse, cma2026cma, chan2025google, bryant2026penske, senatecommerce2026cruz. Removed: kohli2025how (ch09 only). No shared entries touched.
+
+### Errors fixed
+- Evidence log first pass said no TAKE IT DOWN prosecution existed; one did (April 2026). No chapter text had asserted otherwise.
+
+### Figures
+No changes; no redraws.
+
+pandoc --citeproc: no warnings. Body (to Further reading) 9,895 words; file 10,096.
+
+### Not reached (search limit)
+Ofcom/Grok after 14 Oct; OpenAI Oct 2026 influence-operations report (primary); Colombia EU EOM wording; Brazil run-off outcome (today); Code of Practice signatory updates after 9 Sept.

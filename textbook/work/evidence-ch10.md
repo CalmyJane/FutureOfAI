@@ -318,3 +318,28 @@ Gaps from earlier logs, then spot-checks. The WebSearch budget ran out late in t
 
 ### Bib (ch10.bib only)
 - Added: mcclain2026how, liu2026effects, nyc2026mayor, folk2026how, duffy2026character, gold2026florida, opsahl2026kansas, zwillgen2026adams, garante2026character.
+
+### News sweep (2026-10-25), second pass: items left open by the first pass
+Developments checked
+- California SB 867 (AI toys): signed 10 Sep 2026. Ballard Spahr alert (11 Sep 2026) quotes the definition "a physical product designed, marketed, or manufactured for use in play by children under 16 years of age"; effective 1 Jan 2027; bars manufacture, sale, exchange, possession for sale or offering to retailers of "any toy that includes a companion chatbot"; safeguards do not avoid the ban → https://www.ballardspahr.com/insights/alerts-and-articles/2026/09/california-ai-toy-bill-brings-software-behavior-into-product-safety . Fenwick (9 Oct 2026): toy = product for children under 16; four-year moratorium through 1 Jan 2031; private right of action → https://www.fenwick.com/insights/publications/california-enacts-comprehensive-child-safety-laws-targeting-ai-chatbots . Senator Padilla's 1 Sep 2026 release (https://sd18.senate.ca.gov/node/422) says "under 16" and, later, "under 18" (inconsistent); January 2026 draft used 12 and under. Chaptered text on leginfo returned 403. Two law-firm analyses agree on under 16 → ADDED one sentence and a Table 10.3 row.
+- New York A10379-C / S9051-B (AI companions, features unsafe for minors): Assembly bill record (fetched 25 Oct 2026) shows Senate passed 4 Jun 2026, Assembly passed 5 Jun 2026, "returned to senate"; no delivery to governor or signature recorded → https://nyassembly.gov/leg/?default_fld=&leg_video=&bn=A10379&term=2025&Summary=Y&Actions=Y . ADDED half-sentence (passed, not signed by late October).
+- Texas AG v. OpenAI: Texas AG press release 23 Oct 2026, suit against OpenAI and Sam Altman under the Texas DTPA → https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-sues-openai-and-ceo-sam-altman-lying-users-and-harming-texans . ADDED one sentence.
+- FDA AI-enabled device list: still "Content current as of: 09/04/2026" on 25 Oct 2026; latest decision 06/29/2026 → no change.
+- FDA CDRH discussion paper "Considerations for the Regulation of Generative AI-Enabled Medical Devices" (18 Aug 2026; feedback by 19 Oct 2026; explicitly not draft guidance; two-axis risk framework) → Covington alert https://www.cov.com/-/media/files/corporate/publications/2026/08/fda-releases-highly-anticipated-discussion-paper-august-2026.pdf . ADDED one sentence in §10.4.
+- Agweyu et al., Nature Medicine 32(8):3032–3039 (online 26 Jun 2026), doi 10.1038/s41591-026-04503-6: pragmatic cluster-randomised trial, 16 Penda Health clinics, Kenya; 103 clinical officers; 9,691 patients 22 Apr–16 Jul 2025; treatment failure 102/4,693 (2.2%) vs 94/4,654 (2.0%); adjusted OR 0.77 (95% CI 0.55–1.08), P = 0.13; no safety signal (Crossref abstract). GPT-4o, background checking, Gates-funded, PATH-sponsored (NPR, 23 Jul 2026, via WFAE). ADDED to §10.5 (raw rates omitted from text because raw and adjusted directions differ; OR reported).
+- Google AMIE Lancet feasibility study (Oct 2026): already in text (brodeur2026conversational) → no change.
+- EU: Digital Omnibus kept AI-enabled medical devices under the AI Act (high-risk date 2 Aug 2028 already in text); MDR/IVDR targeted revision (Commission proposal 16 Dec 2025) in Parliament committee, vote expected Dec 2026 (secondary reporting) → no change.
+- Education: Oreopoulos, Liut, Sungu & Low, EdWorkingPaper 26-1552 (Aug 2026), >6,000 middle-schoolers, Hamilton County; AI vs CAL-only; delayed-test gains only marginally significant → not added (marginal results). State guidance: ~33–35 state education departments with AI guidance by mid-2026 (secondary tracker); US ED final grant-priority rule (Apr 2026) → not added. No national education-AI policy change Jul–Oct 2026 beyond NYC (already in text).
+- Companions surveys: Elon University (2 Sep 2026; 27% of adult internet users report AI companion relationships) — secondary; not added.
+
+Changes made (old → new)
+1. §10.4: added FDA genAI discussion-paper sentence (covington2026fda).
+2. §10.5: added Penda Health cluster-randomised trial (agweyu2026generative).
+3. §10.6: added "Texas sued on 23 October under its deceptive trade practices law" (texas2026attorney).
+4. §10.6: added SB 867 sentence (ballardspahr2026california; fenwick2026california) and New York S9051-B/A10379-C status (nyassembly2026a10379).
+5. Table 10.3: added SB 867 row; ballardspahr2026california added to caption sources.
+Body now 9,741 words (wc).
+
+Bib (ch10.bib only): added agweyu2026generative, covington2026fda, texas2026attorney, ballardspahr2026california, fenwick2026california, nyassembly2026a10379. Pandoc check clean.
+
+Figures: none changed.

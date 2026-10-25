@@ -14,20 +14,21 @@ def f1401():
     fig = F.figure(2.3)
     ax = fig.add_axes([0.25, 0.36, 0.72, 0.52])
     groups = ["High-level machine\nintelligence (HLMI)", "Full automation\nof labour (FAOL)"]
-    v22, n22 = [2060, 2164], [461, 202]
-    v23, n23 = [2047, 2116], [1714, 774]
+    v22 = [2060, 2164]  # Grace et al. (2025), as reported for the 2022 round
+    v23 = [2047, 2116]  # Grace et al. (2025)
+    v24 = [2042, 2098]  # Grace et al. (2026), 2024 round (fielded Dec 2024)
     y = np.array([1.0, 0.0])
     ax.axvline(2026, color=G2, lw=0.6, ls=(0, (3, 2)), zorder=1)
     ax.text(2026, 1.5, "today", ha="center", va="bottom", fontsize=7, style="italic")
-    for yi, a, na, b_, nb in zip(y, v22, n22, v23, n23):
-        ax.plot([b_, a], [yi, yi], color=G2, lw=1.0, zorder=2)
+    for yi, a, b_, c in zip(y, v22, v23, v24):
+        ax.plot([c, a], [yi, yi], color=G2, lw=1.0, zorder=2)
         ax.plot([a], [yi], "o", ms=5.5, mfc="white", mec=INK, mew=0.9, zorder=3)
-        ax.plot([b_], [yi], "o", ms=5.5, mfc=INK, mec=INK, mew=0.9, zorder=3)
-        # 2023 (earlier year) labelled to its left edge, 2022 to its right edge, so labels never collide
-        ax.text(a - 2.5, yi + 0.17, str(a), ha="left", va="bottom", fontsize=7.5)
-        ax.text(b_ + 2.5, yi + 0.17, str(b_), ha="right", va="bottom", fontsize=7.5)
-        ax.text(a - 2.5, yi - 0.17, f"n = {na}", ha="left", va="top", fontsize=6.2, color=G1)
-        ax.text(b_ + 2.5, yi - 0.17, f"n = {nb:,}", ha="right", va="top", fontsize=6.2, color=G1)
+        ax.plot([b_], [yi], "o", ms=5.5, mfc=G2, mec=INK, mew=0.9, zorder=3)
+        ax.plot([c], [yi], "o", ms=5.5, mfc=INK, mec=INK, mew=0.9, zorder=4)
+        # 2022 and 2023 labelled above, 2024 below, so close points never collide
+        ax.text(a, yi + 0.17, str(a), ha="center", va="bottom", fontsize=7.5)
+        ax.text(b_, yi + 0.17, str(b_), ha="center", va="bottom", fontsize=7.5)
+        ax.text(c, yi - 0.17, str(c), ha="center", va="top", fontsize=7.5)
     ax.set_xlim(2020, 2180)
     ax.set_ylim(-0.55, 1.5)
     ax.set_xticks(range(2020, 2181, 20))
@@ -38,11 +39,12 @@ def f1401():
     ax.spines["left"].set_visible(False)
     ax.set_xlabel("Year at which aggregate forecast reaches 50% probability", fontsize=7.8)
     h = [ax.plot([], [], "o", ms=5.5, mfc="white", mec=INK, mew=0.9, ls="none")[0],
+         ax.plot([], [], "o", ms=5.5, mfc=G2, mec=INK, mew=0.9, ls="none")[0],
          ax.plot([], [], "o", ms=5.5, mfc=INK, mec=INK, mew=0.9, ls="none")[0]]
-    ax.legend(h, ["2022 survey", "2023 survey"], loc="upper center", bbox_to_anchor=(0.38, -0.36), ncol=2,
-              fontsize=7.2, handletextpad=0.4, columnspacing=1.6)
-    ax.text(0.38, -0.58, "n = number of respondents answering that question", transform=ax.transAxes, ha="center",
-            va="top", fontsize=6.2, color=G1)
+    ax.legend(h, ["2022 survey", "2023 survey", "2024 survey"], loc="upper center", bbox_to_anchor=(0.38, -0.36),
+              ncol=3, fontsize=7.2, handletextpad=0.4, columnspacing=1.6)
+    ax.text(0.38, -0.58, "Values as reported for each round; the 2024 report's recomputation moves earlier rounds by up to six years.",
+            transform=ax.transAxes, ha="center", va="top", fontsize=6.0, color=G1)
     F.save(fig, "fig-14-01")
 
 
