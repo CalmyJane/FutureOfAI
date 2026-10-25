@@ -279,3 +279,20 @@ Bibliography: singh2025leaderboard and rein2023gpqa updated to published version
 
 Counts: gaps closed 10 (2 published since, 7 confirmed, 1 partly: o3 quote not re-fetched); spot-checks ~35 confirmed; text corrections 1 (Singh attribution); cuts 0.
 - (Coordinator, 2026-10-24) o3 quotation "By retracing the scaling path—this time in RL—we've pushed an additional order of magnitude in both training compute and inference-time reasoning, yet still see clear performance gains" confirmed via web search extract of https://openai.com/index/introducing-o3-and-o4-mini/ (company source).
+
+## News sweep (2026-10-25)
+
+Developments checked (claim → outcome → URL):
+- Largest compute estimate → Epoch notable_ai_models.csv re-downloaded 25 Oct 2026 (1,079 rows): GPT-6 Astra still largest (9.4e26, Likely, 2026-09-03); next Grok 4 5e26, GPT-4.5 3.8e26. Newer rows to 30 Sept 2026 (Claude Opus 5.5, GPT-6 Sol/Luna, GPT-6.1 Sol, Grok 4.7, Gemini 4 Argon, DeepSeek V4.1 Flash, Qwen3.8) carry no or smaller compute estimates. Meta's Muse Wonder (12 Oct 2026) not yet in dataset; TechCrunch gives no compute, chip or parameter figures. Grok 5 still unreleased (reports). No change. https://epoch.ai/data/notable_ai_models.csv ; https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/
+- Epoch trends dashboard → still "Updated Feb. 5, 2026"; all figures (5×/yr, 4–6×, 5.2 months, ~10,000×, 3.5×/yr cost, 3.4×/yr stock, 1.49×/yr, 30% inference, ECI 14 vs 6) unchanged. https://epoch.ai/trends
+- HLE leaderboard → top still GPT 6 Astra 54.80 ± 1.94; next Fable 5.1 (xhigh) 46.50. Page notes HLE-Rolling (continually updated fork) released 17 Sept 2026; not added (minor). https://labs.scale.com/leaderboard/humanitys_last_exam
+- METR time horizons → no new TH data; METR's 22 Sept 2026 pre-deployment report on Claude Opus 5.5 gives no time-horizon figure. No change. https://metr.org/blog/2026-09-22-claude-opus-5-5/
+- GPT-6 Astra post re-read (via r.jina.ai): company figures ARC-AGI-1 98.5%, GPQA Diamond 96.0%, HLE with tools 57.2%, OSWorld 2.0 offline partial 72.6%; no compute disclosure. Chapter uses dated historical figures (o3 ARC-AGI-1 2024; GPQA 2025 mean), so nothing made wrong. https://openai.com/index/gpt-6-astra/
+- Data stock → no 2026 Epoch update to Villalobos et al. found. No change.
+- ClockBench → OUTDATED: leaderboard now headed by Gemini 4 Argon High 83.3% (Claude Opus 5.5 Max 77.2%, GPT-6 Astra Max 75%; GPT-5.4 High 50.6% now 10th); site gives average human 90.7%, top human 95%; 180 clocks, 720 questions. https://clockbench.ai/
+
+Changes made:
+- §4.7: added "The gap is closing but has not closed: in October 2026 the benchmark's leaderboard was headed by Google's Gemini 4 Argon at 83.3%, against an average human score of 90.7%" (AI Index's 90.1% human figure kept for the March 2026 comparison). Table 4.4 ClockBench row: added "Gemini 4 Argon 83.3% (Oct 2026)"; caption sources + clockbench2026clockbench (new bib entry).
+
+Error sweep: re-read in full; arithmetic re-checked (80 million ×, 6ND values, GPU-hours, 77B/1.55T, 2.5× Astra/GPT-4.5, HLE ~4× from 13.4% to 54.8%); no new errors found.
+Pandoc --citeproc: no warnings. Body 8,754 words. Figures: no redraws needed.

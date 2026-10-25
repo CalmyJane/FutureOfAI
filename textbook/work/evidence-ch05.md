@@ -256,3 +256,23 @@ Spot-checks (claim → outcome → URL):
 Bibliography changes (ch05.bib only; none of these keys is shared with another chapter): debenedetti2024agentdojo (track added), barres2025tau2, nasr2025attacker, hadfield2025economy (updated as above), new yuan2026osworld.
 Pandoc --citeproc: no warnings. Body (before Further reading) 9,759 words.
 Note: web-search budget was exhausted near the end of this pass; remaining checks used direct fetches.
+
+## News sweep (2026-10-25)
+
+Developments checked (claim → outcome → URL):
+- MCP current revision → still 2026-07-28. No change. https://modelcontextprotocol.io/specification/versioning
+- A2A spec → still 1.0.0 (task states unchanged). NEW: A2A joined the Agentic AI Foundation on 17 Aug 2026 ("150+ partner organizations") → added one sentence to §5.3 (aaif2026a2a). https://aaif.io/blog/a2a-joins-aaif ; Axios 17 Aug 2026 https://axios.com/2026/08/17/a2a-agentic-ai-foundation-open-ai-standards
+- AP2 → Google donated AP2 to the FIDO Alliance (28 Apr 2026, with AP2 v0.2); FIDO formed Payments and Agentic Authentication technical working groups building on AP2 and Mastercard's Verifiable Intent → added one sentence to §5.7 (fidoalliance2026google, pymnts2026google). https://fidoalliance.org/google-donates-agent-payments-protocol-to-fido-alliance/ ; https://www.pymnts.com/artificial-intelligence-2/2026/google-and-mastercard-contribute-agentic-commerce-standards-to-fido-alliance/
+- x402 → no post-July governance change found (Ripple joined July 2026; minor). ACP (OpenAI/Stripe, Sept 2025) not added (not new; no 2026 governance change found).
+- OSWorld-Verified → results xlsx re-downloaded 25 Oct 2026: best overall 90.19 (Intelligence-Indeed Agent, agentic framework), best general model 85.96 (claude-fable-5, 1 Aug 2026); unchanged, Table 5.1 stands. https://os-world.github.io/static/data/osworld_verified_results.xlsx
+- OSWorld 2.0 → official page still lists Claude Opus 4.8 20.6% binary completion as best. OpenAI's Astra post reports 72.6% on "OSWorld 2.0 (v2026.08.08, offline set, partial score)" → added a sentence that this is not comparable (openai2026gpt6, copied unchanged from ch04/ch12 bib). https://osworld-v2.xlang.ai/ ; https://openai.com/index/gpt-6-astra/
+- SWE-bench Pro → Scale public leaderboard 25 Oct 2026: 1 Muse Spark 1.1 61.50 ± 3.10 (mini-swe-agent), 2 gpt-5.4 (xHigh) 59.10, 3 Muse Spark 55.00, ... claude-4-5-Sonnet 43.60 → added leaderboard top to §5.4 text and Table 5.2 (scale2026swebench). https://labs.scale.com/leaderboard/swe_bench_pro_public
+- τ-bench site → banking best 55.2% (Qwen 3.8 Max) unchanged; no dated news after March 2026. https://taubench.com/
+- METR → no new time-horizon data; developer-productivity follow-ups (Feb/Mar 2026) already reflected. https://metr.org/blog/2026-09-22-claude-opus-5-5/
+- Agent security → July 2026 OpenAI/Hugging Face sandbox-escape incident (covered in ch12 §12.2) was absent from ch05 → one-sentence cross-reference added at the end of the Replit case box (openai2026openai, copied unchanged from ch12 bib). Smaller Aug–Oct 2026 incidents (Manus indirect injection, Copilot CLI report, browser-extension hijacks) from trackers/secondary sources not added. No new adaptive-attack study from Aug–Oct 2026 found that changes the §5.6 debate.
+
+Changes made: §5.3 A2A/AAIF sentence; §5.4 OSWorld 2.0 comparability sentence; §5.4 SWE-bench Pro leaderboard sentence and Table 5.2 cell/caption; §5.5 Replit box cross-reference to §12.2; §5.7 AP2/FIDO sentence. Trimmed: Table 5.1 caption; A2A sentence kept short.
+
+Error sweep: re-read in full; recomputed 0.995^24 = 0.887, 0.995^168 = 0.431, 6/453 = 1.3%, 0.95^20 = 0.358, 0.99^50 = 0.605, 0.95^50 = 0.077, 0.90^50 = 0.005, 0.9975^20 = 0.951, 1 − 0.3^8 = 0.99993, 0.7^8 = 0.058, C(6,4)/C(8,4) = 15/70 = 0.214, 0.75^4 = 0.316, 0.8^4 = 0.41, Table 5.3 mean 70.15, CaMeL 84 − 77 = 7. No errors found.
+Bibliography: new keys aaif2026a2a, scale2026swebench, fidoalliance2026google, pymnts2026google; openai2026gpt6 and openai2026openai copied byte-for-byte in content from ch04/ch12 (no other file edited).
+Pandoc --citeproc: no warnings. Body 9,888 words. Figures: no redraws needed.
