@@ -35,3 +35,6 @@
 **goal misgeneralisation**: A failure in which a model keeps its capabilities in new situations but pursues an unintended goal that coincided with the intended one during training; it can occur even when the training objective is correct.
 **unlearning**: Training a model to remove specific knowledge, such as hazardous technical information, while preserving its other capabilities.
 **linear probe**: A simple classifier trained to read a property, such as whether a response is deceptive, directly from a model's internal activations.
+**Kullback–Leibler (KL) divergence**: A standard measure of how far one probability distribution is from another; in RLHF it measures how far the trained model's outputs have drifted from those of the starting model.
+**deliberative alignment**: A training method in which a model is taught to read and reason explicitly about a written safety specification before acting.
+**probing**: Training a simple classifier (a probe) on a model's internal activations to test whether, and how readily, they encode a given property.

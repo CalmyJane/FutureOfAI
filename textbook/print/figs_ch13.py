@@ -22,8 +22,8 @@ def f1301():
         ("Transparency risk: disclosure", "Chatbots · Deepfakes ·\nAI-generated content", "Art. 50; from Aug 2026", G3, INK),
         ("High risk: strict requirements", "Hiring, credit, education ·\nProduct safety components",
          "Annex III: Dec 2027; Annex I: Aug 2028", G2, INK),
-        ("Unacceptable risk:\nbanned", "Social scoring ·\nUntargeted face scraping ·\nEmotion recognition\nat work or school",
-         "Art. 5; since Feb 2025", G1, "white"),
+        ("Unacceptable risk:\nbanned", "Social scoring · face\nscraping · emotion at work",
+         "Art. 5; since Feb 2025\n+ deepfake, CSAM bans Dec 2026", G1, "white"),
     ]
     y = y0
     for (title, ex, note, fill, tc), h in zip(tiers, hs):
@@ -34,7 +34,8 @@ def f1301():
         if title.startswith("Unacceptable"):
             ax.text(xc, top, title, ha="center", va="top", fontsize=6.8, weight="bold", color=tc, linespacing=1.05)
             ax.text(xc, top - 6.0, ex, ha="center", va="top", fontsize=5.9, color=tc, linespacing=1.05)
-            ax.text(xc, y + 1.0, note, ha="center", va="bottom", fontsize=5.9, color=tc, style="italic")
+            ax.text(xc, y + 1.0, note, ha="center", va="bottom", fontsize=5.6, color=tc, style="italic",
+                    linespacing=1.0)
         else:
             nl = ex.count("\n") + 1
             ax.text(xc, top, title, ha="center", va="top", fontsize=7.0, weight="bold", color=tc)
@@ -67,6 +68,9 @@ def f1301():
             ha="center", va="top", fontsize=6.2, linespacing=1.15)
     ax.text(cx + cw / 2, 5.2, "Arts 51, 55; since Aug 2025", ha="center", va="bottom", fontsize=5.9, style="italic")
     arrow(ax, cx + cw / 2, 35.8, cx + cw / 2, 32.2, lw=0.7, ms=6)
+    # footnote: the tiers are not mutually exclusive
+    ax.text(xc, 0.9, "Tiers can overlap: a high-risk system may also carry transparency duties.",
+            ha="center", va="center", fontsize=5.6, style="italic", color=G1)
     save(fig, "fig-13-01")
 
 
@@ -82,15 +86,15 @@ def _dot(ax, x, y, kind, r=0.85):
 
 @fig("fig-13-02")
 def f1302():
-    H = 3.6
+    H = 4.3
     fig, ax = canvas(H, ylim=(0, 22.47 * H))
     x0, x1 = 6.0, 98.5           # Jan 2023 .. end of Dec 2026
 
     def X(y, m):
         return x0 + ((y - 2023) * 12 + (m - 1) + 0.5) * (x1 - x0) / 48
 
-    lanes = ["EU", "United States", "China", "UK", "International"]
-    LH, ybase = 14.3, 7.5
+    lanes = ["EU", "United States", "East Asia", "UK", "International"]
+    LH, ybase = 17.4, 7.5
     ly = {n: ybase + (len(lanes) - 1 - i) * LH + LH / 2 for i, n in enumerate(lanes)}
     for i, n in enumerate(lanes):
         yc = ly[n]
@@ -119,12 +123,16 @@ def f1302():
         ("EU", 2026, 7, "Omnibus in force", "f", "u", "center"),
         ("United States", 2023, 10, "EO 14110 signed", "e", "u", "center"),
         ("United States", 2025, 1, "EO 14110 revoked", "e", "u", "center"),
-        ("United States", 2025, 9, "California SB 53 signed", "f", "u", "left"),
-        ("United States", 2025, 12, "EO 14365 on state laws", "e", "d", "right"),
-        ("United States", 2026, 5, "Colorado law replaced", "f", "d", "left"),
-        ("China", 2023, 8, "Generative AI measures", "f", "u", "center"),
-        ("China", 2025, 9, "Labelling rules apply", "f", "u", "center"),
-        ("China", 2026, 7, "Anthropomorphic AI rules", "f", "u", "center"),
+        ("United States", 2025, 6, "Texas\nTRAIGA signed", "f", "d", "right"),
+        ("United States", 2025, 9, "California\nSB 53 signed", "f", "u", "right"),
+        ("United States", 2025, 12, "EO 14365 on\nstate laws", "e", "d", "center"),
+        ("United States", 2025, 12, "New York\nRAISE Act", "f", "u", "left"),
+        ("United States", 2026, 5, "Colorado law\nreplaced", "f", "d", "left"),
+        ("East Asia", 2023, 8, "China: generative AI", "f", "u", "center"),
+        ("East Asia", 2025, 6, "Japan: AI\nPromotion Act", "f", "d", "right"),
+        ("East Asia", 2025, 9, "China: labelling\nrules", "f", "u", "right"),
+        ("East Asia", 2026, 1, "Korea: AI\nBasic Act", "f", "d", "left"),
+        ("East Asia", 2026, 7, "China:\nanthropomorphic AI", "f", "u", "center"),
         ("UK", 2023, 3, "Pro-innovation white paper", "h", "u", "left"),
         ("UK", 2025, 2, "AI Security Institute", "h", "u", "center"),
         ("UK", 2026, 3, "Copyright report", "h", "u", "center"),
@@ -133,8 +141,9 @@ def f1302():
         ("International", 2024, 5, "Seoul commitments", "h", "u", "center"),
         ("International", 2024, 9, "CoE treaty opens", "f", "d", "left"),
         ("International", 2025, 2, "Paris statement", "h", "u", "center"),
-        ("International", 2025, 8, "UN Panel and Dialogue", "h", "d", "left"),
+        ("International", 2025, 8, "UN Panel and\nDialogue", "h", "d", "left"),
         ("International", 2026, 2, "India Impact Summit", "h", "u", "right"),
+        ("International", 2026, 5, "EU ratifies\nCoE treaty", "f", "d", "center"),
         ("International", 2026, 7, "UN Global Dialogue", "h", "u", "center"),
     ]
     MON = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()

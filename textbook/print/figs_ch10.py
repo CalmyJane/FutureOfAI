@@ -31,8 +31,8 @@ def f1001():
         yt = tutor[i]
         ax.text(x[i] + w / 2 + 0.01, yt + 4 if yt > 0 else 4, labs_t[i], ha="center", va="bottom", fontsize=7.5)
     ax.set_xlim(-0.6, 1.6)
-    ax.set_ylim(-30, 140)
-    ax.set_yticks([-20, 0, 20, 40, 60, 80, 100, 120])
+    ax.set_ylim(-30, 145)
+    ax.set_yticks([-20, 0, 20, 40, 60, 80, 100, 120, 140])
     ax.set_xticks(x)
     ax.set_xticklabels(groups, fontsize=8)
     ax.tick_params(axis="x", length=0, pad=4)
@@ -60,7 +60,7 @@ def f1001():
     bx.set_xticks([0, 0.2, 0.4, 0.6, 0.8])
     bx.set_ylim(-0.6, 2.6)
     bx.set_xlabel("Effect size (standard deviations)", fontsize=7.5)
-    fig.text(0.02, 0.425, "B. Effect sizes in two other randomised trials", fontsize=8.5)
+    fig.text(0.02, 0.425, "B. Effect sizes in two other trials (three estimates)", fontsize=8.5)
     fig.text(0.42, 0.0, "Different tests and settings: effect sizes are not directly comparable.",
              fontsize=6.8, style="italic", color=G1)
     F.save(fig, "fig-10-01")
@@ -95,7 +95,7 @@ def f1003():
     fig, ax = canvas(2.7, ylim=(0, 60))
     stages = ["Intake and\nhistory", "Tests and\nimaging", "Diagnosis", "Treatment\ndecision", "Documen-\ntation", "Follow-up"]
     tools = ["Patient-facing\nchatbot", "Image triage,\nscreening", "Diagnostic\nsuggestions", "Risk alerts", "Ambient\nscribe", "Reminders,\nmonitoring"]
-    evid = ["Conversation\nsafety study", "Screening\nRCT", "Clinician-\nwith-AI trial", "External\nvalidation", "Accuracy and\ntime study", "Outcome\nstudy"]
+    evid = ["Conversation\nsafety study", "Screening\nRCT", "Clinician-\nwith-AI trial", "External valid-\nation + impact\ntrial", "Time, accuracy\nand safety\naudit", "Outcome\nstudy"]
     x0, step, w = 14.0, 14.7, 11.2
     ys, yt, ye = 38, 20, 6
     hs, ht = 9, 8

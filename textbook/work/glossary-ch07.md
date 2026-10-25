@@ -15,8 +15,13 @@
 **tensor core**: A specialised unit inside a GPU that multiplies small blocks of two matrices and adds the result to a running total as a single operation; most of a modern AI chip's arithmetic is done by these units.
 **memory bandwidth**: The rate at which a chip can read data from its memory, measured in bytes per second; for generating text it often limits speed more than the chip's arithmetic capacity.
 **floating-point format (FP32, FP16, BF16, FP8)**: A way of storing numbers with a sign, an exponent that sets the range and a mantissa that sets the precision; formats with fewer bits are faster and use less memory but represent numbers more coarsely.
-**interconnect**: The links that carry data between chips and servers, such as NVIDIA's NVLink within a server or InfiniBand between servers; large training runs depend on their bandwidth.
+**interconnect**: The links that carry data between chips and servers, such as Nvidia's NVLink within a server or InfiniBand between servers; large training runs depend on their bandwidth.
 **advanced packaging**: The step in chip manufacturing that combines processor dies and memory stacks in one package that supplies power, removes heat and carries data between them; TSMC's CoWoS is the main technology used for AI accelerators.
 **total processing performance (TPP)**: The measure US export controls use to classify AI chips: twice the peak multiply-accumulate rate in trillions per second multiplied by the bit length of the operation.
 **power usage effectiveness (PUE)**: A data centre's total energy use divided by the energy used by its computing equipment; 1.0 would mean no energy for cooling or power conversion.
 **market-based and location-based emissions**: Two ways of reporting emissions from purchased electricity: market-based figures subtract clean electricity a company has contracted to buy, location-based figures use the average carbon intensity of the local grid.
+**electronic design automation (EDA)**: Software used to design and verify chips; three firms (Synopsys, Cadence and Siemens EDA) supply most of it, which has made it a target of US export controls.
+**arithmetic intensity**: The number of operations a workload performs for each byte it reads from memory; work with low intensity, such as generating text for one user, is limited by memory bandwidth rather than arithmetic.
+**H100-equivalent**: A unit for adding up computing capacity across different chips, expressed as the number of Nvidia H100 GPUs that would supply the same computing power.
+**High-Performance Linpack (HPL)**: The benchmark used to rank supercomputers, which times the solution of a large system of equations in 64-bit arithmetic; its results cannot be compared with 8-bit AI figures.
+**KV cache**: The intermediate results a language model stores for each earlier token so that it need not recompute them; reading it adds to memory traffic when inputs are long.

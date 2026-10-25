@@ -22,9 +22,10 @@ def f0101():
     label(ax, 92.5, 51.5, "AlexNet (2012)", fs=6.5, ha="right", italic=True, color=G1)
     box(ax, 54, 18, 39, 29, fill=G4, lw=0.8, style=sq)
     label(ax, 56.5, 43.7, "Foundation models", fs=7.6, ha="left", weight="bold")
-    # generative AI: dotted, overlaps the foundation-model region and extends beyond it
-    ax.add_patch(Ellipse((74, 25), 40, 24, fill=False, ec=INK, lw=0.8, ls=(0, (1, 1.6))))
-    label(ax, 74, 15.3, "Generative AI", fs=6.8, italic=True)
+    # generative AI: dotted; overlaps the foundation-model region and extends beyond it,
+    # out of deep learning into machine learning (not every generative model is a deep network)
+    ax.add_patch(Ellipse((63, 21), 60, 25, fill=False, ec=INK, lw=0.8, ls=(0, (1, 1.6))))
+    label(ax, 63, 11.6, "Generative AI", fs=6.8, italic=True)
     box(ax, 57.5, 22.5, 15, 11, "", fill="white", lw=0.7, style="round,pad=0,rounding_size=1.5")
     label(ax, 65, 29.6, "LLMs", fs=7.5, weight="bold")
     label(ax, 65, 25.6, "GPT-3 (2020)", fs=6, italic=True, color=G1)
@@ -36,7 +37,7 @@ def f0101():
     label(ax, 14.5, 33.5, "Expert systems", fs=6.6)
     label(ax, 14.5, 29.2, "MYCIN (1970s)", fs=6, italic=True, color=G1)
     # example inside ML but outside DL
-    label(ax, 36.5, 13, "Support\nvector\nmachines", fs=6.3, italic=True, color=G1)
+    label(ax, 36.5, 51, "Support\nvector\nmachines", fs=6.3, italic=True, color=G1)
     # agents: a usage pattern drawn across the boundaries
     ax.add_patch(F.FancyBboxPatch((26.5, 34.5), 45, 6.2, boxstyle="round,pad=0,rounding_size=1.2",
                                   fc=G3, ec=INK, lw=0.7, ls=(0, (3, 2)), zorder=3))
@@ -87,10 +88,10 @@ def f0102():
 # ---- fig-01-03: timeline (vertical, so every label fits on one line) -------
 
 def _ty(year):
-    """Piecewise-linear year -> y (top = 1950): compressed 1950-2005, expanded 2008-2026.5."""
+    """Piecewise-linear year -> y (top = 1950): compressed 1950-2005, expanded 2008-2026.8."""
     if year <= 2005:
         return 90 - (year - 1950) * (33 / 55)
-    return 54 - (year - 2008) * (52.5 / 18.5)
+    return 54 - (year - 2008) * (60 / 18.8)
 
 
 RESEARCH = [
@@ -101,6 +102,7 @@ RESEARCH = [
     (1973, "Lighthill report (1973)"),
     (1986, "Backpropagation paper (1986)"),
     (1990, "Statistical translation, IBM (1990)"),
+    (1998, "LeNet reads bank cheques (1998)"),
     (2009, "ImageNet dataset (2009)"),
     (2011, "Deep nets cut speech errors (2011)"),
     (2012, "AlexNet wins ImageNet (2012)"),
@@ -108,7 +110,11 @@ RESEARCH = [
     (2017, "Transformer (2017)"),
     (2018 + 9.5 / 12, "BERT: pre-trained transformer (2018)"),
     (2020 + 4.5 / 12, "GPT-3 (2020)"),
+    (2020 + 5.5 / 12, "Diffusion image models (2020)"),
+    (2021 + 6.5 / 12, "AlphaFold 2 protein structures (2021)"),
     (2021 + 7.5 / 12, "'Foundation model' coined (2021)"),
+    (2022 + 2.5 / 12, "InstructGPT: RLHF (2022)"),
+    (2023 + 2.5 / 12, "GPT-4, accepts images (2023)"),
     (2024 + 8.4 / 12, "Reasoning models, o1 (Sept 2024)"),
     (2025 + 0.6 / 12, "DeepSeek-R1 (2025)"),
 ]
@@ -119,11 +125,12 @@ DEPLOY = [
     (1990, "Second AI winter (from c. 1987; end disputed)"),
     (1997 + 4.5 / 12, "Deep Blue beats Kasparov (1997)"),
     (2022 + 10.97 / 12, "ChatGPT released (Nov 2022)"),
+    (2023 + 1.8 / 12, "LLaMA open-weight models (Feb 2023)"),
     (2023 + 10.25 / 12, "OECD definition revised (Nov 2023)"),
     (2024 + 4.5 / 12, "EU AI Act adopted (2024)"),
+    (2024 + 9.3 / 12, "Nobel prizes for AI work (Oct 2024)"),
     (2024 + 10.8 / 12, "Model Context Protocol (Nov 2024)"),
-    (2025 + 6.5 / 12, "700M weekly ChatGPT users (Jul 2025)"),
-    (2026 + 1.5 / 12, "900M weekly users, company figure (Feb 2026)"),
+    (2026 + 8.9 / 12, "1.2B weekly ChatGPT users, company figure (Sept 2026)"),
 ]
 AX = 50
 MR = 0.42      # marker radius
@@ -150,7 +157,7 @@ def _spread(ys, gap, lo, hi):
 
 def _side(ax, items, sign, gap=2.75):
     ys = [_ty(y) for y, _ in items]
-    ly = _spread(ys, gap, 1.6, 91)
+    ly = _spread(ys, gap, -5.4, 91)
     for (yr, txt), y, yl in zip(items, ys, ly):
         winter = "AI winter (" in txt
         xm = AX + sign * MOFF
@@ -165,7 +172,7 @@ def _side(ax, items, sign, gap=2.75):
 
 @fig("fig-01-03")
 def f0103():
-    fig, ax = canvas(4.4, ylim=(0, 95))
+    fig, ax = canvas(4.8, ylim=(-7, 95))
     # first winter, c. 1974-80 (approximate)
     ya, yb = _ty(1974), _ty(1980)
     ax.add_patch(Rectangle((AX - 3, yb), 6, ya - yb, fc=G4, ec=G3, lw=0.4, hatch="//////", zorder=0))
@@ -179,7 +186,7 @@ def f0103():
         ax.add_patch(Rectangle((AX - 3, y1), 6, y0 - y1, fc=G4, ec="none", alpha=1 - (i + 1) / (n + 1), zorder=0))
     # axis with a break between 2005 and 2008
     ax.plot([AX, AX], [_ty(1950) + 1.2, _ty(2005) - 0.4], color=INK, lw=0.9, zorder=2)
-    ax.plot([AX, AX], [_ty(2008) + 0.6, _ty(2026.5)], color=INK, lw=0.9, zorder=2)
+    ax.plot([AX, AX], [_ty(2008) + 0.6, _ty(2026.9)], color=INK, lw=0.9, zorder=2)
     for dy in (0, 1.1):
         by = _ty(2005) - 1.2 - dy
         ax.plot([AX - 1.3, AX + 1.3], [by + 0.5, by - 0.5], color=INK, lw=0.8)
@@ -195,8 +202,8 @@ def f0103():
         ax.text(x + 1.6, ty, txt, fontsize=6.4, ha="left", va="center", weight="bold", color=G1, linespacing=1.1)
     era(1956, 1988, 0.6, "Symbolic\nAI", _ty(1979))
     era(1990, 2010, 0.6, "Statistical\nML", (_ty(1990) + _ty(2010)) / 2)
-    era(2011, 2026.4, 0.6, "Deep\nlearning", _ty(2014))
-    era(2020, 2026.4, 2.2, "LLMs and\nagents", _ty(2023.2))
+    era(2011, 2026.8, 0.6, "Deep-\nlearning\nwave", _ty(2014))
+    era(2020, 2026.8, 2.2, "LLMs and\nagents", _ty(2023.2))
     label(ax, AX + 2.2, (_ty(2005) + _ty(2008)) / 2 - 0.4, "axis compressed before 2005", fs=5.9, ha="left",
           italic=True, color=G1)
     save(fig, "fig-01-03")

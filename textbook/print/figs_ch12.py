@@ -14,9 +14,9 @@ def _sx():
 
 @fig("fig-12-01")
 def f1201():
-    H, YT = 2.7, 60
-    fig, ax = canvas(H, ylim=(0, YT))
-    k = (H / YT) / _sx()          # x units per y unit, so holes are drawn round-ish
+    H, YT = 2.85, 60
+    fig, ax = canvas(H, ylim=(-3.5, YT))
+    k = ((H * YT / (YT + 3.5)) / YT) / _sx()          # x units per y unit, so holes are drawn round-ish
     y0, y1 = 22, 55               # slice bottom / top
     ym = (y0 + y1) / 2
     sw, shear = 5.6, 2.6          # slice width and top offset (tilt)
@@ -31,14 +31,18 @@ def f1201():
     for i, x in enumerate(xs):
         poly = [(x - sw / 2 - shear / 2, y0), (x + sw / 2 - shear / 2, y0),
                 (x + sw / 2 + shear / 2, y1), (x - sw / 2 + shear / 2, y1)]
-        ax.add_patch(F.matplotlib.patches.Polygon(poly, closed=True, fc=G3, ec=INK, lw=0.6, joinstyle="round", zorder=2))
+        sl = F.matplotlib.patches.Polygon(poly, closed=True, fc=G3, ec=INK, lw=0.6, joinstyle="round", zorder=2)
+        if i == 2:                # interpretability: research stage, not yet a deployable layer
+            sl.set_linestyle((0, (3, 2)))
+            sl.set_facecolor(G4)
+        ax.add_patch(sl)
         holes = [(yp, 2.3)] + extra[i] + ([(ys, 2.0)] if i == 0 else [])
         for hy, r in holes:
             ax.add_patch(F.matplotlib.patches.Ellipse((cx(x, hy), hy), r * 2 * k, r * 2,
                                                        fc="white", ec=G1, lw=0.4, zorder=3))
     labels = ["Alignment\ntraining", "Pre-release\nevaluations", "Interpretability\naudits",
               "Reasoning\nmonitoring", "Deployment\nsafeguards", "Governance\nframeworks"]
-    tags = ["12.1: RLHF,\nconstitutions", "12.3: red-teaming,\ncapability tests", "12.4",
+    tags = ["12.1: RLHF,\nconstitutions", "12.3: red-teaming,\ncapability tests", "12.4: research\nstage",
             "12.5: chain-of-\nthought monitors", "12.6: control\nprotocols,\ncontainment",
             "12.7: thresholds,\nexternal testing"]
     for x, l, t in zip(xs, labels, tags):
@@ -58,8 +62,9 @@ def f1201():
     gx = (cx(xs[0], y1) + cx(xs[1], y1)) / 2
     label(ax, gx, y1 + 2.6, "Stopped", fs=6.4, italic=True)
     ax.plot([gx, xstop - 0.3], [y1 + 0.9, ys + 2.6], color=G2, lw=0.5, zorder=4)
-    label(ax, 50, 1.6, "No single layer is complete; layering reduces the chance that all fail together.",
-          fs=6.4, italic=True)
+    label(ax, 50, 0.6, "No single layer is complete; layering helps most when layers fail independently.\n"
+          "A model that recognises tests, or monitors from the same model family, can line up the holes (11.5, 12.3).",
+          fs=6.2, italic=True)
     save(fig, "fig-12-01")
 
 

@@ -9,17 +9,21 @@ from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, 
 
 @fig("fig-07-01")
 def f0701():
-    fig, ax = canvas(3.55, ylim=(0, 80))
-    x0, w = 11, 61
-    h, gap, yb = 11.2, 1.8, 1.5
+    fig, ax = canvas(3.75, ylim=(0, 86))
+    x0, w = 10, 55
+    h, gap, yb = 13.0, 2.2, 2.0
     bands = [
-        ("Chip-making tools", "ASML (EUV: sole maker);\nZeiss (ASML’s sole optics supplier)", True),
+        ("Chip design", "Nvidia, AMD, Google (TPU), Huawei", False),
         ("Chip fabrication", "TSMC, Samsung", True),
         ("Memory & packaging", "SK Hynix, Samsung, Micron (HBM);\nTSMC (CoWoS), ASE, Amkor (packaging)", True),
-        ("Chip design", "Nvidia, AMD, Google (TPU), Huawei", False),
         ("Cloud & data centres", "Hyperscalers (e.g. Google, Amazon,\nMicrosoft, Meta); neo-clouds", False),
         (None, None, False),
     ]
+
+    def choke_mark(x, y):
+        node(ax, x, y, 1.8, fill=INK)
+        ax.text(x, y - 0.1, "!", ha="center", va="center", fontsize=6.8, color="white", weight="bold")
+
     ys = []
     for i, (name, ex, choke) in enumerate(bands):
         y = yb + i * (h + gap)
@@ -29,37 +33,40 @@ def f0701():
         box(ax, x0, y, w, h, fill=G4 if not choke else "white", lw=1.8 if choke else 0.7,
             style="round,pad=0,rounding_size=1")
         label(ax, x0 + 2, y + h - 3.0, name, fs=8, ha="left", weight="bold")
-        label(ax, x0 + 2, y + h - 5.3, ex, fs=6.3, ha="left", color=G1, va="top")
+        label(ax, x0 + 2, y + h - 5.4, ex, fs=6.2, ha="left", color=G1, va="top")
         if choke:
-            node(ax, x0 + w - 17.5, y + h / 2, 1.9, fill=INK)
-            ax.text(x0 + w - 17.5, y + h / 2 - 0.1, "!", ha="center", va="center", fontsize=7, color="white",
-                    weight="bold")
-            label(ax, x0 + w - 14.6, y + h / 2, "chokepoint", fs=6.8, ha="left", italic=True)
+            choke_mark(x0 + w - 3.2, y + h - 3.0)
     # top band: models & applications, split in two halves
-    y = ys[5]
+    y = ys[4]
     box(ax, x0, y, w, h, fill=G4, lw=0.7, style="round,pad=0,rounding_size=1")
     label(ax, x0 + 2, y + h / 2, "Models &\napplications", fs=8, ha="left", weight="bold")
     for k, (t, s) in enumerate((("Closed-weight", "API access"), ("Open-weight", "downloadable"))):
-        bx = x0 + 22 + k * 19.5
-        box(ax, bx, y + 1.3, 18, h - 2.6, fill="white", lw=0.6, style="round,pad=0,rounding_size=0.8")
-        label(ax, bx + 9, y + h / 2 + 1.3, t, fs=7)
-        label(ax, bx + 9, y + h / 2 - 1.7, s, fs=6.2, color=G1, italic=True)
-    # left arrow
-    arrow(ax, 4.5, yb, 4.5, ys[5] + h, lw=0.8)
-    ax.text(2.0, (yb + ys[5] + h) / 2, "depends on ←      supplies →", rotation=90, ha="center", va="center",
-            fontsize=6.6, color=G1)
-    # bracket for export controls (bands 1-4)
-    bx = x0 + w + 2.5
-    top = ys[3] + h
-    ax.plot([bx, bx + 1.2, bx + 1.2, bx], [yb, yb, top, top], color=INK, lw=0.8)
-    ax.plot([bx + 1.2, bx + 2.6], [(yb + top) / 2] * 2, color=INK, lw=0.8)
-    label(ax, bx + 3.6, (yb + top) / 2, "Targets of\nexport controls\n(2022–)", fs=7, ha="left", italic=True)
-    # energy box beside cloud band
-    y5 = ys[4]
-    box(ax, 82, y5 + 1, 15, h - 2, "Energy\n& grid", fill="white", fs=7.2, lw=0.7,
-        style="round,pad=0,rounding_size=1")
-    arrow(ax, 81.8, y5 + h / 2, x0 + w + 0.3, y5 + h / 2, lw=0.8)
-    label(ax, 89.5, y5 + h + 2.3, "needs electricity\n+ water", fs=6.2, color=G1, italic=True)
+        bx = x0 + 20 + k * 17.5
+        box(ax, bx, y + 1.5, 16, h - 3.0, fill="white", lw=0.6, style="round,pad=0,rounding_size=0.8")
+        label(ax, bx + 8, y + h / 2 + 1.4, t, fs=6.8)
+        label(ax, bx + 8, y + h / 2 - 1.8, s, fs=6.0, color=G1, italic=True)
+    # left arrow: each layer supplies the one above
+    arrow(ax, 5.0, yb, 5.0, ys[4] + h, lw=0.8)
+    label(ax, 2.4, (yb + ys[4] + h) / 2, "each layer supplies the one above", fs=6.4, color=G1, rot=90)
+    # side inputs on the right
+    sx, sw = 72, 26
+    sides = [
+        (0, "Design software (EDA)", "Synopsys, Cadence,\nSiemens EDA", True),
+        (1, "Chip-making tools", "ASML (sole EUV maker);\nZeiss (ASML’s optics)", True),
+        (3, "Energy & grid", "electricity + water", False),
+    ]
+    for i, name, ex, choke in sides:
+        y = ys[i]
+        box(ax, sx, y + 0.8, sw, h - 1.6, fill="white", lw=1.8 if choke else 0.7,
+            style="round,pad=0,rounding_size=1")
+        label(ax, sx + 1.6, y + h - 3.2, name, fs=6.8, ha="left", weight="bold")
+        label(ax, sx + 1.6, y + h - 5.4, ex, fs=5.9, ha="left", color=G1, va="top")
+        if choke:
+            choke_mark(sx + sw - 2.6, y + 2.8)
+        arrow(ax, sx - 0.2, y + h / 2, x0 + w + 0.3, y + h / 2, lw=0.8)
+    # legend
+    choke_mark(sx + 2.0, 82.0)
+    label(ax, sx + 4.6, 82.0, "chokepoint: one or\nvery few suppliers", fs=6.2, ha="left", italic=True)
     save(fig, "fig-07-01")
 
 

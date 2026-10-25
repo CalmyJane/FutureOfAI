@@ -21,11 +21,11 @@ def f0601():
     tags = [("Automate: search, summarise", 50, 83, "center"),
             ("Search: propose\ncandidates", 87.4, 61, "left"),
             ("Emulate: fast\nsurrogate", 87.4, 29, "left"),
-            ("Predict: fill gaps", 50, 6.6, "center"),
+            ("Predict: stand in for data", 50, 6.6, "center"),
             ("Automate:\nwrite code", 12.6, 29, "right"),
             ("Automate:\ndraft, review", 12.6, 61, "right")]
-    checks = ["Check\nsources", "Expert\njudgement", "Compare with\nreality", "Test on\nheld-out data",
-              "Read the\ncode", "Independent\nreplication"]
+    checks = ["Check\nsources", "Formal proof\nor synthesis", "Compare with\nobservations", "Blind\nexperimental test",
+              "Read and\nrerun code", "Peer review,\nreplication"]
     ax.add_patch(Ellipse((cx, cy), 36, 44, fc=G4, ec=G2, lw=0.6, ls="--"))
     label(ax, cx, cy, "Scientific\ncycle", fs=9.5)
     CP = [(50, 61), (59.5, 52.5), (59.5, 37.5), (50, 29), (40.5, 37.5), (40.5, 52.5)]
@@ -161,6 +161,7 @@ def f0603():
         ("Jul 2025", "Gemini Deep Think", "IMO 35/42 (gold); natural\nlanguage; certified", "c"),
         ("Nov 2025", "AlphaEvolve with\nTao et al.", "67 problems; several\nimproved (PNAS 2026)", "c"),
         ("Jan 2026", "GPT-5.2 Pro +\nAristotle", "Erdős #728 (intended\nversion) proved in Lean", "l"),
+        ("Sep 2026", "OpenAI (unreleased\nmodel)", "Navier–Stokes blow-up\nclaimed; Lean check\ncontested", "x"),
     ]
     y0 = 37
     ax.plot([2, 98], [y0, y0], color=INK, lw=0.9)
@@ -172,7 +173,7 @@ def f0603():
         return inv.transform((0, bb.y1))[1] - inv.transform((0, bb.y0))[1]
 
     for i, (d, n, t, k) in enumerate(ev):
-        x = 8 + i * 12
+        x = 6 + i * 11
         up = i % 2 == 0
         sgn = 1 if up else -1
         ax.plot([x, x], [y0, y0 + sgn * 6], color=G2, lw=0.6)
@@ -180,8 +181,10 @@ def f0603():
             ax.plot([x], [y0], "o", color=INK, ms=4.5)
         elif k == "c":
             ax.plot([x], [y0], "o", mfc="white", mec=INK, ms=4.5)
-        else:
+        elif k == "l":
             ax.plot([x], [y0], "s", color=INK, ms=4.5)
+        else:
+            ax.plot([x], [y0], "s", mfc="white", mec=INK, ms=4.5)
         # stack away from the axis: date, then name, then description; each block measured
         yy = y0 + sgn * 7
         va = "bottom" if up else "top"
@@ -193,7 +196,8 @@ def f0603():
     from matplotlib.lines import Line2D
     h = [Line2D([], [], ls="", marker="o", color=INK, ms=4, label="first reported in a peer-reviewed paper"),
          Line2D([], [], ls="", marker="o", mfc="white", mec=INK, ms=4, label="first reported by company or preprint"),
-         Line2D([], [], ls="", marker="s", color=INK, ms=4, label="Lean-verified proof")]
-    ax.legend(handles=h, loc="lower center", ncol=3, fontsize=6.3, bbox_to_anchor=(0.5, -0.02),
+         Line2D([], [], ls="", marker="s", color=INK, ms=4, label="Lean-verified proof"),
+         Line2D([], [], ls="", marker="s", mfc="white", mec=INK, ms=4, label="contested claim with Lean proof")]
+    ax.legend(handles=h, loc="lower center", ncol=2, fontsize=6.3, bbox_to_anchor=(0.5, -0.02),
               handletextpad=0.3, columnspacing=1.2)
     save(fig, "fig-06-03")

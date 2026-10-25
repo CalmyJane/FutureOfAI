@@ -23,3 +23,4 @@
 **orthogonality thesis**: Nick Bostrom's claim that intelligence and final goals can vary independently, so that a highly capable system could pursue almost any goal.
 **instrumental convergence**: The claim that agents with many different final goals would pursue similar intermediate goals, such as staying in operation and acquiring resources, because these help with almost any goal.
 **societal resilience**: The ability of societal systems to resist, absorb, recover from and adapt to shocks and harms, including harms from AI that technical safeguards fail to prevent.
+**autonomous weapon system**: A weapon that, once activated, selects and applies force to targets without further human intervention (the International Committee of the Red Cross's definition). Military uses of AI lie outside the scope of the International AI Safety Reports.

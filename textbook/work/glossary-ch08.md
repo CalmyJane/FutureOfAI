@@ -11,8 +11,9 @@
 **automation (of tasks)**: Use of a technology to carry out a task with little or no human involvement, replacing work previously done by a person.
 **Hulten's theorem**: A result in growth accounting (Charles Hulten, 1978) stating that, for small changes in a competitive economy, the economy-wide productivity gain from a technology is approximately each affected task's share of GDP multiplied by the cost saving in that task, summed over tasks.
 **total factor productivity**: The part of output growth that cannot be explained by increases in capital or labour, often treated as a measure of technological and organisational improvement.
-**productivity J-curve**: The pattern in which a new general-purpose technology at first lowers measured productivity growth, because complementary investments are poorly measured, and later raises it.
+**productivity J-curve**: The pattern in which a new general-purpose technology at first lowers measured productivity growth, because complementary investments are poorly measured, and later raises it; it is not the same as the gap between experimental and economy-wide gains, which mostly reflects how few work hours a technology yet touches.
 **deskilling**: The loss or weakening of human skills that occurs when a task is routinely handed over to a machine or AI system.
 **ironies of automation**: Lisanne Bainbridge's 1983 observation that automation leaves people with the hardest tasks, such as monitoring and taking over in emergencies, while eroding the skills those tasks require.
 **confidence interval**: The range of values for an effect that is consistent with a study's data at a stated level of statistical confidence (usually 95%); a wide interval means the estimate is imprecise.
 **ghost work**: Mary Gray and Siddharth Suri's term for task-by-task human labour, such as labelling data or moderating content, that is organised through online platforms and sits largely hidden behind apparently automated services.
+**Domar weight**: A sector's or task's sales divided by GDP, the weight Hulten's theorem actually uses; because sales include intermediate inputs, such weights can sum to more than one.

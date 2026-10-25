@@ -123,8 +123,11 @@ def f0902():
 
 @fig("fig-09-03")
 def f0903():
-    fig = F.figure(3.6)
-    ax = fig.add_axes([0.335, 0.215, 0.645, 0.725])
+    # Two panels with separate axes: the studies measure different quantities
+    # (treatment minus control; gap between two opposing AI advocates).
+    fig = F.figure(4.6)
+    axA = fig.add_axes([0.335, 0.665, 0.6, 0.27])
+    axB = fig.add_axes([0.335, 0.2, 0.6, 0.33])
     A = [
         ("Static AI message (GPT-4o)", 6.1),
         ("Static AI message (GPT-4.5)", 6.9),
@@ -135,38 +138,37 @@ def f0903():
         ("US 2024 presidential (Harris\nvs Trump), n = 2,306", 2.88, (2.02, 3.74)),
         ("Canada 2025 (Carney vs\nPoilievre), baseline", 10.05, (7.52, 12.57)),
         ("Poland 2025 (Trzaskowski\nvs Nawrocki), baseline", 9.94, (6.68, 13.20)),
-        ("Massachusetts psychedelics\nballot measure, non-extreme\nvoters (pro vs anti AI)", 22.73, (17.00, 28.46)),
+        ("Massachusetts psychedelics\nballot measure, n = 193\nnon-extreme voters", 22.73, (17.00, 28.46)),
     ]
-    ya = [11.4, 10.3, 9.2, 8.0]
-    yb = [5.6, 4.3, 3.0, 1.5]
     h = 0.66
+    ya = [4, 3, 2, 1]
     for (lab, v), y in zip(A, ya):
-        ax.barh(y, v, height=h, color=G3, edgecolor=INK, lw=0.5)
-        ax.text(v + 0.4, y, f"{v:.1f}", va="center", fontsize=7)
+        axA.barh(y, v, height=h, color=G3, edgecolor=INK, lw=0.5)
+        axA.text(v + 0.3, y, f"{v:.1f}", va="center", fontsize=7)
+    axA.set_yticks(ya)
+    axA.set_yticklabels([a[0] for a in A], fontsize=6.5, linespacing=1.05)
+    axA.set_xlim(0, 20)
+    axA.set_ylim(0.4, 4.6)
+    axA.set_xticks(range(0, 21, 5))
+    axA.set_xlabel("Effect: treatment minus control (points, 0\u2013100 scale)", fontsize=7.5)
+    axA.set_title("A  Hackenburg et al. (2025), UK, 707 policy issues", fontsize=7.5, weight="bold", loc="left", x=-0.52)
+    yb = [4, 3, 2, 1]
     for (lab, v, ci), y in zip(B, yb):
-        ax.barh(y, v, height=h, color=G1, edgecolor=INK, lw=0.5)
-        ax.errorbar(v, y, xerr=[[v - ci[0]], [ci[1] - v]], fmt="none", ecolor=INK, elinewidth=0.7, capsize=2.2, capthick=0.7)
-        ax.text(ci[1] + 0.5, y, f"{v:.2f}", va="center", fontsize=7)
-    ax.set_yticks(ya + yb)
-    ax.set_yticklabels([a[0] for a in A] + [b[0] for b in B], fontsize=6.5, linespacing=1.05)
-    ax.tick_params(axis="y", length=0, pad=4)
-    ax.spines["left"].set_visible(False)
-    # dashed reference line at 0, interrupted where the group headings run
-    for y0, y1 in ((0.5, 6.4), (7.3, 12.0)):
-        ax.plot([0, 0], [y0, y1], color=INK, lw=0.9, ls=(0, (3, 2)), clip_on=False)
-    ax.set_xlim(0, 30)
-    ax.set_ylim(0.5, 12.9)
-    ax.set_xticks(range(0, 31, 5))
-    ax.tick_params(axis="x", labelsize=7.5)
-    ax.set_xlabel("Persuasive effect (points on a 0\u2013100 scale)", fontsize=8)
-    ax.text(-0.5, 12.5, "Hackenburg et al. (2025), UK, 707 policy issues: treatment minus control",
-            transform=ax.get_yaxis_transform(), fontsize=7, weight="bold", ha="left", va="center")
-    ax.text(-0.5, 6.85, "Lin et al. (2025), elections: gap between opposing AI advocates",
-            transform=ax.get_yaxis_transform(), fontsize=7, weight="bold", ha="left", va="center")
-    ax.text(18.6, 9.7, "Durability: 36\u201342% of the\nconversation effect remained\nafter one month (Hackenburg\net al.); slightly more than\none third after more than\na month (Lin et al., US).",
-            fontsize=6.1, va="center", ha="left", linespacing=1.15,
-            bbox=dict(boxstyle="round,pad=0.4,rounding_size=0.3", fc=G4, ec=G2, lw=0.5))
-    fig.text(0.015, 0.012, "Dashed line at 0: average effect of campaign contact and ads in US general\nelections \u2248 0 (Kalla & Broockman 2018, 49 field experiments). Whiskers: 95% CIs.",
+        axB.barh(y, v, height=h, color=G1, edgecolor=INK, lw=0.5)
+        axB.errorbar(v, y, xerr=[[v - ci[0]], [ci[1] - v]], fmt="none", ecolor=INK, elinewidth=0.7, capsize=2.2, capthick=0.7)
+        axB.text(ci[1] + 0.5, y, f"{v:.2f}", va="center", fontsize=7)
+    axB.set_yticks(yb)
+    axB.set_yticklabels([b[0] for b in B], fontsize=6.5, linespacing=1.05)
+    axB.set_xlim(0, 32)
+    axB.set_ylim(0.4, 4.6)
+    axB.set_xticks(range(0, 31, 5))
+    axB.set_xlabel("Gap between pro-A and pro-B AI advocates (points, 0\u2013100 scale)", fontsize=7.5)
+    axB.set_title("B  Lin et al. (2025), election experiments", fontsize=7.5, weight="bold", loc="left", x=-0.52)
+    for ax in (axA, axB):
+        ax.tick_params(axis="y", length=0, pad=4)
+        ax.tick_params(axis="x", labelsize=7.2)
+        ax.spines["left"].set_visible(False)
+    fig.text(0.015, 0.012, "Durability: 36\u201342% of the conversation effect remained after one month (A); slightly\nmore than one third after more than a month (B, US). Whiskers: 95% CIs.",
              fontsize=6.4, ha="left", va="bottom", color=G1, style="italic", linespacing=1.15)
     F.save(fig, "fig-09-03")
 

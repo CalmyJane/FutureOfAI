@@ -284,7 +284,7 @@ Web-search budget for the session ran out after ~30 searches; remaining checks u
 
 ### Changes made
 1. §11.4 Cyber operations: new paragraph after the ISR 2026 findings ("That picture dated within months"): AISI/Mythos (April 2026), Hugging Face disclosure (July 2026), Reuters-reported criminal agent campaign (October 2026), with evidence caveat.
-2. §11.6: new paragraph after "The structure of the argument": the July 2026 OpenAI/Hugging Face incident as the nearest real event, framed against the report's definition (not loss of control: contained, runs ended) and its three conditions; cross-reference to Section 12.2.
+2. §11.6: new paragraph after "The structure of the argument": the July 2026 OpenAI/Hugging Face incident as the nearest real event, framed against the report's definition (not loss of control: contained, runs ended) and its three conditions; cross-reference to Section 12.2. [Superseded Oct 2026: the incident is now classed as reward hacking, not loss of control, told in full only in Section 12.2; see the revision section below.]
 New bib entries: aisi2026our, anthropic2026claude, huggingface2026security, khandelwal2026hackers, wijk2026brief; openai2026openai and openai2026hugging copied verbatim from bib/ch12.bib (same keys; ch12 entries not edited; openai2026openai also exists in ch05.bib).
 
 ### Errors fixed

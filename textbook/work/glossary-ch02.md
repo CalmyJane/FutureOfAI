@@ -1,4 +1,5 @@
 **activation function**: The simple rule a neuron applies to its weighted sum to produce its output, such as ReLU (keep positives, turn negatives into zero), the sigmoid (squash into the range 0 to 1) or tanh (squash into −1 to 1). Its non-linearity is what lets stacked layers do more than a single layer could.
+**active parameters**: In a mixture-of-experts model, the parameters actually used to process each token, as opposed to the total stored in the model; training and running costs depend on the active count.
 **Adam**: An optimiser that keeps, for every weight, a running average of recent gradients and of their squares, and moves each weight by the first divided by the square root of the second; this gives each weight its own step size, roughly bounded by a single learning-rate setting.
 **adversarial example**: An input altered by a small, deliberately chosen change, often invisible to people, that makes a trained network give a wrong answer with high confidence.
 **artificial neuron**: The basic unit of a neural network: it multiplies each input by a weight, adds the results and a bias, and passes the total through an activation function to give one output number.
@@ -17,8 +18,8 @@
 **epoch**: One complete pass through the training data during training.
 **feature map**: The grid of outputs produced by sliding one convolutional kernel across an input; high values mark where the kernel's pattern occurs.
 **generalisation**: A trained model's ability to perform well on new data it has not seen during training, estimated using held-out validation and test sets.
-**gradient**: The list of slopes of the loss with respect to every weight in a network: how much the loss would rise or fall if each weight were increased by a tiny amount.
 **gradient descent**: A method for training that repeatedly moves every weight a small step against its gradient, so that the loss decreases.
+**gradient**: The list of slopes of the loss with respect to every weight in a network: how much the loss would rise or fall if each weight were increased by a tiny amount.
 **graphics processing unit (GPU)**: A chip with thousands of small arithmetic units working in parallel, originally built for computer graphics; modern versions add dedicated units for matrix multiplication, the main arithmetic of neural networks.
 **hidden layer**: A layer of neurons between the input and the output whose values are not directly given in the training data; hidden layers learn intermediate representations of the input.
 **hyperparameter**: A setting chosen by people rather than learned by the training algorithm, such as the number of layers, the learning rate or the dropout rate; usually tuned on the validation set.
@@ -34,6 +35,7 @@
 **overfitting**: The situation in which a model fits its training data closely but performs worse on new data, because it has learned accidental quirks of the training examples as well as genuine patterns.
 **parameter**: A number inside a model, such as a weight or bias, that is adjusted automatically during training; model size is often stated as a parameter count.
 **pooling**: An operation that summarises neighbouring outputs of a convolutional layer, typically by keeping the largest value in each small block, which shrinks the map and reduces sensitivity to small shifts.
+**recurrent neural network (RNN)**: A network that reads a sequence one element at a time and passes a summary of what it has seen so far from each step to the next; long short-term memory (LSTM) networks are a widely used kind.
 **regularisation**: Any technique that reduces overfitting, such as weight decay, dropout, data augmentation or early stopping.
 **representation learning**: The learning of useful features directly from data, with successive layers re-describing the input (for images, edges, then motifs, parts and objects) instead of relying on features designed by hand.
 **residual connection**: A shortcut that adds a block's input to its output, so that the block only has to learn a correction to its input; it lets error signals pass through very deep networks and made networks with hundreds of layers trainable.
@@ -42,5 +44,5 @@
 **softmax**: A function that turns a list of raw scores into probabilities that are positive and add up to 1, by exponentiating each score and dividing by the total.
 **stochastic gradient descent (SGD)**: Gradient descent in which each step uses a gradient estimated from a small random batch of examples instead of the whole training set.
 **vanishing gradient problem**: The shrinking of error signals as they are passed backwards through many layers, which leaves the early layers of a deep network barely learning; the opposite effect is called exploding gradients.
-**weight**: A number attached to a connection that says how strongly, and in which direction, one input influences a neuron; positive weights push the output up, negative weights push it down.
 **weight decay**: A regularisation method that adds a penalty proportional to the sum of squared weights to the loss, so that each training step shrinks every weight slightly towards zero.
+**weight**: A number attached to a connection that says how strongly, and in which direction, one input influences a neuron; positive weights push the output up, negative weights push it down.

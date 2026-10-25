@@ -9,7 +9,7 @@ from figstyle import G1, G2, G3, G4, INK, arrow, box, canvas, fig, label, node, 
 
 @fig("fig-11-01")
 def f1101():
-    fig, ax = canvas(3.8, ylim=(0, 92))
+    fig, ax = canvas(3.9, ylim=(-3, 92))
     box(ax, 40, 84.5, 20, 5.5, "AI risks", fill=G4, fs=9, weight="bold")
     cols = [
         ("Malicious use", [("Fraud and\ndeepfakes", "Ch. 9, 11.4", False), ("Manipulation", "Ch. 9", False),
@@ -17,9 +17,9 @@ def f1101():
         ("Malfunctions", [("Unreliable\noutputs", "11.2", False), ("Bias*", "11.3", True),
                           ("Loss of control", "11.6", False)]),
         ("Systemic risks", [("Labour market", "Ch. 8", False), ("Monoculture,\ncorrelated errors", "11.5", False),
-                            ("Over-reliance\n(automation bias)", "11.5", False), ("Market\nconcentration", "11.5, Ch. 7", False),
+                            ("Over-reliance\n(automation bias)", "11.3, 11.5", False), ("Market\nconcentration", "11.5, Ch. 7", False),
                             ("Environmental\nharm*", "Ch. 7", True), ("Privacy*", "Ch. 10", True),
-                            ("Copyright*", "Ch. 13", True)]),
+                            ("Copyright*", "Ch. 13", True), ("Companion\ndependence", "10.6", False)]),
     ]
     w, gap = 29.5, 4
     x0 = (100 - 3 * w - 2 * gap) / 2
@@ -37,11 +37,11 @@ def f1101():
                 p.set_linestyle((0, (3, 2)))
             label(ax, x + 1, y - h / 2, name, fs=7, ha="left")
             label(ax, x + w - 0.6, y - h / 2, tag, fs=6.2, ha="right", color=G1, italic=True)
-            y -= h + 2.4
+            y -= h + 1.6  # tighter spacing so eight systemic boxes clear the bottom band
     label(ax, x0 - 0.4, 21, "* in 2025 report; outside 2026 report's scope", fs=6.3, ha="left", color=G1, italic=True)
     label(ax, x0 - 0.4, 18.6, "Surveillance and policing span all three\nfamilies (11.1, 11.3)", fs=6.3, ha="left",
           va="top", color=G1, italic=True)
-    box(ax, x0, 2.2, 3 * w + 2 * gap, 3.8, "Categories interact (11.7)", fill=G4, fs=7, italic=True, lw=0.5,
+    box(ax, x0, -1.6, 3 * w + 2 * gap, 3.8, "Categories interact (11.7)", fill=G4, fs=7, italic=True, lw=0.5,
         style="round,pad=0.4,rounding_size=0.8")
     save(fig, "fig-11-01")
 
