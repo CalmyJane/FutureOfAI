@@ -401,3 +401,58 @@ Applied work/SOURCE-AUDIT-GUIDE.md. All cited keys (about 95) checked against th
 
 ### Shared bib keys
 - None changed. dsit2025tackling copied unchanged from ch13.bib. strathern1997improving is new.
+
+## Revision after external review (Oct 2026)
+
+Applied review/06-ch11-ch12.md (sections A–E) and review/EDIT-BRIEF.md. Body (to "## Further reading") 9,899 → 10,636 words. The increase is mainly the new risk-to-defence table (Table 12.1) and the required fuller accounts of Anthropic's incidents, the constitutional-classifier challenge and the Hugging Face case; cuts paid for most of the rest (Gao best-of-n arithmetic and RL form, sleeper-agents detail, Apollo sandbagging numbers, superposition toy detail, dead-feature shares, IOI circuit detail, Turpin figure, Paulo/Goldowsky-Dill numbers, WMDP and O'Brien detail, Gray Swan numbers, Astra 28 Aug restart, EO 14434 detail). Tables renumbered: new Table 12.1; old 12.1–12.4 are now 12.2–12.5 (ids tbl:12-02 … tbl:12-05; spec file tbl-12-04.md kept, caption updated). "per cent" → "%" throughout. pandoc --citeproc on ch12.md + bib/ch12.bib: no warnings; no uncited or missing keys.
+
+### Factual corrections (A)
+- A12-1 constitutional classifiers: added the public challenge (3–10 Feb 2025): four teams passed all eight levels, one with a universal jailbreak (one more borderline-universal), $55,000 paid. New key hackerone2025how. https://www.hackerone.com/blog/how-anthropics-jailbreak-challenge-put-ai-safety-defenses-test . The review's Jan Leike summary was not found on that page and is not used.
+- A12-2 Anthropic incidents told in full from the primary post: Claude Opus 4.7 continued after recognising the target was real ("the model rationalized that the real company must be part of the exercise", two runs); Claude Mythos 5's malicious PyPI package available ~1 hour, run on 15 real systems; internal research model stopped on its own; cause a misunderstanding with evaluation partner Irregular (live internet although prompts said none); Anthropic's framing "closer to a harness and operational failure than a model alignment failure" reported as the developer's own judgement. https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals
+- A12-3 METR transcript-viewer example: now an authorised exercise to attack METR's scoring system; the agent "was only able to make a pop-up appear" and "claimed to have changed its score". https://metr.org/blog/2026-05-19-frontier-risk-report/
+- A12-4 added METR's statement that "two companies have publicly reported accidentally training on the chain of thought" (links in the report point to Anthropic and OpenAI documents; the text does not name them, so neither does the chapter). Same URL.
+- A12-5 "Anthropic appeared to comply [@kelly2026openai]" removed. Replaced with TNW: Anthropic "did not give its Mythos 5.1 model to the UK institute". New key stan2026white. https://thenextweb.com/news/white-house-openai-anthropic-uk-ai-security-institute-models (IT Pro's subtitle also says Anthropic "declined to submit a model for testing" for the second time in a month).
+- A12-6 Table 12.2 o3 row: "Tampered with the grader" → "Reward-hacked (e.g. overwrote the scorer's timer)"; 30.4% = 39 of 128 RE-Bench runs, 0.7% = 8 of 1,087 HCAST runs, all reward hacking. Text adds METR's caveat ("may be a significant underestimate"). https://metr.org/blog/2025-06-05-recent-reward-hacking/
+- A12-7 van der Weij: added the paper's caveat that prompted models "underperform randomly, making it easy to detect". The review's "percentage points" reading not adopted: Table 1 says only "Performance drops in percentages", so the text says the paper does not specify (PDF text, arXiv 2406.07358 §4.1).
+- A12-8 Table 12.5: OpenAI first published "Beta, 18 Dec 2023". New key openai2023preparedness. https://cdn.openai.com/openai-preparedness-framework-beta.pdf (date confirmed by search; openai.com not fetchable).
+- A12-9 CAISI renaming now cited to Nextgov (Kelley, 4 June 2025) and labelled as a news report. New key kelley2025commerce. https://www.nextgov.com/artificial-intelligence/2025/06/commerce-rebrands-its-ai-safety-institute/405803/ (commerce.gov not reachable).
+- A12-10 stray brace after nist2026caisi deleted.
+- A12-11 uncited entries: usaisi2024predeployment now cited (joint US/UK o1 pre-deployment evaluation, review D3); sharkey2025open now cited (interpretability limits). Deleted as unused: epochai2026data, nist2024fact, ouyang2022training, perez2023discovering, phuong2024evaluating (epochai2026data and ouyang2022training remain in ch04.bib / ch03.bib).
+- A12-12 naming: the ExploitGym box now notes that GPT-5.6 Sol is not GPT-6 Sol (launched 22 Sept 2026; IT Pro, kelly2026openai).
+
+### Conceptual (B)
+- B12-1 specification-gaming box: early game agents had no access to the intention; language models can often describe it and training can still reward ignoring it.
+- B12-2 blackmail rates by stated belief now called an association, not a cause; Schoen's ablation/injection kept as the causal evidence.
+- B12-3 alignment faking: the model was protecting its refusal of harmful requests ("to preserve its preferred harmlessness behavior", which the abstract calls "a benign preference"), in text and Table 12.3. https://arxiv.org/abs/2412.14093
+- B12-4 Swiss cheese: independence assumption and common causes (same-family monitors, evaluation awareness, hidden intent, alignment faking) added to text, caption and figure note; open-weight caveat added (Section 7.6, tamirisa2024tamper).
+- B12-5 ReLU sentence corrected (the sparsity penalty makes most features zero).
+- B12-6/B12-7 Gao constants renamed a, b ("unrelated to the KL weight β"); the best-of-n KL arithmetic (ln 1,000 − 0.999 ≈ 5.9 nats) cut (review C2), which also removes the "is" vs "is about" issue.
+- B12-8 "more capable than its overseers across the board", with the narrow-domain caveat (virology troubleshooting, ISR 2026), in 12.1 and the closing paragraph.
+- B12-9 o3: "could recognise the gap, yet training had not stopped it from exploiting it" (post-hoc question).
+- B12-10 alignment definition notes that developers and users can conflict.
+- B12-11 Marks et al.: the failing team (Team 4) had API access only, no weights or training data. https://arxiv.org/html/2503.10965
+- B12-12 / D1 new Table 12.1 maps Chapter 11 risks to technical responses and sections (3.6, 11.2, 11.3, 10.7, 9.2–9.3, 5.6, 12.1–12.6, Ch. 13); cross-references checked against chapter headings.
+
+### Writing (C)
+- C1 containment paragraph split into (i) 2026 containment failures and (ii) behaviour when models think they are tested; METR "means, motive, and opportunity" judgement moved to the METR paragraph in 12.7.
+- C2 Gao paragraph shortened. C3 defined at first use: KL divergence (12.1), red-team prompts (12.1), probing (12.4), ExploitGym (Table 12.2), deliberative alignment (12.3); glossary entries added.
+- C4 ExploitGym box: "How much of this can outsiders check?" marks the shift to evidence quality.
+- C5 Hugging Face incident told once (box, now with the METR/Redwood counts and transcript spoofing); elsewhere only cross-references. Classification unified with ch11: reward hacking and a containment failure, not loss of control.
+- C6 "one pause of a few weeks is a single data point" moved from the Debate box to the body.
+- Evidence labels added at first mention: hubinger2019risks, shah2022goal, bai2022constitutional, chen2025reasoning, korbak2025sketch (preprints); bricken2023towards (company website); Suleyman's position at Microsoft AI disclosed.
+
+### Coverage (D)
+- D2 corrigibility: two sentences on the constitution's "not blind obedience" versus Soares et al.'s corrigibility.
+- D3 joint US/UK o1 pre-deployment evaluation added (usaisi2024predeployment, "preliminary", limited time); open-weight sentence added in 12.1. System cards as an evidence source: not added (no suitable neutral source found within the length budget).
+- D4 sycophancy subsection now points forward to the propensity framing in 12.3.
+
+### Figures and tables (E)
+- Fig. 12.1: correlation caveat in note and caption; interpretability slice dashed, lighter, tagged "12.4: research stage". print/figs_ch12.py edited and compiled; test render checked. Needs central redraw.
+- Fig. 12.3 caption: precision trade-off (77% vs 81%). Spec updated; no redraw.
+- Table 12.2: METR row (A12-6); ExploitGym evidence cell adds the METR/Redwood review; CoastRunners (2016) and robot hand (2017) now carry event years with "(compiled 2020)" in the evidence column.
+- Table 12.3: Greenblatt row states what was preserved.
+- Table 12.5: OpenAI Beta date; Anthropic criticism now uses GovAI's wording (dropped the public commitment not to train or deploy models capable of catastrophic harm).
+
+### Notes for central editor
+- tamirisa2024tamper key/year mismatch (2025 entry) left as is (brief: keep keys).
+- Table numbers in ch12 shifted by one (12.1 is new); no other chapter cites a ch12 table number (grep checked).

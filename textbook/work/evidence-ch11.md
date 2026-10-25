@@ -366,3 +366,53 @@ Applied work/SOURCE-AUDIT-GUIDE.md. All 75 cited keys checked against the claims
 
 ### Shared bib keys
 - None changed. neurips2025announcing is new (no other bib has it).
+
+## Revision after external review (Oct 2026)
+
+Applied review/06-ch11-ch12.md (sections A–E) and review/EDIT-BRIEF.md. Body (to "## Further reading") 9,895 → 10,397 words; the additions (military AI, deskilling magnitude, AISI configuration, Mythos 5 introduction, scepticism about the espionage report) were partly paid for by cutting number dumps (MIT causal-coding shares, FBI complaint counts, Raji/Kairos percentages, Whisper harm list, Dahl detail, ASL-3 quote). pandoc --citeproc on ch11.md + bib/ch11.bib: no warnings; no uncited or missing keys.
+
+### Factual corrections (A)
+- A11-1 96% deepfake figure: now dated as a 2019 Deeptrace count (ISR 2026 ref. 303, Ajder et al. 2019), with "the report cites no more recent census"; 2.2% now attributed to Umbach et al. (CHI 2024, 16,000+ respondents, 10 countries; ISR ref. 287). Undated 77%/80% detection figures dropped; replaced by the report's "no better than chance" finding (refs 314–315). Paragraph reordered to lead with its claim. New keys ajder2019state, umbach2024non. Sources: ISR 2026 PDF (arXiv 2602.21012) text, refs 287/303; https://api.crossref.org/works/10.1145/3613904.3642382
+- A11-2 deskilling: kept the report's "approximately 6% lower" and added the study's ADR 28.4% → 22.4% (6 percentage points, relative fall ≈21%, "about a fifth"), adenomas = precancerous polyps. https://wrap.warwick.ac.uk/id/eprint/191005 (abstract: "28·4% (226 of 795) before to 22·4% (145 of 648)").
+- A11-3 "the latest" → "the most recently publicised, ... arrested in 2021 on Maryland warrants" (Kimberlee Williams, arrested 23 June 2021; ACLU, 14 Apr 2026). https://www.aclu.org/news/privacy-technology/more-than-a-dozen-wrongful-arrests-due-to-police-reliance-on-facial-recognition-technology
+- A11-4 AISI incident: "19 out-of-scope actions that reached real people" → "19 out-of-scope actions on the live internet, some aimed at real people and organisations"; added that AISI itself enabled internet access and switched off the developers' cyber classifiers, and contained the behaviour within about an hour. AISI post quotes: "Internet access was deliberately enabled"; "The developers' cyber classifiers were deliberately switched off"; "Some actions had a limited real-world effect, but in contained circumstances"; "within roughly one hour of discovery". https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing
+- A11-5 Mythos 5 introduced at first mention: successor to Mythos Preview, released 9 June 2026 only to Glasswing (vetted cyber-defence) partners, "the same underlying model as Fable 5, but with the safeguards lifted in some areas". New key anthropic2026fable. https://www.anthropic.com/news/claude-fable-5-mythos-5 (company announcement; corroborated by Decrypt, 9 June 2026).
+- A11-6 "Hugging Face had already contained the intrusion" → "had already detected and stopped the attack when OpenAI contacted it" (same wording as ch12).
+- A11-7 700/1,200 agent counts moved to the ch12 box with the review's dates (1,200 agents on the board 8–13 July; ~700 actively attacking by 11 July). https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
+- A11-8 NorForge/Reuters: now "according to a Reuters investigation reported by The Hacker News"; added ~10% success rate, three clusters, Reuters' attribution of tactics to one Chinese-speaking operator (not confirmed for all clusters), models unconfirmed; caveat now explicitly limited to this case. https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html
+- A11-9 "most widely cited" → "most authoritative intergovernmental taxonomy"; "the Safety Report" adopted as the short name after first mention (C5).
+- A11-10 Table 11.1: MIT Domain 2 (privacy and security) added under Systemic, "in part"; caption notes it spans systemic and malicious use.
+- A11-11 LeCun: "direct denial of instrumental convergence" replaced by the reply that instrumental convergence predicts power-seeking as a sub-goal; the real dispute is whether tool-like systems have open-ended goals.
+- A11-12 Narayanan & Kapoor "monitoring should detect ..." recast explicitly as the author's reading of their diffusion argument (the passage was not found in the essay; see Cuts and non-uses above).
+- A11-13 DNA-screening overclaim sentence cut.
+- A11-14 cloud shares: kept the report's 2024 "67%" and replaced the Statista Q1 2024 split with Synergy Research Q2 2026 (Amazon 28%, Microsoft 20%, Google 15%; 63% is the author's sum). New key synergy2026q2. https://www.srgresearch.com/articles/q2-cloud-market-passes-143-billion-highest-growth-rate-in-eight-years (30 July 2026; market-research press release).
+- A11-15 souly2025poisoning: "accepted at NeurIPS 2026, to be presented in December". Key not renamed (brief: keep keys).
+- A11-16 lineups: "at least two" → three photo-lineup cases (Robert Williams, Michael Oliver, Porcha Woodruff) plus an officer's comparison (Nijeer Parks); citation moved to sentence end. https://www.aclu.org/news/privacy-technology/police-say-a-simple-warning-will-prevent-face-recognition-wrongful-arrests-thats-just-not-true
+
+### Conceptual (B)
+- B11-1 OpenAI–Hugging Face incident: now classed as reward hacking, not loss of control, with transcript spoofing as an early instance of oversight evasion; ch12 uses the same classification. Told in full only in the ch12 case box; ch11 keeps two sentences plus cross-references (11.4 → 12.2; 11.6 → 12.2 and 12.6).
+- B11-2 monoculture mechanism reworded (different algorithms let another firm pick up a misjudged candidate), not error averaging.
+- B11-3 Gender Shades "introduced" → "brought intersectional auditing into machine-learning practice".
+- B11-4 situational awareness: "what the report calls ... (in its usage, ...)".
+- B11-5 Table 11.3 column "Premise"; caption says premises 1–5 refer to the period to 2070.
+- B11-6 espionage box: added researchers' criticism (no indicators of compromise, no independent corroboration). New key toulas2025anthropic (BleepingComputer, 14 Nov 2025; quotes Kevin Beaumont, Daniel Card). https://www.bleepingcomputer.com/news/security/anthropic-claims-of-claude-ai-automated-cyberattacks-met-with-doubt/ . July 2026 incidents now explicitly framed as test-configuration failures (enabled internet access, disabled classifiers, misconfigured harness).
+
+### Writing (C)
+- C2 l.125 paragraph reordered (claim first, two dated figures); NCSC yardstick digression reduced to a parenthesis; l.137 caveat limited to the third case.
+- C3 Figure 11.1 sentence replaced with the review's wording. C4 "therefore" → "This is why". C6 "What links the two ends is structure." C8 last sentence of the risk paragraph folded into the Hazard box.
+- "%" throughout ("a few per cent" → "a small probability").
+
+### Coverage (D)
+- D1 new subsection "Military uses, outside the frame" (~230 words): ISR 2025 p. 27 scope exclusion ("Such topics are covered in other fora and are outside the scope of this report"; ISR 2025 PDF, arXiv 2501.17805); ICRC definition (12 May 2021) https://www.icrc.org/en/document/icrc-position-autonomous-weapon-systems ; UNGA A/RES/79/62, 2 Dec 2024, 166–3–15 https://digitallibrary.un.org/record/4071100 (record page 403 to the fetcher; vote confirmed via search snippet of the record and Arms Control Today) and Klare, Arms Control Today, Dec 2024 (no binding CCW instrument) https://www.armscontrol.org/act/2024-12/news/un-moves-expand-autonomous-weapons-discussions ; +972 Magazine Lavender investigation (Abraham, 3 Apr 2024: six officers, up to 37,000 marked, ~20 seconds per target, IDF: "auxiliary tools that assist officers", denies kill list) https://www.972mag.com/lavender-ai-israeli-army-gaza/ — labelled as anonymous-source news. New keys icrc2021icrc, unga2024lethal, klare2024un, abraham2024lavender.
+- D2 signposts: Grok case (Section 9.8) at the intimate-imagery passage; companions/dependence (Section 10.6) in 11.5, citing ISR 2026 sec. 2.3.2 (Box 2.6 "AI companions", under risks to human autonomy); Figure 11.1 gets a "Companion dependence — 10.6" box.
+- D3 the July 2026 incident detail moved to ch12 (11.6 shortened).
+- D4 (evidence-type tags in Table 11.1 / moving "quality of evidence"): not done; optional suggestion, and the section works where it is.
+
+### Figures and tables (E)
+- Fig. 11.1: companion box added; automation-bias tag "11.3, 11.5"; spacing adjusted; caption says the figure is selective (R&D divide in Table 11.1). print/figs_ch11.py edited and compiled; test render checked for overlaps. Spec updated. Needs central redraw.
+- Fig. 11.2 caption: "as means across pairs of models". Table 11.2 caption: 26-model AI Index subset vs 36 at launch.
+- Table 11.4: the nuclear row already has "Superforecasters / nuclear domain experts" in the Group column; no change needed (review E point rejected as already satisfied).
+
+### Not changed / notes for central editor
+- grace2025thousands has both number = {9} and a note "Article 9" (review F); entry is shared with other chapters, so left unchanged.
+- Evidence-label pass: first mentions in ch11 checked for company (Anthropic, Google GTIG, Microsoft, OpenAI), preprint (AA-Omniscience, Kalai, Hong), working paper (XPT), news (The Markup, Reuters via The Hacker News, +972, BleepingComputer) and market data (Synergy); all now attributed.
