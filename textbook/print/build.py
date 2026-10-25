@@ -238,7 +238,7 @@ def stamp_pagelines(document, doc, pdf_path):
         writer.pages[pi].merge_page(overlay.pages[k])
     for k, pi in enumerate(order):
         writer.pages[pi].compress_content_streams()
-    writer.compress_identical_objects(remove_identicals=True, remove_orphans=True)
+    writer.compress_identical_objects(remove_duplicates=True, remove_unreferenced=True)
     with open(pdf_path, "wb") as f:
         writer.write(f)
     return len(pages)
