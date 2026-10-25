@@ -23,3 +23,6 @@
 **polarisation**: The growing distance or hostility between political groups, measured either as differences in views (issue polarisation) or as dislike of the other side (affective polarisation).
 **Digital Services Act**: The EU regulation (2022/2065) that sets duties for online platforms, including annual systemic-risk assessments and mitigation for the largest platforms and search engines, enforceable by fines of up to 6% of worldwide turnover.
 **non-consensual intimate imagery (NCII)**: Sexual or intimate images of an identifiable person published without their consent, including AI-generated "digital forgeries".
+**rectified flow**: A variant of diffusion-style image generation in which the model learns a straight-line path between noise and image, used in Stable Diffusion 3.
+**AI content farm**: A news-like website whose content is substantially produced by AI and published without significant human oversight, usually to earn advertising revenue.
+**LLM grooming**: Deliberately seeding the web with content, such as propaganda articles, so that language models trained on it or retrieving from it repeat its claims.

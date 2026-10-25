@@ -27,3 +27,4 @@
 **adaptive attack**: An attack on a security defence that is deliberately tailored to the defence's design, as opposed to a fixed set of previously known attack inputs.
 **mandate (AP2)**: In the Agent Payments Protocol, a cryptographically signed record of what a user authorised, such as the conditions for a purchase or a specific cart and price.
 **x402**: An open protocol that uses the HTTP status code 402 "Payment Required" to let a client, including an AI agent, pay for a web resource within the same request.
+**time horizon (50%)**: METR's measure of agent capability: the length of software task, timed on skilled humans, that an agent completes with 50% predicted success.

@@ -8,7 +8,7 @@
 **numerical weather prediction**: Forecasting the weather by solving the physical equations of the atmosphere on a computer, starting from an estimate of its current state.
 **data assimilation**: The process of merging fresh observations with a model to produce the best estimate of the current state of a system, such as the atmosphere, from which a forecast starts.
 **reanalysis**: A consistent reconstruction of past weather, made by combining historical observations with a fixed modern weather model; ECMWF's ERA5 is the standard example.
-**graph neural network**: A neural network that works on data represented as nodes connected by edges, such as atoms linked by bonds in a crystal or points on a mesh covering the globe.
+**graph neural network**: A neural network that works on data represented as nodes connected by edges, such as atoms linked to their near neighbours in a crystal or points on a mesh covering the globe.
 **root mean square error (RMSE)**: A measure of forecast error: the square root of the average squared difference between forecast and verifying values; lower is better.
 **anomaly correlation coefficient (ACC)**: A measure of whether a forecast gets departures from normal weather right, from 1 (perfect) to 0 (no better than climatology).
 **continuous ranked probability score (CRPS)**: A score for probabilistic forecasts that rewards a range of predicted outcomes centred on what happened and neither too narrow nor too wide.
@@ -28,3 +28,5 @@
 **illusions of understanding**: Messeri and Crockett's term for situations in which reliance on AI tools leads researchers to believe they understand more about the world than they actually do.
 **scientific monoculture**: A state in which a few methods, questions or viewpoints dominate a field and crowd out alternatives, making it less innovative and more prone to shared errors.
 **intellectual debt**: Zittrain's term for the accumulated cost of using answers that work without knowing why they work, on the assumption that the explanation will come later.
+**protein design**: Choosing an amino-acid sequence, and often a new backbone shape, so that a protein that has never existed folds into a desired structure and performs a desired function, such as binding a target.
+**floorplanning (chip design)**: Deciding where the large circuit blocks of a chip are placed on the silicon, which affects its power use, speed and area.
