@@ -1,0 +1,5 @@
+# build outputs: the PDF is published as a GitHub release by .github/workflows/book.yml
+textbook/delivery/*.pdf
+textbook/print/book.html
+textbook/print/all.bib
+textbook/print/__pycache__/
