@@ -337,3 +337,17 @@ Web-search budget ran out part-way through this pass; later checks used direct f
 - No redraw needed (Fig. 7.2 export-control timeline still correct to Oct 2026; Figs 7.3/7.4 IEA data unchanged).
 
 Pandoc --citeproc: no warnings. Body (before Further reading) 9,753 words.
+
+### News sweep (2026-10-25), second pass (gap-filling)
+Developments checked:
+- BIS guidance, 31 May 2026 (primary PDF): licence "is required to export advanced computing items to entities headquartered in Country Group D:5 ... or Macau or with an ultimate parent company headquartered in Country Group D:5 or Macau – even if the entities themselves are located outside"; requirement dates from 17 Nov 2023 (§744.23(a)(3), now §742.6(a)(6)(iii)(A)); not covered by the May 2025 non-enforcement policy. → 1 sentence added in §7.3 (new key bis2026guidance). https://www.bis.gov/media/documents/bis-guidance-may-31-2026.pdf ; https://www.gtlaw.com/en/insights/2026/6/enforcement-pause-has-limits-bis-clarifies-ongoing-license-requirement-for-advanced-computing-items-to-china-linked-entities
+- Draft BIS rule on remote/cloud compute leasing (reported Aug 2026), not issued → not added. Affiliates-rule suspension runs to 9 Nov 2026; no extension found → text unchanged. Sept 2026 Trump–Xi summit: export controls excluded (CSIS) → no change. Section 232 chip tariff (14 Jan 2026, 25% on H200/MI325X class); broader tariffs only reported deliberations (TrendForce/POLITICO, 28 Aug 2026) → no change.
+- TOP500 June 2026: LineShine (Shenzhen) No. 1 at 2.198 EF; El Capitan No. 2 at 1.809 EF. Chapter called El Capitan "the world's largest supercomputer" → "then the world's largest supercomputer". https://top500.org/lists/top500/2026/06/
+- Google 2026 Environmental Report (30 Jun 2026; primary PDF): data-centre electricity 30,637,100 → 42,415,800 MWh (+38%; total +37%, p. 19); Scope 2 market-based 2,898,600 → 2,815,000 tCO2e (−3%); location-based 11,067,100 → 15,148,700 (2019: 5,173,000; ×2.93) (pp. 90, 93; note 2024 values restated vs 2025 report's ~3.1 m / ~11.3 m); water consumption 10.9 bn gallons = 41 bn litres, +34% (p. 35). → §7.4 Google emissions sentences and water sentence updated to 2025 data (new key google2026environmental; google2025environmental kept for Waltham Cross). https://sustainability.google/files/google-2026-environmental-report.pdf
+- Rosa et al., *Environ. Sci. Technol.* 60(39):27780–27791 (24 Sep 2026), doi:10.1021/acs.est.6c08088: 9,347 data centres; 25% would have had ≥1 month of water gap a year under 2001–2010 hydrology; 33% under future conditions → 1 sentence added in Water (new key rosa2026one). Crossref abstract.
+- IEA World Energy Outlook 2026: launch scheduled 23 Nov 2026 → not yet released; Electricity Mid-Year Update 2026 has no new data-centre figures found → IEA figures unchanged.
+- ASML Q3 2026 (14 Oct 2026): net sales €11.7bn, 2026 guidance €44–45bn → chapter's 2025 figures unaffected; not added. TSMC Q3 covered in first pass.
+- Huawei: Ascend 950PR launched 20 Mar 2026 with in-house HBM (TrendForce); volumes unverified; DeepSeek-V4 training hardware disputed → no change.
+- Nuclear/power: Google–Constellation 890 MW new + 2,700 MW existing (6 Oct 2026, SiliconANGLE); Crane (TMI) restart still 2027; Carnegie (Jun 2026) ~13 GW hyperscaler nuclear agreements → no statement wrong; not added.
+- Data-centre demand studies (Gartner Jun 2026: 447 → 565 TWh; EPRI Feb 2026) → not added (IEA remains the reference).
+Pandoc --citeproc: no warnings. Body (wc, before Further reading) 9,835 words.

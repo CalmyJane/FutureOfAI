@@ -300,3 +300,13 @@ Web-search budget ran out part-way through this pass (shared 200-search limit); 
 - No redraw required. Optional: Fig. 6.3 timeline ends at Erdős #728 (Jan 2026); the Navier–Stokes announcement (Sep 2026) could be added as a "company announcement" marker if the figure is redrawn.
 
 Pandoc --citeproc: no warnings. Body (before Further reading) 9,881 words.
+
+### News sweep (2026-10-25), second pass (gap-filling)
+Developments checked:
+- Navier–Stokes follow-up: Bastounis, Circelli & Hansen, arXiv:2610.08144 (6 Oct 2026), abstract: "we show that the formalised Lean proof does not correspond to the NL proof of blow-up of solutions to the Navier-Stokes equations". Clay Institute has not accepted the claim (secondary: implicator.ai). → last sentence of the §6.6 Navier–Stokes paragraph replaced ("The Lean check makes the logic far easier to trust..." → "Even the Lean check is contested: ... [@bastounis2026navierstokes]"). https://arxiv.org/abs/2610.08144 ; https://startupfortune.com/a-new-paper-says-openais-navier-stokes-proof-and-its-lean-code-dont-match/ (not cited)
+- IMO 2026: AFP text (The Standard HK) says Xiaohongshu's solutions "were submitted to IMO organisers for grading"; no IMO statement found; no Google DeepMind/OpenAI 2026 result found. Chapter said "had been graded by IMO organisers" — stronger than source → corrected. https://www.thestandard.com.hk/world/article/338012/AI-catches-up-with-humans-to-score-100-at-top-maths-contest
+- Nobel 2026 physics (Halzen, IceCube) → not AI; no change. https://nobelprize.org/prizes/physics/2026/summary
+- Drug discovery (out of scope; Chapter 10): Isomorphic Labs still expects first trials by end 2026 ($2.1bn round, 12 May 2026, Reuters syndication); Insilico rentosertib Phase III began July 2026 (China). No change to ch06.
+- AI scientists: no main-conference acceptance of an AI-generated paper found; Kosmos still preprint (Incyte deal May 2026) → no change.
+- Materials, AlphaFold, NeuralGCM/climate emulators, 2026 hurricane-season AI performance (partial-season, Google-linked sources only): nothing that changes a statement → no change.
+Trims to stay word-neutral: "Tao, commenting on the result, noted" → "Tao noted"; dropped "The details matter." Pandoc --citeproc: no warnings.
