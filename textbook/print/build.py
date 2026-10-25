@@ -137,7 +137,91 @@ def notes_to_footnotes(body):
     return body
 
 
-def build(only=None, notes=False, out_pdf=OUT_PDF):
+def notes_to_pageline(body):
+    """Number the reference list; replace each paragraph note with the numbers of its sources,
+    collected by WeasyPrint into one line at the foot of each page; drop years from narrative citations."""
+    keys = re.findall(r'<div id="ref-([^"]+)" class="csl-entry"', body)
+    num = {k: i + 1 for i, k in enumerate(keys)}
+    body = re.sub(r'<div id="ref-([^"]+)" class="csl-entry"([^>]*)>',
+                  lambda m: f'<div id="ref-{m.group(1)}" class="csl-entry"{m.group(2)}><span class="refnum">{num[m.group(1)]}</span>', body)
+    def nums(m):
+        ks = []
+        for k in re.findall(r'data-cites="([^"]+)"', m.group(0)):
+            for kk in k.split():
+                if kk in num and num[kk] not in ks:
+                    ks.append(num[kk])
+        return " ".join(str(n) for n in ks)
+    counter = iter(range(1, 10**6))
+    body = re.sub(r'<span class="fn"><span class="srcnote">.*?</span></span></span>',
+                  lambda m: f'<span class="srcm" id="srcm{next(counter)}" data-nums="{nums(m)}">\u2060</span>',
+                  body, flags=re.S)
+    # "Kestin et al. (2025)" -> "Kestin et al."
+    body = re.sub(r'(<span class="narr"><span class="citation"[^>]*>(?:<a [^>]*>)?)(.*?)\s*\([^()]*\d{4}[a-z]?[^()]*\)',
+                  r"\1\2", body)
+    return body
+
+
+def marker_pages(document):
+    """Map each source marker id to the index of the page it was laid out on."""
+    where = {}
+    for i, page in enumerate(document.pages):
+        stack = [page._page_box]
+        while stack:
+            box = stack.pop()
+            el = getattr(box, "element", None)
+            if el is not None and el.get("class") == "srcm":
+                where.setdefault(el.get("id"), i)
+            stack.extend(getattr(box, "children", []) or [])
+    return where
+
+
+def stamp_pagelines(document, doc, pdf_path):
+    """Write each page's source numbers into the space between the text block and the page number,
+    after layout, so the line can never shift the pagination."""
+    from io import BytesIO
+    from pypdf import PdfReader, PdfWriter
+    from reportlab.lib.utils import simpleSplit
+    from reportlab.pdfbase import pdfmetrics
+    from reportlab.pdfbase.ttfonts import TTFont
+    from reportlab.pdfgen import canvas
+
+    mm = 72 / 25.4
+    nums = dict(re.findall(r'<span class="srcm" id="(srcm\d+)" data-nums="([^"]*)">', doc))
+    where = marker_pages(document)
+    pages = {}
+    for mid, pi in where.items():
+        pages.setdefault(pi, set()).update(int(n) for n in nums[mid].split())
+    pdfmetrics.registerFont(TTFont("EBG", os.path.join(PRINT, "fonts", "EBGaramond-Regular.ttf")))
+    pdfmetrics.registerFont(TTFont("EBG-It", os.path.join(PRINT, "fonts", "EBGaramond-RegularItalic.ttf")))
+    reader = PdfReader(pdf_path)
+    writer = PdfWriter(clone_from=reader)
+    W, H = 148 * mm, 210 * mm
+    width = 113 * mm
+    for pi, ns in pages.items():
+        x0 = 20 * mm if pi % 2 == 0 else 15 * mm  # right-hand pages have the wider inner margin on the left
+        text = " · ".join(map(str, sorted(ns)))
+        lines = simpleSplit(text, "EBG", 7.4, width - 12 * mm)
+        buf = BytesIO()
+        c = canvas.Canvas(buf, pagesize=(W, H), initialFontName="EBG", initialFontSize=7.4)
+        c.setLineWidth(0.4)
+        c.line(x0, 17.6 * mm, x0 + 22 * mm, 17.6 * mm)
+        y = 15.0 * mm
+        for i, ln in enumerate(lines):
+            if i == 0:
+                c.setFont("EBG-It", 7.4)
+                c.drawString(x0, y, "Sources")
+                c.setFont("EBG", 7.4)
+            c.drawString(x0 + 11 * mm, y, ln)
+            y -= 2.9 * mm
+        c.save()
+        buf.seek(0)
+        writer.pages[pi].merge_page(PdfReader(buf).pages[0])
+    with open(pdf_path, "wb") as f:
+        writer.write(f)
+    return len(pages)
+
+
+def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
     keys, problems = merge_bib()
     md, n_terms = assemble(only)
     used = {k for k in cited_keys(md) if k in keys}
@@ -145,11 +229,12 @@ def build(only=None, notes=False, out_pdf=OUT_PDF):
     if only is None:
         open(OUT_MD, "w", encoding="utf-8").write(md)
     filters = ["--lua-filter", os.path.join(PRINT, "srcnotes.lua")] if notes else []
+    env = dict(os.environ, SRCMODE=mode)
     html_body = subprocess.run(
         ["pandoc", "-f", "markdown-tex_math_dollars", "-t", "html5", *filters, "--citeproc", "--section-divs",
          "--bibliography", os.path.join(PRINT, "all.bib"), "--csl", os.path.join(PRINT, "apa.csl"),
          "--metadata", "link-citations=true", "--wrap=none"],
-        input=md, capture_output=True, text=True,
+        input=md, capture_output=True, text=True, env=env,
     )
     if html_body.returncode:
         print(html_body.stderr)
@@ -157,6 +242,8 @@ def build(only=None, notes=False, out_pdf=OUT_PDF):
     body = html_body.stdout
     if notes:
         body = notes_to_footnotes(body)
+        if mode == "pageline":
+            body = notes_to_pageline(body)
     warn = [l for l in html_body.stderr.splitlines() if l.strip()]
 
     # table of contents from h1s
@@ -179,7 +266,7 @@ def build(only=None, notes=False, out_pdf=OUT_PDF):
 
     css = open(os.path.join(PRINT, "book.css"), encoding="utf-8").read()
     if notes:
-        css += open(os.path.join(PRINT, "notes.css"), encoding="utf-8").read()
+        css += open(os.path.join(PRINT, "notes.css" if mode == "foot" else "pageline.css"), encoding="utf-8").read()
     doc = (f'<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><title>{TITLE}</title>'
            f'<meta name="author" content="{AUTHOR}"><style>{css}</style></head><body>'
            f'{front_matter("".join(toc)) if only is None else ""}{body}</body></html>')
@@ -193,6 +280,9 @@ def build(only=None, notes=False, out_pdf=OUT_PDF):
         open(OUT_HTML, "w", encoding="utf-8").write(doc)
         document = HTML(OUT_HTML, base_url=PRINT).render()
     document.write_pdf(out_pdf, pdf_variant="pdf/x-4", output_intent="srgb")
+    if notes and mode == "pageline":
+        n = stamp_pagelines(document, doc, out_pdf)
+        print(f"source lines stamped on {n} pages")
     words = len(re.sub(r"<[^>]+>", " ", body).split())
     print(f"{out_pdf}: {len(document.pages)} pages; ~{words} words incl. references")
     print(f"bib entries: {len(keys)}; cited: {len(used)}; glossary terms: {n_terms}")
@@ -209,6 +299,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--only", type=int, help="build a single chapter (sample)")
     ap.add_argument("--notes", action="store_true", help="per-paragraph source notes at the page foot")
+    ap.add_argument("--pageline", action="store_true", help="one line of source numbers at the page foot")
     ap.add_argument("--out", default=OUT_PDF)
     a = ap.parse_args()
-    build(a.only, a.notes, a.out)
+    build(a.only, a.notes or a.pageline, a.out, "pageline" if a.pageline else "foot")
