@@ -276,3 +276,28 @@ Changes made: §5.3 A2A/AAIF sentence; §5.4 OSWorld 2.0 comparability sentence;
 Error sweep: re-read in full; recomputed 0.995^24 = 0.887, 0.995^168 = 0.431, 6/453 = 1.3%, 0.95^20 = 0.358, 0.99^50 = 0.605, 0.95^50 = 0.077, 0.90^50 = 0.005, 0.9975^20 = 0.951, 1 − 0.3^8 = 0.99993, 0.7^8 = 0.058, C(6,4)/C(8,4) = 15/70 = 0.214, 0.75^4 = 0.316, 0.8^4 = 0.41, Table 5.3 mean 70.15, CaMeL 84 − 77 = 7. No errors found.
 Bibliography: new keys aaif2026a2a, scale2026swebench, fidoalliance2026google, pymnts2026google; openai2026gpt6 and openai2026openai copied byte-for-byte in content from ch04/ch12 (no other file edited).
 Pandoc --citeproc: no warnings. Body 9,888 words. Figures: no redraws needed.
+
+## Source audit (2026-10-25)
+
+Scope: all 126 citation instances (75 keys) in paragraphs, boxes, tables, captions and Further reading checked against this log; every paragraph read for uncited claims. Bib entries reviewed for type, authors, venue, year, DOI/URL.
+
+Citations corrected (old → new key and why):
+- §5.7 AP2/FIDO sentence: pymnts2026google (trade-press secondary) → fidoalliance2026fido (FIDO Alliance press release, primary). The FIDO release states that the Payments Technical Working Group is developing agent-commerce specifications on "technical contributions from Google and Mastercard" and that "Mastercard has contributed its Verifiable Intent framework, co-developed with Google and designed to work with AP2". fidoalliance2026google (29 Apr 2026) kept for the donation itself; it does not mention Mastercard. pymnts2026google removed from ch05.bib (no longer cited).
+
+Sources added (claim → key → URL):
+- Mastercard Verifiable Intent / FIDO building standards on AP2 → fidoalliance2026fido → https://fidoalliance.org/fido-alliance-to-develop-standards-for-trusted-ai-agent-interactions/ (28 Apr 2026; new key, not in any other bib)
+
+Uncited claims found and resolved (existing keys added to the paragraph):
+- Going-deeper box, paragraphs 1 and 2 (Park et al. retrieval score, 0.995 decay, importance scale, reflection threshold 150, 100 memories, three questions): only the third box paragraph carried the citation → [@park2023generative] added to both.
+- §5.4 "By the summer of 2026 the leaderboard's best results exceeded the student baseline" → [@osworld2026verified] (86.0%/90.2% vs 72.36%).
+- §5.5 τ³-bench sentence (more than 50 retail/airline tasks fixed; banking domain, ~700 documents) → [@sierra2026taubench] (already verified above, taubench.com).
+- §5.6 Greshake taxonomy paragraph (delivery and goal categories), separated from its citation by the polish pass → [@greshake2023not].
+- Closing synthesis paragraph quotes "capable" / "completely robust" with no citation in the paragraph → [@anthropic2025projectphase].
+
+Claims softened/cut:
+- §5.7 "public evidence ... comes mostly from vendors, whose transaction figures conflict" → "... comes mostly from vendors" (conflicting x402 volume figures were deliberately not sourced; see "Dropped or not used").
+
+Checked and left unchanged: all other paragraphs have a covering citation in the same paragraph or are the book's own reasoning/arithmetic (compounding, retry, pass^k worked examples). Secondary sources reviewed: dioquino2025coinbase is paired with the primary coinbase2025x402; The Register (sharwood2025vibe/replit) kept as the reporting record (primary posts on X not fetchable); openai2023function/2024introducing/2026why/2025computer remain primary OpenAI pages.
+
+Bib: new fidoalliance2026fido; pymnts2026google removed. Shared keys all byte-identical to the other chapters' copies; note openai2026gpt6 matches ch04.bib exactly but differs from ch12.bib in whitespace alignment only (same field content) — not edited. kwa2025measuring remains in ch05.bib but is no longer cited in the text (harmless).
+Pandoc --citeproc: no warnings. Body 9,890 words.

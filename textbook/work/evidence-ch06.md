@@ -310,3 +310,24 @@ Developments checked:
 - AI scientists: no main-conference acceptance of an AI-generated paper found; Kosmos still preprint (Incyte deal May 2026) → no change.
 - Materials, AlphaFold, NeuralGCM/climate emulators, 2026 hurricane-season AI performance (partial-season, Google-linked sources only): nothing that changes a statement → no change.
 Trims to stay word-neutral: "Tao, commenting on the result, noted" → "Tao noted"; dropped "The details matter." Pandoc --citeproc: no warnings.
+
+## Source audit (2026-10-25)
+
+Scope: all 163 citation instances (74 keys) in paragraphs, boxes, tables, captions and Further reading checked against this log; every paragraph read for uncited claims; bib entries reviewed.
+
+Citations corrected (old → new key and why):
+- §6.5 OpenAI IMO 2025 claim: [@wei2025openai; @willison2025advanced] → [@wei2025openai]. Willison's blog was a secondary report of the same score; Wei's primary X thread (verified in Fact-check 1: P1–P5, 35/42, two 4.5-h sessions, three former medallists) covers the sentence. willison2025advanced removed from ch06.bib (no longer cited).
+- §6.6 Navier–Stokes: thenextweb2026openai (added by the coordinator; not previously logged here) re-checked: The Next Web, 9 Sept 2026, Ana Maria Constantin, quotes OpenAI "We do not intend to claim the Millennium Prize for this result" and describes the smooth applied force. Supports the sentence. Primary OpenAI page (https://openai.com/index/navier-stokes-solution/) still returns 403, so the swap to a primary source was not possible. Entry is byte-identical to ch14.bib. "an option the official problem statement leaves open" is covered in the same paragraph by howlett2026openais ("a loophole in the official problem framing").
+
+Sources added: none (no new keys).
+
+Uncited claims found and resolved:
+- §6.2 structure-module paragraph (residue gas starting at origin/identity rotation, invariant point attention, chain broken, geometry enforced in final relaxation) had no citation in the paragraph → [@jumper2021highly] (verified in Deepening/Fact-check 2 against the full text and Supplementary Information).
+
+Claims softened/cut:
+- §6.5 "By the 2026 Olympiad in Shanghai the top score had been reached." stated as fact what afp2026ai reports only as company claims → sentence cut and merged into the next one ("At the July 2026 Olympiad in Shanghai, Huawei and Xiaohongshu (RedNote) announced ..."). Also brings the body under the 9,900-word limit (was 9,903).
+
+Checked and left unchanged: news/secondary sources where the primary is unavailable or deleted (bastian2025leading — Weil's posts mostly deleted; bastian2026terence/bastian2026gpt; afp2026ai; kakaes2026ai and howlett2026openais for the Navier–Stokes episode, OpenAI page 403). All other paragraphs carry a covering citation in the same paragraph or are the book's reasoning.
+
+Bib: willison2025advanced removed. Shared keys (kakaes2026ai, thenextweb2026openai, bastounis2026navierstokes with ch14) byte-identical; none edited.
+Pandoc --citeproc: no warnings. Body 9,896 words.
