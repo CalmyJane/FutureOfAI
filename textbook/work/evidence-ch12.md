@@ -377,3 +377,27 @@ Narrow follow-up on leads from the ch11 checker. Body word count 9,918 (as found
 - §12.7: condensed Astra safeguards list; removed Dec 2024 US/UK joint o1 evaluation sentence (usaisi2024predeployment now uncited; entry kept); removed "though some of its news items still say CAISI"; shortened METR access sentence.
 
 pandoc --citeproc: no warnings.
+
+## Source audit (2026-10-25)
+
+Applied work/SOURCE-AUDIT-GUIDE.md. All cited keys (about 95) checked against the claims they support. Every paragraph, box, table and caption read for uncited claims. Body near the cap, so only citations changed, with no wording changes. Body (to "## Further reading") 9,896 → 9,899 words. pandoc --citeproc: no warnings.
+
+### Citations corrected or placed
+- §12.3 constitutional classifiers: stray citation after the full stop ("queries. [@sharma2025constitutional].") → placed before the full stop.
+- §12.1 Goodhart's law quotation: the wording "when a measure becomes a target, it ceases to be a good measure" is Strathern's formulation. gao2023scaling quotes it (PDF p. 1, "Goodhart's law is an adage that states, 'When a measure becomes a target, it ceases to be a good measure.'") and is kept. The original source was added: new **strathern1997improving** | origin of the quoted wording (p. 308) | European Review 5(3):305–321, 1997 | Crossref DOI 10.1002/(SICI)1234-981X(199707)5:3<305::AID-EURO184>3.0.CO;2-4; p. 308 attribution confirmed by search (Wikipedia "Goodhart's law", Reagle 2014) | peer-reviewed.
+- nist2024us for "In June 2025 the US institute was re-established as CAISI" was checked. The NIST page carries the note "In June 2025, AISI was re-established as CAISI" (log above), so it is kept.
+
+### Uncited claims found → resolution
+- §12.6 "Simply auditing the first 2 per cent ... only 15 per cent of the time ... Letting the weaker model flag and rewrite suspicious code did far better": the paragraph cited only bhatt2025ctrl and korbak2025sketch → added [@greenblatt2024ai].
+- §12.7 "The UK body became the AI Security Institute in February 2025, with a remit centred on security": uncited → [@dsit2025tackling] (14 Feb 2025 press release, already logged in fact-check 1; entry copied byte-identical from bib/ch13.bib).
+- No other uncited checkable claims found. Cross-references to other chapters and the closing synthesis carry no new facts.
+
+### Primary vs secondary
+- kahn2026openai and forlini2026openai (Fortune) and kelly2026openai/henrys2026us (news) remain. The OpenAI primaries are cited alongside them where they exist. The White House request and its reversal have no accessible primary (Politico/Telegraph not reachable, per earlier logs). Unresolved, and labelled "reportedly" / "according to reports".
+- satter2026openai (Reuters via reprint) unchanged.
+
+### Claims softened or cut
+- None.
+
+### Shared bib keys
+- None changed. dsit2025tackling copied unchanged from ch13.bib. strathern1997improving is new.

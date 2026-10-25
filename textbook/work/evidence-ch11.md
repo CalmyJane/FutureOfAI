@@ -332,3 +332,37 @@ New bib entries: fbi2026internet (replaces fbi2025internet, removed; key only in
 - No changes; no redraws.
 
 pandoc --citeproc: no warnings. Body (excluding Further reading) 9,884 words.
+
+## Source audit (2026-10-25)
+
+Applied work/SOURCE-AUDIT-GUIDE.md. All 75 cited keys checked against the claims they support (using the log above and, where needed, the source). Every paragraph, box, table and caption read for uncited claims. Body (to "## Further reading") 9,884 → 9,895 words. pandoc --citeproc: no warnings.
+
+### Citations corrected or placed
+- No wrong citations found. All keys support the claims they sit with, and the bib entries are complete.
+- hong2026measuring bib: howpublished "arXiv preprint" → "arXiv preprint arXiv:2602.16703" (so the APA output shows the identifier; eprint field alone is not rendered).
+
+### Uncited claims found → resolution (citation added in the same paragraph)
+- §11.2 AA-Omniscience worked example (GPT-5 39%/81%, Claude 4.1 Opus 36%/4.8, three of 36 above zero): the paragraph had no citation (the previous one did) → [@jackson2025aa].
+- §11.5 LLM-as-judge inflation and the 20-firm hiring simulation (~20% excluded): no citation in the paragraph → [@kim2025correlated].
+- §11.5 "Best Paper award at NeurIPS 2025": the paper does not support its own award → new **neurips2025announcing** | Jiang et al. listed among the four Best Papers | "Announcing the NeurIPS 2025 Best Paper Awards", Communications Chairs 2025, 26 Nov 2025 | https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/ (fetched 25 Oct 2026) | official (conference).
+- §11.6 "Both reports state that current systems lack the capabilities": only the 2026 report was cited → added [@bengio2025international] (2025 report: "broad consensus that current general-purpose AI lacks the capabilities", already in the log).
+- §11.6 three-condition structure and capability list: the paragraph had only "(p. 77)" and no citation → "(p. 77)" replaced by [@bengio2026international, sec. 2.2.2, p. 77].
+- §11.6 Carlsmith sensitivity range, "~1-10% depending on my mood" (a quotation) and the >10% update: no citation in the paragraph → [@carlsmith2022power].
+- §11.6 XPT ratios, the quotation "an order of magnitude" and the nuclear comparison: the paragraph cited only karger2025subjective, which does not contain them → added [@karger2023forecasting].
+- §11.7 espionage campaign slowed by hallucinated credentials: added [@anthropic2025disrupting].
+- §11.7 fraud statistics only beginning to separate AI-assisted crime: added [@fbi2026internet].
+
+### Primary vs secondary
+- khandelwal2026hackers (The Hacker News, reporting Reuters 19 Oct 2026): one search for the Reuters article found only secondary coverage (TechRadar, Let's Data Science, The Hacker News) and no Reuters URL → kept, bib already says it reports Reuters. Unresolved.
+- fichten2026anthropic (CBS) is kept alongside the primary anthropic2026detecting (the "evidence of capability" wording was verified via CBS).
+- Northpointe's predictive-parity reply is cited through chouldechova2017fair, which reports it explicitly; the Northpointe report (Dieterich et al. 2016) was not fetched → unchanged.
+- moffatt2024moffatt, sdny2023mata, NIST, NCSC, FSB, DARPA, IC3 etc. are already primary.
+
+### Preprint status re-checked (arXiv API, 25 Oct 2026)
+- kalai2025why, jackson2025aa, hong2026measuring: v1, no journal-ref; carlsmith2022power v2, no venue → labels unchanged.
+
+### Claims softened or cut
+- None.
+
+### Shared bib keys
+- None changed. neurips2025announcing is new (no other bib has it).
