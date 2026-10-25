@@ -301,3 +301,42 @@ Checked and left unchanged: all other paragraphs have a covering citation in the
 
 Bib: new fidoalliance2026fido; pymnts2026google removed. Shared keys all byte-identical to the other chapters' copies; note openai2026gpt6 matches ch04.bib exactly but differs from ch12.bib in whitespace alignment only (same field content) — not edited. kwa2025measuring remains in ch05.bib (cited again after the Oct 2026 revision).
 Pandoc --citeproc: no warnings. Body 9,890 words.
+
+## Revision after external review (Oct 2026)
+
+Applied review/03-ch05-ch06.md (sections A–E) and the book-wide brief.
+
+- A5.1 METR: §5.4 now gives the 129-day doubling with 95% CI 104–158 days (fit from 2023, excludes points with p50 > 16 h), Claude Opus 4.6 ≈ 12 h (CI ≈ 5.3–61 h; 316.7–3,633.8 min), early Claude Mythos Preview (release 7 Apr 2026) ≈ 17.4 h (1,044.8 min; CI 508.9–3,304.3 min ≈ 8.5–55 h), series not updated since 8 Sep 2026. Consistent with ch04 §4.7. Sources: https://metr.org/assets/benchmark_results_1_1.yaml ; https://metr.org/time-horizons/ ("This page is no longer actively updated", update log 8 Sep 2026).
+- C5.5: METR material folded into the coding subsection with a one-line illustration (12 h ≈ a day and a half of skilled work on a self-contained software task); the thin "Time horizons and real work" heading removed. kwa2025measuring cited again (A5.13 orphan resolved).
+- D5.1/D5.3 new "Agents in use" subsection: Anthropic Economic Index (15 Sep 2025) "77% of API transcripts show automation patterns", a little under half of API traffic computer/maths tasks — https://www.anthropic.com/research/anthropic-economic-index-september-2025-report (company usage data, labelled); AIDev dataset 456,000+ PRs, 5 agents, 61,000 repos — https://arxiv.org/abs/2507.15003 (preprint); Agarwal, He & Vasilescu staggered DiD: front-loaded velocity gains only where agents were the first AI tool; static-analysis warnings +~18%, cognitive complexity +~39%, persistent — https://arxiv.org/abs/2601.13597 (preprint). Explicit sentence that positive evidence beyond coding is mostly vendor-reported while critical evidence is mostly academic; pointer added in the opening section.
+- A5.2 Table 5.1: Opus 4.5 row dated "Nov 2025 (reported in AI Index 2026)" (release 24 Nov 2025 per METR YAML). Added company-reported GPT-5.4 row (75.0% on OSWorld-Verified, 5 Mar 2026) — OpenAI page returned 403; figures confirmed only via secondary reports (noqta.tn, 36kr, letsdatascience) and labelled as company-reported; key openai2026introducing. Text now says self-reported scores passed the baseline in early 2026 and the official re-runs by summer. Caption trivia (72.4/72.35) deleted (C5.4). B5.5: caption notes step limits differ and are not always disclosed; original paper used max 15 steps ("max step limit of 15") — https://arxiv.org/html/2404.07972.
+- A5.12 Astra: now "offline subset of OSWorld 2.0 scored with partial credit"; paper's best 20.6% binary / 54.8% partial at 500 steps — https://arxiv.org/abs/2606.29537.
+- A5.4 SWE-bench Pro: "fell from 41.8 to 25.9" removed; now "In an earlier run capped at $2 per task, GPT-5 (high) resolved 25.9%". Table 5.2 "(no cost cap reported)". Kapoor paragraph now refers to the settings generally.
+- A5.3 Cemri: taxonomy from 150 human-analysed traces; κ = 0.88 among three annotators on 15 calibration traces; 1,600+ traces labelled by an LLM judge (κ = 0.77 vs humans); frequencies flagged as machine-judged — https://arxiv.org/html/2503.13657.
+- A5.5 AgentDojo recast as a benchmark on which CaMeL's guarantees are measured.
+- A5.6 MCP: examples now follow the 2026-07-28 revision: response carries required "resultType": "complete"; note that required `_meta` request fields are omitted, as in the spec's own examples; elicitation now described via the Multi Round-Trip Request (retry) pattern; revisions paragraph cut to one sentence on statelessness and deprecations (C5.3). March 2025 parenthetical removed. New keys modelcontextprotocol2026tools, modelcontextprotocol2026specification (all quoted security principles re-checked verbatim in the 2026 overview and tools pages); modelcontextprotocol2025tools/2025specification/2025key removed from bib (no longer cited) — https://modelcontextprotocol.io/specification/2026-07-28/changelog ; /2026-07-28/server/tools ; /2026-07-28.
+- C5.3 A2A: list of eight task states cut to three examples; .well-known path removed.
+- A5.7 Debate box: "Adaptive attacks broke all twelve jailbreak and prompt-injection defences tested, most at success rates above 90%, although most had reported near-zero rates" (arXiv 2510.09023 abstract).
+- A5.8 NCSC: full clause quoted ("it's very possible that prompt injection attacks may never be totally mitigated in the way that SQL injection attacks can be"); debate box paraphrase aligned — https://www.ncsc.gov.uk/blog-post/prompt-injection-is-not-sql-injection.
+- A5.9 Pokémon: now "running tallies across thousands of steps (the guidance's illustration: levels gained over the last 1,234 steps)".
+- A5.10 Park: 6/453 tied to the separate end-to-end two-day simulation; crowdworker vs fully ablated not significantly different.
+- A5.11 Onions: "Neither Claudius nor Seymour Cash saw any issues, and were all set to go ahead" confirmed — https://www.anthropic.com/research/project-vend-2. No change.
+- A5.13 Bib key/year mismatch (debenedetti2025defeating, hadfield2025economy): keys left unchanged (brief: keep keys); entries carry correct publication years.
+- B5.1: "never lower than … (a mathematical consequence of averaging, apart from sampling noise), and with mixed difficulty usually much higher" (Jensen).
+- B5.2: chatbot/agent binary replaced by a spectrum (single reply → tool-using chat turn → multi-step run).
+- B5.3: "no close equivalent in conventional software" → resembles the confused-deputy problem but lacks the command/data separation that fixed comparable flaws.
+- B5.4: card rules sentence now covers cardholder-present and merchant-initiated standing agreements.
+- B5.6: plan-then-execute is "one alternative, favoured for security".
+- C5.1: opening cut to three anecdotes (Irn-Bru, discounts, blazer identity episode) with a turn; tungsten cubes and phantom payment account moved to the "A documented failure" lead-in; "bankrupt if balance below zero" detail dropped. Phase-2 paragraph: vote and WSJ episodes compressed into one sentence.
+- C5.2: Chan's four dimensions no longer repeated in prose; Project Vend callbacks in §5.1 (note-taking) and §5.2 (Reflexion) removed; closing paragraph no longer repeats the "capable/completely robust" quote and ends on a new question.
+- C5.6: Hugging Face incident moved out of the Replit box into its own sentence after the box.
+- C5.7: Assad gloss → "consistent with the algorithms learning to avoid price wars, that is, with tacit collusion".
+- C5.8: debate-box ending rephrased; "cannot settle" → "is not decisive"; AP2 "do settle/do not settle" → "What the protocols provide … They leave open".
+- C5.9 / brief: all "per cent" → "%" (incl. Fig 5.3 caption and spec fig-05-03.md).
+- D5.2: governance paragraph in §5.8: EU AI Act duties attach to GPAI providers (since 2 Aug 2025) and high-risk uses (key europeanparliament2024regulation, copied from ch13.bib); NIST AI Agent Standards Initiative, 17 Feb 2026 — https://www.nist.gov/news-events/news/2026/02/announcing-ai-agent-standards-initiative-interoperable-and-secure ; cross-reference to Chapter 13.
+- E: Table 5.3 caption now states it is Sierra's company-run evaluation of another developer's model.
+- Trims to pay for additions: Voyager new-world sentence; CUA supervision detail; OSWorld-Verified cloud/50-copies detail; Greshake delivery/goal taxonomy compressed; AP2 mandate walkthrough and crypto extension; x402 receipt detail; Hammond's seven factors cut to three examples.
+- Mid-sentence colons replaced in about a dozen places.
+- Evidence labels checked for every company/arXiv/news key at first mention; added "described in a 2025 preprint" (li2025rise) and "another preprint" (agarwal2026ai).
+- New bib keys: modelcontextprotocol2026tools, modelcontextprotocol2026specification, openai2026introducing, anthropic2025economic, li2025rise, agarwal2026ai, europeanparliament2024regulation, nist2026announcing. Pandoc --citeproc: no warnings.
+- Review "verified correct" items not touched.
