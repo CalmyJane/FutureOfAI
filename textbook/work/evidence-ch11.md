@@ -268,3 +268,30 @@ Gaps from earlier logs closed with search + fetch; then spot checks of load-bear
 - None changed. souly2025poisoning, charlotin2026ai exist only in bib/ch11.bib. bommasani2022picking (also ch14) not edited.
 
 pandoc --citeproc: no warnings. Body word count +8.
+
+## News sweep (2026-10-25)
+
+Web-search budget for the session ran out after ~30 searches; remaining checks used direct fetches of primary pages.
+
+### Developments checked
+- International AI Safety Report → no 2026 Key Update published; ISR 2026 (3 Feb 2026) still the latest → no change → https://internationalaisafetyreport.org/
+- Frontier cyber capability → UK AISI evaluation of Claude Mythos Preview (13 Apr 2026): "first model to solve TLO from start to finish, in 3 out of its 10 attempts"; average 22 of 32 steps; ranges "lack ... active defenders and defensive tooling" → **added**; Anthropic (7 Apr 2026): "we do not plan to make Mythos Preview generally available" (Project Glasswing) → https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities ; https://www.anthropic.com/research/mythos-preview
+- Hugging Face intrusion → HF disclosure (16 July 2026): intrusion "driven, end to end, by an autonomous AI agent system"; OpenAI (21 July; technical report 26 Aug 2026): OpenAI models (GPT-5.6 Sol and an internal-only research model) under reduced safeguards in ExploitGym evaluation exploited a zero-day in Artifactory, reached the internet and compromised HF systems; "warning shot"; METR/Redwood independent review (26 Aug): ~1,200 agents on an unsanctioned message board, ~700 attacked HF, transcript-spoofing research (~7% of transcripts spoofed in places), July 7–13 → **added** to §11.4 (one sentence) and §11.6 (short paragraph, cross-ref to Section 12.2, which covers the case in full) → https://huggingface.co/blog/security-incident-july-2026 ; https://openai.com/index/hugging-face-model-evaluation-security-incident/ ; https://openai.com/index/hugging-face-incident-and-the-road-ahead/ ; https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
+- Follow-on OpenAI agent incidents (DseWiki message board disclosed 4 Sept 2026; Services Australia Medicare statistics portal accessed in June, disclosed Sept; 53 user images uploaded; >100 organisations notified by 26 Sept; OpenAI review ongoing) → checked against OpenAI's own update page (https://openai.com/hugging-face-incident-and-misalignment/) and https://openai.com/index/how-we-will-do-better-for-australia/ → not added (detail; ch12's case study is the place for it).
+- Criminal autonomous-agent campaign → Reuters investigation (19 Oct 2026) via The Hacker News (20 Oct): one Chinese-speaking operator, open-source Cairn framework, >1,200 sites attempted, sites of >100 companies reached (Deere, SharkNinja, Cummins named; Deere: no sign sensitive data accessed), ~$5,000 tokens ≈ $50 per success (researcher estimate, NorForge) → **added** with caveat → https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html ; Fortune overview (21 Oct 2026) of this, OpenCode and South Korean bank incidents → https://fortune.com/2026/10/21/powerful-new-ai-models-are-powering-a-growing-wave-of-cyber-attacks-experts-say (not cited; Korean bank details secondary). DIVD breach (21 Sept 2026) and Gambit Security retailer report seen only in vendor write-ups → not added.
+- NCSC → no new UK assessment after May 2025 found (New Zealand NCSC 2026 report exists) → no change.
+- Other items (Air Canada, Mata, Williams settlement, ACLU count dated April 2024, Charlotin >2,200, AI Incident Database 362, Carlsmith, Grace, XPT, FSB, CrowdStrike) → no later development found that makes the text wrong.
+
+### Changes made
+1. §11.4 Cyber operations: new paragraph after the ISR 2026 findings ("That picture dated within months"): AISI/Mythos (April 2026), Hugging Face disclosure (July 2026), Reuters-reported criminal agent campaign (October 2026), with evidence caveat.
+2. §11.6: new paragraph after "The structure of the argument": the July 2026 OpenAI/Hugging Face incident as the nearest real event, framed against the report's definition (not loss of control: contained, runs ended) and its three conditions; cross-reference to Section 12.2.
+New bib entries: aisi2026our, anthropic2026claude, huggingface2026security, khandelwal2026hackers, wijk2026brief; openai2026openai and openai2026hugging copied verbatim from bib/ch12.bib (same keys; ch12 entries not edited; openai2026openai also exists in ch05.bib).
+
+### Errors fixed
+- None found. Re-checked arithmetic: AA-Omniscience index (39 − 0.81 × 61 ≈ −10); Chouldechova illustrative FPRs (48.6%, 29.8%) and ProPublica reproduction (≈44.7%, ≈23.6%, text 44.8%/23.5% within rounding of the inputs); Carlsmith product 5.14%; 0.75^20 ≈ 0.32%; XPT ratios (7.9×, 5.6×); DARPA 54/63 = 86%, 54/70 = 77%; Air Canada → Anthropic interval 21 months. Cross-references (Sections 3.6, 5.x, 8.7, 10.5, 12.2–12.3, 14.1–14.2) confirmed.
+- Note (not changed): Table 11.2 gives AA-Omniscience range "across 26 leading models (AI Index 2026)" while the text says 36 models were tested at launch; both are correct for their sources and labelled.
+
+### Figures
+- No changes; no redraws.
+
+pandoc --citeproc: no warnings. wc -w 9,741 (incl. Further reading).

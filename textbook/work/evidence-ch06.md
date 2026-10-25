@@ -270,3 +270,33 @@ Spec changes: figures/specs/tbl-06-01.md NOAA weakness cell "Worse tropical cycl
 Bibliography changes (ch06.bib only; no shared keys): chervonyi2025goldmedalist (@article JMLR), lean2026mathlib urldate, new nws2026aigfs.
 Pandoc --citeproc: no warnings. Body (before Further reading) 9,803 words.
 Note: web-search budget was exhausted during this pass; later checks used direct fetches (Crossref, publisher and agency pages).
+
+## News sweep (2026-10-25)
+
+Web-search budget ran out part-way through this pass (shared 200-search limit); later checks used direct fetches (Crossref, NHC PDF, publisher pages).
+
+### Developments checked (Jul–Oct 2026)
+- IMO 2026 (Shanghai, papers 15–16 July): AFP (23 July 2026) reports Huawei (Celia) and Xiaohongshu/RedNote (dots-note-3.0) announced 42/42; problems given after contestants sat them, within a set time limit; Xiaohongshu said solutions "were submitted to IMO organisers for grading"; no IMO confirmation reported. No official Google DeepMind/OpenAI IMO 2026 result found. Self-administered 42/42 runs by a VC (Deedy Das) not used. → added 2 sentences after the USAMO paragraph (§6.5). https://www.thestandard.com.hk/world/article/338012/AI-catches-up-with-humans-to-score-100-at-top-maths-contest ; https://www.digitalapplied.com/blog/imo-2026-perfect-scores-ai-benchmark-saturation (secondary, not cited)
+- OpenAI Navier–Stokes claim (8 Sep 2026): ~10,000 agents on an unreleased internal model, ~88 h; Lean formalisation by another model in ~17 h (Quanta, Kakaes, 8 Sep 2026); smooth external forcing ("a loophole in the official problem framing"), 166 pages, "more than a month later, no one fully does" understand it, attribution disputes (Córdoba–Martínez-Zoroa programme; Buckmaster/Alpöge) (Scientific American, Howlett, 13 Oct 2026); ~400 further results released early Oct. → added a 4-sentence paragraph at end of §6.6 "Open problems". https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/ ; https://www.scientificamerican.com/article/openais-blockbuster-navier-stokes-proof-isnt-what-we-thought-it-was/ ; https://www.tuftsdaily.com/article/2026/09/mathematicians-still-checking-the-navier-stokes-proof-that-openai-claims-to-have-solved (not cited)
+- Erdős success rates: The Decoder (Bastian, 18 Jan 2026): database by Ivanisvili and Seven shows "actual success rates of just one to two percent, clustered around easier problems". Text "success rates are unknown" was too strong → "hard to establish; a database ... suggested 1–2%, mostly on easier problems". https://the-decoder.com/gpt-5-2-pro-solves-another-erdos-problem-while-a-new-database-reveals-most-attempts-still-fail/
+- Tropical cyclones: NHC 2025 verification report (Cangialosi et al., 30 Mar 2026): GDMI "slightly outperformed NHC at the shorter lead times from 12 to 72 h" (Atlantic track); intensity: official forecasts "comparable skill with the best model, GDMI" except 12 and 96 h. WeatherNext Cyclones, *Nature* 657:680–688 (online 6 Aug 2026; Crossref): 2023–2025 storms, "average lead-time advantage of 1 day or more over leading operational models" for track, intensity, wind radii. The chapter's intensity-weakness narrative needed this counterweight → 2-sentence paragraph added after the NOAA/July 2026 sentence in §6.3. https://www.nhc.noaa.gov/verification/pdfs/Verification_2025.pdf ; https://api.crossref.org/works/10.1038/s41586-026-10953-2
+- ECMWF: no AIFS release after v2 (12 May 2026); v3 pencilled for Q4 2026 (UEF2026 slides) → no change. https://www.ecmwf.int/en/forecasts/datasets/aifs-machine-learning-data
+- Nobel 2026 chemistry (Kagan, Soai; asymmetric autocatalysis) → not AI; no change. https://nobelprize.org/prizes/chemistry/2026/summary
+- AlphaFold/Isomorphic: no new public DeepMind structure model since AF3; IsoDDE (Feb 2026, company report) minor → no change.
+- Materials (Periodic Labs etc.): no verified new discovery claims → no change.
+- AI-scientist systems: Sakana v3 open-sourced (ALIFE 2026 paper), ScientistTwo preprint; nothing that changes Table 6.3 → no change.
+
+### Changes made
+- §6.3: new paragraph on NHC 2025 verification and WeatherNext Cyclones (new keys cangialosi2026national, alet2026operational).
+- §6.5: IMO 2026 company claims (new key afp2026ai).
+- §6.6: Erdős success-rate sentence softened (new key bastian2026gpt); Navier–Stokes paragraph (keys kakaes2026ai — copied verbatim from bib/ch14.bib, which cites the same key — and howlett2026openais).
+- Trims to stay under 9,900 words: AlphaFold 192-structure trajectory sentence; GNoME 11 meV sentence; tokamak paragraph condensed; AlphaEvolve Gemini-model details; AlphaEvolve kissing-number sentence; AIFS training-time clause; HRES-duplication parenthesis (ecmwf2026significant still cited elsewhere); Pangu "39 years"; GraphCast verification-choice clause in concept box; Bloom's "Most of the posts were deleted" and "A real strength..." sentence; A-Lab reanalysis peer-review clause; Kosmos perovskite example; Sakana automated-reviewer 69% sentence.
+
+### Errors fixed
+- "Failures are rarely reported, so success rates are unknown" (overstated) → corrected as above.
+- No arithmetic or cross-reference errors found on re-read (Tables 6.1–6.3 consistent with text; Figure 6.3 caption consistent).
+
+### Figures
+- No redraw required. Optional: Fig. 6.3 timeline ends at Erdős #728 (Jan 2026); the Navier–Stokes announcement (Sep 2026) could be added as a "company announcement" marker if the figure is redrawn.
+
+Pandoc --citeproc: no warnings. Body (before Further reading) 9,881 words.

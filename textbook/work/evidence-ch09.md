@@ -273,3 +273,39 @@ Gaps from earlier logs, then spot-checks. The WebSearch budget ran out near the 
 - Hackenburg et al. conversation-vs-static percentages, durability, personalisation and inaccuracy figures: accepted manuscript only.
 - Costello 27.4% (preprint) and Argyle numbers (preprint): published full texts not reachable.
 - (Coordinator, 2026-10-24) Hackenburg et al. "The levers of political persuasion with conversational AI", Science (Dec 2025), DOI 10.1126/science.aea3884: N = 76,977 UK adults, 19 LLMs, 707 issues, 466,769 claims fact-checked, confirmed via Oxford press release (https://www.ox.ac.uk/news/2025-12-11-study-reveals-how-conversational-ai-can-exert-influence-over-political-beliefs) and arXiv 2507.13919. Detailed effect sizes still rest on the LSE accepted manuscript.
+
+## News sweep (2026-10-25)
+
+Web-search budget for the session ran out after ~30 searches; remaining checks used direct fetches of primary pages already found. No further searching was attempted after the limit.
+
+### Developments checked
+- Grok/X investigations → Commission DSA proceedings (26 Jan 2026) still open, no preliminary findings found; Ofcom (14 Oct 2026, Reuters): investigation moved to a new stage on illegal-content handling and complaints; UK users now blocked from generating/viewing/sharing pornographic content via Grok image tools; no provisional decision → **added** 2 sentences to Grok box → https://www.businessday.co.za/world/2026-10-14-concerns-persist-over-xs-handling-of-illegal-content-uk-media-regulator/
+- AI Act Art. 50 implementation → Code of Practice 10 June 2026 (unchanged); adequacy confirmed by Commission 8 July and AI Board 9 July 2026; final Art. 50 guidelines 20 July 2026 (Reed Smith; Faegre Drinker agrees on 20 July); 82 providers and 152 deployers signed by 9 Sept 2026, Google among them (Morrison Foerster; Commission says ~190 organisations by end July) → **added** → https://www.reedsmith.com/our-insights/blogs/viewpoints/102nbz0/transparency-obligations-for-ai-generated-content-the-code-of-practice-adequacy/ ; https://www.mofo.com/resources/insights/260911-full-transparency-organizations-sign-eu-code ; https://www.faegredrinker.com/en/insights/publications/2026/7/eu-ai-act-commission-confirms-transparency-code-of-practice-as-adequate-and-publishes-final-version-of-its-guidelines-on-transparency-obligations
+- DSA designations → Commission press release IP/26/1772 (31 Aug 2026, read as PDF): ChatGPT designated VLOSE ("hybrid service" that searches the web), Reddit and Roblox VLOPs; obligations by January 2027, incl. electoral-process risks → **added** to §9.8 → https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1772
+- DSA enforcement → Temu €200m (28 May 2026) and AliExpress €550m (July 2026) fines; X corrective measures accepted July 2026 (research access, ad repository; not blue tick); X/xAI/Musk appeals pending. "First non-compliance decision" (X, Dec 2025) still correct → no change → http://eulawanalysis.blogspot.com/2026/02/digital-services-act-summary-and-links.html
+- TikTok/Romania DSA proceedings → still open (Jan 2026), no preliminary findings found → no change
+- Elections 2026 → Hungary April 2026: Fidesz's heavy AI use, Political Capital survey (1,000 adults, 23–26 March 2026: 73% encountered AI content on social media; 52% of those who saw deepfake videos unsure; 37% misled; 90% unacceptable); Fidesz lost; authors credit challenger, fatigue, prebunking, independent media → **added** 3 sentences to §9.4 → https://edmo.eu/blog/hungarys-2026-election-ai-driven-post-reality-campaigning-and-its-limits/ . Brazil (runoff 25 Oct 2026; TSE deepfake ban, labelling, 72-h blackout; monitors' count of 920 items Aug–Sept) and US midterms (Tech Policy Press chatbot tests) seen only in secondary sources → not added. Hungarian author institute is an opposition-leaning think tank; labelled as such ("Budapest think tank", "according to analysts").
+- Watermarking → OpenAI adds SynthID + C2PA to ChatGPT/API/Codex images and previews public verifier (19 May 2026) → **added** 1 sentence → https://thenextweb.com/news/openai-c2pa-synthid-ai-image-detection-watermark . Claim that OpenAI joined the C2PA steering committee not confirmed → not used.
+- C2PA → IACR ePrint 2026/804 (Golaszewski, Krawetz, Sherman et al.; rev. 2 June 2026): exclusion range allows undetectable alterations; timestamp disagreement; weak revocation; some fixes in C2PA 2.3 and Pixel 10 Pro → **added** 1 sentence → https://eprint.iacr.org/2026/804 . Buchanan's October 2026 lottery-ticket demonstration of the same exclusion flaw seen only in secondary write-ups → not cited. C2PA 2.3 exists (per ePrint) but text describes 2.2 as source, not as "latest" → no change.
+- AI search and publishers → Agarwal & Sen randomised field experiment (SSRN 6513059, posted 3 Apr, rev. 17 Jun 2026; 1,065 US desktop Chrome users, Jan–Feb 2026; organic clicks −39.8% with AI Overview; zero-click +34.5%; no satisfaction difference) → **added** as working paper (SSRN page 403; details from PPC Land summary) → https://ppc.land/researchers-find-google-ai-overviews-cut-publisher-clicks-39-8/ . Ahrefs/Chartbeat/Define Media figures (vendor data) not added. No 2026 EBU/BBC follow-up found.
+- Persuasion → 2026 preprints (disclosure banner study N = 1,500; June 2026 canvasser comparison) are preprints of smaller scale; Hackenburg et al. remains the largest → no change.
+- TAKE IT DOWN Act → FTC enforcement since 19 May 2026; no prosecution or completed FTC action found → no change.
+- Safety report → no 2026 Key Update; ISR 2026 (3 Feb 2026) still latest → no change.
+
+### Changes made
+1. §9.3 watermarks: OpenAI adoption of SynthID (May 2026).
+2. §9.3 provenance limits: C2PA security analysis (preprint).
+3. §9.4: Hungary April 2026 paragraph.
+4. §9.7: Agarwal & Sen randomised experiment.
+5. §9.8 DSA: ChatGPT designated VLOSE (31 Aug 2026).
+6. §9.8 AI Act: adequacy decision (8/9 July), final guidelines (20 July), signatory counts.
+7. Grok box: status of both inquiries; Ofcom October update.
+Trims to stay near the limit (no facts lost that are load-bearing): VALL-E hour counts; Pew police example (86% vs 45% example kept); Kaushal wording; Costello Cornell "one in four" gloss; Lin fact-checker description; House Judiciary report compressed; debate-box closing sentence; Argyle "tetrachoric" gloss; Hackenburg & Margetts set-up; Meta ownership gloss.
+
+### Errors fixed
+- None found in re-read. Arithmetic re-checked (Kirchenbauer z = 4 at ≈128 green tokens, p ≈ 3 × 10⁻⁵; base-rate example 10,000/10,990 > 90% false alarms). Cross-references (Sections 2.8, 13.6; Chapter 10 detector bias) confirmed.
+
+### Figures
+- No figure data or captions changed; no redraws.
+
+pandoc --citeproc: no warnings. wc -w 9,921 (incl. Further reading; body ≈ 9,750).

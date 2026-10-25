@@ -310,3 +310,30 @@ Alberta; 485/950/945 TWh; 1.5%/3%; +17%/+50%; tripling; 20–30%; Table A.1/A.4 
 ### Still unverifiable
 - li2025making exact CACM print wording (numbers from accepted arXiv v5).
 - de Vries 2023 article text (paywalled); used only as described by Epoch.
+
+## News sweep (2026-10-25)
+
+Web-search budget ran out part-way through this pass; later checks used direct fetches (Federal Register API, Hugging Face API, company/agency pages).
+
+### Developments checked (Jul–Oct 2026)
+- US export controls: Federal Register API, BIS documents 1 Jul–25 Oct 2026: only AI-chip-relevant rule is the UAE rule of 14 Jul 2026 (already cited); others drones, polysilicon, silencers, Entity List revisions (24 Aug), tariff notices → no new chip rule; Fig. 7.2 unchanged. Chip Security Act passed HFAC 42–0 (Mar 2026), not law → not added. https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=industry-and-security-bureau&conditions[publication_date][gte]=2026-07-01
+- China's responses / truce: China's Oct 2025 rare-earth controls suspended and probes of US chip firms ended under the Busan truce (Bloomberg via Fortune, 1 Nov 2025); US Treasury (Bessent) said 23–24 Sep 2026 the truce runs to 10 Jan 2027 (AP). → 1 sentence added in §7.3 after the affiliates-rule suspension. https://fortune.com/2025/11/01/china-rare-earth-export-curbs-suspension-probes-us-chip-firms ; https://www.wxyz.com/politics/foreign-policy/trump-welcomes-chinas-xi-to-washington-with-planeside-ceremony-and-extension-of-trade-truce
+- Nvidia Q2 FY2027 (press release 26 Aug 2026): revenue $96.2bn, Data Center $89.0bn; "Vera Rubin, now in full production"; "NVIDIA is not assuming any Data Center compute revenue from China in its outlook" → China clause added in §7.3; Rubin sentence added in §7.1 (coordinator tip verified). Rubin specs from NVIDIA technical blog (5 Jan 2026): up to 288 GB HBM4, up to 22 TB/s (~2.8× Blackwell's 8 TB/s), 3.6 TB/s NVLink 6. Keys aubrey2026inside and nvidia2026nvidia copied verbatim from bib/ch02.bib. https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm ; https://developer.nvidia.com/blog/inside-the-nvidia-rubin-platform-six-new-chips-one-ai-supercomputer/
+- TSMC: Q2 call (16 Jul 2026) raised 2026 capex to US$60–64bn from US$52–56bn; Q3 (15 Oct 2026) kept it, raised 2026 growth to 44% (Focus Taiwan/CNA). Text "expected US$52–56 billion in 2026" was outdated → clause added. https://focustaiwan.tw/business/202607160020 ; https://focustaiwan.tw/business/202610150018
+- ASML Q3 2026: China ~23% of system sales in Q3 (secondary), ~20% expected for 2026 → not added (chapter's 2025 figure from 20-F still correct).
+- Huawei: no verifiable new Ascend volume data found → no change.
+- Open-weight releases (Hugging Face API): DeepSeek-V4-Pro/Flash (22 Apr 2026, MIT; V4-Pro 1.6T/49B active, 1M context), V4.1-Flash (10 Sep 2026, MIT, 552B), Kimi K3 (13 Jun 2026), Qwen3.8 (Aug 2026), GLM-5.3 (25 Aug 2026), no new Meta or OpenAI open LLM weights. → DeepSeek-V4-Pro row added to Table 7.5 (key deepseekai2026deepseekv4 copied from bib/ch02.bib). https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro
+- Open–closed gap: Epoch data insight (29 May 2026): "Open models lag state-of-the-art closed models by 4 months" (ECI, since Jan 2026, ~8 ECI points). Chapter's newest Epoch figure was Nov 2024 ("around one year") → 1 sentence added. https://epoch.ai/data-insights/open-closed-eci-gap
+- EU gigafactories: EuroHPC call opened 30 Jul 2026 for "up to seven AI Gigafactories", deadline 12 Nov 2026, selection early 2027 → 1 sentence added. https://eurohpc-ju.europa.eu/eurohpc-joint-undertaking-launches-ai-gigafactories-call-2026-07-30_en
+- India: PIB backgrounder (10 Feb 2026): "more than 38,000 high-end GPUs have been onboarded and are available at ₹65 per hour" → sentence added; "A national programme of 10,000 GPUs" (outdated) → "Even India's 38,000 GPUs". https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/feb/doc2026210784401.pdf
+- Data-centre/power deals Jul–Oct 2026 (NextEra–Brookfield Paducah, Chevron–Microsoft Texas, etc.): none changes a chapter statement → not added. IEA: no new data-centre figures since April 2026 → unchanged.
+- Capex Table 7.4: Q3 2026 results fall after 25 Oct → unchanged.
+
+### Errors fixed
+- Outdated: TSMC 2026 capex expectation; India GPU count; EU gigafactory number now "up to seven" in the selection call (InvestAI's original "four" retained as history).
+- Re-read arithmetic: H100 ridge (≈295 FLOP/byte), 42 ms/token, TPP ≈15,800 and density ≈19/mm², DeepSeek cost box ($5.576m; ≈340 TFLOP/s), capex % changes, Arena 49 points → all consistent. No cross-reference errors found.
+
+### Figures
+- No redraw needed (Fig. 7.2 export-control timeline still correct to Oct 2026; Figs 7.3/7.4 IEA data unchanged).
+
+Pandoc --citeproc: no warnings. Body (before Further reading) 9,753 words.
