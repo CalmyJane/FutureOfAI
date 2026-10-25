@@ -302,3 +302,32 @@ pandoc --citeproc: no warnings. Body ~8,930 words.
 - AI-washing: SEC settled charges against Presto Automation (14 Jan 2025; AI drive-thru product; misleading statements on human intervention; no civil penalty) → https://www.sec.gov/enforcement-litigation/administrative-proceedings/33-11352-s ; SDNY charged Nate founder Albert Saniger with fraud (Apr 2025; "effectively 0%" automation; human contractors in a Philippine call centre) → TechCrunch (Rollet, 10 Apr 2025). ADDED two sentences after the FTC sentence in §1.8 [@sec2025presto; @rollet2025fintech]. DOJ press release not retrievable (empty page to fetcher). 2026 SEC actions (GenesisAI, 26 Aug 2026; Cryptoaiml/TSAI Pro, 29 Sept 2026) reported only via a secondary site citing DLA Piper → not added (unverified).
 - Market/investment: ch01 has no sentence depending on capex, revenue, financing or IPO figures → nothing to change.
 - New bib: sec2025presto, rollet2025fintech. pandoc --citeproc: no warnings.
+
+## Source audit (2026-10-25)
+
+About 150 citations checked (paragraphs, boxes, tables, figure captions) against this log and, where the log did not settle it, the source itself (Crossref API for bick2026rapid; arXiv PDF of Mitchell 2021; Yale PDF print of Haigh 2024; The Decoder and TechCrunch pages re-fetched). All shared bib entries remain byte-identical with other chapters' bibs.
+
+### Citations corrected
+- §1.7 adoption, bick2026rapid (the published Management Science 72(10):8440–8456 version, which replaced the working paper in an earlier pass): the quotation "has been faster than either PCs or the internet" is working-paper wording and is not in the published abstract → now quotes the published wording, adoption "has outpaced both PCs and the internet" (Crossref abstract, doi 10.1287/mnsc.2025.02523).
+- §1.7 adoption: "(That paper's late-2024 estimate of 'nearly 40 percent' was later revised upwards …)" no longer matched the cited paper, whose published version gives 45% for late 2024 → "(Earlier releases had put 2024 use at about 39%, a figure revised upwards when the authors reweighted their earlier survey rounds [@bick2025state].)" (St. Louis Fed post: Aug 2024 39.4% → 44.6% after reweighting).
+- §1.7 AlexNet: "(That entry used additional pre-training data …)" read as referring to the second-best entry, which would misstate Russakovsky et al. → "(The winning entry used …)".
+- §1.1 survey of NLP researchers: added the primary survey michael2023what beside mitchell2023debate (entry copied byte-identical from bib/ch03.bib; verified in evidence-ch03: Q4-1, 51% agree / 49% disagree among the 327 analysed respondents).
+
+### Sources added (claim → key → URL)
+- Opening: AI Act definition applying since February 2025 → europeanparliament2024regulation, art. 113 (Chapters I–II apply from 2 Feb 2025) → https://eur-lex.europa.eu/eli/reg/2024/1689/oj ; US regulators' fines for false AI claims → sec2024sec (already verified).
+- §1.4 Minsky and Papert's *Perceptrons* (1969) → minsky1969perceptrons (copied byte-identical from bib/ch02.bib; verified in evidence-ch02) → https://mlanthology.org/misc/1969/minsky1969misc-perceptrons
+- §1.3 concept box: EU guidelines resolve the grey zone case by case → europeancommission2025guidelines, paras 41, 62 (already verified: "may nevertheless fall outside"; "No automatic determination or exhaustive lists").
+- §1.7 scaling laws published in 2020 → kaplan2020scaling (copied byte-identical from bib/ch02.bib) → https://arxiv.org/abs/2001.08361
+- Debate box: 33% relative cut in speech errors and BERT's 7.7-point GLUE gain → seide2011conversational, devlin2019bert (already verified); AlphaGo combined learned networks with explicit search → silver2016mastering (already verified). Box may fall on a different page from the original citations.
+
+### Checked, no change
+- Mitchell 2021 Simon (1960) and Minsky (1967) quotations match the arXiv text verbatim (refs [10], [12]); kept as secondary (primary books not accessible).
+- Haigh 2024: "pursued under other brands, such as machine learning and pattern recognition" confirmed in the PDF print (this phrase was not previously logged).
+- bastian2026openai: page title is now "OpenAI revenue keeps surging as company seeks $30 billion in fresh capital"; the "Original article from September 29, 2026" section reports DevDay figure "more than 1.2 billion weekly ChatGPT users" → bib title and note correct.
+- rollet2025fintech: TechCrunch text "hundreds of human contractors in a call center in the Philippines", attributed to SDNY allegations → confirmed. The DOJ SDNY press release (primary) still returns an empty page to the fetcher, so the news source is kept.
+- Microsoft 24th/28.3% stays cited to the AI Index (the "correlates strongly with GDP per capita" wording is the AI Index's); Lee Sedol 4–1 stays on Science News (Silver et al. 2017 full text paywalled).
+
+### Claims softened or cut
+- None cut. The "nearly 40 percent" quotation was removed (see above).
+
+pandoc --citeproc: no warnings. Body 9,100 words (title to Further reading, raw wc).

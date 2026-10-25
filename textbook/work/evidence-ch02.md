@@ -290,3 +290,22 @@ Logged gaps re-opened with WebSearch/WebFetch and arXiv full texts (pdftotext); 
 ### Error sweep (all worked calculations re-computed with Python)
 - Table 2.1 (sigmoid/tanh/ReLU values and slopes), Fig. 2.1 (0.2; −0.3), Fig. 2.2 (26 parameters), matrix layer (−3.4, 1.8 → (0, 1.8)), XOR Table 2.2 and the separating line, squared error (0.64, 0.01), softmax (0.659, 0.242, 0.0986; 0.417, 2.317), one-weight descent (−2.4; 0.3364; 0.44/0.88/0.0144; factor 1 − 8η; η = 0.5 → 1.4, 3.24; threshold 0.25), nine-parameter backprop box (all gradients, updated parameters, h = (1.2265, 0.2735), z = 1.0423, p = 0.7393, L = 0.3021), momentum (6.513 after ten steps; 10× top speed), Adam first step (m₁ −0.24, v₁ 0.00576, step 0.001), 0.25¹⁰ ≈ 9.5 × 10⁻⁷, He init (0.0625; 0.0256¹⁰ ≈ 1.2 × 10⁻¹⁶), 2 × 1,024 × 4,096² ≈ 3.4 × 10¹⁰, reuse 2 × 4,096/3 ≈ 2,731, H100 590 / 295 ops per byte, conv 1,728 weights vs 4.8 × 10¹¹, Fig. 2.5 window (cols 2–4 → 3) and feature map, crops 2 × 32² = 2,048, adversarial 0.007 × 0.01 × 150,528 ≈ 10.5 → all correct.
 - Cross-references to Sections 2.3–2.7, Chapters 3, 4, 7 and 12, and Tables/Figures 2.1–2.6 → consistent. No errors found.
+
+## Source audit (2026-10-25)
+
+About 130 citations checked (paragraphs, boxes, Tables 2.1–2.5, figure captions) against this log; bib entries reviewed for type and preprint/published status (all consistent with the fact-check logs; all keys shared with other chapters byte-identical). Zhang et al. "CIFAR-10 (50,000 training images in 10 classes)" re-checked in the arXiv text (appendix: "50,000 training and 10,000 validation images, split into 10 classes").
+
+### Citations corrected
+- None wrong.
+
+### Sources added (claim → key → URL)
+- §2.5 Momentum: "AlexNet and the 2015 ResNets used momentum 0.9 (Table 2.4)" relied on the table caption alone, which may fall on another page → added [@krizhevsky2012imagenet; @he2016deep] (already verified: momentum 0.9 in both recipes) → https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf ; https://arxiv.org/abs/1512.03385
+- §2.5 Adam: "The original transformer was trained with Adam (Table 2.4)" → added [@vaswani2017attention] (already verified: Adam β1 0.9, β2 0.98) → https://arxiv.org/abs/1706.03762
+
+### Uncited claims reviewed and left as they are
+- Worked arithmetic, examples and definitions (author's own); "Gradient descent and backpropagation were in place by 1986" (summary of the cited Rumelhart et al. paragraph); "parameters correspond loosely to synapses" (author's reasoning).
+
+### Claims softened or cut
+- None.
+
+pandoc --citeproc: no warnings. Body 9,889 words (title to Further reading, raw wc; limit 9,900).
