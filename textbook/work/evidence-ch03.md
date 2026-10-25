@@ -230,3 +230,26 @@ Spot-checks (load-bearing claims):
 - Newer developments to Oct 2026 that would make a sentence wrong: none found.
 
 Counts: gaps closed 8 (1 published since, 7 confirmed / still-preprint status confirmed); spot-checks ~30 confirmed; corrections to text 0; bib 1 (lambert2024tulu); cuts 0.
+
+## News sweep (2026-10-25)
+
+### Developments checked (July–25 October 2026)
+- Frontier releases Sept–Oct 2026: GPT-6 Astra (3 Sept), GPT-6 Sol/Luna (22 Sept), GPT-6.1 Sol (DevDay, 29 Sept), Claude Opus 5.5 (22 Sept) and Sonnet 5.5 (28 Sept, 1M-token input), Gemini 4 Argon (GA 13 Oct), Meta Muse Wonder (12 Oct), Mistral Large 4 (gated preview 6 Oct, 1.05T-parameter MoE, 49B active, 1M context), Kimi K3.1 Pro (23 Oct) → no architecture details published for the closed models; nothing in ch03 claims a current record → https://www.dutchstartup.ai/en/news/google-openai-anthropic-and-mistral-release-new-frontier-models-in-late ; https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/
+- Tokeniser: installed tiktoken 0.14.0 still maps o1/o3/o4-mini/gpt-4.1/gpt-5 to o200k_base (gpt-oss to o200k_harmony); no GPT-6 mapping → Table 3.1/3.3 wording ("later models including o3, GPT-4.1 and GPT-5") stays accurate. Tokeniser-free byte-level models (ByteFlow, ICLR 2026; TFree-HAT, Mar 2026) remain research only → no change.
+- Architecture: DeepSeek-V4 (arXiv 2606.19348, 26 Apr 2026; HF model card): Pro 1.6T/49B active, Flash 284B/13B, 1M context, hybrid Compressed Sparse Attention + Heavily Compressed Attention, "only 27% of single-token inference FLOPs and 10% of KV cache compared with DeepSeek-V3.2", MIT licence → https://arxiv.org/abs/2606.19348 ; https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro . Qwen3.5-397B-A17B model card: "15 * (3 * (Gated DeltaNet -> MoE) -> 1 * (Gated Attention -> MoE))", 60 layers, 397B/17B active, 262,144 native context, Apache-2.0 → https://huggingface.co/Qwen/Qwen3.5-397B-A17B . Without these, §3.4's account of quadratic attention cost read as the whole story.
+- Diffusion LMs (Inception Mercury 2, Feb 2026; Gemini Diffusion still experimental) → niche, not added; "autoregressive" sentence remains correct for the models described.
+- Reasoning/RL: no primary 2026 disclosure that RL compute exceeds pre-training (only secondary reports, e.g. SemiAnalysis chart via officechai; a Cursor claim) → Epoch May 2025 sentence kept. CoT faithfulness: later studies (arXiv 2510.27378; 2603.22582; EMNLP 2026 papers) are consistent with chen2025reasoning → no change. "DeepSeek published the most detailed recipe" is a fragile superlative (other open recipes since, e.g. DeepSeek-V4, Olmo) → softened.
+- Hallucination: kalai2025why still arXiv v1 (4 Sept 2025), no journal version → "preprint" label and the t = 0.75 slip note stay valid → https://export.arxiv.org/api/query?id_list=2509.04664
+
+### Changes made
+- §3.4 Context windows: "...the largest Llama 3 model accepts 128,000; DeepSeek-V4, released with open weights in April 2026, accepts a million [@deepseekai2026deepseekv4]; and Gemini 1.5 ..."
+- §3.4: added after FlashAttention: Qwen3.5-397B-A17B uses Gated DeltaNet (linear cost) in 45 of 60 layers, full attention every fourth layer [@qwen2026qwen35]; DeepSeek-V4's compressed/sparse attention needs, per the developers, 27% of per-token computation and 10% of the KV cache of DeepSeek-V3.2 at a million tokens [@deepseekai2026deepseekv4].
+- Closing synthesis: "attention whose work grows with the square of the context" → "in standard attention, work that grows with the square of the context".
+- §3.7: "the most detailed recipe" → "one of the most detailed recipes".
+- Bib: added deepseekai2026deepseekv4, qwen2026qwen35. Body 9,613 → 9,706 words.
+
+### Error sweep
+- Re-ran with tiktoken 0.14.0: Table 3.1 IDs, " token"+"isation", parrot emoji (4 bytes → 3 tokens in both), strawberry splits, " 12345678" chunks, " cat" = 9059, n_vocab 50,257 / 100,277 / 200,019, Table 3.4 English/German/Swahili counts (7/7, 9/15, 13/20) → all match (Hindi string not in chapter, not re-run).
+- Re-ran Sennrich Algorithm 1 → Table 3.2 merges and counts match.
+- Recomputed: Table 3.5 attention (2.83/0.71/2.12; sum 27.29; 0.620/0.074/0.306; (0.773, 0.227); token 2 0.330/0.670); Table 3.6 every row and total 124,439,808, FFN share 2/3, Kaplan approximation 0.14%; 2N ≈ 170M; Table 3.9 (74 KB/75 MB; 819,200 B; 0.52 MB/66 GB; 8.3 MB/1.06 TB; ×16); temperature ratios e^0.43 ≈ 1.54, e^0.86 ≈ 2.36, consistent with Table 3.8 (7.5/4.9, 51.7/21.9); losses −ln 0.273 ≈ 1.30, −ln 0.032 ≈ 3.44; σ(1) ≈ 73%; 128,000² ≈ 1.6 × 10¹⁰; GRPO (mean 0.5, sd 0.5, ±1); t/(1 − t) = 3 → all correct.
+- Cross-references (Sections 1.7, 2.1, 2.3, 2.5, 3.4, 3.5, 3.7, 12.4, 12.5; Chapters 4, 11, 12) checked against chapter headings → consistent. No errors found.

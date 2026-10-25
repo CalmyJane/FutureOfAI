@@ -272,3 +272,21 @@ Logged gaps re-opened with WebSearch/WebFetch and arXiv full texts (pdftotext); 
 
 ### Still unverifiable from primary text
 - NYT 8 July 1958 article itself (paywalled); wording rests on consistent reproductions, as cited.
+
+## News sweep (2026-10-25)
+
+### Developments checked (July–25 October 2026)
+- Frontier releases Sept–Oct 2026 (GPT-6 Astra/Sol/Luna, Claude Opus/Sonnet 5.5, Gemini 4 Argon, Meta Muse Wonder, Mistral Large 4 1.05T MoE) → no ch02 sentence depends on them (GPT-3/AlexNet/LeNet parameter counts are historical) → https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/ ; https://www.dutchstartup.ai/en/news/google-openai-anthropic-and-mistral-release-new-frontier-models-in-late
+- Nvidia Vera Rubin: Q2 FY2027 results (26 Aug 2026) "Vera Rubin, now in full production"; racks running at CoreWeave, Google Cloud, Azure, OCI, Nebius → https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx . Rubin GPU table lists "NVFP4 training (PFLOPS)" 35 (dense) and NVFP4 inference 50; 288 GB HBM4, 22 TB/s → https://developer.nvidia.com/blog/inside-the-nvidia-rubin-platform-six-new-chips-one-ai-supercomputer/ (K. Aubrey, 5 Jan 2026). Blackwell sentence was not wrong but read as if Blackwell were the latest generation → one sentence added.
+- Optimisers: DeepSeek-V4 technical report (arXiv 2606.19348, submitted 26 Apr 2026) abstract: "(3) and the Muon optimizer for faster convergence and greater training stability"; also "Manifold-Constrained Hyper-Connections (mHC) that enhance conventional residual connections" (enhance, not replace, so the residual-connection text stands) → https://arxiv.org/abs/2606.19348
+- H100 product page figures (67 / 1,979 sparse / 3.35 TB/s) re-checked in fact-check 3; no change.
+
+### Changes made
+- §2.5 Adam: added "DeepSeek-V4, released in 2026, also used Muon [@deepseekai2026deepseekv4]."
+- §2.6: added "Its own successor, Vera Rubin, which Nvidia said in August 2026 was in full production, quotes 4-bit rates for training too [@aubrey2026inside; @nvidia2026nvidia]."
+- Trim for length: §2.8 removed the clause explaining that 0.007 is the smallest 8-bit step after GoogLeNet's conversion (low-value detail). Body 9,869 → 9,879 words.
+- Bib: added deepseekai2026deepseekv4 (also added identically to ch03.bib), aubrey2026inside, nvidia2026nvidia.
+
+### Error sweep (all worked calculations re-computed with Python)
+- Table 2.1 (sigmoid/tanh/ReLU values and slopes), Fig. 2.1 (0.2; −0.3), Fig. 2.2 (26 parameters), matrix layer (−3.4, 1.8 → (0, 1.8)), XOR Table 2.2 and the separating line, squared error (0.64, 0.01), softmax (0.659, 0.242, 0.0986; 0.417, 2.317), one-weight descent (−2.4; 0.3364; 0.44/0.88/0.0144; factor 1 − 8η; η = 0.5 → 1.4, 3.24; threshold 0.25), nine-parameter backprop box (all gradients, updated parameters, h = (1.2265, 0.2735), z = 1.0423, p = 0.7393, L = 0.3021), momentum (6.513 after ten steps; 10× top speed), Adam first step (m₁ −0.24, v₁ 0.00576, step 0.001), 0.25¹⁰ ≈ 9.5 × 10⁻⁷, He init (0.0625; 0.0256¹⁰ ≈ 1.2 × 10⁻¹⁶), 2 × 1,024 × 4,096² ≈ 3.4 × 10¹⁰, reuse 2 × 4,096/3 ≈ 2,731, H100 590 / 295 ops per byte, conv 1,728 weights vs 4.8 × 10¹¹, Fig. 2.5 window (cols 2–4 → 3) and feature map, crops 2 × 32² = 2,048, adversarial 0.007 × 0.01 × 150,528 ≈ 10.5 → all correct.
+- Cross-references to Sections 2.3–2.7, Chapters 3, 4, 7 and 12, and Tables/Figures 2.1–2.6 → consistent. No errors found.
