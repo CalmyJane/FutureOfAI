@@ -297,3 +297,8 @@ Re-read in full; arithmetic re-checked (Table 1.2 0.44/0.34; 175B/117M ≈ 1,500
 - ch08 (line 57, Table 8.2 row) and ch14 previously used 54.6% (Aug 2025) as the latest Bick et al. figure; the 1 Sept 2026 St. Louis Fed post gives 62% for May 2026 (ch14 updated; ch08 not edited).
 
 pandoc --citeproc: no warnings. Body ~8,930 words.
+
+### News sweep, gap-closing pass (2026-10-25)
+- AI-washing: SEC settled charges against Presto Automation (14 Jan 2025; AI drive-thru product; misleading statements on human intervention; no civil penalty) → https://www.sec.gov/enforcement-litigation/administrative-proceedings/33-11352-s ; SDNY charged Nate founder Albert Saniger with fraud (Apr 2025; "effectively 0%" automation; human contractors in a Philippine call centre) → TechCrunch (Rollet, 10 Apr 2025). ADDED two sentences after the FTC sentence in §1.8 [@sec2025presto; @rollet2025fintech]. DOJ press release not retrievable (empty page to fetcher). 2026 SEC actions (GenesisAI, 26 Aug 2026; Cryptoaiml/TSAI Pro, 29 Sept 2026) reported only via a secondary site citing DLA Piper → not added (unverified).
+- Market/investment: ch01 has no sentence depending on capex, revenue, financing or IPO figures → nothing to change.
+- New bib: sec2025presto, rollet2025fintech. pandoc --citeproc: no warnings.

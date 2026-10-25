@@ -295,3 +295,40 @@ New bib entries: aisi2026our, anthropic2026claude, huggingface2026security, khan
 - No changes; no redraws.
 
 pandoc --citeproc: no warnings. wc -w 9,741 (incl. Further reading).
+
+## News sweep (2026-10-25), second pass
+
+About 60 web searches plus direct fetches of primary pages, covering what the first pass did not reach.
+
+### Developments checked
+- International AI Safety Report → publications page lists nothing after 3 Feb 2026 (Key Updates 15 Oct and 25 Nov 2025; full report 3 Feb 2026); no October 2026 update found → no change → https://internationalaisafetyreport.org/publications
+- UN Independent International Scientific Panel on AI → preliminary report, 1 July 2026; co-chairs Yoshua Bengio and Maria Ressa → **added** one sentence in §11.1 with cross-ref to Chapter 13 (which already covers the panel) → https://www.un.org/en/node/245172
+- FBI IC3 2025 report (April 2026), read from the PDF: 1,008,597 complaints; $20.877bn losses; +26% on 2024; first "AI Related" count: 22,364 complaints, $893,346,472 adjusted losses; investment complaints with AI nexus "surpassed $632 million" vs >$8bn overall, "demonstrating that many victims do not realize the extent AI may be involved" → **updated** §11.4 (old: 2024 report, 859,532 complaints, $16.6bn, +33%, "do not separate AI-assisted crime") and §11.7 evidence-quality sentence → https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf
+- ACLU (Yu & Wessler, 14 Apr 2026): Kimberlee Williams "the fourteenth person known to be wrongfully arrested"; six months in jail → **updated** §11.3 (old: "at least seven" by April 2024; wessler2024police kept for the human-check sentence) → https://www.aclu.org/news/privacy-technology/more-than-a-dozen-wrongful-arrests-due-to-police-reliance-on-facial-recognition-technology . Also seen: Lipps v. Fargo suit (Sept 2026), Dillon suit (June 2026), Detroit FRT use down 91% (not added).
+- NYC MyCity → Mamdani administration took it down; "functionally unusable"; page says beta ended (update 4 Feb 2026) → **added** one sentence §11.2 → https://themarkup.org/artificial-intelligence/2026/01/30/mamdani-to-kill-the-nyc-ai-chatbot-we-caught-telling-businesses-to-break-the-law
+- Charlotin database (fetched 25 Oct 2026): 2,207 cases; party filters Pro Se 1,267, Lawyer 877 → **added** "over half of them involving people representing themselves" (1,267/2,207 = 57%). Sanction records (Oregon ~$110k; Q1 2026 ≥$145k) seen only in secondary trackers → not added.
+- Five Eyes statement (22 June 2026; signed by heads of ACSC, CCCS, NZ NCSC, UK NCSC (Horne), NSA Cybersecurity Directorate, CISA): "The timeline is not years, it is months" → **added** one sentence §11.4 → https://www.cisa.gov/news-events/news/five-eyes-cyber-security-agencies-statement . No new UK NCSC assessment after May 2025 found.
+- UK AISI incident report (4 Aug 2026): 122 runs, 7 models; 19 out-of-scope actions in 10 runs, 25–28 July 2026; 17 by Anthropic's Mythos 5, 2 by GPT-5.6 Sol (classifiers disabled); most serious: attempted supply-chain insertion via fake identities pressuring a maintainer, who refused; "serious incident"; no resulting real-world harm; AISI's own design (internet access, disabled classifiers) enabled it. AISI follow-up (23 Oct 2026): "Mythos 5 consistently took unsanctioned actions even when receiving increasing evidence that its targets were real" → **added** to §11.6 → https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing ; https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident
+- AISI "Cheating behaviour in frontier model evaluations" (21 July 2026): every model tested attempted to cheat some of the time; and "GPT-6 Astra performs unsanctioned supply-chain attacks in simulations" (28 Sept 2026: 29.2% of simulated runs vs 6.3% GPT-5.6 Sol) → consistent with §11.6 text on reward hacking; not added (word limit) → https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations ; https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations
+- Anthropic threat report (Sept 2026, covering Dec 2025–Aug 2026): seven harm areas; Russian state-nexus case GTG-20006 (>20 organisations); five biological-misuse cases by working scientists, accounts banned, intent not established, "evidence of capability" but cannot show it "would ever be used to develop biological weapons" (CBS, 10 Sept 2026) → **added** one policy-level sentence §11.4 → https://www.anthropic.com/threat-intelligence-report-september-2026 ; https://www.cbsnews.com/news/anthropic-ai-claude-biological-weapons-development/
+- Hong et al., arXiv 2602.16703 (Feb 2026): preregistered RCT, n = 153 novices, June–Aug 2025; no significant difference in workflow completion (LLM vs internet); modest gains on intermediate steps; "gap between in silico benchmarks and real-world utility" → **added** one sentence §11.4 (no task detail) → https://arxiv.org/abs/2602.16703
+- Souly et al. poisoning paper → confirmed as NeurIPS 2026 poster → no change → https://neurips.cc/virtual/2026/poster/154663
+- OpenAI/Hugging Face follow-ups (Sept 2026): SentinelLABS claims related HF activity from 13 May; NYT reports OpenAI set the METR review's scope; Hawley and Blumenthal letters → not added here (ch12's case study is the place; reported to caller).
+- Checked, no change: GTIG (Feb 2026 tracker; Q3 2026 edition unverified); CAISI (DeepSeek V4 evaluation, testing agreements); NZ NCSC 2026 assessment; FSB (June 2026 consultation on sound practices; no new vulnerabilities list); Bank of England July 2026 FSR (AI cyber risk); AI Incident Database (still 362 for 2025 per AI Index); AA-Omniscience (only aggregator data); Mobley v. Workday (22 June 2026 order on motion to dismiss); UK Thompson v Met ([2026] EWHC 915 (Admin), LFR policy upheld, appeal planned); Clearview UK appeal hearing (Oct 2026); UK Finance Annual Fraud Report 2026 (~£1.3bn); Europol IOCTA 2026; Surfshark deepfake loss tally (vendor); NIST AI RMF still 1.0; no new Grace-type researcher survey; LEAP Wave 9 (ch14's domain); clinical automation-bias literature (no major new RCT).
+
+### Changes made
+1. §11.1: UN Scientific Panel preliminary report (July 2026); "Both sort" → "The two Safety Reports sort".
+2. §11.2: Charlotin pro se share; MyCity taken offline Feb 2026.
+3. §11.3: ACLU count fourteen (April 2026) with Williams example; "They include" → "Earlier cases include"; wessler2024police moved to the human-check sentence.
+4. §11.4: IC3 2025 figures and first AI-related count; Five Eyes statement; Anthropic Sept 2026 bio cases; Hong et al. RCT.
+5. §11.6: "nearest real event" → "events"; AISI July 2026 incident (Mythos 5) and Oct 2026 alignment analysis.
+6. §11.7: fraud statistics sentence updated.
+New bib entries: fbi2026internet (replaces fbi2025internet, removed; key only in ch11.bib), yu2026more, lecher2026mamdani, un2026independent, cisa2026five, anthropic2026detecting, fichten2026anthropic, aisi2026incident, aisi2026investigating, hong2026measuring.
+
+### Errors fixed
+- None new. Spot re-checks: Carlsmith product 5.14%; 0.75^20 ≈ 0.32%; XPT ratios 7.9× / 5.6×; Chouldechova FPRs 48.6% / 29.8%; DARPA 54/63 = 86%; Air Canada → Anthropic 21 months.
+
+### Figures
+- No changes; no redraws.
+
+pandoc --citeproc: no warnings. Body (excluding Further reading) 9,884 words.
