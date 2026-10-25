@@ -354,7 +354,33 @@ Added: meta2026adversarial, kohli2026were, apple2026apple, ax2026ai, cnnbrasil20
 ### Figures
 No changes; no redraws.
 
-pandoc --citeproc: no warnings. Body (to Further reading) 9,895 words; file 10,096.
+pandoc --citeproc: no warnings. Body (to Further reading) 9,894 words.
 
 ### Not reached (search limit)
 Ofcom/Grok after 14 Oct; OpenAI Oct 2026 influence-operations report (primary); Colombia EU EOM wording; Brazil run-off outcome (today); Code of Practice signatory updates after 9 Sept.
+
+## Final gap check (2026-10-25)
+
+Closes the five items "Not reached" in the second news-sweep pass. ~17 web searches; openai.com, ofcom.org.uk, eeas.europa.eu and digital-strategy.ec.europa.eu all returned 403 to direct fetches, so primary wording was taken from search-engine snippets of those pages where noted.
+
+### Items
+1. **Grok / X.** Ofcom update of 14 Oct 2026 (Ofcom page 403; Reuters via BusinessDay/TimesLive; MLex headline "Grok probe narrowed"): Ofcom is "not taking forward" child-protection assessments and will focus on illegal content and complaints handling; SpaceXAI (formerly xAI) restricts standalone Grok so UK users cannot view/generate/share pornographic content. Nothing later than 14 Oct found from Ofcom. Commission: no preliminary findings or decision found (Jan 2026 opening still latest). → Box consistent; only "by mid-October 2026" → "by late October 2026". https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/ofcom-update-monitoring-xs-response-to-hate-and-terror-content-and-grok-investigation-latest ; https://www.timeslive.co.za/news/sci-tech/2026-10-14-concerns-persist-over-xs-handling-of-illegal-content-uk-media-regulator/
+2. **OpenAI "Disrupting AI-enabled false-front operations" (8 Oct 2026).** openai.com 403 (no PDF found). NPR (Huo Jingnan, 8 Oct, via OPB): Russian op mostly used ChatGPT for internal reports, fake material "a minority of the workload"; campaigns placing narratives in established media "appeared to reach a wider audience" than fake social accounts; Iranian op ~100 articles via seven fake journalists. Anadolu (9 Oct) quotes OpenAI: operations "closely resembled" pre-AI campaigns but "used AI to make some of the workflows easier". Breakout Scale ratings (Russia Cat. 5, Iran Cat. 4) only in secondary/snippet sources → not used. → **added** 1 sentence to §9.1 after Meta. https://www.opb.org/article/2026/10/09/openai-bans-russian-iranian-accounts-over-influence-efforts/ ; https://www.aa.com.tr/en/world/openai-says-it-banned-accounts-linked-to-russian-iranian-influence-operations/4083288
+3. **Colombia EU EOM.** All EEAS PDFs 403. Snippets of the primary documents (site-restricted search): run-off preliminary statement (23 Jun 2026) "intensa desinformación y un uso sin precedentes de la inteligencia artificial y los deepfakes" (confirmed by Noticias RCN quoting chief observer González Pons); Final Report (EN, dated 3 Sept 2026 on EEAS final-report page): AI played a key role in disinformation "but its most notable use was as a campaign tool", widely used for campaign spots, much "not inherently deceptive", "major regulatory and oversight gaps". → **added** 1 sentence to §9.4 (paraphrase, no quotation, because full text not read). https://www.eeas.europa.eu/eom-colombia-2026/final-report_en ; https://www.noticiasrcn.com/colombia/mision-de-observacion-de-la-union-europea-entrega-su-balance-sobre-las-elecciones-de-segunda-vuelta-en-colombia-1033779 . Note: Colombian national MOE (not EU) reports in El País/Cambio not used.
+4. **Brazil run-off (25 Oct 2026).** No AP/Reuters result available at time of check (polls close 17:00 Brasília) → text unchanged ("whose presidential run-off falls on 25 October 2026"). Author should update after results.
+5. **Art. 50 Code of Practice signatories.** Commission news item (page 403; snippet of current page): 95 Section 1 (providers) and 192 Section 2 (deployers) signatories, list updated continuously; named Section 1 examples include Anthropic, Google, Meta, Microsoft, Mistral, OpenAI. Up from 82/152 (MoFo, 9–11 Sept). Meta's own announcement of signing 28 July 2026 (about.fb.com) corroborates. Exact date of the 95/192 snapshot not visible → phrased "By October 2026". → **replaced** MoFo sentence. https://digital-strategy.ec.europa.eu/en/news/strong-backing-code-practice-transparency-ai-generated-content ; https://about.fb.com/news/2026/07/meta-is-signing-the-eu-ai-act-code-of-practice-on-transparency-of-ai-generated-content/
+
+### Changes made
+1. §9.1: OpenAI Oct 2026 false-front report (NPR, Anadolu); reach claim worded "appeared to reach", as in NPR.
+2. §9.4: Colombia EU EOM final report.
+3. §9.8: Code of Practice signatory count 82/152 (Google) → 95/192 (Anthropic, Google, Meta, Microsoft, OpenAI).
+4. Grok box: "mid-October" → "late October".
+Trims: VALL-E journal-publication note and training-hours sentence; Barrington "first two recorded prompts"; SynthID "30 rounds" default; Chandra "among them journalists"; Saberi "demonstrated it experimentally"; C2PA JUMBF, IPTC and COSE_Sign1 glosses (COSE_Sign1 still in Fig. 9.2 caption/spec, unchanged); Pixel "Assurance Level 2" name; Schiff mechanism names; Schiff concluding sentence tightened; Hungary 73% figure.
+
+### Bib
+Added: anadolu2026openai, huo2026openai, euelectionobservationmission2026final, europeancommission2026strong. Removed: morrisonfoerster2026full (ch09 only, no longer cited).
+
+### Figures
+None changed; no redraws.
+
+pandoc --citeproc: no warnings. Body (to Further reading) 9,894 words.
