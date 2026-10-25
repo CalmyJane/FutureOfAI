@@ -301,3 +301,28 @@ Not checked (shared web-search budget exhausted): SAG-AFTRA 2026 deal AI terms b
 
 ### Bib (ch08.bib only)
 - Added ap2026actors, shoot2026sagaftra (keys not in other bibs). Pandoc check clean.
+
+## Source audit (2026-10-25)
+
+Checked all 151 citation instances (78 keys) in paragraphs, boxes, tables and captions against this log; re-opened the MIT statement, the Noy & Zhang working paper PDF and the Journal du Net OECD article; OECD pages returned 403. Pandoc --citeproc clean. Body (before Further reading) 9,706 words.
+
+### Citations corrected / attributions tightened
+- §8.3 MIT statement: "a November 2024 preprint ... on AI in materials research" → "on AI, scientific discovery and product innovation". The MIT statement (16 May 2025) names the paper "Artificial Intelligence, Scientific Discovery, and Product Innovation" and does not mention materials research. https://economics.mit.edu/news/assuring-accurate-research-record
+- §8.4 OECD (barhiye2026ocde, secondary): the "no general fall" statement is Mathias Cormann's ("rien n'indique que l'utilisation accrue de l'intelligence artificielle par les entreprises ... entraîne une baisse généralisée de la demande de main-d'œuvre"), so "The OECD's Employment Outlook 2026 likewise found no sign ... general fall in employment" → "Presenting the OECD's Employment Outlook 2026, its secretary-general likewise said there was no sign ... general fall in the demand for labour ..., and the OECD noted ...". OECD primary (report and the Aug 2026 OECD blog by S. Carcillo) not reachable (403).
+
+### Uncited claims found → resolved (all with existing keys)
+- §8.4 debate box: quotation "early, descriptive indicators" and the education/pre-trend/ADP-vs-national caveats had no citation in their paragraph → [@brynjolfsson2026canaries] added.
+- §8.5 Acemoglu box, second paragraph (7% hard-task saving, ~0.55%, GDP 0.9–1.1% / 1.6–1.8%) → [@acemoglu2024simple] added.
+- §8.3 case box, second paragraph (moderately rare problems, English fluency, customer politeness) → [@brynjolfsson2025generative] added.
+- §8.2 Bick et al. "1.4% in the late-2024 data of the published paper" → [@bick2026rapid] added.
+- §8.2 Anthropic labels assigned by a language model → [@handa2025which] added.
+
+### Re-verified without change
+- Noy & Zhang design: "high-powered incentives, in the form of large bonus payments" (WP, 2 Mar 2023, p. 2) supports "large bonuses for quality".
+
+### Sources added
+- None (no new keys).
+
+### Unresolved
+- barhiye2026ocde stays a secondary (AFP-based) source; replace with the OECD *Employment Outlook 2026* once oecd.org is reachable.
+- ap2026actors / shoot2026sagaftra remain secondary for SAG-AFTRA 2026 terms (sagaftra.org blocks fetches).

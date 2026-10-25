@@ -351,3 +351,26 @@ Developments checked:
 - Nuclear/power: Google–Constellation 890 MW new + 2,700 MW existing (6 Oct 2026, SiliconANGLE); Crane (TMI) restart still 2027; Carnegie (Jun 2026) ~13 GW hyperscaler nuclear agreements → no statement wrong; not added.
 - Data-centre demand studies (Gartner Jun 2026: 447 → 565 TWh; EPRI Feb 2026) → not added (IEA remains the reference).
 Pandoc --citeproc: no warnings. Body (wc, before Further reading) 9,835 words.
+
+## Source audit (2026-10-25)
+
+Checked all 230 citation instances (97 keys) in paragraphs, boxes, tables and captions against this log; re-opened the IEA *Key Questions* PDF (Régie de l'énergie exhibit) for Box 1.1 and sec. 3/5.1, the AESO release, the White House fact sheet, the arXiv API (AI Index DOI) and TSMC IR (2Q26 documents 403/404). Pandoc --citeproc clean. Body (before Further reading) 9,841 words.
+
+### Citations corrected (old → new)
+- §7.3 trade truce: [@lowenkron2025china] (Bloomberg via Fortune, secondary) → [@whitehouse2025fact] (primary). White House fact sheet, 1 Nov 2025: China "will suspend the global implementation of the expansive new export controls on rare earths and related measures that it announced on October 9, 2025" and "will terminate its various investigations targeting U.S. companies in the semiconductor supply chain"; also the one-year suspension of the affiliates rule from 10 Nov 2025. Wording "China ... suspended ... and ended" → "agreed to suspend ... and to end" (the source records commitments). lowenkron2025china removed from ch07.bib (no other bib uses it). https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/
+
+### Sources added (claim → key → URL)
+- Alberta 1.2 GW interim cap and >16 GW of requests (primary beside IEA) → aeso2025aeso (AESO news release, 4 June 2025: "29 proposed projects representing more than 16 gigawatts (GW)"; "interim limit of 1,200 megawatts (MW)"; peak-demand comparison not in the release, so IEA kept) → https://www.aeso.ca/aeso/newsroom/aeso-announces-interim-approach-to-large-load-connections/
+- H800 sellable to China until the 2023 tightening (§7.1, FP8 paragraph, previously uncited there) → nvidia2023form (existing key)
+- Epoch dashboard compute stock 3.4×/yr (§7.1, previously uncited) → epochai2026trends (copied byte-identical from ch04.bib) → https://epoch.ai/trends
+
+### Re-verified without change
+- IEA Box 1.1 helium: "supplied roughly one-third of global helium before the conflict", production halted as of March 2026 (AP 2026 cited by IEA); no substitute → "conflict in the Middle East in 2026" supported. IEA sec. 5.1: Microsoft–Constellation 835 MW TMI (2024; restart 2027), AWS–Talen up to 1,920 MW (2025) → supported. sajadieh2026ai DOI 10.48550/arXiv.2606.15708 resolves (arXiv v3, "Artificial Intelligence Index Report 2026").
+
+### Claims softened/cut
+- None cut. Only the truce wording above.
+
+### Unresolved
+- focustaiwan2026tsmc (TSMC raised 2026 capex to US$60–64bn): primary TSMC 2Q26 transcript/presentation returned 403/404; CNA report kept.
+- ap2026trump (US Treasury: truce to 10 Jan 2027): no primary Treasury text found; White House fact sheet of 25 Sep 2026 gives no end date; AP kept.
+- milmo2025sputnik (Nvidia −17%, ~$600bn) remains a news source for a market event (appropriate).
