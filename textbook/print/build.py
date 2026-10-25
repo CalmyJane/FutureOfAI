@@ -4,6 +4,7 @@ typeset with WeasyPrint to a print-ready A5 PDF (PDF/X-4, no bleed).
 Run from anywhere:  python3 textbook/print/build.py
 """
 import glob
+import html
 import os
 import re
 import subprocess
@@ -28,6 +29,19 @@ PARTS = {
     11: ("Part IV", "Risk, Safety and Governance"),
     14: ("Part V", "The Decade Ahead"),
 }
+
+
+def source_hash():
+    """Hash of everything that goes into the PDF, so a stale delivery file can be detected."""
+    import hashlib
+    h = hashlib.sha256()
+    files = sorted(glob.glob(os.path.join(CH, "*.md")) + glob.glob(os.path.join(TB, "bib", "*.bib"))
+                   + glob.glob(os.path.join(TB, "work", "glossary-ch*.md")) + glob.glob(os.path.join(TB, "figures", "svg", "*.svg"))
+                   + [os.path.join(PRINT, n) for n in ("build.py", "srcnotes.lua", "book.css", "pageline.css", "apa.csl")])
+    for f in files:
+        h.update(os.path.relpath(f, TB).encode())
+        h.update(open(f, "rb").read())
+    return h.hexdigest()
 
 
 # ---------------------------------------------------------------- bibliography
@@ -132,7 +146,7 @@ def notes_to_footnotes(body):
     body = re.sub(r'([^\s<>]*)<a href="#(fn\d+)" class="footnote-ref"[^>]*><sup>\d+</sup></a>',
                   lambda x: f'<span class="nobr">{x.group(1)}<span class="fn">{notes.get(x.group(2), "")}</span></span>', body)
     # source notes: "(Smith, 2024; Jones, 2025)" -> "Smith, 2024; Jones, 2025."
-    body = re.sub(r'(<span class="srcnote"><span class="citation"[^>]*>)\((.*?)\)(</span></span>)',
+    body = re.sub(r'(<span class="srcnote"[^>]*><span class="citation"[^>]*>)\((.*?)\)(</span></span>)',
                   r"\1\2.\3", body, flags=re.S)
     return body
 
@@ -145,23 +159,49 @@ def notes_to_pageline(body):
     body = re.sub(r'<div id="ref-([^"]+)" class="csl-entry"([^>]*)>',
                   lambda m: f'<div id="ref-{m.group(1)}" class="csl-entry"{m.group(2)}><span class="refnum">{num[m.group(1)]}</span>', body)
     def nums(m):
+        locs = {}
+        lm = re.search(r'data-locs="([^"]*)"', m.group(0))
+        if lm:
+            for part in html.unescape(lm.group(1)).split("|"):
+                k, _, loc = part.partition("=")
+                if loc:
+                    locs.setdefault(k, []).append(loc)
         ks = []
         for k in re.findall(r'data-cites="([^"]+)"', m.group(0)):
             for kk in k.split():
-                if kk in num and num[kk] not in ks:
-                    ks.append(num[kk])
-        return " ".join(str(n) for n in ks)
+                if kk in num and num[kk] not in [x[0] for x in ks]:
+                    ks.append((num[kk], "; ".join(dict.fromkeys(locs.get(kk, [])))))
+        return html.escape("|".join(f"{n}~{l}" if l else str(n) for n, l in ks))
     counter = iter(range(1, 10**6))
-    body = re.sub(r'<span class="fn"><span class="srcnote">.*?</span></span></span>',
+    body = re.sub(r'<span class="fn"><span class="srcnote"[^>]*>.*?</span></span></span>',
                   lambda m: f'<span class="srcm" id="srcm{next(counter)}" data-nums="{nums(m)}">\u2060</span>',
                   body, flags=re.S)
     # every other citation (narrative mentions, table cells, captions) also joins its page's line
     def mark(m):
         mark.i += 1
         ks = [str(num[k]) for k in m.group(1).split() if k in num]
-        return m.group(0) + f'<span class="srcm" id="srcx{mark.i}" data-nums="{" ".join(ks)}">\u2060</span>'
+        return m.group(0) + f'<span class="srcm" id="srcx{mark.i}" data-nums="{"|".join(ks)}">\u2060</span>'
     mark.i = 0
     body = re.sub(r'<span class="citation" data-cites="([^"]+)">.*?</span>', mark, body, flags=re.S)
+    # captions name their sources by reference number ("Source: 412, 418."), never by author and year
+    def caption_numbers(m):
+        found = []
+        def to_token(c):
+            found.append([num[k] for k in c.group(1).split() if k in num])
+            return "\x00"
+        cap = re.sub(r'<span class="citation" data-cites="([^"]+)">.*?</span>(?=<span class="srcm")', to_token, m.group(0), flags=re.S)
+        # a run of citations ("A; B and C") becomes one sorted list of numbers
+        def collapse(r):
+            n = r.group(0).count("\x00")
+            ks = [k for grp in found[:n] for k in grp]
+            del found[:n]
+            return f'<span class="refnums">{", ".join(map(str, sorted(set(ks))))}</span>'
+        return re.sub(r'\x00(?:(?:<span class="srcm"[^>]*>\u2060</span>)*(?:\s*[;,]\s*|\s+and\s+)\x00)*', collapse, cap)
+    body = re.sub(r'<(figcaption|caption)\b.*?</\1>', caption_numbers, body, flags=re.S)
+    # in table cells the citation text is dropped (with the space before it): the page's source line carries it
+    def table_cells(m):
+        return re.sub(r'\s*<span class="citation" data-cites="[^"]+">.*?</span>(?=<span class="srcm")', "", m.group(0), flags=re.S)
+    body = re.sub(r'<tbody>.*?</tbody>', table_cells, body, flags=re.S)
     # "Kestin et al. (2025)" -> "Kestin et al."
     def strip_year(m):
         return re.sub(r'\s*\((?:<a [^>]*>)?\d{4}[a-z]?(?:</a>)?(?:,[^()]*)?\)', "", m.group(0))
@@ -198,7 +238,14 @@ def stamp_pagelines(document, doc, pdf_path):
     where = marker_pages(document)
     pages = {}
     for mid, pi in where.items():
-        pages.setdefault(pi, set()).update(int(n) for n in nums[mid].split())
+        for item in html.unescape(nums[mid]).split("|"):
+            if not item.strip():
+                continue
+            n, _, loc = item.partition("~")
+            locs = pages.setdefault(pi, {}).setdefault(int(n), [])
+            for one in filter(None, (x.strip() for x in loc.split("; "))):
+                if one not in locs:
+                    locs.append(one)
     pdfmetrics.registerFont(TTFont("EBG", os.path.join(PRINT, "fonts", "EBGaramond-Regular.ttf")))
     pdfmetrics.registerFont(TTFont("EBG-It", os.path.join(PRINT, "fonts", "EBGaramond-RegularItalic.ttf")))
     reader = PdfReader(pdf_path)
@@ -207,7 +254,7 @@ def stamp_pagelines(document, doc, pdf_path):
     width = 113 * mm
     for pi, ns in pages.items():
         x0 = 20 * mm if pi % 2 == 0 else 15 * mm  # right-hand pages have the wider inner margin on the left
-        text = " · ".join(map(str, sorted(ns)))
+        text = " · ".join(f"{n} ({'; '.join(ns[n])})" if ns[n] else str(n) for n in sorted(ns))
         lines = simpleSplit(text, "EBG", 7.4, width - 12 * mm)
         buf = BytesIO()
         c = canvas.Canvas(buf, pagesize=(W, H), initialFontName="EBG", initialFontSize=7.4)
@@ -272,6 +319,10 @@ def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
         return f'<h1{attrs}><span class="ch-label">{label}</span><span class="ch-title">{title}</span></h1>'
     body = re.sub(r"<h1([^>]*)>(Chapter \d+|Preface)\s*:?\s*(.*?)</h1>", chap, body)
 
+    # tables with five or more columns get a tighter setting on the A5 page
+    body = re.sub(r"<table>(.*?)</table>",
+                  lambda m: ('<table class="wide">' if len(re.findall(r"<th\b", m.group(1).split("</thead>")[0])) >= 5 else "<table>") + m.group(1) + "</table>",
+                  body, flags=re.S)
     css = open(os.path.join(PRINT, "book.css"), encoding="utf-8").read()
     if notes:
         css += open(os.path.join(PRINT, "notes.css" if mode == "foot" else "pageline.css"), encoding="utf-8").read()
@@ -291,6 +342,9 @@ def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
     if notes and mode == "pageline":
         n = stamp_pagelines(document, doc, out_pdf)
         print(f"source lines stamped on {n} pages")
+    if out_pdf == OUT_PDF and only is None:
+        with open(os.path.join(TB, "delivery", "BUILD-INFO.txt"), "w", encoding="utf-8") as f:
+            f.write(f"sources_sha256: {source_hash()}\npages: {len(document.pages)}\n")
     words = len(re.sub(r"<[^>]+>", " ", body).split())
     print(f"{out_pdf}: {len(document.pages)} pages; ~{words} words incl. references")
     print(f"bib entries: {len(keys)}; cited: {len(used)}; glossary terms: {n_terms}")

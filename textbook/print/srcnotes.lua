@@ -51,7 +51,15 @@ local function add_note(el)
   local kept, cites = collect(el.content)
   if #cites == 0 then return nil end
   local cite = pandoc.Cite({pandoc.Str("")}, cites)
-  kept:insert(pandoc.Note({pandoc.Plain({pandoc.Span({cite}, {class = "srcnote"})})}))
+  -- pinpoints ("p. 4", "paras 39, 48") travel with the note so the page line can print them
+  local locs = {}
+  for _, c in ipairs(cites) do
+    local loc = pandoc.utils.stringify(c.suffix):gsub("^[,%s]+", "")
+    if loc ~= "" then table.insert(locs, c.id .. "=" .. loc) end
+  end
+  local attrs = {}
+  if #locs > 0 then attrs["locs"] = table.concat(locs, "|") end
+  kept:insert(pandoc.Note({pandoc.Plain({pandoc.Span({cite}, pandoc.Attr("", {"srcnote"}, attrs))})}))
   el.content = kept
   return el
 end

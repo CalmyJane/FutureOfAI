@@ -1,8 +1,8 @@
 # Preface {.unnumbered}
 
-This book describes artificial intelligence as it stands in October 2026: how the technology works, what has driven its progress, what it is already doing to work, science, media and public life, how it fails, and how governments are trying to control it. It is written for readers who want the substance rather than the headlines. No programming is assumed, but the book does not avoid technical detail. Where an equation is the clearest way to explain a mechanism, the equation is given, together with a plain-language explanation and a worked number.
+This book reports what is known about artificial intelligence as it stands in October 2026, how it is known, and how well. It covers how the technology works, what has driven its progress, what it is already doing to work, science, media and public life, how it fails, and how governments are trying to control it. No programming is assumed, but the book does not avoid technical detail. Where an equation is the clearest way to explain a mechanism, the equation is given, together with a plain-language explanation and a worked number.
 
-Public discussion of AI swings between promise and alarm, and much of it rests on anecdotes, company announcements and forecasts presented as facts. This book tries to do something different: to report what is known, how it is known and how well it is known. Every factual claim that is not common knowledge is sourced. To keep the text readable, the sources are not cited inside the sentences: a line at the foot of each page lists the numbers of the sources used on that page, and the numbered list of more than a thousand references at the end of the book gives the full details. Tables and figures name their sources in their captions. Where the evidence is clear, the book says so plainly. Where informed people disagree, it sets out the strongest evidence on each side.
+Much public discussion of AI rests on anecdotes, company announcements and forecasts presented as facts. This book tries instead to show the evidence behind each claim and how strong it is. Every factual claim that is not common knowledge is sourced. To keep the text readable, sources are not cited inside the sentences. A line at the foot of each page lists the numbers of the sources used on that page, and the numbered list of about a thousand references at the end of the book gives the full details. Tables and figures name their sources by the same numbers in their captions. Where the evidence is clear, the book says so plainly. Where informed people disagree, it sets out the strongest evidence on each side.
 
 ## How the book is organised
 
@@ -14,11 +14,17 @@ The fourteen chapters fall into five parts.
 
 **Part III, Society and Economy (Chapters 8–10),** examines effects on people. Chapter 8 reviews the evidence on work, productivity and the labour market, including the hidden human labour behind AI systems. Chapter 9 covers information, media and democracy. Chapter 10 looks at education, health and everyday life.
 
-**Part IV, Risk, Safety and Governance (Chapters 11–13)** asks what can go wrong and what is being done about it: the main categories of risk and the evidence for each (Chapter 11), the technical work on alignment, interpretability and evaluation (Chapter 12), and law and policy in the European Union, the United States, China, the United Kingdom and international bodies, including the disputes over copyright and personal data (Chapter 13).
+**Part IV, Risk, Safety and Governance (Chapters 11–13),** asks what can go wrong and what is being done about it: the main categories of risk and the evidence for each (Chapter 11), the technical work on alignment, interpretability and evaluation (Chapter 12), and law and policy in the European Union, the United States, China, the United Kingdom and international bodies, including the disputes over copyright and personal data (Chapter 13).
 
 **Part V, The Decade Ahead (Chapter 14),** examines how AI forecasts are made and how good they have been, sets out the main uncertainties for the next ten years, and closes with ten proposals. These proposals are where the author argues most directly for a position, and they are labelled as such.
 
 Four kinds of box appear in the text. **Concept** boxes define an idea precisely. **Case study** boxes examine a real event in detail. **Debate** boxes set out a contested question with the best evidence on each side. **Going deeper** boxes give additional technical detail. Each chapter ends with annotated suggestions for further reading, and technical terms are collected in the glossary.
+
+## How to read this book
+
+The chapters can be read in order or on their own; cross-references point to where a concept is first explained. Chapters 2 to 4 are the most technical. Their equations and *Going deeper* boxes can be skipped without losing the thread, because the main text states each result in words.
+
+Where a source is long, the source line at the foot of the page gives the exact place in brackets after the reference number, such as an article of a law or the pages of a book.
 
 ## How evidence is labelled
 
@@ -27,14 +33,22 @@ Claims about AI vary enormously in how well they are supported, and the text sig
 - **Peer-reviewed research** and **official statistics or legal texts** are cited without a label. This is the strongest evidence available, though not infallible.
 - **Preprints and working papers**, posted publicly before (or without) peer review, are labelled as such where they are first mentioned in a chapter. In AI and in economics, many important results first appear this way.
 - **Reports from research institutions** such as Epoch AI, METR, the International Energy Agency or the Stanford AI Index are named, so that readers can judge their methods.
-- **Company claims**, such as benchmark results in a product announcement, are introduced with "according to the company". They may be accurate, but they have not been checked independently.
+- **Company claims**, such as benchmark results in a product announcement or a company's account of its own safety testing, are attributed to the company ("according to the company", "OpenAI reports"). They may be accurate, but they have not been checked independently. Companies' accounts of their own failures are reported as fully as their accounts of success.
+- **Company usage data and leaderboards**, such as a developer's figures for weekly users or a public ranking of models, are named as such: they measure what their owners choose to measure.
+- **Company technical reports**, even when posted on arXiv, are treated as company claims where they report performance, and as reliable descriptions of the company's own methods.
+- **Commentary**, such as magazine columns, editorials and essays, is identified as such.
+- **News reports** are named ("according to Reuters") where they are the only available source for an event; where a primary document exists, the book cites it instead.
 - **Research by banks and consultancies** is labelled as such, for the same reason.
-- **Opinions and forecasts** are attributed to the people who hold them.
+- **Opinions and forecasts** are attributed to the people who hold them, and where a person has a stake in the question, such as the head of a company that would gain from a policy, the stake is stated.
 
 Where a figure redraws published data, its caption names the source; where a diagram is schematic, the caption says so. Numbers marked as computed by the author (for example the tokenisation and probability tables in Chapter 3) were produced with publicly available models and software, and the settings are given.
 
 ## What "as of October 2026" means
 
-The evidence in this book was gathered and checked in October 2026. Some of it will date quickly: the names of the leading models, benchmark scores, the details of export controls, and which provisions of new laws are in force. Other parts will last much longer: how neural networks learn, why scaling works, how to read a randomised trial, what makes a risk hard to govern. Every number is given with the year it refers to, so that readers can look for newer figures and compare.
+The evidence in this book was gathered and checked in October 2026. Some of it will date quickly: the names of the leading models, benchmark scores, the details of export controls, and which provisions of new laws are in force. Other parts will last much longer: how neural networks learn, why scaling works, how to read a randomised trial, what makes a risk hard to govern. Time-sensitive numbers are given with the year they refer to, so that readers can look for newer figures and compare. Dollar amounts are US dollars.
+
+## How the book was made
+
+The research, drafting and checking of this book were assisted by AI tools, including large language models of the kind it describes. Every factual claim was checked against the source cited for it, and the logs of those checks were kept. Responsibility for the text, including any errors, is the author's.
 
 Jan Göbel, October 2026
