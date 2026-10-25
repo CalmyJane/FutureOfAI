@@ -125,7 +125,7 @@ def front_matter(toc):
 <section class="copyright">
   <p>© {YEAR} {AUTHOR}. All rights reserved.</p>
   <p>Evidence in this book is current to October 2026. Web sources were checked between 20 and 25 October 2026. References follow APA 7 and are numbered. Sources are not cited in the running text: the line at the foot of each page lists the numbers of the sources used on that page.</p>
-  <p>Figures drawn for this edition. Set in EB Garamond (SIL Open Font License).</p>
+  <p>Figures drawn for this edition. Set in EB Garamond, with Noto Serif Devanagari for Hindi (both SIL Open Font License).</p>
   <p>ISBN: [to be assigned]<br>Publisher and printer: [imprint details]</p>
 </section>
 {toc}

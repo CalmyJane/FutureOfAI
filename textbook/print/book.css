@@ -1,5 +1,6 @@
 /* Understanding AI — A5 course text, no bleed (148 x 210 mm). */
 @font-face { font-family: "EBG"; src: url(fonts/EBGaramond-Regular.ttf); font-weight: 400; font-style: normal; }
+@font-face { font-family: "NotoDeva"; src: url(fonts/NotoSerifDevanagari-Regular.ttf); font-weight: 400; font-style: normal; }
 @font-face { font-family: "EBG"; src: url(fonts/EBGaramond-RegularItalic.ttf); font-weight: 400; font-style: italic; }
 @font-face { font-family: "EBG"; src: url(fonts/EBGaramond-SemiBold.ttf); font-weight: 600; font-style: normal; }
 @font-face { font-family: "EBG"; src: url(fonts/EBGaramond-SemiBoldItalic.ttf); font-weight: 600; font-style: italic; }
@@ -20,7 +21,7 @@
 @page blank { @bottom-center { content: none; } @top-left { content: none; } @top-right { content: none; } }
 @page :blank { @bottom-center { content: none; } @top-left { content: none; } @top-right { content: none; } }
 
-html { font-family: "EBG", serif; font-size: 10.3pt; line-height: 1.36; color: #000; hyphens: auto; text-align: justify; }
+html { font-family: "EBG", "NotoDeva", serif; font-size: 10.3pt; line-height: 1.36; color: #000; hyphens: auto; text-align: justify; }
 body { margin: 0; }
 p { margin: 0; text-indent: 1.1em; orphans: 2; widows: 2; }
 h1 + p, h2 + p, h3 + p, figure + p, div + p, ul + p, ol + p, table + p, section > p:first-child { text-indent: 0; }
