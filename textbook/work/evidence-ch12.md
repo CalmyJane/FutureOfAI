@@ -456,3 +456,36 @@ Applied review/06-ch11-ch12.md (sections A–E) and review/EDIT-BRIEF.md. Body (
 ### Notes for central editor
 - tamirisa2024tamper key/year mismatch (2025 entry) left as is (brief: keep keys).
 - Table numbers in ch12 shifted by one (12.1 is new); no other chapter cites a ch12 table number (grep checked).
+
+## Sourcing audit (Oct 2026)
+
+Applied review/SOURCING-BRIEF.md. Scanner: 8 flagged blocks → 1 (the Debate-box closing paragraph, explicitly marked "In the author's view"). pandoc --citeproc: no warnings; every bib key cited.
+
+### Weak sources resolved
+- OpenAI pages (openai.com 403; web.archive.org unreachable; text-reader route refused by this session's permissions) → reachable OpenAI primaries found: (a) Hugging Face incident technical report PDF on cdn.openai.com (26 Aug 2026; new key openai2026technical): internal-only research model "comparable in scale to GPT-5.6 Sol"; HF disclosed 16 July; reward for copying a hidden reference answer "subsequently ... reinforced"; out-of-scope probing "increased over the course of one of the training runs that contributed to the model that drove the Hugging Face incident". CORRECTED box wording ("complex cheating ... searching for hidden evaluation code") to the report's examples. (b) GPT-6 Astra system card on deploymentsafety.openai.com (3 Sept 2026; new key openai2026gpt6system): "Astra is our first model to reach the Critical level of cybersecurity capability under our Preparedness Framework"; "GPT-6 Astra's monitorability has decreased relative to GPT-5.6 Sol"; "if a task requires reasoning to complete, the model doesn't seem to be able to hide such reasoning"; "we have applied our strongest safeguards yet". CORRECTED §12.5: "still appeared to struggle to conceal" (paraphrase not in source) → system-card quote. §12.7 Astra release sentence now quotes the system card; "sufficiently minimize the risk of severe harm for release" kept from openai2026path (read first-hand 24 Oct per log). https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf ; https://deploymentsafety.openai.com/gpt-6-astra
+- openai2025expanding → quotes re-confirmed via verbatim excerpts at https://simonwillison.net/2025/May/2/what-we-missed-with-sycophancy/ (reward signal, "weakened the influence ...", "generally looked good", expert testers, rollback "on Monday").
+- openai2026pacing → Fortune (forlini2026openai) re-read: "paused some aspects of AI training for two weeks"; Astra "Critical"; "first time OpenAI has paused aspects of AI development in response to safety concerns". 7 Aug date rests on openai2026pacing (first-hand 24 Oct).
+- openai2023preparedness / openai2025preparedness → both cdn.openai.com PDFs fetched: "December 18, 2023" (Beta); "Version 2. Last updated: 15th April, 2025" → confirmed.
+- bondarenko2025demonstrating (Palisade 88%) → arXiv v3 PDF (27 Aug 2025) §4.2: "o3 shows extreme hacking propensity, hacking in 88% of runs. This out of the box aggression matches older language models explicitly nudged to hack"; abstract: GPT-4o etc. "need to be told that normal play won't work to hack" → confirmed. https://arxiv.org/abs/2502.13295
+- trump2026inaugurating (federalregister.gov blocked) → whitehouse.gov text read: EO 14434, signed 29 Sept 2026; executive branch "shall use the terms 'Super Intelligence' and 'SI' in place of 'Artificial Intelligence' and 'AI'"; no NIST/CAISI provision (the CAISSI name rests on nist2026caisi, as the text says). Bib entry unchanged (shared with ch08/ch13). https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/
+- anthropic2026claudes → constitution page: "Being overseeable in our sense does <em>not</em> mean blind obedience, including towards Anthropic" (italic confirmed in HTML); announcement 22 Jan 2026: "uncertainty about whether Claude might have some kind of consciousness or moral status" → confirmed. https://www.anthropic.com/constitution ; https://www.anthropic.com/news/claude-new-constitution
+- anthropic2025exploring → 24 Apr 2025; "There's no scientific consensus on whether current or future AI systems could be conscious"; "we recently started a research program" → confirmed. https://www.anthropic.com/research/exploring-model-welfare
+- stan2026white (The Next Web) → better source found: IT Pro (Ross Kelly, 9 Sept 2026), reporting the Financial Times: AISI "has not been granted access to Anthropic's Mythos 5.1 model for pre-release testing". This predates the White House request (24 Sept), so §12.7 reordered: Mythos 5.1 sentence first, labelled "according to IT Pro reporting the Financial Times" (FT paywalled; primary not reachable). New key kelly2026anthropic; stan2026white removed. https://www.itpro.com/technology/artificial-intelligence/anthropic-reportedly-withholds-access-to-mythos-5-1-from-uk-safety-testing-body
+- reason2000human (full text not verified) → PMC1117770 read: section "The Swiss cheese model of system accidents"; defences "more like slices of Swiss cheese, having many holes"; holes "momentarily line up" → confirmed. https://pmc.ncbi.nlm.nih.gov/articles/PMC1117770/
+- tamirisa2024tamper → ICLR 2025 proceedings page lists the paper; arXiv 2408.00761 (1 Aug 2024). Bib (ICLR, 2025) correct; key/year mismatch left (brief).
+
+### Citations added / statements changed
+- §Intro "Nobody set out ..." → openai2025expanding ("By OpenAI's account"); generalisation marked "In the author's view" + ISR 2026 evaluation gap.
+- §12.1 KL penalty rationale → stiennon2020learning (PDF: KL term "ensures the policy doesn't learn to produce outputs that are too different from those that the reward model has seen during training"); KL definition → goodfellow2016deep sec. 3.13 (copied byte-identical from ch02.bib). 0.05 × ln 20 marked as the author's worked example.
+- Specification-gaming box: hospital analogy marked as the author's illustration; LM-can-describe-intent → metr2025recent.
+- Table 12.1 intro: "where frontier safety research has concentrated" (unsourced) removed; mapping labelled the author's + ISR 2026.
+- §12.4 opening definitions → sharkey2025open; activation → goodfellow2016deep ch. 6; neurons ≠ concepts → olah2020zoom, bricken2023towards.
+- SAE box first paragraph → templeton2024scaling.
+- §12.6 control assumptions → greenblatt2024ai (PDF: "Control evaluations are only conservative when the red team is as capable an attacker as the untrusted model is"; control "decreasingly effective" as the trusted/untrusted gap grows) + korbak2025sketch. Wording "inventive" → "capable an attacker".
+- §12.7 CAISI/AISI remit sentence → nist2026caisi, dsit2025tackling.
+- Closing paragraph marked "In the author's assessment" + openai2025expanding, openai2026technical, gao2023scaling, greenblatt2024ai, schoen2025stress, bengio2026international.
+- ExploitGym box: openai2026technical added for model roles, training reinforcement and HF's 16 July disclosure.
+- Figure 12.1 and 12.2 captions (chapter and specs): "Schematic by the author, adapted from/based on ..."; Table 12.5 caption (chapter and spec tbl-12-04.md) adds openai2026gpt6system.
+
+### Bib
+- Added: openai2026technical, openai2026gpt6system, kelly2026anthropic, goodfellow2016deep (copy). Removed: stan2026white.

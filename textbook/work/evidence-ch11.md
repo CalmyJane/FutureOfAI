@@ -416,3 +416,40 @@ Applied review/06-ch11-ch12.md (sections A–E) and review/EDIT-BRIEF.md. Body (
 ### Not changed / notes for central editor
 - grace2025thousands has both number = {9} and a note "Article 9" (review F); entry is shared with other chapters, so left unchanged.
 - Evidence-label pass: first mentions in ch11 checked for company (Anthropic, Google GTIG, Microsoft, OpenAI), preprint (AA-Omniscience, Kalai, Hong), working paper (XPT), news (The Markup, Reuters via The Hacker News, +972, BleepingComputer) and market data (Synergy); all now attributed.
+
+## Sourcing audit (Oct 2026)
+
+Applied review/SOURCING-BRIEF.md. Scanner (review/uncited.py): 19 flagged blocks → 0. pandoc --citeproc: no warnings; every bib key cited.
+
+### Weak sources resolved
+- khandelwal2026hackers (Reuters "via The Hacker News") → Reuters original found (Raphael Satter, 19 Oct 2026, Reuters exclusive as republished by BNN Bloomberg). Reuters supports: Chinese-speaking hacker, >1,200 sites attempted, broke into sites of >100 companies, ~$5,000 tokens ≈ $50 per successful hack, Cairn open-source platform, models "appeared" to be DeepSeek and Claude Code (not confirmed). The 10% success rate and three panel clusters are NOT in Reuters; they come from The Hacker News (NorForge). §11.4 rewritten: Reuters facts → new key satter2026how; 10%/three clusters → khandelwal2026hackers, labelled "According to The Hacker News". https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/10/19/how-one-hacker-used-ai-agents-and-a-few-thousand-dollars-to-break-into-scores-of-sites-reuters-exclusive/ ; https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html
+- hong2026measuring (full text not accessed) → arXiv API abstract read (v1, 18 Feb 2026): preregistered, investigator-blinded RCT, June–Aug 2025, n = 153; no significant difference in workflow completion (5.2% vs 6.6%); LLM arm more likely to progress through intermediate steps → text confirmed as written. https://arxiv.org/abs/2602.16703
+- anthropic2026detecting (September 2026 threat report) → primary page read: "five case studies of actors using our models in ways that could support biological weapons development"; accounts banned; "The individuals implicated ... are working scientists. We do not assert that they intended harm". CORRECTED: "evidence of capability" in the report refers to evaluations, not to the five cases → sentence rewritten with the report's own wording; CBS secondary (fichten2026anthropic) no longer needed → removed from text and bib. https://www.anthropic.com/threat-intelligence-report-september-2026
+- huggingface2026security → primary blog read: 16 July 2026; "driven, end to end, by an autonomous AI agent system" → confirmed. https://huggingface.co/blog/security-incident-july-2026
+- OpenAI pages (403; web.archive.org connection reset / unreachable from WebFetch) → OpenAI's own technical report PDF is reachable on cdn.openai.com (38 pp., created 26 Aug 2026). Confirms: two models, primarily "a highly capable, internal-only research model", "comparable in scale to GPT-5.6 Sol"; Hugging Face disclosed on 16 July; OpenAI contacted HF on 17 July and linked its agents on 20 July. New key openai2026technical added to §11.4 ("turned out to come from OpenAI models") and §11.6 (escape/Hugging Face sentence). https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf . openai2026openai/openai2026hugging remain (read first-hand on 24 Oct per the log above); "warning shot" quote corroborated by search results quoting the post and BBC (26 Aug 2026).
+- anthropic2026fable (Mythos 5 / Fable 5) → Anthropic page read: 9 June 2026; "It's the same underlying model as Fable 5, but with the safeguards lifted in some areas"; "Claude Mythos 5 is restricted to Glasswing partners"; deployed "as an upgrade to Claude Mythos Preview"; Fable 5 adds classifiers → text confirmed. https://www.anthropic.com/news/claude-fable-5-mythos-5
+- abraham2024lavender → +972 page re-read (3 Apr 2024; six officers; up to 37,000; ~20 seconds; IDF "auxiliary tools", denies kill list). Kept, clearly labelled as anonymous-source reporting that cannot be checked. https://www.972mag.com/lavender-ai-israeli-army-gaza/
+- souly2025poisoning → NeurIPS 2026 poster page: same title, 13 authors (Souly ... Kirk), poster 10 Dec 2026; arXiv 2510.07192 (8 Oct 2025). Bib booktitle "NeurIPS 39 (NeurIPS 2026)", year 2026 correct; key/year mismatch left (brief). https://neurips.cc/virtual/2026/poster/154663
+
+### Citations added (paragraph / item → key, source)
+- Hazard box: ISR 2025 definitions of hazard and risk (sec. 3.1 "Key Definitions", p. 158) → [@bengio2025international, sec. 3.1, p. 158]; order-of-magnitude spread → [@karger2023forecasting]. Quotes added from ISR 2025 PDF (arXiv 2501.17805).
+- Three family bullets → ISR 2025 secs 2.1–2.3 / ISR 2026 secs 2.1–2.2; systemic bullet → ISR 2025 p. 19 ("beyond the risks directly posed by capabilities of individual models") and sec. 2.3.3 (single points of failure).
+- §11.1 EU AI Act sense of "systemic risk" → [@europeanparliament2024regulation, arts. 3(65) and 51] (entry copied byte-identical from ch13.bib).
+- §11.1 "schemes differ": "sets a threshold of evidence for inclusion" (unsupported) REMOVED; replaced by ISR 2026 p. 9 quote "to synthesise scientific evidence to support informed policymaking" + slattery2026ai; normative remainder marked "In the author's view".
+- §11.1 surveillance paragraph → ISR 2025 sec. 2.3.5, p. 143 ("enhanced mass surveillance") + grother2019face.
+- §11.2 denominator paragraph → the four Table 11.2 studies.
+- §11.3 bias intro → ISR 2025 sec. 2.2.2, p. 92 bias definition (quoted) + new key suresh2021framework (Suresh & Guttag, EAAMO '21, DOI 10.1145/3465416.3483305, verified via Crossref and arXiv 1901.10002: seven sources of harm); three-place grouping now stated as this section's grouping.
+- Chouldechova formula line → [@chouldechova2017fair].
+- §11.4 opening definition → ISR 2026 sec. 2.1.
+- §11.4 fraud: ISR "(p. 48)" given a key; "Most evidence comes from incident databases and journalism" (not in source) REPLACED by ISR's "comprehensive and reliable statistics" gap (p. 48); political-manipulation sentence → ISR 2026 p. 12 ("as effective as human-written content at changing people's beliefs"; "documented but not yet widespread").
+- NCSC yardstick parenthesis → [@ncsc2025impact] (page: "NCSC Assessment uses the PHIA probability yardstick every time ..."). https://www.ncsc.gov.uk/report/impact-ai-cyber-threat-now-2027
+- §11.4 bio intro: "the most serious misuse concern" (unsupported superlative) → "A further misuse concern"; secrecy claim now ISR 2026 sec. 2.1.4, p. 69 ("withheld entirely due to sensitivity concerns").
+- §11.5 intro → ISR 2025 p. 19, sec. 2.3.3; ISR 2026 sec. 2.3.2.
+- Correlated-failure box → new key rausand2020system (Rausand, Barros & Høyland, System Reliability Theory, 3rd ed., Wiley 2020, DOI 10.1002/9781119373940, Crossref; ch. 8 "Dependent failures" per publisher TOC listing); pump arithmetic marked as the author's worked example; LLM-as-judge → kim2025correlated.
+- 0.75^20 ≈ 0.3% marked "the author's calculation".
+- §11.5 chain paragraph marked "in the author's synthesis" + kleinberg2021algorithmic, kim2025correlated, dratsch2023automation.
+- §11.7 "filing system" marked author's view + both ISRs; wrongful-arrest sentence → grother2019face, wessler2024police, kim2025correlated; Reversibility → moffatt2024moffatt, author's view marked, ISR 2026 "uncertain likelihood but potentially extreme severity"; Distribution → obermeyer, yu2026more, bommasani, chouldechova, kleinberg2017inherent; closing paragraph marked "In the author's summary" + charlotin, obermeyer, fbi, yu, ISR 2026 sec. 2.1.4, karger2023forecasting.
+- Figure 11.1 caption (chapter and spec): "Schematic by the author, based on" both ISRs.
+
+### Bib
+- Added: satter2026how, openai2026technical, suresh2021framework, rausand2020system, europeanparliament2024regulation (copy). Removed: fichten2026anthropic.
