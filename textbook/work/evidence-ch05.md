@@ -340,3 +340,46 @@ Applied review/03-ch05-ch06.md (sections A–E) and the book-wide brief.
 - Evidence labels checked for every company/arXiv/news key at first mention; added "described in a 2025 preprint" (li2025rise) and "another preprint" (agarwal2026ai).
 - New bib keys: modelcontextprotocol2026tools, modelcontextprotocol2026specification, openai2026introducing, anthropic2025economic, li2025rise, agarwal2026ai, europeanparliament2024regulation, nist2026announcing. Pandoc --citeproc: no warnings.
 - Review "verified correct" items not touched.
+
+## Sourcing audit (Oct 2026)
+
+Brief: review/SOURCING-BRIEF.md. Scanner (review/uncited.py) before: 17 uncited blocks; after: 2 (line 93 is the JSON code block that follows the cited MCP paragraph; the debate-box closer is marked as the author's view).
+
+Weak sources re-checked (key → outcome → URL):
+- openai2026introducing (GPT-5.4, 75.0% OSWorld-Verified) → openai.com (incl. localised copies) still 403; web.archive.org unreachable from the sandbox (connection reset; WebFetch refused); only search-engine extracts and secondary reports (Igor'sLAB, Gigazine, DataCamp) seen; GPT-5.4 not on the official OSWorld-Verified results. REMOVED: Table 5.1 row and §5.4 sentence; replaced by a primary leaderboard row: HIPPO Agent w/ Opus 4.5 (Lenovo, agentic framework, 100 steps) 74.48% (266.66/358), date cell 46078 = 25 Feb 2026, official re-run → https://osworld-v1.xlang.ai/static/data/osworld_verified_results.xlsx (os-world.github.io now 301-redirects there; earlier "xlsx returned HTML" was the redirect page). openai2026introducing deleted from ch05.bib.
+- osworld2026verified → xlsx re-downloaded 30 Oct 2026: claude-fable-5[1m] General model 85.96 (307.73/358, 1 Aug 2026); Intelligence-Indeed Agent 90.19 (25 Jul 2026). Text "by August the best general-purpose model reached 86.0%" confirmed.
+- sajadieh2026ai → AI Index 2026 PDF re-downloaded and text-extracted (hai.stanford.edu/assets/files/ai_index_report_2026.pdf): p. 113 "Claude Opus 4.5 leading on accuracy on OSWorld with 66.3%", human baseline 72.35%, Source Epoch AI; "still fail roughly one in three attempts on structured benchmarks"; p. 100 "low-to-mid 70s", Claude 4.5 Opus ≈76.8%, footnote 21 mini-SWE-agent-v2 = same agent workflow; p. 115 τ-bench pass@1 62.9%–70.2%. Confirmed.
+- sierra2026taubench → https://taubench.com/ fetched: "Audited and fixed 50+ tasks across the airline and retail domains" (Feb 2026); banking "~700 documents"; τ³-Banking best Qwen 3.8 Max 55.2%. Confirmed.
+- scale2026swebench → https://labs.scale.com/leaderboard/swe_bench_pro_public fetched: 1 Muse Spark 1.1 61.50 ± 3.10. Confirmed.
+- aaif2026a2a → https://aaif.io/blog/a2a-joins-aaif: 17 Aug 2026, "backed by over 150 organizations". Confirmed.
+- a2a2026specification → https://a2a-protocol.org/latest/specification/: "Latest Released Version 1.0.0"; opacity quote. Confirmed.
+- linuxfoundation2025linux → "more than 100 leading technology companies". Confirmed.
+- surapaneni2025announcing → "more than 50 technology partners"; "complements Anthropic's Model Context Protocol". Confirmed.
+- oecd2025replit → incident page: harm level "AI incident", harm types Economic/Property, Reputational. Confirmed.
+- sharwood2025replit → "Unacceptable and should never be possible"; refund; "automatic DB dev/prod separation". Confirmed.
+- microsoft2025cve → api.msrc.microsoft.com: "already been fully mitigated by Microsoft. There is no action for users"; exploited "No". Confirmed.
+- barres2025tau2 → https://icml.cc/virtual/2026/session/68671 lists τ²-Bench (Barres et al.) as an ICML 2026 oral. Confirmed.
+- fidoalliance2026google → FIDO page dated 29 April 2026; AP2 transferred, AP2 v0.2. Confirmed ("April 2026").
+- anthropic2025economic → "77% of API transcripts show automation patterns"; "Little less than half of all API traffic maps to computer and mathematical tasks" (44%). Confirmed.
+- li2025rise (arXiv 2507.15003: 456,000 PRs, five agents, 61,000 repositories), agarwal2026ai (arXiv 2601.13597: warnings and complexity "roughly 18% and 39%"), kwa2026clarifying (quote), yuan2026osworld (osworld-v2.xlang.ai: 20.6% completion, 54.8% partial score, median ~1.6 h) → all confirmed.
+- openai2023function, openai2024introducing, openai2026why, openai2025computer, openai2026gpt6, openai2026openai → openai.com 403 and Wayback unreachable from this sandbox; content previously read in full via a reader-proxy rendering (logged above and in ch04/ch12 logs); re-confirmed 30 Oct 2026 by web search of the primary pages (openai2026why: 23 Feb 2026, 138 problems, ≥6 engineers, 59.4%; CUA: 38.1% OSWorld, 58.1% WebArena, 23 Jan 2025) and, for GPT-6 Astra 72.6% on the OSWorld 2.0 offline set with partial score, by Forklog and DataCamp reports of OpenAI's launch table. Text already attributes each to OpenAI ("According to the company", "OpenAI reported"); kept. §5.5 Hugging Face sentence reworded to "OpenAI reported that models it was evaluating had broken out…" (company disclosure, now attributed).
+
+Citations added (location → key):
+- Opening, paragraph 3 (what Project Vend shows) → anthropic2025project; anthropic2025projectphase.
+- §5.1 agent definition ("dozens or hundreds of steps") → anthropic2024building; anthropic2024introducingcomputer ("tasks that require dozens, and sometimes even hundreds, of steps").
+- §5.1 model/tools/loop/memory → anthropic2024building ("LLMs using tools based on environmental feedback in a loop"; augmented LLM with retrieval, tools, memory); anthropic2025effective (context window, notes).
+- §5.1 loop paragraph → yao2023react; spectrum marked "in the author's view".
+- Fig. 5.1 caption → "Schematic by the author, after [@yao2023react; @anthropic2024building]".
+- Fig. 5.2 caption → "Schematic by the author, after [@openai2023function; @modelcontextprotocol2026tools; @greshake2023not]".
+- §5.3 tool definition sentence → modelcontextprotocol2026tools; description/output paragraph → modelcontextprotocol2026tools; greshake2023not.
+- §5.4 computer-use definition → anthropic2024introducingcomputer ("software programs designed for people"); openai2025computer (screenshot, virtual mouse and keyboard loop).
+- §5.5 compounding error → goodfellow2016deep (product rule for independent events, ch. 3; entry copied byte-identical from ch02.bib); arithmetic marked as the author's calculation; Fig. 5.3 caption "Computed and drawn by the author using the product rule for independent events [@goodfellow2016deep]"; retry calculation marked as the author's.
+- Replit box, paragraph 2 → sharwood2025replit (fixes); "typical" marked as author's view.
+- §5.6 opening paragraph → greshake2023not; chismon2025prompt (no boundary between instructions and data; confused deputy).
+- Debate box closer → marked "In the author's view".
+- §5.7 closing paragraph → parikh2025powering (accountability problem; non-repudiable audit trail); x4022026x402; evidence-thinness marked as the author's assessment.
+- §5.8 evidence paragraph → hadfield2025economy; tomasev2025virtual; marked as the author's assessment.
+- Figure specs fig-05-01/02/03: caption lines synced with the chapter.
+
+Statements removed: GPT-5.4 75.0% (Table 5.1 row and §5.4 sentence), see above.
+Pandoc --citeproc: no warnings; all ch05.bib keys cited; no missing keys.
