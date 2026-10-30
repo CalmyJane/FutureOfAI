@@ -38,6 +38,7 @@ plt.rcParams.update({
     "legend.frameon": False,
     "svg.fonttype": "path",
     "lines.linewidth": 1.4,
+    "axes.prop_cycle": matplotlib.cycler(color=SERIES),  # no stray RGB defaults in a greyscale book
     "mathtext.fontset": "custom",
     "mathtext.rm": "EB Garamond",
     "mathtext.it": "EB Garamond:italic",

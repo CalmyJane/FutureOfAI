@@ -60,7 +60,7 @@ def f1402():
     U = fast + 0.15 * t + 0.03 * t ** 2
     L = 1 + 0.06 * t
     ax.fill_between(yr, L, U, color=G4, lw=0)
-    ax.fill_between(yr, 1 + 0.3 * t, 1 + 0.62 * t, color=G3, lw=0, alpha=0.7)
+    ax.fill_between(yr, 1 + 0.3 * t, 1 + 0.62 * t, color="#d3d3d3", lw=0)  # G3 at 70 % over G4, as a solid grey (no transparency in print)
     ax.plot(yr, fast, color=INK, lw=1.1, ls="-")
     ax.text(2031.4, 11.4, "Fast acceleration\n(e.g. AI 2027)", fontsize=7, va="center", ha="right", linespacing=1.1)
     paths = [  # (curve, dash pattern, label, vertical label offset)

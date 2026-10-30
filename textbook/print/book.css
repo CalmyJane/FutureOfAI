@@ -39,7 +39,7 @@ sup, sub { line-height: 0; }
 .t-tag { font-size: 10pt; font-variant: small-caps; letter-spacing: 0.12em; margin-bottom: 16mm; }
 .t-rule { width: 30mm; margin: 0 auto 16mm; border-top: 0.6pt solid #000; }
 .t-author { font-size: 14pt; letter-spacing: 0.08em; }
-.copyright { break-before: left; padding-top: 110mm; font-size: 8.3pt; line-height: 1.35; text-align: left; }
+.copyright { break-before: left; padding-top: 88mm; font-size: 8.3pt; line-height: 1.35; text-align: left; }
 .copyright p { margin-bottom: 3mm; }
 .toc-title { font-size: 15pt; font-weight: 600; text-align: center; margin: 0 0 5mm; }
 .toc ol { list-style: none; padding: 0; margin: 0; font-size: 9.6pt; line-height: 1.3; text-align: left; }
@@ -74,7 +74,7 @@ hr { border: 0; border-top: 0.4pt solid #000; width: 25%; margin: 5mm auto; }
 .box { margin: 4.5mm 0; padding: 2.8mm 3.5mm 2.2mm; font-size: 9.3pt; line-height: 1.32; text-align: left; break-inside: avoid; border-radius: 1.5mm; }
 .box p { text-indent: 0; margin-bottom: 1.4mm; }
 .box > p:first-child strong { font-variant: small-caps; letter-spacing: 0.04em; font-size: 9.8pt; }
-.concept { background: #efefef; }
+.concept { background: #efefef; border: 0.4pt solid #000; }  /* outline keeps the box visible if the light tint drops out in print */
 .case { border: 0.6pt solid #000; }
 .debate { border-left: 2.5pt solid #000; border-radius: 0; padding-left: 4mm; background: #f6f6f6; }
 .deeper { border: 0.6pt dashed #000; }

@@ -183,7 +183,9 @@ def f0103():
     n = 8
     for i in range(n):
         y0, y1 = _ty(1993 + 4 * i / n), _ty(1993 + 4 * (i + 1) / n)
-        ax.add_patch(Rectangle((AX - 3, y1), 6, y0 - y1, fc=G4, ec="none", alpha=1 - (i + 1) / (n + 1), zorder=0))
+        a = 1 - (i + 1) / (n + 1)  # fade G4 into white with solid greys: print PDFs should carry no transparency
+        g = round(255 - a * (255 - int(G4[1:3], 16)))
+        ax.add_patch(Rectangle((AX - 3, y1), 6, y0 - y1, fc="#%02x%02x%02x" % (g, g, g), ec="none", zorder=0))
     # axis with a break between 2005 and 2008
     ax.plot([AX, AX], [_ty(1950) + 1.2, _ty(2005) - 0.4], color=INK, lw=0.9, zorder=2)
     ax.plot([AX, AX], [_ty(2008) + 0.6, _ty(2026.9)], color=INK, lw=0.9, zorder=2)

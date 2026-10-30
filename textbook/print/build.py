@@ -21,6 +21,8 @@ TITLE = "Understanding AI"
 SUBTITLE = "Technology, Trends and the Decade Ahead"
 AUTHOR = "Jan Göbel"
 YEAR = "2026"
+# BoD assigns the ISBN when the book project is started in myBoD; rebuild with BOOK_ISBN=978-3-... set.
+ISBN = os.environ.get("BOOK_ISBN", "978-3-0000-0000-0")
 
 PARTS = {
     1: ("Part I", "How AI Works"),
@@ -123,10 +125,12 @@ def front_matter(toc):
   <p class="t-author">{AUTHOR}</p>
 </section>
 <section class="copyright">
-  <p>© {YEAR} {AUTHOR}. All rights reserved.</p>
   <p>Evidence in this book is current to October 2026. Web sources were checked between 20 and 25 October 2026. References follow APA 7 and are numbered. Sources are not cited in the running text: the line at the foot of each page lists the numbers of the sources used on that page.</p>
   <p>Figures drawn for this edition. Set in EB Garamond, with Noto Serif Devanagari for Hindi (both SIL Open Font License).</p>
-  <p>ISBN: [to be assigned]<br>Publisher and printer: [imprint details]</p>
+  <p>© {YEAR} {AUTHOR}. All rights reserved.</p>
+  <p>Bibliographic information published by the Deutsche Nationalbibliothek: the Deutsche Nationalbibliothek lists this publication in the Deutsche Nationalbibliografie; detailed bibliographic data are available on the Internet at https://dnb.dnb.de.</p>
+  <p>Publisher: BoD · Books on Demand, Überseering 33, 22297 Hamburg, bod@bod.de<br>Print: Libri Plureos GmbH, Friedensallee 273, 22763 Hamburg</p>
+  <p>ISBN: {ISBN}</p>
 </section>
 {toc}
 """
@@ -279,6 +283,7 @@ def stamp_pagelines(document, doc, pdf_path):
         writer.pages[pi].merge_page(overlay.pages[pi])
         writer.pages[pi].compress_content_streams()  # merging leaves the page content uncompressed
     writer.compress_identical_objects(remove_identicals=True, remove_orphans=True)
+    writer.pdf_header = b"%PDF-1.6"  # PDF/X-4 needs 1.6; pypdf would otherwise write 1.3
     with open(pdf_path, "wb") as f:
         writer.write(f)
     return len(pages)

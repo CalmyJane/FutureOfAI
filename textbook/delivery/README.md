@@ -3,8 +3,16 @@
 Author: Jan Göbel · Evidence current to October 2026 (web sources checked 20–25 October 2026, the last passes with web search)
 
 ## Files
-- `understanding-ai_A5_interior.pdf`: the print-ready interior. A5 (148 × 210 mm), no bleed, PDF/X-4 with sRGB output intent, 590 pages (an even number), all fonts embedded (EB Garamond and Noto Serif Devanagari, both SIL OFL). The publisher or print-on-demand service still needs to add the cover and ISBN.
+- `understanding-ai_A5_interior.pdf`: the print-ready interior (Buchblock) for BoD. A5 (148 × 210 mm, BoD format 14,8 × 21 cm), no bleed (nothing runs to the page edge), PDF/X-4 (PDF 1.6) with sRGB output intent, 590 pages, all fonts embedded, no transparency, greyscale throughout (upload as a black-and-white interior). The imprint on page 4 follows BoD's template and leaves its upper part free for the FSC mark that BoD prints. The ISBN there is a placeholder until BoD assigns one.
+- `understanding-ai_cover_A5_PB.pdf`: the paperback cover (back, spine, front) to upload to BoD. 342.0 × 220.0 mm including 5 mm bleed on all sides; trim 332.0 × 210.0 mm; spine 36.0 mm (BoD cover calculator: 590 pages, white 90 g paper, adhesive binding). TrimBox and BleedBox are set; no transparency; fonts embedded.
+- `understanding-ai_cover_A5_PB_guides.pdf`: the same cover with trim lines, spine folds and safe zones drawn in. For checking only; do not upload.
 - `understanding-ai.md`: the full manuscript in Markdown, for editing or conversion.
+
+## Before uploading to BoD
+1. Start the book project in myBoD: paperback, 14,8 × 21 cm, **white 90 g** paper (*weiß 90 g*), black-and-white interior, 590 pages. BoD then assigns the ISBN and shows the final cover size.
+2. Rebuild the interior with the ISBN: `BOOK_ISBN=978-3-... python3 textbook/print/build.py`.
+3. Rebuild the cover with the ISBN and BoD's spine width, if it differs: `python3 textbook/print/cover.py --isbn 978-3-... --spine-mm 36.0`. The script draws an EAN-13 barcode; using BoD's own barcode file in its place is the safer choice. For cream paper use `--paper chamois` (spine 40.4 mm).
+4. Check that the cover size myBoD asks for matches the size the script prints. If you change the paper or the page count, the spine changes.
 
 ## Contents
 - A preface on how the book is organised and how evidence is labelled.
@@ -38,5 +46,7 @@ Remaining uncertainties are listed for each chapter in the evidence logs.
 
 ## Rebuilding
 Run `python3 textbook/print/figures.py` to build the figures, then `python3 textbook/print/build.py` to build the PDF. Requires pandoc ≥ 3.1, WeasyPrint, pypdf, reportlab and matplotlib. `python3 textbook/print/check_build.py` fails if the delivered PDF was built from different sources than those in the repository (the build records a hash in `BUILD-INFO.txt`).
+
+Run `python3 textbook/print/cover.py` to build the cover. The cover uses Inter and JetBrains Mono (SIL OFL) alongside EB Garamond.
 
 The files `sample-ch10-*.pdf` are earlier samples of alternative citation layouts and are not current.
