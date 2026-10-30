@@ -496,3 +496,35 @@ Review: review/07-ch13-ch14.md (Ch14 part). Claims re-verified before change; re
 
 ### Labelling pass (first mentions)
 - Blogs/posts: Steinhardt (blog), Grace 2016 (AI Impacts blog post), titotal (blog post), AI Futures updates (blog posts, not peer-reviewed), FRI review (published on the institute's website). Reports: ESPAI 2024 (AI Impacts report, not peer-reviewed). Preprints: FrontierMath, Cottier, Becker, Korbak (already). Working papers: Kučinskas (already), Humlum & Vestergaard, Bonney, Brynjolfsson, Ide, Aghion & Bunel. Company claims: Google DeepMind/OpenAI IMO ("reported"), OpenAI Astra ("what the company described as"). News: Fortune (already). Technical report: Hammond et al. Bank research: Goldman Sachs. Usage/survey data: Bick et al. ("reported on the St. Louis Fed's blog").
+
+## Sourcing audit (Oct 2026)
+
+Brief: review/SOURCING-BRIEF.md. Scanner 23 → 2 flagged blocks, both explicitly marked as the author's own (§14.7 intro to remaining proposals; §14.8 signpost list intro, "In the author's selection"; each signpost item now cites its figures). pandoc --citeproc: no warnings; every bib key cited.
+
+### Citations added / marked as author's own
+- §14.1 forecast definition and structural difficulties: tetlock2015superforecasting (checkable forecasts); inputs sevilla2024training, ho2024algorithmic, villalobos2024position, cottier2024rising; leakage zhang2024careful (copied byte-identical from ch04.bib; GSM1k contamination evidence); individual vs firm adoption bick2026rapid, bonney2026microstructure. Unsourced "benchmarks that saturate" dropped; "forecasts can alter what they predict" marked as the author's view.
+- Brier box: Olympiad scores labelled "the author's calculation" from kucinskas2025assessing probabilities. Properness sentence now cites new gneiting2007strictly (JASA 102(477):359–378, doi 10.1198/016214506000001437; Crossref + OpenAlex abstract: proper rule maximised by honest forecast).
+- §14.2 "Brier score is the most common" → "such as the Brier score, which the Good Judgment Project used" [mellers2014psychological; gneiting2007strictly].
+- §14.2 prediction markets: reasoning on elections/long-dated contracts marked as author's view (berg2008prediction for elections). Metaculus 98%: Metaculus pages and API still 403 (also via search: cached snapshots show 90–95% at other dates); figure kept and attributed: "FRI ... reports that the community forecast ... stood at 98% in 2026" [rosenberg2026how].
+- §14.3 trend extrapolation definition: new hyndman2021forecasting (Forecasting: Principles and Practice, 3rd ed., OTexts; https://otexts.com/fpp3/toolbox.html read: drift method "equivalent to drawing a line between the first and last observations, and extrapolating it"; prediction intervals "usually increase in length as the forecast horizon increases"). "most transparent method" marked as author's view.
+- §14.4 uncertainty fan paragraph: fan widening → hyndman2021forecasting; placement of scenarios marked as author's reading with kokotajlo2025ai, narayanan2025ai, sevilla2024can. Reading-questions paragraph marked "The author suggests"; AI 2027 models and critique cited.
+- §14.5 intro: marked as author's framing; GO-Science critical uncertainties cited (goscience2024ai).
+- §14.6 proposals intro: AI Act Art. 51(2) and Art. 14 cited for the premises. 50.2 Hz follow-on paragraph: roselund2015has, vde2011nachruestung. Objection paragraph (Proposal 14.2): uk2021electric, germany2012sysstabv, dft2021explanatory.
+- Table 14.5 caption: "Source: the author, drawing on the work cited" → explicit premise keys. Fig. 14.3 caption (chapter and spec): "Diagram by the author of a proposed method, motivated by @kim2025correlated and @bommasani2022picking".
+- §14.7 signature capacity: proposal paragraphs marked as the author's; Art. 26(2) quote cited; seeded-item difficulty tied to buser2025reliability.
+- §14.8 signposts: each item cites its figure (rosenberg2026how/metr2026task; bonney2026microstructure/humlum2025still; iea2026key/rosenberg2026how; europeanparliament2026regulation and AI Act Art. 101; paoli2026trump and fairhurst2026permission, both copied byte-identical from ch13.bib). "set the price of training data" marked as author's view.
+- Closing paragraph: kucinskas2025assessing, grace2025thousands, rosenberg2026how, armstrong2015how added; "no one has yet scored" → "the author found no scored forecast"; method-failure sentence marked as author's view. Bottom line: "repeatedly underestimated" cited to rosenberg2026how.
+
+### Weak sources re-checked
+- germany2012sysstabv: official gesetze-im-internet.de now reachable (https://www.gesetze-im-internet.de/sysstabv/__2.html, __4.html): § 2(1) LV > 10 kW commissioned after 31 Aug 2005 and before 1 Jan 2012; § 4 retrofit to VDE-AR-N 4105 or frequency-dependent reduction → confirmed (upgraded from dejure/buzer copies).
+- faa2013manual: SAFO 13002 PDF (faa.gov) opened: dated 1/4/13; "continuous use of autoflight systems could lead to degradation of the pilot's ability to quickly recover the aircraft from an undesired state" → confirmed.
+- pedersen2026learning: Europe PMC abstract opened (DOI 10.1055/a-2858-7084): 13 endoscopists; "no upskilling or deskilling was observed following a period of CADe exposure" → confirmed (was Crossref + secondary summary).
+- iea2026key: iea.org 403; APO copy 403; ADB-hosted IEA slide deck (asiacleanenergyforum.adb.org, 14 pp.) has charts only, no figures in text → 485/945/1,008/868/833 TWh, USD 715 bn, HBM and "compute-constrained" quotes still rest on ch07's full-PDF read. Not resolved.
+- doring2012dealing (14 GW worst case): no primary copy found; text keeps explicit attribution ("one of its authors reported"). Not resolved.
+- simon1960new / mccarthy2006proposal: chapter quotes neither; cited only for the existence and dates of the forecasts. Stanford copy of the Dartmouth proposal reachable (www-formal.stanford.edu/jmc/history/dartmouth/dartmouth.html).
+
+### "[K]" items from review/07 (reviewer's own knowledge)
+- The ~39 ch14 [K] items were all checked against abstracts, PDFs or official texts in Fact-checks 1–2 above (OpenAlex/arXiv/Crossref records listed there). Re-opened in this pass: SysStabV, FAA SAFO, Pedersen abstract, Gneiting & Raftery, Hyndman & Athanasopoulos.
+
+### Removed/softened statements
+- "benchmarks that saturate" (no source); "Brier score is the most common" (no source); "no one has yet scored" (universal negative → author's search).
