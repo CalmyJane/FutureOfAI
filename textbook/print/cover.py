@@ -195,10 +195,9 @@ def build(pages, paper, spine_mm, isbn, guides):
         ("technology into the world: agents, science, chips and energy, work", 0),
         ("and the economy, media and democracy, education and health, risk,", 0),
         ("safety and law.", 1),
-        ("Every factual claim is sourced. Where the evidence is strong, the book", 0),
-        ("says so; where informed people disagree, it sets out the best case on", 0),
-        ("each side. Company claims and preprints are labelled as such, and the", 0),
-        ("worked numbers are shown.", 1),
+        ("Where the evidence is strong, the book says so; where informed people", 0),
+        ("disagree, it sets out the best case on each side. Company claims and", 0),
+        ("preprints are labelled as such, and the worked numbers are shown.", 1),
         ("Written for students, professionals and curious readers in any", 0),
         ("discipline. No programming is assumed.", 0),
     ]
@@ -206,7 +205,7 @@ def build(pages, paper, spine_mm, isbn, guides):
     for ln, gap in blurb:
         svg.append(f'<text x="{bx}" y="{y:.1f}" font-family="EBG" font-size="3.95" fill="{INK}">{ln}</text>')
         y += 5.05 + (2.6 if gap else 0)
-    facts = ["14 chapters in five parts", "46 explanatory figures · 60 tables", "Glossary of 409 terms", "1,160 numbered sources"]
+    facts = ["14 chapters in five parts", "46 explanatory figures · 60 tables", "Glossary of 409 terms"]
     fy = top + 172
     for i, f in enumerate(facts):
         yy = fy + i * 4.6
