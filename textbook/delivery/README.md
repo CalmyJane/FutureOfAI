@@ -3,15 +3,15 @@
 Author: Jan Göbel · Evidence current to October 2026 (web sources checked 20–25 October 2026, the last passes with web search)
 
 ## Files
-- `understanding-ai_A5_interior.pdf`: the print-ready interior. A5 (148 × 210 mm), no bleed, PDF/X-4 with sRGB output intent, 584 pages (an even number), all fonts embedded (EB Garamond and Noto Serif Devanagari, both SIL OFL). The publisher or print-on-demand service still needs to add the cover and ISBN.
+- `understanding-ai_A5_interior.pdf`: the print-ready interior. A5 (148 × 210 mm), no bleed, PDF/X-4 with sRGB output intent, 590 pages (an even number), all fonts embedded (EB Garamond and Noto Serif Devanagari, both SIL OFL). The publisher or print-on-demand service still needs to add the cover and ISBN.
 - `understanding-ai.md`: the full manuscript in Markdown, for editing or conversion.
 
 ## Contents
 - A preface on how the book is organised and how evidence is labelled.
 - 14 chapters in five parts: How AI Works; The Frontier; Society and Economy; Risk, Safety and Governance; The Decade Ahead.
-- About 194,000 words including references, 46 figures and 60 tables.
+- About 197,000 words including references, 46 figures and 60 tables.
 - A glossary of 409 terms.
-- A numbered APA 7 reference list of 1,129 cited sources. The running text carries no citations: a line at the foot of each page lists the numbers of the sources used on that page, with pinpoints (pages, paragraphs, articles) in brackets; figure and table captions give their sources by number.
+- A numbered APA 7 reference list of 1,160 cited sources. The running text carries no citations: a line at the foot of each page lists the numbers of the sources used on that page, with pinpoints (pages, paragraphs, articles) in brackets; figure and table captions give their sources by number.
 
 This edition is written as nonfiction, not as a course text: there are no learning objectives, summaries, key terms or discussion questions. Each chapter opens with a documented case and goes into the mechanisms, numbers and evidence in depth. It uses Concept, Case study, Debate and Going deeper boxes, ends with a synthesis paragraph and closes with annotated further reading.
 
@@ -25,6 +25,7 @@ This edition is written as nonfiction, not as a course text: there are no learni
 7. **Prose polish:** every chapter got a final pass for clarity, sentence length and number density, and to remove filler.
 8. **Build checks:** no missing citations, consistent bibliography entries across chapters, and every section, table and figure cross-reference resolves.
 9. **External review and revision (25 October 2026):** an independent full read with reference checks (reports in `review/` at the repository root) found errors, selective reporting, unlabelled company claims and preprints, outdated 2026 material and coverage gaps. Every chapter was revised against its report; each change and its source is logged under "Revision after external review" in `work/evidence-chNN.md`.
+10. **Sourcing audit (30 October 2026):** every paragraph, list item, box and caption that states anything about the world now carries a citation to a source that supports it; standard concepts cite the original paper or a standard textbook; the author's own examples, calculations and opinions are marked as such. Claims that rested on secondary reports, search snippets or blocked pages were re-checked against primary sources where these could be reached; claims that could not be confirmed were removed or narrowed. `review/uncited.py` lists any paragraph without a citation. Outcomes are logged under "Sourcing audit" in each evidence log.
 
 ## Limitations
 - **Blocked sites:** some publishers and companies (iso.org, parts of openai.com) refuse automated access. Those claims rest on official copies or reputable reports and are labelled.
