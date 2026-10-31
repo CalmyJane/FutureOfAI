@@ -165,7 +165,6 @@ def build(pages, paper, spine_mm, isbn, guides):
 
     fx = front_x + 15
     # front: title block
-    svg.append(f'<text x="{fx}" y="{top + 21}" font-family="JBM" font-size="2.7" letter-spacing="0.35" fill="{SOFT}">EVIDENCE CURRENT TO OCTOBER 2026</text>')
     svg.append(f'<text x="{fx - 0.8}" y="{top + 136}" font-family="InterD" font-weight="300" font-size="15.2" letter-spacing="-0.3" fill="{INK}">Understanding</text>')
     svg.append(f'<text x="{fx - 2.2}" y="{top + 176}" font-family="InterD" font-weight="700" font-size="42" letter-spacing="-0.6" fill="{INK}">AI</text>')
     svg.append(f'<text x="{fx}" y="{top + 186}" font-family="EBG" font-style="italic" font-size="6.0" fill="{INK}">Technology, Trends and the Decade Ahead</text>')
@@ -181,37 +180,32 @@ def build(pages, paper, spine_mm, isbn, guides):
     for rad, k in ((2.4, 0.8), (1.5, 0.45), (0.95, 0.0)):
         svg.append(f'<circle cx="{cx:.2f}" cy="{top + 10}" r="{rad}" fill="{hexc(mix(AMBER, BG, k))}"/>')
 
-    # back: headline, blurb, facts
+    # back: headline and blurb
     bx = back_x + 15
     svg.append(f'<text x="{bx}" y="{top + 24}" font-family="JBM" font-size="2.7" letter-spacing="0.3" fill="{hexc(CYAN)}">HOW IT WORKS · WHAT IT CHANGES · WHAT COMES NEXT</text>')
     head = ["What AI is, how it works,", "and what the evidence says", "about where it is going."]
     for i, ln in enumerate(head):
         svg.append(f'<text x="{bx}" y="{top + 52 + i * 8.6:.1f}" font-family="InterD" font-weight="600" font-size="7.4" letter-spacing="-0.1" fill="{INK}">{ln}</text>')
     blurb = [
-        ("Artificial intelligence is discussed everywhere and explained almost", 0),
-        ("nowhere. This book starts with the mechanisms: how a neural network", 0),
-        ("learns, how a large language model turns text into predictions, why", 0),
-        ("scale has driven progress and where it may stop. It then follows the", 0),
-        ("technology into the world: agents, science, chips and energy, work", 0),
-        ("and the economy, media and democracy, education and health, risk,", 0),
-        ("safety and law.", 1),
-        ("Where the evidence is strong, the book says so; where informed people", 0),
-        ("disagree, it sets out the best case on each side. Company claims and", 0),
-        ("preprints are labelled as such, and the worked numbers are shown.", 1),
-        ("Written for students, professionals and curious readers in any", 0),
-        ("discipline. No programming is assumed.", 0),
+        ('Artificial intelligence is discussed everywhere and explained almost', 0),
+        ('nowhere. This book starts with the mechanisms: how a neural network', 0),
+        ('learns, how a large language model turns text into predictions, why', 0),
+        ('scale has driven progress and where it may stop. It then follows', 0),
+        ('the technology into the world: agents, science, chips and energy,', 0),
+        ('work and the economy, media and democracy, education and health,', 0),
+        ('risk, safety and law.', 1),
+        ('Worked examples take the reader through backpropagation and', 0),
+        ('convolution, tokenisation, embeddings, attention and the transformer,', 0),
+        ('and the training stages that turn a text predictor into an assistant', 0),
+        ('or a reasoning model. Later chapters weigh the evidence on productivity', 0),
+        ('and jobs, elections, classrooms and clinics, explain alignment,', 0),
+        ('interpretability and evaluation, compare the law in the EU, the US,', 0),
+        ('China and the UK, and close with scenarios for the next ten years.', 0),
     ]
     y = top + 88
     for ln, gap in blurb:
         svg.append(f'<text x="{bx}" y="{y:.1f}" font-family="EBG" font-size="3.95" fill="{INK}">{ln}</text>')
         y += 5.05 + (2.6 if gap else 0)
-    facts = ["14 chapters in five parts", "46 explanatory figures · 60 tables", "Glossary of 409 terms"]
-    fy = top + 172
-    for i, f in enumerate(facts):
-        yy = fy + i * 4.6
-        svg.append(f'<rect x="{bx}" y="{yy - 1.75:.2f}" width="1.5" height="1.5" fill="{hexc(CYAN if i % 2 == 0 else VIOLET)}"/>')
-        svg.append(f'<text x="{bx + 4}" y="{yy:.2f}" font-family="Inter" font-size="2.9" fill="{SOFT}">{f}</text>')
-
     # barcode field: white box, bottom right of the back, inside the safe zone
     bw, bh = 46.0, 27.0
     bxx = spine_x - SAFE - bw
