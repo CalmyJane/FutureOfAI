@@ -115,13 +115,15 @@ def f0402():
             ax.annotate(lab, (x, v), xytext=(dx, dy), textcoords="offset points", fontsize=7,
                         ha=ha, va="center")
     # The 2023-25 points are too close for side labels: Grok 3 and GPT-4.5 are ten days and
-    # 0.04 orders of magnitude apart (markers coincide: one shared label), and Llama 3.1 405B
-    # sits just above-right of GPT-4. Labels are stacked to the left with leader lines.
+    # 0.04 orders of magnitude apart (markers coincide at this scale; the caption says so), and
+    # Llama 3.1 405B sits just above-right of GPT-4. Each point gets its own label, stacked to
+    # the left with a leader line (second review, Nov 2026: the shared label hid one point).
     e = {r[0]: r for r in EPOCH}
     lead = [("GPT-6 Astra", year(e["GPT-6 Astra"][1]), e["GPT-6 Astra"][2], 28.0),
-            ("Grok 3, GPT-4.5", (year(e["Grok 3"][1]) + year(e["GPT-4.5"][1])) / 2, 3.65e26, 27.2),
-            ("Llama 3.1 405B", year(e["Llama 3.1 405B"][1]), e["Llama 3.1 405B"][2], 26.25),
-            ("GPT-4", year(e["GPT-4"][1]), e["GPT-4"][2], 25.1)]
+            ("GPT-4.5", year(e["GPT-4.5"][1]), e["GPT-4.5"][2], 27.2),
+            ("Grok 3", year(e["Grok 3"][1]), e["Grok 3"][2], 26.4),
+            ("Llama 3.1 405B", year(e["Llama 3.1 405B"][1]), e["Llama 3.1 405B"][2], 25.6),
+            ("GPT-4", year(e["GPT-4"][1]), e["GPT-4"][2], 24.8)]
     for lab, x, v, ty in lead:
         ax.annotate(lab, (x, v), xytext=(2016.5, 10 ** ty), textcoords="data", fontsize=7,
                     ha="right", va="center",

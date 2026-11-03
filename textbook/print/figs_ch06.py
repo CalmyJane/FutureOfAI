@@ -21,7 +21,7 @@ def f0601():
     tags = [("Automate: search, summarise", 50, 83, "center"),
             ("Search: propose\ncandidates", 87.4, 61, "left"),
             ("Emulate: fast\nsurrogate", 87.4, 29, "left"),
-            ("Predict: stand in for data", 50, 6.6, "center"),
+            ("Predict: e.g. structure from sequence", 50, 6.4, "center"),
             ("Automate:\nwrite code", 12.6, 29, "right"),
             ("Automate:\ndraft, review", 12.6, 61, "right")]
     checks = ["Check\nsources", "Formal proof\nor synthesis", "Compare with\nobservations", "Blind\nexperimental test",
@@ -33,8 +33,8 @@ def f0601():
         x, y = P[i]
         box(ax, x - W / 2, y - H / 2, W, H, stages[i], fill="white", fs=6.8)
         t, tx, ty, ha = tags[i]
-        label(ax, tx, ty, t, fs=6, italic=True, color=G1, ha=ha)
-        label(ax, CP[i][0], CP[i][1], checks[i], fs=6)
+        label(ax, tx, ty, t, fs=7, italic=True, color=G1, ha=ha)
+        label(ax, CP[i][0], CP[i][1], checks[i], fs=6.6)
     # clockwise arrows between the stage boxes
     A = [((60.4, 75), (68, 65.6), -0.25), ((76, 56.4), (76, 33.6), 0), ((68, 24.4), (60.4, 15), -0.25),
          ((39.6, 15), (32, 24.4), -0.25), ((24, 33.6), (24, 56.4), 0), ((32, 65.6), (39.6, 75), -0.25)]
@@ -161,6 +161,7 @@ def f0603():
         ("Jul 2025", "Gemini Deep Think", "IMO 35/42 (gold); natural\nlanguage; certified", "c"),
         ("Nov 2025", "AlphaEvolve with\nTao et al.", "67 problems; several\nimproved (PNAS 2026)", "c"),
         ("Jan 2026", "GPT-5.2 Pro +\nAristotle", "Erdős #728 (intended\nversion) proved in Lean", "l"),
+        ("May 2026", "OpenAI (internal\nmodel)", "Erdős unit-distance\nconjecture disproved", "c"),
         ("Sep 2026", "OpenAI (unreleased\nmodel)", "Navier–Stokes blow-up\nclaimed; Lean check\ncontested", "x"),
     ]
     y0 = 37
@@ -173,7 +174,7 @@ def f0603():
         return inv.transform((0, bb.y1))[1] - inv.transform((0, bb.y0))[1]
 
     for i, (d, n, t, k) in enumerate(ev):
-        x = 6 + i * 11
+        x = 5 + i * 10
         up = i % 2 == 0
         sgn = 1 if up else -1
         ax.plot([x, x], [y0, y0 + sgn * 6], color=G2, lw=0.6)

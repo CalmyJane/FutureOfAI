@@ -376,3 +376,42 @@ Changes (location: what):
 - §4.7: p^L values marked author's arithmetic; debate proposal paragraph marked author's view, all-or-nothing point tied to [@schaeffer2023emergent; @wei2022emergent]; GPQA o3 sentence now "In late 2024 ... according to the AI Index" (AI Index wording; was "In December 2024 OpenAI reported").
 - §4.8: "about 500 times GPT-4.5" and "about 2.5 times" marked author's arithmetic; interpretive sentences ("empirical question", "That comparison shows", "Both readings turn on", "could be checked") marked author's view; closing synthesis marked author's summary and cited [@kaplan2020scaling; @openai2023gpt4; @grattafiori2024llama; @hoffmann2022empirical; @sardana2024beyond; @edelman2025why; @villalobos2024position; @epochai2026trends; @epochai2026data; @sajadieh2026ai].
 - Weak sources remaining "as reported": OpenAI blog posts (company pages blocked here; checked earlier first-hand via reader and today via search extract).
+
+## Second review fixes (Nov 2026)
+
+Reports: review2/r-ch03-04.md (Ch4 items), review2/r-technical-coverage.md (P4, RL scaling, Sutskever), review2/00-VERDICT.md C10, C11, F.
+
+Content corrections
+- C10 / M1 ARC-AGI cost revision: "revised in March 2025" → "as revised in December 2025", plus one sentence that the runs were repriced twice (o1-pro prices in March 2025, o3-pro prices in December). Verified on https://arcprize.org/blog/oai-o3-pub-breakthrough: "Note 3/24/2025: o3 pricing costs have been updated to use o1-pro pricing"; "Note 12/10/2025: ... o3-pro pricing of $80/M/Tokens"; table $2,680 retail / 33.5M tokens / $26 per task and $456,000 / 5.7B / $4,560.
+- C11 / M2 GSM1k: "Spearman rank correlation 0.36" → "Spearman's r² = 0.36, a moderate positive rank correlation". Verified in arXiv:2405.00332 abstract ("Spearman's r^2 = 0.36").
+- HLE "at release in early 2025 the best model tested scored 13.4%" → "In the paper describing it, the best model evaluated, OpenAI's o3-mini at its high reasoning setting, scored 13.4% on the text-only questions" (paper table: o3-mini (high) 13.4*, text-only; see Fact-check entries above; lastexam.ai current table does not show 13.4%).
+- METR Mythos: "measured about 17 hours" → METR announced "at least 16 hours" (95% CI 8.5–55 h), attributed to The Decoder (Matthias Bastian, 10 May 2026, https://the-decoder.com/metr-says-it-can-barely-measure-claude-mythos-palo-alto-networks-warns-of-autonomous-ai-attackers/), with the data file's ~17 h kept; METR page "Measurements above 16 hrs are unreliable with our current task suite" re-checked at https://metr.org/time-horizons/ (also shows "May 8th, 2026: Added Claude Mythos Preview (early)"). METR's own X post could not be fetched; hence the attribution. New bib: bastian2026metr.
+- Sutskever: "formerly of Google and OpenAI" → "a co-founder of OpenAI who has led the start-up Safe Superintelligence since 2025" (TechCrunch, Maxwell Zeff, 3 July 2025: he "is stepping into the CEO role"; launched SSI in 2024). New bib: zeff2025ilya. ssi.inc itself names no founders.
+- Fig. 4.2: Grok 3 and GPT-4.5 now have separate labels and leader lines (print/figs_ch04.py; render checked in scratchpad); caption adds that the two overlap at this scale; spec updated.
+- Caption citations: Fig. 4.1 caption no longer uses narrative @keys as nouns ("after Kaplan and colleagues' power-law fits ... Sources: [...]"); Table 4.1, Fig. 4.2 and Fig. 4.3 sources bracketed.
+
+Formalism (M4)
+- Kaplan's combined L(N, D) equation and the mechanics of Chinchilla's Approaches 1 and 2 moved into a new "Going deeper: How the two teams fitted their laws" box after Table 4.1; main text keeps the verbal statements, eq. 2 and the worked losses. Added a check of the limits of the Kaplan formula (D→∞ gives L(N), N→∞ gives L(D)).
+
+Author tags and debate endings (FIX-BRIEF 4)
+- Removed from running text: "by the author's arithmetic" (×4), "by the author's calculation" (×2), "(author's calculation)", "(the author's arithmetic ...)" (×2), "the author's ratio", "in the author's reading" (×3), "in the author's estimate", "In the author's summary of this chapter", "the author suggests". Kept as genuine opinions (3): scaling as finding tokens (§4.3), test-time economics ("the author would argue", §4.6). "Computed by the author" kept only in the Table 4.2 caption and "Schematic by the author" in Fig. 4.1.
+- Debate endings rewritten without the template: emergence box now ends with the public record of forecasts that would settle it; scaling box ends with the specific series (compute disclosure with fresh tasks, high-reliability horizons on non-software work, RL without checkers) and what each outcome would mean.
+
+New material (technical coverage P4 and RL scaling), all checked on official pages
+- New subsection "Controlling how long a model thinks" (§4.6, ~700 words):
+  - o3-mini reasoning effort: "developers can choose between three reasoning effort options—low, medium, and high" (https://openai.com/index/openai-o3-mini/, read via r.jina.ai; 403 directly); release 31 Jan 2025 per Computerworld/The Decoder search. New bib openai2025o3mini.
+  - Claude 3.7 Sonnet, 24 Feb 2025: "the first hybrid reasoning model on the market"; thinking budget "no more than N tokens, for any value of N up to its output limit of 128K tokens" (https://www.anthropic.com/news/claude-3-7-sonnet). New bib anthropic2025claude37.
+  - Qwen3 report: thinking/non-thinking modes, "thinking budget mechanism" (arXiv:2505.09388 abstract; existing yang2025qwen3).
+  - Budget forcing: Muennighoff et al., s1, EMNLP 2025 pp. 20286–20332, DOI 10.18653/v1/2025.emnlp-main.1025 (Crossref); end-of-thinking delimiter and optional "Final Answer:", suppression plus "Wait"; s1K 1,000 questions; AIME24 50% → 57% (arXiv:2501.19393v3 §3.1 and abstract). New bib muennighoff2025s1.
+  - GPT-5 router: GPT-5 System Card dated 13 Aug 2025 (https://cdn.openai.com/gpt-5-system-card.pdf, pdftotext): "a unified system with a smart and fast model ..., a deeper reasoning model ..., and a real-time router that quickly decides which model to use based on conversation type, complexity, tool needs, and explicit intent (for example, if you say 'think hard about this')"; router trained on "when users switch models, preference rates for responses, and measured correctness"; gpt-5-thinking-pro "a setting that makes use of parallel test time compute". New bib openai2025gpt5systemcard.
+  - Grok 4 Heavy: "parallel test-time compute, which allows Grok to consider multiple hypotheses at once" (https://x.ai/news/grok-4, 9 Jul 2025). New bib xai2025grok4.
+  - Gemini Deep Think IMO 2025: "simultaneously explore and combine multiple possible solutions"; 35 points; certified (https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/, 21 Jul 2025). Bib google2025advanced copied from ch06.bib.
+  - GPT-6 Pro parallel agents (16 Oct 2026): OpenAI's post and help-centre release notes return 403; only press coverage found, so attributed "according to press reports" (RuntimeWire, Ryan Merket, 16 Oct 2026, https://runtimewire.com/article/openai-gpt-6-pro-chat-multi-agent-upgrade, linking OpenAI's post "GPT-6 Pro can now split tasks among multiple agents in ChatGPT"). New bib merket2026openai. Plan/agent-count details left out (sources disagree).
+- RL scaling paragraph (§4.6, after Khatri/Yue): DeepSeek-V3.2 "allocates a post-training computational budget exceeding 10% of the pre-training cost" and "performs comparably to GPT-5" (arXiv:2512.02556, pp. 1–2); xAI Grok 4 RL "at pretraining scale", "over an order of magnitude more compute than had been used previously" (x.ai/news/grok-4). New bib deepseekai2025deepseekv32.
+
+Not changed (logged)
+- Currency box for leaderboard figures (reviewer's optional suggestion): not done; dated wording ("as of October 2026", "in October 2026") already carries the dates.
+- B1 quote glyphs, M3, M5 peer-review qualifiers, GRPO and other Ch. 3 items: Chapter 3 editor.
+- Caption-citation rendering book-wide: central editor (build); Ch. 4 captions now read correctly either way.
+
+Words: 9,306 → 10,136 (+830; ~700 for the new subsection, ~120 RL paragraph, offset by tag removal and the formalism box replacing inline mechanics).

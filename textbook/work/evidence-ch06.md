@@ -415,3 +415,37 @@ Citations added (location → key):
 
 Statements removed or softened: Markov "a chip-design researcher" (unverifiable descriptor); emulator "in seconds … hours of supercomputer time" (replaced by sourced GraphCast figures); "months of laboratory work"; Crockett "psychologist" → "cognitive scientist".
 Bib: new cummings2024doing. Pandoc --citeproc: no warnings; all ch06.bib keys cited; no missing keys.
+
+## Second review fixes (Nov 2026)
+
+Report: review2/r-ch05-06.md (Chapter 6 items). Word count 11,227 → 11,658.
+
+- **B2(a) Navier–Stokes alternatives.** "one of the four alternatives" → "alternatives (C) and (D), either of which would suffice" (manuscript p. 1, openai2026finite, as verified by the reviewer).
+- **B2(b) Priority dispute** (new "Who gets the credit" paragraph in the box, attributed throughout):
+  - Buckmaster statement PDF, created 8 Sep 2026 (https://cims.nyu.edu/~tristanb/statement.pdf, read via pdftotext): Euler/Boussinesq smooth-forcing blow-up on 15 August, Lean-verified 22 August; programme credited to Córdoba and Martínez-Zoroa; Alpöge "received tips that information about our progress had been passed to OpenAI" → buckmaster2026statement.
+  - SciAm, Howlett, 8 Sep 2026 (https://www.scientificamerican.com/article/openai-claims-blockbuster-math-breakthrough-amid-swirl-of-controversy/): allegation and OpenAI denial; Bubeck: "We did not use their prompt or proofs to prompt our models" → howlett2026openaiclaims.
+  - OpenAI statement as quoted by OfficeChai, 8 Sep 2026 (https://officechai.com/ai/openai-says-it-didnt-see-any-of-buckmaster-and-alpoges-work-while-resolving-navier-stokes/): "did not see any of their work through any means until they released it publicly"; "cannot rule out" indirect improvement from de-identified data → officechai2026openai. openai.com returned 403.
+  - EMS statement, 10 Sep 2026 (https://preview.euromathsoc.org/news/ems-statement-on-navier-stokes-announcement-225): milestone; authorship and credit questions; model not generally accessible → ems2026statement.
+  - Letter "A Severe Misalignment of AI in Mathematics", Zenodo 10.5281/zenodo.22737750, 11 Sep 2026, 25 creators (Avila … Tao, Scholze, Viazovska …); PDF text read: "the push by AI companies to solve mathematical problems as a benchmark is detrimental to the science of mathematics"; "announced in a rush"; "severe attribution and plagiarism questions" → fields2026severe. The letter itself does not call its signatories Fields Medallists, so the text says "25 leading mathematicians including …".
+  - **AMS statement not added:** ams.org/news?news_id=7686 returned 403 and only social-media and wiki quotations were found; the EMS statement (verified) is used instead. Central editor may add the AMS statement if its text can be read.
+  - The phrases "categorically impossible" and "false and inflammatory" cited by the reviewer could not be traced to a reachable primary or major-press source and are not used.
+- **B2(c) Clay statement.** Clay Mathematics Institute, "Navier-Stokes Announcement", 11 Sep 2026 (https://www.claymath.org/news/navier-stokes-announcement): "the announcement that the Navier-Stokes problem has apparently been settled"; review deliberately unhurried → clay2026navierstokes. "What would settle it" rewritten around it.
+- **KCL qualifier.** KCL news, 27 Oct 2026 (https://www.kcl.ac.uk/news/openais-navier-stokes-proof-called-into-question): "The researchers have not shown that OpenAI's original proof is wrong." → kcl2026openais. "What Lean does and does not certify" condensed to one sentence.
+- **B3 Erdős #90.** New paragraph after #728 and Fig. 6.3 entry (May 2026, open circle):
+  - OpenAI manuscript "Planar Point Sets with Many Unit Distances" (https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf; Theorem 1.1: ν(n) ≥ n^{1+δ} for infinitely many n; disproves [Erd46]) → openai2026planar. OpenAI announcement page (20 May 2026 per search results) returned 403.
+  - Sawin, arXiv:2605.20579, 20 May 2026: explicit exponent >1.014 → sawin2026explicit.
+  - Melissa Lee, ScienceAlert/The Conversation, 28 May 2026 (https://www.sciencealert.com/stunning-ai-solution-for-80-year-old-problem-shocks-mathematicians): Litt and Gowers quotes; 10^2,000,000 caveat (attributed to "reports") → lee2026stunning.
+  - Tsoukalas et al., arXiv:2605.22763, 21 May 2026: 9 of 353 open Erdős problems resolved by a Lean proof-search agent → tsoukalas2026advancing.
+  - Framing: "A result from May 2026 did not fit the 'long tail' description".
+- **M4 Fig. 6.1.** Tag "Predict: stand in for data" → "Predict: e.g. structure from sequence"; tag labels 6 → 7 pt, inner-ring labels 6 → 6.6 pt (print/figs_ch06.py; spec updated; SVG regenerated and checked visually).
+- **Fig. 6.3.** Ten entries now spaced at 10 units (x = 5 + 10i); spec and caption sources updated (openai2026planar).
+- **ch06:45 AFDB.** "about 300,000 … in 2021" → "over 360,000 … at its launch in July 2021". Varadi et al. 2024 (https://academic.oup.com/nar/article/52/D1/D368/7337620) itself gives "300k" in the abstract and "over 360 000" in its Data archiving section; the specific launch figure is used.
+- **ch06:61 dangling sentence** rewritten: "Weather forecasting shares the protein case's advantages: …".
+- **ch06:93 / Table 6.1 NOAA.** Release (https://www.noaa.gov/news-release/noaa-deploys-new-generation-of-ai-driven-global-weather-models) says both "Early results … extending forecast skill by an additional 18 to 24 hours" and "forecast skill is comparable to the operational GEFS"; table cell now gives both.
+- **IMO 2026.** AFP via The Standard: Xiaohongshu says results were "under the IMO's official judging process"; quote added; still reported as company claims (no IMO confirmation found).
+- **Debate box NHC.** → "slightly better than the official forecasts for short-range hurricane tracks and on a par with them for intensity" (reviewer's reading of cangialosi2026national; consistent with the §6.3 text).
+- **Debate box ending** rewritten without the "In the author's view, … needs" template.
+- **Author tags.** "In the author's reading" (×2) and "In the author's assessment" (chip design) removed; three marked judgements remain (§6.1 "in the author's view", §6.6 "In the author's assessment", §6.8 "in the author's judgement").
+- **Trims to pay for additions:** MatterGen GPa numbers, A-Lab 43/41 parenthesis, AlphaEvolve repeated "According to the company", Lean paragraph.
+- **Not changed:** Seed-Prover "after the deadline" (reviewer: acceptable); AlphaEvolve 48-multiplication follow-ups (optional; no source verified in time).
+- **Bibliography items for kapoor2025ai / wang2023voyager:** these entries live in bib/ch05.bib and already carry the TMLR journal field; nothing to change in ch06.bib.

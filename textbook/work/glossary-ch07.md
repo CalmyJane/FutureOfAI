@@ -25,3 +25,5 @@
 **H100-equivalent**: A unit for adding up computing capacity across different chips, expressed as the number of Nvidia H100 GPUs that would supply the same computing power.
 **High-Performance Linpack (HPL)**: The benchmark used to rank supercomputers, which times the solution of a large system of equations in 64-bit arithmetic; its results cannot be compared with 8-bit AI figures.
 **KV cache**: The intermediate results a language model stores for each earlier token so that it need not recompute them; reading it adds to memory traffic when inputs are long.
+**quantisation**: Storing a trained model's weights (and sometimes activations) in fewer bits than were used in training, for example 4 instead of 16, so that the model needs less memory and less memory traffic per token, usually at a small cost in accuracy.
+**prompt caching**: Keeping the intermediate results (the KV cache) computed for a long, repeated part of a prompt, such as a system prompt or document, so that later requests that begin the same way need not recompute it.

@@ -25,3 +25,6 @@
 **benchmark**: A fixed set of test questions or tasks with known answers on which AI models are scored and compared.
 **hardware FLOPs utilisation (HFU)**: The share of a chip's peak arithmetic speed used by all operations it performs during training, including recomputation done to save memory; it is higher than model FLOPs utilisation (MFU), which counts only the operations training strictly requires.
 **distillation**: Training a smaller "student" model to imitate the outputs of a larger "teacher" model, for example its probability distributions over answers or its worked solutions.
+**reasoning effort**: A setting, offered by many reasoning models, that controls how long the model thinks before answering, trading cost and speed against accuracy; also called a thinking budget.
+**budget forcing**: A decoding technique that controls how long a reasoning model thinks, by inserting the end-of-thinking marker to stop it early or suppressing that marker and appending "Wait" to make it continue.
+**parallel test-time compute**: Running several lines of reasoning or several agents at once on the same question and combining or choosing among their results.

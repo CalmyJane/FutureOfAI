@@ -383,3 +383,46 @@ Citations added (location → key):
 
 Statements removed: GPT-5.4 75.0% (Table 5.1 row and §5.4 sentence), see above.
 Pandoc --citeproc: no warnings; all ch05.bib keys cited; no missing keys.
+
+## Second review fixes (Nov 2026)
+
+Reports: review2/r-ch05-06.md (Ch5 items), review2/r-technical-coverage.md (agentic RL bridge), review2/r-publication.md §5 (GPT-6 Pro parallel agents, Claude Duet), review2/00-VERDICT.md B5, D26, F.
+
+Blocking
+- B1 JSON code blocks reflowed: longest line now 53 characters (was ~73); both blocks still valid JSON (checked with json.loads). No other code blocks in the chapter.
+- B4 OpenClaw/Moltbook: new paragraph in §5.6 after the CVE-2025-32711 case, and ch05:297 rewritten ("Large populations of LLM agents now interact in the wild, as Moltbook showed in 2026 ..., but evidence of the harm they cause is still anecdotal and their numbers are unaudited"). Sources:
+  - Krebs on Security, 8 Mar 2026, https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/ : OpenClaw (formerly ClawdBot, Moltbot) open-source, released Nov 2025, runs locally, broad access to email/calendar/files; Moltbook built by an OpenClaw agent at a developer's request; >1.5 million registered agents less than a week after launch. New bib krebs2026how.
+  - Wiz, Gal Nagli, 2 Feb 2026, https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys : "while Moltbook boasted 1.5 million registered agents, the database revealed only 17,000 human owners"; "no mechanism to verify whether an 'agent' was actually AI or just a human with a script"; "full read and write access to all platform data"; "fully impersonate any agent"; "Inject malicious content or prompt injection payloads"; fixed within hours. New bib nagli2026hacking.
+  - NVD API, CVE-2026-25253, published 2026-02-01: "OpenClaw (aka clawdbot or Moltbot) before 2026.1.29 obtains a gatewayUrl value from a query string and automatically makes a WebSocket connection without prompting, sending a token value"; CVSS 3.1 8.8 HIGH (source cve@mitre.org, UI:R). New bib nist2026cve.
+  - Palo Alto Networks blog, Mishra and Morgan, 29 Jan 2026 (updated 4 Feb), https://www.paloaltonetworks.com/blog/?p=351578 : OpenClaw "expands the so called 'lethal trifecta'"; root files and credentials, web search ingestion, sending email; "Persistent memory acts as an accelerant". New bib mishra2026openclaw.
+  - Not used: the reviewer's Censys "21,600 exposed instances" and the 404 Media item (not re-verified); Krebs reports only "hundreds" of exposed admin interfaces.
+
+Major
+- M1 METR: Mythos sentence now gives METR's announced "at least 16 hours" (95% CI 8.5–55 h) via The Decoder (bastian2026metr) and the page's warning that values above 16 h are unreliable (metr2026task). Opus 4.6: added that the ~14.5 h figure reported in February (OfficeChai, 21 Feb 2026, https://officechai.com/ai/exponential-progress-claude-opus-4-6-has-50-time-horizon-of-14-5-hours-on-metr-time-horizons-benchmark ; new bib officechai2026exponential) predates METR's 3 March 2026 curve-fitting correction (metr2026task).
+- M2 Anthropic reliance in §5.1–5.2: added OpenAI's "A practical guide to building agents" (cdn.openai.com PDF, April 2025: "three core components" model/tools/instructions; applications that "don't use them to control workflow execution ... are not agents"; "maximize a single agent's capabilities first"), the academic survey Wang et al. 2024, Frontiers of Computer Science 18(6):186345, DOI 10.1007/s11704-024-40231-1 (Crossref; profiling, memory, planning and action modules, arXiv PDF p. 3), Liu et al. 2024 "Lost in the Middle" (TACL 12:157–173, copied from ch03.bib) and Chroma's "Context Rot" report (Hong, Troynikov, Huber, 14 Jul 2025, https://www.trychroma.com/research/context-rot : 18 models; "model performance consistently degrades with increasing input length"), which now carries the context-rot claim instead of Anthropic's guidance. Closing paragraph no longer returns to Project Vend; it ends with CaMeL's seven-point cost instead.
+- M3 Table 5.1: rows now name Claude Fable 5 (86.0%, general model, 1 Aug 2026, 307.73/358) and Intelligence-Indeed Agent (90.2%, agentic framework, 25 Jul 2026, 325.59/361), re-read from https://os-world.github.io/static/data/osworld_verified_results.xlsx (Excel serials 46235 and 46228). Caption adds the 26 June 2026 notice on the original site: "OSWorld 2.0 is now available! Please visit OSWorld 2.0 for the latest version" (https://osworld-v1.xlang.ai/).
+
+Minor
+- MCP: "deprecated three older features" → "deprecated several older features, among them Roots, Sampling and Logging" (changelog https://modelcontextprotocol.io/specification/2026-07-28/changelog also deprecates HTTP+SSE, two includeContext values and Dynamic Client Registration).
+- Product rule: Goodfellow et al. replaced by Blitzstein and Hwang, Introduction to Probability, 2nd ed., CRC 2019, DOI 10.1201/9780429428357 (Crossref), in text and Fig. 5.3 caption; goodfellow2016deep removed from ch05.bib (no longer cited here).
+- Table 5.3 caption explains why Opus 4.5 is used: Sierra's own run reports all four domains for it and is the source of the AI Index's 70.2% average (see Fact-check entries above).
+- Nasr et al. ">500 participants, $20,000 in prizes": confirmed in arXiv:2510.09023 full text ("online red-teaming competition with over 500 participants"; "with $20,000 in prizes"). No change.
+- "had in fact already been passed" → "scores above the original student baseline had been reported".
+- kapoor2025ai and wang2023voyager: reviewer said @article without journal; both entries already carry journal = Transactions on Machine Learning Research (fixed in an earlier pass). No change.
+- Prose: one reader-facing summary sentence added after the OSWorld paragraph and after the SWE-bench Pro paragraph.
+- Figure captions 5.1 and 5.2 no longer use bracketed citations as nouns after "after"; sources moved to a closing "Sources:" list; specs synced.
+
+Technical coverage bridge
+- New subsection "Why agents got better" at the start of §5.4 (~330 words), pointing to Section 3.7. Sources: OpenAI o3/o4-mini System Card, 16 Apr 2025 (cdn.openai.com PDF, pdftotext: "The models use tools in their chains of thought"; "trained with large-scale reinforcement learning on chains of thought"; new bib openai2025o3systemcard); Kimi K2 report abstract (arXiv:2507.20534: "a large-scale agentic data synthesis pipeline and a joint reinforcement learning (RL) stage"; "interactions with real and synthetic environments"; bib copied from ch02.bib); DeepSeek-V3.2 report (arXiv:2512.02556 §3.2–3.3: "tens of thousands of reproducible issue resolution environments" mined from GitHub issue–PR pairs; "1,827 task-oriented environments"; "hard to solve but easy to verify"; reasoning retained across tool calls; new bib); Edelman et al. 2025 on RL environments as a bottleneck (copied from ch04.bib).
+
+Currency
+- Claude Duet (21 Oct 2026): one sentence in §5.6 on approval gates. Anthropic help page https://support.claude.com/en/articles/17631495-get-started-with-claude-duet : "a research preview"; "is designed to ask before it sends a message, makes a payment, signs a document, or deletes anything". Date from VKTR (Michelle Hawley, 22 Oct 2026, quoting @claudeai). New bib anthropic2026duet, hawley2026claude.
+- GPT-6 Pro parallel agents: added to Chapter 4 §4.6 (parallel test-time modes), attributed to press reports, since OpenAI pages return 403.
+
+Debate ending and author tags
+- Prompt-injection debate box ends with the specific test (adaptive attackers as in Nasr et al., reporting lost usefulness) without "In the author's view". Removed "In the author's calculation", "A calculation by the author", "in the author's assessment" (×3, two of them in the cut payments text). Opinions kept (2): the agent spectrum (§5.1) and the Replit case's typical structure (reworded).
+
+Cuts
+- §5.7 (payments) cut from 651 to 421 words: AP2 mandate detail condensed, Mastercard Verifiable Intent and the FIDO standards follow-on dropped, x402 flow shortened. Bib entries dioquino2025coinbase and fidoalliance2026fido removed (no longer cited); x402 May 2025 date now rests on coinbase2025x402 (Coinbase blog, 6 May 2025).
+
+Words: 10,707 → about 11,380 (+673).
