@@ -3,15 +3,15 @@
 Author: Jan Göbel · Evidence current to October 2026 (web sources checked 20–25 October 2026, the last passes with web search)
 
 ## Files
-- `understanding-ai_A5_interior.pdf`: the print-ready interior. A5 (148 × 210 mm), no bleed, PDF/X-4 with sRGB output intent, 590 pages (an even number), all fonts embedded (EB Garamond and Noto Serif Devanagari, both SIL OFL). The publisher or print-on-demand service still needs to add the cover and ISBN.
+- `understanding-ai_A5_interior.pdf`: the print-ready interior. A5 (148 × 210 mm), no bleed, written as PDF/X-4 (PDF 1.6, sRGB output intent) but not yet validated by a preflight tool: run the printer's preflight before submission. 626 pages (an even number), all fonts embedded (EB Garamond; Noto Serif Devanagari, Noto Serif KR, Noto Sans Math and Noto Sans Mono for Hindi, Korean, symbols and code; all SIL OFL). The publisher or print-on-demand service still needs to add the cover and ISBN.
 - `understanding-ai.md`: the full manuscript in Markdown, for editing or conversion.
 
 ## Contents
 - A preface on how the book is organised and how evidence is labelled.
 - 14 chapters in five parts: How AI Works; The Frontier; Society and Economy; Risk, Safety and Governance; The Decade Ahead.
-- About 197,000 words including references, 46 figures and 60 tables.
-- A glossary of 409 terms.
-- A numbered APA 7 reference list of 1,160 cited sources. The running text carries no citations: a line at the foot of each page lists the numbers of the sources used on that page, with pinpoints (pages, paragraphs, articles) in brackets; figure and table captions give their sources by number.
+- About 213,000 words including references and index; 46 figures and about 65 tables.
+- A glossary of 431 terms and an index of 462 entries (generated from the laid-out pages by `print/make_index.py`).
+- A numbered APA 7 reference list of 1,244 cited sources, with full author lists where available. The running text carries no citations: a line at the foot of each page lists the numbers of the sources used on that page, with pinpoints (pages, paragraphs, articles) in brackets; figure and table captions give their sources by number.
 
 This edition is written as nonfiction, not as a course text: there are no learning objectives, summaries, key terms or discussion questions. Each chapter opens with a documented case and goes into the mechanisms, numbers and evidence in depth. It uses Concept, Case study, Debate and Going deeper boxes, ends with a synthesis paragraph and closes with annotated further reading.
 
@@ -40,3 +40,12 @@ Remaining uncertainties are listed for each chapter in the evidence logs.
 Run `python3 textbook/print/figures.py` to build the figures, then `python3 textbook/print/build.py` to build the PDF. Requires pandoc ≥ 3.1, WeasyPrint, pypdf, reportlab and matplotlib. `python3 textbook/print/check_build.py` fails if the delivered PDF was built from different sources than those in the repository (the build records a hash in `BUILD-INFO.txt`).
 
 The files `sample-ch10-*.pdf` are earlier samples of alternative citation layouts and are not current.
+
+11. **Second independent review and fixes (3 November 2026):** nine fresh reviewers (reports in `review2/`) re-checked about 530 claims, audited technical coverage and publication readiness. All chapters were revised: about 25 factual corrections, a new Section 3.8 on the path from ChatGPT to the 2026 frontier, agentic reinforcement learning, rewards without automatic checkers, efficient long-context attention, multimodality, controllable reasoning (Section 4.6), serving and quantisation (Section 7.1), the 2025–26 open-weight models (Section 7.6), and a closing synthesis in Chapter 14. Build: bracketed reference numbers in captions and table cells, code set in a bundled monospace font, a layout pass that moves figures to fill page gaps, and an index.
+
+## To do before publication
+- **Author decisions:** AI-assistance disclosure and copyright line, about-the-author, acknowledgements, ISBN and imprint, title.
+- **Human expert read** (technical and legal/policy) of the whole text.
+- **Printer preflight** of the PDF (PDF/X-4 conformance, colour, fonts).
+- **Proof-day checks of time-sensitive facts:** US ownership-rule suspension and US–China truce (9–10 Nov 2026), China's gallium/germanium suspension (27 Nov 2026), BLS Q3 2026 productivity (5 Nov), Challenger October 2026 job cuts, any new frontier model releases after October 2026.
+- **Pages blocked from the review environment** (openai.com, oecd.org, sagaftra.org, CETaS, Metaculus): a person with normal web access should confirm the claims logged as "as reported by" in `work/evidence-chNN.md`.

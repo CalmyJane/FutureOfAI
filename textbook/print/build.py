@@ -204,7 +204,10 @@ def notes_to_pageline(body):
     body = re.sub(r'<(figcaption|caption)\b.*?</\1>', caption_numbers, body, flags=re.S)
     # in table cells the citation text is dropped (with the space before it): the page's source line carries it
     def table_cells(m):
-        return re.sub(r'\s*<span class="citation" data-cites="[^"]+">.*?</span>(?=<span class="srcm")', "", m.group(0), flags=re.S)
+        def cell_nums(c):
+            ks = sorted({num[k] for k in c.group(1).split() if k in num})
+            return f' <span class="refnums">[{", ".join(map(str, ks))}]</span>'
+        return re.sub(r'\s*<span class="citation" data-cites="([^"]+)">.*?</span>(?=<span class="srcm")', cell_nums, m.group(0), flags=re.S)
     body = re.sub(r'<tbody>.*?</tbody>', table_cells, body, flags=re.S)
     # "Kestin et al. (2025)" -> "Kestin et al."
     def strip_year(m):
@@ -282,7 +285,7 @@ def stamp_pagelines(document, doc, pdf_path):
     for pi in pages:
         writer.pages[pi].merge_page(overlay.pages[pi])
         writer.pages[pi].compress_content_streams()  # merging leaves the page content uncompressed
-    writer.compress_identical_objects(remove_identicals=True, remove_orphans=True)
+    writer.compress_identical_objects(remove_duplicates=True, remove_unreferenced=True)
     writer.pdf_header = b"%PDF-1.6"  # keep the version WeasyPrint wrote for PDF/X-4 (pypdf defaults to 1.3)
     with open(pdf_path, "wb") as f:
         writer.write(f)
