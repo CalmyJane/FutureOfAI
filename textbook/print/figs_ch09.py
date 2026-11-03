@@ -128,11 +128,14 @@ def f0903():
     fig = F.figure(4.6)
     axA = fig.add_axes([0.335, 0.665, 0.6, 0.27])
     axB = fig.add_axes([0.335, 0.2, 0.6, 0.33])
+    # Study 1, chat 1 (Table S1 of the accepted manuscript): same model, same
+    # experiment, with 95% CIs. Then the average over all conditions tested
+    # (19 models) and the cross-fitted "maximal persuasion" estimate (no CI).
     A = [
-        ("Static AI message (GPT-4o)", 6.1),
-        ("Static AI message (GPT-4.5)", 6.9),
-        ("Average AI conversation", 9.4),
-        ("\u201cMaximal persuasion\u201d\nAI conversation", 15.9),
+        ("Static message, GPT-4o\n(study 1)", 6.05, (4.95, 7.15)),
+        ("Conversation, GPT-4o\n(study 1)", 8.80, (8.03, 9.57)),
+        ("Conversation, average of\nall conditions (19 models)", 9.4, None),
+        ("\u201cMaximal persuasion\u201d\nconversation (estimated)", 15.9, None),
     ]
     B = [
         ("US 2024 presidential (Harris\nvs Trump), n = 2,306", 2.88, (2.02, 3.74)),
@@ -142,9 +145,14 @@ def f0903():
     ]
     h = 0.66
     ya = [4, 3, 2, 1]
-    for (lab, v), y in zip(A, ya):
-        axA.barh(y, v, height=h, color=G3, edgecolor=INK, lw=0.5)
-        axA.text(v + 0.3, y, f"{v:.1f}", va="center", fontsize=7)
+    for (lab, v, ci), y in zip(A, ya):
+        est = ci is None and lab.startswith("\u201c")
+        axA.barh(y, v, height=h, color="white" if est else G3, edgecolor=INK, lw=0.5,
+                 hatch="////" if est else None)
+        if ci:
+            axA.errorbar(v, y, xerr=[[v - ci[0]], [ci[1] - v]], fmt="none", ecolor=INK,
+                         elinewidth=0.7, capsize=2.2, capthick=0.7)
+        axA.text((ci[1] if ci else v) + 0.3, y, f"{v:g}", va="center", fontsize=7)
     axA.set_yticks(ya)
     axA.set_yticklabels([a[0] for a in A], fontsize=6.5, linespacing=1.05)
     axA.set_xlim(0, 20)
@@ -168,7 +176,7 @@ def f0903():
         ax.tick_params(axis="y", length=0, pad=4)
         ax.tick_params(axis="x", labelsize=7.2)
         ax.spines["left"].set_visible(False)
-    fig.text(0.015, 0.012, "Durability: 36\u201342% of the conversation effect remained after one month (A); slightly\nmore than one third after more than a month (B, US). Whiskers: 95% CIs.",
+    fig.text(0.015, 0.012, "Durability: 36\u201342% of the conversation effect remained after one month (A); slightly\nmore than one third after more than a month (B, US). Whiskers: 95% CIs where reported;\nhatched bar: model-based estimate, not an observed arm.",
              fontsize=6.4, ha="left", va="bottom", color=G1, style="italic", linespacing=1.15)
     F.save(fig, "fig-09-03")
 

@@ -415,3 +415,19 @@ Re-opened this pass (direct fetch unless stated), with the claims confirmed:
 - vandehei2025behind (Axios 403; wording confirmed in Fortune and other reports).
 
 Scanner: 1 flagged block (closing synthesis, explicitly marked as author's). Pandoc --citeproc: no warnings; no uncited bib keys.
+
+## Second review fixes (Nov 2026)
+
+Source: review2/r-ch07-08.md (Ch8 items) and FIX-BRIEF.md.
+
+- **M3 Aghion & Bunel 25% vs 15%** (§8.5). Note re-read (https://www.frbsf.org/wp-content/uploads/AI-and-Growth-Aghion-Bunel.pdf, §3.3 and p. 1): customer-support gain "+14% for the first month … reaching +25% for the second month and stabilizing between +25% and +30% in the following three months … Over 10 years, the gains considered for this study thus appear to be in the order of +25%"; "When we take the three studies into account [Peng 55.8%, Noy & Zhang 40%, Brynjolfsson 25%] … +40%". Text now says they include Peng's 55.8% that Acemoglu left out, take 25% as "the level the gain reached after a few months of use", against "the 14% average over all months in the study's 2023 version, which Acemoglu used (the published version reports 15%)". Resolves the conflict with Table 8.3's 15% (QJE 2025 headline).
+- **OECD primary** (§8.4). OECD *Employment Outlook 2026: Geographic Disparities in Jobs and Incomes*, 7 July 2026, DOI 10.1787/7e710f54-en (Crossref metadata confirmed: title, subtitle, date, ISBNs). Full text and press release still 403 on oecd.org (curl and WebFetch, 3 Nov 2026); web search found no English OECD page text. New key `oecd2026employment` cited for the report's existence, date and theme only; Cormann's statement stays attributed to Journal du Net (`barhiye2026ocde`), now naming him. Central editor: if oecd.org becomes reachable, replace the JdN attribution with the Outlook's own wording.
+- **Challenger October 2026 report**: not published as of 3 Nov 2026 (https://www.challengergray.com/wp-content/uploads/2026/11/Challenger-Report-October-2026.pdf → 404; search found no release). Text unchanged ("first nine months of 2026"). Re-check at final proof.
+- **BLS Q3 2026 productivity**: preliminary release scheduled for 5 November 2026 (per the 3 Sep 2026 release schedule; bls.gov "Access Denied" to curl). Sentence now dated "On the latest figures available at the end of October 2026". Re-check at final proof.
+- **Debate box ending** (ch08:175): template "In the author's view, settling the question needs…" replaced by "What would decide the matter is a US counterpart to the Danish records: administrative data linking each firm's adoption to its hiring, observed after 2024".
+- **Author tags**: ch08:7 "in the author's framework" removed (Figure 8.1 caption keeps "Schematic by the author"). Remaining marked opinions: §8.3 "in the author's reading of the literature", §8.8 closing "In the author's summary". 
+- **ch08:7 repetition** "runs … It runs" → "a chain from … The chain leads from".
+- **Figure 8.2 Noy & Zhang year** (reviewer: label "2022"): rejected. print/figs_ch08.py, the spec and figures/svg/fig-08-02.svg all already read "RCT; n=453; 2023".
+- **Unverified 60% Aghion–Bunel input**: confirmed in the note ("around 60% in the United States", Pizzinelli et al.); unchanged.
+- **Layout, Table 8.3** (one-row orphan on p. 243) and Table 7.3 caption separation: for the central editor (build/CSS); nothing changed in the chapter source.
+- Bib: added `oecd2026employment`. Pandoc --citeproc clean; no uncited keys; uncited.py flags only the marked closing synthesis. Word count 10,425 → 10,480.
