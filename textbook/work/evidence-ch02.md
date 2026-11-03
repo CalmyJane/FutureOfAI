@@ -374,3 +374,20 @@ One line per change: location | what was added/removed/verified | URL. Goodfello
 - Bib: schmidhuber2015deep added; pakkenberg2003aging authors completed.
 
 pandoc --citeproc: no warnings; every bib key cited. Scanner: 4 blocks flagged, all explicitly marked author's worked examples (one-weight example, backprop box ×2) or the author's view (debate closing).
+
+## Second review fixes (Nov 2026)
+
+Source reports: review2/r-ch00-02.md (Ch2 items), review2/r-technical-coverage.md §4 (training-recipes box).
+
+- Author tags (M1): removed from running text at the neuron example, matrix example, XOR summary ("in the author's summary"), softmax example, one-weight example, backprop example (×2), Adam step, He initialisation, convolution count, matrix-multiply count, H100 arithmetic intensity, synapse comparison. Kept in figure/table captions ("Calculation by the author" etc.). Remaining opinion labels in running text: three (H100 "in the author's judgement"; synapses vs parameters "in the author's view"; closing "In the author's reading").
+- Opening (§ intro): provenance clause on DeepSeek-V4-Pro moved to §2.2 (MoE paragraph), where the model reappears; opener now reads "like the 2026 open model DeepSeek-V4-Pro".
+- §2.1 step function: "A jump has no slope" → slope zero away from the jump and undefined at it, so gradient learning gets no signal.
+- §2.5 He initialisation: the 512-input, ten-layer case with s.d. 0.01 now explicitly hypothetical; notes AlexNet's eight layers of varying width (krizhevsky2012imagenet).
+- Training-recipes box, Llama bullet: GPT-2 used input-side LayerNorm, not RMSNorm. Now: input-side normalisation "to improve the training stability", using RMSNorm; "the input-side placement, then with ordinary layer normalisation, had been used earlier in OpenAI's GPT-2" (GPT-2 paper §2.3: "Layer normalization … was moved to the input of each sub-block"; LLaMA §2: "Pre-normalization [GPT3] … we normalize the input of each transformer sub-layer … We use the RMSNorm normalizing function").
+- Box, DeepSeek-V3: cross-reference "(Section 2.6)" for 8-bit arithmetic → "(Section 7.1)", where FP8 is explained (ch07 §7.1, Table 7.1).
+- Box, Kimi K2: dropped the cross-reference "(Chapter 3)": Chapter 3 does not discuss exploding attention logits. Now "an added safeguard at scale to stop attention scores from growing without bound".
+- Box, DeepSeek-V4: arXiv 2606.19348 §2.4: "We employ the Muon … optimizer for the majority of modules in DeepSeek-V4 series"; "We maintain the AdamW … optimizer for the embedding module, the prediction head module, the static biases and gating factors of mHC modules, and the weights of all RMSNorm modules" → bullet rewritten accordingly. PDF https://arxiv.org/pdf/2606.19348 .
+- Debate box ending rewritten without the template sentence: "Two kinds of evidence would move the debate: …" (scanner flags it as the chapter's framing).
+- Not changed: LeNet "millions of bank cheques a month" (reviewer agrees it matches LeCun et al. 1998 §I).
+
+pandoc --citeproc: no missing keys; every bib key cited. Scanner: 4 blocks flagged: three worked examples (one-weight example, backprop example ×2; covered by the preface statement on worked examples) and the debate-box closing.

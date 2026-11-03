@@ -69,13 +69,13 @@ def f0102():
                 ha="left", va="center", linespacing=1.1,
                 arrowprops=dict(arrowstyle="-", color=G1, lw=0.5, shrinkA=1, shrinkB=0))
     # annotator line label
-    ax.plot([4.5, 4.5], [5.1, 15.9], color=G1, lw=0.5)
-    ax.text(5.5, 16.2, "One annotator, 1,500 images (5.1%)", fontsize=6.6, ha="right", va="bottom")
+    ax.text(5.42, 5.1, "One annotator,\n1,500 images\n(5.1%)", fontsize=7, ha="left", va="center",
+            linespacing=1.1, bbox=dict(fc="white", ec="none", pad=0.6), zorder=4)
     ax.set_xticks(x)
     ax.set_xticklabels([f"{y}\n{t}" for y, t in zip(years, teams)], fontsize=7, linespacing=1.1)
     ax.tick_params(axis="x", length=0, pad=3)
     ax.set_ylim(0, 30)
-    ax.set_xlim(-0.55, 5.55)
+    ax.set_xlim(-0.55, 6.5)
     ax.set_yticks(range(0, 31, 5))
     ax.tick_params(axis="y", labelsize=7.5)
     ax.set_ylabel("Top-5 classification error (%)", fontsize=8)
@@ -100,37 +100,38 @@ RESEARCH = [
     (1959, "Samuel's checkers learner (1959)"),
     (1969, "Perceptrons critique (1969)"),
     (1973, "Lighthill report (1973)"),
+    (1979, "MYCIN evaluation (1979)"),
     (1986, "Backpropagation paper (1986)"),
-    (1990, "Statistical translation, IBM (1990)"),
-    (1998, "LeNet reads bank cheques (1998)"),
+    (1990, "Statistical translation (1990)"),
+    (1998, "LeNet reads cheques (1998)"),
     (2009, "ImageNet dataset (2009)"),
-    (2011, "Deep nets cut speech errors (2011)"),
-    (2012, "AlexNet wins ImageNet (2012)"),
-    (2016, "AlphaGo beats professionals (2016)"),
+    (2011, "Deep nets in speech (2011)"),
+    (2012, "AlexNet (2012)"),
+    (2016, "AlphaGo (2016)"),
     (2017, "Transformer (2017)"),
-    (2018 + 9.5 / 12, "BERT: pre-trained transformer (2018)"),
+    (2018 + 9.5 / 12, "BERT (2018)"),
     (2020 + 4.5 / 12, "GPT-3 (2020)"),
-    (2020 + 5.5 / 12, "Diffusion image models (2020)"),
-    (2021 + 6.5 / 12, "AlphaFold 2 protein structures (2021)"),
-    (2021 + 7.5 / 12, "'Foundation model' coined (2021)"),
+    (2020 + 5.5 / 12, "Diffusion models (2020)"),
+    (2021 + 6.5 / 12, "AlphaFold 2 (2021)"),
+    (2021 + 7.5 / 12, "\u2018Foundation model\u2019 (2021)"),
     (2022 + 2.5 / 12, "InstructGPT: RLHF (2022)"),
-    (2023 + 2.5 / 12, "GPT-4, accepts images (2023)"),
-    (2024 + 8.4 / 12, "Reasoning models, o1 (Sept 2024)"),
+    (2023 + 2.5 / 12, "GPT-4, image input (2023)"),
+    (2024 + 8.4 / 12, "Reasoning model o1 (2024)"),
     (2025 + 0.6 / 12, "DeepSeek-R1 (2025)"),
 ]
 DEPLOY = [
-    (1977, "First AI winter (c. 1974–80)"),
-    (1979, "MYCIN evaluation (1979)"),
-    (1984, "'AI winter' warning, AAAI (1984)"),
-    (1990, "Second AI winter (from c. 1987; end disputed)"),
+    (1977, "First AI winter (c. 1974\u201380)"),
+    (1984, "\u2018AI winter\u2019 warning (1984)"),
+    (1990, "Second AI winter (from c. 1987)"),
     (1997 + 4.5 / 12, "Deep Blue beats Kasparov (1997)"),
     (2022 + 10.97 / 12, "ChatGPT released (Nov 2022)"),
-    (2023 + 1.8 / 12, "LLaMA open-weight models (Feb 2023)"),
-    (2023 + 10.25 / 12, "OECD definition revised (Nov 2023)"),
+    (2023 + 1.8 / 12, "LLaMA open weights (Feb 2023)"),
+    (2023 + 10.25 / 12, "OECD definition revised (2023)"),
     (2024 + 4.5 / 12, "EU AI Act adopted (2024)"),
-    (2024 + 9.3 / 12, "Nobel prizes for AI work (Oct 2024)"),
-    (2024 + 10.8 / 12, "Model Context Protocol (Nov 2024)"),
-    (2026 + 8.9 / 12, "1.2B weekly ChatGPT users, company figure (Sept 2026)"),
+    (2024 + 9.3 / 12, "Nobel prizes (Oct 2024)"),
+    (2024 + 10.8 / 12, "Model Context Protocol (2024)"),
+    (2026 + 8.1 / 12, "GPT-6, Opus 5.5, Gemini 4 (2026)"),
+    (2026 + 8.9 / 12, "ChatGPT: 1.2B weekly users (2026)"),
 ]
 AX = 50
 MR = 0.42      # marker radius
@@ -155,7 +156,7 @@ def _spread(ys, gap, lo, hi):
     return out
 
 
-def _side(ax, items, sign, gap=2.75):
+def _side(ax, items, sign, gap=2.6):
     ys = [_ty(y) for y, _ in items]
     ly = _spread(ys, gap, -5.4, 91)
     for (yr, txt), y, yl in zip(items, ys, ly):
@@ -166,13 +167,13 @@ def _side(ax, items, sign, gap=2.75):
         if not winter:
             ax.plot([xm + sign * MR, x1, x2], [y, y, yl], color=G2, lw=0.45, zorder=1)
             ax.add_patch(F.Circle((xm, y), MR, fc="white" if sign < 0 else INK, ec=INK, lw=0.55, zorder=3))
-        ax.text(x2 + sign * 0.6, yl, txt, fontsize=6.8, ha="left" if sign > 0 else "right", va="center",
+        ax.text(x2 + sign * 0.6, yl, txt, fontsize=7.5, ha="left" if sign > 0 else "right", va="center",
                 style="italic" if winter else "normal", color=INK)
 
 
 @fig("fig-01-03")
 def f0103():
-    fig, ax = canvas(4.8, ylim=(-7, 95))
+    fig, ax = canvas(5.6, ylim=(-7, 95))
     # first winter, c. 1974-80 (approximate)
     ya, yb = _ty(1974), _ty(1980)
     ax.add_patch(Rectangle((AX - 3, yb), 6, ya - yb, fc=G4, ec=G3, lw=0.4, hatch="//////", zorder=0))
@@ -192,18 +193,18 @@ def f0103():
         ax.plot([AX - 1.3, AX + 1.3], [by + 0.5, by - 0.5], color=INK, lw=0.8)
     _side(ax, RESEARCH, -1)
     _side(ax, DEPLOY, +1)
-    label(ax, AX - 3, 94, "Research milestones", fs=7, ha="right", weight="bold")
-    label(ax, AX + 3, 94, "Deployment and policy", fs=7, ha="left", weight="bold")
+    label(ax, AX - 3, 94, "Research milestones", fs=7.8, ha="right", weight="bold")
+    label(ax, AX + 3, 94, "Deployment and policy", fs=7.8, ha="left", weight="bold")
 
     # era brackets along the left edge
     def era(a, b, x, txt, ty):
         ya, yb = _ty(a), _ty(b)
         ax.plot([x + 1, x, x, x + 1], [ya, ya, yb, yb], color=INK, lw=0.6)
-        ax.text(x + 1.6, ty, txt, fontsize=6.4, ha="left", va="center", weight="bold", color=G1, linespacing=1.1)
-    era(1956, 1988, 0.6, "Symbolic\nAI", _ty(1979))
-    era(1990, 2010, 0.6, "Statistical\nML", (_ty(1990) + _ty(2010)) / 2)
+        ax.text(x + 1.6, ty, txt, fontsize=7, ha="left", va="center", weight="bold", color=G1, linespacing=1.1)
+    era(1956, 1988, 0.6, "Symbolic\nAI", _ty(1966))
+    era(1976, 2010, 2.2, "Statistical\nML", _ty(1998))
     era(2011, 2026.8, 0.6, "Deep-\nlearning\nwave", _ty(2014))
     era(2020, 2026.8, 2.2, "LLMs and\nagents", _ty(2023.2))
-    label(ax, AX + 2.2, (_ty(2005) + _ty(2008)) / 2 - 0.4, "axis compressed before 2005", fs=5.9, ha="left",
+    label(ax, AX + 2.2, (_ty(2005) + _ty(2008)) / 2 - 0.4, "axis compressed before 2005", fs=7, ha="left",
           italic=True, color=G1)
     save(fig, "fig-01-03")
