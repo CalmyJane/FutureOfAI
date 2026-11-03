@@ -289,6 +289,59 @@ def stamp_pagelines(document, doc, pdf_path):
     return len(pages)
 
 
+def figure_gaps(document, min_gap_mm=45):
+    """Figures that were pushed to the top of a page and left a large gap at the foot of the page before."""
+    mm = 96 / 25.4  # CSS px per mm
+    out = []
+    def walk(box):
+        yield box
+        for c in getattr(box, "children", []) or []:
+            yield from walk(c)
+    for i in range(1, len(document.pages)):
+        page = document.pages[i]._page_box
+        first_fig = None
+        top = None
+        for b in walk(page):
+            el = getattr(b, "element", None)
+            if el is None or b is page:
+                continue
+            y = getattr(b, "position_y", None)
+            if y is None or getattr(b, "height", 0) in (0, None):
+                continue
+            if el.tag in ("p", "figure", "table", "h2", "h3", "div", "ul", "ol", "section") and top is None:
+                top = (y, el)
+            if el.tag == "figure" and first_fig is None:
+                first_fig = (y, el)
+        if not first_fig or not top or first_fig[1] is not top[1] and top[0] < first_fig[0] - 1:
+            continue
+        prev = document.pages[i - 1]._page_box
+        bottom = 0
+        for top_child in prev.children:
+            if top_child.__class__.__name__ == "MarginBox":  # running heads and page numbers
+                continue
+            for b in walk(top_child):
+                if b.__class__.__name__ in ("LineBox", "ImageBox", "BlockReplacedBox", "InlineReplacedBox"):
+                    bottom = max(bottom, (b.position_y or 0) + (b.height or 0))
+        content_bottom = prev.content_box_y() + prev.height
+        if content_bottom and content_bottom - bottom > min_gap_mm * mm and first_fig[1].get("id"):
+            out.append(first_fig[1].get("id"))
+    return out
+
+
+def move_figures_down(doc, ids):
+    """Move each figure to just after the paragraph that follows it, so text fills the gap."""
+    for fid in ids:
+        m = re.search(r'<figure id="' + re.escape(fid) + r'">.*?</figure>\s*', doc, re.S)
+        if not m:
+            continue
+        rest = doc[m.end():]
+        n = re.match(r"\s*<p\b.*?</p>", rest, re.S)
+        if not n:
+            continue
+        doc = doc[: m.start()] + rest[: n.end()] + "\n" + m.group(0) + rest[n.end():]
+    return doc
+
+
 def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
     keys, problems = merge_bib()
     md, n_terms = assemble(only)
@@ -347,6 +400,19 @@ def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
     from weasyprint import HTML
 
     document = HTML(OUT_HTML, base_url=PRINT).render()
+    # figures cannot float in WeasyPrint: when one jumps to the next page and leaves a gap, let the
+    # following paragraph fill it, then lay out again (a few rounds settle it)
+    moved = set()
+    for _ in range(4):
+        gaps = [g for g in figure_gaps(document) if g not in moved]
+        if not gaps:
+            break
+        moved.update(gaps)
+        doc = move_figures_down(doc, gaps)
+        open(OUT_HTML, "w", encoding="utf-8").write(doc)
+        document = HTML(OUT_HTML, base_url=PRINT).render()
+    if moved:
+        print(f"figures moved below the next paragraph to fill page gaps: {len(moved)}")
     if len(document.pages) % 2:
         doc = doc.replace("</body>", '<div class="endblank"></div></body>')
         open(OUT_HTML, "w", encoding="utf-8").write(doc)

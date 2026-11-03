@@ -47,8 +47,25 @@
 **induction head**: An attention circuit that finds an earlier occurrence of the current token and predicts the token that followed it, completing patterns of the form [A][B] … [A] → [B]; a proposed mechanism for in-context learning.
 **special token**: A vocabulary entry that does not stand for ordinary text, such as an end-of-text marker or a marker for the start of a chat turn.
 **chat template**: The format that turns a conversation of system, user and assistant messages into a single token sequence, using special tokens to mark each turn.
-**speculative decoding**: A way to speed up generation in which a small model drafts several tokens and the large model checks them in one parallel pass, keeping only those it would itself have produced.
+**speculative decoding**: A way to speed up generation in which a small model (or extra heads of the same model) drafts several tokens and the large model checks them in one parallel pass, accepting or replacing each by a rule that leaves the output's probabilities exactly those of the large model alone.
 **RMSNorm**: A simplified form of layer normalisation that rescales each vector by its root-mean-square size without subtracting the mean.
 **calibration**: The match between a model's confidence and its accuracy; a calibrated model is right about 70% of the time on answers it gives 70% probability.
 **knowledge cut-off**: The date after which a model's training data end, so that it has no knowledge of later events unless they are supplied in its context.
 **value network**: In reinforcement learning, a second network that predicts how good a partial output or state is, used as a baseline when judging the reward; GRPO does without one.
+**multi-head latent attention (MLA)**: An attention design, introduced by DeepSeek, that caches one short compressed vector per token from which the keys and values of all heads are reconstructed, shrinking the KV cache.
+**sliding-window attention**: Attention in which each token attends only to a fixed number of recent tokens, often alternated with layers of full attention.
+**sparse attention**: Attention in which each token attends to a selected subset of earlier tokens, for example those a small scoring network ranks highest, rather than to all of them.
+**state-space model**: A sequence model, such as Mamba, that carries a fixed-size internal state from token to token, so its cost grows only linearly with length; often mixed with attention layers in hybrid models.
+**linear attention**: A family of attention substitutes, such as Gated DeltaNet, that keep a fixed-size memory updated by each new token instead of a growing key–value cache.
+**multi-token prediction**: A training objective in which a model also predicts tokens more than one step ahead; the extra predictions can serve as drafts for speculative decoding.
+**diffusion language model**: A text generator that starts from masked or noisy positions and fills in many tokens in parallel over several rounds, rather than writing strictly left to right.
+**process reward model**: A reward model that scores each intermediate step of a solution rather than only the final answer.
+**rubric-based reward**: A reward computed by a judge model that checks a response against a list of criteria written for that prompt, used where no program can verify the answer.
+**LLM judge**: A language model used to grade or compare other models' outputs, in evaluation or as a source of reward.
+**environment (reinforcement learning)**: The software world a model acts in during reinforcement learning, such as a code repository with tests, a browser or a simulated computer, together with the checker that decides the reward.
+**agentic reinforcement learning**: Reinforcement learning on multi-step tasks in which the model calls tools, reads their results and continues, with the reward given for completing the task.
+**interleaved thinking**: Reasoning that alternates with tool calls within one response, so that the model can reflect on each tool's result before acting again.
+**hybrid reasoning model**: A single model that can either answer directly or reason at length first, often with a user-set budget or effort level.
+**early fusion**: Training a multimodal model on a single sequence in which images or audio are turned into tokens alongside text from the start.
+**omni model**: A model that takes in, and in some cases produces, several modalities such as text, images, audio and video within one network.
+**world model**: An AI system that simulates aspects of the world, for example by generating an interactive environment that responds to a user's actions.

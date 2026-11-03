@@ -158,7 +158,7 @@ def f0303():
     SY, SH = 32, 11   # stage boxes
     PY, PH = 15, 6.5  # output pills
     stages = [("Pre-training", "predict next token"), ("Instruction\ntuning", "supervised fine-tuning"),
-              ("Preference\ntraining", "RL or DPO"), ("Reasoning RL", "reward correct\nanswers")]
+              ("Preference\ntraining", "RL or DPO"), ("Reasoning RL", "checked answers,\ntool tasks")]
     outs = [("Base model", "continues text"), ("Instruction\nmodel", None), ("Chat\nassistant", None),
             ("Reasoning\nmodel", None)]
     for k, ((x, w), (st, sub), (o, osub)) in enumerate(zip(C, stages, outs)):
