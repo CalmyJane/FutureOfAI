@@ -86,7 +86,7 @@ def _dot(ax, x, y, kind, r=0.85):
 
 @fig("fig-13-02")
 def f1302():
-    H = 4.3
+    H = 5.1
     fig, ax = canvas(H, ylim=(0, 22.47 * H))
     x0, x1 = 6.0, 98.5           # Jan 2023 .. end of Dec 2026
 
@@ -94,7 +94,7 @@ def f1302():
         return x0 + ((y - 2023) * 12 + (m - 1) + 0.5) * (x1 - x0) / 48
 
     lanes = ["EU", "United States", "East Asia", "UK", "International"]
-    LH, ybase = 17.4, 7.5
+    LH, ybase = 21.2, 8.0
     ly = {n: ybase + (len(lanes) - 1 - i) * LH + LH / 2 for i, n in enumerate(lanes)}
     for i, n in enumerate(lanes):
         yc = ly[n]
@@ -102,7 +102,7 @@ def f1302():
             ax.add_patch(F.FancyBboxPatch((0.3, yc - LH / 2), x1 - 0.3, LH, boxstyle="square,pad=0",
                                           fc=G4, ec="none", zorder=0))
         ax.plot([x0, x1], [yc, yc], color=G2, lw=0.5, zorder=1)
-        label(ax, 2.6, yc, n, fs=6.8, weight="bold", rot=90)
+        label(ax, 2.6, yc, n, fs=7.2, weight="bold", rot=90)
     # time axis with year boundaries
     ya = ybase
     ax.plot([x0, x1], [ya, ya], color=INK, lw=0.6)
@@ -112,27 +112,27 @@ def f1302():
         if k % 2 == 0:
             ax.plot([xt, xt], [ya, ya + 5 * LH], color=G3, lw=0.4, ls=(0, (2, 2)), zorder=0.5)
     for k, yr in enumerate(range(2023, 2027)):
-        label(ax, x0 + (k * 12 + 6) * (x1 - x0) / 48, ya - 2.3, str(yr), fs=7.0)
+        label(ax, x0 + (k * 12 + 6) * (x1 - x0) / 48, ya - 2.6, str(yr), fs=7.2)
 
     # (lane, year, month, text, kind, side, ha)   kind: f binding, h non-binding, e executive order
     ev = [
         ("EU", 2024, 8, "AI Act in force", "f", "u", "right"),
         ("EU", 2025, 2, "Prohibitions apply", "f", "u", "center"),
         ("EU", 2025, 7, "GPAI Code published", "h", "d", "right"),
-        ("EU", 2025, 8, "GPAI duties apply", "f", "u", "left"),
-        ("EU", 2026, 7, "Omnibus in force", "f", "u", "center"),
+        ("EU", 2025, 8, "GPAI duties\napply", "f", "u", "left"),
+        ("EU", 2026, 7, "Omnibus\nin force", "f", "u", "center"),
         ("United States", 2023, 10, "EO 14110 signed", "e", "u", "center"),
-        ("United States", 2025, 1, "EO 14110 revoked", "e", "u", "center"),
+        ("United States", 2025, 1, "EO 14110\nrevoked", "e", "u", "right"),
         ("United States", 2025, 6, "Texas\nTRAIGA signed", "f", "d", "right"),
         ("United States", 2025, 9, "California\nSB 53 signed", "f", "u", "right"),
         ("United States", 2025, 12, "EO 14365 on\nstate laws", "e", "d", "center"),
-        ("United States", 2025, 12, "New York\nRAISE Act", "f", "u", "left"),
+        ("United States", 2025, 12, "New York\nRAISE signed", "f", "u", "left"),
         ("United States", 2026, 5, "Colorado law\nreplaced", "f", "d", "left"),
-        ("East Asia", 2023, 8, "China: generative AI", "f", "u", "center"),
-        ("East Asia", 2025, 6, "Japan: AI\nPromotion Act", "f", "d", "right"),
-        ("East Asia", 2025, 9, "China: labelling\nrules", "f", "u", "right"),
-        ("East Asia", 2026, 1, "Korea: AI\nBasic Act", "f", "d", "left"),
-        ("East Asia", 2026, 7, "China:\nanthropomorphic AI", "f", "u", "center"),
+        ("East Asia", 2023, 8, "China: generative\nAI rules in force", "f", "u", "center"),
+        ("East Asia", 2025, 6, "Japan: AI Promotion\nAct promulgated", "f", "d", "right"),
+        ("East Asia", 2025, 9, "China: labelling\nrules in force", "f", "u", "right"),
+        ("East Asia", 2026, 1, "Korea: AI Basic\nAct in force", "f", "d", "left"),
+        ("East Asia", 2026, 7, "China: anthropo-\nmorphic AI in force", "f", "u", "right"),
         ("UK", 2023, 3, "Pro-innovation white paper", "h", "u", "left"),
         ("UK", 2025, 2, "AI Security Institute", "h", "u", "center"),
         ("UK", 2026, 3, "Copyright report", "h", "u", "center"),
@@ -140,14 +140,14 @@ def f1302():
         ("International", 2023, 11, "Bletchley Declaration", "h", "d", "left"),
         ("International", 2024, 5, "Seoul commitments", "h", "u", "center"),
         ("International", 2024, 9, "CoE treaty opens", "f", "d", "left"),
-        ("International", 2025, 2, "Paris statement", "h", "u", "center"),
+        ("International", 2025, 2, "Paris\nstatement", "h", "u", "center"),
         ("International", 2025, 8, "UN Panel and\nDialogue", "h", "d", "left"),
-        ("International", 2026, 2, "India Impact Summit", "h", "u", "right"),
+        ("International", 2026, 2, "India Impact\nSummit", "h", "u", "right"),
         ("International", 2026, 5, "EU ratifies\nCoE treaty", "f", "d", "center"),
-        ("International", 2026, 7, "UN Global Dialogue", "h", "u", "center"),
+        ("International", 2026, 7, "UN Global\nDialogue", "h", "u", "left"),
     ]
     MON = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
-    fs, lh = 5.9, 2.35
+    fs, lh = 7.0, 2.8
     for lane, yr, m, t, kind, side, ha in ev:
         x, yc = X(yr, m), ly[lane]
         _dot(ax, x, yc, kind)
@@ -161,8 +161,8 @@ def f1302():
             ax.text(tx, yc - 1.2, t, ha=ha, va="top", fontsize=fs, linespacing=1.0, zorder=6)
             ax.text(tx, yc - 1.2 - lh * n, d, ha=ha, va="top", fontsize=fs, color=G1, style="italic", zorder=6)
     # legend
-    lyg = 1.2
+    lyg = 1.4
     for lx, kind, t in [(10, "f", "binding law, regulation or treaty"), (44, "e", "executive order"), (66, "h", "non-binding")]:
         _dot(ax, lx, lyg, kind)
-        label(ax, lx + 1.8, lyg, t, fs=6.4, ha="left")
+        label(ax, lx + 1.8, lyg, t, fs=7.0, ha="left")
     save(fig, "fig-13-02")

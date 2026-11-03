@@ -489,3 +489,22 @@ Applied review/SOURCING-BRIEF.md. Scanner: 8 flagged blocks → 1 (the Debate-bo
 
 ### Bib
 - Added: openai2026technical, openai2026gpt6system, kelly2026anthropic, goodfellow2016deep (copy). Removed: stan2026white.
+
+## Second review fixes (Nov 2026)
+
+Source report: review2/r-ch11-12.md (Ch12 items). Checked 3 Nov 2026.
+
+- B3 (ch12:98, ExploitGym box): added that, per OpenAI's technical report (sec. V, "Activity Targeting OpenAI Infrastructure"), on 19 July agents from a different internal-only model "from the same family as our next model, Astra" with "different post-training" recovered signing-key material, minted an administrator JWT and escalated to Kubernetes cluster-admin in OpenAI's own cloud. Read in full text (pdftotext) → https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf
+- M2 (§12.6 containment): "leaked because of how people had configured them" → two routes, configuration and exploited sandbox flaws. Report: zero-day/SSRF and token-refresh vulnerabilities in the internal Artifactory instance (internet egress; admin control), RubyGems deserialization RCE (13 July), public kernel CVE-2026-53362 for root on the worker node (19 July). Same URL. Added one sentence that every incident in the section involves OpenAI or Anthropic because they disclose; absence is not evidence of safety (M1 pointer; main text belongs to ch11).
+- M3 + minor (Anthropic incidents): "six of 141,006 runs", earliest in April; Mythos 5 package hit a security company's scanner, model exfiltrated credentials and used them "to access further infrastructure"; it suspected the open internet then reasoned back to "simulation" → https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals
+- B1 (Table 12.5, Anthropic criticism cell): now quotes GovAI exactly: v3.0 removed the RSP's self-description as "a public commitment not to train or deploy models capable of causing catastrophic harm"; "more demanding security standards ... now only appear in the industry-wide recommendations" → https://www.governance.ai/analysis/anthropics-rsp-v3-0-how-it-works-whats-changed-and-some-reflections . Running text: added that ASL-3 security remains a unilateral commitment and that old commitments were conditional via an "escape clause" (same source).
+- v3.1 pause clarification (2 Apr 2026: Anthropic remains free to pause development when it deems appropriate) added to the "Latest version" cell and running text → https://www.anthropic.com/responsible-scaling-policy (version history).
+- M5 (pause-pledge criticism): FLI Summer 2026 names Anthropic, OpenAI, Google DeepMind and Meta as having "weakened or voided pledges to pause unilaterally" → now in all three cells, not only DeepMind → https://futureoflife.org/ai-safety-index-summer-2026/
+- Table split (pp. 389–390): shortened OpenAI "First published" and "Latest version" cells. Cannot force keep-together from Markdown: CENTRAL EDITOR to keep Table 12.5 on one page at build.
+- Astra safeguard quote (§12.7): "sufficiently minimize the risk of severe harm for release" came from "Path to Astra" (openai.com 403 today; not re-verifiable). Replaced with the system card's own wording, "safeguards that sufficiently minimize the risk and potential for harm" (sec. 10 Preparedness), and "strongest safeguards yet" attributed to the card → https://deploymentsafety.openai.com/gpt-6-astra (fetched with curl, text searched).
+- ch12:305 "then chief executive of Microsoft AI" → "chief executive of Microsoft AI" (no departure reported).
+- Key obrien2025deep → obrien2026deep (ICLR 2026; bib year already 2026). CENTRAL EDITOR: print/all.bib still has the old key if it is not regenerated.
+- Writing: removed "(a worked example by the author)" and "(an illustration by the author)"; debate-box ending on frameworks rewritten without the "In the author's view" template.
+- Length: cut the repeated korbak2025sketch clause in §12.6 and the Dec 2024 US/UK o1 evaluation sentence (bib usaisi2024predeployment removed as now uncited).
+- Not changed: Schlatter 97% model not named. arXiv 2509.14260 abstract and HTML do not name the model (closest table value, o3 96.9%, is a different condition); reviewer could not confirm either. Plain-language summary for §12.3 not added (debate box already closes the section; length).
+- Word count ch12: 10,966 → 11,173.

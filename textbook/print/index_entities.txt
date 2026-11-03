@@ -1,0 +1,69 @@
+# Heading | pattern | pattern ...   (patterns are matched as whole words; capitalised patterns are case-sensitive)
+Acemoglu, Daron | Acemoglu
+AI Act (EU) | AI Act | Artificial Intelligence Act
+AI Index (Stanford) | AI Index
+Alibaba | Alibaba | Qwen
+AlexNet | AlexNet
+AlphaEvolve | AlphaEvolve
+AlphaFold | AlphaFold
+Anthropic | Anthropic
+Bengio, Yoshua | Bengio
+California | California
+ChatGPT | ChatGPT
+Chinchilla | Chinchilla
+China | China | Chinese
+Claude (Anthropic models) | Claude
+Copyright cases | copyright
+Dartmouth workshop (1956) | Dartmouth
+DeepMind | DeepMind
+DeepSeek | DeepSeek
+Digital Omnibus | Digital Omnibus
+ECMWF | ECMWF
+Epoch AI | Epoch AI | Epoch
+Erdős problems | Erdős
+European Commission | European Commission | Commission
+FDA (US Food and Drug Administration) | FDA
+FTC (US Federal Trade Commission) | FTC
+Gemini (Google models) | Gemini
+GNoME | GNoME
+Google | Google
+GPT-2 | GPT-2
+GPT-3 | GPT-3
+GPT-4 | GPT-4 | GPT-4o
+GPT-5 | GPT-5 | GPT-5.6 Sol
+GPT-6 Astra | GPT-6 | Astra
+GraphCast | GraphCast
+Grok (xAI models) | Grok
+H100 | H100
+Hinton, Geoffrey | Hinton
+Hugging Face | Hugging Face
+Huawei | Huawei
+IBM | IBM
+IEA (International Energy Agency) | IEA | International Energy Agency
+ImageNet | ImageNet
+International AI Safety Report | International AI Safety Report | Safety Report
+International Mathematical Olympiad | IMO | Mathematical Olympiad
+Japan | Japan
+Kaplan, Jared | Kaplan
+Kimi (Moonshot AI) | Kimi
+Lean (proof assistant) | Lean
+Llama (Meta models) | Llama
+Meta | Meta
+METR | METR
+Microsoft | Microsoft
+Mistral | Mistral
+MYCIN | MYCIN
+Narayanan, Arvind | Narayanan
+NIST | NIST
+Nvidia | Nvidia
+OECD | OECD
+OpenAI | OpenAI
+OSWorld | OSWorld
+Redwood Research | Redwood Research
+South Korea | Korea
+SynthID | SynthID
+TSMC | TSMC
+UK AI Security Institute | AI Security Institute | AISI
+United Kingdom | United Kingdom | UK
+United States | United States | US
+xAI | xAI

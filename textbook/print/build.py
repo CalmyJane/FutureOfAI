@@ -37,7 +37,8 @@ def source_hash():
     h = hashlib.sha256()
     files = sorted(glob.glob(os.path.join(CH, "*.md")) + glob.glob(os.path.join(TB, "bib", "*.bib"))
                    + glob.glob(os.path.join(TB, "work", "glossary-ch*.md")) + glob.glob(os.path.join(TB, "figures", "svg", "*.svg"))
-                   + [os.path.join(PRINT, n) for n in ("build.py", "srcnotes.lua", "book.css", "pageline.css", "apa.csl")])
+                   + [os.path.join(PRINT, n) for n in ("build.py", "srcnotes.lua", "book.css", "pageline.css", "apa.csl", "index.md")
+                      if os.path.exists(os.path.join(PRINT, n))])
     for f in files:
         h.update(os.path.relpath(f, TB).encode())
         h.update(open(f, "rb").read())
@@ -106,6 +107,9 @@ def assemble(only=None):
     if only is None:
         parts.append(gloss)
     parts.append("# References {.unnumbered .references-chapter}\n\n::: {#refs}\n:::\n")
+    index = os.path.join(PRINT, "index.md")
+    if only is None and os.path.exists(index):
+        parts.append(open(index, encoding="utf-8").read())
     return "\n\n".join(parts), n_terms
 
 
@@ -125,7 +129,7 @@ def front_matter(toc):
 <section class="copyright">
   <p>© {YEAR} {AUTHOR}. All rights reserved.</p>
   <p>Evidence in this book is current to October 2026. Web sources were checked between 20 and 25 October 2026. References follow APA 7 and are numbered. Sources are not cited in the running text: the line at the foot of each page lists the numbers of the sources used on that page.</p>
-  <p>Figures drawn for this edition. Set in EB Garamond, with Noto Serif Devanagari for Hindi (both SIL Open Font License).</p>
+  <p>Figures drawn for this edition. Set in EB Garamond, with Noto Serif Devanagari, Noto Serif KR, Noto Sans Math and Noto Sans Mono for Hindi, Korean, mathematical symbols and code (all SIL Open Font License).</p>
   <p>ISBN: [to be assigned]<br>Publisher and printer: [imprint details]</p>
 </section>
 {toc}
@@ -195,7 +199,7 @@ def notes_to_pageline(body):
             n = r.group(0).count("\x00")
             ks = [k for grp in found[:n] for k in grp]
             del found[:n]
-            return f'<span class="refnums">{", ".join(map(str, sorted(set(ks))))}</span>'
+            return f'<span class="refnums">[{", ".join(map(str, sorted(set(ks))))}]</span>'
         return re.sub(r'\x00(?:(?:<span class="srcm"[^>]*>\u2060</span>)*(?:\s*[;,]\s*|\s+and\s+)\x00)*', collapse, cap)
     body = re.sub(r'<(figcaption|caption)\b.*?</\1>', caption_numbers, body, flags=re.S)
     # in table cells the citation text is dropped (with the space before it): the page's source line carries it
@@ -279,6 +283,7 @@ def stamp_pagelines(document, doc, pdf_path):
         writer.pages[pi].merge_page(overlay.pages[pi])
         writer.pages[pi].compress_content_streams()  # merging leaves the page content uncompressed
     writer.compress_identical_objects(remove_identicals=True, remove_orphans=True)
+    writer.pdf_header = b"%PDF-1.6"  # keep the version WeasyPrint wrote for PDF/X-4 (pypdf defaults to 1.3)
     with open(pdf_path, "wb") as f:
         writer.write(f)
     return len(pages)

@@ -1,5 +1,9 @@
 /* Understanding AI — A5 course text, no bleed (148 x 210 mm). */
 @font-face { font-family: "EBG"; src: url(fonts/EBGaramond-Regular.ttf); font-weight: 400; font-style: normal; }
+@font-face { font-family: "NotoMath"; src: url(fonts/NotoSansMath-Subset.ttf); }
+@font-face { font-family: "NotoKR"; src: url(fonts/NotoSerifKR-Subset.otf); }
+@font-face { font-family: "NotoMono"; src: url(fonts/NotoSansMono-Regular.ttf); font-weight: 400; }
+@font-face { font-family: "NotoMono"; src: url(fonts/NotoSansMono-Bold.ttf); font-weight: 700; }
 @font-face { font-family: "NotoDeva"; src: url(fonts/NotoSerifDevanagari-Regular.ttf); font-weight: 400; font-style: normal; }
 @font-face { font-family: "EBG"; src: url(fonts/EBGaramond-RegularItalic.ttf); font-weight: 400; font-style: italic; }
 @font-face { font-family: "EBG"; src: url(fonts/EBGaramond-SemiBold.ttf); font-weight: 600; font-style: normal; }
@@ -21,7 +25,7 @@
 @page blank { @bottom-center { content: none; } @top-left { content: none; } @top-right { content: none; } }
 @page :blank { @bottom-center { content: none; } @top-left { content: none; } @top-right { content: none; } }
 
-html { font-family: "EBG", "NotoDeva", serif; font-size: 10.3pt; line-height: 1.36; color: #000; hyphens: auto; text-align: justify; }
+html { font-family: "EBG", "NotoDeva", "NotoMath", "NotoKR", serif; hyphenate-limit-chars: 7 3 3; font-size: 10.3pt; line-height: 1.36; color: #000; hyphens: auto; text-align: justify; }
 body { margin: 0; }
 p { margin: 0; text-indent: 1.1em; orphans: 2; widows: 2; }
 h1 + p, h2 + p, h3 + p, figure + p, div + p, ul + p, ol + p, table + p, section > p:first-child { text-indent: 0; }
@@ -103,3 +107,18 @@ section.level2[id^="summary"] > h2 { border-top: 0.6pt solid #000; padding-top: 
 .citation { hyphens: manual; }
 
 .endblank { break-before: page; page: blank; }
+
+/* code: a bundled monospace, set slightly smaller than the text; long lines wrap rather than overflow */
+code, pre, kbd, samp { font-family: "NotoMono", monospace; font-size: 0.82em; hyphens: none; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 7.6pt; line-height: 1.3; margin: 3mm 0; text-align: left; }
+/* keep table captions with their tables and avoid single stranded rows */
+table caption { break-after: avoid; }
+tbody tr:first-child, tbody tr:last-child { break-inside: avoid; }
+.refnums { white-space: nowrap; }
+
+/* index */
+.index > h1 { string-set: runhead content(); }
+section.index { columns: 2; column-gap: 6mm; font-size: 8.2pt; line-height: 1.25; text-align: left; hyphens: manual; }
+section.index > h1 { column-span: all; }
+section.index h2 { font-size: 9pt; margin: 3mm 0 1mm; break-after: avoid; }
+section.index p { text-indent: -3mm; padding-left: 3mm; margin: 0 0 0.6mm; }
