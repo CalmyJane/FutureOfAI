@@ -86,7 +86,7 @@ def f1402():
     ax.tick_params(axis="x", labelsize=7.5)
     ax.set_yticks([])
     ax.set_xlabel("Year", fontsize=8)
-    ax.set_ylabel("AI capability and real-world impact (schematic)", fontsize=7.5)
+    ax.set_ylabel("Real-world impact: adoption and economic change\n(schematic; not capability)", fontsize=7.2, linespacing=1.1)
     F.save(fig, "fig-14-02")
 
 
