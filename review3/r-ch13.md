@@ -71,3 +71,12 @@ STATUS: FIRST VERSION (work in progress, 11 Nov 2026). Full read of chapter, bib
 - Thomson Reuters v. Ross (3d Cir., filed 29 Sept 2026): interlocutory (s.1292(b)); 2,243 headnotes; all quotes verbatim; fn 7 DOJ statement of interest 1 Sept 2026 (opinion PDF).
 - NYT/OpenAI MDL: no fair-use ruling as of 11 Nov 2026 (summary-judgment briefing in progress).
 - Getty permission to appeal: IPKat 7 Jan 2026, quote verbatim.
+
+### Continuation notes (22 Nov 2026)
+- Bartz payments: Authors Guild page updated 20 Nov 2026: "first payments ... expected to go out during the week of November 23"; ~70% ($2,203.56) first instalment. -> MUST (l.238 outdated).
+- Getty appeal: heard 11-12 Nov 2026 (Burges Salmon 12 Nov 2026 "second day"); no judgment by 22 Nov.
+- Paris: Élysée list = 63 countries + African Union Commission + EU (counted).
+- Midterms: Democrats won both chambers (NPR/OPB 4 Nov 2026). H.R. 9925 still only referred (congress.gov API, actions 23 Jul 2026). E&C chair signalled vote unlikely this year (Continental Currents).
+- Thaler quote misses "eligible" (DC Cir. opinion p.: "requires all eligible work to be authored in the first instance by a human being").
+- China agents doc: "first" not in cited Xinhua/gov.cn text; MLex and NYU Shanghai RITS call it first.
+- Confirmed: anthropomorphic measures (5 depts, 10 Apr, 15 Jul 2026, security assessment, filing, minors/elderly); Cybersecurity Law amendment; GAIGAP "international public good"; India summit PIB; UK AOAP 47 agree/2 partial/1 consult; AISI 14 Feb 2025 quote; IAPP King's Speech 13 May 2026 + manifesto; UK copyright report para 27 quote; AI Action Plan "burdensome"; EO 14319, 14179, 14365 quotes (govinfo); Senate RCV 363 99-1; Texas HB 149; SB 53 (secondary); Colorado case stayed/open; Bartz 2025 quotes; Kadrey quotes & distribution claim pending (SJ hearing Feb 2027); NYT MDL no fair-use ruling (replies due 20 Nov 2026); Thaler cert denied 2 Mar 2026; USCO Part 3 still pre-publication; GEMA v OpenAI & v Suno press releases; LAION LG/OLG; UMG-Udio 29/30 Oct 2025; WMG-Suno 25 Nov 2025.
