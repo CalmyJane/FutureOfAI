@@ -1,6 +1,6 @@
 # Third independent read and fact-check: one chapter per reviewer
 
-Today is 11 November 2026. The book is about to go to print.
+Today is 22 November 2026. The book is about to go to print.
 
 **Book:** "Understanding AI: Technology, Trends and the Decade Ahead" (Jan Göbel), a 626-page, heavily sourced nonfiction book on AI. It says it is current to the end of October 2026. Repo: `/home/user/FutureOfAI`, book in `textbook/`.
 
@@ -33,7 +33,7 @@ Go through the chapter section by section and check its checkable statements aga
 - **Arithmetic and worked examples:** recompute every one (use Bash/python).
 - **Tables and figures:** check values against the cited source and against the running text.
 - **Reference check:** for at least 25 bib entries (prefer 2025–2026 ones and anything odd-looking), confirm the work exists and that authors, title, year, venue match. For the claims you check, confirm the cited source actually supports the sentence it is attached to, including the pinpoint where one is given.
-- **Currency:** for every statement about a state of affairs that can change (which model leads, a law's status, a pending case, a deadline, a user count, a suspended rule, an election, a planned release), search for news between 25 October and 11 November 2026 and say whether it still holds. The US midterm elections were on 3 November 2026; any forward-looking statement about them is now stale.
+- **Currency:** for every statement about a state of affairs that can change (which model leads, a law's status, a pending case, a deadline, a user count, a suspended rule, an election, a planned release), search for news between 25 October and 22 November 2026 and say whether it still holds. The US midterm elections were on 3 November 2026; any forward-looking statement about them is now stale.
 - Aim for at least 120 claims checked against a web source, and more if you can. Work efficiently: fetch a cited source once and check all claims that rest on it.
 
 **Your own knowledge has a cutoff.** The book covers events up to late October 2026 that you may not know. An unfamiliar 2026 model, law or incident is NOT an error unless a web search fails to find it or a source contradicts it. Equally, never mark a 2025–2026 claim "confirmed" from memory: confirm from a source or mark it unverified.
@@ -51,7 +51,7 @@ Write to `/home/user/FutureOfAI/review3/r-chNN.md`. Save a first version early a
 One of: ready to print as is / ready after the MUST fixes below / needs more work. Three to five sentences of reasons.
 
 ## MUST change before printing
-Only things that are verifiably wrong, outdated as of 11 Nov 2026, unsupported by their cited source, legally risky, or that would embarrass the author in front of an expert. Each item:
+Only things that are verifiably wrong, outdated as of 22 Nov 2026, unsupported by their cited source, legally risky, or that would embarrass the author in front of an expert. Each item:
 ### M1. <short title>
 - Where: textbook/chapters/chNN.md:LINE
 - Text now: "exact quote"
@@ -82,3 +82,9 @@ Rules for the report:
 - No padding, no praise beyond the verdict, no general advice.
 
 Your final message to the coordinator (it is not shown to the author directly): the verdict, the tally line, and every MUST item in one line each (location, what is wrong, the fix), in at most 30 lines.
+
+## Continuation round (22 November 2026)
+The first round stopped early on usage limits. Some chapters already have a partial report in `review3/r-chNN.md`.
+- **If your chapter's report exists:** read it first, keep everything in it, and do not re-check claims it already lists as confirmed. Turn its draft and provisional items into final ones (re-check each provisional item against a source), fold its working notes into the proper sections, check the rest of the chapter, and finish every section. Re-check its time-sensitive items against the news up to 22 November 2026.
+- **Web tools:** use WebSearch (load with ToolSearch `select:WebSearch`). If WebFetch is not available to you, read pages with `curl -sSL <url>` in Bash (the proxy is preconfigured) and convert with `pdftotext -layout` or a few lines of Python; save downloads in your scratchpad, not in the repository. Many sites block automated access: then use the arXiv/PDF version, an official mirror or a reputable report, and say which.
+- **Budget:** work economically. Spend web checks on 2025–26 material, quotations, numbers, legally sensitive statements and anything that could be a MUST item; check settled textbook material from knowledge and fetch only where in doubt. About 80–120 web-checked claims is the target. Save the report after every section you check.
