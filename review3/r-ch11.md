@@ -53,3 +53,8 @@ STATUS: FIRST VERSION (work in progress; web verification not yet complete). Sec
 
 ## Tally
 (pending)
+
+## WORKING NOTES (continuation round, 22 Nov 2026) — to be folded in
+- M1 re-verified against both Anthropic posts (30 Jul; 9 Sep). METR blog/feed checked to 20 Nov 2026: no METR report on the Anthropic incidents published yet (only reviews of Anthropic's Aug 2026 Risk Report, 20 Oct and 5 Nov).
+- OpenAI/HF row: verified against OpenAI 21 Jul post (updates 28/29 Jul, 26 Aug), technical report PDF, METR/Redwood 26 Aug (scope 26 Jun–13 Jul defined by OpenAI), Reuters 16 Sep (probing from 13 May, mirror thestar.com.my), HF blog 16 Jul.
+- AISI row: verified against AISI 4 Aug and 23 Oct posts.
