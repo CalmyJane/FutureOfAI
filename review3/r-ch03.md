@@ -56,3 +56,10 @@ Arithmetic recomputed by hand on first read, all consistent (to be re-run in Pyt
 
 ## Tally
 (pending)
+
+## WORKING NOTES (continuation round, 22 Nov 2026; to be folded in)
+- FlashAttention: Dao et al. 2022 (arXiv 2205.14135) title "Fast and Memory-Efficient"; Sec 4.3: "memory footprint ... grows linearly with sequence length. FlashAttention is up to 20x more memory efficient than exact attention baselines". S-prov-1 -> MUST.
+- Qwen3.8 card (huggingface.co/Qwen/Qwen3.8-2.4T-A95B): "2.4T in total and 95B activated", 92 layers, 512 experts, 10 routed + 1 shared; 262,144 native ctx. Repo created 8 Aug 2026. M1 confirmed. Kimi K3 card re-read: 2.8T / 104B / 93 layers / 896 experts, 16 selected.
+- New since 25 Oct: Fable 5.2 + Mythos 5.2 (9 Nov), Qwen4-Max (16 Nov, closed, 2.4T/71B), GPT-6.2 Astra & Sol (17 Nov), Gemini 4 Hydrogen (13 Nov), Gemini 4 Neon (18 Nov), Kimi K3.1 Pro weights (5 Nov), Muse Ember 1.0 (10 Nov).
+- ChatGPT 1.2B: OpenAI DevDay 2026 recap (29 Sept) "our collective 1.2B weekly users"; Engadget "A graphic behind Altman indicates ChatGPT now has 1.2 billion weekly users". Neither says "more than".
+- Arithmetic: all Python-recomputed OK (Table 3.5, 3.6, 3.8, temps, losses, GRPO, ratios).
