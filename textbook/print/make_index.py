@@ -17,7 +17,22 @@ PRINT = os.path.dirname(os.path.abspath(__file__))
 TB = os.path.dirname(PRINT)
 PDF = os.path.join(TB, "delivery", "understanding-ai_A5_interior.pdf")
 OUT = os.path.join(PRINT, "index.md")
-MAX_PAGES = 8  # more than this and an entry stops helping; keep the earliest, densest pages
+MAX_PAGES = 8
+# glossary terms whose word also has everyday or unrelated senses: count them only in the chapters
+# where the technical sense is used; None drops the entry
+CHAPTERS_ONLY = {
+    "bias (in a neuron)": {2},
+    "epoch": {2},
+    "momentum": {2},
+    "circuit": {3, 12},
+    "feature": {2, 3, 12},
+    "environment (reinforcement learning)": {3, 4, 5},
+    "resolution": None,
+}
+# duplicate entries become cross-references
+SEE = {"auc": "area under the curve (AUC)", "time horizon (50%)": "50% time horizon", "time horizon": "50% time horizon"}
+NOTE = ("For names and terms that occur very often, the index lists the first page and the pages with the "
+        "most mentions.")  # more than this and an entry stops helping; keep the earliest, densest pages
 
 
 def page_texts():
@@ -38,9 +53,21 @@ def page_texts():
 
 def main_range(pages):
     """Pages of the preface and the chapters: from the preface heading to the glossary heading."""
-    start = min(n for n, t in pages.items() if t.strip().startswith("Preface") or " Preface " in t[:80])
+    # the first page that begins with "Preface" (the Contents page mentions it too, but begins with "Contents")
+    start = min(n for n, t in pages.items() if t.strip().startswith("Preface"))
     end = min(n for n, t in pages.items() if n > start + 50 and t.strip().startswith("Glossary"))
     return range(start, end)
+
+
+def chapter_of(pages, rng):
+    """Map each main-text page to its chapter number (0 for the preface), from the 'Chapter N' opening pages."""
+    out, cur = {}, 0
+    for n in rng:
+        m = re.match(r"\s*Chapter (\d+)\b", pages.get(n, ""))
+        if m:
+            cur = int(m.group(1))
+        out[n] = cur
+    return out
 
 
 def entries():
@@ -79,12 +106,22 @@ def pattern(p):
 def build():
     pages = page_texts()
     rng = main_range(pages)
-    lines = ["# Index {.unnumbered .index}", ""]
+    chap = chapter_of(pages, rng)
+    lines = ["# Index {.unnumbered .index}", "", f"*{NOTE}*", ""]
     rows = []
+    see_rows = []
     for term, pats in entries():
+        key = term.lower()
+        if key in SEE:
+            see_rows.append((term, SEE[key]))
+            continue
+        if key in CHAPTERS_ONLY and CHAPTERS_ONLY[key] is None:
+            continue
         regs = [pattern(p) for p in pats]
         hits = []
         for n in rng:
+            if key in CHAPTERS_ONLY and chap.get(n) not in CHAPTERS_ONLY[key]:
+                continue
             t = pages.get(n, "")
             c = sum(len(r.findall(t)) for r in regs)
             if c:
@@ -96,6 +133,7 @@ def build():
             dense = sorted(hits[1:], key=lambda h: -h[1])[: MAX_PAGES - 1]
             hits = sorted([first] + dense)
         rows.append((term, [n for n, _ in hits]))
+    rows += [(t, "see " + target) for t, target in see_rows]
     rows.sort(key=lambda r: re.sub(r"[^a-z0-9 ]", "", r[0].lower()))
     letter = None
     for term, ns in rows:
@@ -104,7 +142,10 @@ def build():
         if L != letter:
             lines.append(f"\n## {L} {{.unnumbered}}\n")
             letter = L
-        lines.append(f"{term}, {', '.join(map(str, ns))}\n")
+        if isinstance(ns, str):
+            lines.append(f"{term}, *{ns}*\n")
+        else:
+            lines.append(f"{term}, {', '.join(map(str, ns))}\n")
     open(OUT, "w", encoding="utf-8").write("\n".join(lines) + "\n")
     print(f"index: {len(rows)} entries -> {OUT}")
 

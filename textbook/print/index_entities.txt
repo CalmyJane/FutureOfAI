@@ -13,13 +13,13 @@ ChatGPT | ChatGPT
 Chinchilla | Chinchilla
 China | China | Chinese
 Claude (Anthropic models) | Claude
-Copyright cases | copyright
-Dartmouth workshop (1956) | Dartmouth
+copyright | copyright
+Dartmouth workshop (1956) | Dartmouth workshop | Dartmouth proposal | Dartmouth summer
 DeepMind | DeepMind
 DeepSeek | DeepSeek
 Digital Omnibus | Digital Omnibus
 ECMWF | ECMWF
-Epoch AI | Epoch AI | Epoch
+Epoch AI | Epoch AI | Epoch’s | Epoch's
 Erdős problems | Erdős
 European Commission | European Commission | Commission
 FDA (US Food and Drug Administration) | FDA
