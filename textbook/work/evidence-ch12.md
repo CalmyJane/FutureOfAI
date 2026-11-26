@@ -508,3 +508,22 @@ Source report: review2/r-ch11-12.md (Ch12 items). Checked 3 Nov 2026.
 - Length: cut the repeated korbak2025sketch clause in §12.6 and the Dec 2024 US/UK o1 evaluation sentence (bib usaisi2024predeployment removed as now uncited).
 - Not changed: Schlatter 97% model not named. arXiv 2509.14260 abstract and HTML do not name the model (closest table value, o3 96.9%, is a different condition); reviewer could not confirm either. Plain-language summary for §12.3 not added (debate box already closes the section; length).
 - Word count ch12: 10,966 → 11,173.
+
+## Third review fixes (November 2026)
+Sources re-opened on 26 Nov 2026 unless stated: Anthropic 9 Sep 2026 post; Al Jazeera 29 Sep 2026 (John Power; announcement on Monday 28 Sep; "due in October" not in the article, so omitted); Fortune 9 Sep 2026 (headline "at least 12 more websites"); ABC News 24 Sep 2026; NPR/GPB 17 Nov 2026 (allegation "over 80 times"; OpenAI spokesperson quote); BleepingComputer 16 Nov 2026; AP/ADN Nov 2026 (Burke); VentureBeat 18 Nov 2026 (Columbus).
+- M1: 249 split into three paragraphs (reader note 5). July framing now "at first"; fourth incident (January 2026, early Claude Opus 4.6, ~481 million transcripts), withdrawal of the July judgement with quotation, "serious", METR commissioned; "By late November 2026 METR had not published its findings." Internal model's stop qualified "(Anthropic later judged that this may have been luck)". New bib: anthropic2026alignment. Agrees with Ch. 11 Table 11.3.
+- M2 (legally sensitive): 269 now quotes GovAI's full wording "…unless we have implemented safety and security measures that will keep risks below acceptable levels", with "wording that had implied a pause if risks could not be kept acceptable". Table 12.5 Anthropic criticism cell and tbl-12-04.md changed to "v3.0 dropped wording that implied a pause if risks could not be kept 'below acceptable levels'…".
+- M3: "single data point" replaced: 28 September decision not to release GPT-6.1 Astra; "still only two data points, both judged and reported by the company itself". Debate box adds the hold-back. New bib: aljazeera2026openai (same key and work as ch14.bib).
+- S1: Debate box and spec no longer date the pause to August; pause is "two weeks after the Hugging Face incident", announced 18 August (also added at 273).
+- S2: 29.2% now "carried a simulated, unsanctioned supply-chain attack through to completion".
+- S3: "CAISSI's testing…"; AP sentence on informal reporting to a White House office added. New bib: burke2026staff.
+- S4: case box adds the 12 further websites (Fortune), the Medicare portal (ABC) and the California suit (allegations; OpenAI's response; no ruling). 249 now "most of these incidents" plus a sentence on the outside tester's Gemini report. New bib: nolan2026openai, abc2026openai, npr2026california, abrams2026gemini.
+- S5: Version 3.1 sentence moved to the end of the RSP paragraph.
+- S6: GPT-6 Sol date now cited to openai2026gpt6system.
+- S7: editor's parenthesis removed; "dropped by 39.8 per cent on the paper's measure".
+- S8: Table 12.5 OpenAI cell "Requests evaluation of only…".
+- S9: Added with attribution to VentureBeat's report of the system card (pre-release versions; OpenAI says the regression is mitigated; AISI had not retested). System card itself not opened. New bib: columbus2026openais.
+- S10: added "Anthropic calls this disposition 'corrigible', but in a weaker sense than Soares and colleagues."
+- Currency: Table 12.5 "Latest version (Oct 2026)" and caption → November 2026 (versions unchanged on 22 Nov).
+- Could not verify (NeurIPS 2025 acceptance of zou2025security; Tamirisa ICLR 2025): left unchanged, low risk.
+- Reader note 7 (Meta, xAI only as FLI grades) skipped: would need new material.
