@@ -468,3 +468,10 @@ Source: review3/r-ch01.md and review3/00-VERDICT.md section B. Cut-off moved to 
 - S12: mccarthy2006proposal pages → 12--14 (checked: the AAAI OJS PDF of the reprint has three pages, 12–14; the OJS metadata lists 12 only). Further reading "Twelve pages" → "A short proposal that shows …".
 - Could not verify items: none required a text change (Shannon wording, Lighthill pages, McDermott, Samuel are unchanged; the Carbon-before-31-October question is moot because the sentence now dates the 83.3% reading to 25 October).
 - Reader notes: 1, 2, 4, 9 covered by M2, S7, S8, S12. 3: Deep Blue sentence now says the builders' account "counts differently from IBM's history page" and gives "30 general-purpose processors". 5: scope sentence now says traditions "as distinct from the funding programmes that Section 1.5 mentions". 6: AGI paragraph split before "The EU AI Act does not use the term AGI". 7: not applied (stylistic repetition, no unclear sentence). 8: "in skilled-human working time" → "judged by how long the tasks take skilled people".
+
+## Fourth review fixes (November 2026)
+
+- S1: Table 1.3 Go row now reads "even games (no handicap) against a professional (Fan Hui)" and "no program had beaten a professional without handicap" (Silver et al. 2016, "without handicap").
+- S2: ch04.md:229 cross-reference changed from Section 1.8 to Section 1.7 (the clock result is in the Debate box closing Section 1.7). Only that line was changed in ch04.
+- S3: ClockBench sentence in ch01 now adds "ahead of Google's Gemini 4 Carbon at 85.0%" (clockbench.ai, accessed 26 Nov 2026). The parallel change the report suggests at ch04.md:229 was left to the Chapter 4 owner.
+- Could not verify (Buchanan & Shortliffe pages, Yu et al. 1979, SEP "ten attendees", Brown et al. 1990, OECD page numbers): no change; the report suggests no narrowing.

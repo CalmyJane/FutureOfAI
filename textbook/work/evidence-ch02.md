@@ -405,3 +405,8 @@ Source: review3/r-ch02.md. Cut-off moved to late November 2026.
 - S6: dropout baseline → "standard networks without dropout or unsupervised pre-training reached about 1.60% error".
 - Could not verify (NYT 1958 quote, AlexNet p. 1098): no change; both already attributed and low risk.
 - Reader notes: 1 forward pointer added in the opening ("only a fraction of which it uses at any one step (Section 2.2)"). 2 "A greyscale photograph". 3 Muon sentence rewritten so "orthogonalising" is explained before it is named. 4 6N step spelled out (2 forward + 4 backward). 5 double-descent paragraph split before Belkin. 6 half-sentence added that small norm alone does not predict generalisation (Zhang et al.). 7 Table 2.5 caption now explains "(small)".
+
+## Fourth review fixes (November 2026)
+
+- S1 (optional): DeepSeek-V4-Pro sentence now says "activates 49 billion per token, according to the technical report", since secondary sources give slightly different counts for the 0813 official checkpoint.
+- Could not verify (0813 parameter count, Zech et al. tenfold experiment, NYT 1958 wording): no change; covered by S1 or already attributed.
