@@ -431,3 +431,20 @@ Source: review2/r-ch07-08.md (Ch8 items) and FIX-BRIEF.md.
 - **Unverified 60% Aghion–Bunel input**: confirmed in the note ("around 60% in the United States", Pizzinelli et al.); unchanged.
 - **Layout, Table 8.3** (one-row orphan on p. 243) and Table 7.3 caption separation: for the central editor (build/CSS); nothing changed in the chapter source.
 - Bib: added `oecd2026employment`. Pandoc --citeproc clean; no uncited keys; uncited.py flags only the marked closing synthesis. Word count 10,425 → 10,480.
+
+## Third review fixes (November 2026)
+
+Report: review3/r-ch08.md. Cut-off moved to late November 2026. No cross-chapter item in verdict section B touches Chapter 8.
+
+- **M1 BLS productivity.** §8.5 now gives the Q3 2026 preliminary release (5 Nov 2026): +3.6% annualised in Q3, +2.1% year on year, 2.2% a year since 2019Q4 vs 1.5% for 2007–2019 and 2.2% since 1947. bls2026productivity updated to the Q3 release (urldate 2026-11-22). The revised Q3 estimate is due 8 Dec 2026; AUTHOR may check at proof.
+- **M2 Challenger.** Paragraph rewritten from the October 2026 report (5 Nov 2026): market/economic conditions overtook AI; AI about 121,000 cuts YTD (about 20%), about 1,300 in October; total cuts down 44%. challenger2026september replaced by challenger2026october (key used only in ch08). Reader note 2 covered by the softened opening.
+- **S1 "GPT-3".** Table 8.3 now "OpenAI GPT-based assistant, 2020–21"; §8.3 text "built on a version of OpenAI's GPT models".
+- **S2 OECD.** Youth point attributed to the report, not to Cormann.
+- **S3 survey/experiment gap.** Citation moved to the survey figure; explanation labelled as the author's reading, with the 6% of work hours figure (cited to stlouisfed2026does, which gives 6.3%).
+- **S4 Cui et al.** Bib now Management Science 72(11):9408–9420; "Published online" note removed.
+- **S5 Goldman Sachs.** "March 2023"; "eventually"; "US labour-productivity growth by about 1.5 percentage points a year". Bib kept (April summary).
+- **S6 Hosseini & Lichtinger.** Bib note "First version 31 August 2025; revised 6 May 2026".
+- **S7 Eloundou agreement.** "between about two-thirds and four-fifths of the time, depending on the measure".
+- **S8 BTOS (optional currency, applied because of the November cut-off).** Text and Table 8.2 (and tbl-08-01.md spec) now 25.0% for 19 Oct–1 Nov 2026 (published 19 Nov 2026), per the report; census2026business updated. The new employee-use question (27.6%) was not added (new material).
+- **Could not verify items.** All low risk; no change.
+- **Reader notes.** 1 done (clause explaining the "Super Intelligence" renaming); 2 done (M2); 4 done (paragraph break before "A different gap"); 5 done (second "16 developers" dropped). Skipped 3 (Aghion & Bunel paragraph is correct; trimming is stylistic); 6 and 7 need no change per the report.

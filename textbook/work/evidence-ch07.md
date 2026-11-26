@@ -510,3 +510,25 @@ Reports: review2/r-ch07-08.md (Ch7 items), review2/r-technical-coverage.md (P8 s
 - **Author tags removed:** "author's calculation" (§7.1 FLOP, TPP, Elo, cost box); Table 7.2 caption keeps "computed by the author". Debate-box endings rewritten (capex: "What would settle it is audited evidence …"; open weights: no author tag). Remaining marked opinion: chapter summary ("In the author's reading of the evidence above").
 - **Glossary:** quantisation, prompt caching added.
 - **Not done:** moving GPT-NeoX/BLOOM/licence detail into a box (optional layout suggestion); Anthropic SEC filing (2 Nov 2026, after cut-off; publication report says add at proof); DeepSeek V4.1, Kimi K3.1, Qwen3.6 (late-October point releases, minor).
+
+## Third review fixes (November 2026)
+
+Report: review3/r-ch07.md; cross-chapter items from review3/00-VERDICT.md section B. Cut-off moved to late November 2026.
+
+- **M1 Affiliates-rule stay.** §7.3 bullet rewritten and split into US and Chinese sentences (reader note 2): BIS extended the suspension through 10 Jan 2027 on 9 Nov 2026 (91 FR 70789); China extended its rare-earth suspension to the same date. New bib: bis2026extension, thenational2026china. dechert2026bis no longer cited (entry kept in bib).
+- **M2 19 November 2026 BIS rule (91 FR 74970).** Added rescission sentence after the May 2026 guidance sentence; remote-access sentence replaced (House bill, then the BIS rule: licences for data centres supplying China-headquartered firms; Indonesia, Malaysia, Singapore, Thailand, Brazil); §7.6 model-weights sentence now notes revocation. New bib: bis2026addressing. (Ch. 14's report proposes key bis2026remote for the same rule; flagged to coordinator.)
+- **M3 Huang.** "Jensen Huang, then Nvidia's chief executive" (§7.3); "its then chief executive, Jensen Huang" (debate box).
+- **M4 Muse Spark Open.** §7.1 sentence corrected (Kimi K3 MXFP4; Muse Spark Open 4-bit and 16-bit versions) and both Muse Spark Open citations moved to meta2026museopen (new bib); meta2026muse kept only for the spring 2026 proprietary release. Table 7.5 source list adds meta2026museopen.
+- **M5 EU gigafactories.** "up to seven" per the July 2026 call; "four" removed.
+- **S1 gallium/germanium.** Suspension until 27 Nov 2026 not covered by the November extension; no extension announced by 22 Nov. AUTHOR: check MOFCOM before printing.
+- **S2 Nvidia China shipments.** $2.4bn of Hopper data-centre products in the quarter to October 2026; new bib nvidia2026q3cfo.
+- **S3 Qwen3.8.** Sentence added in §7.6 and a Table 7.5 row; new bib qwen2026qwen38. Kimi K3 (2.8T, July 2026) already in text; unchanged.
+- **S4 IEA pinpoint.** Now "sec. 5.1, pp. 47–48; sec. 7.3, p. 65".
+- **S5 Mistral.** Le Chat response, life-cycle assessment of Mistral Large 2; "CO~2~-equivalent".
+- **S6 nine-month 2026 capex.** Sentence added after the IEA $715bn sentence. Figures re-checked on 26 Nov 2026 in SEC XBRL companyconcept data (Amazon PaymentsToAcquireProductiveAssets 175,670m; Alphabet PaymentsToAcquirePropertyPlantAndEquipment 131,953m; Meta 83,055m; Jan–Sep 2026, Q3 10-Qs). New bib: amazon2026formq, alphabet2026formq, meta2026formq.
+- **S7 AESO.** "exceeded 16 GW".
+- **S8 Figure 7.2 extended to November 2026.** figs_ch07.py: t1 = 2027.0; new combined event "9 / 19 Nov 2026 — Stay extended; remote access" (square at 19 Nov, open circle for 9 Nov joined by a bracket, drawn slightly left of its date to avoid overlap); 17 Oct 2023 label moved to the lower level and the UAE label shortened to "UAE licence-free" to avoid overlaps after rescaling. Test render checked visually in the scratchpad; the SVG in textbook/figures/svg was NOT regenerated (coordinator to run). Caption (chapter and spec) now "October 2022 to November 2026", without "after the period shown"; spec fact-check notes for events 6 and 6a updated; event 9 added.
+- **B1 export control on Claude Fable 5 and Mythos 5.** New §7.3 bullet "Access to models": 12 June 2026 licence requirement for foreign nationals' access, including inside the US; Anthropic switched both off for all customers; lifted with conditions on 30 June; first use of export controls to block access to an AI service. Bib: kahn2026anthropic, power2026us (same entries as ch14.bib), eastland2026lutnick (Bloomberg Law, 19 Jun 2026, "an unprecedented use of export control laws"; checked by web fetch 26 Nov 2026).
+- **Could not verify, TSMC CoWoS quotation.** Quotation marks removed; paraphrased.
+- **Reader notes.** 1 done (four chokepoints named); 2 done (bullet split); 3 done via S8; 6 done (GLM-5 and DeepSeek-V4-Pro sizes in text, with citations); 7 done (one sentence on how the Epoch and Arena measures differ); 8 done ("somewhat more than"). Skipped 4 (moving the H800 sentence to §7.3: it already cross-refers to §7.3 and the move is structural) and 5 (LBNL paragraph is accurate; layout only).
+- **Bib housekeeping.** google2026gemma URL updated to https://gemma.ai/resources/terms/.

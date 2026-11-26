@@ -572,3 +572,20 @@ Source report: review2/r-ch13-14.md (Ch13 items). Checked 3 Nov 2026.
 - Length: cut the Clearview cross-reference in §13.2 (covered in §13.6), the Qinglang campaign sentence, the Japanese naming-and-shaming sentence and a repeated summit-politics sentence (bib cac2025qinglang, paulger2025understanding removed).
 - Musk v. Altman: verified by press (jury verdict 18 May 2026, claims time-barred, adopted by Judge Gonzalez Rogers; e.g. https://abc7news.com/post/musk-altman-verdict-reached-landmark-trial-artificial-intelligence/19125283/). Not added: ch13 does not cover corporate governance or OpenAI's structure, and the ruling did not reach the merits. Anthropic's 2 Nov 2026 SEC filing: after the October cut-off, not added.
 - Word count ch13: 11,370 → 11,738.
+
+## Third review fixes (November 2026)
+Cut-off moved to late November 2026: l.5 "status as of late November 2026"; "as of/by October 2026" changed to November where still true on 22 Nov (13.3 opening, FRONTIER Act, Table 13.3 and 13.4 captions, CoE treaty count, USCO Part 3, Figure 13.2 caption and spec, treaty "not yet in force", courts on the output question, closing paragraph). Dated October events kept.
+- M1: Bartz: first instalment (~70% of per-work amount) scheduled for late November 2026; new key authorsguild2026what.
+- M2: Thaler quotation restored ("all eligible work").
+- M3: EDPB Opinion 28/2024 now quoted as "insignificant" and "necessary"; "duly anonymised" attributed to the Board's press release (new key edpb2024press).
+- S1: Getty appeal heard 11–12 Nov 2026, judgment awaited (text, Table 13.4 status); new key burgessalmon2026getty.
+- S2: Table 13.4 Ross status: en banc petition pending; new key authorsalliance2026westlaw in the table sources.
+- S3: FRONTIER Act: as of November 2026; midterms gave Democrats both chambers from Jan 2027, bill would need reintroduction (new key npr2026democrats); closing paragraph "stalled in committee".
+- S4: Paris statement: 63 countries, EU and African Union Commission; cite elysee2025statement.
+- S5: China agents document: "first" dropped ("implementation guidelines devoted to AI agents").
+- S6: AI Office RFIs and lab incidents attributed to Euronews; Barry Scannell (William Fry) named.
+- S7: "The next summit is due in Geneva in 2027" (new key swissfederalcouncil2026switzerland, checked by web search 26 Nov).
+- Reader notes: 1 (single cut-off) done; 3 (standards told twice) l.21 shortened with pointer to Section 13.5; 4 (Epoch count twice) l.119 no longer repeats the number; 5 "(Table 13.3)" moved after the 10^26 thresholds; 7 last sentence of the Ross paragraph rephrased; 8 "most closely watched"; 10 machinery row removed from Table 13.1 (the caption and the bullet list already state the change; the spec never had the row). 2 covered by S6. 6 (SB 813/AB 1405 effect on developers) and 9 (closing paragraph reads as a list) not changed: no source detail in the report for 6; 9 is structural.
+- B1: one addition in Section 13.3 after EO 14409: Commerce licence requirement of 12 June 2026 for foreign nationals' access to Claude Fable 5 and Mythos 5, Anthropic switch-off, lifted with conditions 30 June, described by law firms as the first known use of export controls to block access to an AI service (keys kahn2026anthropic, power2026us, mayerbrown2026commerce; greenbergtraurig2026anthropic also copied). Closing paragraph: "The nearest US analogue was not law" corrected accordingly.
+- Coordinator note: state suits against OpenAI updated: Texas (23 Oct) and Oregon (17 Nov), eleven states by mid-November, consistent with Ch. 10; keys texas2026attorney and opb2026oregon copied from ch10.bib.
+- Not applicable to Ch. 13: CAISSI, OpenAI pauses, 19 Nov BIS rule (the chapter mentions none of them).
