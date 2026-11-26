@@ -23,7 +23,7 @@
 **Agent Card**: In the A2A protocol, a machine-readable JSON document, typically published at a standard web address, that describes an agent's identity, endpoint, authentication requirements and skills.
 **OSWorld**: A benchmark of 369 tasks in real operating systems used to measure computer-use agents; OSWorld-Verified is a corrected edition released in 2025.
 **pass@k**: The probability that at least one of k attempts at a task succeeds; it suits settings where a test or a person can pick out the successful attempt.
-**τ-bench**: A benchmark of simulated customer-service conversations (retail, airline and, in τ²-bench, telecom and banking) in which an agent must use tools and follow a written policy; it introduced the pass^k measure.
+**τ-bench**: A benchmark of simulated customer-service conversations (retail and airline; τ²-bench added telecom and τ³-bench banking) in which an agent must use tools and follow a written policy; it introduced the pass^k measure.
 **adaptive attack**: An attack on a security defence that is deliberately tailored to the defence's design, as opposed to a fixed set of previously known attack inputs.
 **mandate (AP2)**: In the Agent Payments Protocol, a cryptographically signed record of what a user authorised, such as the conditions for a purchase or a specific cart and price.
 **x402**: An open protocol that uses the HTTP status code 402 "Payment Required" to let a client, including an AI agent, pay for a web resource within the same request.
