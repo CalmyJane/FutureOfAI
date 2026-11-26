@@ -450,3 +450,21 @@ Omitted (not verifiable on an official source in this session): GPT-6 Pro "paral
 - python3 review/uncited.py textbook/chapters/ch03.md → 0 uncited blocks.
 - pandoc --citeproc with bib/ch03.bib → no missing keys; every ch03.bib entry cited; no duplicate keys. Copied entries byte-identical to their source chapter's version.
 - python3 -m py_compile print/figs_ch03.py → OK (Fig 3.3 sub-label "checked answers, tool tasks"; not redrawn).
+
+## Third review fixes (November 2026)
+
+Report: review3/r-ch03.md. Cut-off now late November 2026.
+
+- M1: §3.8 "largest open models of 2025–26" now leads with Kimi K3 (2.8T, 104B active, July 2026) and Qwen3.8-2.4T-A95B (2.4T, 95B active, August 2026); Kimi K2 marked (2025). Table 3.9 row added for Kimi K3. Bib: `moonshot2026kimik3` copied byte-identical from ch07.bib; `qwen2026qwen38` new.
+- M2: FlashAttention sentence corrected: saves time and working memory; does not cut quadratic arithmetic or KV cache. Reader note 8 applied ("2023–26").
+- S1: Table 3.9 Llama 3 date "Feb 2023; Apr 2024 (405B: Jul 2024)".
+- S2: "more than" dropped; now OpenAI's own figure, cited to `openai2026devday` (copied byte-identical from ch01.bib). `bonifacic2026openai` no longer cited in Ch. 3, so removed from ch03.bib (still in ch01.bib).
+- S3: Mythos Preview row source now `[@anthropic2026claude; @anthropic2026fable]`.
+- S4: Yue et al. quotation "rarely elicit[s] …". Also fixed `yue2025does` author list (second "Yue, Yang" added, per r-ch04 S7).
+- S5: Epoch hundredfold now applied to compute only.
+- S6: "can therefore" doubled connective removed.
+- S7: Table 3.9 caption "to the end of October 2026"; new sentence after the table on November releases (Fable 5.2 / Mythos 5.2, 9 Nov; Qwen4-Max, 16 Nov; GPT-6.2 Astra and Sol, 17 Nov). Bib: `sdtimes2026fable52` (press report; Anthropic's own page not opened), `alibaba2026qwen4max` (company press release), `openai2026gpt6` howpublished now notes 17 November update, urldate 2026-11-22. URLs found by web search 26 Nov 2026.
+- Could not verify (Tülu 3 venue): COLM listing not found by web search; `lambert2024tulu` changed to arXiv preprint 2024 (arXiv:2411.15124).
+- Could not verify (GPT-6 "tiered family"; Gemini 4 Hydrogen): no action, as report advises.
+- Reader notes: 3 (duplicate DPO-box citation removed), 4 ("In practice the two are combined"), 5 ("stands out"), 6 (Fig. 3.2 caption and spec: "␣ marks a leading space."), 7 ("increasingly"), 8 (see M2), 9 ("in an outside estimate for this closed model") all applied. Notes 1–2 covered by M2/S6.
+- Computation dates of 22–23 October 2026 (Tables 3.1, 3.3, 3.7, nucleus box) left unchanged: they record when the author ran the code.

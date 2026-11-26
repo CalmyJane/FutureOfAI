@@ -415,3 +415,22 @@ Not changed (logged)
 - Caption-citation rendering book-wide: central editor (build); Ch. 4 captions now read correctly either way.
 
 Words: 9,306 → 10,136 (+830; ~700 for the new subsection, ~120 RL paragraph, offset by tag removal and the formalism box replacing inline mechanics).
+
+## Third review fixes (November 2026)
+
+Report: review3/r-ch04.md. Cut-off now late November 2026.
+
+- M1: Epoch dashboard date now 5 November 2026; 3.4×/yr installed-stock figure replaced by 2.5×/yr for AI chips sold each quarter since 2024 (about 6× in 2023); AI Index 3.3×/yr reframed as growth of total capacity. Bib `epochai2026trends` howpublished and urldate (2026-11-22) updated.
+- M2: ClockBench per verdict B5: 25 October 2026 leader Gemini 4 Argon 83.3%; by late November 2026 Claude Fable 5.2 Max (released 9 November) 87.8%; human 90.7%. Bib `clockbench2026clockbench` urldate 2026-11-22. Ch. 1 (ch01.md) must give the same figures: not edited here.
+- M3: HLE debate-box sentence now speaks of Scale AI's leaderboard top (54.8%) and notes higher developer-reported scores with tools; adds `@openai2026gpt6` (urldate 2026-11-22). Reader note 7 satisfied (both passages now use leaderboard framing).
+- M4: Chinchilla projection now "over 4.2 trillion tokens, fourteen times what GPT-3 saw" (4.2T/300B = 14).
+- S1: Villalobos 5× cap added.
+- S2: "appeared" → "spread" in 2025.
+- S3: 6ND note added to the Llama 3 case study (4.0 × 10^25). Covers reader note 1.
+- S4: LMArena reply added; new bib `lmarena2025response` (URL confirmed by web search 26 Nov 2026). Reader note 3: "(renamed LMArena in 2025)".
+- S5: o3-mini "at its high reasoning setting".
+- S6: `arcprize2024openai` howpublished notes the 24 March and 10 December 2025 repricings; urldate 2026-11-22.
+- S7: `yue2025does` sixth author (second "Yue, Yang") added (also in ch03.bib).
+- Currency: "as of October 2026" (largest Epoch estimate, GPT-6 Astra) and "By October 2026" (Scale HLE top entry) changed to November 2026; both still true on 22 November per report.
+- Reader notes: 2 (semi-private explained), 4 ("8 percentage points"), 6 (METR sentence split) applied. Note 5 (Kaplan twelfth) skipped: correct and sourced; the report calls it inessential, not unclear enough to cut.
+- Could not verify: gerstgrasser2024model venue, Truong bar labels, singh2025leaderboard venue: left for a human check; no text change (book's reading of Truong fits the paper per report).

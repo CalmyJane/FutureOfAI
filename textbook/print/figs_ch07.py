@@ -77,7 +77,7 @@ def _yr(y, m, d=1):
 @fig("fig-07-02")
 def f0702():
     fig, ax = canvas(3.55, ylim=(-6, 74))
-    t0, t1, xa, xb = 2022.62, 2026.95, 3.0, 88.0
+    t0, t1, xa, xb = 2022.62, 2027.0, 3.0, 88.0
 
     def X(t):
         return xa + (t - t0) / (t1 - t0) * (xb - xa)
@@ -90,14 +90,14 @@ def f0702():
     # (date, label, note, kind, side(+1 above/-1 below), level, align)
     ev = [
         (_yr(2022, 10, 7), "7 Oct 2022", "Advanced chip controls", "licences for advanced AI\nchips and tools to China", "t", 1, 1, "l"),
-        (_yr(2023, 10, 17), "17 Oct 2023", "Thresholds revised", "adds performance density;\nA800/H800 covered", "t", -1, 1, "r"),
+        (_yr(2023, 10, 17), "17 Oct 2023", "Thresholds revised", "adds performance density;\nA800/H800 covered", "t", -1, 2, "r"),
         (_yr(2024, 12, 2), "2 Dec 2024", "HBM and tools", "controls on high-bandwidth\nmemory, more equipment", "t", 1, 1, "r"),
         (_yr(2025, 1, 13), "13 Jan 2025", "AI Diffusion Framework", "global tiered licensing; closed-\nweight model controls", "t", -1, 1, "r"),
         (_yr(2025, 4, 9), "9 Apr 2025", "H20 licence required", "Nvidia told licence\nneeded for China", "t", 1, 2, "r"),
         (_yr(2025, 5, 13), "13 May 2025", "Rescission announced", "diffusion rule not enforced;\nreplacement promised", "o", -1, 2, "r"),
         (_yr(2025, 9, 29), "29 Sep / 10 Nov 2025", "Affiliates rule, then stayed", "50%-owned affiliates of listed\nentities covered; stayed for a year", "t", 1, 2, "l"),
         (_yr(2026, 1, 15), "15 Jan 2026", "H200 case-by-case", "China review moved from\ndenial to case-by-case", "o", 1, 1, "l"),
-        (_yr(2026, 7, 10), "10 Jul 2026", "UAE licence-free access", "partner access to advanced\ncomputing items", "d", -1, 1, "r"),
+        (_yr(2026, 7, 10), "10 Jul 2026", "UAE licence-free", "partner access to advanced\ncomputing items", "d", -1, 1, "r"),
         (_yr(2026, 11, 19), "9 / 19 Nov 2026", "Stay extended; remote access", "Affiliates stay to Jan 2027; diffusion\nrule rescinded; data-centre licences", "t", -1, 2, "r"),
     ]
     lev = {1: 6.0, 2: 21.5}
@@ -126,8 +126,9 @@ def f0702():
     xs_, xa_ = X(_yr(2025, 11, 10)), X(_yr(2025, 9, 29))
     ax.plot([xs_, xs_, xa_], [ay + 1.6, ay + 4.0, ay + 4.0], color=G2, lw=0.5, zorder=1)
     mark(xs_, "o")
-    # extension of the stay (9 Nov 2026): own marker, joined to the 19 Nov 2026 stem
-    xe_, xr_ = X(_yr(2026, 11, 9)), X(_yr(2026, 11, 19))
+    # extension of the stay (9 Nov 2026): own marker, joined to the 19 Nov 2026 stem;
+    # drawn 1.6 units left of its date so that it does not hide the 19 Nov marker
+    xe_, xr_ = X(_yr(2026, 11, 9)) - 1.6, X(_yr(2026, 11, 19))
     ax.plot([xe_, xe_, xr_], [ay - 1.6, ay - 4.0, ay - 4.0], color=G2, lw=0.5, zorder=1)
     mark(xe_, "o")
     mark(xr_, "t")

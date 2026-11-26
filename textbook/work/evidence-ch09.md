@@ -508,3 +508,20 @@ Source: review2/r-ch09-10.md (Ch9 items), 00-VERDICT C15/C18, FIX-BRIEF.md.
 - **Debate box ending** rewritten without the template ("The decisive evidence would be panel data…").
 - **Author tags**: removed "the author's example" (§9.2), "in the author's view" (§9.0 turnout, §9.8 layered approach), "In the author's reading" ×2 (now "Read together…", "Taken together…"). Remaining genuine opinions: §9.4 liar's dividend ("the author expects"), §9.5 self-selection ("the author suspects"), §9.7 content farms ("In the author's view").
 - Bib: added `seitzwald2024nh`, `afp2025proeu`. Pandoc --citeproc clean; no uncited keys; uncited.py 0 blocks. Word count 11,367 → about 11,450.
+
+## Third review fixes (November 2026)
+
+- **M1** Done. Line 126 scope phrase "up to the end of October" removed; line 128 "due on 3 November 2026" changed to "of 3 November 2026". Added the Storm-1516 deepfake of 20 October 2026 and the post-election finding. Attribution checked against PolitiFact's fact-check of 22 October 2026 (read on 26 Nov 2026): NewsGuard reported "many signs of AI generation"; Clemson's Darren Linvill attributed the video to Storm-1516; Graphika found Storm-1516-amplifying accounts shared it; the real former student denied it. The sentence therefore says NewsGuard found signs of AI generation and Clemson and Graphika made the link (not NewsGuard). NewsGuard's own post (newsguardrealitycheck.com/p/russian-deepfake-accuses-talarico) was located by search but returned 403, so it is not cited. New bib: breach2026russian, politifact2026russian, chow2026how.
+- **M2** Done. "two respects"; s. 99 sentence added; Grok box clause added; Table 9.3 row and source key added; caption now "as of November 2026". New bib: ukparliament2026s99.
+- **S1** Done. TSE 4-3 ruling (1 Sep 2026) and Lula's win added. New bib: conjur2026deepfake.
+- **S2** Done. "about 0.6" in text and Table 9.1.
+- **S3** Done. 103 / 219 by mid-November 2026; bib note and urldate updated.
+- **S4** Done. Caption qualification added in ch09.md and figures/specs/fig-09-03.md (figs_ch09.py has no caption text).
+- **S5** Done. Euronews sentence added to the Romania case study. New bib: euronews2024romanian.
+- **S6** Done. SpaceXAI explained; added engadget2026xai (URL from report, not re-fetched) alongside reuters2026concerns.
+- **S7** Done. Watermark paragraph reworded as the report gives.
+- **S8** Done. All three wording fixes (DNR 43%, 131 million SoRs, "more than a billion dollars").
+- **Currency** "By October 2026 NewsGuard counted 3,749" -> "By November 2026" (live page confirmed 22 Nov); "Neither inquiry had announced a finding by late October 2026" -> "late November 2026".
+- **Reader notes** 1, 2, 3, 8 covered by S7, M1, S1, S6. 4: Lin parenthesis now says the Polish experiment tested personalised messages. 5: Costello correction sentence split ("first issued an expression of concern, which it later rescinded, and then published a correction"). 9: original N of 2,190 added to the text. 6 and 10 skipped: 6 would need new material; 10 is a style preference with no wrong sentence.
+- **Could not verify** items: no change beyond M1 and S3 above.
+- **Section B**: no cross-chapter items touch ch09.

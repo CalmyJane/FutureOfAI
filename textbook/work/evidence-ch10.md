@@ -450,3 +450,19 @@ Scanner (review/uncited.py) now reports 0 uncited blocks; pandoc --citeproc clea
 - **Not changed: state lawsuit count (r-publication).** Ch10 says "ten had sued OpenAI" by late October; consistent with ch13 (Florida + at least eight + Texas). Harmonising wording in ch13 is for that chapter's editor.
 - **Author tags (brief item 4).** Removed "the author's calculation" (effect-size box), "by the author's calculation" (Nigeria 0.16 SD; Maryland 2.5 SD, now shown as 0.37/0.15), "In the author's illustration" (specificity box); "in the author's assessment" (tutoring cost) replaced by Bloom's own judgement that one-to-one tutoring is "too costly for most societies to bear on a large scale" (@bloom1984sigma); "in the author's view" on BLEU replaced by a definitional statement. Genuine opinions left: §10.1 (meta-analysis gap), §10.3 (assessment options), §10.9 (synthesis). Debate box already ends with the specific evidence that would settle it.
 - **Length.** To pay for the corrections: CONSORT-AI sentence compressed, Kestin "introductory material" sentence cut, AMIE survey counts (60/98, 33/44; reviewer could not verify) cut. Net about +210 words (10,754 → 10,963).
+
+## Third review fixes (November 2026)
+
+- **M1** Done. New York sentence rewritten (signed 28 Oct 2026, Chapter 368, in force 1 Jan 2027); Table 10.3 row and source keys added; nyassembly2026a10379 note and urldate updated. New bib: hklaw2026new.
+- **S1** Done. "By mid-November 2026 eleven", Oregon 17 November. New bib: opb2026oregon (OPB, 17 Nov 2026; found by search on 26 Nov 2026, as the Oregon Capital Chronicle page returned 403).
+- **S2** Done. "set more detailed rules".
+- **S3** Done. Opening now says "gave some of them access".
+- **S4** Done. Quotation changed to "substantially equivalent to a legally marketed device"; fda2024premarket note "content current as of 19 November 2026", urldate 2026-11-22.
+- **S5** Done. "relative to whichever partner performed better alone, usually the AI".
+- **S6** Done. Table 10.1 "short conference paper"; text "The published version of the study (an AIED 2024 short paper, identical to the preprint's second version)"; henkel2024effective note gives the Springer CCIS version and DOI 10.1007/978-3-031-64315-6_34.
+- **S7** Done. HEPI sentence hedged as in the report.
+- **S8** Done. Sentence now cites the FDA's own page (new bib fda2026considerations, URL confirmed by search on 26 Nov 2026) alongside covington2026fda.
+- **Currency** Table 10.1 lead-in "published by October 2026" -> "by November 2026".
+- **Reader notes** 1, 6, 7 covered by S3, S2, S5. 3: clause "because not every student completed every test" added. 4: "pointing towards a benefit". 2 (split Nigeria paragraph) skipped: the split would fall inside a numbered "First ... Second ... Third" list. 5 (move Bean et al. to 10.5) skipped: structural move, no wrong sentence. 8 skipped: accurate, and the book does not use notes for this. 9: no change needed.
+- **Could not verify** items: none needed a change (S4 removes the 510(k) dependency).
+- **Section B**: no cross-chapter items touch ch10.
