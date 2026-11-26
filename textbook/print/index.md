@@ -3,999 +3,997 @@
 
 ## 0–9 {.unnumbered}
 
-50% time horizon, 137, 160
+50% time horizon, 145, 168
 
-510(k) clearance, 323
+510(k) clearance, 333
 
 
 ## A {.unnumbered}
 
-Acemoglu, Daron, 248, 266, 267, 268, 273, 274, 275, 276
+Acemoglu, Daron, 258, 276, 277, 278, 283, 284, 285, 286
 
-action concentration, 469, 470
+action concentration, 484, 485
 
-activation function, 41, 42, 43, 46, 49, 53
+activation function, 47, 48, 49, 52, 55, 59
 
-active learning, 191, 314, 315
+active learning, 199, 324, 325
 
-active parameters, 87, 116, 117, 211
+active parameters, 93, 124, 125, 221
 
-Adam, 34, 54, 55, 58, 64
+Adam, 38, 60, 61, 64, 70
 
-adaptive attack, 168, 170
+adaptive attack, 177, 179
 
-adversarial example, 70, 71
+adversarial example, 76, 77
 
-Agent Card, 155
+Agent Card, 163
 
-Agent2Agent (A2A), 151, 155, 477
+Agent2Agent (A2A), 159, 163, 492
 
-agentic reinforcement learning, 106
+agentic reinforcement learning, 112
 
-AI accelerator, 185, 212
+AI accelerator, 193, 222
 
-AI Act (EU), 13, 16, 17, 274, 305, 308, 414, 415
+AI Act (EU), 17, 20, 21, 284, 315, 318, 428, 429
 
-AI agent, 20, 137, 146, 147, 352, 357, 358, 458
+AI agent, 24, 145, 154, 155, 362, 367, 368, 472
 
-AI companion, 331, 333
+AI companion, 341, 343, 345
 
-AI control, 403
+AI control, 415
 
-AI effect, 37, 38
+AI effect, 41, 42
 
-AI governance, 432
+AI governance, 447
 
-AI Index (Stanford), 9, 130, 136, 158, 164, 231, 235, 466
+AI Index (Stanford), 11, 138, 144, 166, 173, 245, 253, 480
 
-AI system, 13, 16, 17, 18, 38, 39, 95, 415
+AI system, 17, 20, 21, 22, 42, 43, 101, 429
 
-AI tutor, 315, 316
+AI tutor, 325, 326
 
-AI winter, 21, 22
+AI winter, 26
 
-AlexNet, 29, 43, 47, 50, 54, 66, 67, 115
+AlexNet, 33, 49, 53, 56, 60, 72, 73, 123
 
-algorithm filing, 429, 430
+algorithm filing, 444
 
-algorithmic bias, 352
+algorithmic bias, 362
 
-algorithmic efficiency, 130, 140, 449, 458
+algorithmic efficiency, 138, 149, 463, 472
 
-algorithmic fidelity, 297
+algorithmic fidelity, 307
 
-algorithmic monoculture, 362
+algorithmic monoculture, 372
 
-Alibaba, 76, 77, 88, 110, 112, 129, 236, 237
+Alibaba, 82, 83, 117, 118, 120, 137, 246, 247
 
-alignment, 5, 99, 180, 379, 380, 383, 385, 387
+alignment, 7, 105, 188, 391, 392, 395, 397, 399
 
-alignment faking, 392, 393, 395
+alignment faking, 404, 405, 407
 
-AlphaEvolve, 198, 199, 200, 203, 208, 209
+AlphaEvolve, 206, 207, 208, 211, 216, 218
 
-AlphaFold, 34, 180, 181, 182, 183, 184, 193, 210
+AlphaFold, 38, 188, 189, 190, 191, 192, 218, 219
 
-ambient scribe, 330
+ambient scribe, 340
 
-anomaly correlation coefficient (ACC), 186
+anomaly correlation coefficient (ACC), 194
 
-Anthropic, 35, 107, 145, 254, 359, 391, 407, 435
+Anthropic, 12, 113, 264, 369, 404, 419, 422, 450
 
-area under the curve (AUC), 69, 281, 283, 284, 288, 325, 328, 394
+area under the curve (AUC), 75, 291, 293, 294, 298, 335, 338, 406
 
-arithmetic intensity, 212
+arithmetic intensity, 222
 
-artificial general intelligence (AGI), 15, 16, 37
+artificial general intelligence (AGI), 19, 20, 41
 
-Artificial Hivemind, 364
+Artificial Hivemind, 374
 
-artificial intelligence, 7, 13, 38, 40, 210, 425, 426, 431
+artificial intelligence, 9, 17, 25, 42, 44, 219, 439, 440
 
-artificial neuron, 7, 41, 42, 70, 395
+artificial neuron, 9, 47, 48, 76, 407
 
-attention head, 81, 83, 84, 86, 93
+attention head, 87, 89, 90, 92, 99
 
-attribution graph, 399, 400
+attribution graph, 411, 412
 
-attrition, 263, 313, 314
+attrition, 273, 323, 324
 
-AUC, 69, 281, 283, 284, 288, 325, 328, 394
+AUC, 75, 291, 293, 294, 298, 335, 338, 406
 
-augmentation, 58, 66, 67, 248, 252, 254, 262
+augmentation, 64, 72, 73, 258, 262, 264, 272
 
-automation bias, 329, 354, 365, 366, 367, 374, 420
+automation bias, 339, 364, 375, 376, 377, 386, 434
 
-automation (of tasks), 39, 161, 178, 248, 254, 272, 365, 476
+automation (of tasks), 43, 169, 186, 258, 264, 282, 375, 491
 
-autonomous weapon system, 361
+autonomous weapon system, 371
 
-autoregressive, 87, 88, 95, 187, 278
+autoregressive, 93, 94, 101, 195, 288
 
-autoregressive rollout, 187
+autoregressive rollout, 195
 
 
 ## B {.unnumbered}
 
-backpropagation, 7, 27, 41, 43, 50, 52, 71, 72
+backpropagation, 9, 31, 47, 49, 56, 58, 77, 78
 
-backward chaining, 22
+base model, 37, 94, 102, 104, 107, 110, 111, 139
 
-base model, 33, 88, 96, 98, 100, 101, 104, 131
+batch normalisation, 59, 62, 64
 
-batch normalisation, 53, 56, 58
+τ-bench, 171, 172
 
-τ-bench, 163, 164
+benchmark, 11, 34, 108, 140, 144, 165, 167, 168
 
-benchmark, 9, 30, 102, 132, 136, 157, 159, 161
+Bengio, Yoshua, 23, 38, 49, 54, 59, 78, 356, 382
 
-Bengio, Yoshua, 19, 34, 43, 48, 53, 72, 346, 371
+bias (in a neuron), 47, 48, 51, 58, 331, 362, 364, 375
 
-bias (in a neuron), 41, 42, 45, 52, 321, 352, 354, 365
+Brier score, 469, 470
 
-Brier score, 455, 456
+budget forcing, 141
 
-budget forcing, 133
-
-byte-pair encoding (BPE), 74, 75
+byte-pair encoding (BPE), 80, 81
 
 
 ## C {.unnumbered}
 
-C2PA manifest, 286
+C2PA manifest, 296
 
-calibration, 172, 455
+calibration, 181, 469
 
-California, 193, 203, 334, 335, 406, 423, 427, 428
+California, 201, 212, 344, 345, 381, 437, 441, 442
 
-CASP, 180, 182, 209
+CASP, 188, 190, 218
 
-catastrophic forgetting, 70
+catastrophic forgetting, 76
 
-causal mask, 80, 83, 92, 97
+causal mask, 86, 89, 98, 103
 
-CE marking, 420
+CE marking, 434
 
-certainty factor, 22, 23
+certainty factor, 26, 27
 
-chain rule, 50, 51
+chain rule, 56, 57
 
-chain-of-thought monitoring, 401, 403, 478
+chain-of-thought monitoring, 413, 415, 493
 
-chain-of-thought prompting, 149
+chain-of-thought prompting, 157
 
-chat template, 77, 88
+chat template, 83, 94
 
-ChatGPT, 13, 95, 101, 108, 262, 316, 319, 334
+ChatGPT, 17, 101, 107, 119, 272, 326, 329, 344
 
-cheap fake, 278, 289, 290
+cheap fake, 288, 299, 300
 
-China, 8, 223, 224, 225, 237, 243, 429, 430
+China, 10, 233, 234, 235, 236, 247, 444, 480
 
-Chinchilla, 120, 121, 122, 123, 124, 141
+Chinchilla, 128, 129, 130, 131, 132, 133, 149, 150
 
-chokepoint, 218, 221, 224, 243
+chokepoint, 228, 231, 235, 253
 
-circuit, 84, 113, 203, 216, 219, 223, 399, 436
+circuit, 90, 120, 212, 227, 229, 233, 411, 451
 
-Claude (Anthropic models), 13, 109, 112, 137, 158, 159, 164, 393
+Claude (Anthropic models), 12, 119, 145, 166, 167, 378, 405, 406
 
-code of practice, 305, 406, 422, 433
+code of practice, 315, 418, 436, 448
 
-cognitive offloading, 319
+cognitive offloading, 329
 
-collusion (between agents), 173, 404
+collusion (between agents), 181, 182, 416
 
-combinatorial explosion, 22, 39
+combinatorial explosion, 26, 43
 
-common-cause failure, 364, 474
+common-cause failure, 374, 489
 
-competence reserve, 470, 476
+competence reserve, 484, 491
 
-compounding error, 147, 162
+compounding error, 155, 170
 
-comprehension debt, 207
+comprehension debt, 215
 
-compute governance, 242
+compute governance, 252
 
-compute threshold, 242, 423, 443, 444
+compute threshold, 252, 437, 458, 459
 
-compute-optimal training, 120, 128
+compute-optimal training, 128, 136
 
-computer-use agent, 156, 166, 170
+computer-use agent, 164, 175, 178
 
-confidence interval, 122, 128, 130, 138, 160, 239, 255, 258
+confidence interval, 130, 136, 138, 146, 168, 249, 265, 269
 
-conformity assessment, 324, 420
+conformity assessment, 334, 434
 
-Constitutional AI, 100, 381
+Constitutional AI, 106, 393
 
-content provenance, 282, 285, 287
+content provenance, 292, 295, 297
 
-context engineering, 150
+context engineering, 158
 
-context window, 77, 92, 102, 146, 150, 151, 233
+context window, 83, 98, 108, 154, 158, 159, 243
 
-contextual integrity, 338
+contextual integrity, 348
 
-continuous ranked probability score (CRPS), 186
+continuous ranked probability score (CRPS), 194
 
-convex hull, 191
+convex hull, 199
 
-convolutional neural network, 29, 59
+convolutional neural network, 33, 65
 
-Copyright cases, 8, 347, 348, 421, 434, 436, 437, 438
+Copyright cases, 10, 312, 357, 358, 435, 449, 452, 453
 
-correlated failure, 174, 364, 385
+correlated failure, 183, 374, 397
 
-corrigibility, 410, 411
+corrigibility, 423
 
-coverage, 132, 408
+coverage, 140, 421
 
-cross-entropy, 48, 52
+cross-entropy, 54, 58
 
-cyber operations, 356, 357
+cyber operations, 366, 367
 
 
 ## D {.unnumbered}
 
-dangerous-capability evaluation, 241, 385, 390
+dangerous-capability evaluation, 251, 397, 402
 
-Dartmouth workshop (1956), 13, 14, 40, 333, 450
+Dartmouth workshop (1956), 17, 18, 44, 343, 464
 
-data assimilation, 185, 190, 209
+data assimilation, 193, 198, 218
 
-data augmentation, 66
+data augmentation, 72
 
-data centre, 5, 211, 226, 227, 230, 231, 235, 243
+data centre, 7, 221, 234, 236, 237, 241, 242, 245
 
-data leakage, 207
+data leakage, 215
 
-data poisoning, 359
+data poisoning, 369
 
-decoder, 80, 109, 137, 185, 187, 200, 201, 398
+decoder, 86, 116, 146, 193, 195, 208, 209, 410
 
-decoding, 26, 87, 88, 89, 91, 92, 133, 216
+decoding, 30, 93, 94, 95, 97, 98, 141, 226
 
-deep learning, 19, 20, 27, 28, 29, 31, 37, 72
+deep learning, 23, 24, 31, 32, 33, 35, 41, 78
 
-deepfake, 277, 288, 289, 290, 305, 306, 308, 356
+deepfake, 287, 298, 299, 300, 301, 316, 318, 366
 
-DeepMind, 15, 30, 34, 95, 120, 122, 177, 195
+DeepMind, 20, 34, 38, 101, 128, 185, 203, 421
 
-DeepSeek, 33, 59, 93, 103, 104, 110, 233, 236
+DeepSeek, 37, 65, 99, 110, 117, 139, 243, 246
 
-defence in depth, 383, 412
+defence in depth, 395, 424
 
-deliberative alignment, 394
+deliberative alignment, 406
 
-density functional theory (DFT), 191
+density functional theory (DFT), 199
 
-desirable difficulty, 319
+desirable difficulty, 329
 
-deskilling, 272, 273, 476
+deskilling, 282, 283, 491
 
-difference-in-differences, 258
+difference-in-differences, 268
 
-diffusion language model, 88
+diffusion language model, 94
 
-diffusion model, 33, 34, 88, 95, 130, 183, 184, 278
+diffusion model, 37, 38, 94, 101, 138, 191, 192, 288
 
-Digital Omnibus, 274, 305, 413, 417, 418, 444, 465
+Digital Omnibus, 284, 315, 427, 431, 432, 459, 479
 
-Digital Services Act, 302, 303, 309, 418
+Digital Services Act, 313, 319, 432
 
-direct preference optimisation (DPO), 99, 382
+direct preference optimisation (DPO), 105, 106, 394
 
-disinformation, 278, 288, 289, 290
+disinformation, 288, 298, 299, 300
 
-displacement effect, 248
+displacement effect, 258
 
-distillation, 112, 129, 216, 238
+distillation, 119, 137, 226, 248
 
-distribution shift, 69, 281
+distribution shift, 75, 291
 
-Domar weight, 266
+Domar weight, 276
 
-dot product, 79, 80, 86, 102
+dot product, 85, 86, 92, 108
 
-double descent, 65, 67
+double descent, 71, 73
 
-dropout, 53, 58, 64, 65, 66
+dropout, 59, 64, 70, 71, 72
 
 
 ## E {.unnumbered}
 
-early fusion, 94, 95, 110
+early fusion, 100, 101, 116, 117
 
-early stopping, 65, 66, 381
+early stopping, 71, 72, 393
 
-ECMWF, 185, 186, 187, 188, 189, 190, 191
+ECMWF, 193, 194, 195, 196, 197, 198, 199
 
-effect size, 293, 313, 314, 340
+effect size, 303, 323, 324, 350
 
-electronic design automation (EDA), 219
+electronic design automation (EDA), 229
 
-elicitation, 154, 390
+elicitation, 162, 402
 
-embedding, 7, 76, 77, 78, 79, 83, 85, 86
+embedding, 9, 82, 83, 84, 85, 89, 91, 92
 
-emergent misalignment, 385, 388
+emergent misalignment, 397, 400
 
-emulator, 178, 179, 190, 191, 207
+emulator, 186, 187, 198, 199, 216
 
-encoder, 80, 83, 94, 102, 111, 185, 187, 398
+encoder, 86, 89, 100, 108, 118, 193, 195, 410
 
-environment (reinforcement learning), 15, 16, 106, 107, 110, 129, 156, 387
+environment (reinforcement learning), 19, 21, 112, 113, 117, 137, 164, 399
 
-epoch, 9, 53, 125, 127, 128, 130, 139, 140
+epoch, 11, 59, 133, 135, 136, 138, 147, 249
 
-Epoch AI, 9, 125, 127, 130, 239, 457, 459, 463
+Epoch AI, 11, 133, 135, 138, 239, 249, 471, 477
 
-Erdős problems, 200, 201
+Erdős problems, 208, 209
 
-estimand, 313
+estimand, 323
 
-European Commission, 16, 17, 38, 303, 304, 307, 421, 424
+European Commission, 20, 21, 42, 313, 314, 435, 438, 449
 
-EUV lithography, 219
+EUV lithography, 229, 231
 
-evaluation awareness, 393, 394, 395, 412
+evaluation awareness, 406, 407, 424
 
-evaluation gap, 352, 379, 390, 412
+evaluation gap, 362, 391, 403, 424
 
-evidence dilemma, 375
+evidence dilemma, 387
 
-Evoformer, 181, 182, 183
+Evoformer, 189, 190, 191
 
-expert system, 15, 18, 22, 24, 25, 38, 39, 40
+expert system, 19, 22, 26, 28, 29, 42, 43, 44
 
-export control, 8, 10, 218, 221, 222, 224, 225, 241
+export control, 10, 12, 228, 231, 232, 235, 440, 479
 
-exposure measure, 248, 249, 251, 262, 275
+exposure measure, 258, 259, 261, 272, 285
 
-external validation, 325, 326, 328, 340
+external validation, 335, 336, 338, 351
 
 
 ## F {.unnumbered}
 
-fair use, 434, 435, 436, 438, 444, 467
+fair use, 450, 451, 453, 459, 482
 
-false positive, 282, 321, 326, 328, 355
+false positive, 292, 331, 336, 338, 365
 
-FDA (US Food and Drug Administration), 322, 323, 324, 326
+FDA (US Food and Drug Administration), 332, 333, 334, 336
 
-feature, 13, 60, 390, 395, 396, 398, 399, 400
+feature, 17, 66, 402, 408, 409, 410, 411, 412
 
-feature map, 60, 61
+feature map, 66, 67
 
-floating-point format (FP32, FP16, BF16, FP8), 214
+floating-point format (FP32, FP16, BF16, FP8), 224
 
-floorplanning (chip design), 203
+floorplanning (chip design), 212
 
-FLOP, 111, 115, 116, 117, 122, 123, 124, 422
+FLOP, 118, 123, 124, 125, 130, 131, 132, 436
 
-forecast, 7, 185, 186, 187, 188, 189, 190, 450
+forecast, 9, 193, 194, 195, 196, 197, 198, 464
 
-formal verification, 201
+formal verification, 209
 
-formalisation, 202
+formalisation, 210
 
-foundation model, 19, 20, 28, 31, 33, 244, 324, 362
+foundation model, 23, 24, 25, 32, 35, 37, 254, 334
 
-foundry, 220
+foundry, 230
 
-framework convention, 433
+framework convention, 448
 
-frontier safety framework, 406, 408
+frontier safety framework, 418, 419, 421
 
-FTC (US Federal Trade Commission), 38, 306, 308, 334, 335, 336, 337
+FTC (US Federal Trade Commission), 43, 316, 318, 344, 346, 347
 
-full automation of labour, 453, 454
+full automation of labour, 467, 468
 
-function calling, 151, 152, 154, 164
+function calling, 159, 160, 162, 172
 
-fundamental rights impact assessment, 420
+fundamental rights impact assessment, 434
 
 
 ## G {.unnumbered}
 
-Gemini (Google models), 35, 79, 109, 110, 111, 112, 197, 393
+Gemini (Google models), 39, 41, 116, 118, 119, 205, 239, 405
 
-generalisation, 64, 65, 355, 380
+generalisation, 70, 71, 365, 392
 
-general-purpose AI model, 16, 20, 242
+general-purpose AI model, 20, 24, 252
 
-generative AI, 34, 207, 252, 265, 279, 320, 333, 436
+generative AI, 38, 215, 262, 264, 275, 289, 330, 343
 
-ghost work, 270, 276
+ghost work, 280, 286
 
-GNoME, 191, 192, 193, 194, 204, 208, 209, 210
+GNoME, 199, 200, 201, 202, 212, 216, 218
 
-goal misgeneralisation, 380
+goal misgeneralisation, 392
 
-Google, 15, 171, 185, 212, 217, 231, 283, 329
+Google, 20, 180, 193, 212, 222, 227, 293, 339
 
-GPT-2, 32, 75, 76, 83, 85, 86, 88, 89
+GPT-2, 36, 81, 82, 89, 91, 92, 94, 95
 
-GPT-3, 32, 33, 47, 97, 99, 111, 292, 404
+GPT-3, 36, 37, 53, 103, 118, 130, 302, 416
 
-GPT-4, 33, 109, 126, 127, 139, 294, 328, 404
+GPT-4, 37, 116, 134, 135, 147, 305, 338, 416
 
-GPT-5, 74, 139, 200, 369, 370, 387, 389, 403
+GPT-5, 80, 147, 208, 380, 381, 399, 401, 415
 
-GPT-6 Astra, 35, 110, 111, 125, 389, 403, 408, 409
+GPT-6 Astra, 39, 117, 118, 133, 401, 403, 420, 421
 
-GPU-hour, 233
+GPU-hour, 243
 
-gradient, 43, 49, 52, 53, 54, 55, 56, 214
+gradient, 49, 55, 58, 59, 60, 61, 62, 224
 
-gradient descent, 47, 49, 50, 53, 54, 68, 71, 72
+gradient descent, 53, 55, 56, 59, 60, 74, 77, 78
 
-graph neural network, 185, 191
+graph neural network, 193, 199
 
-GraphCast, 178, 185, 186, 187, 188, 189
+GraphCast, 186, 193, 194, 195, 196, 197
 
-graphics processing unit (GPU), 29, 63, 92, 94, 211, 212, 215, 216
+graphics processing unit (GPU), 33, 69, 98, 100, 221, 222, 225, 226
 
-Grok (xAI models), 106, 107, 110, 112, 126, 127, 134, 307
+Grok (xAI models), 112, 113, 117, 119, 134, 135, 142, 317
 
-grouped-query attention, 91, 93
+grouped-query attention, 97, 99
 
 
 ## H {.unnumbered}
 
-H100, 63, 88, 212, 213, 217, 223, 225, 233
+H100, 69, 94, 123, 222, 223, 227, 233, 243
 
-hallucination, 100, 102, 103, 108, 149, 349, 350, 351
+hallucination, 107, 108, 109, 115, 157, 359, 360, 361
 
-hallucination rate, 349, 350
+hallucination rate, 359, 360
 
-hard binding, 286, 287
+hard binding, 296, 297
 
-hard law, 413, 414
+hard law, 427, 428
 
-hardware FLOPs utilisation (HFU), 116
+hardware FLOPs utilisation (HFU), 124
 
-harmonised standard, 414, 422, 434
+harmonised standard, 428, 436, 449
 
-hazard, 93, 346, 374
+hazard, 99, 356, 385
 
-heuristic, 15, 17, 18, 21, 40, 97, 198
+heuristic, 19, 22, 25, 44, 103, 206, 207
 
-hidden layer, 43, 44, 45, 46, 71
+hidden layer, 49, 50, 51, 52, 61, 77
 
-hidden Markov model (HMM), 26, 28, 31
+hidden Markov model (HMM), 30, 32, 35
 
-high-bandwidth memory (HBM), 212, 217, 220, 223, 243, 464
+high-bandwidth memory (HBM), 222, 227, 230, 233, 253, 478
 
-high-level machine intelligence, 453, 454
+high-level machine intelligence, 467, 468
 
-High-Performance Linpack (HPL), 215
+High-Performance Linpack (HPL), 225
 
-Hinton, Geoffrey, 27, 29, 34, 48, 51, 53, 56, 371
+Hinton, Geoffrey, 31, 33, 38, 54, 57, 59, 62, 382
 
-Huawei, 185, 197, 225
+Huawei, 193, 205, 235, 236
 
-Hugging Face, 76, 85, 88, 166, 358, 362, 369, 389
+Hugging Face, 82, 91, 94, 174, 368, 372, 380, 401
 
-hybrid reasoning model, 111, 133
+hybrid reasoning model, 119, 141
 
-hyperparameter, 64, 214, 381
+hyperparameter, 70, 224, 393
 
 
 ## I {.unnumbered}
 
-IBM, 13, 26, 28, 29, 38, 41, 352
+IBM, 17, 30, 32, 33, 42, 47, 362
 
-IEA (International Energy Agency), 9, 217, 220, 226, 227, 229, 230, 235
+IEA (International Energy Agency), 11, 227, 230, 236, 237, 238, 240, 245
 
-illusions of understanding, 208, 210
+illusions of understanding, 216, 219
 
-ImageNet, 28, 29, 30, 31, 43, 57, 58, 69
+ImageNet, 32, 33, 34, 35, 49, 63, 64, 75
 
-implied truth effect, 286
+implied truth effect, 296
 
-in-context learning, 73, 84
+in-context learning, 79, 90
 
-indirect prompt injection, 166
+indirect prompt injection, 175
 
-induction head, 84
+induction head, 90
 
-inference, 17, 18, 21, 23, 24, 39, 93, 229
+inference, 21, 22, 25, 27, 28, 44, 99, 239
 
-influence operation, 278, 279
+influence operation, 288, 289
 
-initialisation, 55, 56, 58, 71
+initialisation, 61, 62, 64, 77
 
-inner alignment, 380
+inner alignment, 392
 
-instruction tuning, 96, 98
+instruction tuning, 102, 104
 
-instrumental convergence, 370, 371
+instrumental convergence, 381, 383
 
-intellectual debt, 208, 209
+intellectual debt, 217
 
-interconnect, 213, 216, 223
+interconnect, 223, 226, 233
 
-interleaved thinking, 106
+interleaved thinking, 112
 
-International AI Safety Report, 232, 239, 240, 279, 346, 349, 359, 379
+International AI Safety Report, 243, 249, 251, 356, 359, 369, 388, 391
 
-International Mathematical Olympiad, 37, 131, 134, 195, 196, 197, 449, 452
+International Mathematical Olympiad, 41, 139, 142, 203, 204, 205, 206, 463
 
-interpretability, 5, 8, 72, 379, 385, 395, 401, 403
+interpretability, 7, 10, 78, 391, 397, 407, 413, 415
 
-interval cancer, 327, 340, 479
+interval cancer, 337, 350, 494
 
-ironies of automation, 272, 476
+ironies of automation, 282, 491
 
-irreducible loss, 119, 120, 121
+irreducible loss, 127, 128, 129
 
 
 ## J {.unnumbered}
 
-jagged technological frontier, 136, 257
+jagged technological frontier, 144, 268
 
-Japan, 24, 220, 431, 433
+Japan, 28, 230, 445, 448
 
-JSON-RPC, 153, 154, 155, 477
+JSON-RPC, 161, 162, 163, 492
 
 
 ## K {.unnumbered}
 
-Kaplan, Jared, 51, 85, 118, 119, 120, 121, 122, 124
+Kaplan, Jared, 57, 91, 126, 127, 128, 129, 130, 132
 
-kernel (convolutional), 60, 61, 198, 199, 369
+kernel (convolutional), 66, 67, 207
 
-Kimi (Moonshot AI), 59, 92, 93, 105, 106, 107, 237, 239
+Kimi (Moonshot AI), 65, 98, 99, 112, 117, 118, 247, 249
 
-KL penalty, 381
+KL penalty, 393
 
-knowledge cut-off, 102
+knowledge cut-off, 109
 
-Kullback–Leibler (KL) divergence, 380, 381
+Kullback–Leibler (KL) divergence, 392, 393
 
-KV cache, 90, 92, 93, 213, 216
+KV cache, 96, 98, 99, 100, 223, 226
 
 
 ## L {.unnumbered}
 
-large language model (LLM), 5, 20, 103, 105, 107, 141, 249, 250
+large language model (LLM), 7, 24, 109, 111, 115, 150, 259, 260
 
-latent diffusion, 34, 278
+latent diffusion, 38, 288
 
-layer normalisation, 56, 58, 59, 73, 83, 84
+layer normalisation, 62, 64, 65, 79, 89, 90
 
-Lean (proof assistant), 194, 195, 196, 199, 200, 202, 203, 209
+Lean (proof assistant), 202, 203, 204, 207, 208, 210, 211, 218
 
-learning rate, 49, 50, 52, 53, 54, 58, 59, 122
+learning rate, 55, 56, 58, 59, 60, 64, 65, 130
 
-legible twin, 470, 477
+legible twin, 485, 492
 
-legitimate interest, 439, 440
+legitimate interest, 454, 455
 
-lethal trifecta, 167, 168
+lethal trifecta, 176
 
-linear attention, 94, 110, 112, 237
+linear attention, 100, 117, 120, 247
 
-linear probe, 400
+linear probe, 412
 
-Llama (Meta models), 44, 59, 76, 91, 93, 112, 115, 238
+Llama (Meta models), 50, 65, 82, 97, 99, 116, 119, 248
 
-LLM grooming, 302
+LLM grooming, 312
 
-LLM judge, 105, 106
+LLM judge, 111, 112
 
-logit, 48, 52, 87, 89
+logit, 54, 58, 93, 95
 
-loss, 32, 48, 49, 50, 118, 119, 120, 121
+loss, 32, 54, 55, 56, 126, 127, 128, 129
 
-loss function, 41, 47, 48, 73
+loss function, 47, 53, 54, 79
 
-loss of control, 346, 367, 368, 373, 374, 375, 376, 385
+loss of control, 356, 377, 378, 385, 386, 387, 388, 397
 
 
 ## M {.unnumbered}
 
-M-1 criterion, 468, 470, 474
+M-1 criterion, 483, 484, 489
 
-machine learning, 19, 27, 38, 185, 189, 204, 207, 352
+machine learning, 23, 24, 31, 42, 193, 197, 213, 215
 
-mandate (AP2), 171, 174
+mandate (AP2), 179, 180, 183
 
-marginal risk, 240, 241, 244, 361, 376, 408
+marginal risk, 250, 251, 254, 371, 387, 420
 
-mechanistic interpretability, 395
+mechanistic interpretability, 407
 
-memorisation, 67, 136, 437
+memorisation, 73, 144, 452
 
-memory bandwidth, 63, 212, 213, 215, 220, 223, 243
+memory bandwidth, 69, 222, 223, 225, 230, 233, 253, 254
 
-Meta, 33, 76, 94, 97, 110, 112, 237, 435
+Meta, 37, 82, 103, 116, 117, 120, 132, 450
 
-METR, 9, 137, 138, 160, 406, 410, 458, 459
+METR, 11, 145, 146, 168, 169, 418, 472, 473
 
-Microsoft, 27, 28, 29, 34, 167, 259, 271, 339
+Microsoft, 31, 33, 38, 175, 244, 269, 281, 349
 
-minibatch, 53, 56
+minibatch, 59, 62
 
-misalignment, 172, 202, 367, 372, 379, 385, 387, 408
+misalignment, 181, 211, 377, 378, 383, 391, 397, 399
 
-misinformation, 278, 280, 289, 290, 309
+misinformation, 288, 290, 299, 300, 319
 
-Mistral, 93, 231, 232, 237, 238, 422
+Mistral, 99, 242, 247, 248, 436
 
-mixture of experts (MoE), 47, 59, 87, 94, 109, 110, 111, 123
+mixture of experts (MoE), 53, 65, 93, 100, 116, 117, 118, 131
 
-model collapse, 129
+model collapse, 137
 
-Model Context Protocol (MCP), 35, 106, 151, 152, 153, 154, 155, 166
+Model Context Protocol (MCP), 39, 112, 159, 160, 161, 162, 163, 175
 
-model FLOPs utilisation (MFU), 116
+model FLOPs utilisation (MFU), 124
 
-momentum, 17, 54, 58, 64
+momentum, 21, 60, 64, 70
 
-moral crumple zone, 476
+moral crumple zone, 491
 
-multi-agent system, 166, 172, 352
+multi-agent system, 175, 180, 181, 362
 
-multi-head latent attention (MLA), 93
+multi-head latent attention (MLA), 99
 
-multilayer perceptron, 44, 45
+multilayer perceptron, 50, 51
 
-multiple sequence alignment (MSA), 180, 181, 182
+multiple sequence alignment (MSA), 188, 189, 190
 
-multi-token prediction, 88, 109
+multi-token prediction, 94, 116
 
-MYCIN, 22, 23, 24, 25, 40
+MYCIN, 26, 27, 28, 29, 44
 
 
 ## N {.unnumbered}
 
-Narayanan, Arvind, 207, 280, 289, 309, 371, 373, 376, 377
+Narayanan, Arvind, 215, 290, 299, 319, 383, 385, 388, 389
 
-narrow AI, 15
+narrow AI, 19
 
-next-token prediction, 96, 97, 101, 113
+next-token prediction, 102, 103, 107, 120
 
-NIST, 167, 174, 345, 353, 409, 466
+NIST, 175, 183, 355, 363, 421, 422, 480
 
-non-consensual intimate imagery (NCII), 306, 308, 356
+non-consensual intimate imagery (NCII), 316, 318, 366
 
-non-delegable safeguard, 468, 469, 471, 472
+non-delegable safeguard, 483, 484, 485, 487
 
-numerical weather prediction, 185
+numerical weather prediction, 193
 
-N-version programming, 474
+N-version programming, 489
 
-Nvidia, 29, 63, 125, 212, 214, 217, 223, 235
+Nvidia, 33, 69, 134, 222, 224, 227, 233, 245
 
 
 ## O {.unnumbered}
 
-obfuscated reward hacking, 401
+obfuscated reward hacking, 413
 
-observational study, 320, 327
+observational study, 330, 337
 
-OECD, 16, 17, 18, 39, 40, 165, 262, 434
+OECD, 20, 21, 22, 23, 44, 174, 272, 449
 
-omni model, 95
+omni model, 101
 
-OpenAI, 9, 32, 95, 109, 202, 369, 389, 408
+OpenAI, 11, 36, 101, 116, 210, 380, 401, 420
 
-open-weight model, 33, 211, 236, 237, 238, 239, 241, 243
+open-weight model, 37, 144, 221, 246, 247, 248, 249, 251
 
-orthogonality thesis, 370
+orthogonality thesis, 381
 
-OSWorld, 35, 157, 158
+OSWorld, 39, 164, 165, 166
 
-outcome homogenisation, 362, 470
+outcome homogenisation, 372, 485
 
-overfitting, 57, 64, 65, 66, 136
+overfitting, 63, 70, 71, 72, 144
 
-over-training, 116, 123, 124
+over-training, 124, 131, 132, 133
 
 
 ## P {.unnumbered}
 
-parallel test-time compute, 134
+parallel test-time compute, 142
 
-parameter, 26, 47, 85, 87, 116, 118, 122, 124
+parameter, 30, 53, 91, 93, 124, 130, 132, 247
 
-pass@k, 163
+pass@k, 171, 172
 
-permeability (of agent economies), 174
+permeability (of agent economies), 182, 183
 
-perplexity, 284, 301, 320, 321
+perplexity, 294, 312, 330, 331
 
-petaflop/s-day (PF-day), 118
+petaflop/s-day (PF-day), 126
 
-pLDDT, 181, 182
+pLDDT, 189, 190
 
-polarisation, 299
+polarisation, 309
 
-pooling, 59, 61, 259
+pooling, 66, 67, 269
 
-post-training, 88, 96, 99, 100, 102, 106, 113, 139
+post-training, 94, 102, 105, 106, 108, 112, 120, 148
 
-power law, 117, 118, 119, 120, 124, 139, 392
+power law, 125, 126, 127, 128, 132, 147, 404
 
-power usage effectiveness (PUE), 229
+power usage effectiveness (PUE), 240
 
-predetermined change control plan, 324
+predetermined change control plan, 334
 
-prediction market, 456
+prediction market, 470
 
-predictive parity, 355
+predictive parity, 365
 
-pre-emption, 425, 426, 429, 444
+pre-emption, 439, 440, 441, 443, 459
 
-pre-training, 7, 53, 96, 97, 107, 129, 130, 140
+pre-training, 9, 59, 102, 103, 113, 137, 138, 147
 
-probing, 389, 400
+probing, 401, 412
 
-process reward model, 105
+process reward model, 111
 
-production rule, 22
+production rule, 26
 
-productivity J-curve, 248, 269
+productivity J-curve, 258, 279
 
-prompt caching, 216
+prompt caching, 226
 
-prompt injection, 166, 167, 168, 169, 170, 175, 359, 385
+prompt injection, 174, 175, 176, 177, 179, 184, 369, 397
 
-proof assistant, 194
+proof assistant, 202
 
-propensity evaluation, 390, 392
+propensity evaluation, 402, 404
 
-protein design, 8, 177
+protein design, 10, 185
 
-proxy, 98, 105, 320, 353, 377, 381, 382, 385
+proxy, 104, 112, 174, 330, 363, 388, 393, 397
 
 
 ## Q {.unnumbered}
 
-quantisation, 92, 124, 215
+quantisation, 98, 132, 225
 
-quasi-experiment, 255, 313
+quasi-experiment, 265, 323
 
-query, key and value, 80, 81, 90
+query, key and value, 86, 87, 96
 
 
 ## R {.unnumbered}
 
-randomised controlled trial, 255, 311, 340
+randomised controlled trial, 265, 321, 351
 
-ReAct, 148, 149, 163, 175
+ReAct, 156, 157, 170, 184
 
-reanalysis, 177, 185, 190, 193, 194, 208, 209
+reanalysis, 185, 193, 198, 201, 202, 216, 218
 
-reasoning effort, 133
+reasoning effort, 141
 
-reasoning model, 7, 34, 103, 107, 111, 133, 139, 386
+reasoning model, 9, 38, 109, 119, 141, 147, 149, 398
 
-recommender system, 17, 38, 299, 303, 304
+recommender system, 21, 42, 309, 313, 314
 
-rectified flow, 278
+rectified flow, 288
 
-recurrent neural network (RNN), 62
+recurrent neural network (RNN), 68
 
-red-teaming, 168, 391, 392, 474
+red-teaming, 177, 403, 404, 489
 
-Redwood Research, 389, 392, 399, 403, 404
+Redwood Research, 401, 404, 411, 415, 416
 
-regularisation, 58, 64, 65, 66, 67, 72
+regularisation, 64, 70, 71, 72, 73, 78
 
-reinforcement learning, 30, 98, 103, 106, 107, 131, 140, 156
+reinforcement learning, 34, 104, 109, 112, 113, 139, 149, 164
 
-reinforcement learning from AI feedback (RLAIF), 100
+reinforcement learning from AI feedback (RLAIF), 106
 
-reinforcement learning from human feedback (RLHF), 33, 98, 99, 100, 103, 104, 380, 412
+reinforcement learning from human feedback (RLHF), 37, 104, 105, 106, 109, 110, 392, 424
 
-reinforcement learning with verifiable rewards (RLVR), 103, 113, 385
+reinforcement learning with verifiable rewards (RLVR), 109, 121, 397
 
-reinstatement effect, 248
+reinstatement effect, 258
 
-reliability (calibration), 140, 161, 162, 174, 211, 260, 348, 464
+reliability (calibration), 149, 169, 170, 171, 270, 358, 478, 481
 
-representation learning, 62, 72
+representation learning, 68, 78
 
-residual connection, 57, 58, 71, 73, 83
+residual connection, 63, 64, 77, 79, 89
 
-residual stream, 83, 84, 113
+residual stream, 89, 90, 120
 
-resolution, 81, 185, 433, 434, 451, 455
+resolution, 87, 193, 448, 449, 465, 469
 
-retrieval-augmented generation (RAG), 102
+retrieval-augmented generation (RAG), 108
 
-reward hacking, 98, 367, 368, 380, 383, 385, 387, 401
+reward hacking, 104, 377, 378, 392, 395, 397, 399, 413
 
-reward model, 98, 99, 100, 105, 380, 381, 382, 385
+reward model, 104, 105, 106, 111, 392, 393, 394, 397
 
-risk, 5, 346, 348, 361, 374, 375, 376, 377
+risk, 7, 250, 356, 358, 371, 387, 388, 419
 
-risk-based regulation, 414
+risk-based regulation, 428
 
-RMSNorm, 57, 59, 84
+RMSNorm, 63, 65, 90
 
-root mean square error (RMSE), 186
+root mean square error (RMSE), 194
 
-rotary position embedding (RoPE), 86, 87, 93, 95
+rotary position embedding (RoPE), 92, 93, 99, 101
 
-rubric-based reward, 105
+rubric-based reward, 111
 
 
 ## S {.unnumbered}
 
-sandbagging, 393, 394, 395
+sandbagging, 406, 407
 
-saturation, 136, 140, 159
+saturation, 61, 144, 149, 167
 
-scalable oversight, 382
+scalable oversight, 394
 
-scaling law, 7, 32, 73, 115, 117, 119, 120, 141
+scaling law, 9, 36, 79, 123, 125, 127, 128, 132
 
-scenario, 5, 367, 395, 460, 461, 462, 463, 471
+scenario, 7, 377, 407, 474, 475, 476, 477, 485
 
-scheming, 392, 393, 394, 395
+scheming, 404, 405, 406, 407
 
-scientific monoculture, 208
+scientific monoculture, 216
 
-self-attention, 77, 79, 80
+self-attention, 83, 85, 86
 
-self-supervised learning, 47
+self-supervised learning, 53
 
-sensitivity, 324, 325, 327, 359
+sensitivity, 334, 335, 337, 369
 
-shortcut learning, 68, 72
+shortcut learning, 74, 78
 
-signature capacity, 468, 470, 476
+signature capacity, 483, 484, 491
 
-silicon sampling, 298
+silicon sampling, 308
 
-single point of failure, 364, 468
+single point of failure, 374, 483
 
-sliding-window attention, 93
+sliding-window attention, 99
 
-societal resilience, 376
+societal resilience, 388
 
-soft binding, 286, 287
+soft binding, 296, 297
 
-soft law, 413, 414, 431
+soft law, 427, 428, 445
 
-softmax, 48, 79, 80, 87, 88, 89
+softmax, 54, 85, 86, 93, 94, 95
 
-South Korea, 220, 431
+South Korea, 230, 445
 
-sovereign AI, 242
+sovereign AI, 252, 253
 
-sparse attention, 93, 110
+sparse attention, 99, 117
 
-sparse autoencoder, 396, 397, 398, 411, 412
+sparse autoencoder, 408, 409, 410, 424
 
-special token, 76, 77
+special token, 82, 83
 
-specification gaming, 383, 385, 386
+specification gaming, 395, 397, 398
 
-specificity, 324, 325, 327
+specificity, 334, 335, 337
 
-speculative decoding, 87, 216
+speculative decoding, 93, 226
 
-state-space model, 94
+state-space model, 100
 
-stochastic gradient descent (SGD), 53, 54, 55, 58, 67
+stochastic gradient descent (SGD), 59, 60, 61, 64, 73
 
-structure module, 181, 182, 183
+structure module, 189, 190, 191
 
-superforecaster, 372, 373, 449, 451, 453, 455, 456, 457
+superforecaster, 383, 384, 463, 465, 467, 469, 470, 471
 
-superposition, 395, 396
+superposition, 407, 408
 
-SWE-bench, 132, 159, 160, 161
+SWE-bench, 140, 167, 168, 170
 
-sycophancy, 379, 385, 390, 398, 399
+sycophancy, 391, 397, 402, 410, 411
 
-symbolic AI, 14, 21
+symbolic AI, 18, 25
 
-synthetic data, 128, 129, 130, 460, 464, 475
+synthetic data, 136, 137, 138, 474, 478, 490
 
-synthetic media, 277, 280, 307, 308, 356, 430
+synthetic media, 287, 290, 318, 319, 366, 444
 
-SynthID, 282, 283, 285, 286
+SynthID, 292, 293, 295, 296
 
-systemic risk, 16, 303, 304, 347, 361, 421, 422, 423
+systemic risk, 20, 313, 315, 357, 371, 435, 436, 437
 
 
 ## T {.unnumbered}
 
-task-based framework, 275
+task-based framework, 285
 
-taxonomy (of risks), 166, 172, 174, 311, 346, 348, 367
+taxonomy (of risks), 175, 181, 183, 321, 356, 358, 377
 
-temperature, 88, 89, 90, 191, 192, 194
+temperature, 94, 95, 96, 199, 200, 202
 
-tensor core, 63, 212, 214
+tensor core, 69, 222, 224
 
-terawatt-hour (TWh), 226, 227, 461
+terawatt-hour (TWh), 236, 237, 238, 475
 
-test-time compute, 105, 130, 131, 132, 134
+test-time compute, 111, 138, 139, 140, 142
 
-test-time reinforcement learning, 195
+test-time reinforcement learning, 203
 
-text and data mining exception, 437
+text and data mining exception, 452
 
-time horizon, 35, 134, 137, 138, 139, 140, 160, 458
+time horizon, 39, 142, 145, 146, 147, 149, 150, 472
 
-time horizon (50%), 35, 134, 137, 138, 139, 140, 160, 458
+time horizon (50%), 39, 142, 145, 146, 147, 149, 150, 472
 
-token, 20, 76, 77, 80, 87, 90, 124, 282
+token, 24, 82, 83, 86, 93, 96, 132, 292
 
-tokeniser, 74, 75, 76, 118
+tokeniser, 80, 81, 82, 126
 
-tool use, 151, 152
+tool use, 159, 160
 
-top-k sampling, 89
+top-k sampling, 95
 
-total factor productivity, 266, 465
+total factor productivity, 276, 479
 
-total processing performance (TPP), 223
+total processing performance (TPP), 233
 
-training compute, 32, 120, 125, 126, 127, 140, 421, 422
+training compute, 36, 128, 133, 134, 135, 149, 435, 436
 
-transformer, 7, 31, 44, 56, 58, 62, 80, 113
+transformer, 9, 35, 50, 62, 64, 68, 86, 120
 
-transformer block, 56, 58, 73, 82
+transformer block, 64, 79, 88
 
-trend extrapolation, 456, 457, 463
+trend extrapolation, 470, 471, 477
 
-TSMC, 212, 219, 220, 243
+TSMC, 222, 229, 230, 253
 
 
 ## U {.unnumbered}
 
-UK AI Security Institute, 358, 359, 368, 391, 394, 404, 405, 409
+UK AI Security Institute, 368, 369, 378, 403, 406, 416, 418, 422
 
-uncertainty fan, 462, 463
+uncertainty fan, 476, 477
 
-United Kingdom, 8, 288, 301, 307, 308, 337, 410, 437
+United Kingdom, 10, 298, 311, 317, 318, 319, 422, 452
 
-United States, 8, 18, 227, 243, 254, 443, 444, 465
+United States, 10, 22, 238, 253, 458, 459, 479, 481
 
-universal jailbreak, 391
+universal jailbreak, 403, 404
 
-unlearning, 382, 385
+unlearning, 394, 397
 
 
 ## V {.unnumbered}
 
-value network, 104
+value network, 110
 
-vanishing gradient problem, 55
+vanishing gradient problem, 61
 
-vector, 27, 45, 78, 79, 80, 81, 83, 84
+vector, 31, 51, 84, 85, 86, 87, 89, 90
 
-vocabulary, 26, 74, 75, 76, 77, 87, 88, 118
+vocabulary, 80, 81, 82, 83, 84, 93, 94, 126
 
-voice cloning, 277, 279
+voice cloning, 287, 289
 
 
 ## W {.unnumbered}
 
-watermarking, 282, 288, 309
+watermarking, 292, 298, 319
 
-weight, 28, 47, 49, 54, 55, 60, 65, 92
+weight, 32, 51, 53, 55, 60, 66, 71, 98
 
-weight decay, 55, 58, 64, 65, 66, 67
+weight decay, 61, 64, 70, 71, 72, 73
 
-workflow (agentic), 147, 154, 157, 158, 159, 178, 201, 330
+workflow (agentic), 155, 162, 165, 166, 167, 186, 209, 340
 
-world model, 95
+world model, 101
 
 
 ## X {.unnumbered}
 
-x402, 171
+x402, 180
 
-xAI, 106, 107, 110, 112, 131, 134, 230, 375
+xAI, 112, 113, 117, 119, 139, 142, 240, 387
 
