@@ -532,3 +532,17 @@ Report: review3/r-ch07.md; cross-chapter items from review3/00-VERDICT.md sectio
 - **Could not verify, TSMC CoWoS quotation.** Quotation marks removed; paraphrased.
 - **Reader notes.** 1 done (four chokepoints named); 2 done (bullet split); 3 done via S8; 6 done (GLM-5 and DeepSeek-V4-Pro sizes in text, with citations); 7 done (one sentence on how the Epoch and Arena measures differ); 8 done ("somewhat more than"). Skipped 4 (moving the H800 sentence to §7.3: it already cross-refers to §7.3 and the move is structural) and 5 (LBNL paragraph is accurate; layout only).
 - **Bib housekeeping.** google2026gemma URL updated to https://gemma.ai/resources/terms/.
+
+## Fourth review fixes (November 2026)
+
+- M1: Ironwood quotation corrected to "more than 24x the compute power" (Google blog, 9 April 2025); verb changed to "supporting".
+- M2: Kimi K3 now described as post-trained with MXFP4 weights (quantisation-aware training from the fine-tuning stage onward) and published in that format, per the model card.
+- S1: Three Mile Island now "being restarted to supply Microsoft" (Constellation restarts; Microsoft buys the power).
+- S2: "first use" claim attributed to law firms ("first known use"); added @mayerbrown2026commerce (copied identically from ch13.bib).
+- S3: Web search on 26 November 2026 found no MOFCOM extension of the gallium/germanium suspension. Sentence now says the suspension was due to expire on 27 November 2026 with no extension announced by 26 November, and keeps that the extension of other truce measures to 10 January 2027 did not cover it. Re-check before printing.
+- S4: Consistency fix made in ch14.md (base case "about 950 TWh (945 TWh in its data tables)"); ch07 unchanged.
+- S5: PJM monitor quotation now attached to "the conditions behind record capacity prices".
+- S6: Qwen3.8 now "after Kimi K3, the largest model in Table 7.5" (ranking limited to the table).
+- S7: Mistral sentence reworded to remove the repeated "life-cycle assessment".
+- S8: Nvidia China outlook now "outlooks for the following quarters" and "data-centre compute revenue" (Q3 CFO commentary, 17 Nov 2026).
+- Could-not-verify items: no narrowing suggested; left unchanged.

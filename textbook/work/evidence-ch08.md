@@ -448,3 +448,11 @@ Report: review3/r-ch08.md. Cut-off moved to late November 2026. No cross-chapter
 - **S8 BTOS (optional currency, applied because of the November cut-off).** Text and Table 8.2 (and tbl-08-01.md spec) now 25.0% for 19 Oct–1 Nov 2026 (published 19 Nov 2026), per the report; census2026business updated. The new employee-use question (27.6%) was not added (new material).
 - **Could not verify items.** All low risk; no change.
 - **Reader notes.** 1 done (clause explaining the "Super Intelligence" renaming); 2 done (M2); 4 done (paragraph break before "A different gap"); 5 done (second "16 developers" dropped). Skipped 3 (Aghion & Bunel paragraph is correct; trimming is stylistic); 6 and 7 need no change per the report.
+
+## Fourth review fixes (November 2026)
+
+- M1: Dell'Acqua et al. effect outside the frontier corrected to "19 percentage points" in the text and Table 8.3.
+- M2: Figure 8.2 caption now says the bars are 95% intervals for Peng et al. and both METR studies (METR post, 24 Feb 2026). Changed in ch08.md and figures/specs/fig-08-02.md (note on the data row updated too). The plotted intervals in print/figs_ch08.py already match (−38 to +9; −15 to +9), so no change there.
+- S1: Table 8.3 METR follow-up row now gives the 95% CIs (−38% to +9%; −15% to +9%).
+- S2: Eloundou headline now "at least half are exposed" (arXiv 2303.10130 abstract).
+- Could-not-verify items: no narrowing suggested; left unchanged.
