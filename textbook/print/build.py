@@ -134,7 +134,7 @@ def front_matter(toc):
   <p class="t-author">{AUTHOR}</p>
 </section>
 <section class="copyright">
-  <p>Evidence in this book is current to October 2026. Web sources were checked between 20 and 25 October 2026. References follow APA 7 and are numbered. Sources are not cited in the running text: the line at the foot of each page lists the numbers of the sources used on that page.</p>
+  <p>Evidence in this book is current to late November 2026. Web sources were checked between 20 October and 26 November 2026. References follow APA 7 and are numbered. Sources are not cited in the running text: the line at the foot of each page lists the numbers of the sources used on that page.</p>
   <p>Figures drawn for this edition. Set in EB Garamond, with Noto Serif Devanagari, Noto Serif KR, Noto Sans Math and Noto Sans Mono for Hindi, Korean, mathematical symbols and code (all SIL Open Font License).</p>
   <p class="ai-note"><strong>How this book was written.</strong> {AI_NOTE}</p>
   <p>© {YEAR} {AUTHOR}. All rights reserved.</p>
@@ -197,6 +197,11 @@ def notes_to_pageline(body):
         return m.group(0) + f'<span class="srcm" id="srcx{mark.i}" data-nums="{"|".join(ks)}">\u2060</span>'
     mark.i = 0
     body = re.sub(r'<span class="citation" data-cites="([^"]+)">.*?</span>', mark, body, flags=re.S)
+    def refnums(ks):
+        # short lists stay on one line; long ones may break after a comma (never inside a number)
+        if len(ks) <= 4:
+            return f'<span class="refnums">[{", ".join(map(str, ks))}]</span>'
+        return '<span class="refnums long">[' + ", ".join(f'<span class="nobr">{k}</span>' for k in ks) + ']</span>'
     # captions name their sources by reference number ("Source: 412, 418."), never by author and year
     def caption_numbers(m):
         found = []
@@ -209,14 +214,14 @@ def notes_to_pageline(body):
             n = r.group(0).count("\x00")
             ks = [k for grp in found[:n] for k in grp]
             del found[:n]
-            return f'<span class="refnums">[{", ".join(map(str, sorted(set(ks))))}]</span>'
+            return refnums(sorted(set(ks)))
         return re.sub(r'\x00(?:(?:<span class="srcm"[^>]*>\u2060</span>)*(?:\s*[;,]\s*|\s+and\s+)\x00)*', collapse, cap)
     body = re.sub(r'<(figcaption|caption)\b.*?</\1>', caption_numbers, body, flags=re.S)
     # in table cells the citation text is dropped (with the space before it): the page's source line carries it
     def table_cells(m):
         def cell_nums(c):
             ks = sorted({num[k] for k in c.group(1).split() if k in num})
-            return f' <span class="refnums">[{", ".join(map(str, ks))}]</span>'
+            return " " + refnums(ks)
         return re.sub(r'\s*<span class="citation" data-cites="([^"]+)">.*?</span>(?=<span class="srcm")', cell_nums, m.group(0), flags=re.S)
     body = re.sub(r'<tbody>.*?</tbody>', table_cells, body, flags=re.S)
     # "Kestin et al. (2025)" -> "Kestin et al."

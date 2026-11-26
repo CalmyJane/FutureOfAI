@@ -115,6 +115,8 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 7.6pt; line-hei
 table caption { break-after: avoid; }
 tbody tr:first-child, tbody tr:last-child { break-inside: avoid; }
 .refnums { white-space: nowrap; }
+.refnums.long { white-space: normal; }
+.refnums .nobr { white-space: nowrap; }
 
 /* index */
 .index > h1 { string-set: runhead content(); }
