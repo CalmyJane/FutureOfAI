@@ -391,3 +391,17 @@ Source reports: review2/r-ch00-02.md (Ch2 items), review2/r-technical-coverage.m
 - Not changed: LeNet "millions of bank cheques a month" (reviewer agrees it matches LeCun et al. 1998 §I).
 
 pandoc --citeproc: no missing keys; every bib key cited. Scanner: 4 blocks flagged: three worked examples (one-weight example, backprop example ×2; covered by the preface statement on worked examples) and the debate-box closing.
+
+## Third review fixes (November 2026)
+
+Source: review3/r-ch02.md. Cut-off moved to late November 2026.
+
+- M1: DeepSeek-V4 no longer called a "preview" (§2.2 and §2.5 list): preview April 2026, official versions 31 July (V4-Flash-0731) and 13 August 2026 (V4-Pro-0813), same structure. New bib entry deepseekai2026v4pro (DeepSeek API Docs GA notice, 13 August 2026; company source) cited alongside the preview report.
+- S1: Glorot and Bengio's stated reason added (non-zero mean output saturates the top hidden layer).
+- S2: "Each block of a transformer language model contains two sub-layers"; "a residual connection around each of its sub-layers".
+- S3: LeCun et al. 2015 pinpoint → pp. 438–439.
+- S4: reinforcement-learning sentence now cites Silver et al. 2016 for game playing only; reasoning models pointed to Chapters 1 and 3.
+- S5: "although historians still debate how much it mattered" deleted (unsupported by the cited section).
+- S6: dropout baseline → "standard networks without dropout or unsupervised pre-training reached about 1.60% error".
+- Could not verify (NYT 1958 quote, AlexNet p. 1098): no change; both already attributed and low risk.
+- Reader notes: 1 forward pointer added in the opening ("only a fraction of which it uses at any one step (Section 2.2)"). 2 "A greyscale photograph". 3 Muon sentence rewritten so "orthogonalising" is explained before it is named. 4 6N step spelled out (2 forward + 4 backward). 5 double-descent paragraph split before Belkin. 6 half-sentence added that small norm alone does not predict generalisation (Zhang et al.). 7 Table 2.5 caption now explains "(small)".

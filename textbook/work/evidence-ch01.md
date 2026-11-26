@@ -447,3 +447,24 @@ Source report: review2/r-ch00-02.md (Ch1 items), review2/00-VERDICT.md items D25
 - Not changed: Bick "has outpaced both PCs and the internet" (verbatim in the published abstract, see above); "700 million weekly users" (chatterji2025how; verified in an earlier pass).
 
 pandoc --citeproc: no missing keys; every bib key cited. Scanner: 1 block flagged (Debate-box closing, the chapter's own framing).
+
+## Third review fixes (November 2026)
+
+Source: review3/r-ch01.md and review3/00-VERDICT.md section B. Cut-off moved to late November 2026.
+
+- M1: MCP quotation corrected to Anthropic's wording, "a new standard for connecting AI assistants to the systems where data lives"; sentence now says it was released as open source.
+- M2: "in date order," removed from the Figure 1.3 caption (chapter and spec fig-01-03.md). The overflow of the bracketed number list is a production fix (srcnotes.lua/CSS) left to the coordinator (verdict C3). Caption key bonifacic2026openai replaced by the primary openai2026devday (S2), same length.
+- M3: 1996 match now "4–2 in 1996, with three wins, two draws and one loss" (IBM history page).
+- S1 / B5: ClockBench sentence now gives 25 October 2026 (Gemini 4 Argon, 83.3%) and late November 2026 (Claude Fable 5.2 Max, released 9 November, 87.8%); human 90.7%. Bib clockbench2026clockbench urldate 2026-11-22, note records both readings. Matches the canonical figures for ch04.
+- S2: opening sentence now cites openai2026devday (new bib entry) before the press reports.
+- S3: Nate sentence now cites the SDNY press release (new bib entry usdoj2025techceo; confirmed by web search 26 Nov 2026 as press release 25-082, April 2025; no later disposition found), "securities and wire fraud", allegations wording kept; TechCrunch kept as second source.
+- S4: Kaplan et al. now "set out for language models in an influential 2020 preprint".
+- S5: "non-trivial" hyphen restored (matches source and ch03).
+- S6: Brown et al. 1990 vocabularies 1,000 English and 1,700 French words.
+- S7: §1.3 now says the foundation-model report's authors were "most of them at Stanford University", so the §1.7 back-reference holds.
+- S8: "used it" → "used generative AI".
+- S9: added "Carbon became generally available on 10 November" (cut-off now late November).
+- S10, S11: SKIPPED here. They concern ch00-preface.md and the copyright page, which are outside this chapter's files; passed to the coordinator.
+- S12: mccarthy2006proposal pages → 12--14 (checked: the AAAI OJS PDF of the reprint has three pages, 12–14; the OJS metadata lists 12 only). Further reading "Twelve pages" → "A short proposal that shows …".
+- Could not verify items: none required a text change (Shannon wording, Lighthill pages, McDermott, Samuel are unchanged; the Carbon-before-31-October question is moot because the sentence now dates the 83.3% reading to 25 October).
+- Reader notes: 1, 2, 4, 9 covered by M2, S7, S8, S12. 3: Deep Blue sentence now says the builders' account "counts differently from IBM's history page" and gives "30 general-purpose processors". 5: scope sentence now says traditions "as distinct from the funding programmes that Section 1.5 mentions". 6: AGI paragraph split before "The EU AI Act does not use the term AGI". 7: not applied (stylistic repetition, no unclear sentence). 8: "in skilled-human working time" → "judged by how long the tasks take skilled people".

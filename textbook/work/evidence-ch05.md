@@ -426,3 +426,18 @@ Cuts
 - §5.7 (payments) cut from 651 to 421 words: AP2 mandate detail condensed, Mastercard Verifiable Intent and the FIDO standards follow-on dropped, x402 flow shortened. Bib entries dioquino2025coinbase and fidoalliance2026fido removed (no longer cited); x402 May 2025 date now rests on coinbase2025x402 (Coinbase blog, 6 May 2025).
 
 Words: 10,707 → about 11,380 (+673).
+
+## Third review fixes (November 2026)
+
+Source: review3/r-ch05.md (22 November 2026). Cut-off moved to late November 2026.
+
+- **M1 (SWE-bench Pro audit).** §5.4 now reports OpenAI's 8 July 2026 audit (731 public tasks, about 30% broken; 27.4% automated, 34.1% human), its withdrawn February recommendation and Epoch AI's "Flawed" rating (1 Sep 2026). Table 5.2 caption gains a sentence and both sources. New bib keys: openai2026separating, epoch2026swebenchpro.
+- **S1 (τ³ banking).** Table 5.3 caption: best single-model score about 55% (Aug 2026); Sierra verified 73% for Principled Machines' Cortex 0.1, a custom system, in November 2026 (single run).
+- **S2.** Glossary τ-bench entry now assigns telecom to τ²-bench and banking to τ³-bench.
+- **S3.** §5.7 end of payments paragraph now cites AP2's FAQ ("establish accountability and liability principles"), so the §5.8 back-reference holds; added @ap22026agent.
+- **S4.** CVE-2026-25253: "a crafted link, once opened, made OpenClaw connect…" (NVD UI:R).
+- **S5.** fidoalliance2026google retitled as "The Payers: …", described as a FIDO in the News summary, 29 April 2026.
+- **S6.** barres2025tau2 now cites PMLR vol. 306, pp. 6736–6782, with the PMLR URL.
+- **Currency.** MCP revision "current in November 2026"; A2A "version 1.0 in November 2026"; Scale SWE-bench Pro top entry 61.5% "in November 2026" (all re-checked by the reviewer on 22 Nov).
+- **Could not verify, Lemkin.** Narrowed to "he had instructed it to freeze the code" (The Register). Other items (hadfield2025economy chapter number, nasr2025attacker pages, Coinbase x402 page, OpenAI CUA/GPT-6 Astra pages) left unchanged: low priority, no change suggested.
+- **Reader notes.** 1: Table 5.1 reference now names OSWorld and says "below". 4: pass^1 given as 0.796 (79.6% in Table 5.3). 5: "these four domains (three in τ²-bench, banking in τ³-bench)". 6: covered by S3. 7: "formal guarantees, whose cost can be measured on AgentDojo". 8: "as Moltbook suggested". 9: one sentence added on how the models reached the internet (zero-day in a package registry proxy, in pursuit of the evaluation's answers), consistent with §12.2. 2 and 3 (number-dense paragraphs) not changed: no sentence is wrong, and cutting figures would remove sourced content.

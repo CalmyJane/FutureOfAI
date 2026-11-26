@@ -449,3 +449,22 @@ Report: review2/r-ch05-06.md (Chapter 6 items). Word count 11,227 → 11,658.
 - **Trims to pay for additions:** MatterGen GPa numbers, A-Lab 43/41 parenthesis, AlphaEvolve repeated "According to the company", Lean paragraph.
 - **Not changed:** Seed-Prover "after the deadline" (reviewer: acceptable); AlphaEvolve 48-multiplication follow-ups (optional; no source verified in time).
 - **Bibliography items for kapoor2025ai / wang2023voyager:** these entries live in bib/ch05.bib and already carry the TMLR journal field; nothing to change in ch06.bib.
+
+## Third review fixes (November 2026)
+
+Source: review3/r-ch06.md (22 November 2026). Cut-off moved to late November 2026.
+
+- **M1 (credit dispute, fairness).** Replaced "OpenAI denied it". Buckmaster's account is now given as his ("by OpenAI's own account to him"); OpenAI's position as stated on its page: effort began 1 September "after hearing a rumor" later linked to Alpöge; recognised "the priority of their work on forced Euler"; denied seeing or using their work; the 8 September "cannot rule out" concession is followed by its 10 September finding that the Codex prompts "could not have influenced the system in any way, including through training". Buckmaster's "not accusing anyone of anything" added. New bib key: openai2026navierstokes. Paragraph split at "OpenAI said" (reader note 5).
+- **M2 (20 November 2026).** Added the Buckmaster–Alpöge unforced blow-up claim, marked unconfirmed, with "unpolished and heavily LLM-assisted" and the unreleased computer check. New bib keys: hall2026ai (byline "Peter Hall, edited by Joseph Howlett" confirmed on the SciAm page, 26 Nov 2026), thenextweb2026navierstokes. Companion Euler paper and the Lei–Ren exposition (optional) not added.
+- **M3 (Beel et al.).** Quotations restored to the source: four of seven papers "contained incorrect or hallucinated numerical results"; "an unmotivated undergraduate student rushing to meet a deadline". Earlier rows of this log that quote "rushed undergraduate paper" are superseded.
+- **M4 (Co-Scientist).** Now "a company preprint in February 2025 and in *Nature* in May 2026"; gottweis2025towards replaced by gottweis2026accelerating (Nature 655, 487–496, doi 10.1038/s41586-026-10644-y). The "no independent comparison" sentence kept; the reviewer could not read the Nature evaluation section (paywall), so a human should glance at it.
+- **S1.** Letter "signed initially by 25 … (28 by November 2026)"; fields2026severe howpublished updated.
+- **S2.** Bastounis, Circelli and Hansen placed at King's College London and Cambridge; "King's College London's announcement".
+- **S3.** Sawin: "In a preprint released alongside it".
+- **S4.** Alpöge described as "an Anthropic researcher, working in a personal capacity".
+- **S5.** Bloom: "appears to answer the question in the spirit it was intended".
+- **S6.** EMS: "called it a concern for open science that the model was 'internal to OpenAI and not generally accessible'".
+- **S7.** lean2026mathlib URL now https://mathlib.org/mathlib_stats.html (296,355 theorems on 22 Nov); text says "in November 2026".
+- **S8.** "about 10,000 AI agents running on an unreleased model".
+- **Reader notes.** 1: Gemini and OpenAI both "two 4.5-hour sessions" (text and Table 6.2). 3: Gemini 2.5 Pro "released after the contest and added in a later version". 4: #728 paragraph split after the Lean check. 7: alternatives (C) and (D) glossed as "the two that allow an external force". 8: handled by S4 and the unconfirmed label in M2. 9: GNoME hull parenthesis added. 2 (Strassen claim, already attributed) and 6 (number-dense USAMO/IMO paragraph) not changed.
+- **Could not verify.** Bloom X post, Wei thread, Nobel press release, AlphaFold 3 details: low risk, no change.

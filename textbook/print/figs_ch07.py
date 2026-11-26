@@ -77,7 +77,7 @@ def _yr(y, m, d=1):
 @fig("fig-07-02")
 def f0702():
     fig, ax = canvas(3.55, ylim=(-6, 74))
-    t0, t1, xa, xb = 2022.62, 2026.72, 3.0, 88.0
+    t0, t1, xa, xb = 2022.62, 2026.95, 3.0, 88.0
 
     def X(t):
         return xa + (t - t0) / (t1 - t0) * (xb - xa)
@@ -86,7 +86,7 @@ def f0702():
     ax.plot([X(t0), X(t1)], [ay, ay], color=INK, lw=0.8)
     for yr in (2023, 2024, 2025, 2026):
         ax.plot([X(yr)] * 2, [ay - 0.8, ay + 0.8], color=INK, lw=0.6)
-        label(ax, X(min(yr + 0.5, 2026.38)), ay + 1.9, str(yr), fs=6.3, color=G2)
+        label(ax, X(min(yr + 0.5, 2026.5)), ay + 1.9, str(yr), fs=6.3, color=G2)
     # (date, label, note, kind, side(+1 above/-1 below), level, align)
     ev = [
         (_yr(2022, 10, 7), "7 Oct 2022", "Advanced chip controls", "licences for advanced AI\nchips and tools to China", "t", 1, 1, "l"),
@@ -98,6 +98,7 @@ def f0702():
         (_yr(2025, 9, 29), "29 Sep / 10 Nov 2025", "Affiliates rule, then stayed", "50%-owned affiliates of listed\nentities covered; stayed for a year", "t", 1, 2, "l"),
         (_yr(2026, 1, 15), "15 Jan 2026", "H200 case-by-case", "China review moved from\ndenial to case-by-case", "o", 1, 1, "l"),
         (_yr(2026, 7, 10), "10 Jul 2026", "UAE licence-free access", "partner access to advanced\ncomputing items", "d", -1, 1, "r"),
+        (_yr(2026, 11, 19), "9 / 19 Nov 2026", "Stay extended; remote access", "Affiliates stay to Jan 2027; diffusion\nrule rescinded; data-centre licences", "t", -1, 2, "r"),
     ]
     lev = {1: 6.0, 2: 21.5}
 
@@ -125,6 +126,11 @@ def f0702():
     xs_, xa_ = X(_yr(2025, 11, 10)), X(_yr(2025, 9, 29))
     ax.plot([xs_, xs_, xa_], [ay + 1.6, ay + 4.0, ay + 4.0], color=G2, lw=0.5, zorder=1)
     mark(xs_, "o")
+    # extension of the stay (9 Nov 2026): own marker, joined to the 19 Nov 2026 stem
+    xe_, xr_ = X(_yr(2026, 11, 9)), X(_yr(2026, 11, 19))
+    ax.plot([xe_, xe_, xr_], [ay - 1.6, ay - 4.0, ay - 4.0], color=G2, lw=0.5, zorder=1)
+    mark(xe_, "o")
+    mark(xr_, "t")
     from matplotlib.lines import Line2D
     hs = [Line2D([], [], ls="", marker="s", ms=4.6, mfc=INK, mec=INK, label="tightening"),
           Line2D([], [], ls="", marker="o", ms=5, mfc="white", mec=INK, label="loosening / withdrawal"),
