@@ -434,3 +434,10 @@ Report: review3/r-ch04.md. Cut-off now late November 2026.
 - Currency: "as of October 2026" (largest Epoch estimate, GPT-6 Astra) and "By October 2026" (Scale HLE top entry) changed to November 2026; both still true on 22 November per report.
 - Reader notes: 2 (semi-private explained), 4 ("8 percentage points"), 6 (METR sentence split) applied. Note 5 (Kaplan twelfth) skipped: correct and sourced; the report calls it inessential, not unclear enough to cut.
 - Could not verify: gerstgrasser2024model venue, Truong bar labels, singh2025leaderboard venue: left for a human check; no text change (book's reading of Truong fits the paper per report).
+
+## Fourth review fixes (November 2026)
+
+- S1: ClockBench cross-reference already read "(Section 1.7)"; checked against ch01.md (Section 1.7 heading at :177, ClockBench passage at :255). No change needed.
+- ClockBench consistency with Ch. 1: added "ahead of Google's Gemini 4 Carbon at 85.0%" after Fable 5.2 Max's 87.8%, matching ch01.md:255.
+- S2: HLE sentence now "On Scale AI's leaderboard, last updated in September 2026, the top entry, GPT-6 Astra, scored 54.8% on the full public set". Later "reached 54.8% within two years" unchanged.
+- Could not verify (Epoch MFU documentation, HLE 13.4% in the Nature version, The Decoder's "at least 16 hours"): no action; underlying values confirmed per report.

@@ -468,3 +468,12 @@ Report: review3/r-ch03.md. Cut-off now late November 2026.
 - Could not verify (GPT-6 "tiered family"; Gemini 4 Hydrogen): no action, as report advises.
 - Reader notes: 3 (duplicate DPO-box citation removed), 4 ("In practice the two are combined"), 5 ("stands out"), 6 (Fig. 3.2 caption and spec: "␣ marks a leading space."), 7 ("increasingly"), 8 (see M2), 9 ("in an outside estimate for this closed model") all applied. Notes 1–2 covered by M2/S6.
 - Computation dates of 22–23 October 2026 (Tables 3.1, 3.3, 3.7, nucleus box) left unchanged: they record when the author ran the code.
+
+## Fourth review fixes (November 2026)
+
+- S1: Grok 4.7 now attributed to xAI's "successor company, renamed SpaceXAI in July 2026 and SpaceXSI in October" (:389); Table 3.9 row developer "SpaceXAI"; :459 "SpaceXAI says". Grok 4 (2025) references keep "xAI". Bib `xai2026grok47`: author SpaceXAI, howpublished notes both renames, urldate 2026-11-26. Consistency change outside this chapter: ch09.md:246 now says Grok's developer "was renamed from xAI to SpaceXAI in July 2026 ... and to SpaceXSI in October".
+- S2: anti-distillation sentence now says the safeguard has applied since Fable 5.1, stops API users editing earlier context to extract Claude's reasoning, and Opus 5.5 also carries it.
+- S3: "OpenAI closed the Sora app in April 2026 and its API in September"; new bib entry `openai2026sora` (OpenAI Help Center).
+- S4: GPT-6.2 now cited to new entry `openai2026gpt62` (OpenAI blog, 17 Nov 2026). Anthropic's own 9 November Fable 5.2 post not opened in this pass, so SD Times citation kept alone.
+- S5: emoji sentence reworded: "A rare character need not have a token of its own: it is spelled out in byte-level pieces."
+- Could not verify (software versions, GPT-6 Astra page claims, Gemma 3 / Veo 3 sources): no action; report suggests none.
