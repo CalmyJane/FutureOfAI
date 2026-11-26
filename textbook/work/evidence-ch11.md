@@ -488,3 +488,9 @@ Sources re-opened on 26 Nov 2026 unless stated: Anthropic 9 Sep 2026 post (fourt
 - S6: Checked the arXiv v2 HTML Table 2: Grok 4 resisted in 89.2% (95% CI 87.2–91.0%) under Prompt E, the allow-shutdown instruction in the system prompt; the 97% in the abstract is not tied to a model in the text layer. Sentence changed to "Grok 4 still interfered in about 89% of trials when its system prompt told it to allow shutdown". This also shortens the passage (reader note 6).
 - Could not verify: Five Eyes signatory count left as is (low importance; date and quote confirmed). Arizona investigation and WorkOS not added (no primary source). CA$880 not in text as a figure needing change.
 - Reader notes: 2 (paragraph split into three; Mythos 5 release-date ambiguity fixed), 3 (DARPA find rate and Palisade ranking named), 4 (automation bias defined in passing), 5 (XPT sample sentence rewritten for readers), 6 (see S6), 7 ("joint leader with Grok 4"), 8 (Table 11.1 row now names military AI as left to "other fora"; ISR 2026 cell adds military AI, matching Section 11.4's "Neither Safety Report covers military AI") done. Reader note 1 (Hugging Face story met three times) skipped: structural, and each mention already defers to Section 12.2.
+
+## Fourth review fixes (November 2026)
+
+- S1: Charlotin database count updated to "By late November 2026 ... more than 2,300 cases" (database showed 2,338 on 25 November 2026).
+- S2: Table 11.3 row 3 now cites the Anthropic assessment of the AISI incident (new bib entry `anthropic2026ukaisi`); caption source list adds `@aisi2026investigating` and `@anthropic2026ukaisi`.
+- S3: Deskilling paragraph now notes the later prospective trial that found no such effect, citing `@pedersen2026learning` (entry copied identically from ch08.bib).

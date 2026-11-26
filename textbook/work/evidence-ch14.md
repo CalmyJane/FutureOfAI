@@ -560,3 +560,9 @@ Source: review2/r-ch13-14.md (M1–M5, minor items on ch14), review2/00-VERDICT.
 - S9: GO-Science June 2026 update noted.
 - Reader notes: 2 (refit with one more model), 4 (Hypermind marked in rows 1–2 of Table 14.1), 5 (paragraph split at "how alike their actions are"), 6 ("all six of these chapters"), 7, 8 ("By September 2027 the multiplier"), 9 ("contested … proof claim") done.
 - Could-not-verify items: none required a change (low priority per the report).
+
+## Fourth review fixes (November 2026)
+
+- S1 / production S7: GPT-5.6 Sol sentence now reads: at the government's request, first released only to government-approved partners, before a general release in July (cites `openai2026previewing`, `vanklinken2026gpt`, new entries). Matches ch12 and ch13.
+- S2: "a successor due in October" had no support and was replaced with "the planned successor to GPT-6 Astra".
+- S3: The updated UK scenario set is now cited (new entry `goscience2026ai`, GO-Science, 15 June 2026, title and date confirmed on GOV.UK).

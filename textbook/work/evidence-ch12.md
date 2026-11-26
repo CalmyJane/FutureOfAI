@@ -527,3 +527,11 @@ Sources re-opened on 26 Nov 2026 unless stated: Anthropic 9 Sep 2026 post; Al Ja
 - Currency: Table 12.5 "Latest version (Oct 2026)" and caption → November 2026 (versions unchanged on 22 Nov).
 - Could not verify (NeurIPS 2025 acceptance of zou2025security; Tamirisa ICLR 2025): left unchanged, low risk.
 - Reader note 7 (Meta, xAI only as FLI grades) skipped: would need new material.
+
+## Fourth review fixes (November 2026)
+
+- S1: California suit count changed to "at least 80 times", matching the attorney general's release; `@cadoj2026bonta` added to the citation (entry copied from ch11.bib).
+- S2: Safety Report now "developed with contributions from more than 100 experts".
+- S3: GPT-6 Sol launch date (22 September 2026) now cited to TechCrunch (new entry `ropek2026openai`), confirmed by OpenAI's "Introducing GPT-6 Sol and Luna" page.
+- S4: Table 12.5 OpenAI column adds the Frontier Governance Framework (28 May 2026, company source; new entry `openai2026frontier`, also in the caption). The page names "California's Transparency in Frontier AI Act" (SB 53) and the EU Code of Practice and says the Preparedness Framework "remains the foundation".
+- Production S7: "an unreleased model" changed to "an internal-only research model" (matching the technical report). GPT-5.6 Sol's release is now described: limited preview from 26 June 2026 to government-approved partners, general release from 9 July (new entries `openai2026previewing`, `vanklinken2026gpt`). The production report's suggested "available only to a small group of approved partners" was not used, because by the July disclosure the model was generally available.

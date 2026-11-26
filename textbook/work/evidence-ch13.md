@@ -589,3 +589,12 @@ Cut-off moved to late November 2026: l.5 "status as of late November 2026"; "as 
 - B1: one addition in Section 13.3 after EO 14409: Commerce licence requirement of 12 June 2026 for foreign nationals' access to Claude Fable 5 and Mythos 5, Anthropic switch-off, lifted with conditions 30 June, described by law firms as the first known use of export controls to block access to an AI service (keys kahn2026anthropic, power2026us, mayerbrown2026commerce; greenbergtraurig2026anthropic also copied). Closing paragraph: "The nearest US analogue was not law" corrected accordingly.
 - Coordinator note: state suits against OpenAI updated: Texas (23 Oct) and Oregon (17 Nov), eleven states by mid-November, consistent with Ch. 10; keys texas2026attorney and opb2026oregon copied from ch10.bib.
 - Not applicable to Ch. 13: CAISSI, OpenAI pauses, 19 Nov BIS rule (the chapter mentions none of them).
+
+## Fourth review fixes (November 2026)
+
+- M1: Already fixed by the coordinator (eleven states over harms to children, plus California's separate 16 November suit, `@cadoj2026bonta`). Re-read; it reads well and the cross-reference to Section 11.6 is correct. Done, no further edit.
+- S1 / production S7: GPT-5.6 Sol no longer called "unreleased". Now reads: first released on 26 June 2026 at the government's request to a small group of government-approved partners, then generally from 9 July (OpenAI preview post, 26 June 2026; Techzine, 9 July 2026; new entries `openai2026previewing`, `vanklinken2026gpt`). FRI quotation kept.
+- S2: Euronews summary changed to plurals ("OpenAI test agents ... their environment"; "whose models").
+- S3: Demirer text now "a working paper first issued in 2024"; bib note now says the figures come from NBER WP 32146, revised October 2026.
+- S4: Clearview: "In a decision of May 2024, announced that September".
+- Production S9: Colorado line changed to "As of late November 2026 no dismissal had been reported and the federal case remained open". A web search (26 November 2026) found commentary describing the case as stayed and pending, and no report of a dismissal. The docket itself was not reachable.

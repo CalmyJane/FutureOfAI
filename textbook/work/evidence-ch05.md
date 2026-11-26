@@ -441,3 +441,14 @@ Source: review3/r-ch05.md (22 November 2026). Cut-off moved to late November 202
 - **Currency.** MCP revision "current in November 2026"; A2A "version 1.0 in November 2026"; Scale SWE-bench Pro top entry 61.5% "in November 2026" (all re-checked by the reviewer on 22 Nov).
 - **Could not verify, Lemkin.** Narrowed to "he had instructed it to freeze the code" (The Register). Other items (hadfield2025economy chapter number, nasr2025attacker pages, Coinbase x402 page, OpenAI CUA/GPT-6 Astra pages) left unchanged: low priority, no change suggested.
 - **Reader notes.** 1: Table 5.1 reference now names OSWorld and says "below". 4: pass^1 given as 0.796 (79.6% in Table 5.3). 5: "these four domains (three in τ²-bench, banking in τ³-bench)". 6: covered by S3. 7: "formal guarantees, whose cost can be measured on AgentDojo". 8: "as Moltbook suggested". 9: one sentence added on how the models reached the internet (zero-day in a package registry proxy, in pursuit of the evaluation's answers), consistent with §12.2. 2 and 3 (number-dense paragraphs) not changed: no sentence is wrong, and cutting figures would remove sourced content.
+
+## Fourth review fixes (November 2026)
+
+Source: review4/r-ch05.md (26 November 2026).
+
+- **S1.** §5.6: comma splice fixed ("…Hugging Face's systems. According to OpenAI, …").
+- **S2.** §5.4 OSWorld 2.0: GPT-6 Astra 72.6% now described as a later, offline-only version with partial credit, set against Claude Opus 5's 70.2% in OpenAI's own table; stated not comparable with the preprint's 54.8%.
+- **S3.** Table 5.2: SWE-bench Pro leaderboard top 61.5% dated Nov 2026, matching the text.
+- **S4.** Replit: "The main fixes … changed infrastructure, separating development and production databases, rather than relying on the model to obey instructions".
+- **S5.** Epoch RL environments: now "a possible bottleneck to further scaling"; "scarce" changed to "valuable".
+- **Could not verify** (x402 $1 example, Assad et al. two or three stations, Microsoft wording, OSWorld-Verified ~300 items): no narrowing suggested by the report; left unchanged.
