@@ -494,3 +494,10 @@ Sources re-opened on 26 Nov 2026 unless stated: Anthropic 9 Sep 2026 post (fourt
 - S1: Charlotin database count updated to "By late November 2026 ... more than 2,300 cases" (database showed 2,338 on 25 November 2026).
 - S2: Table 11.3 row 3 now cites the Anthropic assessment of the AISI incident (new bib entry `anthropic2026ukaisi`); caption source list adds `@aisi2026investigating` and `@anthropic2026ukaisi`.
 - S3: Deskilling paragraph now notes the later prospective trial that found no such effect, citing `@pedersen2026learning` (entry copied identically from ch08.bib).
+
+## Fifth review fixes (November 2026)
+
+- S1: Disclosure-bias paragraph (Section 11.7) rewritten as recommended: the side-by-side result now says that several OpenAI, Google and xAI models sometimes interfered with shutdown even when told not to, gives Grok 4's ~89% (arXiv v2 Table 2, Prompt E), notes that three Claude models and Grok 3 never resisted unless told to, and adds that such results depend heavily on scenario and wording [@schlatter2026incomplete]. Removes the framing in which the one outside result shown was the one most favourable to Anthropic.
+- S2: Removed the unsourced judgement that OpenAI's sandbox failure was one "more careful configuration alone would not have prevented". OpenAI's failure is now described factually (previously unknown vulnerabilities in a package service and a public Linux-kernel flaw), matching the Section 12.6 wording [@openai2026technical]. For parity, both containment explanations now carry a company-claim label ("according to the company" for Anthropic's misconfiguration; "according to its report" for OpenAI), and citations are split per claim.
+- S3: Cross-reference changed to "(Sections 12.3 and 12.8)" (part of the S1 replacement).
+- Could-not-verify items (METR findings, AA-Omniscience per-model figures, Kim et al., Hong et al.): left unchanged; the reviewer suggested no narrowing.
