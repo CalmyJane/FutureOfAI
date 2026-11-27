@@ -492,3 +492,10 @@ Report: review3/r-ch03.md. Cut-off now late November 2026.
 - S3: :389 SpaceXAI sentence simplified, facts unchanged: "by then the SpaceX subsidiary SpaceXAI"; rename now a closing sentence "(On 4 October 2026 Elon Musk said SpaceXAI would be renamed SpaceXSI [@frank2026why].)".
 - Ch04 S3 (repetition, applied here): Section 3.8 "Reasoning, and control over it" cut to two sentences ending in the pointer to Section 4.6 (Claude 3.7 Sonnet, Qwen3, Gemini 2.5 and GPT-5 router quotations removed; Opus 5.5 effort levels and Gemini 4 Argon thinking levels kept, as Ch. 4 does not give them). "Agentic training" sentence on Grok 4 Heavy and Muse Spark "Contemplating" reduced to a pointer to Section 4.6; the Muse Spark quotation moved to ch04 Section 4.6.
 - Could not verify (Kimi K2 Thinking speed-up, GPT-4o system card pinpoints): no action.
+
+## Seventh review fixes (November 2026)
+
+- S1: Section 3.4 renamed "Generating text, long contexts and other modalities"; the "Beyond text" subsection stays in place, so the cross-references at :92 and :455 ("Section 3.4") remain correct.
+- S2: SpaceXSI renaming parenthetical deleted from the reinforcement-learning paragraph (Chapter 9 already records it). `frank2026why` left in ch03.bib, now uncited here.
+- S3: Table 3.9 DeepSeek-V4 row now "1.6-trillion-parameter MoE (April preview)". The V4-Pro-0813 1.7T checkpoint not added: not confirmed on DeepSeek's own page.
+- Could not verify (tiktoken IDs, Table 3.7 probabilities, Muse Spark expert routing and encoder size, Gemini 4 Argon API details, Michael et al. respondents): no action; the report suggests none.
