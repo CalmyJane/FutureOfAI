@@ -533,3 +533,15 @@ Source: review2/r-ch09-10.md (Ch9 items), 00-VERDICT C15/C18, FIX-BRIEF.md.
 - **9-S2 (Hungary)**: Applied the "Change to" wording. The authors attribute the limited success of the AI tactics to several factors, among them public rejection, a credible challenger and voter fatigue with government disinformation.
 - **9-S3 (state count)**: Added "; by September the National Conference of State Legislatures counted 31 [@brumfiel2026campaign]". New key: NPR, Geoff Brumfiel, 16 Sep 2026, "As campaign season gears up, AI-generated ads are everywhere". The NPR URL returned a 503. Verified on the NHPR republication (https://www.nhpr.org/2026-09-16/as-campaign-season-gears-up-ai-generated-ads-are-everywhere): "31 states have passed laws prohibiting deepfakes or requiring disclosures", attributed to NCSL.
 - Could-not-verify items (Lin et al. effect sizes, Science erratum text, Golaszewski, Kirchenbauer table value): left unchanged, as the report suggests no narrowing.
+
+## Sixth review fixes (November 2026)
+
+- S1 Brazil TSE: done as suggested. The 4-3 vote is now described as declining to fine Flávio Bolsonaro, with the propaganda-only reading of the deepfake ban stated separately; "stay online" removed (Congresso em Foco, 2 Sept 2026).
+- S2 SpaceXSI: done. The sentence is split; SpaceXSI is now described as announced by Musk on 4 October, not as an adopted brand (Khaleej Times: no details or timeline). Consistency fix in ch03.md (§3 RL paragraph): "it has used the brand SpaceXSI since October 2026" changed to "on 4 October 2026 Musk said it would become SpaceXSI".
+- S3 Code of Practice signatories: "By mid-November 2026" removed; now "The Commission's published list of signatories counted 103 ... and 219" (page dated 31 July 2026, updated on an ongoing basis).
+- S4 Hungary: "Fidesz party and allied groups" (AP: puppet ads paid for by a pro-government organisation with Fidesz ties).
+- CNV EBU 2,709: kept; the full report gives 2,709 core responses, while the EBU page says "more than 3,000". Text now says "2,709 answers (the core set of more than 3,000 collected)".
+- CNV NewsGuard 3,749: kept. The tracker page gives 3,749 in 16 languages; 3,006 is the earlier figure in NewsGuard's datastream press release. Already attributed and dated to the June 2026 update.
+- CNV SynthID/Apple, 29 October: re-checked 27 Nov 2026. The Google post shows "Updated October 29, 2026" and lists partners "including OpenAI, NVIDIA, Kakao, and Apple". It also says "over 180 billion images and videos" (the primary source for Kohli's figure). Kept.
+- CNV Meta "near-standard component" wording: already verified in the H2 2026 PDF (see A9.2). Kept.
+- CNV CNN Brasil 72-hour rule; Agarwal and Sen 39.8%: kept, already attributed.

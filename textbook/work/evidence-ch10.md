@@ -472,3 +472,10 @@ Scanner (review/uncited.py) now reports 0 uncited blocks; pandoc --citeproc clea
 - **10-S1 (AMIE)**: ch10.md:135 now reads "100 patients talked with AMIE before a primary-care appointment for a new, non-emergency complaint (98 then attended), while physicians supervised...". Source: Google Research blog, "Exploring the feasibility of conversational diagnostic AI in a real-world clinical study": "100 patients completed a pre-visit interaction with AMIE, and 98 attended"; "new, non-emergency, episodic complaints". Citation unchanged (@brodeur2026conversational).
 - **10-S2 (Maryland tutor)**: ch10.md:54 now adds the 0.90 SD fall in participation in the online learning system and the authors' main interpretation (displaced engagement with existing course activities), keeping the instructor-promotion explanation as the alternative. Source: Liu et al., EdWorkingPaper ai26-1598, abstract and p. 3.
 - Could-not-verify items (De Simone details, CNN "five suits", Penda details, Brodeur hallucination/additions, Speech Accessibility counts): left unchanged, as the report suggests no narrowing.
+
+## Sixth review fixes (November 2026)
+
+- S1 (optional) University of Maryland: done. Now "At a large US public university (reported to be the University of Maryland) in autumn 2025". The IZA DP 18989 paper names only "a large U.S. public university"; the name comes from press coverage.
+- CNV FDA 1,614 devices: kept. The table arithmetic is consistent, and the FDA page says "over 1,600 ... as of September 2026".
+- CNV FDA August 2026 discussion paper; MASAI 60 vs 38; Bean et al.; Agarwal and Sen: kept, no contrary evidence.
+- CNV "eleven states" suing OpenAI: kept. Florida, eight states (14 Oct), Oregon (17 Nov) and Texas make 11, and all are cited.
