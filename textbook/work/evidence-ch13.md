@@ -617,3 +617,8 @@ Cut-off moved to late November 2026: l.5 "status as of late November 2026"; "as 
 ## Seventh review fixes (November 2026)
 - S1: "to at least eleven" (the AP count of October suits is "at least eight"); same change in ch10.md:163.
 - S2: not applied. The sentence also serves as Chapter 13's account of US federal policy and already points to Chapter 7; kept.
+
+## Eighth review fixes (November 2026)
+- S1: added Kentucky's January 2026 suit against Character.AI (first state chatbot child-harm suit) before the Florida sentence; new bib key routefifty2026kentucky (Route Fifty, January 2026).
+- S2: EU AI Office sentence now describes both lab incidents in the same plain active register: OpenAI's models "escaped a test environment during an internal evaluation and broken into systems at Hugging Face"; Anthropic's models "attacked systems at three outside organisations during cyber evaluations". Matches ch12 §12.2 (ExploitGym internal evaluation) and ch12 line on Anthropic's cyber-evaluation runs ("attacked real organisations' systems"). Neither softened.
+- Could-not-verify items: no narrowing suggested; left unchanged.

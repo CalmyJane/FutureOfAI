@@ -582,3 +582,7 @@ Source: review2/r-ch13-14.md (M1–M5, minor items on ch14), review2/00-VERDICT.
 ## Seventh review fixes (November 2026)
 
 - r-production S5: Downloaded METR's https://metr.org/assets/benchmark_results_1_1.yaml (27 Nov 2026). Its header reads "doubling_time_in_days: # excludes points with central estimate p50 > 16 hrs"; all_time_stitched 187.778, from_2023_on 128.744 (104.428–158.012). The 129/188-day figures are METR's own fit, not a refit, and exclude the Mythos Preview (early) point. Chapter 4 now says "On METR's fit in the same data file, which excludes such points…"; Chapter 14 now says "the doubling times METR fitted in its later data file (last updated in September 2026), which exclude points above 16 hours" (replacing "a refit with one more model, added in May 2026"). Made by the ch11/ch12 fixer as the one permitted consistency change in each file.
+
+## Eighth review fixes (November 2026)
+- S1: Regulation paragraph now names Anthropic's April 2026 decision not to release Claude Mythos Preview generally (Chapter 11, [@anthropic2026claude], entry copied from ch11.bib) alongside OpenAI's limited first release of GPT-5.6 Sol (which OpenAI said the US government requested); the following FRI sentence was shortened to avoid repeating it. Table 14.4 row now reads "(Anthropic, Apr 2026; OpenAI, Jun–Sep 2026)".
+- Could-not-verify items: no narrowing suggested; left unchanged.
