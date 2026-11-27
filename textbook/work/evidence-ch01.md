@@ -482,3 +482,9 @@ Source: review3/r-ch01.md and review3/00-VERDICT.md section B. Cut-off moved to 
 - S2 (OSWorld URL): the url in bib `osworld2026verified` is now https://osworld-v1.xlang.ai/, with a note on the redirect and the OSWorld 2.0 notice. Added "(a successor benchmark, OSWorld 2.0, appeared in June 2026)" to the sentence in the agents paragraph.
 - S3 (Martínez bib): kept year 2024 and added `note = {Published online 2024; print issue 2025}`.
 - Could-not-verify items (the Dartmouth dates; the outcome of the Nate/Saniger case): no change, because the wording is already safe.
+
+## Sixth review fixes (November 2026)
+
+- S1 (Nate founder's plea): added "; he has pleaded not guilty". Confirmed from a reachable source: Quinn Emanuel client alert, 11 June 2026, endnote 10: Saniger "pleaded not guilty, and was released on a $250,000 bond"; both cases "remain in their early stages" (fetched 27 November 2026). Consistent with the MLex headline "Former Nate CEO pleads not guilty to US fraud charges over AI claims" (17 December 2025; paywalled, HTTP 403). New bib entry `quinnemanuel2026saniger`. No plea deal or verdict found.
+- S2 (Microsoft ranking): sentence now gives "the share of working-age Americans using AI at 31.3% in the first quarter of 2026, which ranked the United States only 21st". Checked against the 7 May 2026 post (fetched 27 November 2026): "31.3% usage rate by the working age population", "from 24th to 21st".
+- Could not verify (Dartmouth dates, MYCIN pages, McDermott panel): no change; the report suggests none.

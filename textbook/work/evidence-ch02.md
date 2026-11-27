@@ -416,3 +416,8 @@ Source: review3/r-ch02.md. Cut-off moved to late November 2026.
 - S1 (DeepSeek-V4 release dates): the sentence now reads "with official versions of the smaller V4-Flash on 31 July and of V4-Pro on 13 August, both keeping the preview's structure". The new bib entry `deepseekai2026v4flash0731` (Hugging Face model card, company source) is cited with the existing keys.
 - S2 (LeNet cheque volume): "millions of bank cheques a month in the United States, according to its developers" now reads "millions of bank cheques in the United States (the developers' paper says per month in one place and per day in another)".
 - Could-not-verify items (the V4 Muon module split; the Kimi K2 details): no change.
+
+## Sixth review fixes (November 2026)
+
+- S1 (DeepSeek-V4-Pro sentence): rewritten as "which its developer released as a preview in April 2026 and in an official version in August, has 1.6 trillion parameters in total but activates 49 billion per token, according to the company's technical report". Citations unchanged.
+- Could not verify (V4-Flash 31 July date; Goodfellow et al. page-specific quotations): no change; the report suggests none.
