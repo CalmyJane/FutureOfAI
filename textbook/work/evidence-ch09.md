@@ -545,3 +545,10 @@ Source: review2/r-ch09-10.md (Ch9 items), 00-VERDICT C15/C18, FIX-BRIEF.md.
 - CNV SynthID/Apple, 29 October: re-checked 27 Nov 2026. The Google post shows "Updated October 29, 2026" and lists partners "including OpenAI, NVIDIA, Kakao, and Apple". It also says "over 180 billion images and videos" (the primary source for Kohli's figure). Kept.
 - CNV Meta "near-standard component" wording: already verified in the H2 2026 PDF (see A9.2). Kept.
 - CNV CNN Brasil 72-hour rule; Agarwal and Sen 39.8%: kept, already attributed.
+
+## Seventh review fixes (November 2026)
+
+- S1 Apple SynthID: done. Sentence now says an update in late October 2026 (iOS 27.2) began adding SynthID to images made or substantially edited with Apple's AI tools; new source macrumors2026iphone added to ch09.bib (key not present elsewhere).
+- S2 Storm-1516 attribution: done. Now separates NewsGuard (signs of AI, pattern match), the Clemson researcher (attribution) and Graphika (earlier tied the amplifying accounts to the network).
+- S3 Code of Practice signatories: done. The five companies now follow the providers' count, not the deployers'.
+- Could not verify (Meta "less than 1%", Hungary 52%, Colombia EOM wording, Pew digital twins 46%/34%): no change suggested; left as is.
