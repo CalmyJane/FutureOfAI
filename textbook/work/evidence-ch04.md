@@ -463,3 +463,7 @@ Report: review3/r-ch04.md. Cut-off now late November 2026.
 - S3: Sutskever "co-founded the start-up Safe Superintelligence in 2024 and has been its chief executive since 2025".
 - S4: first "(Section 1.7)" removed; leader named as "Anthropic's Claude Fable 5.2 Max" (matches ch01.md:255).
 - Could not verify (Epoch database values, Mythos figures, ClockBench 90.7% baseline, Truong per-benchmark counts, GSM1k size): no action. The 129- and 188-day doubling times are confirmed in the same METR data file (128.744 and 187.778 days).
+
+## Seventh review fixes (November 2026)
+
+- r-production S5: Downloaded METR's https://metr.org/assets/benchmark_results_1_1.yaml (27 Nov 2026). Its header reads "doubling_time_in_days: # excludes points with central estimate p50 > 16 hrs"; all_time_stitched 187.778, from_2023_on 128.744 (104.428–158.012). The 129/188-day figures are METR's own fit, not a refit, and exclude the Mythos Preview (early) point. Chapter 4 now says "On METR's fit in the same data file, which excludes such points…"; Chapter 14 now says "the doubling times METR fitted in its later data file (last updated in September 2026), which exclude points above 16 hours" (replacing "a refit with one more model, added in May 2026"). Made by the ch11/ch12 fixer as the one permitted consistency change in each file.

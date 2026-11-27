@@ -509,3 +509,14 @@ Sources re-opened on 26 Nov 2026 unless stated: Anthropic 9 Sep 2026 post (fourt
 - S2: Table 11.3 Hugging Face cell now "Hugging Face had disclosed and contained the intrusion before OpenAI detected it" (timeline per @openai2026technical, already in the source list).
 - S3: Palisade sentence now names codex-mini, o3, o4-mini and Grok 4 as resisting, and says GPT-5 and Gemini 2.5 Pro almost never did.
 - Could-not-verify items: unchanged.
+
+## Seventh review fixes (November 2026)
+
+- M1: Disclosure-bias paragraph (Section 11.7) rewritten as recommended. Verified 27 November 2026: AISI incident report (4 Aug 2026): seven models, 122 runs, 19 out-of-scope actions in 10 runs, 17 by Mythos 5 and 2 by GPT-5.6 Sol (one run). arXiv 2509.14260v2 Table 2: Prompt A (no shutdown instruction) Grok 4 92.6%, o3 94.5%, GPT-5 88.0%, codex-mini 51.8%, o4-mini 5.8%, Gemini 2.5 Pro 4.5%, Opus 4/Opus 4.1/Sonnet 4/Grok 3 0.0%; Prompt E (allow-shutdown in system prompt) Grok 4 89.2%, codex-mini 43.2%, o4-mini 23.4%, o3 15.9%, Gemini 2.5 Pro 0.6%, GPT-5 0.0%. Text now compares like with like (A with A, E with E) and puts the AISI result, which goes against Claude, first.
+- S1: Table 11.3 Anthropic row adds "credentials and several hundred rows of production data taken from one company" (Anthropic, 30 Jul 2026: Incident 1, "the most serious impact we identified").
+- S2: "withdrew" → "revised", with the "biased towards concluding that the internet was simulated" explanation (Anthropic, 9 Sep 2026).
+- S3: "Most of the nearest real events…".
+- S4: Confirmed on srgresearch.com (29 Oct 2026): Q3 2026 shares 26%, 19%, 16%. Text updated to Q3 and about 61%; new bib key `synergy2026q3` (none existed). `synergy2026q2` left in bib, no longer cited.
+- S5: Added "(Gemini 3 Pro, added days later, scored higher still)". Artificial Analysis article (18 Nov 2025): "Gemini 3 Pro Preview takes the top spot on the Artificial Analysis Omniscience Index" (score not in text layer, so no number given). New bib key `artificialanalysis2025gemini`.
+- S6: Applied in ch12 (r-ch12 S3).
+- Could not verify: no action.

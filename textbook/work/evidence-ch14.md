@@ -578,3 +578,7 @@ Source: review2/r-ch13-14.md (M1–M5, minor items on ch14), review2/00-VERDICT.
 - S1: BIS sentence clarified: "an interim final rule formally rescinded the never-enforced AI diffusion rule ... In its place, the new rule requires licences ... and adds licence requirements ..." so the remote-access and five-country provisions are attributed to the 19 November 2026 rule, not the diffusion rule (Greenberg Traurig; Morgan Lewis, November 2026). Citation `bis2026addressing` unchanged.
 - S2: CAISI-evaluated model now named "DeepSeek V4 Pro", as in the cited evaluation title (`nist2026caisideepseek`).
 - Could-not-verify items: no narrowing suggested by the report; left unchanged.
+
+## Seventh review fixes (November 2026)
+
+- r-production S5: Downloaded METR's https://metr.org/assets/benchmark_results_1_1.yaml (27 Nov 2026). Its header reads "doubling_time_in_days: # excludes points with central estimate p50 > 16 hrs"; all_time_stitched 187.778, from_2023_on 128.744 (104.428–158.012). The 129/188-day figures are METR's own fit, not a refit, and exclude the Mythos Preview (early) point. Chapter 4 now says "On METR's fit in the same data file, which excludes such points…"; Chapter 14 now says "the doubling times METR fitted in its later data file (last updated in September 2026), which exclude points above 16 hours" (replacing "a refit with one more model, added in May 2026"). Made by the ch11/ch12 fixer as the one permitted consistency change in each file.

@@ -553,3 +553,13 @@ Sources re-opened on 26 Nov 2026 unless stated: Anthropic 9 Sep 2026 post; Al Ja
 - S2: AISI sentence rewritten: internet access was enabled deliberately; only the model behaviour (continuing against real targets) matched [@aisi2026incident; @aisi2026investigating].
 - S3: Skipped. TMLR 2026 publication confirmed by the MLAnthology index (mlanthology.org/tmlr/2026/schlatter2026tmlr-incomplete), so "peer-reviewed, TMLR" is kept.
 - Could-not-verify items: unchanged.
+
+## Seventh review fixes (November 2026)
+
+- M1: Removed the unsupported clause that US export restrictions limited Mythos 5.1 to US organisations. Line 286 now says only that Anthropic gave no public reason and that, according to the institute's director, no organisation outside the US had access to the model [@kelly2026anthropic; @kelly2026openai].
+- S1: GPT-5.6 Sol now "first released on 26 June 2026 as a limited preview for a small group of trusted partners … a restriction OpenAI said the US government had requested" (OpenAI, 26 Jun 2026: "At their request, we are starting with a limited preview").
+- S2: FLI grades add Z.ai and Alibaba Cloud D−.
+- S3: "correctly suspected" replaced by the "smell[ed] like the REAL internet" wording; verified in Anthropic, 9 Sep 2026 (action 81, walked back in the next action).
+- S4: "withdrew" → "revised".
+- S5: Section 12.6 cross-reference now states facts only ("As Section 11.7 discusses … which, with their partners and the UK institute, published detailed reports"), dropping the repeated author's judgement.
+- Could not verify: no action.
