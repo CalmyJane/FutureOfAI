@@ -470,3 +470,10 @@ Source: review4/r-ch05.md (26 November 2026).
 ## Seventh review fixes (November 2026)
 - S1 (Project Vend hedge): "The authors judged that the business made money" changed to "The authors suggested that the business may have made money", restoring the source's hedge ("may have been in spite of the CEO"; anthropic.com/research/project-vend-2, checked 27 Nov 2026).
 - Could-not-verify items: left as is (already attributed).
+
+## Eighth review fixes (November 2026)
+
+- S1: SWE-bench Pro now gives GPT-5 (high) 41.8% next to Claude Sonnet 4.5 43.6% (both uncapped, Table 1), and both capped scores ($2: GPT-5 high 25.9%, Claude Opus 4.1 22.7%, Table 5). Checked against arXiv 2509.16941v2.
+- S2: Added OpenAI's company-reported 75.0% for GPT-5.4 on OSWorld-Verified (5 March 2026, "surpassing human performance at 72.4%"), in the text and as a company-reported row in Table 5.1. New bib key openai2026introducinggpt54 (not previously in any bib). Checked against openai.com/index/introducing-gpt-5-4.
+- S3: Added that developers' own agent programs reached up to about 80% on the public split by mid-2026 (OpenAI, 8 July 2026: "improved from a pass rate of 23.3% to 80.3% in eight months"), in the text and Table 5.2.
+- Could-not-verify items (Nasr et al. venue, τ²-bench caption values, CVE-2026-25253): left unchanged; the reviewer suggested no narrowing.

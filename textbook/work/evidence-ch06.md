@@ -502,3 +502,10 @@ Source: review4/r-ch06.md and review4/r-production.md S9 (26 November 2026).
 - S2 (Riemann-hypothesis timing): added that the release came one day after Anthropic's stock-market debut and Alpöge's rejection of the "obvious cynical view"; added James Maynard's "98 or 99 percent" (via The New York Times) beside Conrad's criticism. Source: The Next Web, 21 Nov 2026 [@constantin2026riemann], quotations checked 27 Nov 2026. No new bib entry.
 - S3 (optional, plagiarism rumours): added Scientific American's standfirst that the claims "may have been overblown" [@howlett2026openais], checked 27 Nov 2026.
 - Could-not-verify items: left as is.
+
+## Eighth review fixes (November 2026)
+
+- M1: Lamzouri's preprint (arXiv 2609.02882) gives a new proof of the same >67.25% bound, plus two new estimates (88.76%, 83.62%). "Slightly stronger bound" changed to "the same bound, together with two new estimates that the Claude paper does not contain". Abstract checked.
+- S1: The unforced blow-up sentence now reads "it would settle the problem without the external force on which much of the objection to OpenAI's result turns".
+- S2: Stated the cynical view: the release came one day after the record debut "as its shares were falling", and the view is that the announcement was meant to help the share price. The share fall and the Alpöge quotation are checked against TNW (constantin2026riemann). The reviewer's wording "some mathematicians suggested a link" was not used, because the Granville/Nature wording could not be verified (paywalled, and not found in search).
+- S3: Added Gowers's caveat, "many of the ideas needed for the proof were present in the literature already", checked against ScienceAlert (lee2026stunning).
