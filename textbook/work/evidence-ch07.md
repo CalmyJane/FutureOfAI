@@ -572,3 +572,13 @@ Report: review6/r-ch07.md.
 - S1 (Affiliates-rule extension date): reworded to "In a rule published on 9 November 2026, the day before the ownership rule was due to come back into force, BIS extended its suspension through 10 January 2027". The rule was due to return on 10 November 2026 (Dechert; Reed Smith, 6 Nov 2026).
 - S2 (Huang's title): took the reviewer's first option, "then Nvidia's chief executive", and dropped the unsourced resignation clause. No bib entry needed.
 - Could-not-verify items: no change suggested; left as they are.
+
+## Eighth review fixes (November 2026)
+
+Report: review8/r-ch07.md.
+
+- S1: Huang's first mention (§7.3) now "Nvidia's chief executive until his resignation in November 2026", cited to Nvidia's Form 8-K (event 11 Nov 2026, filed 12 Nov 2026: board "accepted the resignation of Jen-Hsun Huang", "effective immediately"; Colette Kress interim CEO). New bib `nvidia2026formceo`. No reasons for the resignation given (press reports unconfirmed). "Its then chief executive" in §7.5 kept.
+- S2: Prompt caching now says "Major providers including OpenAI, Google and Anthropic offer it" before the Anthropic example.
+- S3: Remote-access rule scope now "companies headquartered in China, Macau or other countries under US arms embargo (Country Group D:5)".
+- S4: Dropped unsupported "headlines usually quote the lower one"; now "so readers should check which one a figure uses".
+- Could-not-verify items: no narrowing suggested; left unchanged.

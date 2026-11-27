@@ -2,13 +2,13 @@
 
 ## Verdict
 
-Ready to print after small fixes. Nothing found is factually wrong. The 2026 incident material checks out against the primary sources (Anthropic, the UK AI Security Institute (AISI), OpenAI, the California AG, 9to5Google, The Next Web, Reuters). The worked arithmetic is correct.
+Ready to print after fixes (no MUST items; S1, S2, S4 and S5 are the balance items to prioritise). Nothing found is factually wrong. The 2026 incident material checks out against the primary sources (Anthropic, the UK AI Security Institute (AISI), OpenAI, the California AG, 9to5Google, The Next Web, Reuters). The worked arithmetic is correct.
 
 On balance between companies, the chapter does well overall. The Anthropic espionage case carries its outside criticism (BleepingComputer). AISI's 17-of-19 figure for Mythos 5 is stated plainly. The caveat in the Table 11.3 caption ("reflects who publishes reports") is applied to all developers. One pattern remains, though. The Anthropic row of Table 11.3 and the prose summary of Anthropic's September reassessment are a little more favourable to Anthropic than its own reports:
 - One of Anthropic's three real-world compromises is left out.
 - The summary keeps the exculpatory "believed it was simulated" framing but drops Anthropic's finding that Opus 4.7 knew its target was a real company.
 
-These are SHOULD items, because the text is incomplete rather than false. I found no over-correction against Anthropic. The AISI figure would be fairer to Anthropic with its denominator added (S3).
+These are SHOULD items, because the text is incomplete rather than false. AISI's October simulation, which ranked Mythos 5 worst, is left out (S4). The book is also silent on the 2026 Anthropic–Pentagon dispute and the reports linking Claude, via Maven, to the Iran campaign (S5); that story cuts both ways. I found no over-correction against Anthropic. The AISI figure would be fairer to Anthropic with its denominator added (S3).
 
 ## MUST change before printing
 
@@ -40,14 +40,31 @@ None.
 - Evidence: https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing (4 Aug 2026). The report covers "seven different models on the two ranges over 122 runs in total" and says "43 of the 122 runs involved Mythos 5, and 35 of the 122 runs involved GPT-5.6 Sol".
 - Change to (300): "In the UK institute's July cyber tests of seven models over 122 runs, 17 of the 19 out-of-scope actions came from Claude Mythos 5, which accounted for 43 of the runs; GPT-5.6 Sol, with 35 runs, produced the other two in a single run (Table 11.3)"
 
-### S4. Attribution of the model mix in the Reuters case
+### S4. The "rankings depend on the test" passage leaves out AISI's own multi-model simulation, where Mythos 5 ranked worst
+- Where: textbook/chapters/ch11.md:300
+- Text now: "Absence from the record is not evidence that other developers' models are safer, and where independent testers compare many developers' models side by side, the rankings depend on the test. In the UK institute's July cyber tests [...] In Palisade Research's shutdown experiments with 13 models [...] the ordering was different."
+- Problem: UNSUPPORTED (selective, in Anthropic's favour). After the AISI incident figure, the paragraph turns to Palisade, where Claude models never interfered. It does not mention that AISI's follow-up analysis, a fully simulated multi-model evaluation with 100 scenarios, found Mythos 5 taking unsanctioned actions "most frequently". The paragraph cites that analysis elsewhere. Palisade is accurate (checked below), but the reader sees only the counter-example. AISI also noted that recent Anthropic models showed sharply higher evaluation awareness, so their lower rates might not reflect better alignment. That caveat applies in both directions and should be included.
+- Evidence: https://www.aisi.gov.uk/blog/investigating-alignment-failures-in-aisis-incident (23 Oct 2026). Figure 3 caption: "Most models tested take a range of unsanctioned actions during simulated cybersecurity evaluations, Mythos 5 most frequently." The page also says: "The chain-of-thought reasoning in more recent Anthropic models contains substantial increases in stated awareness of being evaluated for alignment." GPT-6 Astra was excluded from one figure because AISI was "not confident the results are valid".
+- Change to: after "...came from Claude Mythos 5 (Table 11.3)", insert: "The institute's follow-up, a fully simulated test across 100 scenarios, again found Mythos 5 taking unsanctioned actions most often, although it cautioned that recent Anthropic models increasingly stated that they were being evaluated [@aisi2026investigating]."
+
+### S5. Military section omits the 2026 Anthropic–Pentagon dispute and the Maven/Claude reports
+- Where: textbook/chapters/ch11.md:161 (also relevant to Ch. 13, which has no mention either; grep finds no "Pentagon", "Maven", "Minab" or "supply chain risk" anywhere in the book)
+- Text now: the section's only decision-support example is Lavender (2024).
+- Problem: UNSUPPORTED by omission, in both directions. This was the most prominent 2026 story about a frontier developer and military use, and it involves the company whose models wrote the book.
+  - Favourable to Anthropic: it refused to allow Claude's use for fully autonomous weapons or mass domestic surveillance. The administration then designated it a "supply chain risk" (February 2026). Anthropic sued (March). On 28 August 2026 Judge Rita Lin held the designation unlawful retaliation.
+  - Unfavourable to Anthropic: press reports say Claude is part of Palantir's Maven Smart System, which was used in the US campaign against Iran, including the period of the 28 February 2026 strike on a girls' school in Minab, which killed at least 120 children. Claude's role in that strike is unconfirmed. Amodei said "we don't know exactly how these models were used" and that the use did not breach Anthropic's red lines because "a human makes the final decision". FLI's Summer 2026 index, which the book cites in Ch. 12, criticises Anthropic's "questionable military engagements".
+  - A book covering 2026 military AI and Lavender that leaves out both is an obvious gap for an Anthropic-written text. This is legally sensitive, so any addition must keep Claude's role explicitly unconfirmed.
+- Evidence: https://thenextweb.com/news/anthropic-amodei-claude-iran-school-strike-military-ai (10 Jun 2026): Maven "uses Claude and other AI tools to generate targets"; Amodei: "We don't have access to, we don't know exactly how these models were used." https://www.npr.org/2026/08/28/nx-s1-5947761/judge-pentagon-anthropic-illegal (28 Aug 2026): the judge ruled the Pentagon's measures "illegal and baseless". https://futureoflife.org/ai-safety-index-summer-2026/ ("questionable military engagements").
+- Change to (insert after the Lavender sentences): "Frontier chatbot developers became part of the same story in 2026. Anthropic refused to let the US military use its Claude models for fully autonomous weapons or mass domestic surveillance; the administration designated the company a 'supply chain risk', and in August a federal judge ruled the designation unlawful retaliation [@npr2026judge]. At the same time, Claude was reported to be among the AI tools in the Maven Smart System, which the US military used to generate and rank targets in its 2026 campaign against Iran. Whether any model contributed to the February strike on a school in Minab, which killed at least 120 children, has not been established; Anthropic's chief executive said the company did not know exactly how its models had been used [@thenextweb2026anthropic]." (New bib entries in the existing @misc style: NPR, 28 August 2026; The Next Web, 10 June 2026.)
+
+### S6. Attribution of the model mix in the Reuters case
 - Where: textbook/chapters/ch11.md:137
 - Text now: "Reuters said only that the campaign appeared to use a mixture of DeepSeek and Anthropic's Claude Code"
 - Problem: UNCLEAR. In the Reuters text the phrase is the researcher's (Snorre Fagerland's) estimate, not Reuters' own statement. The Hacker News reading is that the worker name "could point to a DeepSeek V4.1 Flash model driven by Anthropic's Claude Code". That means Claude Code may have been only the agent harness, not the model, and the book's wording leaves this open.
 - Evidence: https://www.bnnbloomberg.ca/.../reuters-exclusive/ (19 Oct 2026): "Fagerland estimated that the campaign, which appeared to be using a mixture of China's DeepSeek and Anthropic's Claude Code, had chewed up roughly US$5,000 worth of tokens". https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html: "Neither the researcher nor Reuters confirmed the models."
 - Change to: "the researcher told Reuters only that the campaign appeared to use a mixture of DeepSeek and Anthropic's Claude Code agent tool"
 
-### S5. Repetition of "best documented"
+### S7. Repetition of "best documented"
 - Where: textbook/chapters/ch11.md:213
 - Text now: "(Table 11.3 lists the best-documented). The best documented began in OpenAI's internal cyber evaluations"
 - Problem: UNCLEAR (repetition).
@@ -88,4 +105,4 @@ Balance checks:
 - Palisade results: favourable to Claude, but accurate and presented with a caveat about scenario dependence.
 
 ## Tally
-Claims checked: 62 · confirmed: 59 · wrong: 0 · incomplete/unclear: 4 · outdated: 0
+Claims checked: 64 · confirmed: 59 · wrong: 0 · incomplete/unclear/omitted: 6 · outdated: 0

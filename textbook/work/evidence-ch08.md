@@ -477,3 +477,12 @@ Report: review6/r-ch08.md.
 
 - S1 (Anthropic 1.8-point estimate): reworded so the January 2026 report "reproduced its earlier estimate" of 1.8 points "and lowered it to about 1.0 to 1.2 points once task success rates are allowed for" (Anthropic Economic Index, January 2026 report).
 - Could-not-verify items (Otis et al. versions, Humlum & Vestergaard, Bonney et al., ILO scores, SAG-AFTRA): no change suggested; left as they are.
+
+## Eighth review fixes (November 2026)
+
+Report: review8/r-ch08.md.
+
+- S1: "Usage data from AI companies" now adds OpenAI/NBER (non-work share of consumer ChatGPT messages 53% June 2024 → 73% June 2025; `chatterji2025how`, copied identically from ch01.bib) and Microsoft (200,000 Copilot conversations mapped to O*NET; information gathering and writing the most common user goals, checked in arXiv 2507.07935 full text; new bib `tomlinson2025working`). "for one company's" now "each for one company's".
+- S2: BTOS: Table 8.2 row now "Use AI ("Super Intelligence") in any business function"; text adds that "do not know" rose from about 10% to about 13% in the first periods with the new wording (Census National.xlsx, 19 Nov 2026).
+- S3: Amodei forecast sentence now ends "though the period Amodei named runs to 2030".
+- Could-not-verify items: no narrowing suggested; left unchanged.
