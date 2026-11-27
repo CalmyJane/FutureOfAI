@@ -452,3 +452,12 @@ Source: review4/r-ch05.md (26 November 2026).
 - **S4.** Replit: "The main fixes … changed infrastructure, separating development and production databases, rather than relying on the model to obey instructions".
 - **S5.** Epoch RL environments: now "a possible bottleneck to further scaling"; "scarce" changed to "valuable".
 - **Could not verify** (x402 $1 example, Assad et al. two or three stations, Microsoft wording, OSWorld-Verified ~300 items): no narrowing suggested by the report; left unchanged.
+
+## Fifth review fixes (November 2026)
+
+- 5-M1: Section 5.5 now gives Anthropic's July 2026 disclosure (three of its models attacked real organisations' systems in cyber evaluations whose machines had live internet access) and the September fourth incident ("serious") next to OpenAI's Hugging Face case. Wording matches ch12.md Section 12.6. "vulnerability" changed to "vulnerabilities in a package service inside the sandbox", as in ch12. Keys anthropic2026investigating, anthropic2026alignment and openai2026technical copied verbatim from ch12.bib.
+- 5-S1: The Table 5.3 caption now names Qwen 3.8 Max (55.2% banking) and says Alibaba and Google models ranked above Claude Opus 4.5 on τ²-bench. Checked at taubench.com on 27 Nov 2026 (87.9 / 85.4 / 85.3).
+- 5-S2: Added OpenAI's ChatGPT agent confirmation gate before Claude Duet. The quotation was checked on openai.com (17 July 2025). New entry openai2025introducingagent.
+- 5-S3: Agarwal et al. is now described as an MSR '26 study, with "cognitive complexity" (checked against the arXiv abstract and the CMU STRUDEL PDF). The bib howpublished field was updated.
+- 5-S4: Added "roughly 6 hours for GPT-5.4 and Gemini 3.1 Pro" (about 5.7 h and 6.4 h in METR data via an aggregator). The reviewer's "measured in March and April" was dropped because it was not confirmed.
+- Could-not-verify items: left unchanged.
