@@ -215,9 +215,9 @@ def build(pages, paper, spine_mm, isbn, guides):
         'by the AI models Claude Opus 5.5 and Claude',
         'Fable 5.2, working under the author\u2019s',
         'direction, and fact-checked by the same',
-        'models. No independent human expert has',
-        'reviewed it. The preface explains how it',
-        'was made.',
+        'models where sources could be read online.',
+        'No independent human expert has reviewed it.',
+        'The preface explains how it was made.',
     ]
     for ln in note:
         svg.append(f'<text x="{bx}" y="{y:.1f}" font-family="EBG" font-style="italic" font-size="3.95" fill="{SOFT}">{ln}</text>')

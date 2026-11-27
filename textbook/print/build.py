@@ -36,7 +36,9 @@ NO_HYPHEN = ["DeepSeek", "ChatGPT", "GraphCast", "OpenAI", "DeepMind", "AlphaFol
              "Nvidia", "Huawei", "Alibaba", "Moonshot", "Mistral", "Gemini", "Claude", "Llama", "Qwen",
              "SynthID", "NewsGuard", "Graphika", "Copilot", "Midjourney", "Stability", "Hugging Face", "xAI",
              "SpaceXAI", "SpaceXSI", "ClockBench", "SWE-bench", "OSWorld", "MMLU", "LMArena", "TensorFlow",
-             "PyTorch", "Character.AI", "Perplexity", "Waymo", "Tesla", "Kimi"]
+             "PyTorch", "Character.AI", "Perplexity", "Waymo", "Tesla", "Kimi", "Alphabet", "Brynjolfsson",
+             "Bletchley", "California", "Nathaniel", "Microwork", "Representatives", "January", "AI Overviews",
+             "Acemoglu", "Amodei", "Altman", "Hassabis", "Zuckerberg", "Musk", "Huang", "Buckmaster"]
 
 PARTS = {
     1: ("Part I", "How AI Works"),
