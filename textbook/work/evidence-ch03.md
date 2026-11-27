@@ -502,3 +502,6 @@ Report: review3/r-ch03.md. Cut-off now late November 2026.
 
 ## Eighth review fixes (November 2026)
 - S1: "the SpaceX subsidiary SpaceXAI" changed to "renamed SpaceXAI in July 2026 after its merger with SpaceX", matching Chapter 9.
+
+## Ninth review fixes (November 2026)
+- S1: added the announced SpaceXSI rename at first mention, pointing to Section 9.8 (wording as in Chapter 9).
