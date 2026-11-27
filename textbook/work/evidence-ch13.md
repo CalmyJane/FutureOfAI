@@ -613,3 +613,7 @@ Cut-off moved to late November 2026: l.5 "status as of late November 2026"; "as 
 - S2: GEMA v OpenAI: prose adds "OpenAI has appealed the first to the Higher Regional Court, Munich"; Table 13.4 status now "First instance; OpenAI appeal pending at Higher Regional Court, Munich". New entry `beckaktuell2026suno` (no existing key in any bib).
 - S3: Bartz instalment now "about $2,200 per work (roughly 70 per cent of the net amount) was due to be paid in the week of 23 November 2026" (Authors Guild, updated 20 November 2026: $2,203.56). Gross "about $3,000 per work before costs and fees" kept.
 - Could-not-verify items: no narrowing suggested by the report; left unchanged.
+
+## Seventh review fixes (November 2026)
+- S1: "to at least eleven" (the AP count of October suits is "at least eight"); same change in ch10.md:163.
+- S2: not applied. The sentence also serves as Chapter 13's account of US federal policy and already points to Chapter 7; kept.
