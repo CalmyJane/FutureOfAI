@@ -479,3 +479,9 @@ Scanner (review/uncited.py) now reports 0 uncited blocks; pandoc --citeproc clea
 - CNV FDA 1,614 devices: kept. The table arithmetic is consistent, and the FDA page says "over 1,600 ... as of September 2026".
 - CNV FDA August 2026 discussion paper; MASAI 60 vs 38; Bean et al.; Agarwal and Sen: kept, no contrary evidence.
 - CNV "eleven states" suing OpenAI: kept. Florida, eight states (14 Oct), Oregon (17 Nov) and Texas make 11, and all are cited.
+
+## Eighth review fixes (November 2026)
+- S1 Anthropic privacy change: done. Now says Anthropic had not previously trained on consumer chats and that the toggle was preset to "on" below a prominent "Accept" button. TechCrunch page checked: "Previously, Anthropic didn't use consumer chat data for model training"; toggle "automatically set to 'On'"; "a prominent black 'Accept' button". The byline is Connie Loizos, not Maxwell Zeff as the report suggested, so the key is loizos2025anthropic (new).
+- S2 Study modes: done. Anthropic "learning mode" (Claude for Education, 2 April 2025, primary page checked: "guides students' reasoning process rather than providing answers"), OpenAI study mode (July 2025), Google Guided Learning in Gemini (Google blog, Maureen Heymans, 6 August 2025). New keys anthropic2025introducing, heymans2025guided.
+- S3 University of Maryland: kept the name and made it sourced. The working paper (EdWorkingPaper 26-1598, study-setting section) states "The current investigation was conducted at the University of Maryland (UMD)"; authors' affiliation is University of Maryland, College Park. Text now names the university directly and notes the paper is by researchers there.
+- Could not verify items: no change suggested; left as is.
