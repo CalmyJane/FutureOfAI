@@ -125,3 +125,4 @@ section.index { columns: 2; column-gap: 6mm; font-size: 8.2pt; line-height: 1.25
 section.index > h1 { column-span: all; }
 section.index h2 { font-size: 9pt; margin: 3mm 0 1mm; break-after: avoid; }
 section.index p { text-indent: -3mm; padding-left: 3mm; margin: 0 0 0.6mm; }
+.nohy { hyphens: manual; }

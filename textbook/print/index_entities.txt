@@ -42,7 +42,7 @@ IBM | IBM
 IEA (International Energy Agency) | IEA | International Energy Agency
 ImageNet | ImageNet
 International AI Safety Report | International AI Safety Report | Safety Report
-International Mathematical Olympiad | IMO | Mathematical Olympiad
+International Mathematical Olympiad | IMO | International Mathematical Olympiad
 Japan | Japan
 Kaplan, Jared | Kaplan
 Kimi (Moonshot AI) | Kimi
