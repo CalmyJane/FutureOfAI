@@ -598,3 +598,10 @@ Cut-off moved to late November 2026: l.5 "status as of late November 2026"; "as 
 - S3: Demirer text now "a working paper first issued in 2024"; bib note now says the figures come from NBER WP 32146, revised October 2026.
 - S4: Clearview: "In a decision of May 2024, announced that September".
 - Production S9: Colorado line changed to "As of late November 2026 no dismissal had been reported and the federal case remained open". A web search (26 November 2026) found commentary describing the case as stayed and pending, and no report of a dismissal. The docket itself was not reachable.
+
+## Fifth review fixes (November 2026)
+
+- M1: UK response to the AI Opportunities Action Plan corrected from "accepted 47 of the 50" to "agreed to 48 of the 50 ... and partially agreed to the other two" (government response of 13 January 2025: 48 "Agree", Recommendations 13 and 21 "Partially agree"). Citations unchanged.
+- S1: Closing-paragraph clause rewritten so the bill, not the pre-emption, is the subject: "a federal frontier bill, which would trade audits and incident reports for pre-emption, had not left committee" (consistent with Section 13.3: referred to Energy and Commerce, no hearing).
+- S2: Omnibus steps now include signature: "the Council on 29 June; it was signed on 8 July and published on 24 July" (Regulation (EU) 2026/1744 of 8 July 2026).
+- Could-not-verify items: no narrowing suggested by the report; left unchanged.
