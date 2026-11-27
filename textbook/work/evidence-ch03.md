@@ -477,3 +477,10 @@ Report: review3/r-ch03.md. Cut-off now late November 2026.
 - S4: GPT-6.2 now cited to new entry `openai2026gpt62` (OpenAI blog, 17 Nov 2026). Anthropic's own 9 November Fable 5.2 post not opened in this pass, so SD Times citation kept alone.
 - S5: emoji sentence reworded: "A rare character need not have a token of its own: it is spelled out in byte-level pieces."
 - Could not verify (software versions, GPT-6 Astra page claims, Gemma 3 / Veo 3 sources): no action; report suggests none.
+
+## Fifth review fixes (November 2026)
+
+- S1 (xAI/SpaceXAI/SpaceXSI naming at :389 and :459; bib `xai2026grok47`): handled by coordinator; not touched here.
+- S2: anti-distillation sentence narrowed: classifier fallback now cited to @anthropic2026fable alone; the safeguard "for API accounts created from 31 August 2026, stops users editing earlier context to extract Claude's reasoning; Opus 5.5 also carries it [@anthropic2026opus55]".
+- S3: Table 3.9 Gemini 4 Argon/Carbon row now "1-million-token limit shared by input and output (output up from 64,000)", reconciling the API docs and the launch blog.
+- Could not verify (Mata v. Avianca pin cites, Kimi K2 Thinking speed-up, Mercury Coder throughput, post-17 November flagships, Epoch R1 RL share): no action; report suggests none.

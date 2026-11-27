@@ -441,3 +441,9 @@ Report: review3/r-ch04.md. Cut-off now late November 2026.
 - ClockBench consistency with Ch. 1: added "ahead of Google's Gemini 4 Carbon at 85.0%" after Fable 5.2 Max's 87.8%, matching ch01.md:255.
 - S2: HLE sentence now "On Scale AI's leaderboard, last updated in September 2026, the top entry, GPT-6 Astra, scored 54.8% on the full public set". Later "reached 54.8% within two years" unchanged.
 - Could not verify (Epoch MFU documentation, HLE 13.4% in the Nature version, The Decoder's "at least 16 hours"): no action; underlying values confirmed per report.
+
+## Fifth review fixes (November 2026)
+
+- M1: reviewer's claim that Ch. 1 never mentions ClockBench is wrong. ch01.md:255 (in Section 1.7, heading at :177) reports that "in March 2026 the best model read analogue clocks correctly only about half the time", citing @sajadieh2026ai (2026 AI Index), and the ClockBench 83.3%/87.8%/85.0% figures. Clause kept; section number correct; added the same source: "up from about half in March 2026 (Section 1.7) [@sajadieh2026ai]". Key already in ch04.bib.
+- S1: "Chatbot Arena (renamed LMArena in 2025 and Arena in January 2026)"; "LMArena, as the operator was then called, disputed". Consistency change outside this chapter: ch07.md:294 now "On the Arena (formerly LMArena) leaderboard".
+- Could not verify (2026 AI Index figures, METR March 2026 correction, HLE Nature table, Snell and Brown figures): no action; report suggests none.
