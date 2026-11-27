@@ -22,7 +22,7 @@ active learning, 193, 320, 321
 
 active parameters, 89, 118, 119, 215
 
-Adam, 36, 56, 57, 60, 66
+Adam, 56, 57, 60, 66
 
 adaptive attack, 171, 173
 
@@ -68,7 +68,7 @@ algorithmic fidelity, 303
 
 algorithmic monoculture, 368
 
-Alibaba, 78, 112, 113, 115, 131, 167, 241, 242
+Alibaba, 37, 112, 113, 115, 131, 167, 241, 242
 
 alignment, 8, 101, 182, 387, 388, 391, 393, 395
 
@@ -76,13 +76,13 @@ alignment faking, 399, 400, 401, 402
 
 AlphaEvolve, 199, 200, 201, 206, 211, 212
 
-AlphaFold, 36, 182, 183, 184, 185, 186, 212, 213
+AlphaFold, 36, 182, 183, 184, 185, 186, 194, 213
 
 ambient scribe, 336
 
 anomaly correlation coefficient (ACC), 188
 
-Anthropic, 10, 37, 364, 400, 415, 417, 418, 419
+Anthropic, 10, 37, 364, 400, 415, 417, 418, 446
 
 area under the curve (AUC), 70, 287, 289, 290, 294, 331, 333, 334
 
@@ -160,7 +160,7 @@ chain rule, 52, 53
 
 chain-of-thought monitoring, 408, 410, 489
 
-chain-of-thought prompting, 151
+chain-of-thought prompting, 105, 151
 
 chat template, 79, 90
 
@@ -230,7 +230,7 @@ corrigibility, 419
 
 coverage, 134, 416
 
-cross-entropy, 50, 53, 54
+cross-entropy, 50, 53, 54, 99, 120
 
 cyber operations, 362, 363
 
@@ -245,7 +245,7 @@ data assimilation, 187, 192, 212
 
 data augmentation, 68
 
-data centre, 8, 215, 229, 231, 232, 233, 235, 237
+data centre, 8, 215, 229, 231, 232, 233, 236, 237
 
 data leakage, 210
 
@@ -324,7 +324,7 @@ emulator, 180, 181, 192, 210
 
 encoder, 82, 85, 96, 104, 113, 187, 189, 405
 
-environment (reinforcement learning), 97, 98, 108, 109, 112, 114, 131, 158
+environment (reinforcement learning), 97, 98, 108, 109, 112, 131, 158, 168
 
 epoch, 55, 66
 
@@ -367,7 +367,7 @@ feature, 53, 62, 397, 403, 404, 405, 406, 407
 
 feature map, 62, 63
 
-floating-point format (FP32, FP16, BF16, FP8), 218
+floating-point format (FP32, FP16, BF16, FP8), 218, 219
 
 floorplanning (chip design), 206
 
@@ -398,17 +398,17 @@ fundamental rights impact assessment, 430
 
 ## G {.unnumbered}
 
-Gemini (Google models), 37, 39, 112, 113, 114, 197, 199, 200
+Gemini (Google models), 37, 112, 113, 114, 197, 199, 200, 234
 
 generalisation, 66, 67, 205, 361, 388
 
 general-purpose AI model, 18, 22, 247
 
-generative AI, 36, 210, 258, 261, 271, 285, 326, 339
+generative AI, 36, 210, 258, 271, 285, 326, 330, 339
 
 ghost work, 275, 281
 
-GNoME, 193, 194, 195, 206, 210, 212
+GNoME, 193, 194, 195, 207, 211, 212, 213
 
 goal misgeneralisation, 388
 
@@ -486,7 +486,7 @@ hyperparameter, 66, 218, 389
 
 IBM, 15, 28, 30, 31, 40, 43, 358
 
-IEA (International Energy Agency), 9, 221, 225, 231, 232, 233, 235, 240
+IEA (International Energy Agency), 9, 221, 225, 232, 233, 235, 236, 240
 
 illusions of understanding, 211, 213
 
@@ -512,7 +512,7 @@ instruction tuning, 98, 100
 
 instrumental convergence, 378, 380
 
-intellectual debt, 211
+intellectual debt, 211, 212
 
 interconnect, 217, 220, 228
 
@@ -546,7 +546,7 @@ Kaplan, Jared, 53, 87, 120, 121, 122, 123, 124, 126
 
 kernel (convolutional), 62, 63, 200
 
-Kimi (Moonshot AI), 61, 94, 95, 107, 108, 113, 242, 244
+Kimi (Moonshot AI), 37, 61, 94, 95, 108, 113, 242, 244
 
 KL penalty, 389
 
@@ -559,7 +559,7 @@ KV cache, 92, 94, 95, 96, 217, 220
 
 ## L {.unnumbered}
 
-large language model (LLM), 7, 22, 105, 107, 109, 143, 255, 256
+large language model (LLM), 7, 22, 105, 107, 110, 143, 255, 256
 
 latent diffusion, 36, 284
 
@@ -598,7 +598,7 @@ loss of control, 352, 373, 374, 381, 382, 384, 385, 393
 
 M-1 criterion, 479, 480, 485
 
-machine learning, 21, 22, 29, 40, 187, 191, 207, 208
+machine learning, 21, 22, 29, 40, 187, 191, 207, 210
 
 mandate (AP2), 173, 174, 177
 
@@ -612,7 +612,7 @@ memory bandwidth, 65, 216, 217, 219, 225, 228, 248, 249
 
 Meta, 35, 78, 99, 112, 115, 126, 377, 446
 
-METR, 9, 139, 140, 163, 413, 418, 468, 469
+METR, 9, 140, 163, 413, 417, 418, 468, 469
 
 Microsoft, 29, 31, 36, 169, 239, 265, 277, 345
 
@@ -657,7 +657,7 @@ narrow AI, 17
 
 next-token prediction, 98, 99, 103, 115
 
-NIST, 169, 177, 351, 359, 417, 476
+NIST, 169, 177, 351, 359, 417, 418, 476
 
 non-consensual intimate imagery (NCII), 312, 314, 362
 
@@ -749,7 +749,7 @@ propensity evaluation, 398, 399
 
 protein design, 8, 179
 
-proxy, 100, 107, 325, 359, 386, 389, 390, 393
+proxy, 100, 107, 168, 325, 359, 386, 389, 393
 
 
 ## Q {.unnumbered}
@@ -767,7 +767,7 @@ randomised controlled trial, 261, 317, 346
 
 ReAct, 150, 151, 164, 178
 
-reanalysis, 179, 187, 192, 194, 195, 210, 212
+reanalysis, 179, 187, 192, 194, 195, 211, 212
 
 reasoning effort, 135
 
@@ -840,7 +840,7 @@ scientific monoculture, 211
 
 self-attention, 79, 81, 82
 
-self-supervised learning, 49
+self-supervised learning, 49, 99
 
 sensitivity, 331, 333, 365
 
@@ -876,7 +876,7 @@ specification gaming, 391, 393, 394
 
 specificity, 331, 333
 
-speculative decoding, 89, 220
+speculative decoding, 49, 89, 220
 
 state-space model, 96
 
@@ -915,7 +915,7 @@ temperature, 90, 91, 92, 192, 194, 195
 
 tensor core, 65, 216, 218
 
-terawatt-hour (TWh), 231, 232, 233, 471
+terawatt-hour (TWh), 231, 232, 233, 234, 471
 
 test-time compute, 107, 132, 133, 134, 136
 
@@ -982,7 +982,7 @@ voice cloning, 283, 285
 
 watermarking, 288, 294, 315
 
-weight, 30, 49, 51, 54, 56, 57, 62, 67
+weight, 30, 51, 54, 56, 57, 62, 67, 94
 
 weight decay, 57, 60, 66, 67, 68, 69
 
@@ -995,5 +995,5 @@ world model, 97
 
 x402, 174
 
-xAI, 108, 109, 112, 134, 136, 235, 236, 238
+xAI, 108, 109, 112, 134, 136, 236, 238, 313
 
