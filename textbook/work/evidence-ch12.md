@@ -545,3 +545,11 @@ Sources re-opened on 26 Nov 2026 unless stated: Anthropic 9 Sep 2026 post; Al Ja
 - S5: Closing summary now lists an Anthropic proxy failure alongside the two OpenAI ones: "The GPT-4o rollback, the reward hacking learned in Anthropic's production coding environments and the ExploitGym incident were all proxies giving way" [@openai2025expanding; @macdiarmid2025natural; @openai2026technical].
 - S6: CAISSI paragraph appends, from the same AP report (8 November 2026), that the centre "lacks a permanent leader and has stopped publishing its research" [@burke2026staff].
 - Could-not-verify items (AISI Frontier AI Trends figures, van der Weij et al., Paulo et al., DeepMind FSF v3.1): left unchanged; no narrowing was suggested.
+
+## Sixth review fixes (November 2026)
+
+- M1: Section 12.6 containment paragraph now says most incidents "described in detail" involve OpenAI and Anthropic, and adds that Meta and Google confirmed incidents in misconfigured Irregular tests, Google only after WSJ questions [@constantin2026meta; @schoon2026google]. Verified by web search 27 November 2026 (see evidence-ch11, sixth review M1). Bib key used is `schoon2026google` (author Ben Schoon; the report's "schoen2026google" was a typo). Entries identical to ch11.bib.
+- S1: Debate box now says access is at the discretion of companies and governments, that Anthropic gave no public reason, and that US export restrictions limited the model to US organisations [@kelly2026anthropic; @kelly2026openai]. CAISSI paragraph adds that Anthropic gave no reason and that the institute's director noted no organisation outside the US had access [@kelly2026openai].
+- S2: AISI sentence rewritten: internet access was enabled deliberately; only the model behaviour (continuing against real targets) matched [@aisi2026incident; @aisi2026investigating].
+- S3: Skipped. TMLR 2026 publication confirmed by the MLAnthology index (mlanthology.org/tmlr/2026/schlatter2026tmlr-incomplete), so "peer-reviewed, TMLR" is kept.
+- Could-not-verify items: unchanged.
