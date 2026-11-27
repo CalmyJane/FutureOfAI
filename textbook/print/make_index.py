@@ -134,10 +134,12 @@ def build():
             hits = sorted([first] + dense)
         rows.append((term, [n for n, _ in hits]))
     rows += [(t, "see " + target) for t, target in see_rows]
-    rows.sort(key=lambda r: re.sub(r"[^a-z0-9 ]", "", r[0].lower()))
+    def sortkey(t):
+        return re.sub(r"[^a-z0-9 ]", "", t.lower().replace("τ", "tau"))
+    rows.sort(key=lambda r: sortkey(r[0]))
     letter = None
     for term, ns in rows:
-        L = re.sub(r"[^a-z0-9]", "", term.lower())[:1].upper()
+        L = sortkey(term).replace(" ", "")[:1].upper()
         L = "0–9" if L.isdigit() else L
         if L != letter:
             lines.append(f"\n## {L} {{.unnumbered}}\n")

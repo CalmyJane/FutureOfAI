@@ -77,6 +77,7 @@ hr { border: 0; border-top: 0.4pt solid #000; width: 25%; margin: 5mm auto; }
 /* boxes */
 .box { margin: 4.5mm 0; padding: 2.8mm 3.5mm 2.2mm; font-size: 9.3pt; line-height: 1.32; text-align: left; break-inside: auto; orphans: 3; widows: 3; border-radius: 1.5mm; box-decoration-break: clone; }
 .box p { text-indent: 0; margin-bottom: 1.4mm; }
+.box > p:first-child { break-after: avoid; }
 .box > p:first-child strong { font-variant: small-caps; letter-spacing: 0.04em; font-size: 9.8pt; }
 .concept { background: #efefef; border: 0.4pt solid #000; }  /* outline keeps the box visible if the light tint drops out in print */
 .case { border: 0.6pt solid #000; }
