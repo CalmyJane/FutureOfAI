@@ -421,3 +421,9 @@ Source: review3/r-ch02.md. Cut-off moved to late November 2026.
 
 - S1 (DeepSeek-V4-Pro sentence): rewritten as "which its developer released as a preview in April 2026 and in an official version in August, has 1.6 trillion parameters in total but activates 49 billion per token, according to the company's technical report". Citations unchanged.
 - Could not verify (V4-Flash 31 July date; Goodfellow et al. page-specific quotations): no change; the report suggests none.
+
+## Eighth review fixes (November 2026)
+
+- S1 (1,202-layer ResNet on CIFAR-10): done. Now "Even a 1,202-layer network, tested on the smaller CIFAR-10 dataset, showed "no optimization difficulty"" (He et al. 2016, Sec. 4.2).
+- S2 (DeepSeek-V4 "both keeping the preview's structure"): done. Clause removed; V4-Flash-0731 adds a speculative decoding module per its model card.
+- Could-not-verify items (AdamW modules in DeepSeek-V4, LeNet per month/per day, Zech et al. figures): no change; no narrowing suggested.

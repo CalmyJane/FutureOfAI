@@ -492,3 +492,10 @@ Source: review3/r-ch01.md and review3/00-VERDICT.md section B. Cut-off moved to 
 ## Seventh review fixes (November 2026)
 - S1: November releases (Fable 5.2, GPT-6.2) added to the model list; bib entries copied from ch03.
 - S2: Microsoft figure given with its age band (15 to 64).
+
+## Eighth review fixes (November 2026)
+
+- S1 (GPT-6.2 is two models): done. Now "OpenAI GPT-6.2 Astra and GPT-6.2 Sol (17 November)".
+- S2 (ClockBench balance): done. Added "OpenAI's GPT-6.2 models, released on 17 November, had not yet been listed". Same note added to the ClockBench sentence in ch04.md (Section 4 benchmark validity paragraph) so the two chapters match; figures unchanged (83.3%, 87.8%, 85.0%, 90.7%).
+- S3 (MCP balance): done. Added the December 2025 transfer to a foundation under the Linux Foundation, co-founded with Block and OpenAI, and adoption in ChatGPT and Gemini, labelled "according to Anthropic", cross-referenced to Chapter 5 and cited to [@anthropic2025donating]. Entry copied identically from ch05.bib to ch01.bib.
+- Could-not-verify items (OSWorld-Verified 86%, Dartmouth attendees, MYCIN page numbers): no change; the reviewer suggested none.
