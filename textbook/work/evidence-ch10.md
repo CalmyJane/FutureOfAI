@@ -466,3 +466,9 @@ Scanner (review/uncited.py) now reports 0 uncited blocks; pandoc --citeproc clea
 - **Reader notes** 1, 6, 7 covered by S3, S2, S5. 3: clause "because not every student completed every test" added. 4: "pointing towards a benefit". 2 (split Nigeria paragraph) skipped: the split would fall inside a numbered "First ... Second ... Third" list. 5 (move Bean et al. to 10.5) skipped: structural move, no wrong sentence. 8 skipped: accurate, and the book does not use notes for this. 9: no change needed.
 - **Could not verify** items: none needed a change (S4 removes the 510(k) dependency).
 - **Section B**: no cross-chapter items touch ch10.
+
+## Fifth review fixes (November 2026)
+
+- **10-S1 (AMIE)**: ch10.md:135 now reads "100 patients talked with AMIE before a primary-care appointment for a new, non-emergency complaint (98 then attended), while physicians supervised...". Source: Google Research blog, "Exploring the feasibility of conversational diagnostic AI in a real-world clinical study": "100 patients completed a pre-visit interaction with AMIE, and 98 attended"; "new, non-emergency, episodic complaints". Citation unchanged (@brodeur2026conversational).
+- **10-S2 (Maryland tutor)**: ch10.md:54 now adds the 0.90 SD fall in participation in the online learning system and the authors' main interpretation (displaced engagement with existing course activities), keeping the instructor-promotion explanation as the alternative. Source: Liu et al., EdWorkingPaper ai26-1598, abstract and p. 3.
+- Could-not-verify items (De Simone details, CNN "five suits", Penda details, Brodeur hallucination/additions, Speech Accessibility counts): left unchanged, as the report suggests no narrowing.
