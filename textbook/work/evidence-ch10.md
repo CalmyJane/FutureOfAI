@@ -485,3 +485,7 @@ Scanner (review/uncited.py) now reports 0 uncited blocks; pandoc --citeproc clea
 - S2 Study modes: done. Anthropic "learning mode" (Claude for Education, 2 April 2025, primary page checked: "guides students' reasoning process rather than providing answers"), OpenAI study mode (July 2025), Google Guided Learning in Gemini (Google blog, Maureen Heymans, 6 August 2025). New keys anthropic2025introducing, heymans2025guided.
 - S3 University of Maryland: kept the name and made it sourced. The working paper (EdWorkingPaper 26-1598, study-setting section) states "The current investigation was conducted at the University of Maryland (UMD)"; authors' affiliation is University of Maryland, College Park. Text now names the university directly and notes the paper is by researchers there.
 - Could not verify items: no change suggested; left as is.
+
+## Ninth review fixes (November 2026)
+- S1 (optional) Character.AI fine: done. Grounds now read "privacy notice, age verification and other GDPR duties" (Garante, 9 Jul 2026: also no DPIA and late EU representative). Existing key garante2026character kept.
+- Could not verify items: no change suggested; left as is.

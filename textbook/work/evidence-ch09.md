@@ -557,3 +557,8 @@ Source: review2/r-ch09-10.md (Ch9 items), 00-VERDICT C15/C18, FIX-BRIEF.md.
 - S1 Anthropic misuse report: done. Sentence added after the OpenAI report in Section 9.1. Primary page checked (published 23 April 2025): "financially-motivated 'influence-as-a-service' operation", "managed over 100 social media bot accounts across Twitter/X and Facebook", "engaged with tens of thousands of authentic social media accounts", "No content achieved viral status" (the last added for parity with the Meta/OpenAI caveats). New key anthropic2025detecting (not present elsewhere). The suggested September 2026 report was not cited because the primary page was not checked.
 - S2 Pew digital twins: done, review wording (models from OpenAI and Anthropic tested; Claude Opus 4.6 best but still 12.4 points off).
 - Could not verify items: no change suggested; left as is.
+
+## Ninth review fixes (November 2026)
+- S1 Pew model comparison: done, review wording. Main tests used Claude Opus 4.6; on a subset of questions Opus 11.4 vs GPT-5.1 13.3 points ("slightly better"), and Pew said either would mislead; 12.4-point average across waves kept. New key pew2026how (not present elsewhere) for the model-comparison page.
+- S2 "Talarico won his seat" changed to "Talarico won the Senate race".
+- Could not verify items: no change suggested; left as is.
