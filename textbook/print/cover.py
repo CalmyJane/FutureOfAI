@@ -282,7 +282,7 @@ svg {{ display: block; }}
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--pages", type=int, default=636)
+    ap.add_argument("--pages", type=int, default=638)
     ap.add_argument("--paper", default="weiss", choices=sorted(PAPER))
     ap.add_argument("--spine-mm", type=float, help="cover spine width from myBoD (overrides the calculation)")
     ap.add_argument("--isbn", default=os.environ.get("BOOK_ISBN"), help="ISBN-13; draws the EAN-13 barcode")

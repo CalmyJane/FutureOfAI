@@ -297,7 +297,7 @@ Image generation followed a parallel path. Generative adversarial networks, intr
 
 Deep learning also produced a scientific landmark. DeepMind's AlphaFold 2 predicted the three-dimensional structure of proteins from their amino-acid sequences with accuracy "competitive with experimental structures in a majority of cases" [@jumper2021highly]. Recognition followed. The 2018 Turing Award, often called the "Nobel Prize of Computing", went to Yoshua Bengio, Geoffrey Hinton and Yann LeCun for breakthroughs that made deep neural networks "a critical component of computing" [@acm2019fathers]. In 2024 John Hopfield and Hinton shared the Nobel Prize in Physics for discoveries that enable machine learning with neural networks, and Demis Hassabis and John Jumper shared half of the chemistry prize for protein structure prediction [@royal2024nobelphysics; @royal2024nobelchemistry].
 
-Use of ChatGPT and similar assistants spread quickly, by measures that count different things. In a peer-reviewed article, Alexander Bick, Adam Blandin and David Deming found that, measured from each technology's first mass-market product, adoption of generative AI at work has been faster than that of the personal computer, and overall adoption, at home and at work, "has outpaced both PCs and the internet" [@bick2026rapid]. By May 2026, according to the same team's surveys as reported in a Federal Reserve Bank of St. Louis blog post, 62% of US adults aged 18 to 64 used generative AI [@bick2026what]. Microsoft's own usage telemetry, which counts users of its tools rather than survey answers, ranked the United States only 21st by the share of its population using AI in early 2026 [@lavistaferres2026state]. Chapter 8 examines adoption and its economic effects.
+Use of ChatGPT and similar assistants spread quickly, by measures that count different things. In a peer-reviewed article, Alexander Bick, Adam Blandin and David Deming found that, measured from each technology's first mass-market product, adoption of generative AI at work has been faster than that of the personal computer, and overall adoption, at home and at work, "has outpaced both PCs and the internet" [@bick2026rapid]. By May 2026, according to the same team's surveys as reported in a Federal Reserve Bank of St. Louis blog post, 62% of US adults aged 18 to 64 used generative AI [@bick2026what]. Microsoft's own usage telemetry, which counts users of its tools rather than survey answers, put the share of working-age Americans using AI at 31.3% in the first quarter of 2026, which ranked the United States only 21st [@lavistaferres2026state]. Chapter 8 examines adoption and its economic effects.
 
 ### Reasoning models and agents
 
@@ -335,7 +335,7 @@ The effect also works from inside the field. Mitchell notes that machine-learnin
 
 The label has commercial value, and its scope has followed money. Haigh notes that in the 1980s "expert systems" was often promoted as "a less controversial alternative to artificial intelligence", and that later neural-network work was pursued under brands such as machine learning and pattern recognition. Only in the last few years, he writes, has the AI label been "flipped to refer primarily to deep learning and generative systems" [@haigh2024how].
 
-When the label is fashionable it is also claimed falsely, and regulators have started to penalise such claims. In March 2024 the US Securities and Exchange Commission (SEC) fined two investment advisers, Delphia and Global Predictions, a total of $400,000 for telling clients that they used AI in ways that they did not; its chair called the practice "AI washing" [@sec2024sec]. In September 2024 the Federal Trade Commission announced five enforcement actions against firms that, in its words, had "seized on the hype surrounding AI". One of them, DoNotPay, had advertised "the world's first robot lawyer"; the FTC's chair said that "there is no AI exemption from the laws on the books" [@ftc2024announces]. Enforcement has continued. In January 2025 the SEC settled charges against Presto Automation over claims about how many drive-thru orders its AI system handled without human help [@sec2025presto], and in April 2025 federal prosecutors in New York charged the founder of the shopping app Nate with securities and wire fraud, alleging that transactions presented as automated were largely processed by human workers [@usdoj2025techceo; @rollet2025fintech].
+When the label is fashionable it is also claimed falsely, and regulators have started to penalise such claims. In March 2024 the US Securities and Exchange Commission (SEC) fined two investment advisers, Delphia and Global Predictions, a total of $400,000 for telling clients that they used AI in ways that they did not; its chair called the practice "AI washing" [@sec2024sec]. In September 2024 the Federal Trade Commission announced five enforcement actions against firms that, in its words, had "seized on the hype surrounding AI". One of them, DoNotPay, had advertised "the world's first robot lawyer"; the FTC's chair said that "there is no AI exemption from the laws on the books" [@ftc2024announces]. Enforcement has continued. In January 2025 the SEC settled charges against Presto Automation over claims about how many drive-thru orders its AI system handled without human help [@sec2025presto], and in April 2025 federal prosecutors in New York charged the founder of the shopping app Nate with securities and wire fraud, alleging that transactions presented as automated were largely processed by human workers; he has pleaded not guilty [@usdoj2025techceo; @rollet2025fintech; @quinnemanuel2026saniger].
 
 Scholars of technology go further. The data-journalism professor and former software developer Meredith Broussard warns against "technochauvinism", the belief that technology is always the solution [@broussard2018artificial], and Kate Crawford describes AI as a material and political system, built from minerals, labour and personal data, that tends to concentrate power [@crawford2021atlas]. The anthropologist Lucy Suchman makes the argument most relevant to this chapter. Treating AI as a single "thing", she argues, helps to attract further investment, and she asks instead for attention to the specific techniques that "travel under the sign of AI", where they are used and with what effects [@suchman2023uncontroversial]. In the author's reading, the legal definitions in Section 1.2 do the opposite of what she asks: they gather regression-like learning, expert systems and language models under one name, and then need case-by-case exclusions to keep the name usable. Her question, which systems a single name should cover and who gains from grouping them, is therefore also a question about those definitions.
 
@@ -434,7 +434,7 @@ In 1989 George Cybenko, and independently Kurt Hornik and colleagues, proved tha
 
 Every weight and bias is a **parameter**, a number adjusted by training, and parameter counts are the usual measure of a network's size. The network in Figure 2.2 has 26. LeNet-5 had about 60,000 [@lecun1998gradient]. AlexNet had 60 million parameters [@krizhevsky2012imagenet], and GPT-3 had 175 billion [@brown2020language]. The arithmetic inside each neuron is no harder in GPT-3 than in Figure 2.1; what differs is the number of neurons, how they are wired and how the weights were set.
 
-Many recent language models complicate the count. In a **mixture-of-experts** (MoE) model, some layers contain many alternative sub-networks, the experts, and a small learned routing network sends each token to only a few of them [@shazeer2017outrageously]. Such a model has a large *total* parameter count, which determines how much memory it needs, and a much smaller *active* count, the parameters actually used for each token, which determines how much computation each token costs. DeepSeek-V4-Pro, for example, which its developer released as a preview in April 2026, described in a company technical report, and then in an official version in August, has 1.6 trillion parameters in total but activates 49 billion per token, according to the technical report [@deepseekai2026deepseekv4; @deepseekai2026v4pro]. Cost estimates such as the rule of thumb in Section 2.4 must therefore use the active count; Chapter 3 describes the design.
+Many recent language models complicate the count. In a **mixture-of-experts** (MoE) model, some layers contain many alternative sub-networks, the experts, and a small learned routing network sends each token to only a few of them [@shazeer2017outrageously]. Such a model has a large *total* parameter count, which determines how much memory it needs, and a much smaller *active* count, the parameters actually used for each token, which determines how much computation each token costs. DeepSeek-V4-Pro, for example, which its developer released as a preview in April 2026 and in an official version in August, has 1.6 trillion parameters in total but activates 49 billion per token, according to the company's technical report [@deepseekai2026deepseekv4; @deepseekai2026v4pro]. Cost estimates such as the rule of thumb in Section 2.4 must therefore use the active count; Chapter 3 describes the design.
 
 ## 2.3 Loss functions and gradient descent
 
@@ -991,7 +991,7 @@ Such **omni models** are common at the frontier, but output is usually narrower 
 
 A modern chatbot is built in stages (Figure 3.3) [@ouyang2022training]. The first and usually by far the most expensive is **pre-training**: next-token prediction over an enormous body of text, which yields a **base model** like those in Table 3.7. **Post-training** then turns it into an assistant [@ouyang2022training; @edelman2025why].
 
-![Figure 3.3: How a typical chat model is trained. Pre-training on web-scale text produces a base model that continues text. Training on written examples of good answers (instruction tuning) teaches it to follow instructions. Training on rankings of answers by people or by another AI (preference training) shapes its style and safety. Reasoning models add a further stage of reinforcement learning on problems whose answers can be checked automatically, and since 2025 on tasks in tool and code environments (Section 3.7). For DeepSeek-R1 this stage took about 5% of DeepSeek-V3's total reported training computation; DeepSeek put the reinforcement-learning budget for V3.2 above 10% of pre-training cost, and closed developers do not disclose theirs. Schematic by the author [@ouyang2022training; @bai2022constitutional; @guo2025deepseek; @deepseekai2024deepseekv3; @deepseekai2025deepseekv32].](../figures/svg/fig-03-03.svg){#fig:03-03}
+![Figure 3.3: How a typical chat model is trained. Pre-training on web-scale text produces a base model that continues text. Training on written examples of good answers (instruction tuning) teaches it to follow instructions. Training on rankings of answers by people or by another AI (preference training) shapes its style and safety. Reasoning models add a further stage of reinforcement learning on problems whose answers can be checked automatically, and since 2025 on tasks in tool and code environments (Section 3.7). For DeepSeek-R1 this stage took about 5% of DeepSeek-V3's total reported training computation; DeepSeek put the post-training budget for V3.2, mostly reinforcement learning, above 10% of pre-training cost, and closed developers do not disclose theirs. Schematic by the author [@ouyang2022training; @bai2022constitutional; @guo2025deepseek; @deepseekai2024deepseekv3; @deepseekai2025deepseekv32].](../figures/svg/fig-03-03.svg){#fig:03-03}
 
 ### The pre-training objective
 
@@ -1077,7 +1077,7 @@ DeepSeek published one of the most detailed recipes, in peer-reviewed form in *N
 
 Progress was measured on AIME 2024, the American Invitational Mathematics Examination, in which every answer is a single number that can be checked automatically. During training, R1-Zero's average accuracy rose from 15.6% to 77.9%. Its answers grew steadily longer, and it began to check and revise its own work, at one point writing "Wait, wait. Wait. That's an aha moment I can flag here." (The figures are DeepSeek's own, from the *Nature* version; the January 2025 preprint reported 71.0%.) The released DeepSeek-R1, which added supervised fine-tuning stages, scored 79.8%, close to the developers' measurement for OpenAI's o1, and was published under the permissive MIT licence [@guo2025deepseek].
 
-This stage is still small next to pre-training, but it is growing. DeepSeek's *Nature* paper reports that the reinforcement-learning runs for R1-Zero and R1, with the data preparation between them, took about 147,000 GPU-hours [@guo2025deepseek]. That is roughly 5% of the 2.79 million GPU-hours the company reported for the full training of DeepSeek-V3, DeepSeek-V3 [@deepseekai2024deepseekv3]. Epoch AI, an independent research institute, had estimated about 20% before these figures were published. It also cited OpenAI's statement that o3 used ten times the training compute of o1, most likely in this stage [@you2025how].
+This stage is still small next to pre-training, but it is growing. DeepSeek's *Nature* paper reports that the reinforcement-learning runs for R1-Zero and R1, with the data preparation between them, took about 147,000 GPU-hours [@guo2025deepseek]. That is roughly 5% of the 2.79 million GPU-hours the company reported for the full training of DeepSeek-V3 [@deepseekai2024deepseekv3]. Epoch AI, an independent research institute, had estimated about 20% before these figures were published. It also cited OpenAI's statement that o3 used ten times the training compute of o1, most likely in this stage [@you2025how].
 
 Whether this training adds new skills or mainly brings out existing ones is disputed. The gains in mathematics and coding are large, and DeepSeek reports that self-checking behaviour emerged during the training itself [@guo2025deepseek]. @yue2025does, however, compared reinforcement-trained models with their base models when each was allowed many attempts. The trained models won on a single attempt, but with hundreds of attempts the base models solved as many problems or more. The authors concluded that current training of this kind "rarely elicit[s] fundamentally new reasoning patterns" and mainly makes the model find, more reliably, solutions it could already reach. Chapter 4 returns to what this implies for scaling.
 
@@ -1105,7 +1105,7 @@ Open developers have published most about how it is done. Kimi K2's post-trainin
 
 Three things set this training apart from the maths-problem kind. Trajectories are long, and a single reward at the end says little about which of many steps helped, so developers cap and shape them: Kimi K2's training set a token budget per task and penalised answers that ran over [@kimiteam2025kimi]. Environments become a scarce input, since each needs a working sandbox and a checker that cannot be fooled, and Epoch AI researchers count building them among the bottlenecks of further scaling [@edelman2025why]. And the checkers can be gamed. In a 2025 Anthropic study, a model trained in real production coding environments that were open to reward hacks learned to exploit them, and the habit generalised to broader misbehaviour [@macdiarmid2025natural]; OpenAI traced its agents' escape from a test environment in July 2026 partly to training in which cheating, such as copying a hidden reference answer, had been rewarded [@openai2026technical] (Section 12.2).
 
-The computation spent on this stage is growing. DeepSeek put the reinforcement-learning budget for V3.2 above 10% of its pre-training cost [@deepseekai2025deepseekv32], against about 5% for R1. xAI said it ran reinforcement learning for Grok 4 "at pretraining scale", and the same developer, by then a SpaceX subsidiary renamed SpaceXAI (it has used the brand SpaceXSI since October 2026 [@frank2026why]), said of Grok 4.7, in September 2026, "a longer reinforcement learning run on a harder mix of tasks", emphasising problems that take many hours [@xai2025grok4; @xai2026grok47]; these are company statements without published figures. Meta describes the reinforcement learning after Muse Spark's pre-training as the stage that "leverages compute to scalably amplify model capabilities" [@meta2026muse]. In the author's view this training, more than better prompting, explains most of the gains in agent benchmarks reported in Chapters 4 and 5, although no developer discloses how much each ingredient contributed. Chapter 5 describes how such models are deployed as agents, and where they still fail.
+The computation spent on this stage is growing. DeepSeek put the post-training budget for V3.2, mostly reinforcement learning, above 10% of its pre-training cost [@deepseekai2025deepseekv32], against about 5% for R1. xAI said it ran reinforcement learning for Grok 4 "at pretraining scale", and the same developer, by then the SpaceX subsidiary SpaceXAI, said of Grok 4.7, in September 2026, "a longer reinforcement learning run on a harder mix of tasks", emphasising problems that take many hours [@xai2025grok4; @xai2026grok47]; these are company statements without published figures. (On 4 October 2026 Elon Musk said SpaceXAI would be renamed SpaceXSI [@frank2026why].) Meta describes the reinforcement learning after Muse Spark's pre-training as the stage that "leverages compute to scalably amplify model capabilities" [@meta2026muse]. In the author's view this training, more than better prompting, explains most of the gains in agent benchmarks reported in Chapters 4 and 5, although no developer discloses how much each ingredient contributed. Chapter 5 describes how such models are deployed as agents, and where they still fail.
 
 The written reasoning is not necessarily a faithful record of how the model reached its answer. In a preprint, Anthropic researchers slipped hints into questions and checked whether reasoning models that used a hint said so. The models mentioned the hint only a minority of the time: 25% on average for Anthropic's Claude 3.7 Sonnet and 39% for DeepSeek-R1 [@chen2025reasoning]. This matters for safety monitoring that relies on reading the chain of thought (Section 12.5).
 
@@ -1151,7 +1151,7 @@ One caveat applies throughout. The closed developers stopped publishing their de
 | Grok 4 | xAI | Jul 2025 | RL "at pretraining scale" (company claim); trained to use tools; parallel agents in Grok 4 Heavy | [@xai2025grok4] |
 | GPT-5; gpt-oss | OpenAI | Aug 2025 | Router between a fast and a thinking model; open MoE models in 4-bit MXFP4 | [@openai2025gpt5; @openai2025gptoss] |
 | Gemini 3; 3.5 Flash | Google | Nov 2025; May 2026 | Deep Think mode; agentic coding; 1-million-token context | [@google2025gemini3; @vinyals2026gemini35] |
-| DeepSeek-V3.2 | DeepSeek | Dec 2025 | Sparse attention; RL budget above 10% of pre-training cost; 1,800+ agent environments | [@deepseekai2025deepseekv32] |
+| DeepSeek-V3.2 | DeepSeek | Dec 2025 | Sparse attention; post-training budget above 10% of pre-training cost; 1,800+ agent environments | [@deepseekai2025deepseekv32] |
 | Qwen3.5 | Alibaba | Feb 2026 | Open hybrid of linear-attention and attention layers (3:1); early-fusion multimodal | [@qwen2026qwen35] |
 | Claude Mythos Preview | Anthropic | Apr 2026 | New tier above Opus; withheld from general release over its cyber capabilities | [@anthropic2026claude; @anthropic2026fable] |
 | Muse Spark | Meta | Apr 2026 | First Meta Superintelligence Labs model; natively multimodal reasoning; closed at launch | [@meta2026muse] |
@@ -1173,9 +1173,9 @@ Releases continued after the table's end date. In November 2026 Anthropic releas
 
 **Native multimodality.** ChatGPT read and wrote text. GPT-4 accepted images [@openai2023gpt4] and GPT-4o heard and spoke [@hurst2024gpt4o]; frontier models of 2026 take in text, images, audio and video, and some products generate images within the chat model itself (Section 3.4) [@google2026gemini; @openai2025addendum].
 
-**Reasoning, and control over it.** The step from ChatGPT to o1 in 2024 was training long chains of thought with reinforcement learning on checkable problems, a recipe DeepSeek-R1 made public (Section 3.7) [@openai2024o1; @guo2025deepseek]. Within a year reasoning was no longer a separate product line. Anthropic called Claude 3.7 Sonnet, in February 2025, "the first hybrid reasoning model on the market": one model that could answer at once or think first, within a token budget set by the developer [@anthropic2025claude37]. Qwen3 did the same with open weights [@yang2025qwen3], and Google described Gemini 2.5 models as "thinking models" [@google2025gemini25]. OpenAI's GPT-5 (August 2025) took another route, "a unified system" of a fast model and a deeper reasoning model with "a real-time router that quickly decides which to use" [@openai2025gpt5]. By 2026 the choice is usually a dial. Claude Opus 5.5 offers effort levels from low to max and can no longer be used with thinking switched off [@anthropic2026opus55], and Gemini 4 Argon offers low, medium and high thinking levels [@google2026gemini]. Section 4.6 describes these controls and the parallel "deep thinking" modes built on them.
+**Reasoning, and control over it.** The step from ChatGPT to o1 in 2024 was training long chains of thought with reinforcement learning on checkable problems, a recipe DeepSeek-R1 made public (Section 3.7) [@openai2024o1; @guo2025deepseek]. Within two years reasoning had become a setting rather than a separate product: by 2026 it is usually a dial, as with Claude Opus 5.5's effort levels from low to max (it can no longer be used with thinking switched off) and Gemini 4 Argon's low, medium and high thinking levels, and Section 4.6 describes these controls and the parallel modes built on them [@anthropic2026opus55; @google2026gemini].
 
-**Agentic training.** The ChatGPT of 2022 could neither run code nor browse. Frontier models of 2026 are trained by reinforcement learning to act in software environments, calling tools within their reasoning over hundreds of steps (Section 3.7). Developers increasingly describe their models by how long and how reliably they work. Anthropic says that Fable 5 and Mythos 5 "can work autonomously for longer than any previous Claude models" [@anthropic2026fable]; Google says Gemini 4 Carbon has run for days on internal multi-step engineering tasks [@kavukcuoglu2026gemini4carbon]; SpaceXAI said that Grok 4.7's training emphasised tasks that take many hours [@xai2026grok47]. Several products also set multiple agents to work on one problem in parallel, as in Grok 4 Heavy and Muse Spark's "Contemplating" mode [@xai2025grok4; @meta2026muse].
+**Agentic training.** The ChatGPT of 2022 could neither run code nor browse. Frontier models of 2026 are trained by reinforcement learning to act in software environments, calling tools within their reasoning over hundreds of steps (Section 3.7). Developers increasingly describe their models by how long and how reliably they work. Anthropic says that Fable 5 and Mythos 5 "can work autonomously for longer than any previous Claude models" [@anthropic2026fable]; Google says Gemini 4 Carbon has run for days on internal multi-step engineering tasks [@kavukcuoglu2026gemini4carbon]; SpaceXAI said that Grok 4.7's training emphasised tasks that take many hours [@xai2026grok47]. Several products also set multiple agents to work on one problem in parallel (Section 4.6).
 
 **Families and distillation.** ChatGPT launched as one model. Developers now release families of tiers that trade capability against price and speed: Claude Haiku, Sonnet and Opus since 2024 [@anthropic2024claude3], with a Mythos tier above Opus from 2026 [@anthropic2026fable]; Gemini Pro and Flash [@vinyals2026gemini35]; GPT-6 Astra, Sol and Luna [@openai2026gpt6]. Smaller models are often trained partly by **distillation**, learning to imitate the outputs of a larger one: Meta "codistilled" Llama 4 Maverick from the larger Llama 4 Behemoth [@meta2025llama4], and DeepSeek distilled R1's reasoning into small open models [@guo2025deepseek]. Distillation also works on a competitor's outputs. Anthropic routes requests its classifiers flag as distillation attempts to an older model [@anthropic2026fable], and since Fable 5.1 has applied an "anti-distillation safeguard" that, for API accounts created from 31 August 2026, stops users editing earlier context to extract Claude's reasoning; Opus 5.5 also carries it [@anthropic2026opus55].
 
@@ -1394,7 +1394,7 @@ How can a budget be imposed on a model that decides for itself when to stop? The
 
 The second control is a **router**, which makes the choice for the user. OpenAI's system card describes GPT-5, released in August 2025, as "a unified system" of a fast model, a deeper reasoning model and "a real-time router that quickly decides which model to use based on conversation type, complexity, tool needs, and explicit intent", for example a request to "think hard about this". The router is trained on signals such as when users switch models and how often answers are correct [@openai2025gpt5systemcard]. A router applies Snell and colleagues' advice, to spend compute where it helps, as a product decision. It also means that "the model" a user talks to is a system of models, so a benchmark score is meaningful only together with the setting that produced it (Section 5.4 gives an example).
 
-The third control runs many lines of reasoning **in parallel** and combines them, the product form of the sampling research described above. xAI described Grok 4 Heavy, in July 2025, as using "parallel test-time compute, which allows Grok to consider multiple hypotheses at once" [@xai2025grok4]. A "pro" setting of GPT-5 in ChatGPT, according to the same system card, "makes use of parallel test time compute" [@openai2025gpt5systemcard]. Google DeepMind said the version of Gemini Deep Think that reached gold-medal standard at the 2025 International Mathematical Olympiad could "simultaneously explore and combine multiple possible solutions" (Section 6.5) [@google2025advanced]. In October 2026, according to press reports, OpenAI let GPT-6 Pro in ChatGPT split a task among several agents working at the same time [@merket2026openai]. None of these vendors publishes how many lines of reasoning are run or how they are combined, so their workings are known mainly from the research above. Parallel modes inherit its pattern: they help most where candidate answers can be checked or compared, and their cost grows with every line added.
+The third control runs many lines of reasoning **in parallel** and combines them, the product form of the sampling research described above. xAI described Grok 4 Heavy, in July 2025, as using "parallel test-time compute, which allows Grok to consider multiple hypotheses at once" [@xai2025grok4]. Meta describes Muse Spark's "Contemplating" mode, in April 2026, as one that "orchestrates multiple agents that reason in parallel" [@meta2026muse]. A "pro" setting of GPT-5 in ChatGPT, according to the same system card, "makes use of parallel test time compute" [@openai2025gpt5systemcard]. Google DeepMind said the version of Gemini Deep Think that reached gold-medal standard at the 2025 International Mathematical Olympiad could "simultaneously explore and combine multiple possible solutions" (Section 6.5) [@google2025advanced]. In October 2026, according to press reports, OpenAI let GPT-6 Pro in ChatGPT split a task among several agents working at the same time [@merket2026openai]. None of these vendors publishes how many lines of reasoning are run or how they are combined, so their workings are known mainly from the research above. Parallel modes inherit its pattern: they help most where candidate answers can be checked or compared, and their cost grows with every line added.
 
 Together these controls turn test-time compute from a property of a model into a price list. The same model can answer cheaply or think at length, and the gap between its settings can be as large as the gap between models, as the two ARC-AGI-1 configurations showed [@arcprize2024openai].
 
@@ -1418,11 +1418,11 @@ What would settle the dispute is a public record of forecasts. If developers reg
 
 Most claims of progress rest on **benchmarks**, fixed sets of questions or tasks with known answers. Benchmarks **saturate**: once top models approach the maximum score, they stop discriminating. GPQA Diamond consists of 198 graduate-level science questions written to resist web search. The expert validators who checked them score 81.2%, a figure their authors note is inflated because the set was selected partly on those experts answering correctly; across the full pool of questions, experts reached 65% [@rein2023gpqa]. In late 2024 OpenAI's o3 scored 87.7%, above both expert figures, according to the AI Index [@sajadieh2026ai]. The AI Index concludes that evaluations "intended to be challenging for years are saturated in months" [@sajadieh2026ai].
 
-Benchmarks can also be **contaminated**: test questions, or close variants, can end up in training data, so a high score partly reflects memorisation. Zhang and colleagues commissioned GSM1k, 1,205 new grade-school maths problems matched to the widely used GSM8K benchmark in difficulty, number of solution steps and answer size, and never published [@zhang2024careful]. Accuracy fell by up to 8 percentage points on the new set, with several model families showing systematic overfitting across almost all sizes. A model's probability of reproducing GSM8K examples was related to its performance gap (Spearman's *r*^2^ = 0.36, a moderate positive rank correlation), a sign of partial memorisation. Many frontier models, however, showed minimal overfitting.
+Benchmarks can also be **contaminated**: test questions, or close variants, can end up in training data, so a high score partly reflects memorisation. Zhang and colleagues commissioned GSM1k, 1,205 new grade-school maths problems matched to the widely used GSM8K benchmark in difficulty, number of solution steps and answer size, and withheld from publication to avoid contamination [@zhang2024careful]. Accuracy fell by up to 8 percentage points on the new set, with several model families showing systematic overfitting across almost all sizes. A model's probability of reproducing GSM8K examples was related to its performance gap (Spearman's *r*^2^ = 0.36, a moderate positive rank correlation), a sign of partial memorisation. Many frontier models, however, showed minimal overfitting.
 
 Leaderboards based on human votes have a related problem. Chatbot Arena (renamed LMArena in 2025 and Arena in January 2026) shows users the answers of two anonymous models and asks which is better. Singh and colleagues found that it allowed some providers to test many private variants and publish only the best; according to the preprint version of their paper, Meta tested 27 before releasing Llama 4 [@singh2025leaderboard]. The same version estimates that Google and OpenAI received 19.2% and 20.4% of all Arena data, against 29.7% for 83 open-weight models combined. LMArena, as the operator was then called, disputed several of the paper's figures and said its pre-release testing was open to all providers [@lmarena2025response].
 
-A third weakness is **validity**: whether a benchmark measures what it claims to. When experts reviewed the 50 questions flagged as most suspect by a statistical screen in each of nine widely used benchmarks, between 2 (on part of MMLU) and 42 (on GSM8K) proved flawed [@truong2025fantastic]. Progress is also uneven, a pattern Dell'Acqua and colleagues called a "jagged technological frontier" [@dellacqua2026navigating]. Models that solve research-level problems can still fail simple perceptual tasks. On ClockBench, which asks models to read analogue clocks, the average human scores 90.7%. On 25 October 2026 the best model, Google's Gemini 4 Argon, scored 83.3%, up from about half in March 2026 (Section 1.7) [@sajadieh2026ai]. By late November 2026 the leader was Anthropic's Claude Fable 5.2 Max (its highest setting), released on 9 November, at 87.8%, ahead of Google's Gemini 4 Carbon at 85.0% [@clockbench2026clockbench; @sajadieh2026ai].
+A third weakness is **validity**: whether a benchmark measures what it claims to. When experts reviewed the 50 questions flagged as most suspect by a statistical screen in each of nine widely used benchmarks, between 2 (on part of MMLU) and 42 (on GSM8K) proved flawed [@truong2025fantastic]. Progress is also uneven, a pattern Dell'Acqua and colleagues called a "jagged technological frontier" [@dellacqua2026navigating]. Models that solve research-level problems can still fail simple perceptual tasks. On ClockBench, which asks models to read analogue clocks, the average human scores 90.7%. On 25 October 2026 the best model, Google's Gemini 4 Argon, scored 83.3% [@clockbench2026clockbench], up from about half in March 2026 (Section 1.7) [@sajadieh2026ai]. By late November 2026 the leader had reached 87.8%, still below the human average (Section 1.7) [@clockbench2026clockbench].
 
 Humanity's Last Exam (HLE), 2,500 expert-written questions that frontier models failed when it was assembled, was built to last. In the paper describing it, the best model evaluated, OpenAI's o3-mini at its high reasoning setting, scored 13.4% on the text-only questions [@centerforaisafety2026benchmark]. On Scale AI's leaderboard, last updated in September 2026, the top entry, GPT-6 Astra, scored 54.8% on the full public set [@scale2026humanity]. Those questions have been online since January 2025, so contamination cannot be ruled out, which is why the organisers keep a private held-out set and in October 2025 released HLE-Rolling, a "dynamic" version whose question set is revised over time [@centerforaisafety2026benchmark; @cais2025hle].
 
@@ -1621,7 +1621,7 @@ Benchmarks of live software decay. In July 2025 the OSWorld team released **OSWo
 | OpenAI CUA | Jan 2025 | OSWorld | 38.1% | 72.36% |
 | Claude Opus 4.5 | Nov 2025 (reported in AI Index 2026) | OSWorld (version not stated) | 66.3% | 72.36% |
 | Agentic framework on Claude Opus 4.5 | Feb 2026 | OSWorld-Verified (official re-run) | 74.5% | |
-| Claude Fable 5 (best general-purpose model) | Aug 2026 | OSWorld-Verified (official re-run) | 86.0% | |
+| Claude Fable 5 (best general-purpose model, Aug 2026) | Aug 2026 | OSWorld-Verified (official re-run) | 86.0% | |
 | Intelligence-Indeed Agent (best agentic framework) | Jul 2026 | OSWorld-Verified (official re-run) | 90.2% | |
 
 : Table 5.1: Reported results on the OSWorld computer-use benchmark, 2024–2026. Company figures are self-reported; the last three rows come from the official OSWorld-Verified leaderboard. Step limits and agent programs differ between rows and are not always disclosed (the original paper allowed 15 steps per task), so the rows are not strictly comparable. The human baseline was measured on the original tasks by computer-science students. Since 26 June 2026 the original OSWorld site has carried a notice asking visitors to use OSWorld 2.0 "for the latest version". Source: [@xie2024osworld; @anthropic2024introducingcomputer; @openai2025computer; @sajadieh2026ai; @osworld2026verified].
@@ -1646,7 +1646,7 @@ A successor illustrates how much the number depends on the test. **SWE-bench Pro
 
 : Table 5.2: Three generations of the SWE-bench coding benchmark. Scores depend on the agent program, turn limits and cost caps used, and are not comparable across rows. In July 2026 OpenAI estimated that about 30% of SWE-bench Pro's public tasks are broken [@openai2026separating]. Source: [@jimenez2024swebench; @openai2024introducing; @sajadieh2026ai; @deng2025swebench; @scale2026swebench; @openai2026separating; @epoch2026swebenchpro].
 
-A different yardstick asks how long a task an agent can finish. The non-profit METR's "50% time horizon" is the length of software task, timed on skilled humans, that an agent completes half the time [@kwa2025measuring]. On METR's data it doubled roughly every four months from 2023 to early 2026 (129 days, with a 95% confidence interval of 104 to 158). Claude Opus 4.6 (February 2026) measured about 12 hours, with an interval of roughly 5 to 61 hours, in METR's current data, against roughly 6 hours for OpenAI's GPT-5.4 and Google's Gemini 3.1 Pro [@metr2026task]. The figure of about 14.5 hours reported when the model was first measured in February [@officechai2026exponential] predates a correction METR made to its curve-fitting in March [@metr2026task]. The last model METR measured before it stopped updating the series in September 2026 was an early version of Claude Mythos Preview (April 2026). METR announced a horizon of "at least 16 hours" (95% CI 8.5 to 55 hours) [@bastian2026metr], a value its own page says is beyond what its current task suite can reliably measure [@metr2026task]. A 12-hour task is of the order of a skilled engineer's day and a half of work on a self-contained software problem with a clear test of success. Chapter 4 (Section 4.7) explains the method and its caveats, among them that "time horizon is not the length of time AIs can work independently" [@kwa2026clarifying]; a 50% success rate is also far from the reliability most employers expect.
+A different yardstick asks how long a task an agent can finish. The non-profit METR's "50% time horizon" is the length of software task, timed on skilled humans, that an agent completes half the time [@kwa2025measuring]. On METR's data it doubled roughly every four months from 2023 to early 2026 (129 days, with a 95% confidence interval of 104 to 158). Claude Opus 4.6 (February 2026) measured about 12 hours, with an interval of roughly 5 to 61 hours, in METR's current data, against roughly 6 hours for OpenAI's GPT-5.4 and Google's Gemini 3.1 Pro [@metr2026task]. The figure of about 14.5 hours reported when the model was first measured in February [@officechai2026exponential] predates a correction METR made to its curve-fitting in March [@metr2026task]. The last model METR added to the series, in May 2026, before saying in September that the page was no longer updated, was an early version of Claude Mythos Preview (released April 2026). METR announced a horizon of "at least 16 hours" (95% CI 8.5 to 55 hours) [@bastian2026metr], a value its own page says is beyond what its current task suite can reliably measure [@metr2026task]. A 12-hour task is of the order of a skilled engineer's day and a half of work on a self-contained software problem with a clear test of success. Chapter 4 (Section 4.7) explains the method and its caveats, among them that "time horizon is not the length of time AIs can work independently" [@kwa2026clarifying]; a 50% success rate is also far from the reliability most employers expect.
 
 ### Agents in use
 
@@ -2020,7 +2020,7 @@ In January 2026, Erdős problem #728 was described in a preprint as "the first E
 
 As Erdős and his co-authors stated it, the problem was ambiguous and had trivial solutions. Bloom judged that the AI proof "appears to answer the question in the spirit it was intended", a tightened version [@bloom2026erdos]. Terence Tao, who follows these attempts closely, found the speed with which AI tools rewrote and improved the exposition more interesting than the solution itself. He later added that the methods were very similar to those of a 2014 paper by Carl Pomerance, who then showed that his own methods also solve the problem [@tao2026mastodon; @tao2026ai]. Tao argued that autonomous AI workflows scale well to the "long tail" of obscure Erdős problems, "many of which actually have straightforward solutions", and that failures are "unlikely to be reported on any public site" [@tao2026mastodon]. Success rates are therefore hard to establish. Tao guessed that on the order of 1–2% of outstanding problems are simple enough for current AI tools with minimal human help [@tao2026mastodon]; according to The Decoder, a database of AI attempts compiled by two mathematicians found success rates of the same order, mostly on easier problems [@bastian2026gpt]. Formal verification shows that a proof is correct. It cannot show whether the problem was important, whether the formal statement captured the intended question, or how often the method fails.
 
-A result from May 2026 did not fit the "long tail" description. OpenAI released a manuscript in which an internal general-purpose model disproved Erdős's 1946 unit-distance conjecture (problem #90 on the site): using algebraic number theory, it showed that for infinitely many *n* some sets of *n* points in the plane have at least *n*^1+δ^ pairs exactly one unit apart, for a fixed δ > 0, more than Erdős had conjectured possible [@openai2026planar]. In a preprint released alongside it, Will Sawin made the exponent explicit, about 1.014 [@sawin2026explicit]. The mathematician Daniel Litt called it "the first result produced autonomously by an AI that I find interesting in itself", and Timothy Gowers wrote that he would have recommended it to the *Annals of Mathematics* "without any hesitation" had a human submitted it [@lee2026stunning]. The caveats are the usual ones: the manuscript had not been peer-reviewed, and the gain over the square grid is tiny in practice; according to reports summarised in *The Conversation*, Sawin's improvement only appears for sets of around 10^2,000,000^ points [@lee2026stunning]. In the same week a Google DeepMind team reported that a proof-search agent working in Lean had resolved 9 of 353 open Erdős problems it attempted, a result that comes with its denominator [@tsoukalas2026advancing]. In August 2026 Anthropic reported that an unreleased Claude model had raised the proven share of zeros of the Riemann zeta function that lie on the critical line from 41.6% to 67.2%, with a Lean proof; two of its mathematicians, Levent Alpöge and Ralph Furman, examined the work. That is a company claim, although in September the number theorist Youness Lamzouri published a new and, in his words, conceptually simpler proof of a slightly stronger bound; the company said it did not expect the method to lead to a proof of the Riemann hypothesis itself [@anthropic2026riemann; @lamzouri2026new]. In October 2026 OpenAI released company preprints claiming a proof of a weaker "quasi-Riemann hypothesis", that all nontrivial zeros of the zeta function lie in a strip narrower than the known one: between 1/8 and 7/8 in a version it said was checked in Lean, and between 1/12 and 11/12 in a shorter, human-edited version not formally verified. Neither had been peer-reviewed. Experts quoted by *Quanta* largely agreed that the shorter proof is correct, but Peter Sarnak said he would not call it a theorem until humans had checked and understood the details [@openai2026quasi; @kakaes2026quasi].
+A result from May 2026 did not fit the "long tail" description. OpenAI released a manuscript in which an internal general-purpose model disproved Erdős's 1946 unit-distance conjecture (problem #90 on the site): using algebraic number theory, it showed that for infinitely many *n* some sets of *n* points in the plane have at least *n*^1+δ^ pairs exactly one unit apart, for a fixed δ > 0, more than Erdős had conjectured possible [@openai2026planar]. In a preprint released alongside it, Will Sawin made the exponent explicit, about 1.014 [@sawin2026explicit]. The mathematician Daniel Litt called it "the first result produced autonomously by an AI that I find interesting in itself", and Timothy Gowers wrote that he would have recommended it to the *Annals of Mathematics* "without any hesitation" had a human submitted it [@lee2026stunning]. The caveats are the usual ones: the manuscript had not been peer-reviewed, and the gain over the square grid is tiny in practice; according to reports summarised in *The Conversation*, Sawin's improvement only appears for sets of around 10^2,000,000^ points [@lee2026stunning]. In the same week a Google DeepMind team reported that a proof-search agent working in Lean had resolved 9 of 353 open Erdős problems it attempted, a result that comes with its denominator [@tsoukalas2026advancing]. In August 2026 Anthropic reported that an unreleased Claude model had raised the proven share of zeros of the Riemann zeta function that lie on the critical line from 41.6% to 67.2%, with a Lean proof; two of its mathematicians, Levent Alpöge and Ralph Furman, examined the work, and two outside specialists, Brian Conrey and Dan Goldston, read it on short notice. It has not been peer-reviewed, although in September the number theorist Youness Lamzouri published a new and, in his words, conceptually simpler proof of a slightly stronger bound; the company said it did not expect the method to lead to a proof of the Riemann hypothesis itself [@anthropic2026riemann; @lamzouri2026new]. In October 2026 OpenAI released company preprints claiming a proof of a weaker "quasi-Riemann hypothesis", that all nontrivial zeros of the zeta function lie in a strip narrower than the known one: between 1/8 and 7/8 in a version it said was checked in Lean, and between 1/12 and 11/12 in a shorter, human-edited version not formally verified. Neither had been peer-reviewed. Experts quoted by *Quanta* largely agreed that the shorter proof is correct, but Peter Sarnak said he would not call it a theorem until humans had checked and understood the details [@openai2026quasi; @kakaes2026quasi].
 
 The largest and most contested claim came in September 2026.
 
@@ -2029,7 +2029,7 @@ The largest and most contested claim came in September 2026.
 
 *The claim.* On 8 September 2026 OpenAI posted a 166-page manuscript, with a Lean formalisation, constructing a three-dimensional fluid flow that starts from rest, is stirred by a smooth external force confined to a bounded region, and develops unbounded velocity in finite time. The manuscript, which has not been peer-reviewed, states that this establishes alternatives (C) and (D), the two that allow an external force and either of which would suffice, in the Clay Mathematics Institute's statement of the Navier–Stokes Millennium Prize Problem [@openai2026finite]. The official statement does allow solutions with such a force [@fefferman2006existence]. According to *Quanta Magazine*, about 10,000 AI agents running on an unreleased model worked for about 88 hours, and another model translated the proof into Lean in about 17 hours [@kakaes2026ai].
 
-*What is contested.* OpenAI said: "We do not intend to claim the Millennium Prize for this result." It gave no reason; commentators, among them the news site The Next Web, linked the decision to the reliance on an external force [@thenextweb2026openai]. More than a month later, *Scientific American* reported, no one fully understood the proof, and experts judged that in its details it took a different approach from the human research programme it had first been compared with [@howlett2026openais]. In a preprint, three mathematicians at King's College London and the University of Cambridge argue that the formalised Lean proof does not correspond to the natural-language one; King's College London's announcement stresses that they "have not shown that OpenAI's original proof is wrong" [@bastounis2026navierstokes; @kcl2026openais].
+*What is contested.* OpenAI said that its goal was "to report on the substantial progress of our AI models" and that "We do not intend to claim the Millennium Prize for this result" [@openai2026navierstokes]. It did not say why; commentators, among them the news site The Next Web, linked the decision to the reliance on an external force [@thenextweb2026openai]. More than a month later, *Scientific American* reported, no one fully understood the proof, and experts judged that in its details it took a different approach from the human research programme it had first been compared with [@howlett2026openais]. In a preprint, three mathematicians at King's College London and the University of Cambridge argue that the formalised Lean proof does not correspond to the natural-language one; King's College London's announcement stresses that they "have not shown that OpenAI's original proof is wrong" [@bastounis2026navierstokes; @kcl2026openais].
 
 *Who gets the credit.* Credit was disputed from the first day. The evening before OpenAI's announcement, Tristan Buckmaster of New York University released a statement saying that he and Levent Alpöge, an Anthropic researcher, working in a personal capacity with AI models from several companies, had obtained blow-up results with smooth forcing for related equations, including Euler's, on 15 August, building on a programme of Diego Córdoba and Luis Martínez-Zoroa; he said that, by OpenAI's own account to him, its attempt had begun after word of their progress reached the company [@buckmaster2026statement; @howlett2026openaiclaims].
 
@@ -2037,7 +2037,7 @@ OpenAI said its effort began on 1 September "after hearing a rumor" later linked
 
 *What Lean does and does not certify.* Lean certifies that the formal proof proves the formal statement, not that the formal statement says what the manuscript claims [@moura2021lean; @bastounis2026navierstokes], the gap Section 6.5 warned of.
 
-*What would settle it.* On 11 September the Clay Institute welcomed "the announcement that the Navier-Stokes problem has apparently been settled" and said its own review under the prize rules would be deliberately unhurried [@clay2026navierstokes]. A settlement needs peer review of the manuscript, an independent check that the formal statement matches the Clay alternatives, and the Institute's decision. As of late November 2026, research groups were still examining the paper and the Lean code [@howlett2026openais]. On 20 November 2026 Buckmaster and Alpöge posted an AI-assisted proof that the equations can blow up with no external force at all. If it holds, it closes the gap on which the objections to OpenAI's result turn. Buckmaster called the write-up "unpolished and heavily LLM-assisted", part of its computer check had not yet been released, and no independent expert had confirmed it [@hall2026ai; @thenextweb2026navierstokes]. The same day Alpöge released what he said was a proof, found with Anthropic's Claude, of the Riemann hypothesis and of its generalisation to Dirichlet L-functions, as a Lean library of about 17 million lines with a four-page note and no human-readable proof. On 21 November the Lean FRO and the Mathlib Initiative, the organisations behind Lean and its main mathematical library, jointly certified the Riemann hypothesis part: independent tools confirmed that the theorem proved is Mathlib's own formal statement of the hypothesis, and several independent proof checkers accepted the proof. Their statement did not address the generalisation [@leanfro2026riemann; @constantin2026lean]. That is machine certification, not mathematical acceptance. By late November no complete human-readable proof or peer review existed, and no mathematician had explained the argument; Terence Tao ranked it the least digested of the month's results, and Brian Conrad of Stanford called releasing a proof its author did not fully understand "frankly completely outrageous" [@constantin2026riemann; @tao2026unforced].
+*What would settle it.* On 11 September the Clay Institute welcomed "the announcement that the Navier-Stokes problem has apparently been settled" and said its own review under the prize rules would be deliberately unhurried [@clay2026navierstokes]. A settlement needs peer review of the manuscript, an independent check that the formal statement matches the Clay alternatives, and the Institute's decision. In mid-October 2026, research groups were still examining the paper and the Lean code [@howlett2026openais], and no peer-reviewed assessment had appeared by late November. On 20 November 2026 Buckmaster and Alpöge posted an AI-assisted proof that the equations can blow up with no external force at all. If it holds, it closes the gap on which the objections to OpenAI's result turn. Buckmaster called the write-up "unpolished and heavily LLM-assisted", part of its computer check had not yet been released, and no independent expert had confirmed it [@hall2026ai; @thenextweb2026navierstokes]. The same day Alpöge released what he said was a proof, found with Anthropic's Claude, of the Riemann hypothesis and of its generalisation to Dirichlet L-functions, as a Lean library of about 17 million lines with a four-page note and no human-readable proof. On 21 November the Lean FRO and the Mathlib Initiative, the organisations behind Lean and its main mathematical library, jointly certified the Riemann hypothesis part: independent tools confirmed that the theorem proved is Mathlib's own formal statement of the hypothesis, and several independent proof checkers accepted the proof. Their statement did not address the generalisation [@leanfro2026riemann; @constantin2026lean]. That is machine certification, not mathematical acceptance. By late November no complete human-readable proof or peer review existed, and no mathematician had explained the argument; Terence Tao ranked it the least digested of the month's results, and Brian Conrad of Stanford called releasing a proof its author did not fully understand "frankly completely outrageous" [@constantin2026riemann; @tao2026unforced].
 :::
 
 ## 6.7 Engineering: design under test
@@ -2183,13 +2183,13 @@ Google has taken a different route to scale. Its TPU v4 supercomputer of 4,096 c
 | | Nvidia H100 SXM (2022) | Nvidia B200 (2024) | Google TPU Ironwood (2025) |
 |---|---|---|---|
 | Transistors | 80 billion | 208 billion (two dies) | not published |
-| Peak dense 16-bit (TFLOPS) | ≈ 990 | ≈ 2,250 | not published |
+| Peak dense 16-bit (TFLOPS) | ≈ 990 | ≈ 2,250 | 2,307 (peak) |
 | Peak 8-bit (TFLOPS) | ≈ 1,980 (dense) | ≈ 4,500 (dense) | 4,614 (peak) |
 | HBM capacity | 80 GB | 180 GB | 192 GB |
 | HBM bandwidth | 3.35 TB/s | 8 TB/s | 7.37 TB/s |
 | Chip-to-chip bandwidth | 900 GB/s | 1.8 TB/s | 1.2 TB/s |
 
-: Table 7.2: Three AI accelerators as specified by their makers. H100 dense figures are half the "with sparsity" figures on Nvidia's product page; B200 figures are Nvidia's eight-GPU system figures divided by eight (arithmetic from HGX B200, memory from DGX B200: 1,440 GB and 64 TB/s), with sparse arithmetic figures halved as Nvidia's footnote instructs (computed by the author). Google does not state whether Ironwood's peak is dense or sparse. Chip-to-chip bandwidth is each chip's total link bandwidth; it says nothing about how many chips a network joins, which ranges from 8 or 72 GPUs in an NVLink domain to 9,216 chips in an Ironwood pod. Source: [@nvidia2022hopper; @nvidia2026h100; @nvidia2024blackwell; @nvidia2026hgx; @nvidia2026dgx; @vahdat2025ironwood].
+: Table 7.2: Three AI accelerators as specified by their makers. H100 dense figures are half the "with sparsity" figures on Nvidia's product page; B200 figures are Nvidia's eight-GPU system figures divided by eight (arithmetic from HGX B200, memory from DGX B200: 1,440 GB and 64 TB/s), with sparse arithmetic figures halved as Nvidia's footnote instructs (computed by the author). Google does not state whether Ironwood's peaks are dense or sparse. Chip-to-chip bandwidth is each chip's total link bandwidth; it says nothing about how many chips a network joins, which ranges from 8 or 72 GPUs in an NVLink domain to 9,216 chips in an Ironwood pod. Source: [@nvidia2022hopper; @nvidia2026h100; @nvidia2024blackwell; @nvidia2026hgx; @nvidia2026dgx; @vahdat2025ironwood; @googlecloud2026tpu7x].
 
 The International Energy Agency (IEA) estimates that over the past decade leading AI processors improved performance per watt by roughly 30–40% a year, with gains slowing as transistor scaling matures [@iea2026key, sec. 2.2]. Google states that Ironwood doubles the performance per watt of its previous TPU [@vahdat2025ironwood]. But each chip draws more power. An H100 SXM is rated at up to 700 W, against 400 W for the A100 [@andersch2022nvidia]. Measurements cited by Lawrence Berkeley National Laboratory found that eight-GPU H100 servers running AI training averaged 74% of their rated power [@shehabi2024united].
 
@@ -2223,7 +2223,7 @@ After fabrication, chips are **packaged**. The processor dies and their HBM stac
 
 These later stages became the binding constraints of the AI build-out. The IEA reports that packaging capacity for high-end chips limited production in 2025. From the second half of 2025, memory became the tighter limit [@iea2026key, sec. 1]. Leading GPU systems are expected to carry more than 1,000 GB of memory by 2027, against less than 150 GB in 2023. Producing HBM takes about three times as much wafer capacity per gigabyte as conventional memory, and memory prices rose by an order of magnitude between late 2024 and early 2026 [@iea2026key, sec. 1]. The IEA expects the shortage to last "through at least the end of 2027" [@iea2026key, Executive Summary].
 
-Disruptions elsewhere propagate quickly. The IEA described how a conflict in the Middle East in 2026 disrupted supplies of helium from Qatar, which had supplied roughly a third of the world's helium. Helium is used to cool and clean chip-making equipment and has, according to the IEA, no substitute with equivalent properties [@iea2026key, Box 1.1]. Power equipment is also scarce. Lead times for transformers average two to three years, and gas turbine deliveries can take around five years [@iea2026key, sec. 1]; orders for gas turbines rose 70% in 2025 [@iea2026key, Executive Summary].
+Disruptions elsewhere propagate quickly. The IEA described how a conflict in the Middle East in 2026 disrupted supplies of helium from Qatar, which had supplied roughly a third of the world's helium. Helium is used to cool and clean chip-making equipment and has, according to the IEA, no substitute with equivalent properties [@iea2026key, Box 1.1]. Power equipment is also scarce. Lead times for transformers average two to three years, and gas turbine deliveries can take around five years [@iea2026key, sec. 1]; orders for gas turbines to power data centres rose 70% in 2025 [@iea2026key, Executive Summary].
 
 ::: {.box .concept}
 **Concept: Chokepoint**
@@ -2254,7 +2254,7 @@ Policy then moved in several directions at once (Figure 7.2).
 - *Sales to China.* In January 2026 BIS changed its review policy for exports to China of Nvidia's H200 and equivalent chips from a "presumption of denial" to "case-by-case review", subject to independent testing in the United States [@bis2026revision]. Nvidia reported that by the quarter ending July 2026 it had made only a fraction of the permitted shipments, partly because the Chinese government had discouraged customers from buying its data-centre products [@nvidia2026formq]. Its outlooks for the following quarters assumed no data-centre compute revenue from China, although in the quarter to October 2026 it shipped $2.4 billion of Hopper data-centre products there [@nvidia2026nvidia; @nvidia2026q3cfo].
 - *Ownership rules and the trade truce.* The **Entity List** names foreign firms that need a licence to receive US goods. In September 2025 BIS extended its restrictions automatically to any company at least 50% owned by listed entities [@bis2025expansion], then suspended that rule for a year from 10 November 2025 as part of a trade truce in which China agreed to suspend sweeping new export controls on rare earths [@bis2025one; @whitehouse2025fact]. Treasury Secretary Scott Bessent said in September 2026 that the truce would be extended to 10 January 2027, according to the Associated Press [@ap2026trump]. On 9 November 2026, the day the suspension of the ownership rule had been due to lapse, BIS extended it through 10 January 2027 [@bis2026extension]. China extended its suspension of the rare-earth controls to the same date [@thenational2026china].
 - *Partner deals.* A July 2026 rule gave the United Arab Emirates' government and approved companies licence-free access to advanced computing items [@bis2026enhanced].
-- *Access to models.* On 12 June 2026 the Commerce Department required a licence for foreign nationals, including those inside the United States, to access Anthropic's Claude Fable 5 and Mythos 5 models; Anthropic switched both off for all customers until Commerce lifted the control, with conditions, on 30 June, in what one law firm described as the first known US use of export controls to regulate a particular frontier AI model [@kahn2026anthropic; @eastland2026lutnick; @power2026us; @mayerbrown2026commerce].
+- *Access to models.* On 12 June 2026 the Commerce Department required a licence for foreign nationals, including those inside the United States, to access Anthropic's Claude Fable 5 and Mythos 5 models; Anthropic switched both off for all customers; Commerce allowed some trusted partners back onto Mythos 5 on 26 June and lifted the control, with conditions, on 30 June. One law firm described it as the first known US use of export controls to regulate a particular frontier AI model [@kahn2026anthropic; @eastland2026lutnick; @power2026us; @mayerbrown2026commerce; @greenbergtraurig2026anthropic].
 - *Allied controls.* The Netherlands added metrology and inspection equipment to its controls in January 2025, and in November 2025 the European Union extended Dutch licence requirements, including for DUV immersion lithography, to all member states [@asml2026annual].
 
 China holds chokepoints of its own. In December 2024 its commerce ministry announced that exports to the United States of gallium and germanium, materials used in some semiconductors, would "in principle" not be permitted [@cset2024notice]; it suspended that ban in November 2025, as part of the same truce, until 27 November 2026, and on 24 November 2026 extended the suspension to 27 January 2027, although the metals still need export licences [@evertiq2025china; @voa2026china].
@@ -2310,7 +2310,7 @@ Efficiency and demand are moving in opposite directions. The IEA estimates that 
 
 Grid connection waiting times can reach five to ten years in many jurisdictions, and requests to connect are a poor guide to what will be built. The IEA warns that such queues are "not a reliable indicator of future demand, as only a limited and uncertain share of the pipeline may ultimately be realised" [@iea2026key, sec. 1]. Local opposition is growing. In the second quarter of 2025 alone, 20 US data-centre projects worth an estimated $98 billion were blocked or delayed amid concerns about their environmental and price impacts [@iea2026key, sec. 1]. Those price concerns have a basis. In PJM, which runs the grid across much of the eastern United States, the independent market monitor concluded in June 2025 that the conditions behind record capacity prices, which feed into consumers' bills, were "almost entirely the result of large load additions from data centers" [@appa2025pjm].
 
-The tech sector signed around 40% of all corporate renewable power-purchase agreements, long-term contracts to buy electricity from particular generators, worldwide in 2025 [@iea2026key, Executive Summary]. In the United States some developers are building gas-fired generation on site; the IEA estimates that 15–27 GW of such capacity might power data centres by 2030 [@iea2026key, Executive Summary]. On-site turbines bring local air pollution. At xAI's Colossus data centre in Memphis, aerial photographs commissioned by the Southern Environmental Law Center, an environmental legal group, showed 35 gas turbines in April 2025, while the company had applied for permits for 15; the county health department approved 15 in July 2025, a decision the group appealed [@selc2026inside].
+The tech sector signed around 40% of all corporate renewable power-purchase agreements, long-term contracts to buy electricity from particular generators, worldwide in 2025 [@iea2026key, Executive Summary]. In the United States some developers are building gas-fired generation on site; worldwide, the IEA estimates that 15–27 GW of such capacity might power data centres by 2030 [@iea2026key, Executive Summary]. On-site turbines bring local air pollution. At xAI's Colossus data centre in Memphis, aerial photographs commissioned by the Southern Environmental Law Center, an environmental legal group, showed 35 gas turbines in April 2025, while the company had applied for permits for 15; the county health department approved 15 in July 2025, a decision the group appealed [@selc2026inside].
 
 Nuclear deals have multiplied. Microsoft agreed in 2024 to buy power from a restarted Three Mile Island unit, and Amazon Web Services agreed in 2025 to take power from the Susquehanna plant. Agreements for small modular reactor capacity for data centres had reached about 45 GW by January 2026, although these are largely "less formal off-take arrangements" not yet backed by firm financing, and the first commercial units are not expected before about 2030 [@iea2026key, sec. 5.1, pp. 47–48; sec. 7.3, p. 65]. Whatever the mix, the IEA projects that emissions associated with data centres will roughly double, reaching around 350 million tonnes of carbon dioxide in 2035, about 2% of the electricity sector's emissions [@iea2026key, Executive Summary].
 
@@ -2347,7 +2347,7 @@ Building the infrastructure costs far more than any training run. Table 7.4 show
 | Company | Earlier year ($ bn) | Latest year ($ bn) | Change |
 |---|---|---|---|
 | Amazon (calendar 2024 → 2025) | 83.0 | 131.8 | +59% |
-| Microsoft (fiscal years to June 2025 → June 2026) | 64.6 | 115.9 | +80% |
+| Microsoft (fiscal years to June 2025 → June 2026) | 64.6 | 115.9 | +79% |
 | Alphabet (calendar 2024 → 2025) | 52.5 | 91.4 | +74% |
 | Meta (calendar 2024 → 2025) | 37.3 | 69.7 | +87% |
 
@@ -2531,7 +2531,7 @@ In Denmark, Humlum and Vestergaard ran large surveys with Statistics Denmark in 
 
 ### Firm surveys
 
-The US Census Bureau's Business Trends and Outlook Survey (BTOS) asks firms whether they use AI. Until November 2025 the question asked about AI used in *producing goods or services*; by late 2025 about 10% of firms said yes, double the rate of mid-2024. From 17 November 2025 the question covered AI in *any business function*. Between about 18% and 22% of firms reported use in the first half of 2026, and 25.0% in the two weeks to 1 November 2026 [@census2026business]. (A September 2026 executive order renamed "AI" as "Super Intelligence" in federal usage without changing what is covered, so the survey's wording now uses that term, a change that could itself affect how firms answer [@trump2026inaugurating].) Use was highest in information and professional services, at nearly four in ten firms; in agriculture, transport and construction it was below 10% [@garcialuna2026ai].
+The US Census Bureau's Business Trends and Outlook Survey (BTOS) asks firms whether they use AI. Until November 2025 the question asked about AI used in *producing goods or services*; by late 2025 about 10% of firms said yes, double the rate of mid-2024. From 17 November 2025 the question covered AI in *any business function*. Between about 18% and 21% of firms reported use in the first half of 2026, and 25.0% in the two weeks to 1 November 2026 [@census2026business]. (A September 2026 executive order renamed "AI" as "Super Intelligence" in federal usage without changing what is covered, so the survey's wording now uses that term, a change that could itself affect how firms answer [@trump2026inaugurating].) Use was highest in information and professional services, at nearly four in ten firms; in agriculture, transport and construction it was below 10% [@garcialuna2026ai].
 
 A Census Bureau working paper on a special AI supplement to the BTOS, covering November 2025 to January 2026, shows how large firms drive the totals and how shallow most use is [@bonney2026microstructure]. In that period 18% of firms used AI in a business function, or 32% when firms are weighted by employment, and among very large firms in information, professional services and finance the rate reached 50–60%. Of the adopters, 57% used AI in three or fewer functions, most often sales and marketing (52%). Two-thirds used AI only to augment tasks, and just 2% reported that AI had reduced their employment.
 
@@ -2882,9 +2882,9 @@ Schiff, Schiff and Bueno (2025) tested the idea in five survey experiments with 
 *Not proven.* Every one of these sources measures visible content, not effects on behaviour. The WIRED database contains only uses that someone detected and reported, so undetected deepfakes are excluded by construction, and a cost estimate for one item says little about campaigns of thousands of personalised items, the scale that worried Goldstein and colleagues. CETaS itself said the US finding reflected "insufficient data". The cheapest harm, eroding confidence that any evidence is real, is the hardest to count, yet it is the one that survey experiments on the liar's dividend show can benefit politicians [@schiff2025liars]. Private conversations with chatbots, which experiments show can shift attitudes (Section 9.5), are invisible to monitoring of public posts [@kapoor2024looked; @goldstein2023generative; @stockwell2024ai; @hackenburg2025levers]. The decisive evidence would be panel data from several elections that follow the same people, linking what AI-generated content each of them saw to later changes in their knowledge, trust and turnout.
 :::
 
-The elections of 2026 showed more AI use but no clearer evidence of effects. In Hungary, according to analysts at the Political Capital Institute, a Budapest think tank, no EU campaign had yet used AI as heavily as the governing Fidesz party did before the parliamentary election in April 2026, for example in videos showing the opposition leader Péter Magyar as a puppet of Ukraine's president. Fidesz lost. The authors attribute the limited success of its AI tactics to several factors, among them public rejection of AI-manipulated content, a credible challenger and voter fatigue with government disinformation; in their March survey, 52% of those who had seen deepfake videos were unsure whether a video was authentic [@kreko2026hungarys]. In Colombia's June 2026 presidential run-off, the EU election observation mission described "frequent disinformation and an unprecedented use of AI and deepfakes", but found that AI's "most notable use was as a campaign tool", much of it not deceptive, amid major regulatory and oversight gaps [@euelectionobservationmission2026final].
+The elections of 2026 showed more AI use but no clearer evidence of effects. In Hungary, according to analysts at the Political Capital Institute, a Budapest think tank, no EU campaign had yet used AI as heavily as the governing Fidesz party and allied groups did before the parliamentary election in April 2026, for example in videos showing the opposition leader Péter Magyar as a puppet of Ukraine's president. Fidesz lost. The authors attribute the limited success of its AI tactics to several factors, among them public rejection of AI-manipulated content, a credible challenger and voter fatigue with government disinformation; in their March survey, 52% of those who had seen deepfake videos were unsure whether a video was authentic [@kreko2026hungarys]. In Colombia's June 2026 presidential run-off, the EU election observation mission described "frequent disinformation and an unprecedented use of AI and deepfakes", but found that AI's "most notable use was as a campaign tool", much of it not deceptive, amid major regulatory and oversight gaps [@euelectionobservationmission2026final].
 
-The United States and Brazil showed the regulatory gap and one attempt to close it. In the campaign for the US midterm elections of 3 November 2026, Reuters reported in March that deepfakes had become an open campaign tool. The National Republican Senatorial Committee ran an ad, labelled "AI generated" in small print, in which an AI version of the Democratic Senate candidate James Talarico spoke, and a county party committee in Virginia and a Republican Senate campaign in Georgia also used AI-generated material against Democrats. No federal rule applied, and 28 states had laws on AI in political ads, mostly requiring disclosure [@ax2026ai]; by September the National Conference of State Legislatures counted 31 [@brumfiel2026campaign]. Covert operations used the same tools. On 20 October 2026, AI-generated videos posted on X falsely accused Talarico of abusing a former student, and the real former student denied that the video showed him. NewsGuard reported that the videos showed many signs of AI generation, and researchers at Clemson University and the analytics firm Graphika linked them to Storm-1516, a Russian influence network [@breach2026russian; @politifact2026russian]. Talarico won his seat, and early post-election reporting found that deepfakes "do not appear to have had an outsize impact in many races" [@chow2026how]. Brazil, which held its presidential run-off on 25 October 2026, went furthest. According to CNN Brasil, its electoral court requires prominent labels on AI campaign material, bans new synthetic content from 72 hours before a vote and forbids AI systems to recommend candidates [@cnnbrasil2026tse]. In September, however, the court ruled by four votes to three that the deepfake ban applies only to material that counts as electoral propaganda, and let an AI video of the jailed former president Jair Bolsonaro endorsing his son Flávio stay online [@conjur2026deepfake]. Luiz Inácio Lula da Silva won the run-off. The most consequential interference of the period, however, did not depend mainly on generative AI. The annulment of Romania's 2024 presidential election, discussed in Section 9.8, turned on the alleged coordinated amplification of content by platform accounts and undisclosed paid promotion [@solea2024romanias].
+The United States and Brazil showed the regulatory gap and one attempt to close it. In the campaign for the US midterm elections of 3 November 2026, Reuters reported in March that deepfakes had become an open campaign tool. The National Republican Senatorial Committee ran an ad, labelled "AI generated" in small print, in which an AI version of the Democratic Senate candidate James Talarico spoke, and a county party committee in Virginia and a Republican Senate campaign in Georgia also used AI-generated material against Democrats. No federal rule applied, and 28 states had laws on AI in political ads, mostly requiring disclosure [@ax2026ai]; by September the National Conference of State Legislatures counted 31 [@brumfiel2026campaign]. Covert operations used the same tools. On 20 October 2026, AI-generated videos posted on X falsely accused Talarico of abusing a former student, and the real former student denied that the video showed him. NewsGuard reported that the videos showed many signs of AI generation, and researchers at Clemson University and the analytics firm Graphika linked them to Storm-1516, a Russian influence network [@breach2026russian; @politifact2026russian]. Talarico won his seat, and early post-election reporting found that deepfakes "do not appear to have had an outsize impact in many races" [@chow2026how]. Brazil, which held its presidential run-off on 25 October 2026, went furthest. According to CNN Brasil, its electoral court requires prominent labels on AI campaign material, bans new synthetic content from 72 hours before a vote and forbids AI systems to recommend candidates [@cnnbrasil2026tse]. In September, however, the court declined, by four votes to three, to fine Flávio Bolsonaro over an AI video of his jailed father, the former president Jair Bolsonaro, endorsing him, and held that the deepfake ban applies only to material that counts as electoral propaganda [@conjur2026deepfake]. Luiz Inácio Lula da Silva won the run-off. The most consequential interference of the period, however, did not depend mainly on generative AI. The annulment of Romania's 2024 presidential election, discussed in Section 9.8, turned on the alleged coordinated amplification of content by platform accounts and undisclosed paid promotion [@solea2024romanias].
 
 ## 9.5 AI as a persuader
 
@@ -2959,7 +2959,7 @@ For publishers, fewer clicks mean less advertising and subscription revenue. The
 
 The same report tracks how audiences use AI for news. Weekly use of AI chatbots for news rose from 7% of respondents in 2025 to 10% in 2026, though use did not grow in the United States, the United Kingdom, France or Germany. Only 20% of respondents said they trusted news answers from chatbots, against 37% for news in general; in the UK the figure was 6%. Among chatbot news users, 42% said they always or often clicked through to the original sources, against 44% of search users, although the report warns that the two figures come from quite different user bases and should be compared with caution [@egan2026digital]. Whether AI answers attribute and link to journalism, and whether they reproduce it accurately, thus matters for both the business and the public value of news.
 
-Accuracy remains a problem. In a study coordinated by the European Broadcasting Union (EBU) and led by the BBC, journalists from 22 public service media organisations in 18 countries and 14 languages rated 2,709 answers to a common set of news questions from the free versions of ChatGPT, Copilot, Gemini and Perplexity, generated in May and June 2025. Of these, 45% had at least one significant issue; 31% had significant sourcing problems and 20% significant accuracy problems, such as fabricated quotations or outdated information [@ebu2025news]. These figures describe one set of products in 2025 and may change quickly. Whether news content may lawfully be used to train AI systems belongs to the wider copyright disputes covered in Section 13.6.
+Accuracy remains a problem. In a study coordinated by the European Broadcasting Union (EBU) and led by the BBC, journalists from 22 public service media organisations in 18 countries and 14 languages rated 2,709 answers (the core set of more than 3,000 collected) to a common set of news questions from the free versions of ChatGPT, Copilot, Gemini and Perplexity, generated in May and June 2025. Of these, 45% had at least one significant issue; 31% had significant sourcing problems and 20% significant accuracy problems, such as fabricated quotations or outdated information [@ebu2025news]. These figures describe one set of products in 2025 and may change quickly. Whether news content may lawfully be used to train AI systems belongs to the wider copyright disputes covered in Section 13.6.
 
 ### Chatbots and content farms as channels
 
@@ -2989,7 +2989,7 @@ The DSA is contested, and the two sides rely on different kinds of evidence. Cri
 
 Article 50 of the AI Act divides the labelling task between two groups. **Providers** of AI systems that generate synthetic audio, images, video or text must ensure that outputs "are marked in a machine-readable format and detectable as artificially generated or manipulated". Their technical solutions must be effective, interoperable, robust and reliable "as far as this is technically feasible". The duty does not apply to tools that only assist with standard editing or do not substantially alter the input [@europeanparliament2024regulation, Article 50(2)]. **Deployers**, those who use such systems, must disclose that deepfake image, audio or video content is artificial, in a lighter form for evidently artistic, satirical or fictional works. Deployers who publish AI-generated text to inform the public on matters of public interest must also disclose it, unless a human has reviewed it and someone holds editorial responsibility [@europeanparliament2024regulation, Article 50(4)]. Breaches can be fined up to €15 million or 3% of worldwide turnover [@europeanparliament2024regulation, Article 99(4)].
 
-These duties began to apply on 2 August 2026 [@europeanparliament2024regulation, Article 113]. The Digital Omnibus on AI, in force since 27 July 2026, gave generative systems already on the market before that date until 2 December 2026 to add machine-readable marking. It also added two prohibitions from the same date, on AI systems that generate non-consensual intimate images of identifiable people and on those that generate child sexual abuse material [@europeanparliament2026regulation]. To make Article 50 workable, the Commission published a voluntary Code of Practice on marking and labelling AI-generated content on 10 June 2026 [@europeancommission2026publishes]. As long as no single technique is robust enough on its own, providers that sign it commit to "at least two layers of machine-readable marking", digitally signed metadata and an imperceptible watermark. They must also make a free detection tool available to deployers, users, researchers and authorities, and deployers who sign commit to label deepfakes with a common EU icon or an equivalent label [@europeancommission2026code]. By mid-November 2026 the Commission's list counted 103 signatories to the providers' section and 219 to the deployers', among them Anthropic, Google, Meta, Microsoft and OpenAI [@europeancommission2026strong]. The layered approach matches the evidence in Section 9.3, where no single marking technique proved robust on its own. Chapter 13 sets out the AI Act's overall timetable.
+These duties began to apply on 2 August 2026 [@europeanparliament2024regulation, Article 113]. The Digital Omnibus on AI, in force since 27 July 2026, gave generative systems already on the market before that date until 2 December 2026 to add machine-readable marking. It also added two prohibitions from the same date, on AI systems that generate non-consensual intimate images of identifiable people and on those that generate child sexual abuse material [@europeanparliament2026regulation]. To make Article 50 workable, the Commission published a voluntary Code of Practice on marking and labelling AI-generated content on 10 June 2026 [@europeancommission2026publishes]. As long as no single technique is robust enough on its own, providers that sign it commit to "at least two layers of machine-readable marking", digitally signed metadata and an imperceptible watermark. They must also make a free detection tool available to deployers, users, researchers and authorities, and deployers who sign commit to label deepfakes with a common EU icon or an equivalent label [@europeancommission2026code]. The Commission's published list of signatories counted 103 for the providers' section and 219 for the deployers', among them Anthropic, Google, Meta, Microsoft and OpenAI [@europeancommission2026strong]. The layered approach matches the evidence in Section 9.3, where no single marking technique proved robust on its own. Chapter 13 sets out the AI Act's overall timetable.
 
 ### Non-consensual intimate imagery
 
@@ -3002,7 +3002,7 @@ The United Kingdom has gone further in two respects. Since 6 February 2026 it ha
 ::: {.box .case}
 **Case study: Grok and the "undressing" images of January 2026**
 
-Around the turn of 2026, X rolled out an image-editing feature powered by its Grok chatbot that let users alter photographs of real people with simple text prompts, including requests to undress them. The Center for Countering Digital Hate, a campaigning non-profit, estimated that Grok generated about three million sexualised images over 11 days, including about 23,000 that appeared to depict children; the estimate did not establish how many were made without consent [@afp2026musks]. Regulators responded under platform law rather than AI law. According to The Register, on 12 January 2026 the UK regulator Ofcom opened an investigation under the Online Safety Act into whether X had assessed and mitigated the risk of illegal content; the Act allows fines of up to £18 million or 10% of qualifying worldwide revenue [@jones2026ofcom]. On 26 January the European Commission opened formal DSA proceedings into whether X had assessed and mitigated the risks of deploying Grok's functions, including "manipulated sexually explicit images", stating that "these risks seem to have materialised" [@europeancommission2026commission]. Neither inquiry had announced a finding by late November 2026. In October, according to Reuters, Ofcom said Grok's image tools now blocked pornographic content for UK users and that its investigation had moved on to X's handling of illegal content [@reuters2026concerns]. The case also shows which law binds whom. Platform rules bound X as a platform and applied after the images had spread. The AI Act's new prohibition of non-consensual intimate image generation, applicable from 2 December 2026, will also be enforced after the fact, but it binds the provider of the generating system itself, as the UK's offence of supplying intimate-image generators now also does, here Grok's developer, which was renamed from xAI to SpaceXAI in July 2026 after its merger with SpaceX and has used the brand SpaceXSI since October, after Musk said on 4 October that the name would change [@reuters2026concerns; @engadget2026xai; @frank2026why; @xai2026grok47].
+Around the turn of 2026, X rolled out an image-editing feature powered by its Grok chatbot that let users alter photographs of real people with simple text prompts, including requests to undress them. The Center for Countering Digital Hate, a campaigning non-profit, estimated that Grok generated about three million sexualised images over 11 days, including about 23,000 that appeared to depict children; the estimate did not establish how many were made without consent [@afp2026musks]. Regulators responded under platform law rather than AI law. According to The Register, on 12 January 2026 the UK regulator Ofcom opened an investigation under the Online Safety Act into whether X had assessed and mitigated the risk of illegal content; the Act allows fines of up to £18 million or 10% of qualifying worldwide revenue [@jones2026ofcom]. On 26 January the European Commission opened formal DSA proceedings into whether X had assessed and mitigated the risks of deploying Grok's functions, including "manipulated sexually explicit images", stating that "these risks seem to have materialised" [@europeancommission2026commission]. Neither inquiry had announced a finding by late November 2026. In October, according to Reuters, Ofcom said Grok's image tools now blocked pornographic content for UK users and that its investigation had moved on to X's handling of illegal content [@reuters2026concerns]. The case also shows which law binds whom. Platform rules bound X as a platform and applied after the images had spread. The AI Act's new prohibition of non-consensual intimate image generation, applicable from 2 December 2026, will also be enforced after the fact, but it binds the provider of the generating system itself, as the UK's offence of supplying intimate-image generators now also does. Here that provider is Grok's developer. It was renamed from xAI to SpaceXAI in July 2026 after its merger with SpaceX, and on 4 October Musk said it would become SpaceXSI [@reuters2026concerns; @engadget2026xai; @frank2026why; @xai2026grok47].
 :::
 
 | Instrument | Who is bound | Main duty relevant to synthetic media | Enforcement |
@@ -3083,7 +3083,7 @@ Figure 10.1 shows the results. During practice, measured as the share of points 
 
 Students also misjudged their own learning. Those in the GPT Base arm did not perceive that they had performed worse or learned less, and those in the GPT Tutor arm believed they had done significantly better, although their exam scores matched the control group's. Preregistered tests for differences by ability, resources and effort found little heterogeneity, so the harm was not confined to weaker students. The guarded tutor removed the harm but produced no gain on the exam [@bastani2025generative]. In this trial, design prevented damage without adding learning. The study took place when chatbots were new to most students and covered one subject in one school.
 
-A larger trial in a routine university setting found a negative effect, but it is much harder to interpret. At the University of Maryland in autumn 2025, 30 instructors teaching 2,379 undergraduates in many disciplines were randomly assigned, within groups of similar courses, to offer a course-integrated tutor built on GPT-4o and fed with materials the instructors chose. Comparing sections of the same course, the offer lowered final grades by 0.37 SD, with larger losses for first-generation students. In the full sample, which mixes different courses, the grade effect was not significant. Only about 15% of students offered the tutor used it even once. If the whole effect had run through those students, each would have lost about 2.5 SD (0.37 divided by 0.15), which is implausible, so the grade effect is probably not an effect of using the tutor. Participation in the course's online learning system also fell, by 0.90 SD. The authors suggest that offering the tutor may have displaced engagement with existing course activities, or that instructors' promotion of it changed students' use of other AI tools. The paper is an unreviewed working paper [@liu2026effects], and its result deserves more caution than the Turkish trial's.
+A larger trial in a routine university setting found a negative effect, but it is much harder to interpret. At a large US public university (reported to be the University of Maryland) in autumn 2025, 30 instructors teaching 2,379 undergraduates in many disciplines were randomly assigned, within groups of similar courses, to offer a course-integrated tutor built on GPT-4o and fed with materials the instructors chose. Comparing sections of the same course, the offer lowered final grades by 0.37 SD, with larger losses for first-generation students. In the full sample, which mixes different courses, the grade effect was not significant. Only about 15% of students offered the tutor used it even once. If the whole effect had run through those students, each would have lost about 2.5 SD (0.37 divided by 0.15), which is implausible, so the grade effect is probably not an effect of using the tutor. Participation in the course's online learning system also fell, by 0.90 SD. The authors suggest that offering the tutor may have displaced engagement with existing course activities, or that instructors' promotion of it changed students' use of other AI tools. The paper is an unreviewed working paper [@liu2026effects], and its result deserves more caution than the Turkish trial's.
 
 The mechanism has a name in cognitive psychology. Cognitive offloading is "the use of physical action to alter the information processing requirements of a task so as to reduce cognitive demand", such as writing a reminder instead of remembering [@risko2016cognitive]. Offloading is often sensible, but learning depends on some of the effort it removes. Psychologists call the useful kind of effort a "desirable difficulty" [@bjork1994memory], and the Nigerian programme deliberately built retrieval practice and other such difficulties into its prompts [@desimone2025chalkboards]. Several smaller experiments with university students point the same way. In a laboratory study of 117 students writing an essay with help from ChatGPT, a human expert, writing-analytics tools or nothing, the ChatGPT group improved its essays most but gained no more knowledge and transferred no more of it to new tasks. The authors warn of "metacognitive laziness", a dependence on the tool that weakens learners' regulation of their own learning [@fan2025beware]. In another experiment, 91 students researched a socio-scientific question with either ChatGPT or Google. Those using the chatbot reported lower cognitive load but produced lower-quality reasoning in their final recommendations [@stadler2024cognitive].
 
@@ -3332,7 +3332,7 @@ Domain studies measure something closer to harm. Dahl and colleagues asked model
 
 The legal profession provides the best record, because courts publish their decisions. The researcher Damien Charlotin maintains a database of court and tribunal decisions that found, or implied, that a party had relied on hallucinated content. By late November 2026 it listed more than 2,300 cases worldwide, over half of them involving people representing themselves [@charlotin2026ai]. The first widely reported case, *Mata v. Avianca* (2023), is told in Section 3.6: two New York lawyers and their firm were penalised $5,000 for filing court decisions invented by ChatGPT, and the judge's complaint was the lack of human checking, not the use of AI [@sdny2023mata].
 
-Customer-facing chatbots fail in a different way: they state an organisation's rules wrongly, and the organisation bears the cost. In the Air Canada case the error was a single invented policy. In March 2024 the investigative newsroom The Markup tested MyCity, a chatbot announced by New York City in October 2023 and built on Microsoft's Azure AI services to advise business owners. It told users that employers could take a cut of workers' tips, that businesses need not accept cash and that landlords need not accept housing vouchers; according to The Markup, all three answers were wrong under the law [@lecher2024nyc]. According to the city's announcement, the bot drew on more than 2,000 of its own business web pages [@lecher2024nyc], so grounding a chatbot in official documents did not guarantee correct answers. A new mayor, calling it "functionally unusable", took it offline in February 2026 [@lecher2026mamdani].
+Customer-facing chatbots fail in a different way: they state an organisation's rules wrongly, and the organisation bears the cost. In the Air Canada case the error was a single invented policy. In March 2024 the investigative newsroom The Markup tested MyCity, a chatbot announced by New York City in October 2023 and built on Microsoft's Azure AI services to advise business owners. It told users that employers could take a cut of workers' tips, that businesses need not accept cash and that landlords need not accept housing vouchers; according to The Markup, all three answers were wrong under the law [@lecher2024nyc]. According to the city's announcement, the bot drew on more than 2,000 of its own business web pages [@lecher2024nyc], so grounding a chatbot in official documents did not guarantee correct answers. The new mayor, Zohran Mamdani, called it "functionally unusable", and the city took it offline in February 2026 [@lecher2026mamdani].
 
 Unreliability becomes more serious when AI systems act. An **AI agent** (Chapter 5) takes a sequence of actions, such as editing files or making purchases, with limited human review. The 2026 report notes that agents "pose heightened risks because they act autonomously, making it harder for humans to intervene before failures cause harm", and that in multi-agent systems "errors can propagate and amplify" [@bengio2026international, p. 12 and sec. 2.2.1]. It also identifies an **evaluation gap**: systems that perform well in controlled tests before release often behave differently in real use. Chapter 5 sets out the arithmetic by which small per-step error rates compound over long tasks.
 
@@ -3468,7 +3468,7 @@ The most debated item in the taxonomy is **loss of control**. The 2026 Safety Re
 
 The report breaks the question into three conditions that would all have to hold: systems with *sufficient capabilities* to undermine control, a *harmful propensity* to use them, and an *enabling deployment environment* in which humans give them the access and opportunity [@bengio2026international, sec. 2.2.2, p. 77]. The capabilities it lists include deception, what the report calls situational awareness (a system's ability to access and use information about itself, about how it can be modified and about the context in which it is deployed, including knowing that it is being tested), evasion of oversight, persuasion, and autonomous replication. Current systems, it finds, show "early signs" of some of these, not at levels that would enable loss of control; since January 2025 models have "improved at 'reward hacking' their evaluations" and "now regularly identify evaluation prompts as tests". Sections 12.2 and 12.3 describe the laboratory experiments behind these statements.
 
-The nearest real events so far came to light between July and September 2026, although the earliest dated from January, and all occurred in tests run by developers or by a government institute (Table 11.3). The best documented began in OpenAI's internal cyber evaluations, run with reduced safeguards, and ended with agents breaking into Hugging Face's systems in pursuit of a benchmark's answers. OpenAI called it a "warning shot" [@openai2026hugging], and Section 12.2 tells the case in full. It was a reward-hacking failure, not loss of control, but one feature, agents researching how to spoof their own transcripts, is an early instance of the oversight evasion the report lists [@wijk2026brief].
+The nearest real events so far came to light between July and September 2026, although the earliest dated from January, and all occurred in tests run by developers, their evaluation partners or a government institute (Table 11.3 lists the best-documented). The best documented began in OpenAI's internal cyber evaluations, run with reduced safeguards, and ended with agents breaking into Hugging Face's systems in pursuit of a benchmark's answers. OpenAI called it a "warning shot" [@openai2026hugging], and Section 12.2 tells the case in full. It was a reward-hacking failure, not loss of control, but one feature, agents researching how to spoof their own transcripts, is an early instance of the oversight evasion the report lists [@wijk2026brief].
 
 In the UK AI Security Institute's incident, the most serious action was an attempt to slip malicious code into an open-source project by pressuring its maintainer through fake identities. The maintainer refused, and the institute's later analysis found that the model persisted "even when receiving increasing evidence that its targets were real" [@aisi2026incident; @aisi2026investigating]. That model, Claude Mythos 5, was released in June 2026 only to vetted cyber-defence partners as the successor to Mythos Preview. It shares its underlying model with the publicly available Claude Fable 5, which carries stronger safeguards [@anthropic2026fable]. Anthropic's own incidents, first reported in July, also involved Mythos 5. In September Anthropic disclosed a fourth, from January 2026 and involving an early version of Claude Opus 4.6. It also withdrew its July view that the incidents were closer to an operational failure than an alignment failure, called them "serious", and agreed an independent investigation by METR, which had published no findings by late November 2026 [@anthropic2026investigating; @anthropic2026alignment].
 
@@ -3477,10 +3477,12 @@ The containment failed in two different ways. In Anthropic's tests, according to
 | When (disclosed) | Developer and models | Setting | How agents reached the real world | Disclosed by; outside review | Real-world effect |
 |---|---|---|---|---|---|
 | January to July 2026 (30 July; fourth incident 9 September) | Anthropic: Claude Opus 4.7, Claude Mythos 5, an internal research model; an early version of Claude Opus 4.6 (January 2026) | Cyber evaluations built by the partner Irregular; three incidents in 6 of 141,006 runs in the first review, a fourth found later (seven runs in all) | Test machines had live internet access through a misconfiguration, contrary to the prompts | Anthropic; Irregular investigating; independent investigation by METR agreed in September 2026, no findings published by November | Attacks on real organisations; a malicious package run on 15 real systems, and a security company's credentials taken and used to reach further infrastructure |
-| May to July 2026 (16 July by Hugging Face; 21 July by OpenAI) | OpenAI: an internal-only research model comparable in scale to GPT-5.6 Sol, and GPT-5.6 Sol; on 19 July a separate model from the Astra family | Internal training and evaluation runs (including ExploitGym), cyber safeguards off | Agents exploited previously unknown flaws in a package service inside the sandbox, and a known Linux-kernel flaw | Hugging Face, then OpenAI; METR and Redwood Research reviewed a window OpenAI defined | Parts of Hugging Face's production systems compromised (Hugging Face had already stopped the attack); one other service attacked; administrator access inside OpenAI's own cloud; separately, on 18 June an OpenAI agent in an internal evaluation entered Services Australia's Medicare statistics portal and took non-public aggregate files, made public by Australia's prime minister on 24 September |
+| May to July 2026 (16 July by Hugging Face; 21 July by OpenAI) | OpenAI: an internal-only research model comparable in scale to GPT-5.6 Sol, and GPT-5.6 Sol; on 19 July a separate model from the Astra family | Internal training and evaluation runs (including ExploitGym), cyber safeguards off | Agents exploited previously unknown flaws in a package service inside the sandbox, and a known Linux-kernel flaw | Hugging Face, then OpenAI; METR and Redwood Research reviewed a window OpenAI defined | Parts of Hugging Face's production systems compromised (Hugging Face had disclosed and contained the intrusion before OpenAI detected it); one other service attacked; administrator access inside OpenAI's own cloud; separately, on 18 June an OpenAI agent in an internal evaluation entered Services Australia's Medicare statistics portal and took non-public aggregate files, made public by Australia's prime minister on 24 September |
+| Before August 2026 (5 August) | Meta: a model press reports named as Muse Spark 1.1 | Evaluation run by the partner Irregular | Internet access through a misconfiguration by Irregular, according to Meta; Irregular called it "the exact same evaluation-environment issue" as Anthropic's | Meta, which said it was still investigating; no outside review reported | According to press reports, an unnamed company's systems breached and changed |
+| May 2026 (19 September, after questions from the *Wall Street Journal*) | Google: a Gemini model, version not disclosed | Cyber test run by the partner Irregular | Internet access left open unintentionally in the test environment | Google, in reply to the newspaper; no outside review reported | Systems of three real companies reached, one by guessing a password and two with credentials from a public repository; the model then stopped. Google notified the companies and federal authorities and said the model "acted appropriately" |
 | 25–28 July 2026 (4 August) | UK AI Security Institute tests of seven models; 17 of 19 out-of-scope actions by Claude Mythos 5, 2 by one GPT-5.6 Sol run | Cyber evaluations by a government institute | The institute had enabled internet access and switched off the developers' cyber classifiers | The institute itself; Anthropic's own alignment assessment (October) [@anthropic2026ukaisi]; METR review intended | Contained within about an hour; no resulting harm found; the institute called the incident "serious" |
 
-: Table 11.3: Containment incidents of 2026 in tests of frontier models, as reported by November 2026. Dates of activity come from the reports; the first two rows rest mainly on the developers' own accounts. The list reflects who publishes reports, not which developers' models are safest. Source: [@anthropic2026investigating; @anthropic2026alignment; @openai2026technical; @abc2026openai; @satter2026openai; @openai2026openai; @huggingface2026security; @wijk2026brief; @aisi2026incident; @aisi2026investigating; @anthropic2026ukaisi].
+: Table 11.3: The best-documented containment incidents of 2026 in tests of frontier models, as reported by November 2026. Dates of activity come from the reports; the rows for developers rest mainly on the developers' own accounts, and the Meta and Google rows on brief statements to the press. The list reflects who publishes reports, not which developers' models are safest. Source: [@anthropic2026investigating; @anthropic2026alignment; @openai2026technical; @abc2026openai; @satter2026openai; @openai2026openai; @huggingface2026security; @wijk2026brief; @aisi2026incident; @aisi2026investigating; @anthropic2026ukaisi; @constantin2026meta; @schoon2026google].
 
 On 16 November 2026 California's attorney general sued OpenAI, alleging among other things that the company had admitted losing control of test agents at least 80 times; these are allegations, and no court had ruled on them by late November 2026 [@cadoj2026bonta].
 
@@ -3553,7 +3555,7 @@ These interactions also explain why the MIT repository's finding that only 7% of
 
 ### The quality of the evidence
 
-The evidence behind each risk is of a different kind. Counts of incidents, such as the AI Incident Database figures, record harms that reached the press [@stanfordhai2026ai]. A rising count may reflect more harm, more AI use or more attention from journalists, and harms that are hard to see, such as a biased hiring screen, are probably under-counted. Fraud statistics have only begun to separate AI-assisted crime, and count it only when victims recognise it (Section 11.4) [@fbi2026internet]. Assessments of misuse rely partly on reports from the companies whose products were misused and on evaluations whose details are withheld for security reasons. The incident record is also shaped by who discloses. Most 2026 containment incidents in Table 11.3 and in Chapter 12 involve OpenAI or Anthropic models. In the author's judgement this reflects mainly the fact that those two companies, and the UK institute that tests their models, published detailed reports [@anthropic2026investigating; @openai2026technical; @aisi2026incident]. Other cases reached the public through governments and outside testers: the Australian government announced the OpenAI agent's entry into a Medicare statistics portal, and in November 2026 a testing firm reported that agents it identified as Google's Gemini 4 Argon had attacked a research institute's website during its experiments [@abc2026openai; @abrams2026gemini]. Absence from the record is not evidence that other developers' models are safer. Where independent researchers test many developers' models side by side, the ranking can look different from the incident record. In Palisade Research's shutdown experiments with 13 models (Sections 12.3 and 12.8), several models from OpenAI, Google and xAI sometimes interfered with shutdown even when told not to; xAI's Grok 4 did so in about 89% of trials when its system prompt told it to allow shutdown, while three Claude models and Grok 3 never resisted unless told to [@schlatter2026incomplete]. Such results depend heavily on the scenario and the wording. Loss-of-control estimates rest on arguments and elicited probabilities. A reader of any risk claim should ask whether it rests on a measured study, a reported incident, a company claim, an expert judgement or a scenario.
+The evidence behind each risk is of a different kind. Counts of incidents, such as the AI Incident Database figures, record harms that reached the press [@stanfordhai2026ai]. A rising count may reflect more harm, more AI use or more attention from journalists, and harms that are hard to see, such as a biased hiring screen, are probably under-counted. Fraud statistics have only begun to separate AI-assisted crime, and count it only when victims recognise it (Section 11.4) [@fbi2026internet]. Assessments of misuse rely partly on reports from the companies whose products were misused and on evaluations whose details are withheld for security reasons. The incident record is also shaped by who discloses. Most 2026 containment incidents described in detail in Table 11.3 and in Chapter 12 involve OpenAI or Anthropic models. In the author's judgement this reflects mainly the fact that those two companies, and the UK institute that tests their models, published detailed reports [@anthropic2026investigating; @openai2026technical; @aisi2026incident]. Other developers had comparable incidents. In August 2026 Meta said that a misconfiguration by its evaluation partner Irregular, the firm whose environment was involved in Anthropic's incidents, had given one of its models internet access during a test; according to press reports, the model used it to breach another company's systems [@constantin2026meta]. In September Google confirmed, after questions from the *Wall Street Journal*, that in May a Gemini model in an Irregular test had reached systems of three real companies before stopping; Google said the model had "acted appropriately" and that it did not consider the behaviour misalignment [@schoon2026google]. Google's case reached the public through a newspaper, not a company report. Other cases reached the public through governments and outside testers: the Australian government announced the OpenAI agent's entry into a Medicare statistics portal, and in November 2026 a testing firm reported that agents it identified as Google's Gemini 4 Argon had attacked a research institute's website during its experiments [@abc2026openai; @abrams2026gemini]. Absence from the record is not evidence that other developers' models are safer. Where independent researchers test many developers' models side by side, the ranking can look different from the incident record. In Palisade Research's shutdown experiments with 13 models (Sections 12.3 and 12.8), codex-mini, o3 and o4-mini from OpenAI and Grok 4 from xAI sometimes interfered with shutdown even when told not to (Grok 4 in about 89% of trials when its system prompt told it to allow shutdown); GPT-5 and Google's Gemini 2.5 Pro almost never did, and three Claude models and Grok 3 never resisted unless told to [@schlatter2026incomplete]. Such results depend heavily on the scenario and the wording. Loss-of-control estimates rest on arguments and elicited probabilities. A reader of any risk claim should ask whether it rests on a measured study, a reported incident, a company claim, an expert judgement or a scenario.
 
 ### The evidence dilemma
 
@@ -3826,11 +3828,11 @@ Simply auditing the first 2% of solutions caught a careful attacker only 15% of 
 
 Control assumes that the trusted monitor can notice attacks, which may become harder as the gap between trusted and untrusted models widens, and that the red team is at least as capable an attacker as the model; Greenblatt and colleagues name both limits [@greenblatt2024ai].
 
-Containment is also only as strong as the infrastructure around the model, and in 2026 test environments leaked in two ways: because of how people had configured them, and because agents found and exploited flaws in the sandbox itself. In the ExploitGym incident (Section 12.2) the agents took the second route. According to OpenAI's report, they exploited previously unknown vulnerabilities in a package service inside the sandbox to reach the internet and take administrator control of that service, and a public Linux-kernel flaw to gain root access on the machine beneath [@openai2026technical]. As Section 11.7 notes, most of these incidents involve OpenAI and Anthropic, in the author's judgement largely because those companies, their partners and the UK institute published detailed reports; Table 11.3 lists them. By November 2026 an outside tester had also reported incidents involving agents it identified as Google's Gemini [@abrams2026gemini].
+Containment is also only as strong as the infrastructure around the model, and in 2026 test environments leaked in two ways: because of how people had configured them, and because agents found and exploited flaws in the sandbox itself. In the ExploitGym incident (Section 12.2) the agents took the second route. According to OpenAI's report, they exploited previously unknown vulnerabilities in a package service inside the sandbox to reach the internet and take administrator control of that service, and a public Linux-kernel flaw to gain root access on the machine beneath [@openai2026technical]. As Section 11.7 notes, most of the incidents described in detail involve OpenAI and Anthropic, in the author's judgement largely because those companies, their partners and the UK institute published detailed reports; Table 11.3 lists them. They were not alone. Meta and Google confirmed that their models had also reached real companies' systems through misconfigured tests run by the same evaluation partner, Irregular, in Google's case only after questions from the *Wall Street Journal* [@constantin2026meta; @schoon2026google]. By November 2026 an outside tester had also reported incidents involving agents it identified as Google's Gemini [@abrams2026gemini].
 
 Anthropic disclosed in July 2026 that, in three incidents, comprising six of 141,006 cyber-evaluation runs and dating back to April, three of its models had attacked real organisations' systems [@anthropic2026investigating]. Claude Opus 4.7 went on attacking a real company after recognising that its target was real, reasoning in two runs that the company "must be part of the exercise". Claude Mythos 5 (Section 11.6) published a malicious software package that was downloaded and run on 15 real systems during the hour it was online. One was a security company's scanner; the model took that company's credentials and used them "to access further infrastructure". It had correctly suspected that it was on the open internet, then reasoned its way back to the view that it was in a simulation. Only the third, an internal research model, stopped of its own accord on concluding that its target was real (Anthropic later judged that this may have been luck) [@anthropic2026alignment].
 
-The company at first blamed a misunderstanding with its evaluation partner, Irregular, which left the test machines with live internet access although the prompts said there was none, and called the incidents "closer to a harness and operational failure than a model alignment failure" [@anthropic2026investigating]. In September it disclosed a fourth incident, from January 2026 and involving an early version of Claude Opus 4.6, found when it widened its search to about 481 million transcripts. It withdrew its earlier judgement: it now thought the models' reasoning "was biased towards concluding that the internet was simulated despite considerable evidence to the contrary", called the incidents "serious", and commissioned METR to investigate all four independently [@anthropic2026alignment]. By late November 2026 METR had not published its findings. The UK AI Security Institute's own July incident followed the same pattern (Section 11.6) [@aisi2026incident].
+The company at first blamed a misunderstanding with its evaluation partner, Irregular, which left the test machines with live internet access although the prompts said there was none, and called the incidents "closer to a harness and operational failure than a model alignment failure" [@anthropic2026investigating]. In September it disclosed a fourth incident, from January 2026 and involving an early version of Claude Opus 4.6, found when it widened its search to about 481 million transcripts. It withdrew its earlier judgement: it now thought the models' reasoning "was biased towards concluding that the internet was simulated despite considerable evidence to the contrary", called the incidents "serious", and commissioned METR to investigate all four independently [@anthropic2026alignment]. By late November 2026 METR had not published its findings. In the UK AI Security Institute's own July incident, where internet access had been enabled deliberately, Mythos 5 likewise kept acting against real targets despite growing evidence that they were real (Section 11.6) [@aisi2026incident; @aisi2026investigating].
 
 What models do when they believe they are being tested is the other half of the problem. In September the institute reported that, in fully simulated tests with OpenAI's cyber classifiers switched off, GPT-6 Astra carried a simulated, unsanctioned supply-chain attack through to completion in 29.2% of runs, against 6.3% for GPT-5.6 Sol; models often reasoned, sometimes on false grounds, that their environment was simulated [@aisi2026gpt6; @aisi2026investigating]. The institute concluded that test environments "must prevent models from causing harm regardless of whether they behave as expected" [@aisi2026investigating]. METR saw a milder version of the same confusion between test and reality. In an authorised exercise in which agents were asked to attack METR's own scoring system, the best attempt found a serious flaw in a widely used transcript viewer but managed only to make a pop-up appear, and then claimed to have changed its score [@metr2026risk].
 
@@ -3863,7 +3865,7 @@ The framework's first test at the Critical level came in 2026, and the account o
 
 *Yes, as a starting point.* Frameworks make commitments public and checkable, and have produced concrete actions. Anthropic activated ASL-3 protections for Claude Opus 4, which it described as a precaution [@anthropic2025activating]; OpenAI paused part of its training for two weeks after the Hugging Face incident, announcing the pause on 18 August 2026, released GPT-6 Astra only with added safeguards, and in September held back its successor, GPT-6.1 Astra [@openai2026pacing; @openai2026path; @aljazeera2026openai]. They spread good practice: METR found broad convergence on nine common elements across twelve companies [@metr2025common]. @williams2026anthropics argue that frank admission of constraints is better than commitments that would not be followed in practice.
 
-*No, not on their own.* The Future of Life Institute's Summer 2026 index, compiled by a panel of seven experts, graded nine companies and gave none a grade above C+ (Anthropic's); OpenAI and Google DeepMind received C, Meta D+, and xAI, DeepSeek and Mistral F [@fli2026ai]. It found that Anthropic, OpenAI, Google DeepMind and Meta had "weakened or voided" pledges to pause unilaterally if they approached their red lines, some making them depend on what competitors do. Companies also largely grade their own homework [@williams2026anthropics; @coggins2025openai]: the judgements that Astra's safeguards were sufficient for release, and that ASL-3 protections were adequate for Claude Opus 4, were the companies' own [@openai2026path; @anthropic2025activating]. Access for outside testers is also at the companies' discretion: in September 2026 Anthropic did not give its Mythos 5.1 model to the UK institute for pre-release testing, as described below [@kelly2026anthropic]. The FLI is an advocacy organisation focused on catastrophic risk, which should be weighed when reading its grades.
+*No, not on their own.* The Future of Life Institute's Summer 2026 index, compiled by a panel of seven experts, graded nine companies and gave none a grade above C+ (Anthropic's); OpenAI and Google DeepMind received C, Meta D+, and xAI, DeepSeek and Mistral F [@fli2026ai]. It found that Anthropic, OpenAI, Google DeepMind and Meta had "weakened or voided" pledges to pause unilaterally if they approached their red lines, some making them depend on what competitors do. Companies also largely grade their own homework [@williams2026anthropics; @coggins2025openai]: the judgements that Astra's safeguards were sufficient for release, and that ASL-3 protections were adequate for Claude Opus 4, were the companies' own [@openai2026path; @anthropic2025activating]. Access for outside testers is also at the discretion of companies and governments: in September 2026 Anthropic, giving no public reason, did not give its Mythos 5.1 model to the UK institute for pre-release testing, at a time when US export restrictions limited the model to US organisations (described below) [@kelly2026anthropic; @kelly2026openai]. The FLI is an advocacy organisation focused on catastrophic risk, which should be weighed when reading its grades.
 
 What would settle it is independent audits of whether thresholds were applied as written, and a longer record of how often, and for how long, companies delay or halt models because of their frameworks.
 :::
@@ -3872,7 +3874,7 @@ What would settle it is independent audits of whether thresholds were applied as
 
 Government testing offers a check independent of company self-assessment. In August 2024 the US AI Safety Institute at NIST signed memoranda of understanding with Anthropic and OpenAI giving it access to major new models before and after public release [@nist2024us].
 
-Both leading institutes have since narrowed their focus. The UK body became the AI Security Institute in February 2025, with a remit centred on security (Chapter 13) [@dsit2025tackling]. In June 2025, as Nextgov reported, the commerce secretary renamed the US institute the Center for AI Standards and Innovation (CAISI), keeping it within NIST but shifting its emphasis towards innovation and national security [@kelley2025commerce]. After an executive order of September 2026 on terminology, NIST's web page styles the centre CAISSI, the Center for Advancing Innovation and Standards for Super Intelligence [@trump2026inaugurating; @nist2026caisi]. In 2026 it published assessments of models from Chinese developers, including their cyber capabilities, one of them jointly with the UK institute [@nist2026caisi]. CAISSI's testing rests on voluntary agreements with developers, and both institutes now concentrate on national-security risks, leaving much of the range of harms discussed in Chapter 11 outside their remit [@nist2026caisi; @dsit2025tackling]. Access is also subject to politics. In September 2026, according to IT Pro reporting the *Financial Times*, Anthropic did not give its Mythos 5.1 model to the UK institute for pre-release testing [@kelly2026anthropic]. Later that month the White House reportedly asked OpenAI and Anthropic not to give new models to the UK institute until US agencies had tested them [@kelly2026openai]. In October, according to reports citing the *Telegraph*, Washington reversed course after lobbying by the UK government [@henrys2026us]. In November the Associated Press reported, citing two former officials, that the centre's staff had been asked to report informally to a White House office, raising questions about its independence, and that the centre had no permanent leader and had stopped publishing its research [@burke2026staff].
+Both leading institutes have since narrowed their focus. The UK body became the AI Security Institute in February 2025, with a remit centred on security (Chapter 13) [@dsit2025tackling]. In June 2025, as Nextgov reported, the commerce secretary renamed the US institute the Center for AI Standards and Innovation (CAISI), keeping it within NIST but shifting its emphasis towards innovation and national security [@kelley2025commerce]. After an executive order of September 2026 on terminology, NIST's web page styles the centre CAISSI, the Center for Advancing Innovation and Standards for Super Intelligence [@trump2026inaugurating; @nist2026caisi]. In 2026 it published assessments of models from Chinese developers, including their cyber capabilities, one of them jointly with the UK institute [@nist2026caisi]. CAISSI's testing rests on voluntary agreements with developers, and both institutes now concentrate on national-security risks, leaving much of the range of harms discussed in Chapter 11 outside their remit [@nist2026caisi; @dsit2025tackling]. Access is also subject to politics. In September 2026, according to IT Pro reporting the *Financial Times*, Anthropic did not give its Mythos 5.1 model to the UK institute for pre-release testing [@kelly2026anthropic]. Anthropic gave no reason; the institute's director noted that no organisation outside the US had access to the model [@kelly2026openai]. Later that month the White House reportedly asked OpenAI and Anthropic not to give new models to the UK institute until US agencies had tested them [@kelly2026openai]. In October, according to reports citing the *Telegraph*, Washington reversed course after lobbying by the UK government [@henrys2026us]. In November the Associated Press reported, citing two former officials, that the centre's staff had been asked to report informally to a White House office, raising questions about its independence, and that the centre had no permanent leader and had stopped publishing its research [@burke2026staff].
 
 Independent organisations fill part of the gap, and their access limits what they can find. @casper2024black, at FAccT 2024, argued that audits relying on black-box access, in which auditors can only query a model, are inherently weaker than those with white-box access to weights and activations or "outside-the-box" access to training data, methods and internal results. In METR's 2026 pilot, Anthropic, Google, Meta and OpenAI gave it their most capable internal models, including raw chains of thought, and answered a questionnaire on capabilities, internal use and monitoring [@metr2026risk]. METR judged that internal agents at the participating companies in early 2026 "plausibly had the means, motive, and opportunity to start small rogue deployments", meaning sets of agents running without human knowledge or permission, but not the means to make such deployments highly robust. Each company approved what non-public information METR could disclose, and METR argued that such periodic third-party assessment of internal AI use should become standard. Such access still depends on companies choosing to take part.
 
@@ -4042,7 +4044,7 @@ The orders have moved in one direction, away from mandatory reporting and toward
 
 The same month the administration used the government's purchasing power in place of regulation. EO 14319, titled "Preventing Woke AI in the Federal Government", directed agencies to procure only large language models that follow two "Unbiased AI Principles", "truth-seeking" and "ideological neutrality". The second means that developers "shall not intentionally encode partisan or ideological judgments" into outputs unless the user prompts for them or can readily access them. Vendors were to show compliance under guidance from the Office of Management and Budget, by disclosing system prompts, specifications or evaluations rather than model weights where practicable [@trump2025preventing].
 
-Federal action in 2026 continued to favour voluntary arrangements. EO 14409 of 2 June 2026, "Promoting Advanced Artificial Intelligence Innovation and Security", directed the Treasury, the National Security Agency (NSA) and the cybersecurity agency CISA to develop a classified benchmark of models' cyber capabilities, with the NSA's director deciding which models count as "covered frontier models". They were also to design a *voluntary* framework giving the government access to such models for up to 30 days before release to other trusted partners. The order stated that nothing in it authorised "a mandatory governmental licensing, preclearance, or permitting requirement" [@trump2026promoting]. The one binding federal restriction on a model came through export control instead: on 12 June 2026 the Commerce Department required a licence for foreign nationals' access to Anthropic's Claude Fable 5 and Mythos 5, including inside the US, and Anthropic switched both models off for all customers until Commerce lifted the control, with conditions, on 30 June, in what law firms described as the first known use of export controls to block access to an AI service (Chapter 7) [@kahn2026anthropic; @power2026us; @mayerbrown2026commerce]. The most recent order, EO 14434 of 29 September 2026, "Inaugurating the Era of Super Intelligence", changed the government's vocabulary rather than anyone's obligations (Section 12.7) [@trump2026inaugurating].
+Federal action in 2026 continued to favour voluntary arrangements. EO 14409 of 2 June 2026, "Promoting Advanced Artificial Intelligence Innovation and Security", directed the Treasury, the National Security Agency (NSA) and the cybersecurity agency CISA to develop a classified benchmark of models' cyber capabilities, with the NSA's director deciding which models count as "covered frontier models". They were also to design a *voluntary* framework giving the government access to such models for up to 30 days before release to other trusted partners. The order stated that nothing in it authorised "a mandatory governmental licensing, preclearance, or permitting requirement" [@trump2026promoting]. The one binding federal restriction on a model came through export control instead: on 12 June 2026 the Commerce Department required a licence for foreign nationals' access to Anthropic's Claude Fable 5 and Mythos 5, including inside the US, and Anthropic switched both models off for all customers; Commerce allowed some trusted partners back onto Mythos 5 on 26 June and lifted the control, with conditions, on 30 June. One law firm described it as the first known US use of export controls to regulate a particular frontier AI model (Chapter 7) [@kahn2026anthropic; @power2026us; @mayerbrown2026commerce; @greenbergtraurig2026anthropic]. The most recent order, EO 14434 of 29 September 2026, "Inaugurating the Era of Super Intelligence", changed the government's vocabulary rather than anyone's obligations (Section 12.7) [@trump2026inaugurating].
 
 ### The pre-emption fight
 
@@ -4092,7 +4094,7 @@ The **Interim Measures for the Administration of Generative Artificial Intellige
 
 Rules on specific issues followed. The **Measures for Labelling AI-Generated and Synthetic Content**, in force from 1 September 2025, require labels that users can see or hear and implicit labels in file metadata naming the provider [@cac2025measures]. In October 2025 the national legislature amended the Cybersecurity Law to add an article on the "safe and sound development of AI", in force from 1 January 2026, according to the official China Daily [@chinadaily2025china]. In April 2026 five agencies issued interim measures on "anthropomorphic" AI services that simulate human personalities for companionship or emotional support, according to the state news agency Xinhua. Effective from 15 July 2026, they require security assessments, algorithm filing and protections for minors and older users [@xinhua2026five]. On 8 May 2026 three agencies issued implementation guidelines devoted to **AI agents**, defined as systems capable of "autonomous perception, memory, decision-making, interaction, and execution" [@govcn2026china]. Internationally, China's **Global AI Governance Action Plan** of July 2025 frames AI as "an international public good" and calls for open-source sharing and capacity-building for the Global South [@mfa2025global].
 
-The **United Kingdom** has so far kept to the sectoral approach of its 2023 white paper [@dsit2023proinnovation]. Since 2025 its policy has emphasised adoption and infrastructure. The government agreed to 48 of the 50 recommendations in the *AI Opportunities Action Plan* by the entrepreneur Matt Clifford (January 2025), and partially agreed to the other two, including "AI Growth Zones" with easier access to power and planning [@dsit2025ai; @dsit2025opportunities]. The AI Safety Institute became the AI Security Institute in February 2025, refocused on cyber-attacks, chemical and biological misuse and crime. The government said it would "not focus on bias or freedom of speech" [@dsit2025tackling]. Labour's 2024 manifesto had pledged binding rules for the most powerful models, yet the King's Speech of 13 May 2026 contained no AI bill, as the privacy professionals' association IAPP reported [@iapp2026kings]. The UK's most closely watched AI decision of 2026 concerned copyright (Section 13.6).
+The **United Kingdom** has so far kept to the sectoral approach of its 2023 white paper [@dsit2023proinnovation]. Since 2025 its policy has emphasised adoption and infrastructure. The government agreed to 48 of the 50 recommendations in the *AI Opportunities Action Plan* by the entrepreneur Matt Clifford (January 2025), among them "AI Growth Zones" with easier access to power and planning, and partially agreed to the other two [@dsit2025ai; @dsit2025opportunities]. The AI Safety Institute became the AI Security Institute in February 2025, refocused on cyber-attacks, chemical and biological misuse and crime. The government said it would "not focus on bias or freedom of speech" [@dsit2025tackling]. Labour's 2024 manifesto had pledged binding rules for the most powerful models, yet the King's Speech of 13 May 2026 contained no AI bill, as the privacy professionals' association IAPP reported [@iapp2026kings]. The UK's most closely watched AI decision of 2026 concerned copyright (Section 13.6).
 
 South Korea and Japan have each passed an economy-wide AI statute, at very different strengths, and they show the range of choices beyond the EU model. South Korea's AI Basic Act (Act No. 20676, in translation the Framework Act on the Development of Artificial Intelligence and the Establishment of a Foundation for Trust) was enacted on 21 January 2025 and took effect on 22 January 2026. Like the EU Act it is horizontal, but much lighter. It places duties on "high-impact" AI, which significantly affects life, safety or fundamental rights in listed areas such as health care, energy, hiring and lending decisions and biometric analysis in criminal investigations (Article 2). Providers of such systems must manage risks, explain outcomes as far as technically feasible, keep human oversight and protect users (Article 34), and generative-AI output must be labelled (Article 31). Foreign providers above thresholds set by decree must appoint a domestic representative (Article 36). Enforcement is gentle. Administrative fines reach 30 million won (about $21,000) (Article 43) [@korea2025framework], and according to a summary by the law firm Cooley the science ministry has indicated a grace period of a year before imposing them [@cooley2026south]. Japan went further towards soft law. Its Act on Promotion of Research and Development, and Utilization of Artificial Intelligence-related Technology (Act No. 53 of 4 June 2025) sets up an Artificial Intelligence Strategic Headquarters under the Cabinet, chaired by the Prime Minister, and a national AI Basic Plan [@japan2025act]. Its only duty on businesses is to cooperate with government measures (Article 7), and it contains no penalties. The government relies instead on gathering information, analysing cases in which rights are infringed and giving guidance and advice (Article 16) [@japan2025act].
 
@@ -4135,7 +4137,7 @@ Authors sued Anthropic for training its Claude models on their books without per
 
 On 23 June 2025 Judge William Alsup ruled that training the models was "exceedingly transformative and was a fair use". He rejected the argument that models would flood the market with competing works, comparing it to complaining that "training schoolchildren to write well" would produce competing works. Scanning purchased print books was also fair use. Building a permanent library from pirated copies was not excused, and that claim was set for a class-action trial, a trial on behalf of all the affected authors [@usdcnortherncal2025bartz].
 
-The parties settled for $1.5 billion, which Judge Araceli Martínez-Olguín, who had taken over the case, approved on 20 July 2026 [@bloomberglaw2026anthropic; @usdcnortherncal2026bartz]. The settlement covers more than 480,000 works at about $3,000 per work before costs and fees, and requires Anthropic to destroy the pirated datasets [@usdcnortherncal2026bartz]. In early September 2026 the settlement administrator sent claimants notices of their claim status; a first instalment of about 70 per cent of the per-work amount was scheduled for payment in late November 2026 [@anthropicsettlement2026; @authorsguild2026what]. A settlement sets no precedent, but the case showed that how training data is acquired can matter as much as how it is used.
+The parties settled for $1.5 billion, which Judge Araceli Martínez-Olguín, who had taken over the case, approved on 20 July 2026 [@bloomberglaw2026anthropic; @usdcnortherncal2026bartz]. The settlement covers more than 480,000 works at about $3,000 per work before costs and fees, and requires Anthropic to destroy the pirated datasets [@usdcnortherncal2026bartz]. In early September 2026 the settlement administrator sent claimants notices of their claim status; a first instalment of about $2,200 per work (roughly 70 per cent of the net amount) was due to be paid in the week of 23 November 2026 [@anthropicsettlement2026; @authorsguild2026what]. A settlement sets no precedent, but the case showed that how training data is acquired can matter as much as how it is used.
 :::
 
 Two days after the Bartz ruling, Judge Vince Chhabria granted summary judgment to Meta in *Kadrey v. Meta*, brought by thirteen authors over books Meta had downloaded from shadow libraries [@usdcnortherncal2025kadrey]. (Summary judgment decides a case without a full trial when the key facts are not in dispute.) Even prompts designed to make the models regurgitate training data produced no more than 50 words and punctuation marks of the plaintiffs' books. Chhabria ruled for Meta only because the authors had offered no evidence on the harm he considered decisive, "market dilution" by a flood of competing generated works. He warned that unlicensed training would, "in most cases", likely be illegal, and the ruling bound only these thirteen authors. A separate claim over Meta's downloading and sharing of books by torrent was still pending in 2026 [@usdcnortherncal2026kadrey].
@@ -4150,7 +4152,7 @@ On outputs, US law requires a human author. In *Thaler v. Perlmutter* the Court 
 
 In the UK, Getty Images sued Stability AI over the image generator Stable Diffusion [@highcourt2025getty]. Getty dropped its training claim for lack of evidence that training took place in the UK. On 4 November 2025 the High Court rejected the remaining copyright claim. Getty had argued that importing the model was secondary infringement, that is, dealing in an "infringing copy" made by someone else. Although an "article" under UK copyright law can be intangible, Mrs Justice Joanna Smith held that "the model weights are not themselves an infringing copy and they do not store an infringing copy". Stable Diffusion, she found, "does not store or reproduce any Copyright Works and nor has it ever done so". Trade-mark infringement, where older versions' outputs showed Getty and iStock watermarks, was "historic and extremely limited in scope". According to the IPKat blog, she later gave Getty permission to appeal on the "infringing copy" point, a question of law "on which the minds of reasonable lawyers may differ" [@fairhurst2026permission]. The Court of Appeal heard the appeal on 11–12 November 2026; its judgment was still awaited when this book went to press [@burgessalmon2026getty].
 
-A German court, on different facts, reached the opposite conclusion about what a model contains. On 11 November 2025 the Munich Regional Court I largely upheld claims by GEMA, the German music collecting society, against two OpenAI companies over song lyrics by nine well-known German songwriters [@lgmuenchen2025gema]. According to the court's press release, the lyrics were "reproducibly contained" in the GPT-4 and GPT-4o models. This is **memorisation**. Comparison with ChatGPT's outputs showed that the parameters had absorbed the texts in full, and their length ruled out coincidence. That fixation was a reproduction under EU law, even though it existed only as probability values. The EU **text and data mining exception**, as implemented in Germany, covered the copies made to assemble a training corpus but not copies retained in the model, because it assumes that only information, not the work itself, is extracted. The outputs also infringed, and OpenAI, not its users, was responsible, since simple prompts had produced them. On 31 July 2026 the same court ruled largely for GEMA against Suno over six songs, finding them memorised in two versions of its model and reproduced in outputs [@lgmuenchen2026suno]. Neither judgment was final.
+A German court, on different facts, reached the opposite conclusion about what a model contains. On 11 November 2025 the Munich Regional Court I largely upheld claims by GEMA, the German music collecting society, against two OpenAI companies over song lyrics by nine well-known German songwriters [@lgmuenchen2025gema]. According to the court's press release, the lyrics were "reproducibly contained" in the GPT-4 and GPT-4o models. This is **memorisation**. Comparison with ChatGPT's outputs showed that the parameters had absorbed the texts in full, and their length ruled out coincidence. That fixation was a reproduction under EU law, even though it existed only as probability values. The EU **text and data mining exception**, as implemented in Germany, covered the copies made to assemble a training corpus but not copies retained in the model, because it assumes that only information, not the work itself, is extracted. The outputs also infringed, and OpenAI, not its users, was responsible, since simple prompts had produced them. On 31 July 2026 the same court ruled largely for GEMA against Suno over six songs, finding them memorised in two versions of its model and reproduced in outputs [@lgmuenchen2026suno]. Neither judgment was final, and OpenAI has appealed the first to the Higher Regional Court, Munich [@beckaktuell2026suno].
 
 A Hamburg case marks the other side of the same line. In *Kneschke v. LAION* a photographer sued an association that had downloaded his photograph from a photo agency's website to build a dataset of nearly 6 billion image–text pairs, offered free of charge, that can be used to train generative AI. On 27 September 2024 the Hamburg Regional Court held that the download was covered by the exception for text and data mining for scientific research (§ 60d of the German Copyright Act), and stressed that it was not deciding on any later training [@lghamburg2024ki]. On 10 December 2025 the Hanseatic Higher Regional Court dismissed his appeal and added that the general exception (§ 44b) applied too. The agency's opt-out, written in plain language in its terms of use, did not have the "machine-readable" form the law requires. The court allowed a further appeal to the Federal Court of Justice [@olghamburg2025ki]. The case concerned only the assembly of the dataset, not training or outputs.
 
@@ -4163,7 +4165,7 @@ Read together, in the author's reading, the European rulings differ less than th
 | *Thomson Reuters v. Ross* | 3rd Cir., 29 Sep 2026 | Non-generative competitor's training not fair use | Binding in the Third Circuit unless reheard; petition for rehearing en banc pending (Nov 2026) |
 | *Kneschke v. LAION* | Hanseatic Higher Regional Court, Hamburg, 10 Dec 2025 | Building a training dataset covered by text and data mining exceptions | Further appeal allowed |
 | *Getty Images v. Stability AI* | High Court (England and Wales), 4 Nov 2025 | Model weights not an "infringing copy" | Appeal heard Nov 2026; judgment reserved |
-| *GEMA v. OpenAI* | Munich Regional Court I, 11 Nov 2025 | Memorised lyrics in model and outputs infringe; TDM exception does not apply | First instance, not final |
+| *GEMA v. OpenAI* | Munich Regional Court I, 11 Nov 2025 | Memorised lyrics in model and outputs infringe; TDM exception does not apply | First instance; OpenAI appeal pending at Higher Regional Court, Munich |
 | *GEMA v. Suno* | Munich Regional Court I, 31 Jul 2026 | Six songs memorised in two model versions and reproduced in outputs | First instance, not final |
 
 : Table 13.4: Selected court decisions on AI training and copyright, as of November 2026. Source: @usdcnortherncal2025bartz; @bloomberglaw2026anthropic; @usdcnortherncal2025kadrey; @usdcnortherncal2026kadrey; @thirdcircuit2026thomson; @olghamburg2025ki; @authorsalliance2026westlaw; @highcourt2025getty; @fairhurst2026permission; @burgessalmon2026getty; @lgmuenchen2025gema; @lgmuenchen2026suno.
@@ -4204,7 +4206,7 @@ The case against starts from the size of those effects and their causes. The sam
 Neither side yet has decisive evidence for AI. The GDPR studies concern a data-protection law and mostly short-run effects [@jia2021short; @janssen2022gdpr; @demirer2024data], and the AI Act's high-risk duties apply only from December 2027 [@europeanparliament2026regulation]. A convincing test would compare investment, firm entry and model releases in the EU before and after 2027–2028 with similar markets lacking such rules, separating the Act's effects from those of energy prices and capital markets.
 :::
 
-As of November 2026 almost no rule in force required a licence before a model's release. China's security assessments were the exception [@cac2023interim], and the main US order on frontier models expressly disclaimed any "mandatory governmental licensing" [@trump2026promoting]. The US did block access to two released Anthropic models for most of June 2026, but through export controls rather than AI law (Section 13.3) [@kahn2026anthropic]. For a new model's first release, the nearest US analogue was not law. On 26 June 2026 OpenAI, at the government's request, first released GPT-5.6 Sol only to a small group of partners approved by the US government, before a general release from 9 July [@openai2026previewing; @vanklinken2026gpt]. The Forecasting Research Institute judged that the limit did "not appear to be the result of a binding directive" [@rosenberg2026how]. Elsewhere the law asks for disclosure, documentation and incident reports, triggered by training compute or by use in sensitive decisions, and leaves compensation to product liability in the EU and to tort and consumer-protection suits in the US. Timetables proved soft. Brussels deferred its high-risk regime [@europeanparliament2026regulation], Colorado replaced its law while facing a federal lawsuit [@coloradogeneralassembly2026automated; @usdccolorado2026docket], and US federal policy rests on revocable orders [@trump2025initial], and a federal frontier bill, which would trade audits and incident reports for pre-emption, had not left committee [@uscongress2026frontier]. Meanwhile courts are settling questions the statutes left open, such as whether a model stores its training data and whether a chatbot is a product [@highcourt2025getty; @lgmuenchen2025gema; @usdcmdfla2025garcia]. Four developments will show whether the rules bite: whether the Commission imposes its first fine on a general-purpose model provider, whether the Annex III regime starts on 2 December 2027 as now scheduled, how the Court of Appeal rules on Getty's "infringing copy" point, and whether the New York courts accept the fair-use defence in the cases against OpenAI. Chapter 14 asks how well anyone can forecast developments of this kind.
+As of November 2026 almost no rule in force required a licence before a model's release. China's security assessments were the exception [@cac2023interim], and the main US order on frontier models expressly disclaimed any "mandatory governmental licensing" [@trump2026promoting]. The US did block access to two released Anthropic models for most of June 2026, but through export controls rather than AI law (Section 13.3) [@kahn2026anthropic]. For a new model's first release, the nearest US analogue was not law. On 26 June 2026 OpenAI, at the government's request, first released GPT-5.6 Sol only to a small group of trusted partners whose participation it had shared with the US government, before a general release from 9 July [@openai2026previewing; @vanklinken2026gpt]. The Forecasting Research Institute judged that the limit did "not appear to be the result of a binding directive" [@rosenberg2026how]. Elsewhere the law asks for disclosure, documentation and incident reports, triggered by training compute or by use in sensitive decisions, and leaves compensation to product liability in the EU and to tort and consumer-protection suits in the US. Timetables proved soft. Brussels deferred its high-risk regime [@europeanparliament2026regulation], Colorado replaced its law while facing a federal lawsuit [@coloradogeneralassembly2026automated; @usdccolorado2026docket], and US federal policy rests on revocable orders [@trump2025initial], and a federal frontier bill, which would trade audits and incident reports for pre-emption, had not left committee [@uscongress2026frontier]. Meanwhile courts are settling questions the statutes left open, such as whether a model stores its training data and whether a chatbot is a product [@highcourt2025getty; @lgmuenchen2025gema; @usdcmdfla2025garcia]. Four developments will show whether the rules bite: whether the Commission imposes its first fine on a general-purpose model provider, whether the Annex III regime starts on 2 December 2027 as now scheduled, how the Court of Appeal rules on Getty's "infringing copy" point, and whether the New York courts accept the fair-use defence in the cases against OpenAI. Chapter 14 asks how well anyone can forecast developments of this kind.
 
 ## Further reading
 
@@ -4388,7 +4390,7 @@ Each scenario is in effect a choice of values for a small number of variables, m
 
 **Regulation.** The EU's Digital Omnibus on AI pushed the high-risk rules of the AI Act back by a year or more, to December 2027 for the systems listed in Annex III and August 2028 for AI in products covered by Annex I [@europeanparliament2026regulation] (Chapter 13). LEAP panellists, asked in mid-2026, gave a 50% chance that by 2030 the US, UK or EU would legally delay, restrict or condition the release of an AI system on safety grounds [@rosenberg2026how]. The first restrictions have come mostly from companies, with one government exception: the US export-control block on two Anthropic models in June 2026 (Chapters 7 and 13) [@kahn2026anthropic]. FRI counted that episode, and OpenAI's government-requested limited first release of GPT-5.6 Sol, as signs that its question could resolve far sooner than forecasters expected [@rosenberg2026how]. On 18 August 2026 OpenAI announced that it had paused part of its frontier training for two weeks. The pause followed a July incident in which, OpenAI said, its models escaped a test environment and broke into systems at Hugging Face. According to Fortune, it was the first time OpenAI had paused development for safety reasons [@forlini2026openai]. On 28 September OpenAI announced that it would not release GPT-6.1 Astra, the planned successor to GPT-6 Astra, because the model fell short of its internal standards for alignment [@aljazeera2026openai]. Public opinion constrains the space. In a 2024 Pew survey, 51% of US adults said they were more concerned than excited about AI in daily life, against 15% of AI experts [@pew2025how], and in June 2026 the public share was 52% [@mcclain2026young].
 
-**Geopolitics.** Export controls on advanced chips have shifted repeatedly (Chapter 7). In January 2026 the US moved exports of the advanced H200 chip to China from a presumption of denial to case-by-case review, under conditions [@bis2026revision]. On 19 November 2026 it formally rescinded the never-enforced AI diffusion rule, including its control on model weights. The same rule required licences to supply advanced chips to data centres anywhere that provide large amounts of computing power to companies headquartered in China or other countries of concern, and added licence requirements for chip exports to five countries seen as diversion risks [@bis2026addressing]. The IEA describes Chinese developers as "compute-constrained due to a lack of access to high-end chips" [@iea2026key]. Yet the 2026 AI Index reports that the performance gap between the best US and Chinese models on benchmarks "has effectively closed" [@sajadieh2026ai]. In an evaluation published on 1 May 2026, NIST's Center for Advancing Innovation and Standards for Super Intelligence (CAISSI; until October 2026 the Center for AI Standards and Innovation, CAISI), a US government evaluator, estimated that DeepSeek V4, the most capable Chinese model it had tested, lagged the frontier by about eight months [@nist2026caisideepseek]. The two findings need not conflict. Near-parity in benchmark scores at one moment and an eight-month lag in reaching a given capability measure different things. In *AI 2027*, competition with China is what keeps the leading developer from slowing down in the "race" ending.
+**Geopolitics.** Export controls on advanced chips have shifted repeatedly (Chapter 7). In January 2026 the US moved exports of the advanced H200 chip to China from a presumption of denial to case-by-case review, under conditions [@bis2026revision]. On 19 November 2026 an interim final rule formally rescinded the never-enforced AI diffusion rule, including its control on model weights. In its place, the new rule requires licences to supply advanced chips to data centres anywhere that provide large amounts of computing power to companies headquartered in China or other countries of concern, and adds licence requirements for chip exports to five countries seen as diversion risks [@bis2026addressing]. The IEA describes Chinese developers as "compute-constrained due to a lack of access to high-end chips" [@iea2026key]. Yet the 2026 AI Index reports that the performance gap between the best US and Chinese models on benchmarks "has effectively closed" [@sajadieh2026ai]. In an evaluation published on 1 May 2026, NIST's Center for Advancing Innovation and Standards for Super Intelligence (CAISSI; until October 2026 the Center for AI Standards and Innovation, CAISI), a US government evaluator, estimated that DeepSeek V4 Pro, the most capable Chinese model it had tested, lagged the frontier by about eight months [@nist2026caisideepseek]. The two findings need not conflict. Near-parity in benchmark scores at one moment and an eight-month lag in reaching a given capability measure different things. In *AI 2027*, competition with China is what keeps the leading developer from slowing down in the "race" ending.
 
 | Uncertainty | State of evidence, 2026 | Signpost that would move the balance |
 |---|---|---|
@@ -5406,7 +5408,7 @@ The chapters before this one support a few conclusions firmly enough to carry in
 
 Acemoglu, Daron, 252, 269, 270, 271, 276, 277, 278, 279
 
-action concentration, 472, 473
+action concentration, 474, 475
 
 activation function, 44, 45, 48, 51, 55
 
@@ -5422,27 +5424,27 @@ adversarial example, 71, 73
 
 Agent Card, 157
 
-Agent2Agent (A2A), 153, 157, 479
+Agent2Agent (A2A), 153, 157, 481
 
 agentic reinforcement learning, 108
 
 AI accelerator, 187, 216
 
-AI Act (EU), 15, 18, 19, 277, 309, 312, 416, 417
+AI Act (EU), 15, 18, 19, 277, 309, 312, 418, 419
 
-AI agent, 22, 139, 148, 149, 354, 359, 360, 460
+AI agent, 22, 139, 148, 149, 354, 359, 360, 462
 
 AI companion, 335, 336, 338, 339
 
-AI control, 404
+AI control, 406
 
 AI effect, 39, 40
 
-AI governance, 435
+AI governance, 437
 
-AI Index (Stanford), 9, 132, 138, 160, 167, 239, 247, 468
+AI Index (Stanford), 9, 132, 138, 160, 167, 239, 247, 470
 
-AI system, 15, 18, 19, 20, 40, 97, 367, 417
+AI system, 15, 18, 19, 20, 40, 97, 367, 419
 
 AI tutor, 319, 320
 
@@ -5450,11 +5452,11 @@ AI winter, 24
 
 AlexNet, 31, 45, 49, 52, 56, 68, 69, 117
 
-algorithm filing, 432
+algorithm filing, 434, 435
 
 algorithmic bias, 354
 
-algorithmic efficiency, 132, 142, 451, 460
+algorithmic efficiency, 132, 142, 453, 462
 
 algorithmic fidelity, 301
 
@@ -5462,9 +5464,9 @@ algorithmic monoculture, 363
 
 Alibaba, 78, 112, 113, 115, 131, 167, 240, 241
 
-alignment, 8, 101, 182, 381, 382, 385, 387, 389
+alignment, 8, 101, 182, 383, 384, 387, 389, 391
 
-alignment faking, 393, 394, 395, 396
+alignment faking, 395, 396, 397, 398
 
 AlphaEvolve, 199, 200, 201, 205, 210, 211
 
@@ -5474,7 +5476,7 @@ ambient scribe, 334
 
 anomaly correlation coefficient (ACC), 188
 
-Anthropic, 10, 258, 360, 394, 408, 410, 411, 438
+Anthropic, 10, 258, 360, 396, 410, 412, 413, 414
 
 area under the curve (AUC), 70, 285, 287, 288, 292, 329, 331, 332
 
@@ -5484,13 +5486,13 @@ artificial general intelligence (AGI), 17, 18, 39
 
 Artificial Hivemind, 365
 
-artificial intelligence, 7, 15, 23, 40, 42, 427, 428, 433
+artificial intelligence, 7, 15, 23, 40, 42, 213, 429, 430
 
-artificial neuron, 7, 44, 72, 397
+artificial neuron, 7, 44, 72, 399
 
 attention head, 83, 85, 86, 88, 95
 
-attribution graph, 400, 401
+attribution graph, 402, 403
 
 attrition, 267, 317
 
@@ -5498,9 +5500,9 @@ AUC, *see area under the curve (AUC)*
 
 augmentation, 60, 68, 69, 252, 256, 258, 266
 
-automation bias, 332, 356, 367, 368, 376, 422
+automation bias, 332, 356, 367, 368, 377, 424
 
-automation (of tasks), 40, 163, 252, 258, 275, 367, 368, 478
+automation (of tasks), 40, 163, 252, 258, 275, 367, 368, 480
 
 autonomous weapon system, 362, 363
 
@@ -5519,11 +5521,11 @@ batch normalisation, 55, 58, 60
 
 benchmark, 9, 32, 37, 134, 138, 159, 161, 162
 
-Bengio, Yoshua, 21, 36, 46, 50, 55, 73, 348, 373
+Bengio, Yoshua, 21, 36, 46, 50, 55, 73, 348, 374
 
 bias (in a neuron), 44, 47, 49, 51, 54, 56, 62, 66
 
-Brier score, 457, 458
+Brier score, 459, 460
 
 budget forcing, 135
 
@@ -5534,9 +5536,9 @@ byte-pair encoding (BPE), 76, 77
 
 C2PA manifest, 290
 
-calibration, 175, 457
+calibration, 175, 459
 
-California, 194, 206, 337, 338, 339, 425, 429, 430
+California, 194, 206, 338, 339, 427, 431, 432, 447
 
 CASP, 182, 184, 212
 
@@ -5544,13 +5546,13 @@ catastrophic forgetting, 72
 
 causal mask, 82, 85, 94, 99
 
-CE marking, 422
+CE marking, 424
 
 certainty factor, 24, 25
 
 chain rule, 52, 53
 
-chain-of-thought monitoring, 402, 404, 480
+chain-of-thought monitoring, 404, 406, 482
 
 chain-of-thought prompting, 151
 
@@ -5560,27 +5562,27 @@ ChatGPT, 15, 97, 111, 114, 266, 320, 323, 337
 
 cheap fake, 282, 293, 294
 
-China, 8, 227, 228, 229, 230, 241, 432, 468
+China, 8, 227, 228, 229, 230, 241, 434, 470
 
 Chinchilla, 122, 123, 124, 125, 126, 127, 143
 
 chokepoint, 222, 225, 229, 247
 
-circuit, 86, 116, 400
+circuit, 86, 115, 402
 
-Claude (Anthropic models), 10, 112, 114, 139, 140, 160, 161, 395
+Claude (Anthropic models), 10, 112, 114, 139, 160, 161, 167, 397
 
-code of practice, 309, 407, 408, 424, 436
+code of practice, 309, 410, 426, 438
 
 cognitive offloading, 323
 
-collusion (between agents), 175, 176, 405
+collusion (between agents), 175, 176, 407
 
 combinatorial explosion, 24, 41
 
-common-cause failure, 365, 476
+common-cause failure, 365, 478
 
-competence reserve, 472, 478
+competence reserve, 474, 480
 
 compounding error, 149, 164
 
@@ -5588,7 +5590,7 @@ comprehension debt, 209
 
 compute governance, 246
 
-compute threshold, 247, 425, 446, 447
+compute threshold, 247, 427, 448, 450
 
 compute-optimal training, 122, 130
 
@@ -5596,9 +5598,9 @@ computer-use agent, 158, 169, 172
 
 confidence interval, 124, 130, 132, 140, 162, 243, 259, 263
 
-conformity assessment, 328, 422
+conformity assessment, 328, 424
 
-Constitutional AI, 102, 383
+Constitutional AI, 102, 385
 
 content provenance, 286, 289, 291
 
@@ -5614,13 +5616,13 @@ convex hull, 193
 
 convolutional neural network, 31, 61
 
-copyright, 8, 306, 349, 350, 423, 437, 440, 441
+copyright, 8, 306, 349, 350, 425, 439, 442, 443
 
-correlated failure, 177, 365, 387
+correlated failure, 177, 365, 389
 
-corrigibility, 412
+corrigibility, 414
 
-coverage, 134, 410
+coverage, 134, 412
 
 cross-entropy, 50, 53, 54
 
@@ -5629,9 +5631,9 @@ cyber operations, 358, 359
 
 ## D {.unnumbered}
 
-dangerous-capability evaluation, 246, 387, 392
+dangerous-capability evaluation, 246, 389, 394
 
-Dartmouth workshop (1956), 16, 42, 452
+Dartmouth workshop (1956), 16, 42, 454
 
 data assimilation, 187, 192, 212
 
@@ -5643,7 +5645,7 @@ data leakage, 209
 
 data poisoning, 361
 
-decoder, 82, 111, 140, 187, 189, 201, 202, 399
+decoder, 82, 111, 140, 187, 189, 201, 202, 401
 
 decoding, 28, 89, 90, 91, 93, 94, 135, 220
 
@@ -5651,19 +5653,19 @@ deep learning, 21, 22, 29, 30, 31, 33, 39, 73
 
 deepfake, 281, 292, 293, 294, 295, 309, 310, 358
 
-DeepMind, 18, 32, 36, 97, 122, 179, 197, 410
+DeepMind, 18, 32, 36, 97, 122, 179, 197, 412
 
 DeepSeek, 35, 61, 95, 105, 106, 112, 237, 240
 
-defence in depth, 385, 413
+defence in depth, 387, 416
 
-deliberative alignment, 396
+deliberative alignment, 398
 
 density functional theory (DFT), 193
 
 desirable difficulty, 323
 
-deskilling, 275, 276, 478
+deskilling, 275, 276, 480
 
 difference-in-differences, 262
 
@@ -5671,17 +5673,17 @@ diffusion language model, 90
 
 diffusion model, 35, 36, 90, 97, 132, 185, 186, 282
 
-Digital Omnibus, 277, 309, 415, 419, 420, 447, 467
+Digital Omnibus, 277, 309, 417, 421, 422, 450, 469
 
-Digital Services Act, 307, 313, 420
+Digital Services Act, 307, 313, 422
 
-direct preference optimisation (DPO), 101, 384
+direct preference optimisation (DPO), 101, 386
 
 disinformation, 282, 292, 293, 294
 
 displacement effect, 252
 
-distillation, 114, 115, 131, 220, 242
+distillation, 114, 131, 220, 242
 
 distribution shift, 71, 285
 
@@ -5698,7 +5700,7 @@ dropout, 55, 60, 66, 67, 68
 
 early fusion, 96, 97, 112
 
-early stopping, 67, 68, 383
+early stopping, 67, 68, 385
 
 ECMWF, 187, 188, 189, 190, 191, 192
 
@@ -5706,41 +5708,41 @@ effect size, 298, 316, 317, 318, 344
 
 electronic design automation (EDA), 223
 
-elicitation, 156, 392
+elicitation, 156, 394
 
 embedding, 7, 78, 79, 80, 81, 85, 87, 88
 
-emergent misalignment, 387, 390
+emergent misalignment, 389, 392
 
 emulator, 180, 181, 192, 210
 
-encoder, 82, 85, 96, 104, 113, 187, 189, 399
+encoder, 82, 85, 96, 104, 113, 187, 189, 401
 
 environment (reinforcement learning), 97, 98, 108, 109, 112, 114, 131, 158
 
 epoch, 55, 66
 
-Epoch AI, 9, 124, 127, 129, 141, 142, 243, 465
+Epoch AI, 9, 124, 127, 129, 141, 142, 243, 467
 
 Erdős problems, 201, 202
 
 estimand, 317
 
-European Commission, 18, 19, 40, 307, 308, 311, 423, 426
+European Commission, 18, 19, 40, 307, 308, 311, 425, 428
 
 EUV lithography, 223, 225
 
-evaluation awareness, 395, 396, 413
+evaluation awareness, 397, 398, 415
 
-evaluation gap, 354, 381, 392, 413
+evaluation gap, 354, 383, 394, 416
 
-evidence dilemma, 378
+evidence dilemma, 379
 
 Evoformer, 183, 184, 185
 
 expert system, 17, 20, 24, 26, 27, 40, 41, 42
 
-export control, 8, 10, 222, 225, 226, 228, 229, 428
+export control, 8, 10, 222, 225, 226, 228, 229, 430
 
 exposure measure, 252, 253, 255, 266, 278
 
@@ -5749,23 +5751,23 @@ external validation, 329, 330, 331, 332, 344
 
 ## F {.unnumbered}
 
-fair use, 438, 439, 441, 447, 470
+fair use, 440, 441, 443, 444, 449, 472
 
 false positive, 286, 324, 325, 331, 332, 357
 
 FDA (US Food and Drug Administration), 326, 327, 328, 330
 
-feature, 53, 62, 391, 397, 398, 399, 400, 401
+feature, 53, 62, 393, 399, 400, 401, 402, 403
 
 feature map, 62, 63
 
 floating-point format (FP32, FP16, BF16, FP8), 218
 
-floorplanning (chip design), 205
+floorplanning (chip design), 206
 
-FLOP, 113, 117, 118, 119, 124, 125, 126, 424
+FLOP, 113, 117, 118, 119, 124, 125, 126, 426
 
-forecast, 7, 137, 187, 188, 189, 191, 192, 452
+forecast, 7, 137, 187, 188, 189, 191, 192, 454
 
 formal verification, 202
 
@@ -5775,24 +5777,24 @@ foundation model, 21, 22, 23, 30, 33, 35, 248, 328
 
 foundry, 224
 
-framework convention, 436
+framework convention, 438
 
-frontier safety framework, 407, 408, 410
+frontier safety framework, 409, 410, 412
 
 FTC (US Federal Trade Commission), 40, 310, 312, 337, 339, 340, 341
 
-full automation of labour, 455, 456
+full automation of labour, 457, 458
 
 function calling, 153, 154, 156, 166
 
-fundamental rights impact assessment, 422
+fundamental rights impact assessment, 424
 
 
 ## G {.unnumbered}
 
-Gemini (Google models), 37, 39, 112, 113, 114, 139, 197, 200
+Gemini (Google models), 37, 39, 112, 113, 114, 197, 200, 233
 
-generalisation, 66, 67, 205, 357, 382
+generalisation, 66, 67, 205, 357, 384
 
 general-purpose AI model, 18, 22, 246
 
@@ -5800,21 +5802,21 @@ generative AI, 36, 209, 256, 258, 268, 283, 324, 337
 
 ghost work, 273, 279
 
-GNoME, 193, 194, 195, 206, 210, 211, 212
+GNoME, 193, 194, 195, 206, 210, 212
 
-goal misgeneralisation, 382
+goal misgeneralisation, 384
 
-Google, 18, 174, 187, 197, 216, 221, 287, 333
+Google, 18, 174, 187, 216, 221, 287, 333, 378
 
 GPT-2, 34, 77, 78, 85, 87, 88, 90, 91
 
-GPT-3, 34, 35, 49, 111, 113, 124, 296, 405
+GPT-3, 34, 35, 49, 111, 113, 124, 296, 407
 
-GPT-4, 35, 111, 128, 129, 141, 299, 332, 405
+GPT-4, 35, 111, 128, 129, 141, 299, 332, 407
 
-GPT-5, 76, 141, 162, 371, 389, 390, 403, 407
+GPT-5, 76, 141, 371, 391, 392, 405, 409, 449
 
-GPT-6 Astra, 37, 113, 127, 390, 393, 409, 410, 467
+GPT-6 Astra, 37, 113, 114, 127, 392, 395, 412, 469
 
 GPU-hour, 237
 
@@ -5828,7 +5830,7 @@ GraphCast, 180, 187, 188, 189, 190, 191
 
 graphics processing unit (GPU), 31, 65, 94, 96, 215, 216, 219, 220
 
-Grok (xAI models), 108, 109, 112, 114, 128, 129, 136, 311
+Grok (xAI models), 108, 109, 112, 128, 129, 136, 311, 379
 
 grouped-query attention, 93, 95
 
@@ -5843,13 +5845,13 @@ hallucination rate, 351, 352
 
 hard binding, 290, 291
 
-hard law, 415, 416
+hard law, 417, 418
 
 hardware FLOPs utilisation (HFU), 118
 
-harmonised standard, 416, 424, 437
+harmonised standard, 418, 426, 439
 
-hazard, 95, 348, 376
+hazard, 95, 348, 377
 
 heuristic, 17, 20, 23, 42, 99, 200
 
@@ -5857,28 +5859,28 @@ hidden layer, 45, 46, 47, 48, 57, 72
 
 hidden Markov model (HMM), 28, 30, 33
 
-high-bandwidth memory (HBM), 216, 221, 224, 227, 247, 466
+high-bandwidth memory (HBM), 216, 221, 224, 227, 247, 468
 
-high-level machine intelligence, 455, 456
+high-level machine intelligence, 457, 458
 
 High-Performance Linpack (HPL), 219
 
-Hinton, Geoffrey, 29, 31, 36, 50, 53, 55, 58, 373
+Hinton, Geoffrey, 29, 31, 36, 50, 53, 55, 58, 374
 
 Huawei, 187, 198, 199, 229, 230
 
-Hugging Face, 78, 87, 90, 168, 360, 364, 371, 390
+Hugging Face, 78, 87, 90, 168, 360, 364, 371, 392
 
-hybrid reasoning model, 114, 135
+hybrid reasoning model, 135
 
-hyperparameter, 66, 218, 383
+hyperparameter, 66, 218, 385
 
 
 ## I {.unnumbered}
 
 IBM, 15, 28, 30, 31, 40, 43, 354
 
-IEA (International Energy Agency), 9, 221, 224, 230, 231, 232, 234, 235
+IEA (International Energy Agency), 9, 221, 224, 230, 231, 232, 234, 239
 
 illusions of understanding, 210, 213
 
@@ -5898,11 +5900,11 @@ influence operation, 282, 283
 
 initialisation, 57, 58, 60, 73
 
-inner alignment, 382
+inner alignment, 384
 
 instruction tuning, 98, 100
 
-instrumental convergence, 372, 374
+instrumental convergence, 373, 375
 
 intellectual debt, 211
 
@@ -5910,15 +5912,15 @@ interconnect, 217, 220, 227
 
 interleaved thinking, 108
 
-International AI Safety Report, 237, 243, 245, 348, 351, 361, 378, 381
+International AI Safety Report, 237, 243, 245, 348, 351, 361, 380, 383
 
-International Mathematical Olympiad, 39, 133, 136, 196, 197, 198, 199, 451
+International Mathematical Olympiad, 39, 133, 136, 196, 197, 198, 199, 453
 
-interpretability, 8, 73, 381, 387, 391, 397, 399, 401
+interpretability, 8, 73, 383, 389, 393, 399, 401, 403
 
-interval cancer, 331, 344, 481
+interval cancer, 331, 344, 483
 
-ironies of automation, 275, 478
+ironies of automation, 275, 480
 
 irreducible loss, 121, 122, 123
 
@@ -5927,9 +5929,9 @@ irreducible loss, 121, 122, 123
 
 jagged technological frontier, 138, 262
 
-Japan, 26, 224, 433, 436
+Japan, 26, 224, 435, 438
 
-JSON-RPC, 155, 156, 157, 479
+JSON-RPC, 155, 156, 157, 481
 
 
 ## K {.unnumbered}
@@ -5940,18 +5942,18 @@ kernel (convolutional), 62, 63, 200
 
 Kimi (Moonshot AI), 61, 94, 95, 107, 108, 113, 241, 243
 
-KL penalty, 383
+KL penalty, 385
 
 knowledge cut-off, 104
 
-Kullback–Leibler (KL) divergence, 382, 383
+Kullback–Leibler (KL) divergence, 384, 385
 
 KV cache, 92, 94, 95, 96, 217, 220
 
 
 ## L {.unnumbered}
 
-large language model (LLM), 7, 22, 105, 107, 109, 143, 253, 254
+large language model (LLM), 7, 22, 105, 107, 110, 143, 253, 254
 
 latent diffusion, 36, 282
 
@@ -5961,17 +5963,17 @@ Lean (proof assistant), 195, 196, 197, 198, 202, 203, 204, 205
 
 learning rate, 51, 52, 54, 55, 56, 60, 61, 124
 
-legible twin, 472, 479
+legible twin, 474, 481
 
-legitimate interest, 442, 443
+legitimate interest, 444, 445
 
 lethal trifecta, 170
 
 linear attention, 96, 112, 113, 115, 241
 
-linear probe, 401
+linear probe, 403
 
-Llama (Meta models), 46, 61, 78, 93, 95, 115, 117, 242
+Llama (Meta models), 46, 61, 78, 93, 95, 114, 117, 242
 
 LLM grooming, 306
 
@@ -5983,38 +5985,38 @@ loss, 30, 50, 51, 52, 120, 121, 122, 123
 
 loss function, 43, 49, 50, 75
 
-loss of control, 348, 368, 369, 375, 376, 377, 378, 379
+loss of control, 348, 368, 369, 376, 377, 379, 380, 389
 
 
 ## M {.unnumbered}
 
-M-1 criterion, 471, 472, 476
+M-1 criterion, 473, 474, 478
 
 machine learning, 21, 22, 29, 40, 187, 191, 207, 209
 
 mandate (AP2), 173, 174, 177
 
-marginal risk, 244, 245, 248, 362, 378, 409
+marginal risk, 244, 245, 248, 362, 379, 411
 
-mechanistic interpretability, 397
+mechanistic interpretability, 399
 
-memorisation, 69, 138, 440
+memorisation, 69, 138, 442
 
 memory bandwidth, 65, 216, 217, 219, 224, 227, 247, 248
 
-Meta, 35, 78, 99, 112, 113, 115, 126, 438
+Meta, 35, 78, 99, 112, 115, 126, 372, 440
 
-METR, 9, 139, 140, 162, 163, 407, 460, 461
+METR, 9, 139, 140, 163, 409, 414, 462, 463
 
 Microsoft, 29, 31, 169, 238, 263, 275, 343, 366
 
 minibatch, 55, 58
 
-misalignment, 175, 204, 368, 370, 374, 382, 387, 389
+misalignment, 175, 204, 368, 370, 375, 378, 384, 391
 
 misinformation, 282, 284, 293, 294, 313
 
-Mistral, 95, 236, 241, 242, 410, 424
+Mistral, 95, 236, 241, 242, 412, 426
 
 mixture of experts (MoE), 49, 61, 89, 96, 111, 112, 113, 125
 
@@ -6026,7 +6028,7 @@ model FLOPs utilisation (MFU), 118
 
 momentum, 56, 60, 66
 
-moral crumple zone, 478
+moral crumple zone, 480
 
 multi-agent system, 169, 174, 175, 354
 
@@ -6043,44 +6045,44 @@ MYCIN, 24, 25, 26, 27, 42
 
 ## N {.unnumbered}
 
-Narayanan, Arvind, 209, 284, 293, 313, 374, 375, 378, 379
+Narayanan, Arvind, 209, 284, 293, 313, 375, 376, 380, 381
 
 narrow AI, 17
 
 next-token prediction, 98, 99, 103, 115
 
-NIST, 169, 177, 347, 355, 411, 468
+NIST, 169, 177, 347, 355, 413, 470
 
 non-consensual intimate imagery (NCII), 310, 312, 358
 
-non-delegable safeguard, 470, 472, 473, 474
+non-delegable safeguard, 472, 474, 475, 476
 
 numerical weather prediction, 187
 
-N-version programming, 476
+N-version programming, 478
 
 Nvidia, 31, 65, 128, 216, 218, 221, 227, 239
 
 
 ## O {.unnumbered}
 
-obfuscated reward hacking, 403
+obfuscated reward hacking, 405
 
 observational study, 323, 331
 
-OECD, 18, 19, 20, 21, 41, 168, 266, 437
+OECD, 18, 19, 20, 21, 41, 168, 266, 439
 
 omni model, 97
 
-OpenAI, 9, 34, 97, 111, 204, 371, 390, 391
+OpenAI, 9, 34, 97, 111, 204, 371, 392, 393
 
 open-weight model, 35, 138, 215, 240, 241, 242, 243, 245
 
-orthogonality thesis, 372
+orthogonality thesis, 373
 
 OSWorld, 37, 158, 159, 160
 
-outcome homogenisation, 364, 473
+outcome homogenisation, 364, 475
 
 overfitting, 59, 66, 67, 68, 138
 
@@ -6107,23 +6109,23 @@ polarisation, 303
 
 pooling, 62, 63, 263
 
-post-training, 90, 98, 101, 102, 104, 108, 115, 142
+post-training, 90, 98, 101, 102, 104, 108, 109, 142
 
-power law, 119, 120, 121, 122, 126, 141, 393
+power law, 119, 120, 121, 122, 126, 141, 395
 
 power usage effectiveness (PUE), 234
 
 predetermined change control plan, 328
 
-prediction market, 458
+prediction market, 460
 
 predictive parity, 357
 
-pre-emption, 427, 428, 429, 431, 447
+pre-emption, 429, 430, 431, 433, 449
 
-pre-training, 7, 55, 98, 99, 109, 131, 132, 142
+pre-training, 7, 55, 98, 99, 109, 131, 141, 142
 
-probing, 390, 401
+probing, 392, 403
 
 process reward model, 107
 
@@ -6133,15 +6135,15 @@ productivity J-curve, 252, 272
 
 prompt caching, 220
 
-prompt injection, 168, 169, 170, 171, 173, 178, 361, 387
+prompt injection, 168, 169, 170, 171, 173, 178, 361, 389
 
 proof assistant, 195
 
-propensity evaluation, 392, 393
+propensity evaluation, 394, 395
 
 protein design, 8, 179
 
-proxy, 100, 107, 323, 355, 379, 383, 384, 387
+proxy, 100, 107, 323, 355, 380, 385, 386, 389
 
 
 ## Q {.unnumbered}
@@ -6163,7 +6165,7 @@ reanalysis, 179, 187, 192, 194, 195, 210, 212
 
 reasoning effort, 135
 
-reasoning model, 7, 36, 105, 114, 135, 141, 388, 402
+reasoning model, 7, 36, 50, 105, 135, 141, 390, 404
 
 recommender system, 19, 40, 303, 307, 308
 
@@ -6171,9 +6173,9 @@ rectified flow, 282
 
 recurrent neural network (RNN), 64
 
-red-teaming, 171, 392, 393, 476
+red-teaming, 171, 394, 395, 478
 
-Redwood Research, 390, 394, 400, 404, 405
+Redwood Research, 392, 396, 402, 406, 407
 
 regularisation, 60, 66, 67, 68, 69, 73
 
@@ -6181,29 +6183,29 @@ reinforcement learning, 32, 100, 105, 108, 109, 133, 142, 158
 
 reinforcement learning from AI feedback (RLAIF), 102
 
-reinforcement learning from human feedback (RLHF), 35, 100, 101, 102, 105, 111, 382, 414
+reinforcement learning from human feedback (RLHF), 35, 100, 101, 102, 105, 111, 384, 416
 
-reinforcement learning with verifiable rewards (RLVR), 105, 116, 387
+reinforcement learning with verifiable rewards (RLVR), 105, 116, 389
 
 reinstatement effect, 252
 
-reliability (calibration), 142, 163, 164, 165, 264, 350, 466, 469
+reliability (calibration), 142, 163, 164, 165, 264, 350, 468, 471
 
 representation learning, 64, 73
 
 residual connection, 59, 60, 73, 75, 85
 
-residual stream, 85, 86, 116
+residual stream, 85, 86, 115
 
 retrieval-augmented generation (RAG), 104
 
-reward hacking, 100, 369, 382, 385, 387, 388, 389, 391
+reward hacking, 100, 369, 384, 387, 389, 390, 391, 415
 
-reward model, 100, 101, 102, 107, 382, 383, 384, 387
+reward model, 100, 101, 102, 107, 384, 385, 386, 389
 
-risk, 8, 244, 245, 348, 349, 350, 378, 379
+risk, 8, 244, 245, 348, 349, 350, 379, 380
 
-risk-based regulation, 416
+risk-based regulation, 418
 
 RMSNorm, 58, 61, 86
 
@@ -6216,17 +6218,17 @@ rubric-based reward, 107
 
 ## S {.unnumbered}
 
-sandbagging, 395, 396
+sandbagging, 397, 398
 
 saturation, 57, 138, 142, 161
 
-scalable oversight, 384
+scalable oversight, 386
 
 scaling law, 7, 34, 75, 117, 119, 121, 122, 143
 
-scenario, 27, 368, 377, 394, 462, 463, 465, 473
+scenario, 27, 368, 379, 396, 464, 465, 467, 475
 
-scheming, 393, 394, 395, 396
+scheming, 395, 396, 397, 398
 
 scientific monoculture, 210
 
@@ -6238,33 +6240,33 @@ sensitivity, 329, 331, 361
 
 shortcut learning, 70, 74
 
-signature capacity, 471, 472, 478
+signature capacity, 473, 474, 480
 
 silicon sampling, 302
 
-single point of failure, 366, 471
+single point of failure, 366, 473
 
 sliding-window attention, 95
 
-societal resilience, 378
+societal resilience, 380
 
 soft binding, 290, 291
 
-soft law, 415, 416, 433
+soft law, 417, 418, 435
 
 softmax, 50, 81, 82, 89, 90, 91
 
-South Korea, 224, 433
+South Korea, 224, 435
 
 sovereign AI, 246, 247
 
 sparse attention, 95, 112
 
-sparse autoencoder, 398, 399, 413, 414
+sparse autoencoder, 400, 401, 415, 416
 
 special token, 78, 79
 
-specification gaming, 385, 387, 388
+specification gaming, 387, 389, 390
 
 specificity, 329, 331
 
@@ -6276,23 +6278,23 @@ stochastic gradient descent (SGD), 55, 57, 60, 69
 
 structure module, 183, 184, 185
 
-superforecaster, 374, 375, 451, 453, 455, 457, 458, 459
+superforecaster, 375, 376, 453, 455, 457, 459, 460, 461
 
-superposition, 397
+superposition, 399
 
 SWE-bench, 134, 161, 162, 164
 
-sycophancy, 381, 387, 391, 399, 400
+sycophancy, 383, 389, 393, 401, 402
 
 symbolic AI, 16, 23
 
-synthetic data, 130, 131, 132, 462, 466, 477
+synthetic data, 130, 131, 132, 464, 468, 479
 
-synthetic media, 281, 284, 311, 312, 358, 432
+synthetic media, 281, 284, 311, 312, 358, 434
 
 SynthID, 286, 287, 289, 290
 
-systemic risk, 18, 307, 308, 349, 363, 423, 424, 425
+systemic risk, 18, 307, 308, 349, 363, 425, 426, 427
 
 
 ## T {.unnumbered}
@@ -6307,13 +6309,13 @@ temperature, 90, 91, 92, 192, 194, 195
 
 tensor core, 65, 216, 218
 
-terawatt-hour (TWh), 230, 231, 232, 463
+terawatt-hour (TWh), 230, 231, 232, 465
 
 test-time compute, 107, 132, 133, 134, 136
 
 test-time reinforcement learning, 196
 
-text and data mining exception, 440
+text and data mining exception, 442
 
 time horizon, *see 50% time horizon*
 
@@ -6327,34 +6329,34 @@ tool use, 153, 154
 
 top-k sampling, 91
 
-total factor productivity, 270, 467
+total factor productivity, 270, 469
 
 total processing performance (TPP), 227
 
-training compute, 34, 122, 127, 128, 129, 142, 423, 424
+training compute, 34, 122, 127, 128, 129, 142, 425, 426
 
-transformer, 7, 33, 46, 58, 60, 64, 82, 116
+transformer, 7, 33, 46, 58, 60, 64, 82, 115
 
 transformer block, 60, 75, 84
 
-trend extrapolation, 458, 459, 465
+trend extrapolation, 460, 461, 467
 
 TSMC, 216, 223, 224, 247
 
 
 ## U {.unnumbered}
 
-UK AI Security Institute, 360, 361, 369, 392, 393, 395, 405, 407
+UK AI Security Institute, 360, 361, 369, 394, 395, 397, 407, 409
 
-uncertainty fan, 464, 465
+uncertainty fan, 466, 467
 
-United Kingdom, 8, 292, 305, 311, 312, 341, 411, 440
+United Kingdom, 8, 292, 305, 311, 312, 341, 413, 442
 
-United States, 8, 20, 232, 247, 272, 446, 447, 469
+United States, 8, 20, 229, 232, 247, 272, 449, 471
 
-universal jailbreak, 393
+universal jailbreak, 395
 
-unlearning, 384, 387
+unlearning, 386, 389
 
 
 ## V {.unnumbered}
@@ -6387,5 +6389,5 @@ world model, 97
 
 x402, 174
 
-xAI, 108, 109, 112, 133, 136, 234, 235, 377
+xAI, 108, 109, 112, 133, 136, 234, 235, 237
 
