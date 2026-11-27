@@ -546,3 +546,12 @@ Report: review3/r-ch07.md; cross-chapter items from review3/00-VERDICT.md sectio
 - S7: Mistral sentence reworded to remove the repeated "life-cycle assessment".
 - S8: Nvidia China outlook now "outlooks for the following quarters" and "data-centre compute revenue" (Q3 CFO commentary, 17 Nov 2026).
 - Could-not-verify items: no narrowing suggested; left unchanged.
+
+## Fifth review fixes (November 2026)
+
+Report: review5/r-ch07.md.
+
+- M1: Gallium/germanium sentence updated: on 24 November 2026 China extended the suspension to 27 January 2027; licences still required. Verified by web search (VOA, 26 Nov 2026; IBTimes and others agree). Added bib `voa2026china`; `thenational2026china` dropped from this sentence (still cited for rare earths). Figure 7.2 (spec and print/figs_ch07.py) shows only US measures and has no gallium/germanium event or 27 November date, so no figure change.
+- S1: Huang's first mention now "Nvidia's chief executive until his resignation in November 2026"; "its then chief executive" in §7.5 kept.
+- S2: Access-to-models sentence now "what one law firm described as the first known US use of export controls to regulate a particular frontier AI model" (Greenberg Traurig).
+- Could-not-verify items: no narrowing suggested; left unchanged.

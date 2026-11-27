@@ -456,3 +456,12 @@ Report: review3/r-ch08.md. Cut-off moved to late November 2026. No cross-chapter
 - S1: Table 8.3 METR follow-up row now gives the 95% CIs (−38% to +9%; −15% to +9%).
 - S2: Eloundou headline now "at least half are exposed" (arXiv 2303.10130 abstract).
 - Could-not-verify items: no narrowing suggested; left unchanged.
+
+## Fifth review fixes (November 2026)
+
+Report: review5/r-ch08.md.
+
+- S1: Shen & Tamkin quiz gap now "17 percentage points lower (50% against 67%), nearly two letter grades" (Anthropic post, 29 Jan 2026); Table 8.3 "quiz score −17 points".
+- S2: Challenger 44% now "in the first ten months … than in the same period a year earlier" (year-to-date figure).
+- S3: The QJE article was not readable (paywalled). The NBER abstract I could read (w32719, revised August 2026, checked 27 Nov 2026) gives "a 4.2 percentage point decrease in labor market participation" and "1-2 hours/week", so the figure is kept; the reviewer's 3.9 is from an earlier revision. The sentence now attributes the figures to the August 2026 revision and cites it; new bib `vivalt2026employmentwp` (QJE entry kept for the trial itself).
+- Could-not-verify items: no narrowing suggested; left unchanged.
