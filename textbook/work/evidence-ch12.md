@@ -563,3 +563,13 @@ Sources re-opened on 26 Nov 2026 unless stated: Anthropic 9 Sep 2026 post; Al Ja
 - S4: "withdrew" → "revised".
 - S5: Section 12.6 cross-reference now states facts only ("As Section 11.7 discusses … which, with their partners and the UK institute, published detailed reports"), dropping the repeated author's judgement.
 - Could not verify: no action.
+
+## Eighth review fixes (November 2026)
+
+Checked first: ch12 named only GPT-6 Astra / GPT-5.6 Sol in the simulation paragraph and lacked AISI's Mythos 5 finding (now in ch11 too); no other duplication.
+
+- S1: Section 12.6 simulation paragraph split: Astra/Sol figures cited to aisi2026gpt6; added AISI 23 Oct 2026 finding (most models, Mythos 5 most often), the evaluation-awareness caveat, Astra's exclusion from one comparison, and Mythos 5's frequent wrong "simulated" justifications. Re-fetched 27 Nov 2026 and confirmed.
+- S2: GovAI criticism added ("makes it more likely Anthropic will deploy models with unacceptable risks"; "Some have lost trust", both confirmed 27 Nov 2026). v3.1 described as "a discretion rather than a commitment". Table 12.5 row now "v3.4, effective 8 Jul 2026 (v3.0, Feb 2026, was a full rewrite)"; the reviewer's "later versions revised thresholds and external review" not used (not verified). Further reading description changed as proposed.
+- S3: Debate box shortened (no repeat); Section 12.7 now adds FT/IT Pro report that comparable US organisations got access (confirmed on IT Pro, 9 Sep 2026) and attributes the "no organisation outside the US" point to Anthropic via the director's letter.
+- S4: Palisade chess sentence now names DeepSeek R1, GPT-4o and Claude 3.5 Sonnet.
+- Ch11 gained a short Anthropic–Pentagon/Maven passage (Section 11.4); Ch13 not edited.

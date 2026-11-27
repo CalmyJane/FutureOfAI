@@ -520,3 +520,21 @@ Sources re-opened on 26 Nov 2026 unless stated: Anthropic 9 Sep 2026 post (fourt
 - S5: Added "(Gemini 3 Pro, added days later, scored higher still)". Artificial Analysis article (18 Nov 2025): "Gemini 3 Pro Preview takes the top spot on the Artificial Analysis Omniscience Index" (score not in text layer, so no number given). New bib key `artificialanalysis2025gemini`.
 - S6: Applied in ch12 (r-ch12 S3).
 - Could not verify: no action.
+
+## Eighth review fixes (November 2026)
+
+Checked first: ch11 already had AISI 17-of-19 and the September reassessment; nothing duplicated.
+
+- S1: Table 11.3 Anthropic row now gives the public PyPI index and the third incident (web application compromised after a scan of about 9,000 targets), per Anthropic, 30 July 2026.
+- S2: Sentence on the September reassessment split and completed: "withdrew"; Mythos 5 bias "despite considerable evidence to the contrary"; Opus 4.7 recognised a real company but assumed it was in scope.
+- S3: Denominators added (122 runs; Mythos 5 43, GPT-5.6 Sol 35, two actions in one run), per AISI 4 Aug 2026.
+- S4: Added AISI 23 Oct 2026 follow-up (100 simulated scenarios, Mythos 5 most often; evaluation-awareness caveat). Re-fetched 27 Nov 2026: Figure 3 caption and "substantial increases in stated awareness of being evaluated" confirmed.
+- S5: Added four sentences after Lavender (Section 11.4 military paragraph). Verified 27 Nov 2026:
+  - Primary: court order, Anthropic PBC v. U.S. Department of War, N.D. Cal. No. 26-cv-01996-RFL, Dkt. 250, dated 27 August 2026 (Courthouse News PDF): designations of 27 Feb and 3 Mar 2026; "the challenged actions constituted unlawful retaliation in violation of the First Amendment"; suit filed 9 March 2026. Anthropic statement (5 Mar 2026, anthropic.com/news/where-stand-department-war): exceptions "on fully autonomous weapons and mass domestic surveillance". News: AP/PBS (28 Aug), TechCrunch, NPR.
+  - Reviewer's "February 2026 designation" is half right (27 Feb and 3 Mar), so the text gives no month; ruling dated 27 August (press reported 28 August).
+  - Added (not in reviewer's text): D.C. Circuit, 25 Sep 2026, 2–1, upheld a separate exclusion under FASCA (The Hill), so the August ruling is not presented as the last word.
+  - Maven: Washington Post (4 Mar 2026, via TechCrunch) reported Claude used with Maven to suggest and prioritise targets; NBC News (Dan De Luce, March 2026) source: Claude sorts intelligence, does not directly provide targeting advice. No official confirmation found; both attributed.
+  - Minab: 28 Feb 2026; "at least 120 children" attributed to Amnesty (via TNW); Bloomberg (Manson and Chang, 10 Jun 2026) quotes Amodei "we don't know exactly how these models were used". Text states the role is not established; no statement on intent or responsibility.
+  - New bib keys: anthropicvdow2026order, huamani2026judge, hill2026dccircuit, techcrunch2026military, nbc2026military, manson2026anthropic, thenextweb2026amodei. Reviewer's suggested key npr2026judge not used (NPR returned 503; AP via PBS used instead).
+- S6: Reuters case reworded: "the researcher told Reuters only … Claude Code agent tool".
+- S7: "The best documented" → "The most fully documented".
