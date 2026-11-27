@@ -477,3 +477,9 @@ Source: review4/r-ch05.md (26 November 2026).
 - S2: Added OpenAI's company-reported 75.0% for GPT-5.4 on OSWorld-Verified (5 March 2026, "surpassing human performance at 72.4%"), in the text and as a company-reported row in Table 5.1. New bib key openai2026introducinggpt54 (not previously in any bib). Checked against openai.com/index/introducing-gpt-5-4.
 - S3: Added that developers' own agent programs reached up to about 80% on the public split by mid-2026 (OpenAI, 8 July 2026: "improved from a pass rate of 23.3% to 80.3% in eight months"), in the text and Table 5.2.
 - Could-not-verify items (Nasr et al. venue, τ²-bench caption values, CVE-2026-25253): left unchanged; the reviewer suggested no narrowing.
+
+## Ninth review fixes (November 2026)
+
+- S1: SWE-bench Pro "about 80%" sentence re-attributed to OpenAI's report (23.3% to 80.3% in eight months on the public set); Table 5.2 cell now "frontier models up to 80.3% (mid-2026, per OpenAI)".
+- S2: Hugging Face incident mechanism rewritten per OpenAI's update (zero-day in the package proxy, lateral movement, exposed credentials).
+- S3: Fable 5.1 system card could not be fetched (PDF too large), so the fallback was applied: appended "both are vendor figures"; no new bib entry.

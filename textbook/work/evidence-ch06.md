@@ -509,3 +509,9 @@ Source: review4/r-ch06.md and review4/r-production.md S9 (26 November 2026).
 - S1: The unforced blow-up sentence now reads "it would settle the problem without the external force on which much of the objection to OpenAI's result turns".
 - S2: Stated the cynical view: the release came one day after the record debut "as its shares were falling", and the view is that the announcement was meant to help the share price. The share fall and the Alpöge quotation are checked against TNW (constantin2026riemann). The reviewer's wording "some mathematicians suggested a link" was not used, because the Granville/Nature wording could not be verified (paywalled, and not found in search).
 - S3: Added Gowers's caveat, "many of the ideas needed for the proof were present in the literature already", checked against ScienceAlert (lee2026stunning).
+
+## Ninth review fixes (November 2026)
+
+- M1: Verified arXiv:2503.21934 v6 (25 Nov 2026), Table 1: DeepSeek-R1 (05/28) 12.6/42 (30.0%), Gemini 2.5 Pro 10.3 (24.5%), o3 9.1 (21.7%), o4-mini 8.0 (19.0%); all others <= 2.0 (< 5%). Text and Table 6.2 updated; bib entry pinned to v6 (url, howpublished, urldate 2026-11-27). No figure spec covers Table 6.2.
+- S1: Verified the Rubinstein page (checked 27 Nov 2026): independent Lean checks by Rubinstein and Sutherland cover the five theorems, RH and GRH for Dirichlet L-functions; Sernau et al. compact 76,000-line edition posted 25 Nov, passed Comparator 26 Nov. Sentence added; new bib entry rubinstein2026alpoge. "No complete human-readable proof" kept.
+- S2: Tao ranking narrowed to the three results announced that day.
