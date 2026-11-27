@@ -427,3 +427,7 @@ Source: review3/r-ch02.md. Cut-off moved to late November 2026.
 - S1 (1,202-layer ResNet on CIFAR-10): done. Now "Even a 1,202-layer network, tested on the smaller CIFAR-10 dataset, showed "no optimization difficulty"" (He et al. 2016, Sec. 4.2).
 - S2 (DeepSeek-V4 "both keeping the preview's structure"): done. Clause removed; V4-Flash-0731 adds a speculative decoding module per its model card.
 - Could-not-verify items (AdamW modules in DeepSeek-V4, LeNet per month/per day, Zech et al. figures): no change; no narrowing suggested.
+
+## Ninth review fixes (November 2026)
+
+- S1: Section 2.2 MoE sentence now says the 1.6T/49B figures come from "the company's technical report on the preview", and adds "(the August release adds a small speculative-decoding module and is listed at 1.7 trillion)". New bib entry deepseekai2026v4pro0813card (HF card, checked 27 Nov 2026: 1.7T params; "built on the DeepSeek-V4-Pro (Preview) model structure, with a DSpark speculative decoding module attached"). The intro's 1.6T and the synapse comparison were left as they are, as the report allows (valid approximations).

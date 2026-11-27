@@ -499,3 +499,11 @@ Source: review3/r-ch01.md and review3/00-VERDICT.md section B. Cut-off moved to 
 - S2 (ClockBench balance): done. Added "OpenAI's GPT-6.2 models, released on 17 November, had not yet been listed". Same note added to the ClockBench sentence in ch04.md (Section 4 benchmark validity paragraph) so the two chapters match; figures unchanged (83.3%, 87.8%, 85.0%, 90.7%).
 - S3 (MCP balance): done. Added the December 2025 transfer to a foundation under the Linux Foundation, co-founded with Block and OpenAI, and adoption in ChatGPT and Gemini, labelled "according to Anthropic", cross-referenced to Chapter 5 and cited to [@anthropic2025donating]. Entry copied identically from ch05.bib to ch01.bib.
 - Could-not-verify items (OSWorld-Verified 86%, Dartmouth attendees, MYCIN page numbers): no change; the reviewer suggested none.
+
+## Ninth review fixes (November 2026)
+
+- Preface S1: "so that any statement can be checked" changed to "so that readers can look up the evidence behind any statement, although some sources are books or paywalled articles".
+- Ch01 S1: added google2026gemini4carbondevelopers (Google blog, 10 Nov 2026, "Starting today, developers can build with Gemini 4 Carbon", checked 27 Nov 2026). Wording narrowed from "generally available" to "available to developers", which is what the post says.
+- Ch01 S2: Bick, Blandin and Deming quotation replaced by a paraphrase, "has been faster than that of either PCs or the internet" (matches NBER w32966 wording; journal wording unconfirmed).
+- Ch01 S3: ClockBench passage shortened to the report's wording. It no longer names models. Figures 83.3% (25 Oct), 87.8% (late Nov) and 90.7% (average human) are identical to ch04.md Section 4.7, and the passage cross-refers to that section. ch04 not edited.
+- Ch01 S4: added a sentence on Chinese releases, each checked on 27 Nov 2026: Kimi K3 (open weights; launched 16 Jul 2026, weights released 27 Jul per The Decoder/TNW coverage; HF card "We release the full Kimi K3 model weights"); DeepSeek-V4-Pro GA 13 Aug 2026 (DeepSeek API news; HF card for -0813 says MIT licence for weights); Qwen4-Max 16 Nov 2026 (Alibaba Cloud press release; hosted access only, so described as closed-weight, as in ch03). Bib entries moonshot2026kimik3, deepseekai2026v4pro and alibaba2026qwen4max copied identically from ch02/ch03 bibs.

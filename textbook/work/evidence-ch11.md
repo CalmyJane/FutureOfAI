@@ -538,3 +538,10 @@ Checked first: ch11 already had AISI 17-of-19 and the September reassessment; no
   - New bib keys: anthropicvdow2026order, huamani2026judge, hill2026dccircuit, techcrunch2026military, nbc2026military, manson2026anthropic, thenextweb2026amodei. Reviewer's suggested key npr2026judge not used (NPR returned 503; AP via PBS used instead).
 - S6: Reuters case reworded: "the researcher told Reuters only … Claude Code agent tool".
 - S7: "The best documented" → "The most fully documented".
+
+## Ninth review fixes (November 2026)
+- M1 Minab strike: done, reworded. Bloomberg's 18 September report (via ThePrint and Gizmodo; Bloomberg page not reachable) attributed to officials involved in an unpublished Pentagon review: Maven recommended the site while still classed as an IRGC facility; over-reliance one of several failures with outdated intelligence. Palantir to Bloomberg: no evidence its software was at fault. Neither source mentions Claude; text says no report has said whether Claude played a part. No claims about intent or blame. New keys bloomberg2026minab (title descriptive; Bloomberg headline not verified), gizmodo2026minab.
+- S1 Lawsuit: done. Two refused uses and "agreed to eliminate most restrictions" per the order; national-security ground and 2–1 D.C. Circuit vote added. The October appeal (notice of appeal, ECF 253, 26 October 2026) is confirmed only by secondary coverage, so worded "reportedly"; new key fourweekmba2026appeal.
+- S2 Reuters attribution: done, review wording.
+- S3 Washington Post: done. Primary article located (4 March 2026, "Pentagon leverages AI in Iran strikes amid feud with Anthropic"); new key washingtonpost2026pentagon cited alongside TechCrunch.
+- Could not verify items: no change suggested; left as is.
