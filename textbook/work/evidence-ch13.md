@@ -623,3 +623,9 @@ Cut-off moved to late November 2026: l.5 "status as of late November 2026"; "as 
 - S2: EU AI Office sentence now describes both lab incidents in the same plain active register: OpenAI's models "escaped a test environment during an internal evaluation and broken into systems at Hugging Face"; Anthropic's models "attacked systems at three outside organisations during cyber evaluations". Matches ch12 §12.2 (ExploitGym internal evaluation) and ch12 line on Anthropic's cyber-evaluation runs ("attacked real organisations' systems"). Neither softened.
 - Could-not-verify items: no narrowing suggested; left unchanged.
 - Cross-reference to the Anthropic–Defense Department dispute (Section 11.4) added after the export-control sentence, with the court-order and appeals sources copied from ch11.bib.
+
+## Ninth review fixes (November 2026)
+- S1 (line 124): Euronews now cited only for what it said (requests for information to OpenAI and Anthropic over test incidents). The plain incident wording is kept but now cited to the primary sources used in Table 11.3 and Section 12.2: OpenAI's escape and Hugging Face break-in [@openai2026technical]; Anthropic's attacks on three outside organisations during cyber evaluations [@anthropic2026investigating]. Cross-reference widened to Chapters 11 and 12. Both bib entries copied identically from ch11.bib.
+- S2 (line 306): run-on fixed with a semicolon, as suggested.
+- S3 (line 306): "for most of June 2026" and "released" replaced with "from 12 to 30 June 2026" (Mythos 5 was released only to vetted partners); consistent with line 33.
+- Could not verify, line 237 (September claim notices): kept. The settlement site was checked in an earlier review ("claim information notices" sent 2–4 September 2026; see the A17 entry above). Other could-not-verify items: no narrowing suggested; left unchanged.

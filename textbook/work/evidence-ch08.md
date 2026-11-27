@@ -486,3 +486,9 @@ Report: review8/r-ch08.md.
 - S2: BTOS: Table 8.2 row now "Use AI ("Super Intelligence") in any business function"; text adds that "do not know" rose from about 10% to about 13% in the first periods with the new wording (Census National.xlsx, 19 Nov 2026).
 - S3: Amodei forecast sentence now ends "though the period Amodei named runs to 2030".
 - Could-not-verify items: no narrowing suggested; left unchanged.
+
+## Ninth review fixes (November 2026)
+
+- S1 (l.253): done. "the cleanest test so far" replaced by "one direct test", and the preprint is noted as not peer-reviewed.
+- S2 (l.71): done. "privacy-preserving" now attributed to Anthropic ("what it describes as").
+- Could-not-verify items (Census BTOS ranges, QJE +36%, Humlum & Vestergaard revision, WGA wording, others): the report suggests no narrowing; left as cited.

@@ -586,3 +586,8 @@ Source: review2/r-ch13-14.md (M1–M5, minor items on ch14), review2/00-VERDICT.
 ## Eighth review fixes (November 2026)
 - S1: Regulation paragraph now names Anthropic's April 2026 decision not to release Claude Mythos Preview generally (Chapter 11, [@anthropic2026claude], entry copied from ch11.bib) alongside OpenAI's limited first release of GPT-5.6 Sol (which OpenAI said the US government requested); the following FRI sentence was shortened to avoid repeating it. Table 14.4 row now reads "(Anthropic, Apr 2026; OpenAI, Jun–Sep 2026)".
 - Could-not-verify items: no narrowing suggested; left unchanged.
+
+## Ninth review fixes (November 2026)
+- S1 (line 167): added after the Hugging Face sentence: "Anthropic's models had caused similar incidents in tests that summer (Section 11.6, Table 11.3) [@anthropic2026investigating]". Bib entry copied identically from ch11.bib.
+- S2 (line 47, Figure 14.1): caption (chapter and figure spec) now notes that the 2022 and 2023 years are from grace2025thousands and that the 2024 report recomputes them as 2059 and 2115.
+- Could-not-verify items: no narrowing suggested; left unchanged.

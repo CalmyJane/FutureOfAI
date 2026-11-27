@@ -582,3 +582,10 @@ Report: review8/r-ch07.md.
 - S3: Remote-access rule scope now "companies headquartered in China, Macau or other countries under US arms embargo (Country Group D:5)".
 - S4: Dropped unsupported "headlines usually quote the lower one"; now "so readers should check which one a figure uses".
 - Could-not-verify items: no narrowing suggested; left unchanged.
+
+## Ninth review fixes (November 2026)
+
+- S1 (l.132, Nvidia China sales): done. Added that Nvidia said in November 2026 it had stopped shipping licensed Hopper products to China; new key `nasdaq2026nvidiaq3` (Q3 FY2027 earnings call transcript) added to ch07.bib.
+- S2 (l.311, NTIA): done. Quotation now gives both halves of NTIA's symmetrical conclusion.
+- DeepSeek-V4-Pro size (caller's consistency check against ch02): l.272 and Table 7.5 cite the April 2026 preview technical report (`deepseekai2026deepseekv4`) and the table row is dated April 2026, so 1.6 trillion is correct for what they describe; left unchanged (1.7 trillion applies to the August official release).
+- Could-not-verify items (Microsoft capex, AI Index figures, ASML decimals, EU DUV extension, IEA figures): no narrowing suggested by the report; left as cited.
