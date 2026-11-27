@@ -545,3 +545,4 @@ Checked first: ch11 already had AISI 17-of-19 and the September reassessment; no
 - S2 Reuters attribution: done, review wording.
 - S3 Washington Post: done. Primary article located (4 March 2026, "Pentagon leverages AI in Iran strikes amid feud with Anthropic"); new key washingtonpost2026pentagon cited alongside TechCrunch.
 - Could not verify items: no change suggested; left as is.
+- Coordinator: removed "the government reportedly appealed in October" and its only source (FourWeekMBA); a legally sensitive claim should not rest on one weak secondary source.

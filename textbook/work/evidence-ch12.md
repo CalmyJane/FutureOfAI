@@ -573,3 +573,10 @@ Checked first: ch12 named only GPT-6 Astra / GPT-5.6 Sol in the simulation parag
 - S3: Debate box shortened (no repeat); Section 12.7 now adds FT/IT Pro report that comparable US organisations got access (confirmed on IT Pro, 9 Sep 2026) and attributes the "no organisation outside the US" point to Anthropic via the director's letter.
 - S4: Palisade chess sentence now names DeepSeek R1, GPT-4o and Claude 3.5 Sonnet.
 - Ch11 gained a short Anthropic–Pentagon/Maven passage (Section 11.4); Ch13 not edited.
+
+## Ninth review fixes (November 2026)
+- S1 METR critiques: done, after the "grade their own homework" sentence, framed as METR's assessments. Checked on metr.org: 20 Oct 2026 review ("We are not confident that, if risk were higher, the methodology in the report would reliably identify this"; monitoring "failed to catch previous incidents"); 5 Nov 2026 review (1.3–2.8 range; Anthropic's "less than a factor of 2"; "plausible that they had crossed their early warning threshold"; agrees catastrophic risks from July 15th models were low). The "very low" to "low" revision is confirmed but not added. New keys metr2026review, metr2026rdreview (titles from metr.org; neither existed elsewhere).
+- S2 Citations: done; paragraph now ends [@anthropic2026investigating; @anthropic2026alignment].
+- S3 ExploitGym parenthesis: done, moved into a following parenthetical sentence.
+- S4 Mythos 5.1 repetition: done; debate box now says "(see below)" without citation.
+- Could not verify items: no change suggested; left as is.
