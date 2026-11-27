@@ -410,3 +410,9 @@ Source: review3/r-ch02.md. Cut-off moved to late November 2026.
 
 - S1 (optional): DeepSeek-V4-Pro sentence now says "activates 49 billion per token, according to the technical report", since secondary sources give slightly different counts for the 0813 official checkpoint.
 - Could not verify (0813 parameter count, Zech et al. tenfold experiment, NYT 1958 wording): no change; covered by S1 or already attributed.
+
+## Fifth review fixes (November 2026)
+
+- S1 (DeepSeek-V4 release dates): the sentence now reads "with official versions of the smaller V4-Flash on 31 July and of V4-Pro on 13 August, both keeping the preview's structure". The new bib entry `deepseekai2026v4flash0731` (Hugging Face model card, company source) is cited with the existing keys.
+- S2 (LeNet cheque volume): "millions of bank cheques a month in the United States, according to its developers" now reads "millions of bank cheques in the United States (the developers' paper says per month in one place and per day in another)".
+- Could-not-verify items (the V4 Muon module split; the Kimi K2 details): no change.

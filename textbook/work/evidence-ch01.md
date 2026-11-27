@@ -475,3 +475,10 @@ Source: review3/r-ch01.md and review3/00-VERDICT.md section B. Cut-off moved to 
 - S2: ch04.md:229 cross-reference changed from Section 1.8 to Section 1.7 (the clock result is in the Debate box closing Section 1.7). Only that line was changed in ch04.
 - S3: ClockBench sentence in ch01 now adds "ahead of Google's Gemini 4 Carbon at 85.0%" (clockbench.ai, accessed 26 Nov 2026). The parallel change the report suggests at ch04.md:229 was left to the Chapter 4 owner.
 - Could not verify (Buchanan & Shortliffe pages, Yu et al. 1979, SEP "ten attendees", Brown et al. 1990, OECD page numbers): no change; the report suggests no narrowing.
+
+## Fifth review fixes (November 2026)
+
+- S1 (Microsoft adoption rank): skipped, as the report allows. The 21 September 2026 post (byline Juan Lavista Ferres) was fetched on 27 November 2026. It does not mention the United States or give its rank, so the sentence and its citation are unchanged.
+- S2 (OSWorld URL): the url in bib `osworld2026verified` is now https://osworld-v1.xlang.ai/, with a note on the redirect and the OSWorld 2.0 notice. Added "(a successor benchmark, OSWorld 2.0, appeared in June 2026)" to the sentence in the agents paragraph.
+- S3 (Martínez bib): kept year 2024 and added `note = {Published online 2024; print issue 2025}`.
+- Could-not-verify items (the Dartmouth dates; the outcome of the Nate/Saniger case): no change, because the wording is already safe.
