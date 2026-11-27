@@ -499,3 +499,6 @@ Report: review3/r-ch03.md. Cut-off now late November 2026.
 - S2: SpaceXSI renaming parenthetical deleted from the reinforcement-learning paragraph (Chapter 9 already records it). `frank2026why` left in ch03.bib, now uncited here.
 - S3: Table 3.9 DeepSeek-V4 row now "1.6-trillion-parameter MoE (April preview)". The V4-Pro-0813 1.7T checkpoint not added: not confirmed on DeepSeek's own page.
 - Could not verify (tiktoken IDs, Table 3.7 probabilities, Muse Spark expert routing and encoder size, Gemini 4 Argon API details, Michael et al. respondents): no action; the report suggests none.
+
+## Eighth review fixes (November 2026)
+- S1: "the SpaceX subsidiary SpaceXAI" changed to "renamed SpaceXAI in July 2026 after its merger with SpaceX", matching Chapter 9.
