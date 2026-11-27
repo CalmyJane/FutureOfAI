@@ -472,3 +472,8 @@ Report: review6/r-ch08.md.
 
 - S1: BTOS first-half-2026 range now "about 18% and 21%" (National.xlsx periods 202601–202613: 17.5–20.6%).
 - Could-not-verify items: no narrowing suggested; left unchanged. The QJE "+36%" figure remains to be checked against the published table by the author.
+
+## Seventh review fixes (November 2026)
+
+- S1 (Anthropic 1.8-point estimate): reworded so the January 2026 report "reproduced its earlier estimate" of 1.8 points "and lowered it to about 1.0 to 1.2 points once task success rates are allowed for" (Anthropic Economic Index, January 2026 report).
+- Could-not-verify items (Otis et al. versions, Humlum & Vestergaard, Bonney et al., ILO scores, SAG-AFTRA): no change suggested; left as they are.

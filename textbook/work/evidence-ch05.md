@@ -466,3 +466,7 @@ Source: review4/r-ch05.md (26 November 2026).
 - S1 (METR series end): rewritten per review: last model added in May 2026 (Mythos Preview early, released April 2026); September 2026 note only said the page was no longer updated. Source: metr.org/time-horizons change log.
 - S2 (Table 5.1 date): Fable 5 cell now reads "best general-purpose model, Aug 2026", so the ranking is dated and not read as a November claim.
 - Could-not-verify items: left as is (already attributed to the leaderboard or sources).
+
+## Seventh review fixes (November 2026)
+- S1 (Project Vend hedge): "The authors judged that the business made money" changed to "The authors suggested that the business may have made money", restoring the source's hedge ("may have been in spite of the CEO"; anthropic.com/research/project-vend-2, checked 27 Nov 2026).
+- Could-not-verify items: left as is (already attributed).

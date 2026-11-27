@@ -496,3 +496,9 @@ Source: review4/r-ch06.md and review4/r-production.md S9 (26 November 2026).
 - S2 (zeta zeros reviewers): added that outside specialists Brian Conrey and Dan Goldston read the paper on short notice (anthropic.com/research/riemann-zeta, 10/13 Aug 2026); "That is a company claim" replaced by "It has not been peer-reviewed".
 - S3 (Millennium Prize reason): now quotes OpenAI's stated goal "to report on the substantial progress of our AI models" and says it did not say why; added [@openai2026navierstokes] (existing ch06 entry) after the quotation.
 - Could-not-verify items: left as is.
+
+## Seventh review fixes (November 2026)
+- S1 (USAMO 2026 balance): added Claude Opus 4.6 at 47% and named the two self-overrating judges (Gemini 3.1 Pro, Claude Opus 4.6). Source: matharena.ai/usamo ("Opus-4.6 scores 47%"; "Gemini-3.1-Pro and Opus-4.6 both substantially overestimate their own performance"), checked 27 Nov 2026.
+- S2 (Riemann-hypothesis timing): added that the release came one day after Anthropic's stock-market debut and Alpöge's rejection of the "obvious cynical view"; added James Maynard's "98 or 99 percent" (via The New York Times) beside Conrad's criticism. Source: The Next Web, 21 Nov 2026 [@constantin2026riemann], quotations checked 27 Nov 2026. No new bib entry.
+- S3 (optional, plagiarism rumours): added Scientific American's standfirst that the claims "may have been overblown" [@howlett2026openais], checked 27 Nov 2026.
+- Could-not-verify items: left as is.

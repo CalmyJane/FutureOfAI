@@ -566,3 +566,9 @@ Report: review6/r-ch07.md.
 - S2: Access-to-models sentence now notes trusted partners allowed back onto Mythos 5 on 26 June and lifting on 30 June; "first known" phrase attributed to Greenberg Traurig (new bib `gt2026anthropic`); Mayer Brown kept as the source for the 26 June exemption. Same change made in ch13.md (§ on federal action) with `gt2026anthropic` added to ch13.bib; ch14.md has no such passage, so unchanged.
 - S3: Table 7.4 Microsoft change now +79%.
 - Could-not-verify items: no narrowing suggested; left unchanged.
+
+## Seventh review fixes (November 2026)
+
+- S1 (Affiliates-rule extension date): reworded to "In a rule published on 9 November 2026, the day before the ownership rule was due to come back into force, BIS extended its suspension through 10 January 2027". The rule was due to return on 10 November 2026 (Dechert; Reed Smith, 6 Nov 2026).
+- S2 (Huang's title): took the reviewer's first option, "then Nvidia's chief executive", and dropped the unsourced resignation clause. No bib entry needed.
+- Could-not-verify items: no change suggested; left as they are.
