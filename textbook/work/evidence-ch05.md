@@ -461,3 +461,8 @@ Source: review4/r-ch05.md (26 November 2026).
 - 5-S3: Agarwal et al. is now described as an MSR '26 study, with "cognitive complexity" (checked against the arXiv abstract and the CMU STRUDEL PDF). The bib howpublished field was updated.
 - 5-S4: Added "roughly 6 hours for GPT-5.4 and Gemini 3.1 Pro" (about 5.7 h and 6.4 h in METR data via an aggregator). The reviewer's "measured in March and April" was dropped because it was not confirmed.
 - Could-not-verify items: left unchanged.
+
+## Sixth review fixes (November 2026)
+- S1 (METR series end): rewritten per review: last model added in May 2026 (Mythos Preview early, released April 2026); September 2026 note only said the page was no longer updated. Source: metr.org/time-horizons change log.
+- S2 (Table 5.1 date): Fable 5 cell now reads "best general-purpose model, Aug 2026", so the ranking is dated and not read as a November claim.
+- Could-not-verify items: left as is (already attributed to the leaderboard or sources).

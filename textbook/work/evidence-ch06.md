@@ -490,3 +490,9 @@ Source: review4/r-ch06.md and review4/r-production.md S9 (26 November 2026).
 - 6-S1: Changed to "25 Fields Medal winners (28 signatories ...)". Confirmed by SciAm and other coverage.
 - 6-S2: Added that Alpöge and Ralph Furman examined the work (Anthropic page, 10 Aug 2026). The reviewer's "written up by" was softened, because Claude wrote the paper and the two mathematicians produced an informal note. Added Lamzouri arXiv:2609.02882 (2 Sept 2026), described in his own words as a "conceptually simpler" proof of a slightly stronger bound (>67.25%). Not called "independent", because the paper credits the Claude result. New entries: lamzouri2026new, leanfro2026riemann, constantin2026lean.
 - Could-not-verify items: left unchanged.
+
+## Sixth review fixes (November 2026)
+- S1 (Navier–Stokes status): "As of late November" changed to "In mid-October 2026 … [@howlett2026openais], and no peer-reviewed assessment had appeared by late November", matching the 13 Oct 2026 Scientific American date.
+- S2 (zeta zeros reviewers): added that outside specialists Brian Conrey and Dan Goldston read the paper on short notice (anthropic.com/research/riemann-zeta, 10/13 Aug 2026); "That is a company claim" replaced by "It has not been peer-reviewed".
+- S3 (Millennium Prize reason): now quotes OpenAI's stated goal "to report on the substantial progress of our AI models" and says it did not say why; added [@openai2026navierstokes] (existing ch06 entry) after the quotation.
+- Could-not-verify items: left as is.
