@@ -146,7 +146,7 @@ def front_matter(toc):
 </section>
 <section class="copyright">
   <p>Evidence in this book is current to late November 2026. Web sources were checked between 20 October and 26 November 2026. References follow APA 7 and are numbered. Sources are not cited in the running text: the line at the foot of each page lists the numbers of the sources used on that page.</p>
-  <p>Figures drawn for this edition by the AI agents described below. Set in EB Garamond, with Noto Serif Devanagari, Noto Serif KR, Noto Sans Math and Noto Sans Mono for Hindi, Korean, mathematical symbols and code (all SIL Open Font License).</p>
+  <p>Figures drawn for this edition by the AI agents described below. Set in EB Garamond, with Noto Serif Devanagari, Noto Serif KR, Noto Sans Math and Noto Sans Mono for Hindi, Korean, mathematical symbols and code (all SIL Open Font License), with DejaVu Serif as a fallback for rare characters (DejaVu Fonts License).</p>
   <p class="ai-note"><strong>How this book was written.</strong> {AI_NOTE}</p>
   <p>© {YEAR} {AUTHOR} (selection, arrangement, editing and human-authored contributions). All rights reserved to the extent permitted by law.</p>
   <p>Bibliographic information published by the Deutsche Nationalbibliothek: the Deutsche Nationalbibliothek lists this publication in the Deutsche Nationalbibliografie; detailed bibliographic data are available on the Internet at https://dnb.dnb.de.</p>

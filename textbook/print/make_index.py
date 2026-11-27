@@ -22,6 +22,7 @@ MAX_PAGES = 8
 # where the technical sense is used; None drops the entry
 CHAPTERS_ONLY = {
     "bias (in a neuron)": {2},
+    "adam": {2},
     "epoch": {2},
     "momentum": {2},
     "circuit": {3, 12},
@@ -46,7 +47,8 @@ def page_texts():
         num = int(m.group(1)) if m else i + 1
         body = "\n".join(l for l in lines[:-1] if not l.lstrip().startswith("Sources "))
         # undo end-of-line hyphenation so split words are found
-        body = re.sub(r"(\w)[‐-]\n\s*(\w)", r"\1\2", body)
+        body = re.sub(r"(\w)‐\n\s*(\w)", r"\1\2", body)   # break hyphen (U+2010): join
+        body = re.sub(r"(\w)-\n\s*(\w)", r"\1-\2", body)   # real hyphen at a line end: keep it
         pages[num] = re.sub(r"\s+", " ", body)
     return pages
 
