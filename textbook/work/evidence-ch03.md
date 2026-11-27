@@ -484,3 +484,11 @@ Report: review3/r-ch03.md. Cut-off now late November 2026.
 - S2: anti-distillation sentence narrowed: classifier fallback now cited to @anthropic2026fable alone; the safeguard "for API accounts created from 31 August 2026, stops users editing earlier context to extract Claude's reasoning; Opus 5.5 also carries it [@anthropic2026opus55]".
 - S3: Table 3.9 Gemini 4 Argon/Carbon row now "1-million-token limit shared by input and output (output up from 64,000)", reconciling the API docs and the launch blog.
 - Could not verify (Mata v. Avianca pin cites, Kimi K2 Thinking speed-up, Mercury Coder throughput, post-17 November flagships, Epoch R1 RL share): no action; report suggests none.
+
+## Sixth review fixes (November 2026)
+
+- S1: :361 duplicated "DeepSeek-V3" removed.
+- S2: Figure 3.3 caption and :389 now say "the post-training budget for V3.2, mostly reinforcement learning, above 10% of pre-training cost"; Table 3.9 row now "post-training budget above 10% of pre-training cost" (matches DeepSeek-V3.2 report p. 2 and ch04:181).
+- S3: :389 SpaceXAI sentence simplified, facts unchanged: "by then the SpaceX subsidiary SpaceXAI"; rename now a closing sentence "(On 4 October 2026 Elon Musk said SpaceXAI would be renamed SpaceXSI [@frank2026why].)".
+- Ch04 S3 (repetition, applied here): Section 3.8 "Reasoning, and control over it" cut to two sentences ending in the pointer to Section 4.6 (Claude 3.7 Sonnet, Qwen3, Gemini 2.5 and GPT-5 router quotations removed; Opus 5.5 effort levels and Gemini 4 Argon thinking levels kept, as Ch. 4 does not give them). "Agentic training" sentence on Grok 4 Heavy and Muse Spark "Contemplating" reduced to a pointer to Section 4.6; the Muse Spark quotation moved to ch04 Section 4.6.
+- Could not verify (Kimi K2 Thinking speed-up, GPT-4o system card pinpoints): no action.

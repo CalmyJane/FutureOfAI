@@ -447,3 +447,11 @@ Report: review3/r-ch04.md. Cut-off now late November 2026.
 - M1: reviewer's claim that Ch. 1 never mentions ClockBench is wrong. ch01.md:255 (in Section 1.7, heading at :177) reports that "in March 2026 the best model read analogue clocks correctly only about half the time", citing @sajadieh2026ai (2026 AI Index), and the ClockBench 83.3%/87.8%/85.0% figures. Clause kept; section number correct; added the same source: "up from about half in March 2026 (Section 1.7) [@sajadieh2026ai]". Key already in ch04.bib.
 - S1: "Chatbot Arena (renamed LMArena in 2025 and Arena in January 2026)"; "LMArena, as the operator was then called, disputed". Consistency change outside this chapter: ch07.md:294 now "On the Arena (formerly LMArena) leaderboard".
 - Could not verify (2026 AI Index figures, METR March 2026 correction, HLE Nature table, Snell and Brown figures): no action; report suggests none.
+
+## Sixth review fixes (November 2026)
+
+- S1: :229 the 25 October 2026 Gemini 4 Argon 83.3% score now cited to @clockbench2026clockbench; @sajadieh2026ai kept only for the March 2026 "about half".
+- S2: :225 GSM1k "never published" changed to "withheld from publication to avoid contamination" (Scale has since released at least 50 samples).
+- S3: repetition handled in ch03 Section 3.8 (shortened to a pointer to Section 4.6); full treatment kept here. Added Muse Spark "Contemplating" mode, "orchestrates multiple agents that reason in parallel" [@meta2026muse] (moved from ch03; bib entry copied identically from ch03.bib), to the parallel-reasoning paragraph.
+- S4: :229 Fable 5.2 Max / Gemini 4 Carbon sentence replaced with "By late November 2026 the leader had reached 87.8%, still below the human average (Section 1.7)". Figures (90.7%, 83.3%, 87.8%) remain identical to ch01.md:255; ch01 not edited.
+- Could not verify (Table 4.3 amortised costs, Astra compute basis, 25 October ClockBench scores, GPT-6 Pro URL): no action.
