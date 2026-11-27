@@ -465,3 +465,10 @@ Report: review5/r-ch08.md.
 - S2: Challenger 44% now "in the first ten months … than in the same period a year earlier" (year-to-date figure).
 - S3: The QJE article was not readable (paywalled). The NBER abstract I could read (w32719, revised August 2026, checked 27 Nov 2026) gives "a 4.2 percentage point decrease in labor market participation" and "1-2 hours/week", so the figure is kept; the reviewer's 3.9 is from an earlier revision. The sentence now attributes the figures to the August 2026 revision and cites it; new bib `vivalt2026employmentwp` (QJE entry kept for the trial itself).
 - Could-not-verify items: no narrowing suggested; left unchanged.
+
+## Sixth review fixes (November 2026)
+
+Report: review6/r-ch08.md.
+
+- S1: BTOS first-half-2026 range now "about 18% and 21%" (National.xlsx periods 202601–202613: 17.5–20.6%).
+- Could-not-verify items: no narrowing suggested; left unchanged. The QJE "+36%" figure remains to be checked against the published table by the author.

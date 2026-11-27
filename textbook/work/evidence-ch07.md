@@ -555,3 +555,14 @@ Report: review5/r-ch07.md.
 - S1: Huang's first mention now "Nvidia's chief executive until his resignation in November 2026"; "its then chief executive" in §7.5 kept.
 - S2: Access-to-models sentence now "what one law firm described as the first known US use of export controls to regulate a particular frontier AI model" (Greenberg Traurig).
 - Could-not-verify items: no narrowing suggested; left unchanged.
+
+## Sixth review fixes (November 2026)
+
+Report: review6/r-ch07.md.
+
+- M1: Table 7.2 Ironwood 16-bit peak now "2,307 (peak)" (Google Cloud TPU7x docs: BF16 2,307 TFLOPs); caption "peaks"; added bib `googlecloud2026tpu7x` to the source list.
+- M2: "orders for gas turbines to power data centres rose 70% in 2025" (scope per IEA coverage).
+- S1: on-site gas sentence now "worldwide, the IEA estimates that 15–27 GW".
+- S2: Access-to-models sentence now notes trusted partners allowed back onto Mythos 5 on 26 June and lifting on 30 June; "first known" phrase attributed to Greenberg Traurig (new bib `gt2026anthropic`); Mayer Brown kept as the source for the 26 June exemption. Same change made in ch13.md (§ on federal action) with `gt2026anthropic` added to ch13.bib; ch14.md has no such passage, so unchanged.
+- S3: Table 7.4 Microsoft change now +79%.
+- Could-not-verify items: no narrowing suggested; left unchanged.

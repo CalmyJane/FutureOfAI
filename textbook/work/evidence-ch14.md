@@ -572,3 +572,9 @@ Source: review2/r-ch13-14.md (M1–M5, minor items on ch14), review2/00-VERDICT.
 - M1: 19 November 2026 BIS rule sentence (Geopolitics paragraph) rewritten to match ch07 Section 7.3: licences to supply advanced chips to data centres anywhere that serve companies headquartered in China or other countries of concern, plus separate licence requirements for chip exports to five diversion-risk countries. Removed the wrong "five more countries" remote-access wording. Citation `bis2026addressing` unchanged; ch07 not edited.
 - S1: Regulation paragraph shortened. The detailed account of the June 2026 Commerce block on Claude Fable 5 and Mythos 5 and the GPT-5.6 Sol limited release (restating Ch. 13 and Ch. 7) replaced with one cross-referencing sentence plus the FRI sentence, as the report proposed. OpenAI pause and GPT-6.1 Astra sentences kept. Citations `mayerbrown2026commerce`, `greenbergtraurig2026anthropic`, `openai2026previewing` and `vanklinken2026gpt` are no longer cited in ch14; their bib entries are left in ch14.bib (uncited entries are not printed). `power2026us` is still cited elsewhere in the chapter.
 - Could-not-verify items: no narrowing suggested by the report; left unchanged.
+
+## Sixth review fixes (November 2026)
+
+- S1: BIS sentence clarified: "an interim final rule formally rescinded the never-enforced AI diffusion rule ... In its place, the new rule requires licences ... and adds licence requirements ..." so the remote-access and five-country provisions are attributed to the 19 November 2026 rule, not the diffusion rule (Greenberg Traurig; Morgan Lewis, November 2026). Citation `bis2026addressing` unchanged.
+- S2: CAISI-evaluated model now named "DeepSeek V4 Pro", as in the cited evaluation title (`nist2026caisideepseek`).
+- Could-not-verify items: no narrowing suggested by the report; left unchanged.

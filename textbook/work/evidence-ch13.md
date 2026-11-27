@@ -605,3 +605,11 @@ Cut-off moved to late November 2026: l.5 "status as of late November 2026"; "as 
 - S1: Closing-paragraph clause rewritten so the bill, not the pre-emption, is the subject: "a federal frontier bill, which would trade audits and incident reports for pre-emption, had not left committee" (consistent with Section 13.3: referred to Energy and Commerce, no hearing).
 - S2: Omnibus steps now include signature: "the Council on 29 June; it was signed on 8 July and published on 24 July" (Regulation (EU) 2026/1744 of 8 July 2026).
 - Could-not-verify items: no narrowing suggested by the report; left unchanged.
+
+## Sixth review fixes (November 2026)
+
+- M1: UK sentence reordered so AI Growth Zones are among the 48 agreed recommendations: "agreed to 48 of the 50 ..., among them "AI Growth Zones" ..., and partially agreed to the other two" (the two partial agreements were the immigration route for AI graduates and the copyright-cleared media dataset; Burges Salmon and BCS summaries, January 2025). Citations unchanged.
+- S1: GPT-5.6 Sol partners now "trusted partners whose participation it had shared with the US government", not "approved by" it (OpenAI preview post, 26 June 2026). The adjacent export-control sentence was not touched.
+- S2: GEMA v OpenAI: prose adds "OpenAI has appealed the first to the Higher Regional Court, Munich"; Table 13.4 status now "First instance; OpenAI appeal pending at Higher Regional Court, Munich". New entry `beckaktuell2026suno` (no existing key in any bib).
+- S3: Bartz instalment now "about $2,200 per work (roughly 70 per cent of the net amount) was due to be paid in the week of 23 November 2026" (Authors Guild, updated 20 November 2026: $2,203.56). Gross "about $3,000 per work before costs and fees" kept.
+- Could-not-verify items: no narrowing suggested by the report; left unchanged.
