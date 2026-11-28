@@ -337,7 +337,7 @@ def stamp_pagelines(document, doc, pdf_path):
     return len(pages)
 
 
-def figure_gaps(document, min_gap_mm=45):
+def figure_gaps(document, min_gap_mm=35):
     """Figures that were pushed to the top of a page and left a large gap at the foot of the page before."""
     mm = 96 / 25.4  # CSS px per mm
     out = []
@@ -464,7 +464,7 @@ def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
     # figures cannot float in WeasyPrint: when one jumps to the next page and leaves a gap, let the
     # following paragraph fill it, then lay out again (a few rounds settle it)
     moved = set()
-    for _ in range(4):
+    for _ in range(6):
         gaps = [g for g in figure_gaps(document) if g not in moved]
         if not gaps:
             break

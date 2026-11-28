@@ -10,7 +10,7 @@
 **computer-use agent**: An agent that operates a graphical computer interface as a person would, by reading screenshots and controlling the pointer and keyboard.
 **SWE-bench**: A benchmark of real problems taken from open-source Python projects on GitHub, in which an AI system must change the code so that hidden tests pass; SWE-bench Verified is a human-screened subset of 500 problems.
 **compounding error**: The decline in end-to-end success when a task needs many steps that must all succeed; with independent steps, overall success equals the per-step success rate multiplied by itself once per step.
-**pass^k**: A reliability measure giving the probability that an agent succeeds on the same task in all k independent attempts, as opposed to pass@k, which asks whether at least one of k attempts succeeds.
+**pass^k^**: A reliability measure giving the probability that an agent succeeds on the same task in all k independent attempts, as opposed to pass@k, which asks whether at least one of k attempts succeeds.
 **prompt injection**: An attack in which text supplied to a language model contains instructions that try to override the instructions of the system's developer or user.
 **indirect prompt injection**: Prompt injection in which the malicious instructions are hidden in content the system retrieves, such as a web page, document or email, rather than typed by the user.
 **lethal trifecta**: Simon Willison's term for the combination of access to private data, exposure to untrusted content and the ability to communicate externally, which together allow injected instructions to leak data.
@@ -23,7 +23,7 @@
 **Agent Card**: In the A2A protocol, a machine-readable JSON document, typically published at a standard web address, that describes an agent's identity, endpoint, authentication requirements and skills.
 **OSWorld**: A benchmark of 369 tasks in real operating systems used to measure computer-use agents; OSWorld-Verified is a corrected edition released in 2025.
 **pass@k**: The probability that at least one of k attempts at a task succeeds; it suits settings where a test or a person can pick out the successful attempt.
-**τ-bench**: A benchmark of simulated customer-service conversations (retail and airline; τ²-bench added telecom and τ³-bench banking) in which an agent must use tools and follow a written policy; it introduced the pass^k measure.
+**τ-bench**: A benchmark of simulated customer-service conversations (retail and airline; τ²-bench added telecom and τ³-bench banking) in which an agent must use tools and follow a written policy; it introduced the pass^k^ measure.
 **adaptive attack**: An attack on a security defence that is deliberately tailored to the defence's design, as opposed to a fixed set of previously known attack inputs.
 **mandate (AP2)**: In the Agent Payments Protocol, a cryptographically signed record of what a user authorised, such as the conditions for a purchase or a specific cart and price.
 **x402**: An open protocol that uses the HTTP status code 402 "Payment Required" to let a client, including an AI agent, pay for a web resource within the same request.

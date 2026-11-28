@@ -104,7 +104,8 @@ section.level2[id^="summary"] > h2 { border-top: 0.6pt solid #000; padding-top: 
 /* glossary and references */
 .glossary p { text-indent: 0; margin-bottom: 1.6mm; font-size: 9.2pt; line-height: 1.3; text-align: left; padding-left: 4mm; text-indent: -4mm; }
 #refs { font-size: 8.4pt; line-height: 1.3; text-align: left; hyphens: manual; }
-.csl-entry { margin-bottom: 1.6mm; padding-left: 5mm; text-indent: -5mm; overflow-wrap: anywhere; }
+.csl-entry { margin: 0 0 1.6mm 0 !important; padding-left: 2.6em; text-indent: -2.6em; overflow-wrap: anywhere; }
+#refs, .csl-bib-body { margin-left: 0 !important; padding-left: 0 !important; }
 .citation { hyphens: manual; }
 
 .endblank { break-before: page; page: blank; }
