@@ -141,3 +141,5 @@ sup, sub { font-size: 70%; line-height: 0; }
 .glossary p, .glossary dd, .glossary li { orphans: 3; widows: 3; }
 .index h2 { break-after: avoid; }
 .index h2 + p { break-after: avoid; }
+table.longrows tr { break-inside: auto; }
+.nobr { white-space: nowrap; }

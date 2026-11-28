@@ -463,9 +463,13 @@ def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
         text = len(re.sub(r"<[^>]+>", "", inner))
         if rows <= 12 and text < 2600:
             cls.append("keep")
+        # tables whose rows are very long may split inside a row; otherwise a row that does not fit
+        # leaves its caption alone at the foot of a page
+        if max((len(re.sub(r"<[^>]+>", "", r)) for r in re.findall(r"<tr\b.*?</tr>", inner, re.S)), default=0) > 500:
+            cls.append("longrows")
         kid = f' id="keep-t{next(keep_ids)}"' if "keep" in cls else ""
         return (f'<table class="{" ".join(cls)}"{kid}>' if cls else "<table>") + inner + "</table>"
-    body = re.sub(r"<table>(.*?)</table>", table_class, body, flags=re.S)
+    body = re.sub(r"<table(?: style=\"[^\"]*\")?>(.*?)</table>", table_class, body, flags=re.S)
     # short boxes stay on one page; long boxes may break (with at least four lines on each side)
     def box_class(m):
         if len(re.sub(r"<[^>]+>", "", m.group(0))) < 1400:
