@@ -222,7 +222,7 @@ def build(pages, paper, spine_mm, isbn, guides):
     bxx = spine_x - gap - bw
     byy = top + TRIM_H - gap - bh
     # author logo, bottom left of the back, its foot level with the barcode box
-    lh = bh  # as tall as the white barcode box
+    lh = round(bh * 0.6, 2)  # about three fifths of the barcode box, foot aligned with it
     lw = lh * 854 / 720
     lx, ly = bx, byy + bh - lh
     k = lw / 854
