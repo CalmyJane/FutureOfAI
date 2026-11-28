@@ -139,3 +139,5 @@ tbody tr:last-child, tbody tr:nth-last-child(2) { break-before: avoid; }
 .box p { orphans: 4; widows: 4; }
 sup, sub { font-size: 70%; line-height: 0; }
 .glossary p, .glossary dd, .glossary li { orphans: 3; widows: 3; }
+.index h2 { break-after: avoid; }
+.index h2 + p { break-after: avoid; }
