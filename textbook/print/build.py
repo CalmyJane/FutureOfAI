@@ -460,7 +460,7 @@ def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
             cls.append("wide")
         rows = len(re.findall(r"<tr\b", inner.split("<tbody", 1)[-1]))
         text = len(re.sub(r"<[^>]+>", "", inner))
-        if rows <= 12 and text < 2600:
+        if rows <= 10 and text < 1500:
             cls.append("keep")
         # tables whose rows are very long may split inside a row; otherwise a row that does not fit
         # leaves its caption alone at the foot of a page
