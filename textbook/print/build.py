@@ -312,16 +312,13 @@ def stamp_pagelines(document, doc, pdf_path):
         if ns:
             x0 = 20 * mm if pi % 2 == 0 else 16 * mm  # right-hand pages have the wider inner margin on the left
             text = " · ".join(f"{n} ({'; '.join(ns[n])})" if ns[n] else str(n) for n in sorted(ns))
-            lines = simpleSplit(text, "EBG", 7.4, width - 12 * mm)
+            lines = simpleSplit(text, "EBG", 7.4, width)
             c.setLineWidth(0.4)
             c.line(x0, 18.6 * mm, x0 + 22 * mm, 18.6 * mm)
             y = 16.0 * mm
-            for k, ln in enumerate(lines):
-                if k == 0:
-                    c.setFont("EBG-It", 7.4)
-                    c.drawString(x0, y, "Sources")
-                    c.setFont("EBG", 7.4)
-                c.drawString(x0 + 11 * mm, y, ln)
+            c.setFont("EBG", 7.4)
+            for ln in lines:  # the source numbers only, without a label
+                c.drawString(x0, y, ln)
                 y -= 2.9 * mm
         c.showPage()
     c.save()

@@ -45,7 +45,11 @@ def page_texts():
             continue
         m = re.fullmatch(r"\s*(\d+)\s*", lines[-1])
         num = int(m.group(1)) if m else i + 1
-        body = "\n".join(l for l in lines[:-1] if not l.lstrip().startswith("Sources "))
+        # drop the source-number line(s) at the page foot: numbers and bracketed pinpoints joined by " · "
+        def is_srcline(l):
+            core = re.sub(r"\([^)]*\)?", "", l)
+            return l.lstrip().startswith("Sources ") or (re.fullmatch(r"[\s\d·]+", core) is not None and re.search(r"\d", core))
+        body = "\n".join(l for l in lines[:-1] if not is_srcline(l))
         # undo end-of-line hyphenation so split words are found
         body = re.sub(r"(\w)‐\n\s*(\w)", r"\1\2", body)   # break hyphen (U+2010): join
         body = re.sub(r"(\w)-\n\s*(\w)", r"\1-\2", body)   # real hyphen at a line end: keep it
