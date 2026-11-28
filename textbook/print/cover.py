@@ -222,8 +222,8 @@ def build(pages, paper, spine_mm, isbn, guides):
     bxx = spine_x - gap - bw
     byy = top + TRIM_H - gap - bh
     # author logo, bottom left of the back, its foot level with the barcode box
-    lw = 16.0
-    lh = lw * 720 / 854
+    lh = bh  # as tall as the white barcode box
+    lw = lh * 854 / 720
     lx, ly = bx, byy + bh - lh
     k = lw / 854
     lc = hexc(mix(BG, (154, 167, 192), 0.55))  # a muted blue-grey between the background and the soft text colour
