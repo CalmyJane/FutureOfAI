@@ -358,7 +358,7 @@ def figure_gaps(document, min_gap_mm=35):
                 continue
             if el.tag in ("p", "figure", "table", "h2", "h3", "div", "ul", "ol", "section") and top is None:
                 top = (y, el)
-            if el.tag == "figure" and first_fig is None:
+            if first_fig is None and (el.tag == "figure" or (el.get("id") or "").startswith("keep-")):
                 first_fig = (y, el)
         if not first_fig or not top or first_fig[1] is not top[1] and top[0] < first_fig[0] - 1:
             continue
@@ -376,17 +376,35 @@ def figure_gaps(document, min_gap_mm=35):
     return out
 
 
+def _element_span(doc, eid):
+    """Start and end of the element with this id (figure, table or div), balancing nested tags."""
+    m = re.search(r'<(figure|table|div)\b[^>]*\bid="' + re.escape(eid) + r'"', doc)
+    if not m:
+        return None
+    tag = m.group(1)
+    depth, pos = 0, m.start()
+    for t in re.finditer(r"<(/?)" + tag + r"\b[^>]*>", doc[m.start():]):
+        depth += -1 if t.group(1) else 1
+        if depth == 0:
+            end = m.start() + t.end()
+            ws = re.match(r"\s*", doc[end:])
+            return m.start(), end + ws.end()
+    return None
+
+
 def move_figures_down(doc, ids):
-    """Move each figure to just after the paragraph that follows it, so text fills the gap."""
+    """Move each figure, kept table or kept box to just after the paragraph that follows it,
+    so text fills the gap the element left on the page before."""
     for fid in ids:
-        m = re.search(r'<figure id="' + re.escape(fid) + r'">.*?</figure>\s*', doc, re.S)
-        if not m:
+        span = _element_span(doc, fid)
+        if not span:
             continue
-        rest = doc[m.end():]
+        a, b = span
+        rest = doc[b:]
         n = re.match(r"\s*<p\b.*?</p>", rest, re.S)
         if not n:
             continue
-        doc = doc[: m.start()] + rest[: n.end()] + "\n" + m.group(0) + rest[n.end():]
+        doc = doc[:a] + rest[: n.end()] + "\n" + doc[a:b] + rest[n.end():]
     return doc
 
 
@@ -435,6 +453,7 @@ def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
 
     # tables with five or more columns get a tighter setting on the A5 page
     # short tables (with their captions) are kept on one page; long ones may break, but never leave one row alone
+    keep_ids = iter(range(1, 10**6))
     def table_class(m):
         inner = m.group(1)
         cls = []
@@ -444,11 +463,14 @@ def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
         text = len(re.sub(r"<[^>]+>", "", inner))
         if rows <= 12 and text < 2600:
             cls.append("keep")
-        return (f'<table class="{" ".join(cls)}">' if cls else "<table>") + inner + "</table>"
+        kid = f' id="keep-t{next(keep_ids)}"' if "keep" in cls else ""
+        return (f'<table class="{" ".join(cls)}"{kid}>' if cls else "<table>") + inner + "</table>"
     body = re.sub(r"<table>(.*?)</table>", table_class, body, flags=re.S)
     # short boxes stay on one page; long boxes may break (with at least four lines on each side)
     def box_class(m):
-        return m.group(0).replace('class="box', 'class="box keep', 1) if len(re.sub(r"<[^>]+>", "", m.group(0))) < 1400 else m.group(0)
+        if len(re.sub(r"<[^>]+>", "", m.group(0))) < 1400:
+            return m.group(0).replace('class="box', f'id="keep-b{next(keep_ids)}" class="box keep', 1)
+        return m.group(0)
     body = re.sub(r'<div class="box[^"]*">.*?</div>', box_class, body, flags=re.S)
     css = open(os.path.join(PRINT, "book.css"), encoding="utf-8").read()
     if notes:
