@@ -221,6 +221,19 @@ def build(pages, paper, spine_mm, isbn, guides):
         bw, bh, gap = 46.0, 27.0, SAFE
     bxx = spine_x - gap - bw
     byy = top + TRIM_H - gap - bh
+    # author logo, bottom left of the back, its foot level with the barcode box
+    lw = 16.0
+    lh = lw * 720 / 854
+    lx, ly = bx, byy + bh - lh
+    k = lw / 854
+    lc = hexc(mix(BG, (154, 167, 192), 0.55))  # a muted blue-grey between the background and the soft text colour
+    svg.append(f'<g transform="translate({lx:.2f} {ly:.2f}) scale({k:.5f})" fill="{lc}">'
+               '<path fill-rule="evenodd" d="M0 0H854V720H0Z M30 30V690H824V30Z"/>'
+               '<rect x="204" y="186" width="106" height="106"/>'
+               '<rect x="560" y="186" width="106" height="106"/>'
+               '<rect x="105" y="366" width="101" height="178"/>'
+               '<rect x="105" y="442" width="644" height="102"/>'
+               '</g>')
     svg.append(f'<rect x="{bxx}" y="{byy}" width="{bw}" height="{bh}" fill="#FFFFFF"/>')
     if isbn:
         ean13(svg, isbn, bxx + 3, byy + 6.5, bw - 6, bh - 10)
