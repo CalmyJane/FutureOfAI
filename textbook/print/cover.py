@@ -174,7 +174,7 @@ def build(pages, paper, spine_mm, isbn, guides):
     cx = spine_x + S / 2
     svg.append(f'<g transform="translate({cx:.2f} {top + 18}) rotate(90)">'
                f'<text x="0" y="{2.95:.2f}" font-family="InterD" font-weight="300" font-size="8.2" fill="{INK}">Understanding <tspan font-weight="700">AI</tspan></text>'
-               f'<text x="62" y="{1.6:.2f}" font-family="EBG" font-style="italic" font-size="4.6" fill="{SOFT}">Technology, Trends and the Decade Ahead</text>'
+               f'<text x="69" y="{1.6:.2f}" font-family="EBG" font-style="italic" font-size="4.6" fill="{SOFT}">Technology, Trends and the Decade Ahead</text>'
                f'<text x="{TRIM_H - 36 - 22}" y="{1.4:.2f}" font-family="Inter" font-weight="500" font-size="3.6" letter-spacing="0.4" fill="{INK}">CALMY JANE</text>'
                f'</g>')
     for rad, k in ((2.4, 0.8), (1.5, 0.45), (0.95, 0.0)):
