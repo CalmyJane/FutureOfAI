@@ -434,9 +434,22 @@ def build(only=None, notes=False, out_pdf=OUT_PDF, mode="foot"):
     body = re.sub(r"<h1([^>]*)>(Chapter \d+|Preface)\s*:?\s*(.*?)</h1>", chap, body)
 
     # tables with five or more columns get a tighter setting on the A5 page
-    body = re.sub(r"<table>(.*?)</table>",
-                  lambda m: ('<table class="wide">' if len(re.findall(r"<th\b", m.group(1).split("</thead>")[0])) >= 5 else "<table>") + m.group(1) + "</table>",
-                  body, flags=re.S)
+    # short tables (with their captions) are kept on one page; long ones may break, but never leave one row alone
+    def table_class(m):
+        inner = m.group(1)
+        cls = []
+        if len(re.findall(r"<th\b", inner.split("</thead>")[0])) >= 5:
+            cls.append("wide")
+        rows = len(re.findall(r"<tr\b", inner.split("<tbody", 1)[-1]))
+        text = len(re.sub(r"<[^>]+>", "", inner))
+        if rows <= 12 and text < 2600:
+            cls.append("keep")
+        return (f'<table class="{" ".join(cls)}">' if cls else "<table>") + inner + "</table>"
+    body = re.sub(r"<table>(.*?)</table>", table_class, body, flags=re.S)
+    # short boxes stay on one page; long boxes may break (with at least four lines on each side)
+    def box_class(m):
+        return m.group(0).replace('class="box', 'class="box keep', 1) if len(re.sub(r"<[^>]+>", "", m.group(0))) < 1400 else m.group(0)
+    body = re.sub(r'<div class="box[^"]*">.*?</div>', box_class, body, flags=re.S)
     css = open(os.path.join(PRINT, "book.css"), encoding="utf-8").read()
     if notes:
         css += open(os.path.join(PRINT, "notes.css" if mode == "foot" else "pageline.css"), encoding="utf-8").read()

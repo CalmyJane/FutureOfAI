@@ -25,7 +25,7 @@
 @page blank { @bottom-center { content: none; } @top-left { content: none; } @top-right { content: none; } }
 @page :blank { @bottom-center { content: none; } @top-left { content: none; } @top-right { content: none; } }
 
-html { font-family: "EBG", "NotoDeva", "NotoMath", "NotoKR", serif; hyphenate-limit-chars: 7 3 3; font-size: 10.3pt; line-height: 1.36; color: #000; hyphens: auto; text-align: justify; }
+html { font-family: "EBG", "NotoDeva", "NotoMath", "NotoKR", serif; hyphenate-limit-chars: 8 3 4; font-size: 10.3pt; line-height: 1.36; color: #000; hyphens: auto; text-align: justify; }
 body { margin: 0; }
 p { margin: 0; text-indent: 1.1em; orphans: 2; widows: 2; }
 h1 + p, h2 + p, h3 + p, figure + p, div + p, ul + p, ol + p, table + p, section > p:first-child { text-indent: 0; }
@@ -126,3 +126,13 @@ section.index > h1 { column-span: all; }
 section.index h2 { font-size: 9pt; margin: 3mm 0 1mm; break-after: avoid; }
 section.index p { text-indent: -3mm; padding-left: 3mm; margin: 0 0 0.6mm; }
 .nohy { hyphens: manual; }
+
+/* keeping things together (6 x 9 edition) */
+table.keep { break-inside: avoid; }
+table caption { break-inside: avoid; break-after: avoid; }
+thead { break-inside: avoid; break-after: avoid; }
+tbody tr:first-child, tbody tr:nth-child(2) { break-after: avoid; }
+tbody tr:last-child, tbody tr:nth-last-child(2) { break-before: avoid; }
+.box.keep { break-inside: avoid; }
+.box { orphans: 4; widows: 4; }
+.box p { orphans: 4; widows: 4; }
