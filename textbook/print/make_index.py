@@ -15,7 +15,7 @@ import subprocess
 
 PRINT = os.path.dirname(os.path.abspath(__file__))
 TB = os.path.dirname(PRINT)
-PDF = os.path.join(TB, "delivery", "understanding-ai_A5_interior.pdf")
+PDF = os.path.join(TB, "delivery", "understanding-ai_6x9_interior.pdf")
 OUT = os.path.join(PRINT, "index.md")
 MAX_PAGES = 8
 # glossary terms whose word also has everyday or unrelated senses: count them only in the chapters

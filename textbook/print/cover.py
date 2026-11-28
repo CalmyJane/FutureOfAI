@@ -7,8 +7,8 @@ BoD's cover calculator (bod.de/hilfe/coverberechnung) gives, for a 14.8 x 21 cm 
 The final spine comes from myBoD once the book project is set up; pass it with --spine-mm.
 
 Run:  python3 textbook/print/cover.py [--pages 590] [--paper weiss] [--spine-mm 36.0] [--isbn 978-3-...]
-Writes delivery/understanding-ai_cover_A5_PB.pdf (upload this) and
-delivery/understanding-ai_cover_A5_PB_guides.pdf (same with trim, fold and safe-zone lines; do not upload).
+Writes delivery/understanding-ai_cover_<trim>_<KDP|PB>.pdf (upload this) and
+the same name with _guides (same with trim, fold and safe-zone lines; do not upload).
 """
 import argparse
 import math
@@ -20,7 +20,7 @@ TB = os.path.dirname(PRINT)
 
 # thickness per leaf in cm, from the BoD cover calculator
 PAPER = {"weiss": 0.012, "chamois": 0.0135, "weiss80": 0.0105, "chamois80": 0.0105}
-TRIM_W, TRIM_H, BLEED = 148.0, 210.0, 5.0
+TRIM_W, TRIM_H, BLEED = 152.4, 228.6, 5.0  # 6 x 9 in; use --trim a5 for 148 x 210 mm
 PLATFORM = "bod"
 # Amazon KDP: 0.125 in bleed; spine 0.002252 in per page on white paper, 0.0025 in on cream (KDP cover guide)
 KDP_BLEED = 3.175
@@ -140,8 +140,7 @@ def ean13(svg, isbn, x, y, w, h):
     svg.append(f'<text x="{x + 4 * m:.2f}" y="{y + h:.2f}" font-family="JBM" font-size="{fs}" fill="#000">{s[0]}</text>')
     svg.append(f'<text x="{x + (11 + 24) * m:.2f}" y="{y + h:.2f}" font-family="JBM" font-size="{fs}" fill="#000" text-anchor="middle" letter-spacing="0.9">{s[1:7]}</text>')
     svg.append(f'<text x="{x + (11 + 71) * m:.2f}" y="{y + h:.2f}" font-family="JBM" font-size="{fs}" fill="#000" text-anchor="middle" letter-spacing="0.9">{s[7:]}</text>')
-    hy = f"{s[:3]}-{s[3]}-{s[4:8]}-{s[8:12]}-{s[12]}"
-    svg.append(f'<text x="{x + w / 2:.2f}" y="{y - 1.4:.2f}" font-family="JBM" font-size="2.6" fill="#000" text-anchor="middle">ISBN {hy}</text>')
+    svg.append(f'<text x="{x + w / 2:.2f}" y="{y - 1.4:.2f}" font-family="JBM" font-size="2.6" fill="#000" text-anchor="middle">ISBN {s}</text>')
 
 
 def build(pages, paper, spine_mm, isbn, guides):
@@ -157,25 +156,26 @@ def build(pages, paper, spine_mm, isbn, guides):
     spine_x = BLEED + TRIM_W
     front_x = spine_x + S
     top = BLEED
+    dy = TRIM_H - 210.0  # the design was drawn for 210 mm; on a taller trim the front title block keeps its distance from the foot
     svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}mm" height="{H}mm" viewBox="0 0 {W} {H}">',
            f'<rect x="0" y="0" width="{W}" height="{H}" fill="{hexc(BG)}"/>']
 
     # the network runs across the whole wrap: faint on the back, brighter on the spine, full on the front
     lattice(svg, -4, front_x - 8, top - 6, top + 74, 7, 26, 0.38, 7)
-    lattice(svg, front_x - 10, W + 4, top - 6, top + 110, 10, 15, 1.0, 11, highlight=10, start=2)
+    lattice(svg, front_x - 10, W + 4, top - 6, top + 110 + dy * 0.6, 10, 15, 1.0, 11, highlight=10, start=2)
 
     # fine baseline grid on the lower front, like an embedding space seen edge-on
     for k in range(9):
-        yy = top + 150 + k * 3.1
+        yy = top + dy + 150 + k * 3.1
         col = mix(BG, DIM, 0.5 + 0.06 * k)
         svg.append(f'<line x1="{front_x + SAFE}" y1="{yy:.2f}" x2="{front_x + TRIM_W - SAFE}" y2="{yy:.2f}" stroke="{hexc(col)}" stroke-width="0.18"/>')
 
     fx = front_x + 15
     # front: title block
-    svg.append(f'<text x="{fx - 0.8}" y="{top + 136}" font-family="InterD" font-weight="300" font-size="15.2" letter-spacing="-0.3" fill="{INK}">Understanding</text>')
-    svg.append(f'<text x="{fx - 2.2}" y="{top + 176}" font-family="InterD" font-weight="700" font-size="42" letter-spacing="-0.6" fill="{INK}">AI</text>')
-    svg.append(f'<text x="{fx}" y="{top + 186}" font-family="EBG" font-style="italic" font-size="6.0" fill="{INK}">Technology, Trends and the Decade Ahead</text>')
-    svg.append(f'<text x="{fx}" y="{top + 196.5}" font-family="Inter" font-weight="500" font-size="3.6" letter-spacing="0.45" fill="{INK}">CALMY JANE</text>')
+    svg.append(f'<text x="{fx - 0.8}" y="{top + dy + 136}" font-family="InterD" font-weight="300" font-size="15.2" letter-spacing="-0.3" fill="{INK}">Understanding</text>')
+    svg.append(f'<text x="{fx - 2.2}" y="{top + dy + 176}" font-family="InterD" font-weight="700" font-size="42" letter-spacing="-0.6" fill="{INK}">AI</text>')
+    svg.append(f'<text x="{fx}" y="{top + dy + 186}" font-family="EBG" font-style="italic" font-size="6.0" fill="{INK}">Technology, Trends and the Decade Ahead</text>')
+    svg.append(f'<text x="{fx}" y="{top + dy + 196.5}" font-family="Inter" font-weight="500" font-size="3.6" letter-spacing="0.45" fill="{INK}">CALMY JANE</text>')
 
     # spine: title and author, reading top to bottom (English convention)
     cx = spine_x + S / 2
@@ -273,7 +273,7 @@ svg {{ display: block; }}
 """
     doc = f"<!doctype html><html><head><meta charset='utf-8'><title>Understanding AI – cover</title><style>{css}</style></head><body>{''.join(svg)}</body></html>"
     from weasyprint import HTML
-    name = ("understanding-ai_cover_A5_KDP" if PLATFORM == "kdp" else "understanding-ai_cover_A5_PB") + ("_guides" if guides else "")
+    name = "understanding-ai_cover_" + ("6x9" if TRIM_H > 220 else "A5") + ("_KDP" if PLATFORM == "kdp" else "_PB") + ("_guides" if guides else "")
     out = os.path.join(TB, "delivery", name + ".pdf")
     HTML(string=doc, base_url=PRINT).write_pdf(out, pdf_variant="pdf/x-4", output_intent="srgb")
     # mark the trim inside the 5 mm bleed so preflight tools see the finished size
@@ -297,10 +297,13 @@ if __name__ == "__main__":
     ap.add_argument("--pages", type=int, default=646)
     ap.add_argument("--paper", default="weiss", choices=sorted(PAPER))
     ap.add_argument("--spine-mm", type=float, help="cover spine width from myBoD (overrides the calculation)")
-    ap.add_argument("--isbn", default=os.environ.get("BOOK_ISBN"), help="ISBN-13; draws the EAN-13 barcode")
+    ap.add_argument("--isbn", default=os.environ.get("BOOK_ISBN", "9798146717722"), help="ISBN-13; draws the EAN-13 barcode")
+    ap.add_argument("--trim", default="6x9", choices=["6x9", "a5"])
     ap.add_argument("--platform", default="kdp", choices=["kdp", "bod"], help="kdp: KDP bleed and spine; bod: BoD calculator")
     a = ap.parse_args()
     PLATFORM = a.platform
+    if a.trim == "a5":
+        TRIM_W, TRIM_H = 148.0, 210.0
     if PLATFORM == "kdp":
         BLEED = KDP_BLEED
     for guides in (False, True):

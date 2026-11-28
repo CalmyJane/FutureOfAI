@@ -1,4 +1,4 @@
-/* Understanding AI — A5 course text, no bleed (148 x 210 mm). */
+/* Understanding AI — 6 x 9 in paperback (152.4 x 228.6 mm), no bleed. Inside margin >= 0.75 in for 501-700 pages (KDP). */
 @font-face { font-family: "EBG"; src: url(fonts/EBGaramond-Regular.ttf); font-weight: 400; font-style: normal; }
 @font-face { font-family: "NotoMath"; src: url(fonts/NotoSansMath-Subset.ttf); }
 @font-face { font-family: "NotoKR"; src: url(fonts/NotoSerifKR-Subset.otf); }
@@ -12,12 +12,12 @@
 @font-face { font-family: "EBG"; src: url(fonts/EBGaramond-BoldItalic.ttf); font-weight: 700; font-style: italic; }
 
 @page {
-  size: 148mm 210mm;
-  margin: 17mm 15mm 19mm 20mm;
+  size: 152.4mm 228.6mm;
+  margin: 18mm 16mm 20mm 20mm;
   @bottom-center { content: counter(page); font: 9pt "EBG"; }
 }
 @page :left {
-  margin: 17mm 20mm 19mm 15mm;
+  margin: 18mm 20mm 20mm 16mm;
   @top-left { content: "Understanding AI"; font: italic 8.5pt "EBG"; }
 }
 @page :right { @top-right { content: string(runhead, first-except); font: italic 8.5pt "EBG"; } }
@@ -86,7 +86,7 @@ hr { border: 0; border-top: 0.4pt solid #000; width: 25%; margin: 5mm auto; }
 
 /* figures and tables */
 figure { margin: 5mm 0 5mm; break-inside: avoid; text-align: center; }
-figure img { width: 100%; max-height: 108mm; object-fit: contain; }
+figure img { width: 100%; max-height: 120mm; object-fit: contain; }
 figcaption { font-size: 8.4pt; line-height: 1.28; text-align: left; margin-top: 2mm; hyphens: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 8.4pt; line-height: 1.25; text-align: left; margin: 4mm 0; break-inside: auto; }
 th { font-weight: 600; border-bottom: 0.8pt solid #000; padding: 1mm; vertical-align: bottom; }
